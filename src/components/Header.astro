@@ -1,0 +1,163 @@
+---
+/* Header component — sticky black nav bar with SteamHead branding */
+const navLinks = [
+  { href: "/",                  label: "Home" },
+  { href: "/about-us/",         label: "About Us" },
+  { href: "/makefashion-edu/",  label: "MakeFashion Edu" },
+  { href: "/neighborhood-earth/", label: "Neighborhood Earth" },
+  { href: "/system-upgrade/",   label: "System Upgrade" },
+  { href: "/shop/",             label: "Shop" },
+];
+
+const { currentPath = "/" } = Astro.props;
+---
+
+<header class="site-header">
+  <nav class="container site-nav" aria-label="Main navigation">
+
+    <!-- Logo -->
+    <a href="/" class="site-logo" aria-label="SteamHead — Make Great Things">
+      <span class="logo-steam">STEAM</span><span class="logo-head">HEAD</span>
+      <span class="logo-tagline">Make · Great · Things</span>
+    </a>
+
+    <!-- Mobile toggle -->
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- Nav links -->
+    <ul class="nav-links" id="nav-menu" role="list">
+      {navLinks.map(link => (
+        <li>
+          <a
+            href={link.href}
+            class:list={["nav-link", { "nav-link--active": currentPath === link.href }]}
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--color-nav-bg);
+    border-bottom: 2px solid #1a1a1a;
+  }
+
+  .site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    height: var(--nav-height);
+    flex-wrap: wrap;
+  }
+
+  /* Logo */
+  .site-logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    line-height: 1;
+    color: var(--color-white);
+    flex-shrink: 0;
+  }
+  .logo-steam { font-family: var(--font-heading); font-size: 1.35rem; letter-spacing: 0.05em; }
+  .logo-head  { font-family: var(--font-heading); font-size: 1.35rem; letter-spacing: 0.05em; color: var(--color-yellow); margin-top: -0.1rem; display: inline; }
+  .site-logo { flex-direction: row; align-items: baseline; gap: 0; }
+  .logo-steam, .logo-head { font-size: 1.5rem; }
+  .logo-tagline {
+    font-family: var(--font-body);
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    color: #888;
+    text-transform: uppercase;
+    margin-left: 0.4rem;
+    align-self: center;
+  }
+
+  /* Nav links */
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: var(--space-sm);
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-link {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: #ccc;
+    text-decoration: none;
+    padding: 0.3rem 0.5rem;
+    border-radius: var(--radius);
+    transition: color 0.15s, background 0.15s;
+    white-space: nowrap;
+  }
+  .nav-link:hover,
+  .nav-link--active {
+    color: var(--color-yellow);
+    opacity: 1;
+  }
+
+  /* Mobile toggle button */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--color-white);
+    border-radius: 2px;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+
+  @media (max-width: 900px) {
+    .nav-toggle { display: flex; }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      padding: var(--space-sm) 0 var(--space-sm);
+      border-top: 1px solid #222;
+      gap: 0;
+    }
+    .nav-links.is-open { display: flex; }
+
+    .nav-link { padding: 0.6rem 0; display: block; }
+
+    .site-nav {
+      flex-wrap: wrap;
+      height: auto;
+      padding-block: 0.75rem;
+    }
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const menu   = document.querySelector('.nav-links');
+  toggle?.addEventListener('click', () => {
+    const open = menu?.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+</script>

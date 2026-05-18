@@ -1,0 +1,269 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+/* Mobile Makerspace chapter images — in order */
+const mmsChapters = [
+  { src: "/images/2024/09/mms01.png", alt: "Mobile Makerspace chapter 1" },
+  { src: "/images/2024/09/mms02.png", alt: "Mobile Makerspace chapter 2" },
+  { src: "/images/2024/09/mms03.png", alt: "Mobile Makerspace chapter 3" },
+  { src: "/images/2024/09/mms04.png", alt: "Mobile Makerspace chapter 4" },
+  { src: "/images/2024/09/mms05.png", alt: "Mobile Makerspace chapter 5" },
+  { src: "/images/2024/09/mms06.png", alt: "Mobile Makerspace chapter 6" },
+  { src: "/images/2024/09/mms07.png", alt: "Mobile Makerspace chapter 7" },
+  { src: "/images/2025/01/mms08.png", alt: "Mobile Makerspace chapter 8" },
+  { src: "/images/2025/01/mms09.png", alt: "Mobile Makerspace chapter 9" },
+  { src: "/images/2025/01/mms10.png", alt: "Mobile Makerspace chapter 10" },
+  { src: "/images/2025/01/mms11.png", alt: "Mobile Makerspace chapter 11" },
+  { src: "/images/2025/01/mms12.png", alt: "Mobile Makerspace chapter 12" },
+];
+---
+
+<BaseLayout
+  title="Neighborhood Earth"
+  description="Neighborhood Earth represents SteamHead's outreach efforts and community activism all around the world — our longest running program."
+>
+
+  <!-- =====================================================================
+       HERO
+       ===================================================================== -->
+  <section class="hero" aria-label="Neighborhood Earth">
+    <img
+      class="hero__bg"
+      src="/images/2024/04/neighborhoodearth.png"
+      alt="Neighborhood Earth"
+    />
+    <div class="container hero__content">
+      <h1>Neighborhood Earth</h1>
+      <p class="hero__tagline">
+        Our outreach efforts and community activism all around the world.
+      </p>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       INTRODUCTION
+       ===================================================================== -->
+  <section class="section" aria-label="About Neighborhood Earth">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <h2>Our Longest Running Program</h2>
+          <hr class="accent-rule" />
+          <p>
+            Neighborhood Earth is SteamHead's longest running program — existing before
+            SteamHead itself. In 2011, James entered China as a manufacturing engineer,
+            found that locals highly valued education, and started free classes for
+            factory workers.
+          </p>
+          <p>
+            Since then, James and Carrie have held free classes in Brazil, Germany,
+            Canada, China, the UK, and the US, building a global network of community
+            education rooted in local context.
+          </p>
+        </div>
+        <img
+          src="/images/2019/03/20171119_235904946_iOS.jpg"
+          alt="Early Neighborhood Earth class"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       MOBILE MAKERSPACE
+       ===================================================================== -->
+  <section class="section section--alt" aria-label="Mobile Makerspace project">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <h2>Mobile Makerspace</h2>
+          <hr class="accent-rule" />
+          <p>
+            Our mission is to transform the Argosy Airstream into a functional mobile
+            makerspace.
+          </p>
+          <p>
+            This will cover structural and functional upgrades; décor and prototyping
+            equipment installations follow. The project is an ongoing journey — follow
+            along below.
+          </p>
+        </div>
+        <img
+          src="/images/2024/07/mms.jpg"
+          alt="The Argosy Airstream mobile makerspace"
+        />
+      </div>
+
+      <!-- Chapter image strip -->
+      <div class="img-strip" role="list" aria-label="Mobile Makerspace progress photos">
+        {mmsChapters.map(ch => (
+          <img src={ch.src} alt={ch.alt} role="listitem" loading="lazy" />
+        ))}
+      </div>
+
+      <!-- Chapter list -->
+      <div class="chapter-list mt-md">
+        <h3>Project Chapters</h3>
+        <ol>
+          <li>Origin Story</li>
+          <li>The Argosy Line</li>
+          <li>Clear Out</li>
+          <li>Teardown</li>
+          <li>Work Continues</li>
+          <li>Final High Desert Task</li>
+          <li>Table Design</li>
+          <li>In San Jose</li>
+          <li>Yellow and Black</li>
+          <li>New Floor</li>
+          <li>Workshop Renovation</li>
+          <li>New Mobile Makerspace</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       BANNER
+       ===================================================================== -->
+  <img
+    class="banner-img"
+    src="/images/2024/01/hr-nologo-1170467-scaled.jpg"
+    alt="Neighborhood Earth community"
+  />
+
+  <!-- =====================================================================
+       VIRTUAL SPACE
+       ===================================================================== -->
+  <section class="section" aria-label="Virtual Maker Exhibition">
+    <div class="container">
+      <div class="two-col two-col--reverse">
+        <img
+          src="/images/2021/03/index-screenshot.png"
+          alt="Virtual Maker Exhibition platform"
+        />
+        <div>
+          <h2>Virtual Maker Exhibition</h2>
+          <hr class="accent-rule" />
+          <p>
+            The Virtual Maker Exhibition marks SteamHead's inaugural multi-school online
+            event. This platform allows teachers and students to present their projects
+            in a dynamic online environment that combines elements of a video game with
+            live conferencing features.
+          </p>
+          <p>
+            In early 2020, amidst the ongoing pandemic, we seized the chance to explore
+            innovative approaches to exhibition and collaboration — discovering new
+            methods and mediums for interacting in familiar ways.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       MAKERSPACE (retired)
+       ===================================================================== -->
+  <section class="section section--alt" aria-label="Shenzhen Makerspace">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <h2>Shenzhen Makerspace</h2>
+          <hr class="accent-rule" />
+          <p>
+            Now retired, the SteamHead Makerspace in Shenzhen became a cornerstone of
+            creativity and collaboration — far more than just a collection of tools and
+            gadgets.
+          </p>
+          <p>
+            It was a lively community hub where locals and expatriates came together to
+            spark innovation, unleash their creativity, and forge powerful partnerships.
+            Founded in 2017 by educators Carrie and James, it rapidly emerged as a
+            beacon of hands-on learning in one of the world's most dynamic engineering
+            cities.
+          </p>
+        </div>
+        <img
+          src="/images/2019/03/20180824_212105.jpg"
+          alt="SteamHead Shenzhen Makerspace"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       RESIDENT EDUCATORS
+       ===================================================================== -->
+  <section class="section section--dark" aria-label="Resident Educators program">
+    <div class="container">
+      <h2>SteamHead R.ED — Resident Educators</h2>
+      <hr class="accent-rule" />
+      <div class="two-col mt-md">
+        <p>
+          The SteamHead Resident Educators program was at the heart of our vibrant
+          community, embodying our commitment to fostering creativity and collaboration.
+          We proudly welcomed educators from around the world, inviting both local and
+          international guests to immerse themselves in our innovative makerspace.
+        </p>
+        <p>
+          Participants engaged in hands-on workshops, collaborative projects, and
+          cultural tours — fostering unique experiences and lasting relationships with
+          our residents and the city's educational institutions. Those who joined us
+          became part of a dynamic network advancing creativity and global educational
+          excellence.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       MAKER EVENTS
+       ===================================================================== -->
+  <section class="section" aria-label="Maker Events">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <h2>Maker Events</h2>
+          <hr class="accent-rule" />
+          <p>
+            Bringing communities together, one journey at a time.
+          </p>
+          <p>
+            Our Maker Events are at the heart of SteamHead's mission to unite people
+            through shared creativity. From local hackathons to international maker
+            fairs, we bring students, educators, and innovators into hands-on spaces
+            where ideas come to life.
+          </p>
+          <p>
+            These events aren't just about making — they're about connecting across
+            borders and sparking the next wave of community-driven innovation.
+          </p>
+        </div>
+        <img
+          src="/images/2019/12/image007.png"
+          alt="Maker event participants"
+        />
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .chapter-list h3 {
+    font-size: var(--text-lg);
+    color: var(--color-dark);
+    font-family: var(--font-body);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: var(--space-xs);
+  }
+  .chapter-list ol {
+    columns: 2;
+    gap: var(--space-md);
+    color: var(--color-dark);
+  }
+  @media (max-width: 480px) {
+    .chapter-list ol { columns: 1; }
+  }
+</style>

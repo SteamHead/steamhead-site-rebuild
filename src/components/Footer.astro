@@ -1,0 +1,135 @@
+---
+/* Footer component */
+---
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      <a href="/" class="footer-logo" aria-label="SteamHead home">
+        <span class="logo-steam">STEAM</span><span class="logo-head">HEAD</span>
+      </a>
+      <p class="footer-tagline">Make · Great · Things</p>
+      <p class="footer-mission">
+        A nonprofit maker education organisation improving equity in education
+        through hands-on, project-based STEAM programs.
+      </p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/makefashion-edu/">MakeFashion Edu</a></li>
+        <li><a href="/neighborhood-earth/">Neighborhood Earth</a></li>
+        <li><a href="/system-upgrade/">System Upgrade</a></li>
+        <li><a href="/shop/">Shop</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer-contact">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="https://www.facebook.com/steamHead.Space" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://www.steamhead.space/contact-us/" target="_blank" rel="noopener">Contact Us</a></li>
+        <li><a href="https://www.steamhead.space/support-us/" target="_blank" rel="noopener">Support Us</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; {new Date().getFullYear()} SteamHead. A nonprofit maker education organisation.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--color-black);
+    color: #aaa;
+    margin-top: auto;
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: var(--space-lg);
+    padding-block: var(--space-lg);
+  }
+
+  .footer-logo {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    text-decoration: none;
+  }
+  .logo-steam { color: var(--color-white); }
+  .logo-head  { color: var(--color-yellow); }
+
+  .footer-tagline {
+    font-size: var(--text-sm);
+    letter-spacing: 0.15em;
+    color: #666;
+    margin: 0.25rem 0 var(--space-sm);
+    max-width: none;
+  }
+
+  .footer-mission {
+    font-size: var(--text-sm);
+    line-height: 1.6;
+    color: #888;
+    max-width: 38ch;
+  }
+
+  .footer-nav h4,
+  .footer-contact h4 {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-white);
+    margin-bottom: var(--space-sm);
+  }
+
+  .footer-nav ul,
+  .footer-contact ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer-nav a,
+  .footer-contact a {
+    color: #aaa;
+    font-size: var(--text-sm);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .footer-nav a:hover,
+  .footer-contact a:hover {
+    color: var(--color-yellow);
+    opacity: 1;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #1a1a1a;
+    padding-block: var(--space-sm);
+  }
+  .footer-bottom p {
+    font-size: var(--text-sm);
+    color: #555;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .footer-inner {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+  }
+</style>

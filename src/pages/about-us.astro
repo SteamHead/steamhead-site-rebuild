@@ -1,0 +1,206 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About Us"
+  description="SteamHead is a network of people, spaces, and events who collaborate to improve equity in education as the path forward."
+>
+
+  <!-- =====================================================================
+       HERO
+       ===================================================================== -->
+  <section class="hero hero--short" aria-label="About Us">
+    <img
+      class="hero__bg"
+      src="/images/2021/04/20181019_1855150-scaled.jpg"
+      alt="SteamHead team and community"
+    />
+    <div class="container hero__content">
+      <h1>About Us</h1>
+      <p class="hero__tagline">
+        A network of people, spaces, and events collaborating to improve equity
+        in education as the path forward.
+      </p>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       MISSION / VISION / VALUES
+       ===================================================================== -->
+  <section class="section" aria-label="Mission, Vision, and Values">
+    <div class="container">
+      <div class="mvv-grid">
+
+        <div class="mvv-card">
+          <h2>Our Mission</h2>
+          <hr class="accent-rule" />
+          <p>
+            To provide access to quality, relevant education focused on integrating
+            design, technology, and community.
+          </p>
+        </div>
+
+        <div class="mvv-card">
+          <h2>Our Vision</h2>
+          <hr class="accent-rule" />
+          <p>
+            We envision a world where individuals are confident in their abilities,
+            free to question, and have access to the resources and opportunities they
+            need to build a fulfilling life of their own definition.
+          </p>
+        </div>
+
+        <div class="mvv-card">
+          <h2>Our Values</h2>
+          <hr class="accent-rule" />
+          <ul>
+            <li>Equity</li>
+            <li>Design Thinking</li>
+            <li>Maker Mindset</li>
+            <li>Progressive Education</li>
+            <li>Open Collaboration</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       ABOUT THE ORGANISATION
+       ===================================================================== -->
+  <section class="section section--alt" aria-label="About the organisation">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <h2>Who We Are</h2>
+          <hr class="accent-rule" />
+          <p>
+            SteamHead is a nonprofit founded by educators with a goal to openly share
+            educational resources and teaching ideas.
+          </p>
+          <p>
+            We believe that by embracing design thinking and a maker-mindset, education
+            can be more engaging and meaningful — and with that, more effective in
+            preparing students for success.
+          </p>
+          <p>
+            We're not a company that only does education but rather an umbrella for our
+            educators to focus around. This initiative brings teachers from different
+            backgrounds together on a platform that not only encourages but celebrates
+            the sharing of ideas and learning materials.
+          </p>
+        </div>
+        <img
+          src="/images/2018/08/shbridge-logo2.jpg"
+          alt="SteamHead community"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       OPEN COLLABORATION
+       ===================================================================== -->
+  <section class="section" aria-label="Open collaboration">
+    <div class="container">
+      <h2>Open Collaboration</h2>
+      <hr class="accent-rule" />
+      <div class="two-col mt-md">
+        <p>
+          In the SteamHead community, teachers can freely exchange teaching materials,
+          strategies, and perspectives. This open sharing is seen as crucial for creating
+          a more enriched educational environment, allowing teachers to learn from each
+          other's successes and challenges.
+        </p>
+        <p>
+          Through a culture of openness and teamwork, SteamHead aims to empower educators
+          by providing a supportive network that enhances the quality of education for
+          students worldwide.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       TEAM
+       ===================================================================== -->
+  <section class="section section--alt" aria-label="Our team">
+    <div class="container">
+      <h2>Our Team</h2>
+      <hr class="accent-rule" />
+      <p class="mt-md">
+        SteamHead is built by educators, makers, and collaborators from around the world.
+        Our residents and team members each contribute to the space and community —
+        many becoming continuous contributors over time.
+      </p>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       FUNDING
+       ===================================================================== -->
+  <section class="section section--dark" aria-label="Funding and sustainability">
+    <div class="container">
+      <h2>Funding</h2>
+      <hr class="accent-rule" />
+      <div class="two-col mt-md">
+        <p>
+          SteamHead is proud to be self-funded, which means we run independently and
+          don't rely on outside sources for money. This independence gives us the freedom
+          to focus on our goals without being influenced by external factors.
+        </p>
+        <p>
+          Additionally, we work together with schools to secure grants. This collaboration
+          involves actively participating in the grant writing process, tailoring our
+          efforts to meet the specific needs of each school or community.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       JOIN THE COMMUNITY
+       ===================================================================== -->
+  <section class="section" aria-label="Join the community">
+    <div class="container">
+      <h2>Join the Community</h2>
+      <hr class="accent-rule" />
+      <p class="mt-md">
+        Educators, did you know that Hackers are lifelong learners contributing educational
+        content to their communities? Hackers, did you know teachers from Kindergarten
+        through University are advocating for the skills and values in your makerspaces
+        to be brought into schools?
+      </p>
+      <p>
+        Join us online to discuss and support each other. No experience required — all
+        levels of Educators and Hackers welcome.
+      </p>
+      <a href="https://www.steamhead.space/contact-us/" class="btn btn--primary mt-md" target="_blank" rel="noopener">
+        Get in Touch
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .hero--short { padding-block: var(--space-lg); }
+
+  .mvv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-md);
+  }
+
+  .mvv-card {
+    padding: var(--space-md);
+    background: var(--color-gray-light);
+    border-radius: var(--radius);
+    border-top: 4px solid var(--color-yellow);
+  }
+  .mvv-card h2 { font-size: var(--text-2xl); margin-bottom: var(--space-xs); }
+  .mvv-card ul { margin-top: var(--space-xs); color: var(--color-dark); }
+  .mvv-card li { margin-bottom: 0.4rem; }
+</style>

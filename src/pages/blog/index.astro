@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<BaseLayout
+  title="Great Things Blog"
+  description="Stories, projects, and ideas from SteamHead's global community of makers and educators."
+>
+
+  <!-- =====================================================================
+       HERO
+       ===================================================================== -->
+  <section class="hero hero--short" aria-label="Great Things Blog">
+    <div class="container hero__content">
+      <h1>Great Things Blog</h1>
+      <p class="hero__tagline">
+        Stories, projects, and ideas from SteamHead's global community of
+        makers and educators.
+      </p>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       POST LIST
+       ===================================================================== -->
+  <section class="section" aria-label="Blog posts">
+    <div class="container">
+      {posts.length === 0 ? (
+        <p>No posts yet — check back soon.</p>
+      ) : (
+        <div class="post-grid">
+          {posts.map(post => (
+            <article class="post-card">
+              {post.data.image && (
+                <a href={`/blog/${post.id}/`}>
+                  <img
+                    class="post-card__image"
+                    src={post.data.image}
+                    alt={post.data.imageAlt ?? post.data.title}
+                    loading="lazy"
+                  />
+                </a>
+              )}
+              <div class="post-card__body">
+                <time class="text-muted" datetime={post.data.date.toISOString()}>
+                  {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                </time>
+                <h2 class="post-card__title">
+                  <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+                </h2>
+                <p>{post.data.description}</p>
+                <a href={`/blog/${post.id}/`} class="btn btn--primary">Read More</a>
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .hero--short { padding-block: var(--space-lg); }
+
+  .post-grid {
+    display: grid;
+    gap: var(--space-lg);
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+
+  .post-card {
+    background: var(--color-white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .post-card__image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 0;
+  }
+
+  .post-card__body {
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    flex: 1;
+  }
+
+  .post-card__title {
+    font-size: var(--text-xl);
+    margin-top: var(--space-xs);
+  }
+  .post-card__title a {
+    color: var(--color-yellow);
+    text-decoration: none;
+  }
+  .post-card__title a:hover { opacity: 0.8; }
+</style>

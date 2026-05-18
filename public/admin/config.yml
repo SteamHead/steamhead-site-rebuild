@@ -1,0 +1,147 @@
+# =============================================================================
+# Sveltia CMS Configuration — SteamHead
+# Docs: https://github.com/sveltia/sveltia-cms
+# =============================================================================
+
+backend:
+  name: github
+  repo: SteamHead/steamhead-site-rebuild
+  branch: main
+  # OAuth handler — replace this URL after deploying the Sveltia auth worker
+  # (see SETUP.md for instructions)
+  base_url: https://YOUR_AUTH_WORKER.workers.dev
+
+# Where uploaded images are stored in the repo
+media_folder: public/images/uploads
+# How those images are referenced in content (public/ is stripped at build time)
+public_folder: /images/uploads
+
+# =============================================================================
+# COLLECTIONS
+# Each collection maps to a folder of Markdown files that staff can edit.
+# =============================================================================
+
+collections:
+
+  # ---------------------------------------------------------------------------
+  # BLOG — Great Things Blog
+  # Staff can create, edit, and delete posts here.
+  # ---------------------------------------------------------------------------
+  - name: blog
+    label: Blog Posts
+    label_singular: Blog Post
+    folder: src/content/blog
+    create: true
+    delete: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "/blog/{{slug}}"
+    fields:
+      - { label: Title,             name: title,       widget: string }
+      - { label: "Publish Date",    name: date,        widget: datetime }
+      - { label: Description,       name: description, widget: text }
+      - label: "Featured Image"
+        name: image
+        widget: image
+        required: false
+        hint: "Recommended: 1200×630px"
+      - { label: "Image Alt Text",  name: imageAlt,    widget: string,   required: false }
+      - { label: Body,              name: body,        widget: markdown }
+
+  # ---------------------------------------------------------------------------
+  # PAGES — editable copy for the 6 main pages
+  # Each page is a single file; staff edit the text fields, not the layout.
+  # ---------------------------------------------------------------------------
+  - name: pages
+    label: Pages
+    files:
+
+      - name: home
+        label: Home Page
+        file: src/content/pages/home.md
+        fields:
+          - { label: "Hero Heading",   name: hero_heading,  widget: string }
+          - { label: "Hero Tagline",   name: hero_tagline,  widget: text }
+          - { label: "About Heading",  name: about_heading, widget: string }
+          - { label: "About Text 1",   name: about_text_1,  widget: text }
+          - { label: "About Text 2",   name: about_text_2,  widget: text }
+
+      - name: about
+        label: About Us Page
+        file: src/content/pages/about.md
+        fields:
+          - { label: "Mission",        name: mission,  widget: text }
+          - { label: "Vision",         name: vision,   widget: text }
+          - label: Values
+            name: values
+            widget: list
+            field: { label: Value, name: value, widget: string }
+          - { label: "About Us Body",  name: body,     widget: markdown }
+          - { label: "Funding Text",   name: funding,  widget: markdown }
+
+      - name: makefashion-edu
+        label: MakeFashion Edu Page
+        file: src/content/pages/makefashion-edu.md
+        fields:
+          - { label: "Hero Tagline",   name: hero_tagline,   widget: text }
+          - { label: "About Body",     name: about_body,     widget: markdown }
+          - { label: "Runway Text",    name: runway_text,    widget: markdown }
+          - { label: "Classes Text",   name: classes_text,   widget: markdown }
+          - { label: "Books Text",     name: books_text,     widget: markdown }
+
+      - name: neighborhood-earth
+        label: Neighborhood Earth Page
+        file: src/content/pages/neighborhood-earth.md
+        fields:
+          - { label: "Hero Tagline",   name: hero_tagline,   widget: text }
+          - { label: "Intro Body",     name: intro_body,     widget: markdown }
+          - { label: "MMS Description", name: mms_body,     widget: markdown }
+          - { label: "Virtual Space Text", name: virtual_body, widget: markdown }
+          - { label: "Makerspace History", name: makerspace_body, widget: markdown }
+
+      - name: system-upgrade
+        label: System Upgrade Page
+        file: src/content/pages/system-upgrade.md
+        fields:
+          - { label: "Hero Tagline",   name: hero_tagline,   widget: text }
+          - { label: "Intro Text",     name: intro_text,     widget: text }
+          - { label: "SFUSD Body",     name: sfusd_body,     widget: markdown }
+          - { label: "Productions Body", name: productions_body, widget: markdown }
+          - { label: "Course Body",    name: course_body,    widget: markdown }
+          - { label: "Badges Body",    name: badges_body,    widget: markdown }
+
+      - name: shop
+        label: Shop Page
+        file: src/content/pages/shop.md
+        fields:
+          - { label: "Hero Tagline",   name: hero_tagline,   widget: text }
+          - { label: "SHTEAM Labs Description", name: shteam_body, widget: markdown }
+          - { label: "Course Description",      name: course_body, widget: markdown }
+          - label: "Hardware Items"
+            name: hardware
+            widget: list
+            fields:
+              - { label: Name,        name: name,        widget: string }
+              - { label: Description, name: description, widget: string }
+              - { label: URL,         name: url,         widget: string }
+          - label: "Book Titles"
+            name: books
+            widget: list
+            field: { label: Title, name: title, widget: string }
+
+  # ---------------------------------------------------------------------------
+  # SITE SETTINGS — global info edited in one place
+  # ---------------------------------------------------------------------------
+  - name: settings
+    label: Site Settings
+    files:
+
+      - name: general
+        label: General
+        file: src/content/settings/general.md
+        fields:
+          - { label: "Organisation Name", name: org_name,     widget: string }
+          - { label: "Tagline",           name: tagline,      widget: string }
+          - { label: "Mission Statement", name: mission,      widget: text }
+          - { label: "Facebook URL",      name: facebook_url, widget: string }
+          - { label: "Contact Page URL",  name: contact_url,  widget: string }
+          - { label: "Support URL",       name: support_url,  widget: string }
