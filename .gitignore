@@ -25,3 +25,8 @@ Thumbs.db
 reference/backup_*
 reference/*.xml
 reference/*.gz
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
