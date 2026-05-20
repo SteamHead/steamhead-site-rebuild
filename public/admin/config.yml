@@ -7,9 +7,8 @@ backend:
   name: github
   repo: SteamHead/steamhead-site-rebuild
   branch: main
-  # OAuth handler — replace this URL after deploying the Sveltia auth worker
-  # (see SETUP.md for instructions)
-  base_url: https://YOUR_AUTH_WORKER.workers.dev
+  # OAuth handler — Sveltia CMS auth worker on Cloudflare
+  base_url: https://sveltia-cms-auth.james-068.workers.dev
 
 # Where uploaded images are stored in the repo
 media_folder: public/images/uploads
