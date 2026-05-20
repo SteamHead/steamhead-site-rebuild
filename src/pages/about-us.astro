@@ -1,5 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getEntry, render } from 'astro:content';
+
+const entry = await getEntry('pages', 'about');
+const { Content } = await render(entry);
+const { mission, vision, values, funding } = entry.data;
 ---
 
 <BaseLayout
@@ -35,31 +40,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="mvv-card">
           <h2>Our Mission</h2>
           <hr class="accent-rule" />
-          <p>
-            To provide access to quality, relevant education focused on integrating
-            design, technology, and community.
-          </p>
+          <p>{mission}</p>
         </div>
 
         <div class="mvv-card">
           <h2>Our Vision</h2>
           <hr class="accent-rule" />
-          <p>
-            We envision a world where individuals are confident in their abilities,
-            free to question, and have access to the resources and opportunities they
-            need to build a fulfilling life of their own definition.
-          </p>
+          <p>{vision}</p>
         </div>
 
         <div class="mvv-card">
           <h2>Our Values</h2>
           <hr class="accent-rule" />
           <ul>
-            <li>Equity</li>
-            <li>Design Thinking</li>
-            <li>Maker Mindset</li>
-            <li>Progressive Education</li>
-            <li>Open Collaboration</li>
+            {values.map((v: string) => <li>{v}</li>)}
           </ul>
         </div>
 
@@ -76,21 +70,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div>
           <h2>Who We Are</h2>
           <hr class="accent-rule" />
-          <p>
-            SteamHead is a nonprofit founded by educators with a goal to openly share
-            educational resources and teaching ideas.
-          </p>
-          <p>
-            We believe that by embracing design thinking and a maker-mindset, education
-            can be more engaging and meaningful — and with that, more effective in
-            preparing students for success.
-          </p>
-          <p>
-            We're not a company that only does education but rather an umbrella for our
-            educators to focus around. This initiative brings teachers from different
-            backgrounds together on a platform that not only encourages but celebrates
-            the sharing of ideas and learning materials.
-          </p>
+          <Content />
         </div>
         <img
           src="/images/2018/08/shbridge-logo2.jpg"
@@ -145,18 +125,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <h2>Funding</h2>
       <hr class="accent-rule" />
-      <div class="two-col mt-md">
-        <p>
-          SteamHead is proud to be self-funded, which means we run independently and
-          don't rely on outside sources for money. This independence gives us the freedom
-          to focus on our goals without being influenced by external factors.
-        </p>
-        <p>
-          Additionally, we work together with schools to secure grants. This collaboration
-          involves actively participating in the grant writing process, tailoring our
-          efforts to meet the specific needs of each school or community.
-        </p>
-      </div>
+      <p class="mt-md">{funding}</p>
     </div>
   </section>
 

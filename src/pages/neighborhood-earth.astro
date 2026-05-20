@@ -1,5 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getEntry, render } from 'astro:content';
+
+const entry = await getEntry('pages', 'neighborhood-earth');
+const { Content } = await render(entry);
+const { hero_tagline, mms_body, virtual_body, makerspace_body } = entry.data;
 
 /* Mobile Makerspace chapter images — in order */
 const mmsChapters = [
@@ -34,9 +39,7 @@ const mmsChapters = [
     />
     <div class="container hero__content">
       <h1>Neighborhood Earth</h1>
-      <p class="hero__tagline">
-        Our outreach efforts and community activism all around the world.
-      </p>
+      <p class="hero__tagline">{hero_tagline}</p>
     </div>
   </section>
 
@@ -49,17 +52,7 @@ const mmsChapters = [
         <div>
           <h2>Our Longest Running Program</h2>
           <hr class="accent-rule" />
-          <p>
-            Neighborhood Earth is SteamHead's longest running program — existing before
-            SteamHead itself. In 2011, James entered China as a manufacturing engineer,
-            found that locals highly valued education, and started free classes for
-            factory workers.
-          </p>
-          <p>
-            Since then, James and Carrie have held free classes in Brazil, Germany,
-            Canada, China, the UK, and the US, building a global network of community
-            education rooted in local context.
-          </p>
+          <Content />
         </div>
         <img
           src="/images/2019/03/20171119_235904946_iOS.jpg"
@@ -78,15 +71,7 @@ const mmsChapters = [
         <div>
           <h2>Mobile Makerspace</h2>
           <hr class="accent-rule" />
-          <p>
-            Our mission is to transform the Argosy Airstream into a functional mobile
-            makerspace.
-          </p>
-          <p>
-            This will cover structural and functional upgrades; décor and prototyping
-            equipment installations follow. The project is an ongoing journey — follow
-            along below.
-          </p>
+          <p>{mms_body}</p>
         </div>
         <img
           src="/images/2024/07/mms.jpg"
@@ -144,17 +129,7 @@ const mmsChapters = [
         <div>
           <h2>Virtual Maker Exhibition</h2>
           <hr class="accent-rule" />
-          <p>
-            The Virtual Maker Exhibition marks SteamHead's inaugural multi-school online
-            event. This platform allows teachers and students to present their projects
-            in a dynamic online environment that combines elements of a video game with
-            live conferencing features.
-          </p>
-          <p>
-            In early 2020, amidst the ongoing pandemic, we seized the chance to explore
-            innovative approaches to exhibition and collaboration — discovering new
-            methods and mediums for interacting in familiar ways.
-          </p>
+          <p>{virtual_body}</p>
         </div>
       </div>
     </div>
@@ -169,18 +144,7 @@ const mmsChapters = [
         <div>
           <h2>Shenzhen Makerspace</h2>
           <hr class="accent-rule" />
-          <p>
-            Now retired, the SteamHead Makerspace in Shenzhen became a cornerstone of
-            creativity and collaboration — far more than just a collection of tools and
-            gadgets.
-          </p>
-          <p>
-            It was a lively community hub where locals and expatriates came together to
-            spark innovation, unleash their creativity, and forge powerful partnerships.
-            Founded in 2017 by educators Carrie and James, it rapidly emerged as a
-            beacon of hands-on learning in one of the world's most dynamic engineering
-            cities.
-          </p>
+          <p>{makerspace_body}</p>
         </div>
         <img
           src="/images/2019/03/20180824_212105.jpg"

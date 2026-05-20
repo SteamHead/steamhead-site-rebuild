@@ -1,5 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getEntry } from 'astro:content';
+
+const entry = await getEntry('pages', 'system-upgrade');
+const { hero_tagline, intro_text, sfusd_body, productions_body, course_body, badges_body } = entry.data;
 ---
 
 <BaseLayout
@@ -18,10 +22,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     />
     <div class="container hero__content">
       <h1>System Upgrade</h1>
-      <p class="hero__tagline">
-        Empowering educators with innovative tools and resources to redefine learning
-        and create impactful, future-ready education for a changing world.
-      </p>
+      <p class="hero__tagline">{hero_tagline}</p>
     </div>
   </section>
 
@@ -32,11 +33,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <h2>Redefining Education</h2>
       <hr class="accent-rule" />
-      <p class="intro-text">
-        The System Upgrade initiative equips educators with tools and resources to
-        revolutionize education, disrupt outdated standards, and deliver impactful,
-        relevant content across diverse fields.
-      </p>
+      <p class="intro-text">{intro_text}</p>
     </div>
   </section>
 
@@ -49,22 +46,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <hr class="accent-rule" />
       <div class="two-col mt-md">
         <div>
-          <p>
-            We are thrilled to announce the launch of exciting new STEAM programs at
-            Ulloa and Sunset Elementary Schools.
-          </p>
-          <p>
-            This development underscores our dedication to tailoring our educational
-            initiatives to meet the specific needs of each community. We believe that
-            by introducing these STEAM programs, we can contribute significantly to the
-            academic growth and development of students — providing them with enriching
-            and innovative learning experiences.
-          </p>
-          <p>
-            Our commitment extends beyond mere program implementation, aiming to make
-            a positive impact on the unique educational landscape of each school,
-            fostering a supportive and engaging environment for students to thrive.
-          </p>
+          <p>{sfusd_body}</p>
         </div>
         <img
           src="/images/2024/05/microbit-flashing-heart.png"
@@ -87,17 +69,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div>
           <h2>SteamHead Productions</h2>
           <hr class="accent-rule" />
-          <p>
-            We launched SteamHead Productions with the aim of capturing and disseminating
-            the stories of our students, alongside sharing our accumulated knowledge
-            with educators worldwide.
-          </p>
-          <p>
-            Collaborating with the nonprofit organization Cultivative and our media
-            director Mike Shaw, we transformed this initiative into a comprehensive
-            platform. Our goal was to showcase our students in a professional manner
-            and to spark inspiration among a broad audience.
-          </p>
+          <p>{productions_body}</p>
         </div>
       </div>
     </div>
@@ -112,19 +84,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div>
           <h2>MakeFashion Edu Online Course</h2>
           <hr class="accent-rule" />
-          <p>
-            Empowering students to design their future, one stitch at a time.
-          </p>
-          <p>
-            Our MakeFashion Edu Online Course brings the intersection of technology and
-            self-expression into classrooms worldwide. Through engaging modules, students
-            learn design thinking, electronics, and fashion tech — transforming ideas
-            into wearable creations.
-          </p>
-          <p>
-            This course isn't just about fashion — it's about giving students the tools
-            to tell their stories and build their confidence through innovation.
-          </p>
+          <p>{course_body}</p>
           <a href="/shop/" class="btn btn--primary mt-md">Explore the Course</a>
         </div>
         <img
@@ -148,18 +108,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div>
           <h2>Makerspace Badges</h2>
           <hr class="accent-rule" />
-          <p>
-            Building skills, earning achievements, and creating futures.
-          </p>
-          <p>
-            The Makerspace Badges give teachers a pathway to guide students through
-            meaningful makerspace experiences. Not "how to 3D print" — but <em>why</em>
-            and <em>for who</em>, basing learning on empathy and authentic problem solving.
-          </p>
-          <p>
-            Each badge represents a step forward in mastery — whether it's soldering
-            circuits, 3D printing, interviewing clients, or sketching ideas.
-          </p>
+          <p>{badges_body}</p>
         </div>
       </div>
     </div>

@@ -1,5 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getEntry, render } from 'astro:content';
+
+const entry = await getEntry('pages', 'makefashion-edu');
+const { Content } = await render(entry);
+const { hero_tagline, runway_text, classes_text, books_text } = entry.data;
 ---
 
 <BaseLayout
@@ -18,10 +23,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     />
     <div class="container hero__content">
       <h1>MakeFashion Edu</h1>
-      <p class="hero__tagline">
-        We're the educational heart of the MakeFashion program, driven by creativity
-        and innovation.
-      </p>
+      <p class="hero__tagline">{hero_tagline}</p>
       <a href="https://www.steamhead.space/contact-us/" class="btn btn--primary" target="_blank" rel="noopener">
         Get Involved
       </a>
@@ -37,25 +39,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div>
           <h2>About the Program</h2>
           <hr class="accent-rule" />
-          <p>
-            Our students weave together fashion and technology, crafting outfits from
-            scratch while mastering design thinking, technical skills, and hands-on
-            building. Join us on this journey of self-expression and community
-            storytelling!
-          </p>
-          <p>
-            MakeFashion Edu is an international non-profit working to promote learning
-            through fashion and tech. Through hosting workshops, reach-out and push-in
-            activities, and larger events, MakeFashion Edu sees providing access for
-            young designers to industry and project-based learning as one way to pull
-            local communities together.
-          </p>
-          <p>
-            MakeFashion Edu provides a year-round suite of education programs and
-            support for K–12 educators and students, and has proven to be a powerful
-            entry point — especially for girls who are hesitant to engage with science
-            and technology subjects.
-          </p>
+          <Content />
         </div>
         <img
           src="/images/2021/03/s3.jpeg"
@@ -87,15 +71,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div>
           <h2>The Runway</h2>
           <hr class="accent-rule" />
-          <p>
-            MakeFashion Edu runways are held in public spaces, and are the culminating
-            event that students work towards throughout the program.
-          </p>
-          <p>
-            The critical skills and processes all occur in the months leading up to the
-            runway event, but the public display is a huge factor in motivating everyone
-            and ensuring accountability to a large audience.
-          </p>
+          <p>{runway_text}</p>
         </div>
       </div>
     </div>
@@ -110,16 +86,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div>
           <h2>The Classes</h2>
           <hr class="accent-rule" />
-          <p>
-            MakeFashion Edu classes are held in schools or education centers around
-            the world.
-          </p>
-          <p>
-            Ideally lasting an entire semester, these classes focus on design,
-            storytelling, and use technology as a secondary objective. These experiences
-            excel at bringing students who do not self-identify as engineers toward using
-            technology to complete projects they find compelling.
-          </p>
+          <p>{classes_text}</p>
         </div>
         <div class="img-pair">
           <img
@@ -148,14 +115,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div>
           <h2>The Books</h2>
           <hr class="accent-rule" />
-          <p>
-            Get inspired by the MakeFashion Edu final projects of each season.
-          </p>
-          <p>
-            These books contain gallery shots, materials used, and the narrative stories
-            behind each project — capturing the creativity and hard work of our students
-            in a lasting publication.
-          </p>
+          <p>{books_text}</p>
           <a href="/shop/" class="btn btn--primary mt-md">Browse Publications</a>
         </div>
       </div>

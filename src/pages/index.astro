@@ -1,10 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getEntry } from 'astro:content';
+
+const entry = await getEntry('pages', 'home');
+const { hero_heading, hero_tagline, about_heading, about_text_1, about_text_2 } = entry.data;
 ---
 
 <BaseLayout
-  title="Make Great Things"
-  description="SteamHead is a nonprofit maker education organisation that partners with schools and learning communities to deliver hands-on, project-based STEAM programs."
+  title={hero_heading}
+  description={hero_tagline}
 >
 
   <!-- =====================================================================
@@ -17,11 +21,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       alt="Students working in a makerspace"
     />
     <div class="container hero__content">
-      <h1>Make Great Things</h1>
-      <p class="hero__tagline">
-        SteamHead is a nonprofit maker education organisation that partners with schools
-        and learning communities to deliver hands-on, project-based STEAM programs.
-      </p>
+      <h1>{hero_heading}</h1>
+      <p class="hero__tagline">{hero_tagline}</p>
       <a href="/about-us/" class="btn btn--primary">About SteamHead</a>
     </div>
   </section>
@@ -33,19 +34,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <div class="two-col">
         <div>
-          <h2>Who We Are</h2>
+          <h2>{about_heading}</h2>
           <hr class="accent-rule" />
-          <p>
-            SteamHead designs and delivers makerspace learning experiences that help students
-            become confident problem-solvers, creative thinkers, and active participants in
-            their own education.
-          </p>
-          <p>
-            Our programs integrate science, technology, engineering, arts, and mathematics
-            (STEAM) through hands-on projects that encourage experimentation, collaboration,
-            and real-world thinking — whether in classrooms, community spaces, or informal
-            learning environments.
-          </p>
+          <p>{about_text_1}</p>
+          <p>{about_text_2}</p>
         </div>
         <img
           src="/images/2021/04/20181019_1855150-scaled.jpg"

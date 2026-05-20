@@ -1,25 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getEntry } from 'astro:content';
 
-const books = [
-  { title: "MFEdu SF 2025 BSU",       slug: "mfedu-sf-2025-bsu" },
-  { title: "MFEDU Tucson 2025",        slug: "mfedu-tucson-2025" },
-  { title: "MFEDU Tucson 2024",        slug: "mfedu-tucson-2024" },
-  { title: "MFEDU Tucson 2023",        slug: "mfedu-tucson-2023" },
-];
-
-const hardware = [
-  {
-    name: "bit:controller (with USB power adapter)",
-    description: "WS2812B / SK6812 addressable LED controller",
-    url: "https://www.amazon.com/Controller-WS2812B-SK6812-addressable-Pixels/dp/B0BV1RWSKN/",
-  },
-  {
-    name: "The Line:Bit — 1 metre WS2812B LEDs",
-    description: "Individually addressable, programmable LED strip",
-    url: "https://www.amazon.com/SEZO-Individually-Addressable-Programmable-Non-Waterproof/dp/B097BX7LRT",
-  },
-];
+const entry = await getEntry('pages', 'shop');
+const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
 ---
 
 <BaseLayout
@@ -38,10 +22,7 @@ const hardware = [
     />
     <div class="container hero__content">
       <h1>The Shelf</h1>
-      <p class="hero__tagline">
-        Everything you see here is fun AND teacher-tested. We want to share the goodness
-        and we want you to be able to make the projects on your own.
-      </p>
+      <p class="hero__tagline">{hero_tagline}</p>
     </div>
   </section>
 
@@ -54,11 +35,7 @@ const hardware = [
         <div>
           <h2>SHTEAM Labs</h2>
           <hr class="accent-rule" />
-          <p>
-            SteamHead Team Labs collaborates with teachers creating activities
-            tailored to their communities. We're sharing the content in case the
-            combinations are a good fit for your community as well.
-          </p>
+          <p>{shteam_body}</p>
 
           <div class="product-card mt-md">
             <h3>SHTEAM Labs 1</h3>
@@ -98,16 +75,7 @@ const hardware = [
         <div>
           <h2>MakeFashion Edu Online Course</h2>
           <hr class="accent-rule" />
-          <p>
-            The MakeFashion Edu Online Course integrates technology and creativity into
-            classrooms across the globe.
-          </p>
-          <p>
-            With engaging modules, students explore design thinking, electronics, and
-            fashion tech — turning their ideas into wearable creations. More than just
-            fashion, this course equips students with the skills to express themselves
-            and boost their confidence through innovation.
-          </p>
+          <p>{course_body}</p>
           <a
             href="https://www.steamhead.space/shop/"
             class="btn btn--primary mt-md"
@@ -163,12 +131,12 @@ const hardware = [
       </p>
 
       <div class="book-grid mt-md">
-        {books.map(book => (
+        {books.map((title: string) => (
           <div class="book-card">
             <span class="book-icon" aria-hidden="true">📖</span>
-            <h3>{book.title}</h3>
+            <h3>{title}</h3>
             <a
-              href={`https://www.steamhead.space/shop/`}
+              href="https://www.steamhead.space/shop/"
               class="btn btn--outline"
               target="_blank"
               rel="noopener"
