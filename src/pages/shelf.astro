@@ -2,12 +2,12 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getEntry } from 'astro:content';
 
-const entry = await getEntry('pages', 'shop');
+const entry = await getEntry('pages', 'shelf');
 const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
 ---
 
 <BaseLayout
-  title="Shop"
+  title="The Shelf"
   description="SteamHead resources, courses, and tools for educators and makers — teacher-tested and community-built."
 >
 
@@ -150,6 +150,37 @@ const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
   </section>
 
   <!-- =====================================================================
+       MAKEFASHION EDU COURSE GUIDES
+       ===================================================================== -->
+  <section class="section" aria-label="MakeFashion Edu Course Guides">
+    <div class="container">
+      <h2>MakeFashion Edu Course Guides</h2>
+      <hr class="accent-rule" />
+      <p class="mt-md guide-tagline">Free resources for educators — ready to teach.</p>
+      <ul class="guide-list mt-md">
+        <li>
+          <a href="/guides/mfedu-full-semester-guide/" class="guide-link">
+            Full Semester Guide
+          </a>
+          <span class="guide-desc">Combined teacher &amp; student project guide for the full course</span>
+        </li>
+        <li>
+          <a href="#" class="guide-link guide-link--coming">
+            Simple Circuits Activities
+          </a>
+          <span class="guide-desc">Coming soon</span>
+        </li>
+        <li>
+          <a href="#" class="guide-link guide-link--coming">
+            Fashion Intro Activities
+          </a>
+          <span class="guide-desc">Coming soon</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- =====================================================================
        CONTACT CTA
        ===================================================================== -->
   <section class="section section--alt" aria-label="Contact">
@@ -224,4 +255,41 @@ const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
   }
   .book-card h3 { font-family: var(--font-body); font-size: var(--text-sm); font-weight: 600; color: var(--color-white); }
   .book-icon { font-size: 1.5rem; }
+
+  .guide-tagline {
+    color: var(--color-dark);
+    font-size: var(--text-base);
+  }
+  .guide-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  .guide-list li {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-sm);
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid #e8e8e8;
+  }
+  .guide-link {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    color: var(--color-teal);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: opacity 0.15s;
+  }
+  .guide-link:hover { opacity: 0.75; }
+  .guide-link--coming {
+    color: #aaa;
+    cursor: default;
+    pointer-events: none;
+  }
+  .guide-desc {
+    font-size: var(--text-sm);
+    color: #888;
+  }
 </style>

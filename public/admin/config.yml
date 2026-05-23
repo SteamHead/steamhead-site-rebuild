@@ -108,9 +108,9 @@ collections:
           - { label: "Course Body",    name: course_body,    widget: markdown }
           - { label: "Badges Body",    name: badges_body,    widget: markdown }
 
-      - name: shop
-        label: Shop Page
-        file: src/content/pages/shop.md
+      - name: shelf
+        label: The Shelf Page
+        file: src/content/pages/shelf.md
         fields:
           - { label: "Hero Tagline",   name: hero_tagline,   widget: text }
           - { label: "SHTEAM Labs Description", name: shteam_body, widget: markdown }

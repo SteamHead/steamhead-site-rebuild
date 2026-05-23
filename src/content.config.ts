@@ -30,4 +30,13 @@ const settings = defineCollection({
   schema: z.object({}).passthrough(),
 });
 
-export const collections = { blog, pages, settings };
+// Long-form resource guides (course guides, activity guides, etc.)
+const guides = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/guides' }),
+  schema: z.object({
+    title:       z.string(),
+    description: z.string(),
+  }),
+});
+
+export const collections = { blog, pages, settings, guides };
