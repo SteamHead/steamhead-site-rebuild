@@ -165,10 +165,12 @@ const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
           <span class="guide-desc">Combined teacher &amp; student project guide for the full course</span>
         </li>
         <li>
-          <a href="#" class="guide-link guide-link--coming">
+          <a href="/guides/simple-circuits-shared/" class="guide-link">
             Simple Circuits Activities
           </a>
-          <span class="guide-desc">Coming soon</span>
+          <span class="guide-desc">LEDs, paper circuits, and wearable copper tape — one class period
+            (<a href="/guides/simple-circuits-teacher/" class="guide-link-teacher">Teacher Guide</a>)
+          </span>
         </li>
         <li>
           <a href="#" class="guide-link guide-link--coming">
@@ -292,4 +294,12 @@ const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
     font-size: var(--text-sm);
     color: #888;
   }
+  .guide-link-teacher {
+    color: var(--color-teal);
+    font-size: var(--text-sm);
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-weight: 600;
+  }
+  .guide-link-teacher:hover { opacity: 0.75; }
 </style>
