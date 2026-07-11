@@ -20,6 +20,14 @@ discussions happen before implementing where noted.
       own redirect). Until then the footer link can point at the old URL.
       (Blake, 2026-07-10)
 
+## Content
+
+- [ ] **Alt text for all images** — migrated post images currently reuse the
+      post title as alt text; real descriptive alt text should be generated
+      (AI-assisted pass over ~300 images) or hand-written for the important
+      ones. Accessibility item from the evaluation's week-6 pass.
+      (Blake, 2026-07-11)
+
 ## Bugs
 
 - [ ] **Favicon not showing** — `public/favicon.svg` exists; check that
