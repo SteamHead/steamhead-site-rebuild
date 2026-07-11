@@ -1,6 +1,7 @@
 ---
 title: Welcome to the Great Things Blog
 date: 2026-05-17
+author: James
 description: >
   The Great Things Blog is where SteamHead documents our journey — student
   projects, educator stories, maker events, and ideas from communities around

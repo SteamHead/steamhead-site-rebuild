@@ -32,18 +32,67 @@ collections:
     folder: src/content/blog
     create: true
     delete: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    # Filename = URL slug (/blog/<slug>/). Migrated posts keep their old
+    # WordPress post-name so redirects stay one-to-one.
+    slug: "{{slug}}"
     preview_path: "/blog/{{slug}}"
     fields:
       - { label: Title,             name: title,       widget: string }
       - { label: "Publish Date",    name: date,        widget: datetime }
-      - { label: Description,       name: description, widget: text }
+      - { label: Description,       name: description, widget: text,
+          hint: "One or two sentences — shown on the blog index and in search results" }
+      - { label: Author,            name: author,      widget: string }
+      - label: Program
+        name: program
+        widget: select
+        options:
+          - { label: "General",           value: general }
+          - { label: "MakeFashion Edu",   value: makefashion-edu }
+          - { label: "Neighborhood Earth", value: neighborhood-earth }
+          - { label: "System Upgrade",    value: system-upgrade }
+        default: general
+      - label: Categories
+        name: categories
+        widget: list
+        required: false
+        field: { label: Category, name: category, widget: string }
       - label: "Featured Image"
         name: image
         widget: image
         required: false
         hint: "Recommended: 1200×630px"
       - { label: "Image Alt Text",  name: imageAlt,    widget: string,   required: false }
+      - { label: Draft,             name: draft,       widget: boolean,  default: false,
+          hint: "Drafts are saved but never published to the site" }
+      - { label: Body,              name: body,        widget: markdown }
+
+  # ---------------------------------------------------------------------------
+  # PEOPLE — SteamHead Team & Residents profiles
+  # Migrated from the old blog's Team/Residents category posts.
+  # These never appear in the blog; how they display on the site is TBD.
+  # ---------------------------------------------------------------------------
+  - name: people
+    label: People
+    label_singular: Person
+    folder: src/content/people
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    fields:
+      - { label: Name,              name: name,        widget: string }
+      - label: Role
+        name: role
+        widget: select
+        options:
+          - { label: "SteamHead Team",     value: team }
+          - { label: "SteamHead Resident", value: resident }
+      - { label: "Original Title",  name: title,       widget: string,   required: false,
+          hint: "Only if the profile post had a title beyond the person's name" }
+      - { label: Date,              name: date,        widget: datetime }
+      - { label: Description,       name: description, widget: text,     required: false }
+      - { label: Photo,             name: image,       widget: image,    required: false }
+      - { label: "Photo Alt Text",  name: imageAlt,    widget: string,   required: false }
+      - { label: Draft,             name: draft,       widget: boolean,  default: false }
       - { label: Body,              name: body,        widget: markdown }
 
   # ---------------------------------------------------------------------------

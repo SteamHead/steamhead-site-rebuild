@@ -2,20 +2,59 @@
 // Defines the shape of every Markdown file the CMS can read/write.
 // Astro validates frontmatter against these schemas at build time,
 // so a typo in a content file becomes a clear error rather than a silent bug.
+//
+// The blog and people schemas are LOCKED for the WordPress migration —
+// see MIGRATION.md before changing them. `.strict()` makes unknown
+// frontmatter keys a build error, so AI-drafted posts can't sneak in
+// malformed fields.
 
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
-// Blog posts — created and managed by staff via the CMS
+// Blog posts — "Great Things Blog".
+// Filename = URL slug (posts render at /blog/<filename>/), so migrated
+// posts keep their WordPress post-name as the filename.
 const blog = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
   schema: z.object({
     title:       z.string(),
     date:        z.coerce.date(),
     description: z.string(),
+    // Human author, or "Blake" for AI-drafted posts (which arrive via PR).
+    author:      z.string(),
+    // Which program the post belongs to; drives future filtering.
+    program:     z.enum(['makefashion-edu', 'neighborhood-earth', 'system-upgrade', 'general']).default('general'),
+    // Original WordPress categories/tags, preserved verbatim for future
+    // use (per-person pages, program filters, the RAG pipeline).
+    categories:  z.array(z.string()).default([]),
+    tags:        z.array(z.string()).default([]),
     image:       z.string().optional(),
     imageAlt:    z.string().optional(),
-  }),
+    // Optional pointers for the AI publishing pipeline: the event a post
+    // covers and the source media (YouTube/Drive URLs) it draws on.
+    event:       z.string().optional(),
+    media:       z.array(z.string()).default([]),
+    // Drafts are kept in the repo but never built into the site.
+    draft:       z.boolean().default(false),
+  }).strict(),
+});
+
+// People — SteamHead Team & Residents profiles. Migrated from the old
+// blog's "SteamHead Team" / "SteamHead Residents" category posts; these
+// never appear in the blog index. Presentation (pages/popups) is TBD.
+const people = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/people' }),
+  schema: z.object({
+    name:        z.string(),
+    role:        z.enum(['team', 'resident']),
+    // Original post title, when it was more than just the person's name.
+    title:       z.string().optional(),
+    date:        z.coerce.date(),
+    description: z.string().optional(),
+    image:       z.string().optional(),
+    imageAlt:    z.string().optional(),
+    draft:       z.boolean().default(false),
+  }).strict(),
 });
 
 // Individual page content files — one per page, edited via CMS
@@ -39,4 +78,4 @@ const guides = defineCollection({
   }),
 });
 
-export const collections = { blog, pages, settings, guides };
+export const collections = { blog, people, pages, settings, guides };

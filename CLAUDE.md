@@ -27,13 +27,15 @@ is the surviving source of truth (the machine that did the earlier work died).
 - Manual deploy: `npm run deploy` (build + `wrangler deploy`).
   Local preview of the Worker: `npm run preview`.
 
-## Content schema plan
+## Content schema (locked 2026-07-10)
 
-Blog frontmatter is enforced by zod in `src/content.config.ts` — a malformed
-post fails the build instead of publishing broken. Current fields: `title`,
-`date`, `description`, `image?`, `imageAlt?`. Planned additions (keep strict):
-`author`, `program` (Neighborhood Earth / System Upgrade / MakeFashion Edu /
-general), event reference, media list, `draft` flag. Keep `config.yml`
+Blog frontmatter is enforced by strict zod schemas in `src/content.config.ts`
+— a malformed or unknown field fails the build instead of publishing broken.
+Blog fields: `title`, `date`, `description`, `author`, `program`,
+`categories`, `tags`, `image?`, `imageAlt?`, `event?`, `media`, `draft`.
+A separate `people` collection holds Team/Resident profiles (never shown in
+the blog). Filename = URL slug: posts render at `/blog/<filename>/`.
+See MIGRATION.md for the full locked migration decisions. Keep `config.yml`
 (CMS fields) and `content.config.ts` (build validation) in sync when the
 schema changes.
 
