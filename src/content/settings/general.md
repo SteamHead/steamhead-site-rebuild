@@ -5,6 +5,6 @@ mission: >
   To provide access to quality, relevant education focused on integrating
   design, technology, and community.
 facebook_url: https://www.facebook.com/steamHead.Space
-contact_url: https://www.steamhead.space/contact-us/
+contact_url: /contact-us/
 support_url: https://www.steamhead.space/support-us/
 ---
