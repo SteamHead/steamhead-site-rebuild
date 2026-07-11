@@ -1,36 +1,25 @@
 # Site TODO
 
-Requests captured during review — not part of the blog migration. Design
-discussions happen before implementing where noted.
-
-## Header / footer
-
-- [ ] **Add Blog link to header and footer nav** — /blog/ is currently only
-      reachable by direct URL. (Blake, 2026-07-10)
-- [ ] **Collapse the three program links into a "Programs" dropdown** —
-      MakeFashion Edu, Neighborhood Earth, and System Upgrade make the
-      header too long, and Blog/People links are coming. (Blake, 2026-07-10)
-- [ ] **Use the SteamHead logo graphic instead of the text "SteamHead"** in
-      the header. Get the proper mark from `reference/SteamHead Brand
-      Guide.pdf` (a clean SVG/PNG, not the old JPEG in
-      `public/images/2018/08/`). (Blake, 2026-07-10)
-- [ ] **Add media kit link to the footer** — old URL is
-      `https://steamhead.space/media_kit/`. Note: that's a WordPress *page*;
-      at domain cutover the media kit needs a new home on this site (or its
-      own redirect). Until then the footer link can point at the old URL.
-      (Blake, 2026-07-10)
+Requests captured during review. Header/footer items from 2026-07-10
+(blog link, Programs dropdown, logo graphic, media kit link, favicon) were
+implemented in PR #9 — see GitHub issues #3–#7.
 
 ## Content
 
+- [ ] **Blake to provide the 5 missing videos** — 5 videos couldn't be pulled
+      from the old site during migration (list in `scripts/migration-report.md`
+      + MIGRATION.md parking lot, incl. the 96 MB `output2.mp4` from the Snow
+      Drop post). Blake has the source files; once provided, upload to YouTube
+      and replace the old-site URLs in the affected posts. Must happen before
+      domain cutover. (Logged 2026-07-11 — Blake asked not to be allowed to
+      forget this.)
 - [ ] **Alt text for all images** — migrated post images currently reuse the
       post title as alt text; real descriptive alt text should be generated
       (AI-assisted pass over ~300 images) or hand-written for the important
       ones. Accessibility item from the evaluation's week-6 pass.
       (Blake, 2026-07-11)
-
-## Bugs
-
-- [ ] **Favicon not showing** — `public/favicon.svg` exists; check that
-      BaseLayout.astro emits the `<link rel="icon">` tag and that the SVG
-      isn't a placeholder. Consider deriving it from the real logo.
-      (Blake, 2026-07-10)
+- [ ] **Media kit page** — footer currently links the old-site URL
+      (`steamhead.space/media_kit/`); needs a home here before domain cutover.
+- [ ] **makefashion.ca/edu mirror** — static snapshot under
+      `/makefashion-edu/site/`, original stays up. Planned as its own work
+      chain after the current PR deploys. (Blake, 2026-07-11)
