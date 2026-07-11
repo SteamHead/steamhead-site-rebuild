@@ -1,14 +1,9 @@
 {
-  "before_mb": 57.7,
-  "after_mb": 55.6,
-  "files_optimized": 10,
-  "files_unchanged": 351,
-  "files_converted_to_jpeg": 2,
-  "renames": {
-    "/images/2020/10/nanshan-maker-faire.png": "/images/2020/10/nanshan-maker-faire.jpg",
-    "/images/mfedu/WeChat-Image_20181205214747.png": "/images/mfedu/WeChat-Image_20181205214747.jpg"
-  },
-  "content_files_rewritten": [
-    "src/pages/media_kit.astro"
-  ]
+  "before_mb": 85.5,
+  "after_mb": 80.4,
+  "files_optimized": 21,
+  "files_unchanged": 475,
+  "files_converted_to_jpeg": 0,
+  "renames": {},
+  "content_files_rewritten": []
 }

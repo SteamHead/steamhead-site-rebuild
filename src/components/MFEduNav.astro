@@ -1,0 +1,96 @@
+---
+/* MakeFashion Edu section nav — right sidebar on subpages, mirroring the
+   original makefashion.ca/edu right nav. Builds itself from the mfedu
+   collection, so new pages appear automatically. */
+import { getCollection } from 'astro:content';
+
+const { currentSlug = "" } = Astro.props;
+const entries = await getCollection('mfedu');
+const bySection = (s: string) =>
+  entries.filter(e => e.data.section === s).sort((a, b) => a.data.order - b.data.order);
+
+const groups = [
+  { label: "Runway Shows",    items: bySection('runway-shows') },
+  { label: "Run the Program", items: bySection('run-the-program') },
+  { label: "About",           items: bySection('about') },
+];
+---
+
+<nav class="mfedu-nav" aria-label="MakeFashion Edu section navigation">
+  <a href="/makefashion-edu/" class="mfedu-nav__home">← MakeFashion Edu</a>
+  {groups.map(group => (
+    <div class="mfedu-nav__group">
+      <h3>{group.label}</h3>
+      <ul role="list">
+        {group.items.map(e => (
+          <li>
+            <a
+              href={`/makefashion-edu/${e.id}/`}
+              class:list={["mfedu-nav__link", { "mfedu-nav__link--active": e.id === currentSlug }]}
+            >
+              {e.data.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  ))}
+  <div class="mfedu-nav__group">
+    <h3>Learn</h3>
+    <ul role="list">
+      <li><a href="/shelf/" class="mfedu-nav__link">Online Course &amp; Guides</a></li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .mfedu-nav {
+    position: sticky;
+    top: calc(var(--nav-height) + 1rem);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background: var(--color-gray-light);
+    border-radius: var(--radius);
+    font-size: var(--text-sm);
+  }
+  .mfedu-nav__home {
+    font-family: var(--font-heading);
+    color: var(--color-dark);
+    text-decoration: none;
+  }
+  .mfedu-nav__home:hover { color: var(--color-teal); opacity: 1; }
+  .mfedu-nav__group h3 {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #888;
+    margin-bottom: 0.4rem;
+  }
+  .mfedu-nav__group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .mfedu-nav__link {
+    color: var(--color-dark);
+    text-decoration: none;
+    display: block;
+    padding: 0.15rem 0;
+  }
+  .mfedu-nav__link:hover { color: var(--color-teal); opacity: 1; }
+  .mfedu-nav__link--active {
+    color: var(--color-teal);
+    font-weight: 700;
+  }
+
+  @media (max-width: 900px) {
+    .mfedu-nav { position: static; }
+  }
+</style>
