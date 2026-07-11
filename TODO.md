@@ -18,8 +18,10 @@ implemented in PR #9 — see GitHub issues #3–#7.
       (AI-assisted pass over ~300 images) or hand-written for the important
       ones. Accessibility item from the evaluation's week-6 pass.
       (Blake, 2026-07-11)
-- [ ] **Media kit page** — footer currently links the old-site URL
-      (`steamhead.space/media_kit/`); needs a home here before domain cutover.
+- [x] **Media kit page** — rebuilt at `/media_kit/` (same URL as old site);
+      footer link now internal. Note: its Certification section still links
+      the old site's design-immersion-curriculum and maker-badges pages,
+      which need homes or redirects before domain cutover.
 - [ ] **makefashion.ca/edu mirror** — static snapshot under
       `/makefashion-edu/site/`, original stays up. Planned as its own work
       chain after the current PR deploys. (Blake, 2026-07-11)

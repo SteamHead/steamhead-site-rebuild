@@ -1,0 +1,196 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getEntry } from 'astro:content';
+
+/* Mission & vision come from the About page content, so the media kit
+   can never drift out of sync with the site's own statements. */
+const about = await getEntry('pages', 'about');
+const { mission, vision } = about.data;
+
+const logos = [
+  {
+    name: "Primary Logo",
+    src: "/images/2021/04/SHLogoStackedMGTWithBG.png",
+    alt: "SteamHead primary stacked logo",
+  },
+  {
+    name: "Horizontal Logo",
+    src: "/images/2021/04/SHLogoHorizontalMGTWithBG-1.png",
+    alt: "SteamHead horizontal logo",
+  },
+  {
+    name: "Black and White Logo",
+    src: "/images/2021/03/SteamHead_Logo-MGT-BW.png",
+    alt: "SteamHead black and white logo",
+  },
+  {
+    name: "Fun Logo",
+    src: "/images/2020/10/nanshan-maker-faire.png",
+    alt: "SteamHead fun logo",
+  },
+];
+---
+
+<BaseLayout
+  title="Media Kit"
+  description="SteamHead brand guidelines, logos, and mission statements for media and educators."
+>
+
+  <!-- =====================================================================
+       HERO
+       ===================================================================== -->
+  <section class="hero hero--short" aria-label="Media Kit">
+    <div class="container hero__content">
+      <h1>Media Kit</h1>
+      <p class="hero__tagline">
+        SteamHead is a network of people, spaces, and events who collaborate to
+        improve equity in education as the path forward.
+      </p>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       MISSION / VISION
+       ===================================================================== -->
+  <section class="section" aria-label="Mission and Vision">
+    <div class="container">
+      <p>
+        We believe that by embracing design thinking and a maker-mindset,
+        education can be more engaging and meaningful — and with that, more
+        effective in preparing students for success.
+      </p>
+      <div class="two-col mt-md">
+        <div>
+          <h2>Our Mission</h2>
+          <hr class="accent-rule" />
+          <p>{mission}</p>
+        </div>
+        <div>
+          <h2>Our Vision</h2>
+          <hr class="accent-rule" />
+          <p>{vision}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       BRAND GUIDELINES
+       ===================================================================== -->
+  <section class="section section--alt" aria-label="Brand guidelines">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <h2>Brand Guidelines</h2>
+          <hr class="accent-rule" />
+          <p>
+            For guidelines on logo usage, fonts, and other brand information,
+            please download the SteamHead Brand Guide.
+          </p>
+          <a href="/downloads/2021_SteamHead_Brand_Guide.pdf" class="btn btn--primary mt-md" download>
+            Download the Brand Guide (PDF)
+          </a>
+        </div>
+        <img
+          src="/images/2021/04/SteamHeadBrandGuide.png"
+          alt="Cover of the SteamHead Brand Guide"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       LOGOS
+       ===================================================================== -->
+  <section class="section" aria-label="SteamHead logos">
+    <div class="container">
+      <h2>SteamHead Logos</h2>
+      <hr class="accent-rule" />
+      <p class="mt-md">
+        Media, please use the logos and statements responsibly — you know the
+        drill, but if you have questions feel free to <a href="/contact-us/">contact us</a>!
+      </p>
+      <p>
+        Educators, you are welcome to put our logo on content of ours that you
+        use — just make it clear that you're the ones taking action and we're
+        just there for inspiration :)
+      </p>
+
+      <div class="logo-grid mt-md">
+        {logos.map(logo => (
+          <div class="logo-card">
+            <a href={logo.src} download>
+              <img src={logo.src} alt={logo.alt} loading="lazy" />
+            </a>
+            <h3>{logo.name}</h3>
+          </div>
+        ))}
+      </div>
+
+      <a href="/downloads/SteamHead_Logo-MGT.pdf" class="btn btn--outline mt-md" download>
+        Download the Logo (vector PDF)
+      </a>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       CERTIFICATION
+       ===================================================================== -->
+  <section class="section section--alt" aria-label="Certification">
+    <div class="container">
+      <h2>Certification</h2>
+      <hr class="accent-rule" />
+      <p class="mt-md">
+        Courses or activities developed in cooperation with SteamHead may
+        request to receive a terms agreement that this certification logo is
+        authorized to appear on documentation and advertising of said course or
+        activity. The usage of the logo should indicate that SteamHead is a
+        certification partner only and not a course or activity administrator;
+        full details available in the terms agreement.
+      </p>
+      <p>
+        The courses or activities must remain in alignment with our
+        <a href="https://steamhead.space/design-immersion-curriculum/" target="_blank" rel="noopener">Design Immersion Curriculum</a>
+        and
+        <a href="https://steamhead.space/maker-badges/" target="_blank" rel="noopener">Maker Badges</a>.
+      </p>
+      <p>
+        The certification program is not for sale, and is sustained solely by a
+        donation of hours. The approval of the program is subject to the Board
+        of Directors' authorization and agreement that the course or activity
+        aligns with SteamHead's mission and vision, regardless of the
+        participation of SteamHead members in the creation of the content.
+      </p>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .hero--short { padding-block: var(--space-lg); }
+
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-md);
+  }
+  .logo-card {
+    background: var(--color-gray-light);
+    border-radius: var(--radius);
+    padding: var(--space-sm);
+    text-align: center;
+  }
+  .logo-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    border-radius: var(--radius);
+  }
+  .logo-card h3 {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-dark);
+    margin-top: var(--space-xs);
+  }
+</style>
