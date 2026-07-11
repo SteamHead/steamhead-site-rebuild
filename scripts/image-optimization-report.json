@@ -1,42 +1,14 @@
 {
-  "before_mb": 80.9,
-  "after_mb": 53.3,
-  "files_optimized": 16,
-  "files_unchanged": 331,
-  "files_converted_to_jpeg": 16,
+  "before_mb": 57.7,
+  "after_mb": 55.6,
+  "files_optimized": 10,
+  "files_unchanged": 351,
+  "files_converted_to_jpeg": 2,
   "renames": {
-    "/images/2017/09/natsuko.png": "/images/2017/09/natsuko.jpg",
-    "/images/2017/12/tommen.png": "/images/2017/12/tommen.jpg",
-    "/images/2018/01/zachary.png": "/images/2018/01/zachary.jpg",
-    "/images/2018/04/shannonhoover.png": "/images/2018/04/shannonhoover.jpg",
-    "/images/2018/09/olivia.png": "/images/2018/09/olivia.jpg",
-    "/images/2019/02/michelle.png": "/images/2019/02/michelle.jpg",
-    "/images/2019/09/jonathan.png": "/images/2019/09/jonathan.jpg",
-    "/images/2019/11/mikeshaw.png": "/images/2019/11/mikeshaw.jpg",
-    "/images/2021/09/bensimpson.png": "/images/2021/09/bensimpson.jpg",
-    "/images/2021/09/carrieleung.png": "/images/2021/09/carrieleung.jpg",
-    "/images/2021/09/twilabusby-1.png": "/images/2021/09/twilabusby-1.jpg",
-    "/images/2021/11/averykuo.png": "/images/2021/11/averykuo.jpg",
-    "/images/2023/06/mfedu.png": "/images/2023/06/mfedu.jpg",
-    "/images/2024/04/makefashionedu.png": "/images/2024/04/makefashionedu.jpg",
-    "/images/2024/04/neighborhoodearth.png": "/images/2024/04/neighborhoodearth.jpg",
-    "/images/2024/04/systemupgrade.png": "/images/2024/04/systemupgrade.jpg"
+    "/images/2020/10/nanshan-maker-faire.png": "/images/2020/10/nanshan-maker-faire.jpg",
+    "/images/mfedu/WeChat-Image_20181205214747.png": "/images/mfedu/WeChat-Image_20181205214747.jpg"
   },
   "content_files_rewritten": [
-    "src/content/blog/avery-kuo.md",
-    "src/content/blog/makefashion-edus-metacognition.md",
-    "src/content/people/carrie-leung.md",
-    "src/content/people/james.md",
-    "src/content/people/jonathan.md",
-    "src/content/people/michelle.md",
-    "src/content/people/mike-shaw-welcome.md",
-    "src/content/people/natsuko.md",
-    "src/content/people/olivia.md",
-    "src/content/people/shannon-hoover.md",
-    "src/content/people/tommen.md",
-    "src/content/people/twila-busby.md",
-    "src/content/people/zacharys-art-residency.md",
-    "src/pages/index.astro",
-    "src/pages/neighborhood-earth.astro"
+    "src/pages/media_kit.astro"
   ]
 }
