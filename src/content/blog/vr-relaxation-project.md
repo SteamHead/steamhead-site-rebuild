@@ -13,7 +13,7 @@ imageAlt: "VR Relaxation Project"
 
 ![](/images/2020/04/gaming-05.png)
 
-# VR Relaxation Project
+## VR Relaxation Project
 
 ## Try game
 

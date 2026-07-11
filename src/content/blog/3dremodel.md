@@ -12,7 +12,7 @@ image: "/images/2021/01/angle-2.png"
 imageAlt: "Space Remodeling"
 ---
 
-# 3D Design 8hours
+## 3D Design 8hours
 
 Sunny from SteamHead writes, "...all of these designs are based on some cool medium low budget AR/MR workflow thats very beginner friendly, i am exploring this route for more content and ways to utilize its power  
 lidar is amazing/cheap comparing to other solutions. I used kinect before but found lidar (on apple devices such as ipad pro gen4, and iphone 12 pro, but this time iphone 12 pro specifically) is much more user friendly and easy to learn."

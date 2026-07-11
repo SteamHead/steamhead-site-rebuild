@@ -12,7 +12,7 @@ image: "/images/2020/09/Maker-Ed-Conv.png"
 imageAlt: "Maker Convening"
 ---
 
-# Hello Maker Convening Educators!  
+## Hello Maker Convening Educators!  
 
 We are MakeFashion Edu, coming to you from our equity project, the makerspace SteamHead. We are comprised of a network of students, educators, parents, makers, and industry allies that believe in embracing design thinking and a maker-mindset education to make more engaging and meaningful learning.
 
@@ -22,7 +22,7 @@ Joining will require you to make a free account, click the link above to get sta
 
 https://youtu.be/82Fei8qsahI?t=24
 
-# **Advocacy Through Tech!**
+## **Advocacy Through Tech!**
 
 We’re on October 3rd @ 11:15am ([MakerEd.org](https://makered.org/convening-2020/schedule/)), join us for a live chat right after the session on Discord. Maker Convening ticket needed for the presentation, no ticket needed for the Discord chat.
 

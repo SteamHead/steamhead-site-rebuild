@@ -11,7 +11,7 @@ image: "/images/2020/05/coding-isometric-12.png"
 imageAlt: "Mentoring in a Pandemic"
 ---
 
-# Online Learning Support: Technology Integration during the 2020 Pandemic
+## Online Learning Support: Technology Integration during the 2020 Pandemic
 
 During the unexpected Online Learning event of 2020, the Technology Integration Team at ISNS worked together to create a support website for teachers, students, and parents.
 

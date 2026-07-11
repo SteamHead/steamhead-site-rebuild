@@ -15,7 +15,7 @@ A story of collaboration, authentic audience, cross-grade mentorship, creative c
 
 * * *
 
-# Using MicroBlocks + OctoStudio for a Grade 2 Winter Performance
+## Using MicroBlocks + OctoStudio for a Grade 2 Winter Performance
 
 At our elementary school winter festival, something unexpected happened.
 

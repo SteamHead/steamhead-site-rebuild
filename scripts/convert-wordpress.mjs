@@ -140,6 +140,9 @@ function wpautop(s) {
 function toMarkdown(html) {
   let md = td.turndown(preprocess(html));
   md = md.replace(/\n{3,}/g, '\n\n').trim();
+  // The page renders the post title as the <h1>; body h1s would compete
+  // with it (and render huge), so demote them one level.
+  md = md.replace(/^# /gm, '## ');
   return md;
 }
 

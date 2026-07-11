@@ -85,7 +85,9 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .post-card__image {
     width: 100%;
     aspect-ratio: 16/9;
-    object-fit: cover;
+    /* contain (not cover): odd-shaped images letterbox instead of cropping */
+    object-fit: contain;
+    background: #f2f2f2;
     border-radius: 0;
   }
 

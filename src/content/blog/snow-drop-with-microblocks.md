@@ -11,7 +11,7 @@ draft: true
 
 Using MicroBlocks + OctoStudio for a Grade 2 Winter Performance <!-- <br> --> /\* Minimal styling so it looks clean anywhere (Divi/WP-friendly) \*/<!-- <br> --> .post-wrap { max-width: 820px; margin: 0 auto; padding: 0 16px; }<!-- <br> --> .lede { font-size: 1.1rem; line-height: 1.55; }<!-- <br> --> hr { border: 0; border-top: 1px solid rgba(0,0,0,0.12); margin: 2rem 0; }<!-- <br> --> figure { margin: 1.25rem 0; }<!-- <br> --> img, video { max-width: 100%; height: auto; display: block; }<!-- <br> --> figcaption { font-size: 0.95rem; opacity: 0.8; margin-top: 0.5rem; }<!-- <br> --> ul { margin-top: 0.5rem; }<!-- <br> --> h1 { line-height: 1.2; margin: 0 0 0.75rem; }<!-- <br> --> h2 { margin: 0 0 0.75rem; }<!-- <br> --> h3 { margin: 1.25rem 0 0.5rem; }<!-- <br> --> .callout { padding: 0.9rem 1rem; border-left: 3px solid rgba(0,0,0,0.25); margin: 1.25rem 0; }<!-- <br> --> .two-col { display: grid; grid-template-columns: 1fr; gap: 18px; }<!-- <br> --> @media (min-width: 760px) { .two-col { grid-template-columns: 1fr 1fr; } }<!-- <br> --> .small { font-size: 0.95rem; opacity: 0.9; }<!-- <br> --> a { word-break: break-word; }<!-- <br> -->
 
-# Using MicroBlocks + OctoStudio for a Grade 2 Winter Performance
+## Using MicroBlocks + OctoStudio for a Grade 2 Winter Performance
 
 At our elementary school winter festival, something unexpected happened.
 
