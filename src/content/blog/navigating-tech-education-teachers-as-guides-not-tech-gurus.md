@@ -1,0 +1,24 @@
+---
+title: "Navigating Tech Education: Teachers as Guides, Not Tech Gurus"
+date: 2023-05-22
+description: "In education technology is becoming an essential part of learning. Surprisingly to hackers, it's not there yet!"
+author: "James"
+program: general
+categories:
+  - "Uncategorized"
+draft: true
+---
+
+In education technology is becoming an essential part of learning. Surprisingly to hackers, it's not there yet! Many educators feel overwhelmed by the pressure to master every new tool and technology that enters the classroom. Imagine an woodshop teacher getting a new electric saw that they didn't know how to use, it would be seen as totally unacceptable to send students over to it! But what about ChatGPT, or Adobe Premiere Pro, or Wikipedia? Could a teacher allow those tools but only be familiar with them at a high level? At SteamHead, we believe that teachers don't need to be... no, **shouldn't be** tech gurus in order to guide their students effectively. Instead, they should serve as project managers, fostering an environment of independent and self-guided learning that empowers students to explore technology on their own terms.
+
+We talked to teachers in Sri Lanka recently on this The essence of progressive education lies not in the mastery of every tool and software, but in cultivating curiosity, resilience, and the ability to problem-solve. The teachers of SteamHead strongly advocate for hands-on, meaningful projects that have real-world impacts.
+
+Is this at odds with the "Hacker meets Educator" philosophy? I don't think so. I do think that Educators should be Hackers, and that self-identifying as a hacker within the school environment should be applauded. A little known fact outside the world of makers, hackers, and tech-enthusiasts is that we are not all full-stack developers. We specialize and rely on community to complete our projects and progress our learning.
+
+Rather than focusing on mastering every tech tool, teachers can concentrate on facilitating a learning environment where students feel encouraged to explore and experiment. This approach aligns perfectly with the principles of differentiation and self-guided learning. Each student is unique, with their own set of interests and learning styles. By acting as a project manager, teachers can adapt to these individual needs and promote a learning atmosphere where each student can thrive at their own pace.
+
+Embracing this role doesn't mean abandoning direct instruction—there is, of course, a time and place for that. But by balancing direct instruction with independent exploration, teachers can help students develop the skills and confidence they need to navigate the world of technology.
+
+At the end of the day, the goal of education is not to produce a generation of students who can all use the same set of tools in the same way. Rather, it's to nurture lifelong learners who can adapt to new challenges and technologies as they arise. And teachers—armed with a guiding philosophy rather than a tech manual—are essential to making this happen.
+
+Join us at SteamHead as we explore this exciting approach to tech education. Together, we can empower our students to be the pioneers of their learning journey.

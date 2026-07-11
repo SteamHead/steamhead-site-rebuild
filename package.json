@@ -18,6 +18,9 @@
     "astro": "^6.3.3"
   },
   "devDependencies": {
+    "turndown": "^7.2.4",
+    "turndown-plugin-gfm": "^1.0.2",
+    "unist-util-visit": "^5.1.0",
     "wrangler": "^4.93.0"
   },
   "overrides": {

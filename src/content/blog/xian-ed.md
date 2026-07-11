@@ -1,0 +1,52 @@
+---
+title: "Xi'an Makers Education Scene"
+date: 2019-12-08
+description: "By Diane Kern Hamilton I recently had the pleasure of spending nine days in Xi'an, the capitol city of Shaanxi Provence, China."
+author: "James"
+program: general
+categories:
+  - "Diane"
+  - "Great Projects"
+  - "Paul"
+image: "/images/2019/12/image001.png"
+imageAlt: "Xi'an Makers Education Scene"
+---
+
+**By Diane Kern Hamilton**
+
+I recently had the pleasure of spending nine days in Xi'an, the capitol city of Shaanxi Provence, China. I visited more than ten different educational facilities from kindergarten to university. All had one thing in common: they are turning away from traditional education and adopting STEAM principles in their schools. STEAM, for those that aren't familiar, is the focus of education on Science, Technology, Engineering, Arts and Math.
+
+I was travelling with the group: Hackers Trip Through China 2019, or HTTC for short. We were assembled from all parts of the world and were travelling under the leadership of Mitch Altman. Mitch is well known in the Maker community here and around the world for his passionate advocacy of Maker/Hacker culture as a way to foster education, collaboration and creativity around the world. This year's group included members from Switzerland, Brazil, Australia, Belgium, Singapore and the United States.
+
+Our visit began with Feng Xi Middle School, where we were greeted like rock stars! We didn't know what to expect, but we certainly didn't expect that. We came together with students and teachers in the school's theatre for introductions and speeches. The message was clear: STEAM is the starting place for Makers and Makers are changing the world.
+
+![](/images/2019/12/image001-300x195.png) Figure 1: None of us were prepared for this greeting! ![](/images/2019/12/image002-1-300x131.png) Figure 2: Meeting the executives at Feng Xi Middle School
+
+From there, we were split into groups for some hands on education. I led a group of students from 8-10 years olds in a class I called Up-cycling a Tee Shirt. The goal was to use scissors, a stapler, felt pens and found objects to personalize a plain white tee shirt. The students were quite enthusiastic about the task at hand and happily went about creating their own work of art. The adults in the room were a bit more reticent. But in the end, each group produced a shirt that told their story and everyone, adults included, happily showed off their work.
+
+![](/images/2019/12/image003-1-300x185.png) Figure 3: Drone workshop ![](/images/2019/12/image004-300x282.png) Figure 4: Learning Chinese Caligraphy
+
+This itinerary was the model for our many school visits over the next nine days. In some instances we visited more than three schools a day. The speeches varied from school to school, dependent upon the school's focus. Each, however, wanted to hear from our tour leader, Mitch Altman and his experiences as an international Hacker. Other presenters included:
+
+• Jonathan Hefter: From University Education to Successful Start Up  
+• Paul Hamilton: Citizen Science: Makers Helping with Scientific Research  
+• Audrey Lim: Changing from Law Student to Programmer - Fulfilling a Dream  
+• Ben Anderman: Becoming a Successful Programmer without a College Education
+
+There were other classes in addition to classes that I taught:
+
+• Torrey M: Teaching Song and Dance as a Part of Language Education  
+• Mitch Altman: Hacking Recycled Water Bottles: Toys, Lanterns and Fun  
+• Mitch Altman: Soldering for Beginners  
+• Mitch Altman: Arduino Workshop  
+• Daniel Hartz. : Drone Operations
+
+Throughout the course of our days in Xi'an we were busy answering questions and asking many of our own. Fast friendships were formed, hopefully to last a lifetime. Tour members and hosts alike came away changed forever with new ideas, clear insights and happy memories for all. For me, the take-aways were:
+
+• We are all working to bridge the gap between East and West education systems: each offers something unique; each has its benefits.  
+• Creative play and laughter can facilitate learning as much as order and discipline.  
+• China is eager to embrace educational change and there are plenty of like-minded people around the world willing to contribute.
+
+I have had one final thought about what I learned in Xi'an: If we all took care to be curious, creative and collaborative at school, at work and at play we would be living in the best Maker Space in the world: the World.
+
+![](/images/2019/12/image005-300x172.png) Figure 5: The Wheels on the Bus Go Round and Round is fun in any language ![](/images/2019/12/image006-300x199.png) Figure 6: Tee Shirt Hacking ![](/images/2019/12/image007-300x233.png) Figure 7: Our guide, Mitch Altman (left) leading a recycling workshop

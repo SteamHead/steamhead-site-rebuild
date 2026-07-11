@@ -1,0 +1,35 @@
+---
+title: "3 tidbits to use from Educational Philosophies"
+date: 2020-07-07
+description: "Philosophy's abound! Ready for teachers to buy-into and discuss at PubPD. I advocate approaching these philosophies with pruning shears and a basket."
+author: "James"
+program: general
+categories:
+  - "JamesEd"
+---
+
+Philosophy's abound! Ready for teachers to buy-into and discuss at PubPD. I advocate approaching these philosophies with pruning shears and a basket. Take what you need, read their histories for fun, and then go tend to your own garden.
+
+Here's what's in my basket for 3 common educational philosophies:
+
+**Essentialism**  
+Essentialism is a teacher-centric educational philosophy that I do not consciously subscribe to, but have found that many of my positive experiences and moral frameworks are built upon.  
+Essentialism focuses on training the mind in increasingly difficult academic topics through lectures and reading assignments, in a manner that myself and most Americans were raised under (Lynch, 2016).
+
+My belief's in equality stem from the "training of the mind", and the assumption that a mind is a slate which began blank and can accept any education that it selects. I still hold these values close, even though my current teaching methods focus on metrics of success that are not always equal, and give students the opportunity to evaluate metrics of success for themselves.
+
+**Progressivism**  
+"John Dewey proposed that people learn best by social interaction and problem solvin." \[sic\] (Labaree, 2005). For me this is the strongest way to communicate the base of progressivism. I employ this philosophy in the majority of my lessons. I believe that this will give my students the best chance at self-awareness, self-control, and confidence that I can provide. I believe it will inform students about the correct ways to evaluate authority and academics, which are taken at face value in Essentialism (a disadvantage of Essentialism in isolation), but not inherently incorrect when evaluated through self-reflection and open-mindedness.
+
+**Perennialism**  
+"Perennialism is the educational philosophy that the importance of certain works transcends time." (Lynch, 2016) There are building blocks around this idea that are common to many cultures, religions, and stories. Students can enjoy this romantic idea of timeless works as well, as Harvard author Chhoka wrote, "...centuries, continents and entire lifestyles may separate the reader of a classic from its author, but the effect is timeless and universal." (Chhoka, 2015)
+
+This is an educational philosophy that some institutions and educators push so hard, that it drives others away in droves. However, it is undeniable that the effects of timeless stories can have strong influences. I recognize this philosophy as an excellent medium-level tool, and often incorporate myths, great works, and histories into my projects that deal with current-day issues.
+
+**References**
+
+Lynch, M. (2016, November 03). Philosophies of education: 3 types of student-centered philosophies. Retrieved March 07, 2018, from http://www.theedadvocate.org/philosophies-education-3-types-student-centered-philosophies/
+
+Labaree, D. (2005, February). Progressivism, schools, and schools of education. Retrieved March 07, 2018, from https://www.academia.edu/7055356/Progressivism\_Schools\_and\_Schools\_of\_Education
+
+Chhokra, S. (2015, August 1). The Classics Transcend Time and Space. New York Times. Retrieved July 4, 2020 from https://www.nytimes.com/roomfordebate/2015/08/31/what-should-college-freshmen-read/the-classics-transcend-time-and-space

@@ -69,4 +69,17 @@ path:
 
 ### Parking lot
 
-- (add items as they come up)
+- **5 videos must move to YouTube/Drive before domain cutover** — they're
+  currently linked at their old steamhead.space/wp-content URLs, which die
+  when the domain moves. List in `scripts/migration-report.md` (three 2021
+  clips, one 2025 .mov, and the 96 MB `output2.mp4` from the Snow Drop
+  post — too big for Workers assets even if we wanted to host it).
+- 4 images 404'd on the live site during download (see report) — posts
+  reference them but the originals are already gone; decide fix or remove.
+- 4 posts kept raw `<iframe>` embeds — check they render acceptably:
+  friendship-team-moralture…, htm-photo-studio-final-review-2,
+  home-automation-project, fuse33-lidar-scan.
+- 22 external (non-steamhead) images left hotlinked — fine for now, but
+  they can rot; consider localizing the important ones.
+- Author "James" vs "James Simpson" (from `admin`) are currently two
+  distinct author strings — unify if they're the same person.

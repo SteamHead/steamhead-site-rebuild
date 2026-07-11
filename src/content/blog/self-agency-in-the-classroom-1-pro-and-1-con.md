@@ -1,0 +1,31 @@
+---
+title: "Self-Agency in the Classroom: 1 pro and 1 con"
+date: 2020-07-07
+description: "Self Agency A pro in having students involved in creating the rules is increasing \"self-agency\", by informing students of the power they have to control themselves, we can achieve…"
+author: "James"
+program: general
+categories:
+  - "JamesEd"
+---
+
+**Self Agency**
+
+A pro in having students involved in creating the rules is increasing "self-agency", by informing students of the power they have to control themselves, we can achieve a lot of what Unit 2 author Alfie Kohn sought when he wrote, "We have to bring them in on the process of making decisions about their learning..." (Kohn, 1995).
+
+**Advantage of Self Agency**
+
+Personally I have found involving students in this way is beneficial even in small steps, such as allowing students to govern their own task lists during common projects. I extend this capability into managing daily actions, but project goals are often decided by the class with the teacher as the final approver.
+
+**Disadvantages of Self-Agency**
+
+Successfully self-agency is not a one-stop solution that solves problems in the classroom, as Barbara McEwan references in "Contradiction, Paradox, and Irony" (1997) when she speaks of "pixie dust". I call them "silver bullets", and they are indeed mythical. Instead, self-agency often exposes problems, bringing them to the surface.
+
+This can be a con to involving students in this process of creating rules, in specific situations. Sometimes students want leadership and simplicity, and involving individual student goals in a class of 30 students can be chaotic and perplexing in certain situations.
+
+In these cases, I advocate against fully involving students, but instead letting them know, to a small extent, that you intend on incorporating their visions at a later time.
+
+**Further Reading & References**
+
+Kohn, A. (1995). Discipline is the problem- Not the solution. Retrieved from [https://www.alfiekohn.org/article/discipline-problem-solution/](https://www.alfiekohn.org/article/discipline-problem-solution/)
+
+McEwan, B. (1997). Contradiction, Paradox, and Irony: The World of Classroom Management. In R.E. Butchart & B. McEwan (eds) Classroom Discipline in American Schools (chapter 5).

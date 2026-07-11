@@ -298,3 +298,15 @@ img { max-width: 100%; height: auto; display: block; border-radius: var(--radius
 .text-muted   { color: #888; font-size: var(--text-sm); }
 .mt-md        { margin-top: var(--space-md); }
 .mt-lg        { margin-top: var(--space-lg); }
+
+/* --- Video embeds (bare YouTube URLs in markdown become these) --- */
+.video-embed {
+  aspect-ratio: 16 / 9;
+  margin-block: var(--space-md);
+}
+.video-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: var(--radius);
+}
