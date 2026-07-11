@@ -132,6 +132,14 @@ collections:
           - { label: "Runway Text",    name: runway_text,    widget: markdown }
           - { label: "Classes Text",   name: classes_text,   widget: markdown }
           - { label: "Books Text",     name: books_text,     widget: markdown }
+          - { label: "Instagram URL",  name: instagram_url,  widget: string }
+          - label: "Instagram Photos"
+            name: instagram_photos
+            widget: list
+            hint: "Curated grid on the page — swap these whenever; they link to the Instagram account"
+            fields:
+              - { label: Photo,          name: image, widget: image }
+              - { label: "Alt Text",     name: alt,   widget: string, required: false }
 
       - name: neighborhood-earth
         label: Neighborhood Earth Page

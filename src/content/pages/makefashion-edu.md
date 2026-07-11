@@ -13,6 +13,20 @@ classes_text: >
   and use technology as a secondary objective. These experiences excel at bringing
   students who do not self-identify as engineers toward using technology to complete
   projects they find compelling.
+instagram_url: https://www.instagram.com/makefashionedu
+instagram_photos:
+  - image: /images/2024/04/makefashionedu.jpg
+    alt: Students walking the MakeFashion Edu runway
+  - image: /images/2019/07/runway-full.jpg
+    alt: A packed MakeFashion Edu runway show
+  - image: /images/2023/06/mfedu.jpg
+    alt: MakeFashion Edu student project
+  - image: /images/2019/07/james-teach.jpg
+    alt: James teaching a fashion tech class
+  - image: /images/2020/08/tucson_2020_thumbnail-1-e1600804432700.jpg
+    alt: MakeFashion Edu Tucson showcase
+  - image: /images/2019/03/MFedu-Tuscon-Poster.jpg
+    alt: MakeFashion Edu Tucson event poster
 books_text: >
   Get inspired by the MakeFashion Edu final projects of each season. These books
   contain gallery shots, materials used, and the narrative stories behind each

@@ -4,7 +4,7 @@ import { getEntry, render } from 'astro:content';
 
 const entry = await getEntry('pages', 'makefashion-edu');
 const { Content } = await render(entry);
-const { hero_tagline, runway_text, classes_text, books_text } = entry.data;
+const { hero_tagline, runway_text, classes_text, books_text, instagram_url, instagram_photos } = entry.data;
 ---
 
 <BaseLayout
@@ -153,6 +153,33 @@ const { hero_tagline, runway_text, classes_text, books_text } = entry.data;
     </div>
   </section>
 
+  <!-- =====================================================================
+       INSTAGRAM
+       Curated photo grid, edited via the CMS — deliberately NOT a live
+       embed (no third-party scripts, nothing to break).
+       ===================================================================== -->
+  <section class="section" aria-label="Follow us on Instagram">
+    <div class="container">
+      <h2>Follow Us on Instagram</h2>
+      <hr class="accent-rule" />
+      <div class="insta-grid mt-md">
+        {(instagram_photos ?? []).map((photo: { image: string; alt?: string }) => (
+          <a href={instagram_url} target="_blank" rel="noopener" class="insta-item">
+            <img src={photo.image} alt={photo.alt ?? "MakeFashion Edu on Instagram"} loading="lazy" />
+          </a>
+        ))}
+      </div>
+      <a
+        href={instagram_url}
+        class="btn btn--primary mt-md"
+        target="_blank"
+        rel="noopener"
+      >
+        @makefashionedu on Instagram
+      </a>
+    </div>
+  </section>
+
 </BaseLayout>
 
 <style>
@@ -161,4 +188,19 @@ const { hero_tagline, runway_text, classes_text, books_text } = entry.data;
     flex-direction: column;
     gap: var(--space-sm);
   }
+
+  .insta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: var(--space-sm);
+  }
+  .insta-item img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: var(--radius);
+    display: block;
+    transition: opacity 0.15s;
+  }
+  .insta-item:hover img { opacity: 0.85; }
 </style>
