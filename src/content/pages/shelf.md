@@ -18,8 +18,8 @@ hardware:
     description: "Individually addressable, programmable LED strip"
     url: "https://www.amazon.com/SEZO-Individually-Addressable-Programmable-Non-Waterproof/dp/B097BX7LRT"
 books:
-  - MFEdu SF 2025 BSU
-  - MFEDU Tucson 2025
-  - MFEDU Tucson 2024
-  - MFEDU Tucson 2023
+  - title: MFEdu SF 2025 BSU
+  - title: MFEDU Tucson 2025
+  - title: MFEDU Tucson 2024
+  - title: MFEDU Tucson 2023
 ---

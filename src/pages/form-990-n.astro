@@ -1,0 +1,197 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+/* Transparency page. Facts here should be stable; anything that changes
+   year to year is intentionally NOT duplicated on this page — we link to
+   the live government databases instead, so the page can't go stale. */
+const EIN = "82-4533355";
+---
+
+<BaseLayout
+  title="Nonprofit Status"
+  description="SteamHead is a registered 501(c)(3) nonprofit organization. Verify our status directly in the IRS Tax Exempt Organization database."
+>
+
+  <!-- =====================================================================
+       HERO
+       ===================================================================== -->
+  <section class="hero hero--short" aria-label="Nonprofit status">
+    <div class="container hero__content">
+      <h1>Nonprofit Status</h1>
+      <p class="hero__tagline">
+        SteamHead is a registered 501(c)(3) nonprofit organization in the
+        United States. Don't take our word for it — verify us at the source.
+      </p>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       THE FACTS
+       ===================================================================== -->
+  <section class="section" aria-label="Organization details">
+    <div class="container">
+      <div class="status-grid">
+        <div class="status-item">
+          <span class="status-label">Legal Name</span>
+          <span class="status-value">STEAMHEAD</span>
+        </div>
+        <div class="status-item">
+          <span class="status-label">EIN (Tax ID)</span>
+          <span class="status-value">{EIN}</span>
+        </div>
+        <div class="status-item">
+          <span class="status-label">Status</span>
+          <span class="status-value">501(c)(3) public charity</span>
+        </div>
+        <div class="status-item">
+          <span class="status-label">Annual Filing</span>
+          <span class="status-value">Form 990-N (e-Postcard), filed since 2018</span>
+        </div>
+      </div>
+      <p class="mt-md">
+        Donations to SteamHead are tax-deductible to the extent allowed by law.
+        As a small nonprofit with gross receipts under $50,000, we file the IRS
+        Form 990-N (e-Postcard) each year — the annual electronic notice required
+        of small exempt organizations.
+      </p>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       VERIFY AT THE SOURCE
+       ===================================================================== -->
+  <section class="section section--alt" aria-label="Verify our status">
+    <div class="container">
+      <h2>Verify Us at the Source</h2>
+      <hr class="accent-rule" />
+      <p class="mt-md">
+        These databases are maintained by the U.S. government and independent
+        watchdogs — always current, straight from the filings:
+      </p>
+
+      <div class="verify-list mt-md">
+        <div class="verify-item">
+          <div>
+            <h3>IRS Tax Exempt Organization Search</h3>
+            <p class="text-muted">
+              The official IRS database. Search by our EIN {EIN} to see our
+              determination status and every 990-N filing on record.
+            </p>
+          </div>
+          <a
+            href="https://apps.irs.gov/app/eos/"
+            class="btn btn--outline"
+            target="_blank"
+            rel="noopener"
+          >
+            Search the IRS
+          </a>
+        </div>
+
+        <div class="verify-item">
+          <div>
+            <h3>ProPublica Nonprofit Explorer</h3>
+            <p class="text-muted">
+              An independent, journalist-maintained mirror of IRS nonprofit
+              records — our filings, one click, no search form.
+            </p>
+          </div>
+          <a
+            href={`https://projects.propublica.org/nonprofits/organizations/${EIN.replace("-", "")}`}
+            class="btn btn--outline"
+            target="_blank"
+            rel="noopener"
+          >
+            View Our Record
+          </a>
+        </div>
+
+        <div class="verify-item">
+          <div>
+            <h3>What is a Form 990-N?</h3>
+            <p class="text-muted">
+              The IRS explains the e-Postcard requirement for small exempt
+              organizations like us.
+            </p>
+          </div>
+          <a
+            href="https://www.irs.gov/charities-non-profits/annual-electronic-filing-requirement-for-small-exempt-organizations-form-990-n-e-postcard"
+            class="btn btn--outline"
+            target="_blank"
+            rel="noopener"
+          >
+            Read at IRS.gov
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       QUESTIONS
+       ===================================================================== -->
+  <section class="section" aria-label="Questions">
+    <div class="container">
+      <p>
+        Questions about our nonprofit status, or need documentation for a grant
+        or donation? <a href="/contact-us/">Get in touch</a> — we're happy to help.
+      </p>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .hero--short { padding-block: var(--space-lg); }
+
+  .status-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-md);
+  }
+  .status-item {
+    background: var(--color-gray-light);
+    border-left: 4px solid var(--color-yellow);
+    border-radius: var(--radius);
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .status-label {
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #888;
+  }
+  .status-value {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    color: var(--color-dark);
+  }
+
+  .verify-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  .verify-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background: var(--color-white);
+    border-radius: var(--radius);
+  }
+  .verify-item h3 {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: 700;
+    color: var(--color-dark);
+  }
+  .verify-item p { margin: 0.2rem 0 0; max-width: 55ch; }
+  @media (max-width: 600px) {
+    .verify-item { flex-direction: column; align-items: flex-start; }
+  }
+</style>

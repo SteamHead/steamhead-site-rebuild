@@ -38,20 +38,9 @@ const { hero_tagline, intro_text, sfusd_body, productions_body, course_body, bad
   </section>
 
   <!-- =====================================================================
-       SFUSD PARTNERSHIP
-       ===================================================================== -->
-  <section class="section section--alt" aria-label="SFUSD partnership">
-    <div class="container">
-      <h2>SteamHead &amp; the SFUSD</h2>
-      <hr class="accent-rule" />
-      <p class="mt-md">{sfusd_body}</p>
-    </div>
-  </section>
-
-  <!-- =====================================================================
        SHTEAM LABS ACTIVITIES
        ===================================================================== -->
-  <section class="section" aria-label="SHTEAM Labs Activities">
+  <section class="section section--alt" aria-label="SHTEAM Labs Activities">
     <div class="container">
       <div class="two-col">
         <div>
@@ -79,11 +68,19 @@ const { hero_tagline, intro_text, sfusd_body, productions_body, course_body, bad
   <!-- =====================================================================
        PRODUCTIONS
        ===================================================================== -->
-  <section class="section section--alt" aria-label="SteamHead Productions">
+  <section class="section" aria-label="SteamHead Productions">
     <div class="container">
-      <h2>SteamHead Productions</h2>
-      <hr class="accent-rule" />
-      <p class="mt-md">{productions_body}</p>
+      <div class="two-col two-col--reverse">
+        <img
+          src="/images/2021/04/20181027_115108-square.jpg"
+          alt="Educators working in a makerspace setting"
+        />
+        <div>
+          <h2>SteamHead Productions</h2>
+          <hr class="accent-rule" />
+          <p>{productions_body}</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -147,6 +144,17 @@ const { hero_tagline, intro_text, sfusd_body, productions_body, course_body, bad
         reviews every post before it goes live.
       </p>
       <a href="/blog/" class="btn btn--primary mt-md">Read the Great Things Blog</a>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SFUSD PARTNERSHIP
+       ===================================================================== -->
+  <section class="section section--alt" aria-label="SFUSD partnership">
+    <div class="container">
+      <h2>SteamHead &amp; the SFUSD</h2>
+      <hr class="accent-rule" />
+      <p class="mt-md">{sfusd_body}</p>
     </div>
   </section>
 

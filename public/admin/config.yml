@@ -168,10 +168,14 @@ collections:
               - { label: Name,        name: name,        widget: string }
               - { label: Description, name: description, widget: string }
               - { label: URL,         name: url,         widget: string }
-          - label: "Book Titles"
+          - label: "Books"
             name: books
             widget: list
-            field: { label: Title, name: title, widget: string }
+            fields:
+              - { label: Title,         name: title, widget: string }
+              - { label: "Cover Image", name: image, widget: image,  required: false,
+                  hint: "Portrait book cover; a styled placeholder shows until one is added" }
+              - { label: "Buy/View URL", name: url,  widget: string, required: false }
 
   # ---------------------------------------------------------------------------
   # SITE SETTINGS — global info edited in one place

@@ -55,7 +55,7 @@ const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
           </div>
         </div>
         <img
-          src="/images/2021/08/GettingStartedWithMFEDU.png"
+          src="/images/2023/09/1.png"
           alt="SHTEAM Labs activity journal"
         />
       </div>
@@ -69,7 +69,7 @@ const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
     <div class="container">
       <div class="two-col two-col--reverse">
         <img
-          src="/images/2023/09/1.png"
+          src="/images/2021/08/GettingStartedWithMFEDU.png"
           alt="MakeFashion Edu online course"
         />
         <div>
@@ -130,21 +130,31 @@ const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
         materials lists, and the stories behind every project.
       </p>
 
-      <div class="book-grid mt-md">
-        {books.map((title: string) => (
-          <div class="book-card">
-            <span class="book-icon" aria-hidden="true">📖</span>
-            <h3>{title}</h3>
-            <a
-              href="https://www.steamhead.space/shop/"
-              class="btn btn--outline"
-              target="_blank"
-              rel="noopener"
-            >
-              View
-            </a>
-          </div>
-        ))}
+      <div class="book-carousel mt-md">
+        <button class="carousel-btn carousel-btn--prev" aria-label="Previous books">&larr;</button>
+        <div class="carousel-track" tabindex="0" aria-label="Book list, scrollable">
+          {books.map((book: { title: string; image?: string; url?: string }) => (
+            <div class="book-slide">
+              {book.image ? (
+                <img class="book-cover" src={book.image} alt={`Cover of ${book.title}`} loading="lazy" />
+              ) : (
+                <div class="book-cover book-cover--placeholder" aria-hidden="true">
+                  <span>{book.title}</span>
+                </div>
+              )}
+              <h3>{book.title}</h3>
+              <a
+                href={book.url ?? "https://www.steamhead.space/shop/"}
+                class="btn btn--outline"
+                target="_blank"
+                rel="noopener"
+              >
+                View
+              </a>
+            </div>
+          ))}
+        </div>
+        <button class="carousel-btn carousel-btn--next" aria-label="Next books">&rarr;</button>
       </div>
     </div>
   </section>
@@ -193,18 +203,22 @@ const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
         Let us know if you'd like to see anything specific here — we're always adding
         new resources and love hearing from teachers about what would be most useful.
       </p>
-      <a
-        href="https://www.steamhead.space/contact-us/"
-        class="btn btn--primary mt-md"
-        target="_blank"
-        rel="noopener"
-      >
-        Contact Us
-      </a>
+      <a href="/contact-us/" class="btn btn--primary mt-md">Contact Us</a>
     </div>
   </section>
 
 </BaseLayout>
+
+<script>
+  const track = document.querySelector('.carousel-track');
+  const step = () => (track?.querySelector('.book-slide')?.clientWidth ?? 200) + 24;
+  document.querySelector('.carousel-btn--prev')?.addEventListener('click', () => {
+    track?.scrollBy({ left: -step(), behavior: 'smooth' });
+  });
+  document.querySelector('.carousel-btn--next')?.addEventListener('click', () => {
+    track?.scrollBy({ left: step(), behavior: 'smooth' });
+  });
+</script>
 
 <style>
   .hero--short { padding-block: var(--space-lg); }
@@ -240,23 +254,68 @@ const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
     .hardware-item { flex-direction: column; align-items: flex-start; }
   }
 
-  .book-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: var(--space-md);
+  /* Books carousel — advances on click, never automatically */
+  .book-carousel {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
   }
-  .book-card {
-    background: #111;
-    border: 1px solid #333;
-    border-radius: var(--radius);
-    padding: var(--space-md);
+  .carousel-track {
+    display: flex;
+    gap: var(--space-md);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-block: var(--space-xs);
+    scrollbar-width: none;
+    flex: 1;
+  }
+  .carousel-track::-webkit-scrollbar { display: none; }
+  .book-slide {
+    scroll-snap-align: start;
+    flex: 0 0 200px;
     display: flex;
     flex-direction: column;
     gap: var(--space-xs);
     align-items: flex-start;
   }
-  .book-card h3 { font-family: var(--font-body); font-size: var(--text-sm); font-weight: 600; color: var(--color-white); }
-  .book-icon { font-size: 1.5rem; }
+  .book-cover {
+    width: 200px;
+    aspect-ratio: 8.5 / 11;
+    object-fit: cover;
+    border-radius: var(--radius);
+    border: 1px solid #333;
+    background: #111;
+  }
+  .book-cover--placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--space-sm);
+    background: linear-gradient(160deg, #1c1c1c 0%, #111 60%);
+    border-left: 6px solid var(--color-yellow);
+  }
+  .book-cover--placeholder span {
+    font-family: var(--font-heading);
+    color: var(--color-yellow);
+    font-size: var(--text-lg);
+    line-height: 1.3;
+  }
+  .book-slide h3 { font-family: var(--font-body); font-size: var(--text-sm); font-weight: 600; color: var(--color-white); }
+  .carousel-btn {
+    flex-shrink: 0;
+    background: #111;
+    color: var(--color-yellow);
+    border: 1px solid #333;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .carousel-btn:hover { background: #1e1e1e; border-color: var(--color-yellow); }
 
   .guide-tagline {
     color: var(--color-dark);

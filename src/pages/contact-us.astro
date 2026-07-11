@@ -1,0 +1,111 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Stay In Touch"
+  description="Join the SteamHead community — educators meet hackers. Connect with us on Facebook or drop us a line."
+>
+
+  <!-- =====================================================================
+       HERO
+       ===================================================================== -->
+  <section class="hero hero--short" aria-label="Stay in touch">
+    <div class="container hero__content">
+      <h1>Stay In Touch</h1>
+      <p class="hero__tagline">
+        The making doesn't stop when the workshop ends. Here's where the
+        conversation continues.
+      </p>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       FACEBOOK COMMUNITY — the main event
+       ===================================================================== -->
+  <section class="section" aria-label="Join the community">
+    <div class="container">
+      <div class="fb-card">
+        <div class="fb-card__body">
+          <h2>Educators Meet Hackers</h2>
+          <hr class="accent-rule" />
+          <p>
+            Our community lives on Facebook. It's where teachers from kindergarten
+            through university trade ideas with makers and hackers — sharing
+            projects, asking questions, and advocating for hands-on learning in
+            schools and makerspaces.
+          </p>
+          <p>
+            All experience levels are welcome. No technical background required —
+            just curiosity and a willingness to make things (and occasionally
+            un-make them).
+          </p>
+          <a
+            href="https://www.facebook.com/groups/steamhead.space"
+            class="btn btn--primary mt-md"
+            target="_blank"
+            rel="noopener"
+          >
+            Join the Facebook Group
+          </a>
+        </div>
+        <img
+          class="fb-card__image"
+          src="/images/2018/09/2017-11-SH-Nerdy-Derby-2.jpg"
+          alt="SteamHead community members at a maker event"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       DIRECT CONTACT — smaller, but present
+       ===================================================================== -->
+  <section class="section section--alt" aria-label="Contact us directly">
+    <div class="container contact-direct">
+      <h2 class="contact-direct__title">Prefer email?</h2>
+      <p>
+        For partnership inquiries, school programs, press, or anything that
+        doesn't fit in a group post, you can reach us directly at
+        <a href="mailto:james@steamhead.space" class="contact-email">james@steamhead.space</a>.
+      </p>
+      <p class="text-muted">
+        We're a small team, so replies can take a few days — the fastest way to
+        reach the community is the Facebook group above.
+      </p>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .hero--short { padding-block: var(--space-lg); }
+
+  .fb-card {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: var(--space-lg);
+    align-items: center;
+    background: var(--color-gray-light);
+    border-radius: var(--radius);
+    padding: var(--space-lg);
+  }
+  .fb-card__image {
+    width: 100%;
+    border-radius: var(--radius);
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+  }
+  @media (max-width: 768px) {
+    .fb-card { grid-template-columns: 1fr; padding: var(--space-md); }
+  }
+
+  .contact-direct { max-width: 60ch; }
+  .contact-direct__title { font-size: var(--text-xl); }
+  .contact-email {
+    color: var(--color-teal);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .contact-email:hover { opacity: 0.75; }
+</style>
