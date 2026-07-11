@@ -23,3 +23,8 @@ implemented in PR #9 — see GitHub issues #3–#7.
 - [ ] **makefashion.ca/edu mirror** — static snapshot under
       `/makefashion-edu/site/`, original stays up. Planned as its own work
       chain after the current PR deploys. (Blake, 2026-07-11)
+- [ ] **Instagram content/photos on MakeFashion Edu page** — the old page
+      had a "Follow us on Instagram" section with photos; the new page has
+      neither. Needs a design decision: live embed (third-party script) vs.
+      a curated static photo grid linking to the account. (Carrie's review,
+      2026-07-11)

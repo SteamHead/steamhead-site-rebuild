@@ -1,7 +1,7 @@
 ---
 hero_tagline: >
-  We're the educational heart of the MakeFashion program, driven by creativity
-  and innovation.
+  We're the educational heart of the award-winning MakeFashion platform, driven
+  by creativity and innovation.
 runway_text: >
   MakeFashion Edu runways are held in public spaces, and are the culminating event
   that students work towards. The critical skills and processes all occur in the
@@ -22,4 +22,4 @@ books_text: >
 
 Our students weave together fashion and technology, crafting outfits from scratch while mastering design thinking, technical skills, and hands-on building.
 
-MakeFashion Edu is an international non-profit working to promote learning through fashion and tech. MakeFashion Edu provides a year-round suite of education programs and support for K–12 educators and students, and has proven to be a powerful entry point — especially for girls who are hesitant to engage with science and technology subjects.
+MakeFashion Edu is a collaboration between MakeFashion and SteamHead — not a separate nonprofit, but one of SteamHead's initiatives — working internationally to promote learning through fashion and tech. MakeFashion Edu provides a year-round suite of education programs and support for K–12 educators and students, and has proven to be a powerful entry point — especially for girls who are hesitant to engage with science and technology subjects.
