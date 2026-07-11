@@ -4,7 +4,9 @@ This site uses **Sveltia CMS** — a browser-based content editor accessible at 
 Staff can edit page content and write blog posts without touching any code.
 
 The CMS authenticates through GitHub so edits commit directly to the repo,
-which triggers Cloudflare Pages to rebuild the site automatically.
+which triggers Cloudflare Workers Builds to rebuild and redeploy the site
+automatically. (This site deploys as a Cloudflare **Worker**, not Cloudflare
+Pages.)
 
 ---
 
@@ -25,7 +27,7 @@ Sveltia provides a pre-built Cloudflare Worker for this.
 1. Go to: https://github.com/settings/developers → **OAuth Apps → New OAuth App**
 2. Fill in:
    - **Application name:** SteamHead CMS
-   - **Homepage URL:** `https://your-site.pages.dev` (your Cloudflare Pages URL)
+   - **Homepage URL:** `https://steamhead-astro-scaffold.<your-subdomain>.workers.dev` (the site's Worker URL — find it under **Workers & Pages → steamhead-astro-scaffold** in the Cloudflare dashboard)
    - **Authorization callback URL:** `https://sveltia-cms-auth.YOUR_NAME.workers.dev/callback`
 3. Click **Register application**
 4. Copy the **Client ID**
@@ -41,6 +43,10 @@ Sveltia provides a pre-built Cloudflare Worker for this.
 
 ### Step 4 — Update config.yml
 
+> **Note:** in this repo `base_url` is already set to
+> `https://sveltia-cms-auth.james-068.workers.dev` — this step only applies if
+> the auth Worker is ever redeployed under a different URL.
+
 Open `public/admin/config.yml` and replace the placeholder:
 
 ```yaml
@@ -55,14 +61,14 @@ base_url: https://sveltia-cms-auth.YOUR_NAME.workers.dev
 
 ## How to use the CMS
 
-Once deployed, staff visit: `https://your-site.pages.dev/admin/`
+Once deployed, staff visit: `https://steamhead-astro-scaffold.<your-subdomain>.workers.dev/admin/` (or `/admin/` on the real domain once it's connected)
 
 - **Blog Posts** — create, edit, delete posts in the "Great Things Blog"
 - **Pages** — edit the copy on each of the 6 main pages
 - **Site Settings** — update the mission statement, social links, contact URLs
 
-Changes are saved as commits to the GitHub repo. Cloudflare Pages automatically
-rebuilds the site within ~1 minute of each save.
+Changes are saved as commits to the GitHub repo. Cloudflare Workers Builds
+automatically rebuilds and redeploys the site within ~1 minute of each save.
 
 ---
 
