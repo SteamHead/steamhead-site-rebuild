@@ -22,5 +22,3 @@ funding: >
 SteamHead is a nonprofit founded by educators with a goal to openly share educational resources and teaching ideas.
 
 We believe that by embracing design thinking and a maker-mindset, education can be more engaging and meaningful — and with that, more effective in preparing students for success.
-
-In the SteamHead community, teachers can freely exchange teaching materials, strategies, and perspectives. This open sharing is seen as crucial for creating a more enriched educational environment, allowing teachers to learn from each other's successes and challenges.
