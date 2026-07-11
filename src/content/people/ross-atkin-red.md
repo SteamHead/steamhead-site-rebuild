@@ -2,7 +2,7 @@
 name: "Ross Atkin"
 role: resident
 date: 2018-03-22
-description: "Ross stayed with us for just a few nights! Also, he was an exceptional resident who had already been working out the details of his community service, and had"
+description: "Ross stayed with us for just a few nights!"
 image: "/images/2018/03/rossatkin.png"
 imageAlt: "Ross Atkin"
 ---
@@ -19,4 +19,12 @@ _Source: rossatkin.com_
 
 * * *
 
-  **Workshop Insights** These two girls created everything with the help of their parents. A funny bit is that the girls and the parents were ALL not focused on engineering or anything technical. They wanted to Use technology for their project, but weren’t interested in learning all the details. This is FANTASTIC! ![](http://www.rossatkin.com/wp/images/2017/11/AyalaCairaNicoleRoss1024.jpg) “Making”, EdTech, Design Thinking – all of these things seem to be focused on STEM careers but I feel they are actually not. Using technology doesn’t mean that you love engineering. Keep that in mind while building your own fashion tech projects! Read more here: [http://www.rossatkin.com/wp/?portfolio=ayala-and-cairas-robots](http://www.rossatkin.com/wp/?portfolio=ayala-and-cairas-robots)
+**Workshop Insights**
+
+These two girls created everything with the help of their parents. A funny bit is that the girls and the parents were ALL not focused on engineering or anything technical. They wanted to Use technology for their project, but weren’t interested in learning all the details. This is FANTASTIC!
+
+![](http://www.rossatkin.com/wp/images/2017/11/AyalaCairaNicoleRoss1024.jpg)
+
+“Making”, EdTech, Design Thinking – all of these things seem to be focused on STEM careers but I feel they are actually not. Using technology doesn’t mean that you love engineering. Keep that in mind while building your own fashion tech projects!
+
+Read more here: [http://www.rossatkin.com/wp/?portfolio=ayala-and-cairas-robots](http://www.rossatkin.com/wp/?portfolio=ayala-and-cairas-robots)

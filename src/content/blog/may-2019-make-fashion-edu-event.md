@@ -1,7 +1,7 @@
 ---
 title: "Mentoring and Helping out at the May 2019 Make Fashion Edu Event"
 date: 2019-05-08
-description: "Paul arrived at SteamHead Residency just in time to help mentor a few of the SIAS students with their Make Fashion Edu projects. This involved a few emergency"
+description: "Paul arrived at SteamHead Residency just in time to help mentor a few of the SIAS students with their Make Fashion Edu projects."
 author: "James"
 program: makefashion-edu
 categories:

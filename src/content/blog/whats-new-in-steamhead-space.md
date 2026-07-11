@@ -1,7 +1,7 @@
 ---
 title: "What's New in steamhead.space"
 date: 2021-10-21
-description: "After months of brainstorming and hard work, we are very excited to announce the launch of the newly designed Steamhead website! The goal of this design revamp"
+description: "After months of brainstorming and hard work, we are very excited to announce the launch of the newly designed Steamhead website!"
 author: "Mapet"
 program: general
 categories:

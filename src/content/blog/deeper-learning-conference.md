@@ -1,7 +1,7 @@
 ---
 title: "Deeper Learning Conference"
 date: 2021-03-23
-description: "Storytelling through Fashion Technology with MakeFashion Edu SteamHead is presenting a Deep Dive session at the 2021 Deeper Learning, where they will hold a"
+description: "Storytelling through Fashion Technology with MakeFashion Edu SteamHead is presenting a Deep Dive session at the 2021 Deeper Learning, where they will hold a MakeFashion Edu workshop."
 author: "James"
 program: neighborhood-earth
 categories:

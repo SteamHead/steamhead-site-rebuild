@@ -1,7 +1,7 @@
 ---
 title: "Bailey Hu at TechNode Features Maker Ed"
 date: 2018-11-01
-description: "Last week, Bailey Hu stopped by SAIS and Steamhead to talk with James and Carrie as part of her TechNode article. In her article, Bailey does a great job"
+description: "Last week, Bailey Hu stopped by SAIS and Steamhead to talk with James and Carrie as part of her TechNode article."
 author: "Mike"
 program: general
 categories:

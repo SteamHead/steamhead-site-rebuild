@@ -2,7 +2,7 @@
 name: "Tommen"
 role: resident
 date: 2017-12-05
-description: "Tommen was our high school intern for a month, living at his home in Shenzhen and coming into the makerspace on weekdays as an excellent Resident Educator! He"
+description: "Tommen was our high school intern for a month, living at his home in Shenzhen and coming into the makerspace on weekdays as an excellent Resident Educator!"
 image: "/images/2017/12/tommen.png"
 imageAlt: "Tommen"
 ---

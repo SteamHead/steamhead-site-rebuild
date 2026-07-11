@@ -1,7 +1,7 @@
 ---
 title: "Snow Drop! Grade 2 Robotics and Coding"
 date: 2026-03-01
-description: "A story of collaboration, authentic audience, cross-grade mentorship, creative coding, and physical computing written to encourage educators! Using MicroBlocks"
+description: "A story of collaboration, authentic audience, cross-grade mentorship, creative coding, and physical computing written to encourage educators!"
 author: "James"
 program: general
 categories:
@@ -17,7 +17,13 @@ A story of collaboration, authentic audience, cross-grade mentorship, creative c
 
 # Using MicroBlocks + OctoStudio for a Grade 2 Winter Performance
 
-At our elementary school winter festival, something unexpected happened. Paper snow fell from the ceiling. And the Grade 2 students were controlling it. This post shares how we used **MicroBlocks**, **micro:bit**, and **OctoStudio** together to create a live robotics effect for a school performance — and why this combination is such a powerful pathway for young coders.
+At our elementary school winter festival, something unexpected happened.
+
+Paper snow fell from the ceiling.
+
+And the Grade 2 students were controlling it.
+
+This post shares how we used **MicroBlocks**, **micro:bit**, and **OctoStudio** together to create a live robotics effect for a school performance — and why this combination is such a powerful pathway for young coders.
 
 * * *
 
@@ -69,11 +75,21 @@ The servo motors were mounted to bottom-facing doors on cardboard boxes suspende
 
 ## Why This Pathway Is Interesting
 
-Many educators use OctoStudio. Many educators use micro:bit. Fewer combine them in this way. The key bridge is MicroBlocks. Using MicroBlocks, the micro:bit can listen for OctoStudio beam signals and respond physically — turning tablet-based block coding into real-world robotics control. This implementation builds on work shared by Wenjie, who extended OctoStudio beam support for micro:bit projects. The references that helped guide this project:
+Many educators use OctoStudio. Many educators use micro:bit. Fewer combine them in this way.
 
+The key bridge is MicroBlocks.
+
+Using MicroBlocks, the micro:bit can listen for OctoStudio beam signals and respond physically — turning tablet-based block coding into real-world robotics control.
+
+This implementation builds on work shared by Wenjie, who extended OctoStudio beam support for micro:bit projects. The references that helped guide this project:  
+
+  
 -   [https://wiki.microblocks.fun/en/octostudio/maqueen\_lite](https://wiki.microblocks.fun/en/octostudio/maqueen_lite)
+  
 -   [https://wwj718-github-io.translate.goog/post/编程/extend-octostudio/](https://wwj718-github-io.translate.goog/post/%E7%BC%96%E7%A8%8B/extend-octostudio/)
+  
 
+  
 I was first introduced to MicroBlocks by Kathy Giori at the Bay Area Maker Faire (Mare Island, 2024), and this project felt like the perfect opportunity to explore its flexibility in a live setting.
 
 * * *
@@ -89,7 +105,13 @@ I was first introduced to MicroBlocks by Kathy Giori at the Bay Area Maker Faire
 -   Rehearsed timing during performance practice
 -   Triggered the snow live
 
-The coding was simple and clear: send a beam when a button is tapped. Images: ![](/images/2026/03/IMG_9878-235x512.png)   ![](/images/2026/03/snow1-523x512.png)
+The coding was simple and clear: send a beam when a button is tapped.
+
+Images:
+
+![](/images/2026/03/IMG_9878-235x512.png)
+
+![](/images/2026/03/snow1-523x512.png)
 
 * * *
 
@@ -101,7 +123,9 @@ The micro:bit ran a MicroBlocks program that:
 -   Rotated the servo to open the trap door
 -   Returned the servo to closed position
 
-Image: ![](/images/2026/03/microblocks_octo-634x512.png) Uploading directly via MicroBlocks made iteration fast — especially useful during rehearsal testing.
+Image: ![](/images/2026/03/microblocks_octo-634x512.png)
+
+Uploading directly via MicroBlocks made iteration fast — especially useful during rehearsal testing.
 
 * * *
 
@@ -132,7 +156,16 @@ The engineering constraint was real: if the servo didn’t move correctly, nothi
 
 ## Authentic Assessment: Did It Work?
 
-This project shifted assessment away from a rubric. Success was measured IRL: Was the audience entertained? Upon drop, the audience response was immediate and loud. The cheering created a powerful feedback loop — students saw that code + cardboard + motors = real-world impact. It wasn’t a simulation. It wasn’t just a classroom demo. It was part of a public performance.
+This project shifted assessment away from a rubric.
+
+Success was measured IRL:  
+Was the audience entertained?
+
+Upon drop, the audience response was immediate and loud. The cheering created a powerful feedback loop — students saw that code + cardboard + motors = real-world impact.
+
+It wasn’t a simulation.  
+It wasn’t just a classroom demo.  
+It was part of a public performance.
 
 * * *
 
@@ -140,7 +173,13 @@ This project shifted assessment away from a rubric. Success was measured IRL: Wa
 
 ### 1\. Robotics Through Familiar Tools
 
-OctoStudio is accessible and playful. MicroBlocks allows that environment to extend into physical computing without abandoning block-based thinking. This creates a pathway: OctoStudio → Beam → MicroBlocks → micro:bit → Servo → Physical Action That bridge lowers the barrier to robotics.
+OctoStudio is accessible and playful. MicroBlocks allows that environment to extend into physical computing without abandoning block-based thinking.
+
+This creates a pathway:
+
+OctoStudio → Beam → MicroBlocks → micro:bit → Servo → Physical Action
+
+That bridge lowers the barrier to robotics.
 
 * * *
 
@@ -158,17 +197,25 @@ The measure of success is not “Does the teacher like it?” It’s “Did it f
 
 ### 3\. Cross-Grade Systems Thinking
 
-Grade 2: design + coding Grade 5: wiring + electronics Teacher: system integration Students saw that complex systems require multiple roles — coding, hardware, mechanical design, rehearsal timing.
+Grade 2: design + coding Grade 5: wiring + electronics Teacher: system integration
+
+Students saw that complex systems require multiple roles — coding, hardware, mechanical design, rehearsal timing.
 
 * * *
 
 ## Video Walkthrough
 
-https://steamhead.space/wp-content/uploads/2026/03/output2.mp4 I record a short explanation video for students whenever possible. It serves two purposes:
+https://steamhead.space/wp-content/uploads/2026/03/output2.mp4
 
+I record a short explanation video for students whenever possible. It serves two purposes:  
+
+  
 -   Reinforces in-class instruction
+  
 -   Allows students to rewatch independently
+  
 
+  
 This supports differentiation without slowing down the entire group.
 
 * * *
@@ -194,4 +241,7 @@ Start small:
 -   One beam trigger
 -   One cardboard mechanism
 
-Then scale. The magic isn’t the snow. It’s the moment students realize they can control the physical world outside of the classroom with code.
+Then scale.
+
+The magic isn’t the snow.  
+It’s the moment students realize they can control the physical world outside of the classroom with code.

@@ -1,7 +1,7 @@
 ---
 title: "Helen's Community Meetups"
 date: 2019-03-20
-description: "Helen presented Do It Kits to parents and teachers at SWIS last year! She came to Shenzhen to work on Maker Education projects, and volunteered some of her"
+description: "Helen presented Do It Kits to parents and teachers at SWIS last year!"
 author: "James"
 program: general
 categories:

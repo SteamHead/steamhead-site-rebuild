@@ -32,7 +32,7 @@ const OLD_HOSTS = /https?:\/\/(www\.)?steamhead\.space/g;
 // Node has no DOM built in, so parse the few fields we need with targeted
 // extraction from each <item> block. CDATA-aware.
 // ---------------------------------------------------------------------------
-const xml = readFileSync(XML_PATH, 'utf8');
+const xml = readFileSync(XML_PATH, 'utf8').replace(/\r\n?/g, '\n');
 const items = xml.split('<item>').slice(1).map(s => s.split('</item>')[0]);
 
 const unesc = s => s.replaceAll('&amp;', '&').replaceAll('&lt;', '<').replaceAll('&gt;', '>').replaceAll('&quot;', '"').replaceAll('&#039;', "'");
@@ -115,10 +115,26 @@ function preprocess(html) {
     const src = a.mp4 ?? a.src ?? a.m4v ?? a.mov ?? '';
     return src ? `\n\n${src}\n\n` : '';
   });
+  // [button ...]text[/button] → keep the inner text, drop the wrapper
+  s = s.replace(/\[button[^\]]*\]([\s\S]*?)\[\/button\]/g, '$1');
   // Remaining Divi structural shortcodes: unwrap (keep inner content)
   s = s.replace(/\[\/?et_pb_[a-z_]+[^\]]*\]/g, '\n');
   // Draft.js / editor junk divs get unwrapped by turndown automatically.
-  return s;
+  return wpautop(s);
+}
+
+// WordPress stores classic-editor paragraphs as bare double newlines and
+// renders them via wpautop(); without this, an HTML parser collapses them
+// to spaces and whole posts become one paragraph. Lite emulation: chunks
+// split on blank lines become <p>, single newlines become <br>.
+function wpautop(s) {
+  return s.split(/\n{2,}/).map(chunk => {
+    const c = chunk.trim();
+    if (!c) return '';
+    // leave chunks that already start with a block element alone
+    if (/^<\/?(p|div|h[1-6]|ul|ol|li|blockquote|figure|table|pre|iframe|img|hr)\b/i.test(c)) return c;
+    return `<p>${c.replace(/\n/g, '<br>')}</p>`;
+  }).join('\n');
 }
 
 function toMarkdown(html) {
@@ -229,7 +245,17 @@ for (const p of posts) {
   let description = p.excerpt.replace(/<[^>]+>/g, '').trim();
   if (!description) {
     const text = md.replace(/!\[[^\]]*\]\([^)]*\)/g, '').replace(/https?:\/\/\S+/g, '').replace(/<[^>]+>/g, '').replace(/[#*_>\[\]]/g, '').replace(/\s+/g, ' ').trim();
-    description = text.slice(0, 160).replace(/\s+\S*$/, '') || p.title;
+    // End on a sentence boundary: accumulate whole sentences up to ~180
+    // chars; a first sentence longer than that gets cut at a word + ellipsis.
+    const sentences = text.split(/(?<=[.!?])\s+/);
+    let out = '';
+    for (const sent of sentences) {
+      if (out && (out + ' ' + sent).length > 180) break;
+      out = out ? `${out} ${sent}` : sent;
+      if (out.length > 180) break;
+    }
+    if (out.length > 200) out = out.slice(0, 180).replace(/\s+\S*$/, '') + '…';
+    description = out || p.title;
     if (text) report.guessedDesc.push(p.finalSlug);
   }
 

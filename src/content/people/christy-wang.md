@@ -2,7 +2,7 @@
 name: "Christy Wang"
 role: team
 date: 2021-08-01
-description: "Christy Wang is an ex-CPA who followed a traditional career path working for PricewaterhouseCoopers, Merrill Lynch, and finally MTV Networks before realizing"
+description: "Christy Wang is an ex-CPA who followed a traditional career path working for PricewaterhouseCoopers, Merrill Lynch, and finally MTV Networks before realizing she just really wasn’t that traditional."
 image: "/images/2021/08/christywang-1.png"
 imageAlt: "Christy Wang"
 ---

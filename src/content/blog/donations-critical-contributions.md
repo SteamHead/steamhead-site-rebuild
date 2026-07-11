@@ -1,7 +1,7 @@
 ---
 title: "Donations: Critical Contributions"
 date: 2023-01-10
-description: "\\button link=\"\" color=\"silver\"\\ Written by ChatGPT, Prompt/Edit by Carrie\\/button\\ At SteamHead, we exist solely on the generous donations of time and"
+description: "Written by ChatGPT, Prompt/Edit by Carrie At SteamHead, we exist solely on the generous donations of time and resources."
 author: "Carrie"
 program: makefashion-edu
 categories:
@@ -12,7 +12,7 @@ image: "/images/2023/01/gs2.jpg"
 imageAlt: "Donations: Critical Contributions"
 ---
 
-\[button link="" color="silver"\] Written by ChatGPT, Prompt/Edit by Carrie\[/button\]
+Written by ChatGPT, Prompt/Edit by Carrie
 
 At SteamHead, we exist solely on the generous donations of time and resources. In 2020, we were faced with the challenge of finding ways to continue providing meaningful educational resources and support. We were fortunate to receive two critical donations that helped carry us out through the pandemic and is still impactful today.
 

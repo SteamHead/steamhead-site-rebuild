@@ -1,7 +1,7 @@
 ---
 title: "Ollie Makes a Printed Circuit Board"
 date: 2018-09-24
-description: "Last month I was in Shenzhen doing all sorts of fun things. As I had spent quite a long time from home, I needed to remind people of my existence. I decided"
+description: "Last month I was in Shenzhen doing all sorts of fun things. As I had spent quite a long time from home, I needed to remind people of my existence."
 author: "James"
 program: general
 categories:

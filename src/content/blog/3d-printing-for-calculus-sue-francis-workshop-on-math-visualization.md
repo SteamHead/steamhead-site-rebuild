@@ -1,7 +1,7 @@
 ---
 title: "3D Printing for Calculus by Sue Francis"
 date: 2018-11-01
-description: "We went to EdTechGZ in Guangzhou, China on Oct 27 2018 and saw this great workshop by Sue Francis, high school math teacher at AISG. This is the best example"
+description: "We went to EdTechGZ in Guangzhou, China on Oct 27 2018 and saw this great workshop by Sue Francis, high school math teacher at AISG."
 author: "Mike"
 program: general
 categories:

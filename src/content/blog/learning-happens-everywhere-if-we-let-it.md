@@ -1,7 +1,7 @@
 ---
 title: "Learning Happens Everywhere (If We Let It)"
 date: 2026-01-01
-description: "We love learning environments that don’t announce themselves as classrooms. A FabLab visit, a cooking class, a university night market, and a coworking space"
+description: "We love learning environments that don’t announce themselves as classrooms."
 author: "Mapet"
 program: general
 categories:

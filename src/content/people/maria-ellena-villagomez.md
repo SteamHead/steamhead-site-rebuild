@@ -2,7 +2,7 @@
 name: "Maria Ellena Villagomez"
 role: team
 date: 2021-08-15
-description: "Maria Ellena Villagomez brings a dynamic blend of creative arts, design, and community-centred innovation to SteamHead’s board. As a graphic designer and"
+description: "Maria Ellena Villagomez brings a dynamic blend of creative arts, design, and community-centred innovation to SteamHead’s board."
 image: "/images/2021/10/PsAnon4-e1633041609488.jpg"
 imageAlt: "Maria Ellena Villagomez"
 ---

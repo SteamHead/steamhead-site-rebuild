@@ -2,12 +2,13 @@
 name: "Olivia"
 role: resident
 date: 2018-09-03
-description: "Olivia is an artist who loves to upcycle found objects into art! She has been at SteamHead making lovely lamps, and teaching others her craft! ( ("
+description: "Olivia is an artist who loves to upcycle found objects into art! She has been at SteamHead making lovely lamps, and teaching others her craft! ( ( ("
 image: "/images/2018/09/olivia.png"
 imageAlt: "Olivia"
 ---
 
 Olivia is an artist who loves to upcycle found objects into art! She has been at SteamHead making lovely lamps, and teaching others her craft!  
+  
   
 
 [![](/images/2019/02/20180903_174403-300x225.jpg)](https://steamhead.space/?attachment_id=1497)  

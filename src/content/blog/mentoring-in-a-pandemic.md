@@ -1,7 +1,7 @@
 ---
 title: "Mentoring in a Pandemic"
 date: 2020-02-23
-description: "Online Learning Support: Technology Integration during the 2020 Pandemic During the unexpected Online Learning event of 2020, the Technology Integration Team"
+description: "Online Learning Support: Technology Integration during the 2020 Pandemic During the unexpected Online Learning event of 2020, the Technology Integration Team at ISNS worked…"
 author: "James"
 program: general
 categories:
@@ -43,7 +43,11 @@ We created visual guides for the most common scenarios. Some that we predicted, 
 
 We also posted videos that Principals and Supervisors identified as excellent resources to be shared across all staff, bringing everything to one home for our staff.
 
-https://www.youtube.com/watch?v=CGpf1ot6kU4 https://www.youtube.com/watch?v=9j4sQDLZrss ![](/images/2020/05/Screen-Shot-2020-05-11-at-9.19.37-PM.png) ![](/images/2020/05/Screen-Shot-2020-05-11-at-9.17.41-PM.png)![](/images/2020/05/Screen-Shot-2020-05-11-at-9.23.01-PM.png)
+https://www.youtube.com/watch?v=CGpf1ot6kU4
+
+https://www.youtube.com/watch?v=9j4sQDLZrss
+
+![](/images/2020/05/Screen-Shot-2020-05-11-at-9.19.37-PM.png) ![](/images/2020/05/Screen-Shot-2020-05-11-at-9.17.41-PM.png)![](/images/2020/05/Screen-Shot-2020-05-11-at-9.23.01-PM.png)
 
 ## What the ISNS Community Said
 

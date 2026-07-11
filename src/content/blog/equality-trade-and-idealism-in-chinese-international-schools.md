@@ -1,7 +1,7 @@
 ---
 title: "Equality, Trade, and Idealism in Chinese International Schools"
 date: 2020-06-30
-description: "I work with international and private schools in China. The forces of equality, trade, and idealism have had huge impacts on education, and are rooted in"
+description: "I work with international and private schools in China."
 author: "James"
 program: general
 categories:

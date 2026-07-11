@@ -1,7 +1,7 @@
 ---
 title: "Donations: Material Matters"
 date: 2023-01-17
-description: "\\button link=\"\" color=\"silver\"\\ Written by ChatGPT, Prompt/Edit by Carrie\\/button\\ A big thank you to Melanie Crider and Pam Anderson of Pioneertown,"
+description: "Written by ChatGPT, Prompt/Edit by Carrie A big thank you to Melanie Crider and Pam Anderson of Pioneertown, California, who have generously donated fabrics to MakeFashion Edu over the years."
 author: "Carrie"
 program: makefashion-edu
 categories:
@@ -11,7 +11,7 @@ image: "/images/2023/01/22-scaled.jpg"
 imageAlt: "Donations: Material Matters"
 ---
 
-\[button link="" color="silver"\] Written by ChatGPT, Prompt/Edit by Carrie\[/button\]
+Written by ChatGPT, Prompt/Edit by Carrie
 
 A big thank you to Melanie Crider and Pam Anderson of Pioneertown, California, who have generously donated fabrics to MakeFashion Edu over the years. Artists themselves in the Western motif and makers in the pioneering way of life, they understand having the right materials can increase the joy of designing and creating. These fabrics have been used in prototyping, student projects, and for learning pattern, construction, and sewing skills.
 

@@ -1,7 +1,7 @@
 ---
 title: "Snow Drop with MicroBlocks!"
 date: 2026-03-01
-description: "@import url(' .sd-page { --snow-bg: f8f9fb; --snow-card: ffffff; --snow-text: 1d1f23; --snow-muted: 5c6370; --snow-accent: 3a6ea5; --snow-accent-soft: e8f0fa;"
+description: "@import url(' .sd-page { --snow-bg: f8f9fb; --snow-card: ffffff; --snow-text: 1d1f23; --snow-muted: 5c6370; --snow-accent: 3a6ea5; --snow-accent-soft: e8f0fa; --snow-border:…"
 author: "James"
 program: general
 categories:
@@ -9,27 +9,57 @@ categories:
 draft: true
 ---
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&display=swap'); .sd-page { --snow-bg: #f8f9fb; --snow-card: #ffffff; --snow-text: #1d1f23; --snow-muted: #5c6370; --snow-accent: #3a6ea5; --snow-accent-soft: #e8f0fa; --snow-border: #e2e5ea; --snow-caption: #7a8190; --snow-radius: 10px; --snow-max: 720px; font-family: 'DM Sans', sans-serif; color: var(--snow-text); background: var(--snow-bg); line-height: 1.72; font-size: 17px; max-width: 100%; margin: 0 auto; padding: 0; -webkit-font-smoothing: antialiased; } .sd-page \*, .sd-page \*::before, .sd-page \*::after { box-sizing: border-box; } /\* ── Hero ── \*/ .sd-hero { position: relative; overflow: hidden; border-radius: 0 0 var(--snow-radius) var(--snow-radius); margin-bottom: 3rem; } .sd-hero img { width: 100%; height: 420px; object-fit: cover; display: block; filter: brightness(0.85); } .sd-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,20,30,0.72) 0%, rgba(15,20,30,0.1) 60%); display: flex; flex-direction: column; justify-content: flex-end; padding: 2rem 1.5rem; } .sd-hero-overlay h1 { font-family: 'Fraunces', serif; font-weight: 600; font-size: clamp(1.75rem, 5vw, 2.6rem); color: #fff; margin: 0 0 0.5rem 0; line-height: 1.2; letter-spacing: -0.02em; } .sd-hero-overlay .sd-hero-sub { color: rgba(255,255,255,0.8); font-size: 0.95rem; margin: 0; max-width: 540px; } /\* ── Container ── \*/ .sd-container { max-width: var(--snow-max); margin: 0 auto; padding: 0 1.25rem; } /\* ── Prose ── \*/ .sd-page p { margin: 0 0 1.25rem 0; color: var(--snow-text); } .sd-page strong { font-weight: 700; } .sd-page a { color: var(--snow-accent); text-decoration: underline; text-decoration-color: rgba(58,110,165,0.3); text-underline-offset: 3px; transition: text-decoration-color 0.2s; } .sd-page a:hover { text-decoration-color: var(--snow-accent); } /\* ── Section headings ── \*/ .sd-section { margin-top: 3rem; margin-bottom: 1.5rem; } .sd-page h2 { font-family: 'Fraunces', serif; font-weight: 600; font-size: clamp(1.35rem, 3.5vw, 1.75rem); letter-spacing: -0.015em; margin: 0 0 0.25rem 0; line-height: 1.25; color: var(--snow-text); } .sd-page h3 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.15rem; margin: 2rem 0 0.5rem 0; color: var(--snow-text); line-height: 1.3; } .sd-section-rule { width: 40px; height: 3px; background: var(--snow-accent); border: none; border-radius: 2px; margin: 0.6rem 0 1.25rem 0; } /\* ── Intro callout ── \*/ .sd-intro-callout { background: var(--snow-card); border-left: 3px solid var(--snow-accent); padding: 1.25rem 1.5rem; border-radius: 0 var(--snow-radius) var(--snow-radius) 0; font-style: italic; color: var(--snow-muted); margin-bottom: 2.5rem; font-size: 1.05rem; line-height: 1.65; } /\* ── Media figure ── \*/ .sd-figure { background: var(--snow-card); border: 1px solid var(--snow-border); border-radius: var(--snow-radius); overflow: hidden; margin: 1.5rem 0; box-shadow: 0 1px 4px rgba(0,0,0,0.04); } .sd-figure img, .sd-figure video { width: 100%; display: block; } .sd-figure figcaption { padding: 0.7rem 1rem; font-size: 0.82rem; color: var(--snow-caption); border-top: 1px solid var(--snow-border); line-height: 1.5; } /\* ── Media grid (two-up) ── \*/ .sd-media-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin: 1.5rem 0; } @media (min-width: 540px) { .sd-media-grid { grid-template-columns: 1fr 1fr; } } .sd-media-grid .sd-figure { margin: 0; } .sd-media-grid .sd-figure img { height: 280px; object-fit: cover; } /\* ── Info cards (multi-col) ── \*/ .sd-info-cards { display: grid; grid-template-columns: 1fr; gap: 1rem; margin: 1.5rem 0; } @media (min-width: 540px) { .sd-info-cards { grid-template-columns: 1fr 1fr; } } .sd-info-card { background: var(--snow-card); border: 1px solid var(--snow-border); border-radius: var(--snow-radius); padding: 1.25rem 1.25rem 1rem 1.25rem; } .sd-info-card .sd-card-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--snow-accent); font-weight: 700; margin-bottom: 0.35rem; } .sd-info-card .sd-card-value { font-weight: 500; font-size: 0.95rem; line-height: 1.55; color: var(--snow-text); margin: 0; } /\* ── Pathway diagram ── \*/ .sd-pathway { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem 0.5rem; margin: 1.25rem 0 1.5rem 0; font-size: 0.88rem; font-weight: 500; } .sd-pathway-step { background: var(--snow-accent-soft); color: var(--snow-accent); padding: 0.3rem 0.75rem; border-radius: 50px; white-space: nowrap; } .sd-pathway-arrow { color: var(--snow-border); font-size: 0.85rem; } /\* ── Roles row ── \*/ .sd-roles { display: grid; grid-template-columns: 1fr; gap: 1rem; margin: 1.25rem 0 1.5rem 0; } @media (min-width: 540px) { .sd-roles { grid-template-columns: 1fr 1fr 1fr; } } .sd-role { text-align: center; padding: 1.25rem 1rem; background: var(--snow-card); border: 1px solid var(--snow-border); border-radius: var(--snow-radius); } .sd-role strong { display: block; font-family: 'Fraunces', serif; font-size: 1rem; margin-bottom: 0.2rem; } .sd-role span { font-size: 0.85rem; color: var(--snow-muted); } /\* ── Highlight box ── \*/ .sd-highlight { background: var(--snow-accent-soft); border-radius: var(--snow-radius); padding: 1.5rem; margin: 1.5rem 0; text-align: center; } .sd-highlight p { font-family: 'Fraunces', serif; font-weight: 300; font-size: 1.15rem; color: var(--snow-accent); margin: 0; line-height: 1.55; font-style: italic; } /\* ── Ordered tips ── \*/ .sd-steps { counter-reset: sd-step; list-style: none; padding: 0; margin: 1.25rem 0; } .sd-steps li { counter-increment: sd-step; padding: 0.85rem 1rem 0.85rem 3.25rem; position: relative; margin-bottom: 0.6rem; background: var(--snow-card); border: 1px solid var(--snow-border); border-radius: var(--snow-radius); font-size: 0.95rem; } .sd-steps li::before { content: counter(sd-step); position: absolute; left: 1rem; top: 0.85rem; width: 1.6rem; height: 1.6rem; background: var(--snow-accent); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.78rem; font-weight: 700; } /\* ── Footer note ── \*/ .sd-footer-note { margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid var(--snow-border); text-align: center; color: var(--snow-muted); font-size: 0.88rem; margin-bottom: 2rem; } /\* ── Video container ── \*/ .sd-video-wrap video { border-radius: 0; } /\* ── References ── \*/ .sd-ref-links { list-style: none; padding: 0; margin: 0.75rem 0; } .sd-ref-links li { margin-bottom: 0.5rem; font-size: 0.9rem; padding-left: 1.2rem; position: relative; } .sd-ref-links li::before { content: '↗'; position: absolute; left: 0; color: var(--snow-accent); }
+<br> @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&display=swap');</p> <p>.sd-page {<br> --snow-bg: #f8f9fb;<br> --snow-card: #ffffff;<br> --snow-text: #1d1f23;<br> --snow-muted: #5c6370;<br> --snow-accent: #3a6ea5;<br> --snow-accent-soft: #e8f0fa;<br> --snow-border: #e2e5ea;<br> --snow-caption: #7a8190;<br> --snow-radius: 10px;<br> --snow-max: 720px;</p> <p>font-family: 'DM Sans', sans-serif;<br> color: var(--snow-text);<br> background: var(--snow-bg);<br> line-height: 1.72;<br> font-size: 17px;<br> max-width: 100%;<br> margin: 0 auto;<br> padding: 0;<br> -webkit-font-smoothing: antialiased;<br> }</p> <p>.sd-page \*, .sd-page \*::before, .sd-page \*::after {<br> box-sizing: border-box;<br> }</p> <p>/\* ── Hero ── \*/<br> .sd-hero {<br> position: relative;<br> overflow: hidden;<br> border-radius: 0 0 var(--snow-radius) var(--snow-radius);<br> margin-bottom: 3rem;<br> }</p> <p>.sd-hero img {<br> width: 100%;<br> height: 420px;<br> object-fit: cover;<br> display: block;<br> filter: brightness(0.85);<br> }</p> <p>.sd-hero-overlay {<br> position: absolute;<br> inset: 0;<br> background: linear-gradient(to top, rgba(15,20,30,0.72) 0%, rgba(15,20,30,0.1) 60%);<br> display: flex;<br> flex-direction: column;<br> justify-content: flex-end;<br> padding: 2rem 1.5rem;<br> }</p> <p>.sd-hero-overlay h1 {<br> font-family: 'Fraunces', serif;<br> font-weight: 600;<br> font-size: clamp(1.75rem, 5vw, 2.6rem);<br> color: #fff;<br> margin: 0 0 0.5rem 0;<br> line-height: 1.2;<br> letter-spacing: -0.02em;<br> }</p> <p>.sd-hero-overlay .sd-hero-sub {<br> color: rgba(255,255,255,0.8);<br> font-size: 0.95rem;<br> margin: 0;<br> max-width: 540px;<br> }</p> <p>/\* ── Container ── \*/<br> .sd-container {<br> max-width: var(--snow-max);<br> margin: 0 auto;<br> padding: 0 1.25rem;<br> }</p> <p>/\* ── Prose ── \*/<br> .sd-page p {<br> margin: 0 0 1.25rem 0;<br> color: var(--snow-text);<br> }</p> <p>.sd-page strong {<br> font-weight: 700;<br> }</p> <p>.sd-page a {<br> color: var(--snow-accent);<br> text-decoration: underline;<br> text-decoration-color: rgba(58,110,165,0.3);<br> text-underline-offset: 3px;<br> transition: text-decoration-color 0.2s;<br> }</p> <p>.sd-page a:hover {<br> text-decoration-color: var(--snow-accent);<br> }</p> <p>/\* ── Section headings ── \*/<br> .sd-section {<br> margin-top: 3rem;<br> margin-bottom: 1.5rem;<br> }</p> <p>.sd-page h2 {<br> font-family: 'Fraunces', serif;<br> font-weight: 600;<br> font-size: clamp(1.35rem, 3.5vw, 1.75rem);<br> letter-spacing: -0.015em;<br> margin: 0 0 0.25rem 0;<br> line-height: 1.25;<br> color: var(--snow-text);<br> }</p> <p>.sd-page h3 {<br> font-family: 'Fraunces', serif;<br> font-weight: 600;<br> font-size: 1.15rem;<br> margin: 2rem 0 0.5rem 0;<br> color: var(--snow-text);<br> line-height: 1.3;<br> }</p> <p>.sd-section-rule {<br> width: 40px;<br> height: 3px;<br> background: var(--snow-accent);<br> border: none;<br> border-radius: 2px;<br> margin: 0.6rem 0 1.25rem 0;<br> }</p> <p>/\* ── Intro callout ── \*/<br> .sd-intro-callout {<br> background: var(--snow-card);<br> border-left: 3px solid var(--snow-accent);<br> padding: 1.25rem 1.5rem;<br> border-radius: 0 var(--snow-radius) var(--snow-radius) 0;<br> font-style: italic;<br> color: var(--snow-muted);<br> margin-bottom: 2.5rem;<br> font-size: 1.05rem;<br> line-height: 1.65;<br> }</p> <p>/\* ── Media figure ── \*/<br> .sd-figure {<br> background: var(--snow-card);<br> border: 1px solid var(--snow-border);<br> border-radius: var(--snow-radius);<br> overflow: hidden;<br> margin: 1.5rem 0;<br> box-shadow: 0 1px 4px rgba(0,0,0,0.04);<br> }</p> <p>.sd-figure img,<br> .sd-figure video {<br> width: 100%;<br> display: block;<br> }</p> <p>.sd-figure figcaption {<br> padding: 0.7rem 1rem;<br> font-size: 0.82rem;<br> color: var(--snow-caption);<br> border-top: 1px solid var(--snow-border);<br> line-height: 1.5;<br> }</p> <p>/\* ── Media grid (two-up) ── \*/<br> .sd-media-grid {<br> display: grid;<br> grid-template-columns: 1fr;<br> gap: 1rem;<br> margin: 1.5rem 0;<br> }</p> <p>@media (min-width: 540px) {<br> .sd-media-grid {<br> grid-template-columns: 1fr 1fr;<br> }<br> }</p> <p>.sd-media-grid .sd-figure {<br> margin: 0;<br> }</p> <p>.sd-media-grid .sd-figure img {<br> height: 280px;<br> object-fit: cover;<br> }</p> <p>/\* ── Info cards (multi-col) ── \*/<br> .sd-info-cards {<br> display: grid;<br> grid-template-columns: 1fr;<br> gap: 1rem;<br> margin: 1.5rem 0;<br> }</p> <p>@media (min-width: 540px) {<br> .sd-info-cards {<br> grid-template-columns: 1fr 1fr;<br> }<br> }</p> <p>.sd-info-card {<br> background: var(--snow-card);<br> border: 1px solid var(--snow-border);<br> border-radius: var(--snow-radius);<br> padding: 1.25rem 1.25rem 1rem 1.25rem;<br> }</p> <p>.sd-info-card .sd-card-label {<br> font-size: 0.72rem;<br> text-transform: uppercase;<br> letter-spacing: 0.08em;<br> color: var(--snow-accent);<br> font-weight: 700;<br> margin-bottom: 0.35rem;<br> }</p> <p>.sd-info-card .sd-card-value {<br> font-weight: 500;<br> font-size: 0.95rem;<br> line-height: 1.55;<br> color: var(--snow-text);<br> margin: 0;<br> }</p> <p>/\* ── Pathway diagram ── \*/<br> .sd-pathway {<br> display: flex;<br> flex-wrap: wrap;<br> align-items: center;<br> gap: 0.35rem 0.5rem;<br> margin: 1.25rem 0 1.5rem 0;<br> font-size: 0.88rem;<br> font-weight: 500;<br> }</p> <p>.sd-pathway-step {<br> background: var(--snow-accent-soft);<br> color: var(--snow-accent);<br> padding: 0.3rem 0.75rem;<br> border-radius: 50px;<br> white-space: nowrap;<br> }</p> <p>.sd-pathway-arrow {<br> color: var(--snow-border);<br> font-size: 0.85rem;<br> }</p> <p>/\* ── Roles row ── \*/<br> .sd-roles {<br> display: grid;<br> grid-template-columns: 1fr;<br> gap: 1rem;<br> margin: 1.25rem 0 1.5rem 0;<br> }</p> <p>@media (min-width: 540px) {<br> .sd-roles {<br> grid-template-columns: 1fr 1fr 1fr;<br> }<br> }</p> <p>.sd-role {<br> text-align: center;<br> padding: 1.25rem 1rem;<br> background: var(--snow-card);<br> border: 1px solid var(--snow-border);<br> border-radius: var(--snow-radius);<br> }</p> <p>.sd-role strong {<br> display: block;<br> font-family: 'Fraunces', serif;<br> font-size: 1rem;<br> margin-bottom: 0.2rem;<br> }</p> <p>.sd-role span {<br> font-size: 0.85rem;<br> color: var(--snow-muted);<br> }</p> <p>/\* ── Highlight box ── \*/<br> .sd-highlight {<br> background: var(--snow-accent-soft);<br> border-radius: var(--snow-radius);<br> padding: 1.5rem;<br> margin: 1.5rem 0;<br> text-align: center;<br> }</p> <p>.sd-highlight p {<br> font-family: 'Fraunces', serif;<br> font-weight: 300;<br> font-size: 1.15rem;<br> color: var(--snow-accent);<br> margin: 0;<br> line-height: 1.55;<br> font-style: italic;<br> }</p> <p>/\* ── Ordered tips ── \*/<br> .sd-steps {<br> counter-reset: sd-step;<br> list-style: none;<br> padding: 0;<br> margin: 1.25rem 0;<br> }</p> <p>.sd-steps li {<br> counter-increment: sd-step;<br> padding: 0.85rem 1rem 0.85rem 3.25rem;<br> position: relative;<br> margin-bottom: 0.6rem;<br> background: var(--snow-card);<br> border: 1px solid var(--snow-border);<br> border-radius: var(--snow-radius);<br> font-size: 0.95rem;<br> }</p> <p>.sd-steps li::before {<br> content: counter(sd-step);<br> position: absolute;<br> left: 1rem;<br> top: 0.85rem;<br> width: 1.6rem;<br> height: 1.6rem;<br> background: var(--snow-accent);<br> color: #fff;<br> border-radius: 50%;<br> display: flex;<br> align-items: center;<br> justify-content: center;<br> font-size: 0.78rem;<br> font-weight: 700;<br> }</p> <p>/\* ── Footer note ── \*/<br> .sd-footer-note {<br> margin-top: 3.5rem;<br> padding-top: 2rem;<br> border-top: 1px solid var(--snow-border);<br> text-align: center;<br> color: var(--snow-muted);<br> font-size: 0.88rem;<br> margin-bottom: 2rem;<br> }</p> <p>/\* ── Video container ── \*/<br> .sd-video-wrap video {<br> border-radius: 0;<br> }</p> <p>/\* ── References ── \*/<br> .sd-ref-links {<br> list-style: none;<br> padding: 0;<br> margin: 0.75rem 0;<br> }</p> <p>.sd-ref-links li {<br> margin-bottom: 0.5rem;<br> font-size: 0.9rem;<br> padding-left: 1.2rem;<br> position: relative;<br> }</p> <p>.sd-ref-links li::before {<br> content: '↗';<br> position: absolute;<br> left: 0;<br> color: var(--snow-accent);<br> }<br>
 
-![Grade 2 students' paper snow falling during the winter performance](https://i0.wp.com/steamhead.space/images/2026/03/snow2.png)
+  
+
+  
+![Grade 2 students' paper snow falling during the winter performance](https://i0.wp.com/steamhead.space/images/2026/03/snow2.png)  
+
+  
 
 # Snow Drop!
 
+  
+
 Grade 2 Robotics & Coding at the Winter Festival
 
-A story of collaboration, authentic audience, cross-grade mentorship, creative coding, and physical computing — written to encourage educators.
+  
+
+  
+
+  
+
+  
+A story of collaboration, authentic audience, cross-grade mentorship, creative coding, and physical computing — written to encourage educators.  
+
+  
+
+  
 
 ## Using MicroBlocks + OctoStudio for a Grade 2 Winter Performance
 
+  
+
 * * *
+
+  
 
 At our elementary school winter festival, something unexpected happened. Paper snow fell from the ceiling. And the Grade 2 students were controlling it.
 
 This post shares how we used **MicroBlocks**, **micro:bit**, and **OctoStudio** together to create a live robotics effect for a school performance — and why this combination is such a powerful pathway for young coders.
 
+  
+
+  
+
 ## The Big Idea
 
+  
+
 * * *
+
+  
 
 Grade 2 Students
 
@@ -41,9 +71,17 @@ Fifth graders wired servo motors to micro:bits. The teacher wrote the MicroBlock
 
 A gymnasium full of students cheering as snow dropped on cue — triggered by second graders.
 
+  
+
+  
+
 ## Hardware + Software Overview
 
+  
+
 * * *
+
+  
 
 Student-Facing Tool
 
@@ -63,9 +101,17 @@ Servo motors connected to trap doors on cardboard boxes
 
 The servo motors were mounted to bottom-facing doors on cardboard boxes suspended in the auditorium. OctoStudio sends a "beam" signal; MicroBlocks code on the micro:bit listens for the beam and activates the servo. When triggered, the doors open and release paper snow.
 
+  
+
+  
+
 ## Why This Pathway Is Interesting
 
+  
+
 * * *
+
+  
 
 Many educators use OctoStudio. Many educators use micro:bit. Fewer combine them. The key bridge is **MicroBlocks** — it allows the micro:bit to listen for OctoStudio beam signals and respond physically, turning tablet-based block coding into real-world robotics control.
 
@@ -76,9 +122,17 @@ This implementation builds on work shared by Wenjie, who extended OctoStudio bea
 
 I was first introduced to MicroBlocks by Kathy Giori at the Bay Area Maker Faire (Mare Island, 2024), and this project felt like the perfect opportunity to explore its flexibility in a live setting.
 
+  
+
+  
+
 ## What the Students Actually Did
 
+  
+
 * * *
+
+  
 
 ### Grade 2 Students
 
@@ -104,23 +158,47 @@ The MicroBlocks program — teacher-created, but accessible enough for most 3rd 
 
 Fifth graders handled servo wiring, power connections, and mechanical mounting adjustments. This cross-grade collaboration gave older students meaningful technical responsibility and gave younger students a visible "tech mentor" layer.
 
+  
+
+  
+
 ## The Physical Build
 
+  
+
 * * *
+
+  
 
 The snow boxes were simple but effective: a cardboard structure with a bottom flap door, a servo arm connected to the door, suspended in the auditorium. The engineering constraint was real — if the servo didn't move correctly, nothing happened.
 
+  
+
+  
+
 ## Authentic Assessment: Did It Work?
 
+  
+
 * * *
+
+  
 
 This project shifted assessment away from a rubric. Success was measured in real life: _was the audience entertained?_
 
 Upon drop, the audience response was immediate and loud. The cheering created a powerful feedback loop — students saw that code + cardboard + motors = real-world impact. It wasn't a simulation. It wasn't just a classroom demo. It was part of a public performance.
 
+  
+
+  
+
 ## Why This Matters Pedagogically
 
+  
+
 * * *
+
+  
 
 ### 1\. Robotics Through Familiar Tools
 
@@ -144,23 +222,47 @@ When projects leave the classroom, students care more about reliability, iterati
 
 Students saw that complex systems require multiple roles — coding, hardware, mechanical design, rehearsal timing.
 
+  
+
+  
+
 ## Video Walkthrough
 
+  
+
 * * *
+
+  
 
  Your browser does not support the video tag.
 
 A short explanation video recorded for students — reinforces in-class instruction and allows independent rewatching for differentiation.
 
+  
+
+  
+
 ## Reflections on MicroBlocks
 
+  
+
 * * *
+
+  
 
 MicroBlocks made this feasible because it allows live programming to micro:bit, supports extensions and flexible communication, and bridges block coding and embedded systems. For educators already using micro:bit, MicroBlocks offers a fast, responsive workflow. For educators using OctoStudio, it opens a door into robotics.
 
+  
+
+  
+
 ## If You Want to Try Something Similar
 
+  
+
 * * *
+
+  
 
 Start small:
 

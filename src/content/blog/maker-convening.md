@@ -1,7 +1,7 @@
 ---
 title: "Maker Convening"
 date: 2020-09-24
-description: "Hello Maker Convening Educators! We are MakeFashion Edu, coming to you from our equity project, the makerspace SteamHead. We are comprised of a network of"
+description: "Hello Maker Convening Educators! We are MakeFashion Edu, coming to you from our equity project, the makerspace SteamHead."
 author: "James"
 program: makefashion-edu
 categories:
@@ -34,13 +34,19 @@ Rushing to another session and can’t make it to the live chat? Become part of 
 
 ## Find Us on Social Media
 
-twitter youtube facebook
+twitter
+
+youtube
+
+facebook
 
 ## Contact Us
 
 ## Support Us
 
-SteamHead is a 501c3 nonprofit, and we use these resources to support out community and build our programs for the benefit of students everywhere. All profits go directly back into the community. Support us by donating directly through PayPal or buying a book!  
+SteamHead is a 501c3 nonprofit, and we use these resources to support out community and build our programs for the benefit of students everywhere. All profits go directly back into the community.
+
+Support us by donating directly through PayPal or buying a book!
 
 ![](https://www.paypal.com/en_US/i/scr/pixel.gif)
 

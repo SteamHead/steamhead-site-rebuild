@@ -1,7 +1,7 @@
 ---
 title: "Online Events: Together While Apart"
 date: 2023-01-08
-description: "\\button link=\"\" color=\"silver\"\\ Written by ChatGPT, Prompt/Edit by Carrie\\/button\\ Over the past two and a half years, our team at SteamHead has had the"
+description: "Written by ChatGPT, Prompt/Edit by Carrie Over the past two and a half years, our team at SteamHead has had the opportunity to participate in, present at, and even host various online events."
 author: "Carrie"
 program: makefashion-edu
 categories:
@@ -13,7 +13,7 @@ image: "/images/2023/01/20200922_052346489_iOS-2-scaled.jpg"
 imageAlt: "Online Events: Together While Apart"
 ---
 
-\[button link="" color="silver"\] Written by ChatGPT, Prompt/Edit by Carrie\[/button\]
+Written by ChatGPT, Prompt/Edit by Carrie
 
 Over the past two and a half years, our team at SteamHead has had the opportunity to participate in, present at, and even host various online events. While it was a difficult adjustment to go from in-person events to virtual ones, we were grateful for the chance to continue sharing and collaborating with others in the education, maker, and hacker communities.
 

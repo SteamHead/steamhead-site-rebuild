@@ -1,7 +1,7 @@
 ---
 title: "Space Remodeling"
 date: 2021-01-24
-description: "3D Design 8hours Sunny from SteamHead writes, \"...all of these designs are based on some cool medium low budget AR/MR workflow thats very beginner friendly, i"
+description: "3D Design 8hours Sunny from SteamHead writes, \"...all of these designs are based on some cool medium low budget AR/MR workflow thats very beginner friendly, i am exploring this…"
 author: "James"
 program: general
 categories:

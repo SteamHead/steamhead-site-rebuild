@@ -1,7 +1,7 @@
 ---
 title: "MG Space Cardboard Engineering Semester Course"
 date: 2025-01-28
-description: "Empowering Young Creators with Cardboard and Creativity In the bustling hub of innovation that is Shenzhen, young minds are being molded to envision the future"
+description: "Empowering Young Creators with Cardboard and Creativity In the bustling hub of innovation that is Shenzhen, young minds are being molded to envision the future through hands-on, creative learning."
 author: "Mapet"
 program: general
 categories:
@@ -57,4 +57,10 @@ The course is led by **Hardi Huang**, a STEAM educator and lifelong learner pass
 
 ### **Inspiring the Next Generation of Innovators**
 
-The MG Space Cardboard Engineering Semester Course is more than just a series of lessons—it’s a transformative experience for young learners. It bridges the gap between imagination and engineering, inspiring students to not only dream about the future but to start building it with their own hands. Through cardboard, circuits, and teamwork, the creators of tomorrow are learning today. Who knows? One of these young visionaries might just redefine Shenzhen in the decades to come. [03](https://steamhead.space/wp-content/uploads/2025/01/03-未来城市-复盘-双语字幕-low.mp4-01-笔筒项目-复盘-双语字幕-low.mp4-02-未来的机器人-复盘-双语字幕-low.mov) **This article contains video material.** If you want to watch the video embedded in the original document, you can visit the original link: [**https://alidocs.dingtalk.com/i/p/AO2RXDxowVdXZjEJO4Gjj37Vqgj7wGDR**](https://alidocs.dingtalk.com/i/p/AO2RXDxowVdXZjEJO4Gjj37Vqgj7wGDR)
+The MG Space Cardboard Engineering Semester Course is more than just a series of lessons—it’s a transformative experience for young learners. It bridges the gap between imagination and engineering, inspiring students to not only dream about the future but to start building it with their own hands.
+
+Through cardboard, circuits, and teamwork, the creators of tomorrow are learning today. Who knows? One of these young visionaries might just redefine Shenzhen in the decades to come.
+
+[03](https://steamhead.space/wp-content/uploads/2025/01/03-未来城市-复盘-双语字幕-low.mp4-01-笔筒项目-复盘-双语字幕-low.mp4-02-未来的机器人-复盘-双语字幕-low.mov)
+
+**This article contains video material.**If you want to watch the video embedded in the original document, you can visit the original link: [**https://alidocs.dingtalk.com/i/p/AO2RXDxowVdXZjEJO4Gjj37Vqgj7wGDR**](https://alidocs.dingtalk.com/i/p/AO2RXDxowVdXZjEJO4Gjj37Vqgj7wGDR)

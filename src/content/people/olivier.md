@@ -2,7 +2,7 @@
 name: "Olivier"
 role: resident
 date: 2019-11-05
-description: "Olivier is not a social media poster, however he shares his engineering skills freely with members and we have put the results of his work on Twitter and"
+description: "Olivier is not a social media poster, however he shares his engineering skills freely with members and we have put the results of his work on Twitter and YouTube!"
 image: "/images/2024/01/hr-nologo-1015396-scaled.jpg"
 imageAlt: "Olivier"
 ---

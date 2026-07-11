@@ -1,7 +1,7 @@
 ---
 title: "Workstations"
 date: 2020-07-14
-description: "Work Stations Work Stations are currently in use in my classroom, where students can approach an area of the class to accomplish some specific task or utilize"
+description: "Work Stations Work Stations are currently in use in my classroom, where students can approach an area of the class to accomplish some specific task or utilize particular tools."
 author: "James"
 program: general
 categories:

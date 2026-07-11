@@ -1,7 +1,7 @@
 ---
 title: "Zoom Reflectors"
 date: 2020-10-21
-description: "Using John Umekubo's (@jumekubo on Twitter) Pocket Document Camera design and Amazon boxes, Twila and Elisa Busby just finished cutting/scoring and gluing 120"
+description: "Using John Umekubo's (@jumekubo on Twitter) Pocket Document Camera design and Amazon boxes, Twila and Elisa Busby just finished cutting/scoring and gluing 120 reflectors for their…"
 author: "James"
 program: general
 categories:

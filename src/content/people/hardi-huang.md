@@ -2,7 +2,7 @@
 name: "Hardi Huang"
 role: team
 date: 2020-02-27
-description: "Hardi is our new full time resident! He makes a TON of design and tech content on Facebook( and Bilibili( He works at MG Space(mgspace.net) (they are on"
+description: "Hardi is our new full time resident!"
 image: "/images/2020/02/hardihuang-1.png"
 imageAlt: "Hardi Huang"
 ---

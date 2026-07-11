@@ -1,7 +1,7 @@
 ---
 title: "Dream Dream Dream"
 date: 2020-10-07
-description: "Dream, Dream, Dream Designed and Modeled by: Camila Nolasco 9 yrs, Victoria Espinoza 9 yrs, Polett Gutierrez 9 yrs, Victoria Ortiz 8 yrs Sometimes we dream at"
+description: "Dream, Dream, Dream Designed and Modeled by: Camila Nolasco 9 yrs, Victoria Espinoza 9 yrs, Polett Gutierrez 9 yrs, Victoria Ortiz 8 yrs Sometimes we dream at night and sometimes we daydream."
 author: "James"
 program: general
 categories:

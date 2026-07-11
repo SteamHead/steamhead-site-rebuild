@@ -1,7 +1,7 @@
 ---
 title: "MakeFashion Edu Behind-The-Scenes Documentary"
 date: 2019-03-25
-description: "We're really excited about our MakeFashion Edu project, and we want teachers, parents, and students around the world to get inspired and learn from our"
+description: "We're really excited about our MakeFashion Edu project, and we want teachers, parents, and students around the world to get inspired and learn from our experience."
 author: "Mike"
 program: makefashion-edu
 categories:

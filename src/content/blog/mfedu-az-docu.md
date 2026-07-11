@@ -1,7 +1,7 @@
 ---
 title: "MakeFashion Edu Behind-The-Scenes Video"
 date: 2019-03-25
-description: "Produced by Michael Shaw( Tucson, AZ, March 25th, 2019 - Students from three Tucson schools designed their own fashion tech and walked the runway two months"
+description: "Produced by Michael Shaw( Tucson, AZ, March 25th, 2019 - Students from three Tucson schools designed their own fashion tech and walked the runway two months ago."
 author: "James"
 program: makefashion-edu
 categories:
