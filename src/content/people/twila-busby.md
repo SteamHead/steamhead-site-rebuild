@@ -3,7 +3,7 @@ name: "Twila Busby"
 role: team
 date: 2021-09-01
 description: "Twila has more than 20 years' experience in education, where she has been an advocate and trainer for Project Based Learning."
-image: "/images/2021/09/twilabusby-1.png"
+image: "/images/2021/09/twilabusby-1.jpg"
 imageAlt: "Twila Busby"
 ---
 

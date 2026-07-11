@@ -8,7 +8,7 @@ categories:
   - "Great Projects"
   - "James"
   - "SteamHead Spaces"
-image: "/images/2023/01/Screen-Shot-2023-01-08-at-3.30.32-PM.png"
+image: "/images/2023/01/Screen-Shot-2023-01-08-at-3.30.32-PM.jpg"
 imageAlt: "Fuse33 LiDAR Scan"
 ---
 

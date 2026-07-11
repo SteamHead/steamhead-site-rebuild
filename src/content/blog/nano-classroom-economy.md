@@ -7,7 +7,7 @@ program: general
 categories:
   - "Great Projects"
   - "SteamBeans"
-image: "/images/2020/12/Screen-Shot-2020-12-23-at-8.36.13-PM.png"
+image: "/images/2020/12/Screen-Shot-2020-12-23-at-8.36.13-PM.jpg"
 imageAlt: "Nano Classroom Economy"
 ---
 

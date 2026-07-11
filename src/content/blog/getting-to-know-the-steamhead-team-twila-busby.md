@@ -52,4 +52,4 @@ Just finished Netflix's Baking Impossible, where a baker and an engineer are pai
 
 Learn more about Twila by reading her profile [here](/people/twila-busby/).
 
-![](/images/2018/10/twila2-300x268.png)
+![](/images/2018/10/twila2-300x268.jpg)

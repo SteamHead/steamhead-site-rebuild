@@ -7,11 +7,11 @@ program: general
 categories:
   - "JamesEd"
   - "SteamBeans"
-image: "/images/2021/11/Screen-Shot-2021-11-15-at-7.41.26-PM.png"
+image: "/images/2021/11/Screen-Shot-2021-11-15-at-7.41.26-PM.jpg"
 imageAlt: "Quadratic Voting in the Classroom"
 ---
 
-![](/images/2021/11/Screen-Shot-2021-11-15-at-7.41.26-PM.png)
+![](/images/2021/11/Screen-Shot-2021-11-15-at-7.41.26-PM.jpg)
 
 John Dewey felt that education environments should be democratic, in order to give a democrat nation it's best citizens. This made me consider informing my educational philosophy with my latest thoughts on democracy. Recent events in the US have made me consider alternatives to "first past the post" voting systems, and "non-proportional representation". To me, these are USA voting processes that could be improved to make our nation more democratic.
 

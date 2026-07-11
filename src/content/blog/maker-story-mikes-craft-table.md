@@ -7,7 +7,7 @@ program: general
 categories:
   - "Great Projects"
   - "Mike"
-image: "/images/2020/08/thumbnail-how-hard-could-it-bethumb.png"
+image: "/images/2020/08/thumbnail-how-hard-could-it-bethumb.jpg"
 imageAlt: "Mike's Maker Story: Building My First Table"
 ---
 

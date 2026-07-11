@@ -9,7 +9,7 @@ categories:
   - "Great Projects"
   - "MakeFashion Edu"
   - "Mike"
-image: "/images/2020/08/about-to-start.png"
+image: "/images/2020/08/about-to-start.jpg"
 imageAlt: "Maker Camp Live! Light Up Dino Spikes Class"
 ---
 

@@ -7,7 +7,7 @@ program: general
 categories:
   - "JamesEd"
   - "SteamBeans"
-image: "/images/2023/01/class-shelf.png"
+image: "/images/2023/01/class-shelf.jpg"
 imageAlt: "Monetary Policy: Ledgers in a Classroom"
 ---
 

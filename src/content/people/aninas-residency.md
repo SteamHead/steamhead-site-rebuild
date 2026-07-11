@@ -3,7 +3,7 @@ name: "Anina Net"
 role: resident
 date: 2018-02-12
 description: "Anina is an international model turned maker! She joined us in Shenzhen to bring attitude and fashion to electronics and education."
-image: "/images/2018/02/aninanet.png"
+image: "/images/2018/02/aninanet.jpg"
 imageAlt: "Anina Net"
 ---
 

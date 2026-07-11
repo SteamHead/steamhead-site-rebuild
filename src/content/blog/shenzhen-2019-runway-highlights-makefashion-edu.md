@@ -6,7 +6,7 @@ author: "James"
 program: makefashion-edu
 categories:
   - "MakeFashion Edu"
-image: "/images/2019/12/Screen-Shot-2019-12-11-at-9.42.13-AM.png"
+image: "/images/2019/12/Screen-Shot-2019-12-11-at-9.42.13-AM.jpg"
 imageAlt: "MakeFashion Edu: Shenzhen 2019 Highlights"
 ---
 

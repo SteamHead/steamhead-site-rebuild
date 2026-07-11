@@ -17,7 +17,7 @@ imageAlt: "Space Remodeling"
 Sunny from SteamHead writes, "...all of these designs are based on some cool medium low budget AR/MR workflow thats very beginner friendly, i am exploring this route for more content and ways to utilize its power  
 lidar is amazing/cheap comparing to other solutions. I used kinect before but found lidar (on apple devices such as ipad pro gen4, and iphone 12 pro, but this time iphone 12 pro specifically) is much more user friendly and easy to learn."
 
-![](/images/2021/01/3D-concept-1.png)
+![](/images/2021/01/3D-concept-1.jpg)
 
 Models and Prototypes help people have conversations about the future! A good model eliminates \*some\* of the needs to speak figuratively. If you are discussing an idea, don't leave everything up to imagination and verbal description. Make use of the language of design and put some of the elements into a drawing. It does not need to be good (like these fancy models) it just needs to eliminate a few things that would be otherwise only spoken and imagined.
 

@@ -3,7 +3,7 @@ name: "Carrie Leung"
 role: team
 date: 2021-09-30
 description: "Carrie Leung is a San Francisco native, a techie turned teacher."
-image: "/images/2021/09/carrieleung.png"
+image: "/images/2021/09/carrieleung.jpg"
 imageAlt: "Carrie Leung"
 ---
 

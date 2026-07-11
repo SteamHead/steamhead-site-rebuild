@@ -8,7 +8,7 @@ categories:
   - "Events"
   - "Maker Education"
   - "Neighborhood Earth"
-image: "/images/2021/03/index-screenshot.png"
+image: "/images/2021/03/index-screenshot.jpg"
 imageAlt: "Deeper Learning Conference"
 ---
 

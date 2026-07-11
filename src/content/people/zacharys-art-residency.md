@@ -3,7 +3,7 @@ name: "Zachary"
 role: resident
 date: 2018-01-15
 description: "Zachary is a artist and maker living between Shenzhen and the US."
-image: "/images/2018/01/zachary.png"
+image: "/images/2018/01/zachary.jpg"
 imageAlt: "Zachary"
 ---
 

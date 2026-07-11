@@ -3,7 +3,7 @@ name: "Luke Henderson"
 role: team
 date: 2018-03-13
 description: "Luke Henderson hails from the Manchester, England and has been living in Shenzhen, China for five years."
-image: "/images/2018/03/lukehenderson.png"
+image: "/images/2018/03/lukehenderson.jpg"
 imageAlt: "Luke Henderson"
 ---
 

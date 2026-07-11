@@ -3,7 +3,7 @@ name: "Michelle"
 role: resident
 date: 2019-02-25
 description: "Michelle is an urban farmer and food maker, who joined us at Steamhead from Singapore, sharing her enthusiasm for fermentation and (ripping ceilings off)."
-image: "/images/2019/02/michelle.png"
+image: "/images/2019/02/michelle.jpg"
 imageAlt: "Michelle"
 ---
 

@@ -3,7 +3,7 @@ name: "Torrey Nommesen"
 role: resident
 date: 2018-12-15
 description: "I am a teacher, artist, maker, and wantreprenuer. Below are some of my current projects."
-image: "/images/2018/12/torreynommesen.png"
+image: "/images/2018/12/torreynommesen.jpg"
 imageAlt: "Torrey Nommesen"
 ---
 

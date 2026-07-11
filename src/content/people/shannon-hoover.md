@@ -3,7 +3,7 @@ name: "Shannon Hoover"
 role: team
 date: 2021-08-10
 description: "Shanon Hoover is a seasoned technologist, maker advocate, and co-founder of MakeFashion, where he served as Chief Technologist, shaping initiatives that bring cutting-edge tech into creative practice."
-image: "/images/2018/04/shannonhoover.png"
+image: "/images/2018/04/shannonhoover.jpg"
 imageAlt: "Shannon Hoover"
 ---
 

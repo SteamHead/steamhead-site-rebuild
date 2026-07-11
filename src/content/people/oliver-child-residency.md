@@ -3,7 +3,7 @@ name: "Oliver Child"
 role: resident
 date: 2018-08-22
 description: "Oliver came down for a full month's residency in August! We will be posting some of the projects and events he hosted."
-image: "/images/2018/08/oliverchild.png"
+image: "/images/2018/08/oliverchild.jpg"
 imageAlt: "Oliver Child"
 ---
 

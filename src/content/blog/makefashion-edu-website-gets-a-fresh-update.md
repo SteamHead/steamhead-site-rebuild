@@ -7,11 +7,11 @@ program: makefashion-edu
 categories:
   - "MakeFashion Edu"
   - "SteamHead Productions"
-image: "/images/2021/11/Screenshot-2021-11-03-at-4.54.06-pm-1024x973.png"
+image: "/images/2021/11/Screenshot-2021-11-03-at-4.54.06-pm-1024x973.jpg"
 imageAlt: "MakeFashion Edu: Website Gets A Fresh Update"
 ---
 
-![](/images/2021/11/Screenshot-2021-11-03-at-4.54.06-pm-1024x973.png)
+![](/images/2021/11/Screenshot-2021-11-03-at-4.54.06-pm-1024x973.jpg)
 
 Say hello to the newly updated [MakeFashion Edu website](http://www.makefashion.ca/edu/)!
 
