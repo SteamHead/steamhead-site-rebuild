@@ -56,3 +56,27 @@ schema changes.
 - `reference/` — converted Markdown of every old WordPress page, the SteamHead
   brand guide PDF, and the 2022 MakeFashion Edu combined guide. Source
   material for content and design-token work; not served by the site.
+- `blog-post-inventory.md` — curation checklist of all 176 old blog posts
+  (163 published + 13 drafts); mark keepers `[x]` before migration.
+
+## New machine setup
+
+Everything needed to continue lives in this repo except two things:
+
+1. **Cloudflare API token** — create a `.env` in the repo root (gitignored):
+   ```
+   CLOUDFLARE_API_TOKEN=<token>
+   CLOUDFLARE_ACCOUNT_ID=068bd0bae77f7c068677cd14996466fe
+   ```
+   Token lives in the team password manager, or mint a new one at
+   dash.cloudflare.com → My Profile → API Tokens ("Edit Cloudflare Workers"
+   template, scoped to James's account only). Wrangler reads `.env`
+   automatically. Never commit it.
+2. **WordPress export XML** (`steamhead.WordPress.2026-07-11.xml`, ~3.6 MB,
+   migration source for the old blog) — archived in the SteamHead Google
+   Drive. Do NOT commit it to this repo: it's gitignored deliberately
+   because the repo is intended to go public and a raw WordPress export
+   can contain non-public data (draft posts, commenter emails).
+
+Then: `npm install && npm run dev`. Deploys happen automatically on push to
+main (Workers Builds); manual fallback is `npm run deploy`.
