@@ -18,8 +18,28 @@ hardware:
     description: "Individually addressable, programmable LED strip"
     url: "https://www.amazon.com/SEZO-Individually-Addressable-Programmable-Non-Waterproof/dp/B097BX7LRT"
 books:
-  - MFEdu SF 2025 BSU
-  - MFEDU Tucson 2025
-  - MFEDU Tucson 2024
-  - MFEDU Tucson 2023
+  - title: "MakeFashion Edu Tucson 2025"
+    image: /images/books/B0FR2F2ZSL.jpg
+    url: https://www.amazon.com/dp/B0FR2F2ZSL
+  - title: "MakeFashion Edu San Francisco 2025: American Icons"
+    image: /images/books/B0FKGP353F.jpg
+    url: https://www.amazon.com/dp/B0FKGP353F
+  - title: "MakeFashion Edu Tucson 2024"
+    image: /images/books/B0DB68C8SZ.jpg
+    url: https://www.amazon.com/dp/B0DB68C8SZ
+  - title: "MakeFashion Edu Tucson 2023"
+    image: /images/books/B0C79JTJZS.jpg
+    url: https://www.amazon.com/dp/B0C79JTJZS
+  - title: "MakeFashion Edu Tucson 2022"
+    image: /images/books/B0B2V2CT1S.jpg
+    url: https://www.amazon.com/dp/B0B2V2CT1S
+  - title: "MakeFashion Edu Tucson 2021"
+    image: /images/books/B0B28B2PYP.jpg
+    url: https://www.amazon.com/dp/B0B28B2PYP
+  - title: "MakeFashion Edu: Season 2"
+    image: /images/books/B0BRM26Y6N.jpg
+    url: https://www.amazon.com/dp/B0BRM26Y6N
+  - title: "Fashion as Change (HTM North County Lookbook)"
+    image: /images/books/B08GLR2HVK.jpg
+    url: https://www.amazon.com/dp/B08GLR2HVK
 ---

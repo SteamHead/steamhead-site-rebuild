@@ -109,9 +109,6 @@ collections:
         fields:
           - { label: "Hero Heading",   name: hero_heading,  widget: string }
           - { label: "Hero Tagline",   name: hero_tagline,  widget: text }
-          - { label: "About Heading",  name: about_heading, widget: string }
-          - { label: "About Text 1",   name: about_text_1,  widget: text }
-          - { label: "About Text 2",   name: about_text_2,  widget: text }
 
       - name: about
         label: About Us Page
@@ -171,10 +168,14 @@ collections:
               - { label: Name,        name: name,        widget: string }
               - { label: Description, name: description, widget: string }
               - { label: URL,         name: url,         widget: string }
-          - label: "Book Titles"
+          - label: "Books"
             name: books
             widget: list
-            field: { label: Title, name: title, widget: string }
+            fields:
+              - { label: Title,         name: title, widget: string }
+              - { label: "Cover Image", name: image, widget: image,  required: false,
+                  hint: "Portrait book cover; a styled placeholder shows until one is added" }
+              - { label: "Buy/View URL", name: url,  widget: string, required: false }
 
   # ---------------------------------------------------------------------------
   # SITE SETTINGS — global info edited in one place

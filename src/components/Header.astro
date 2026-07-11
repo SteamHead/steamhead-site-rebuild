@@ -1,15 +1,19 @@
 ---
 /* Header component — sticky black nav bar with SteamHead branding */
-const navLinks = [
-  { href: "/",                  label: "Home" },
-  { href: "/about-us/",         label: "About Us" },
-  { href: "/makefashion-edu/",  label: "MakeFashion Edu" },
+const programLinks = [
+  { href: "/makefashion-edu/",    label: "MakeFashion Edu" },
   { href: "/neighborhood-earth/", label: "Neighborhood Earth" },
-  { href: "/system-upgrade/",   label: "System Upgrade" },
-  { href: "/shelf/",            label: "The Shelf" },
+  { href: "/system-upgrade/",     label: "System Upgrade" },
+];
+const navLinks = [
+  { href: "/",          label: "Home" },
+  { href: "/about-us/", label: "About Us" },
+  { href: "/blog/",     label: "Blog" },
+  { href: "/shelf/",    label: "The Shelf" },
 ];
 
 const { currentPath = "/" } = Astro.props;
+const inPrograms = programLinks.some(l => currentPath === l.href);
 ---
 
 <header class="site-header">
@@ -17,8 +21,11 @@ const { currentPath = "/" } = Astro.props;
 
     <!-- Logo -->
     <a href="/" class="site-logo" aria-label="SteamHead — Make Great Things">
-      <span class="logo-steam">STEAM</span><span class="logo-head">HEAD</span>
-      <span class="logo-tagline">Make · Great · Things</span>
+      <img
+        src="/images/branding/sh-logo-horizontal.png"
+        alt="SteamHead — Make Great Things"
+        height="46"
+      />
     </a>
 
     <!-- Mobile toggle -->
@@ -28,16 +35,41 @@ const { currentPath = "/" } = Astro.props;
 
     <!-- Nav links -->
     <ul class="nav-links" id="nav-menu" role="list">
-      {navLinks.map(link => (
-        <li>
-          <a
-            href={link.href}
-            class:list={["nav-link", { "nav-link--active": currentPath === link.href }]}
-          >
-            {link.label}
-          </a>
-        </li>
-      ))}
+      <li>
+        <a href="/" class:list={["nav-link", { "nav-link--active": currentPath === "/" }]}>Home</a>
+      </li>
+      <li>
+        <a href="/about-us/" class:list={["nav-link", { "nav-link--active": currentPath === "/about-us/" }]}>About Us</a>
+      </li>
+
+      <li class="nav-dropdown">
+        <button
+          class:list={["nav-link", "nav-dropdown__toggle", { "nav-link--active": inPrograms }]}
+          aria-expanded="false"
+          aria-controls="programs-menu"
+        >
+          Programs <span class="nav-dropdown__caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown__menu" id="programs-menu" role="list">
+          {programLinks.map(link => (
+            <li>
+              <a
+                href={link.href}
+                class:list={["nav-link", { "nav-link--active": currentPath === link.href }]}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </li>
+
+      <li>
+        <a href="/blog/" class:list={["nav-link", { "nav-link--active": currentPath.startsWith("/blog") }]}>Blog</a>
+      </li>
+      <li>
+        <a href="/shelf/" class:list={["nav-link", { "nav-link--active": currentPath === "/shelf/" }]}>The Shelf</a>
+      </li>
     </ul>
 
   </nav>
@@ -61,32 +93,22 @@ const { currentPath = "/" } = Astro.props;
     flex-wrap: wrap;
   }
 
-  /* Logo */
+  /* Logo — the image has the same black background as the bar, so it blends */
   .site-logo {
     display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    line-height: 1;
-    color: var(--color-white);
+    align-items: center;
     flex-shrink: 0;
   }
-  .logo-steam { font-family: var(--font-heading); font-size: 1.35rem; letter-spacing: 0.05em; }
-  .logo-head  { font-family: var(--font-heading); font-size: 1.35rem; letter-spacing: 0.05em; color: var(--color-yellow); margin-top: -0.1rem; display: inline; }
-  .site-logo { flex-direction: row; align-items: baseline; gap: 0; }
-  .logo-steam, .logo-head { font-size: 1.5rem; }
-  .logo-tagline {
-    font-family: var(--font-body);
-    font-size: 0.6rem;
-    letter-spacing: 0.18em;
-    color: #888;
-    text-transform: uppercase;
-    margin-left: 0.4rem;
-    align-self: center;
+  .site-logo img {
+    height: 46px;
+    width: auto;
+    display: block;
   }
 
   /* Nav links */
   .nav-links {
     display: flex;
+    align-items: center;
     list-style: none;
     gap: var(--space-sm);
     padding: 0;
@@ -104,11 +126,49 @@ const { currentPath = "/" } = Astro.props;
     border-radius: var(--radius);
     transition: color 0.15s, background 0.15s;
     white-space: nowrap;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
   .nav-link:hover,
   .nav-link--active {
     color: var(--color-yellow);
     opacity: 1;
+  }
+
+  /* Programs dropdown */
+  .nav-dropdown {
+    position: relative;
+  }
+  .nav-dropdown__caret {
+    font-size: 0.7em;
+    display: inline-block;
+    transition: transform 0.15s;
+  }
+  .nav-dropdown.is-open .nav-dropdown__caret {
+    transform: rotate(180deg);
+  }
+  .nav-dropdown__menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    list-style: none;
+    margin: 0;
+    padding: 0.4rem;
+    background: var(--color-nav-bg);
+    border: 1px solid #2a2a2a;
+    border-radius: var(--radius);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+  .nav-dropdown.is-open .nav-dropdown__menu {
+    display: flex;
+  }
+  .nav-dropdown__menu .nav-link {
+    display: block;
   }
 
   /* Mobile toggle button */
@@ -136,6 +196,7 @@ const { currentPath = "/" } = Astro.props;
     .nav-links {
       display: none;
       flex-direction: column;
+      align-items: stretch;
       width: 100%;
       padding: var(--space-sm) 0 var(--space-sm);
       border-top: 1px solid #222;
@@ -143,13 +204,23 @@ const { currentPath = "/" } = Astro.props;
     }
     .nav-links.is-open { display: flex; }
 
-    .nav-link { padding: 0.6rem 0; display: block; }
+    .nav-link { padding: 0.6rem 0; display: block; width: 100%; text-align: left; }
+
+    /* Dropdown flattens to an indented section on mobile */
+    .nav-dropdown__menu {
+      position: static;
+      border: none;
+      box-shadow: none;
+      padding: 0 0 0 var(--space-sm);
+      min-width: 0;
+    }
 
     .site-nav {
       flex-wrap: wrap;
       height: auto;
       padding-block: 0.75rem;
     }
+    .site-logo img { height: 40px; }
   }
 </style>
 
@@ -159,5 +230,25 @@ const { currentPath = "/" } = Astro.props;
   toggle?.addEventListener('click', () => {
     const open = menu?.classList.toggle('is-open');
     toggle.setAttribute('aria-expanded', String(open));
+  });
+
+  const dropdown = document.querySelector('.nav-dropdown');
+  const dropToggle = document.querySelector('.nav-dropdown__toggle');
+  dropToggle?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const open = dropdown?.classList.toggle('is-open');
+    dropToggle.setAttribute('aria-expanded', String(open));
+  });
+  document.addEventListener('click', (e) => {
+    if (dropdown?.classList.contains('is-open') && !dropdown.contains(e.target as Node)) {
+      dropdown.classList.remove('is-open');
+      dropToggle?.setAttribute('aria-expanded', 'false');
+    }
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && dropdown?.classList.contains('is-open')) {
+      dropdown.classList.remove('is-open');
+      dropToggle?.setAttribute('aria-expanded', 'false');
+    }
   });
 </script>

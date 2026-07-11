@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getEntry } from 'astro:content';
 
 const entry = await getEntry('pages', 'home');
-const { hero_heading, hero_tagline, about_heading, about_text_1, about_text_2 } = entry.data;
+const { hero_heading, hero_tagline } = entry.data;
 ---
 
 <BaseLayout
@@ -28,29 +28,9 @@ const { hero_heading, hero_tagline, about_heading, about_text_1, about_text_2 } 
   </section>
 
   <!-- =====================================================================
-       ABOUT BLURB
-       ===================================================================== -->
-  <section class="section" aria-label="About SteamHead">
-    <div class="container">
-      <div class="two-col">
-        <div>
-          <h2>{about_heading}</h2>
-          <hr class="accent-rule" />
-          <p>{about_text_1}</p>
-          <p>{about_text_2}</p>
-        </div>
-        <img
-          src="/images/2021/04/20181019_1855150-scaled.jpg"
-          alt="SteamHead community gathering"
-        />
-      </div>
-    </div>
-  </section>
-
-  <!-- =====================================================================
        OUR INITIATIVES
        ===================================================================== -->
-  <section class="section section--alt" aria-label="Our initiatives">
+  <section class="section" aria-label="Our initiatives">
     <div class="container">
       <div class="section__header">
         <h2>Our Initiatives</h2>
@@ -74,7 +54,8 @@ const { hero_heading, hero_tagline, about_heading, about_text_1, about_text_2 } 
             <p class="card__text">
               Global educator exchanges and place-based learning projects. We connect
               educators and learning communities around the world to share practices,
-              ideas, and locally rooted STEAM projects.
+              ideas, and locally rooted STEAM projects that reflect environmental and
+              cultural contexts.
             </p>
           </div>
           <div class="card__footer">
@@ -93,8 +74,9 @@ const { hero_heading, hero_tagline, about_heading, about_text_1, about_text_2 } 
             <h3 class="card__title">System Upgrade</h3>
             <p class="card__text">
               Rethinking education through authentic learning experiences. System Upgrade
-              explores how schools can move toward project-based, learner-driven models
-              that prioritise curiosity and real-world problem-solving.
+              explores how schools can move beyond traditional instruction toward
+              project-based, learner-driven models that prioritise curiosity, relevance,
+              and real-world problem-solving.
             </p>
           </div>
           <div class="card__footer">
@@ -114,7 +96,7 @@ const { hero_heading, hero_tagline, about_heading, about_text_1, about_text_2 } 
             <p class="card__text">
               Advocacy, identity, and technology through fashion. MakeFashion Edu
               integrates design, wearable technology, and social themes to help learners
-              explore identity, sustainability, and creative expression.
+              explore identity, sustainability, and creative expression through making.
             </p>
           </div>
           <div class="card__footer">
@@ -129,41 +111,47 @@ const { hero_heading, hero_tagline, about_heading, about_text_1, about_text_2 } 
   <!-- =====================================================================
        METHODOLOGY
        ===================================================================== -->
-  <section class="section" aria-label="Our methodology">
+  <section class="section section--alt" aria-label="Our methodology">
     <div class="container">
-      <h2>Our Methodology</h2>
-      <hr class="accent-rule" />
-      <div class="two-col mt-md">
-        <div>
-          <p>
-            SteamHead's approach is rooted in maker-centered pedagogy, where learning
-            emerges through exploration, iteration, and reflection rather than passive
-            instruction.
-          </p>
+      <div class="section__header">
+        <h2>Our Methodology</h2>
+        <p>
+          SteamHead's approach is rooted in maker-centered pedagogy, where learning
+          emerges through exploration, iteration, and reflection rather than passive
+          instruction.
+        </p>
+      </div>
+
+      <div class="method-grid">
+        <div class="method-item">
+          <h3>Hands-On Engagement</h3>
           <p>
             Learners engage directly with tools, materials, and technologies — from
             digital fabrication to low-tech prototyping — building practical skills
             alongside conceptual understanding.
           </p>
+        </div>
+        <div class="method-item">
+          <h3>Real Questions, Real Projects</h3>
           <p>
             Projects are designed around real questions and challenges, encouraging
             learners to think critically, collaborate meaningfully, and take ownership
             of their work.
           </p>
         </div>
-        <div>
+        <div class="method-item">
+          <h3>Educator Support &amp; Capacity Building</h3>
           <p>
             We work alongside educators to help them adopt maker-centered teaching
-            practices, offering resources, workshops, and shared frameworks that support
-            long-term impact.
+            practices, offering resources, workshops, and shared frameworks that
+            support long-term impact.
           </p>
+        </div>
+        <div class="method-item">
+          <h3>Access to Resources</h3>
           <p>
             Improving access to resources is central to SteamHead's mission, as it
             underpins all meaningful makerspace and project-based learning.
-          </p>
-          <p>
-            Our work engages students, educators, families, and a broader international
-            network of partners, including museums, researchers, and fellow makerspaces.
           </p>
         </div>
       </div>
@@ -186,11 +174,13 @@ const { hero_heading, hero_tagline, about_heading, about_text_1, about_text_2 } 
           <p>
             Through workshops, open studios, school partnerships, and collaborative
             events, we create spaces where learners of all ages can experiment, share
-            ideas, and learn from one another.
+            ideas, and learn from one another. These experiences strengthen not only
+            technical skills, but also communication, empathy, and confidence.
           </p>
           <p>
-            These experiences strengthen not only technical skills, but also
-            communication, empathy, and confidence.
+            We work with schools, educators, families, and organisations to design
+            learning experiences that respond to local needs while connecting to
+            global conversations in education.
           </p>
         </div>
         <img
@@ -202,24 +192,77 @@ const { hero_heading, hero_tagline, about_heading, about_text_1, about_text_2 } 
   </section>
 
   <!-- =====================================================================
-       ONLINE COURSES CTA
+       LONG-TERM COLLABORATION / ACCESS
        ===================================================================== -->
-  <section class="section section--alt" aria-label="Online courses">
+  <section class="section" aria-label="Long-term collaboration">
     <div class="container">
-      <div class="section__header">
-        <h2>Online STEAM &amp; Makerspace Courses</h2>
+      <h2>Grounded in Long-Term Collaboration</h2>
+      <hr class="accent-rule" />
+      <div class="two-col mt-md">
         <p>
-          SteamHead's online courses support educators and facilitators looking to bring
-          makerspace learning into their own contexts.
+          Across the communities we serve, we consistently encounter learners who are
+          capable, motivated, and curious, yet limited by unequal access to tools,
+          resources, and supportive learning environments. In many cases, experimentation
+          and initiative are discouraged not due to lack of ability, but because of
+          structural constraints.
+        </p>
+        <p>
+          SteamHead's work is grounded in long-term collaboration with schools and
+          learning communities. It engages students, educators, families, and a broader
+          international network of partners, including museums, researchers, and fellow
+          makerspaces.
         </p>
       </div>
-      <p>
-        Our courses focus on practical strategies, project design, and reflective teaching
-        practices — making them suitable for teachers, school leaders, and community
-        educators seeking flexible, self-paced professional learning.
-      </p>
-      <a href="/shelf/" class="btn btn--primary mt-md">Browse Courses &amp; Resources</a>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       ONLINE PROJECT GUIDES CTA
+       ===================================================================== -->
+  <section class="section section--alt" aria-label="Online project guides">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <h2>Online Project Guides</h2>
+          <hr class="accent-rule" />
+          <p>
+            SteamHead's online project guides support educators and facilitators looking
+            to bring makerspace learning into their own contexts.
+          </p>
+          <p>
+            Our guides focus on practical strategies, project design, and reflective
+            teaching practices — making them suitable for teachers, school leaders, and
+            community educators seeking flexible, self-paced professional learning.
+          </p>
+          <a href="/shelf/" class="btn btn--primary mt-md">Browse Guides &amp; Resources</a>
+        </div>
+        <img
+          src="/images/2021/08/GettingStartedWithMFEDU.png"
+          alt="Getting Started with MakeFashion Edu project guide"
+        />
+      </div>
     </div>
   </section>
 
 </BaseLayout>
+
+<style>
+  .method-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-md) var(--space-lg);
+    margin-top: var(--space-md);
+  }
+  .method-item h3 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-xs);
+  }
+  .method-item h3::after {
+    content: "";
+    display: block;
+    width: 2.5rem;
+    height: 3px;
+    background: var(--color-yellow);
+    margin-top: 0.4rem;
+  }
+</style>
