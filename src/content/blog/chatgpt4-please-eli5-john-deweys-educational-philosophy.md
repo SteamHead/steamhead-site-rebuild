@@ -6,7 +6,7 @@ author: "James"
 program: general
 categories:
   - "JamesEd"
-image: "/images/2023/04/johndewyportrait1930sclas_80051135.png"
+image: "/images/2023/04/johndewyportrait1930sclas_80051135.jpg"
 imageAlt: "ChatGPT4, please ELI5 John Dewey's educational philosophy"
 ---
 
@@ -14,7 +14,7 @@ ChatGPT just did an excellent job helping to teach me! Educational Theorist John
 
 **\*\*Section 1: Traditional vs. Progressive Education is a False Dichotomy\*\***
 
-John Dewey's "Experience & Education" examines the contrast between traditional and progressive![](/images/2023/04/classroomlectureblackpend_35119942-150x150.png) education. Traditional education, Dewey argues, is rigid, authoritarian, and focuses on the transfer of knowledge from teacher to student. In contrast, progressive education emphasizes the role of experience in the learning process, fostering active engagement, collaboration, and problem-solving.
+John Dewey's "Experience & Education" examines the contrast between traditional and progressive![](/images/2023/04/classroomlectureblackpend_35119942-150x150.jpg) education. Traditional education, Dewey argues, is rigid, authoritarian, and focuses on the transfer of knowledge from teacher to student. In contrast, progressive education emphasizes the role of experience in the learning process, fostering active engagement, collaboration, and problem-solving.
 
 Dewey criticizes traditional education for its lack of attention to the individual needs of students and its focus on memorization and rote learning. In progressive education, however, the learner's experience is central, and curriculum is designed to be flexible, allowing for adaptation to individual interests and abilities. Dewey also critiques the false dichotomy that has arisen between the two approaches, suggesting that a balance can be struck between the essential elements of both.
 

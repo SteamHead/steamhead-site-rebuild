@@ -7,7 +7,7 @@ program: general
 categories:
   - "Great Projects"
   - "Hardi"
-image: "/images/2020/06/Screen-Shot-2020-06-29-at-2.04.58-PM.png"
+image: "/images/2020/06/Screen-Shot-2020-06-29-at-2.04.58-PM.jpg"
 imageAlt: "Home Automation Project"
 ---
 

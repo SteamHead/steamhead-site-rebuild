@@ -7,7 +7,7 @@ program: makefashion-edu
 categories:
   - "JamesEd"
   - "MakeFashion Edu"
-image: "/images/2023/06/mfedu.png"
+image: "/images/2023/06/mfedu.jpg"
 imageAlt: "MakeFashion Edu's Metacognition"
 ---
 

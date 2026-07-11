@@ -10,7 +10,7 @@ categories:
   - "MakeFashion Edu"
   - "SteamHead Productions"
   - "Twila"
-image: "/images/2022/02/Screen-Shot-2023-01-10-at-8.24.08-PM.png"
+image: "/images/2022/02/Screen-Shot-2023-01-10-at-8.24.08-PM.jpg"
 imageAlt: "SteamHead Courses on \"The Shelf\""
 ---
 

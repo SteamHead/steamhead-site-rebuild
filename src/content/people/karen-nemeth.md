@@ -3,7 +3,7 @@ name: "Karen Nemeth"
 role: resident
 date: 2019-01-10
 description: "I am a creative engineer who strives to expand the boundaries of what's possible in the world by seamlessly connecting our physical and digital societies."
-image: "/images/2019/01/karennemeth.png"
+image: "/images/2019/01/karennemeth.jpg"
 imageAlt: "Karen Nemeth"
 ---
 

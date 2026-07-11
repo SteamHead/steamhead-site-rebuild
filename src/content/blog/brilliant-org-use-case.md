@@ -8,7 +8,7 @@ categories:
   - "James"
   - "JamesEd"
   - "Maker Education"
-image: "/images/2022/12/00116-926890418-a-grade-6-student-using-a-macbook-and-a-website-to-study-geometry.png"
+image: "/images/2022/12/00116-926890418-a-grade-6-student-using-a-macbook-and-a-website-to-study-geometry.jpg"
 imageAlt: "Brilliant.org Use Case"
 ---
 

@@ -3,7 +3,7 @@ name: "Benjamin \"James\" Simpson"
 role: team
 date: 2021-09-29
 description: "James is empowering Maker Ed teachers, students, and schools with techniques and formalization of their makerspace programs."
-image: "/images/2021/09/bensimpson.png"
+image: "/images/2021/09/bensimpson.jpg"
 imageAlt: "Benjamin \"James\" Simpson"
 ---
 

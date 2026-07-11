@@ -3,7 +3,7 @@ name: "Hardi Huang"
 role: team
 date: 2020-02-27
 description: "Hardi is our new full time resident!"
-image: "/images/2020/02/hardihuang-1.png"
+image: "/images/2020/02/hardihuang-1.jpg"
 imageAlt: "Hardi Huang"
 ---
 

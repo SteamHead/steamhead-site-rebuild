@@ -7,7 +7,7 @@ program: general
 categories:
   - "Great Projects"
   - "Maker Education"
-image: "/images/2026/03/snow2.png"
+image: "/images/2026/03/snow2.jpg"
 imageAlt: "Snow Drop! Grade 2 Robotics and Coding"
 ---
 
@@ -109,9 +109,9 @@ The coding was simple and clear: send a beam when a button is tapped.
 
 Images:
 
-![](/images/2026/03/IMG_9878-235x512.png)
+![](/images/2026/03/IMG_9878-235x512.jpg)
 
-![](/images/2026/03/snow1-523x512.png)
+![](/images/2026/03/snow1-523x512.jpg)
 
 * * *
 

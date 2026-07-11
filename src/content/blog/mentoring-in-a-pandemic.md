@@ -47,7 +47,7 @@ https://www.youtube.com/watch?v=CGpf1ot6kU4
 
 https://www.youtube.com/watch?v=9j4sQDLZrss
 
-![](/images/2020/05/Screen-Shot-2020-05-11-at-9.19.37-PM.png) ![](/images/2020/05/Screen-Shot-2020-05-11-at-9.17.41-PM.png)![](/images/2020/05/Screen-Shot-2020-05-11-at-9.23.01-PM.png)
+![](/images/2020/05/Screen-Shot-2020-05-11-at-9.19.37-PM.jpg) ![](/images/2020/05/Screen-Shot-2020-05-11-at-9.17.41-PM.png)![](/images/2020/05/Screen-Shot-2020-05-11-at-9.23.01-PM.png)
 
 ## What the ISNS Community Said
 
@@ -79,8 +79,8 @@ Though much of our support was live, we also created guides and curated graphics
 
 Together we shared out to the ISNS leadership team to determine the best conferencing software for our students, and then broke out as individuals to inform our teams about the Learning Management software best for different situations. ManageBac, SeeSaw, and OneNote were supported by Lori, Jennifer, and James separately to give teacher's the best software for their situation.
 
-![](/images/2020/05/Screen-Shot-2020-05-11-at-9.29.42-PM.png)
+![](/images/2020/05/Screen-Shot-2020-05-11-at-9.29.42-PM.jpg)
 
 In addition to selecting apps and training teachers, students, and sometimes parents, we also occasionally helped with custom lesson plans that integrated these technologies.
 
-![](/images/2020/05/Screen-Shot-2020-05-11-at-9.29.03-PM.png)
+![](/images/2020/05/Screen-Shot-2020-05-11-at-9.29.03-PM.jpg)

@@ -8,7 +8,7 @@ categories:
   - "James"
   - "JamesEd"
   - "Maker Education"
-image: "/images/2019/04/peeled-badge-470x353.png"
+image: "/images/2019/04/peeled-badge-470x353.jpg"
 imageAlt: "What are Open Badges?"
 ---
 

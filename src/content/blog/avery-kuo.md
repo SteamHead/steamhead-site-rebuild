@@ -6,7 +6,7 @@ author: "Avery"
 program: general
 categories:
   - "Great People"
-image: "/images/2021/11/averykuo.png"
+image: "/images/2021/11/averykuo.jpg"
 imageAlt: "Avery Kuo"
 ---
 

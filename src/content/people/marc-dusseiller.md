@@ -3,7 +3,7 @@ name: "Marc Dusseiller"
 role: resident
 date: 2018-10-25
 description: "Marc came with a crew of organizers and participants to Shenzhen to work on the Shenzhen GOSH( event."
-image: "/images/2018/10/marcdusseiller.png"
+image: "/images/2018/10/marcdusseiller.jpg"
 imageAlt: "Marc Dusseiller"
 ---
 

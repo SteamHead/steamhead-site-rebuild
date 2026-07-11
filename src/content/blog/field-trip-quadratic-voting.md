@@ -7,7 +7,7 @@ program: general
 categories:
   - "JamesEd"
   - "SteamBeans"
-image: "/images/2022/09/quadraticvoting_64784026c.png"
+image: "/images/2022/09/quadraticvoting_64784026c.jpg"
 imageAlt: "Field Trip Quadratic Voting"
 ---
 

@@ -7,7 +7,7 @@ program: general
 categories:
   - "James"
   - "JamesEd"
-image: "/images/2023/01/IDU-Math-InS.png"
+image: "/images/2023/01/IDU-Math-InS.jpg"
 imageAlt: "International Baccalaureate IDUs: I&S+Math"
 ---
 

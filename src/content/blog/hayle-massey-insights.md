@@ -6,7 +6,7 @@ author: "James"
 program: makefashion-edu
 categories:
   - "MakeFashion Edu"
-image: "/images/2019/12/Screen-Shot-2021-09-09-at-12.07.03-PM.png"
+image: "/images/2019/12/Screen-Shot-2021-09-09-at-12.07.03-PM.jpg"
 imageAlt: "MakeFashion Edu Project Insights: Hayle Massey"
 ---
 

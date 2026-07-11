@@ -27,7 +27,7 @@ Through this experience, we have learned a lot about what works well in a virtua
 
 As the world reopens, we are excited to meet in person again, but we are also grateful for the new remote tools and skills we have acquired. We are looking forward to seeing what new opportunities and connections will come from this experience, and we would like to give a shoutout to all the organizers, presenters, and attendees who have made it possible.
 
-![](/images/2023/01/covid-timeline-6.png) ![](/images/2023/01/Screenshot-109.png)![](/images/2023/01/20200916_213312793_iOS.jpg)![](/images/2023/01/Screenshot-89.png)
+![](/images/2023/01/covid-timeline-6.png) ![](/images/2023/01/Screenshot-109.png)![](/images/2023/01/20200916_213312793_iOS.jpg)![](/images/2023/01/Screenshot-89.jpg)
 
 -   Hackers on Planet Earth, New York, NY - [https://hope.net/](https://hope.net/)
 -   Make: Maker Kits, Bay Area, CA  - [https://makezine.com/article/maker-news/plan-c-live-educational-kits/](https://makezine.com/article/maker-news/plan-c-live-educational-kits/)

@@ -8,7 +8,7 @@ categories:
   - "Carrie"
   - "JamesEd"
   - "SteamBeans"
-image: "/images/2023/01/student-bank.png"
+image: "/images/2023/01/student-bank.jpg"
 imageAlt: "Nano Classroom Economy in a Makerspace"
 ---
 

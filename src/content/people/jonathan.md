@@ -3,7 +3,7 @@ name: "Jonathan"
 role: resident
 date: 2019-09-30
 description: "Editor's note: Jonathan's stay in Shenzhen is not complete! However we couldn't help but show a few preview pictures of some of his projects."
-image: "/images/2019/09/jonathan.png"
+image: "/images/2019/09/jonathan.jpg"
 imageAlt: "Jonathan"
 ---
 

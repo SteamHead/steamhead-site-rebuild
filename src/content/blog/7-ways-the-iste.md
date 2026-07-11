@@ -6,7 +6,7 @@ author: "James"
 program: general
 categories:
   - "STEAM"
-image: "/images/2019/09/Screen-Shot-2019-09-28-at-8.59.01-PM.png"
+image: "/images/2019/09/Screen-Shot-2019-09-28-at-8.59.01-PM.jpg"
 imageAlt: "7 Ways | The ISTE Standards for Students Music Video"
 ---
 

@@ -3,7 +3,7 @@ name: "Ross Atkin"
 role: resident
 date: 2018-03-22
 description: "Ross stayed with us for just a few nights!"
-image: "/images/2018/03/rossatkin.png"
+image: "/images/2018/03/rossatkin.jpg"
 imageAlt: "Ross Atkin"
 ---
 

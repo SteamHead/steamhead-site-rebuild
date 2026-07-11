@@ -3,7 +3,7 @@ name: "Natsuko"
 role: resident
 date: 2017-09-06
 description: "One of our first residents! A lady from Japan in Shenzhen to work on prototyping her makeup refrigerator!"
-image: "/images/2017/09/natsuko.png"
+image: "/images/2017/09/natsuko.jpg"
 imageAlt: "Natsuko"
 ---
 

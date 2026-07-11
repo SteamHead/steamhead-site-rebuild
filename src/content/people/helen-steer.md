@@ -3,7 +3,7 @@ name: "Helen Steer"
 role: resident
 date: 2017-10-22
 description: "We are hosting Helen Steer in November! She will be living, working, and teaching from our resident's room in Shekou."
-image: "/images/2017/10/helensteer.png"
+image: "/images/2017/10/helensteer.jpg"
 imageAlt: "Helen Steer"
 ---
 

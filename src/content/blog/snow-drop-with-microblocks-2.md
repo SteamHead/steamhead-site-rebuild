@@ -14,7 +14,7 @@ draft: true
   
 
   
-![Grade 2 students' paper snow falling during the winter performance](https://i0.wp.com/steamhead.space/images/2026/03/snow2.png)  
+![Grade 2 students' paper snow falling during the winter performance](https://i0.wp.com/steamhead.space/images/2026/03/snow2.jpg)  
 
   
 
@@ -138,11 +138,11 @@ I was first introduced to MicroBlocks by Kathy Giori at the Bay Area Maker Faire
 
 They designed and built cardboard "snow release" boxes, engineered simple bottom doors, produced paper snow, programmed OctoStudio to send beam signals, rehearsed timing during performance practice, and triggered the snow live. The coding was simple and clear: send a beam when a button is tapped.
 
-![OctoStudio app showing the beam trigger program](https://i0.wp.com/steamhead.space/images/2026/03/IMG_9878.png)
+![OctoStudio app showing the beam trigger program](https://i0.wp.com/steamhead.space/images/2026/03/IMG_9878.jpg)
 
 The OctoStudio program — students tap to send a beam signal that triggers the micro:bit.
 
-![Students preparing the snow release boxes](https://i0.wp.com/steamhead.space/images/2026/03/snow1.png)
+![Students preparing the snow release boxes](https://i0.wp.com/steamhead.space/images/2026/03/snow1.jpg)
 
 Grade 2 students preparing their cardboard snow release boxes for the performance.
 

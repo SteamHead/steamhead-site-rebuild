@@ -7,7 +7,7 @@ program: general
 categories:
   - "Great Projects"
   - "Paul"
-image: "/images/2019/06/thehtta2019residency.png"
+image: "/images/2019/06/thehtta2019residency.jpg"
 imageAlt: "The HTTA 2019 Residency"
 ---
 
