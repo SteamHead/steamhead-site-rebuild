@@ -80,13 +80,10 @@ To run the CMS locally without OAuth, add this to the top of `public/admin/confi
 local_backend: true
 ```
 
-Then in a second terminal, run:
+Then run `npm run dev` and open `http://localhost:4321/admin/`. Sveltia will ask
+you to select the project folder (pick the repo root) and then read/write the
+content files on disk directly — no proxy server needed. This requires a
+browser with the File System Access API (Chrome or Edge).
 
-```bash
-npx netlify-cms-proxy-server
-```
-
-The CMS will be available at `http://localhost:4321/admin/` and will read/write
-files on disk directly.
-
-**Remove `local_backend: true` before deploying.**
+**Remove `local_backend: true` before committing — it must never reach `main`,
+or CMS login breaks on the live site.**
