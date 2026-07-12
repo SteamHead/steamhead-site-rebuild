@@ -91,4 +91,19 @@ const guides = defineCollection({
   }),
 });
 
-export const collections = { blog, people, pages, settings, guides, mfedu };
+// Course lessons — sequential self-paced courses. Lessons render at
+// /courses/<course>/<filename>/ with prev/next navigation and
+// localStorage progress (no accounts). `order` drives the sequence;
+// `section` is the grouping label shown on the course landing page.
+const courses = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/courses' }),
+  schema: z.object({
+    title:       z.string(),
+    course:      z.enum(['mfedu-intro']),
+    order:       z.number(),
+    section:     z.string(),
+    description: z.string().optional(),
+  }).strict(),
+});
+
+export const collections = { blog, people, pages, settings, guides, mfedu, courses };

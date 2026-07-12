@@ -1,0 +1,399 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+/* MakeFashion Edu — Introduction Course landing page.
+   Lessons come from the courses collection; progress lives in
+   localStorage under 'course-progress:mfedu-intro' (no accounts). */
+
+const lessons = (await getCollection('courses', c => c.data.course === 'mfedu-intro'))
+  .sort((a, b) => a.data.order - b.data.order);
+
+/* Group lessons by section, preserving order */
+const sections: { label: string; items: typeof lessons }[] = [];
+for (const lesson of lessons) {
+  const last = sections[sections.length - 1];
+  if (last && last.label === lesson.data.section) last.items.push(lesson);
+  else sections.push({ label: lesson.data.section, items: [lesson] });
+}
+
+const experts = [
+  { name: 'Maria Hoover', role: 'Designer · Co-founder MakeFashion, Fuse33', href: 'https://makefashion.ca' },
+  { name: 'James Simpson', role: 'Engineer · Co-founder SteamHead', href: '/people/james/' },
+  { name: 'Twila Busby', role: 'Curriculum Director, MakeFashion Edu Director', href: '/people/twila-busby/' },
+  { name: 'Carrie Leung', role: 'Educator · Co-founder MakeFashion Edu', href: '/people/carrie-leung/' },
+  { name: 'Elisa Busby', role: 'Educator · MakeFashion Edu Developer', href: null },
+  { name: 'Hayle B.', role: 'Student · MakeFashion Edu Designer', href: null },
+];
+
+const worksheets = [
+  ['Fashion Tells a Story (slides)', 'MFEdu_Fashion_Tells_a_Story.pdf'],
+  ['Fashion as Activism (slides)', 'MFEdu_Fashion_as_Activism.pdf'],
+  ['Tell Your Story: Line, Color, Shape, Texture', 'MFEdu_Elements_of_Fashion_Design.pdf'],
+  ['Circuits Worksheet', 'MFEdu_Circuits_Worksheet.pdf'],
+  ['Paper Circuits Additional Practice', 'MFEdu_Paper_Circuits_Practice.pdf'],
+  ['Hoodie Template', 'MFEdu_Hoodie_Template.pdf'],
+  ['Design Notes', 'MFEdu_Design_Notes.pdf'],
+  ['Ideating with Croquis (student examples)', 'MFEdu_Ideating_with_Croquis.pdf'],
+  ['Tell Their Story — Client Stories', 'MFEdu_Client_Stories.pdf'],
+  ['Advocacy Prompts', 'MFEdu_Advocacy_Prompts.pdf'],
+  ['Writing Prompts', 'MFEdu_Writing_Prompts.pdf'],
+];
+---
+
+<BaseLayout
+  title="MakeFashion Edu — Introduction Course"
+  description="A free, self-paced course for teachers and young designers: use fashion tech — lights, circuits, and recycled materials — to tell advocacy stories, ending on the runway."
+>
+
+  <section class="hero" aria-label="MakeFashion Edu Introduction Course">
+    <div class="container hero__content">
+      <p class="course-kicker">SteamHead Courses · Free &amp; Self-Paced</p>
+      <h1>MakeFashion Edu — Introduction Course</h1>
+      <p class="hero__tagline">
+        Guide young designers to create fashion tech pieces that tell the story
+        of an advocacy project — learn, design, construct, and exhibit on the runway.
+      </p>
+      <a href={`/courses/mfedu-intro/${lessons[0]?.id}/`} class="btn btn--primary" data-start-btn>
+        Start the Course
+      </a>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       LESSON INDEX + PROGRESS
+       ===================================================================== -->
+  <section class="section" aria-label="Lessons">
+    <div class="container">
+      <div class="progress-head">
+        <h2>The Lessons</h2>
+        <span class="progress-label" data-progress-label>0 of {lessons.length} complete</span>
+      </div>
+      <hr class="accent-rule" />
+      <div class="progress-track" role="progressbar" aria-label="Course progress">
+        <div class="progress-fill" data-progress-fill></div>
+      </div>
+
+      {sections.map(group => (
+        <div class="lesson-group">
+          <h3>{group.label}</h3>
+          <ol class="lesson-list" role="list">
+            {group.items.map(lesson => (
+              <li>
+                <a class="lesson-row" href={`/courses/mfedu-intro/${lesson.id}/`} data-lesson={lesson.id}>
+                  <span class="lesson-check" aria-hidden="true">{lesson.data.order}</span>
+                  <span class="lesson-info">
+                    <span class="lesson-title">{lesson.data.title}</span>
+                    {lesson.data.description && (
+                      <span class="lesson-desc">{lesson.data.description}</span>
+                    )}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </div>
+      ))}
+
+      <button class="btn btn--outline mt-md" data-reset-btn type="button">
+        Reset Course Progress
+      </button>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       ABOUT THE COURSE
+       ===================================================================== -->
+  <section class="section section--alt" aria-label="About the course">
+    <div class="container">
+      <h2>About This Course</h2>
+      <hr class="accent-rule" />
+      <p class="mt-md">
+        Everyone has a story to tell, and everyone wears clothing that tells part
+        of that story. From colors once reserved for nobility to team uniforms,
+        fashion brings people together and sets them apart — and throughout
+        history it has been used to advocate for (or against) an issue or a
+        cause. MakeFashion Edu Advocacy guides young designers to create fashion
+        tech pieces that tell the story of an advocacy project.
+      </p>
+      <p>
+        Young designers today aren't limited to fabric: lights, sensors, and
+        microcontrollers become part of the story. In this course you will
+        experience and experiment with the MakeFashion Edu process as designers:
+      </p>
+      <div class="steps-grid mt-md">
+        <div class="step-card"><h3>Learn</h3><p>about the elements of fashion and circuits</p></div>
+        <div class="step-card"><h3>Design</h3><p>a story and the wearable that tells it</p></div>
+        <div class="step-card"><h3>Construct</h3><p>a fashion tech piece using recyclable materials and lights</p></div>
+        <div class="step-card"><h3>Exhibit</h3><p>be seen! Our favorite medium is the runway</p></div>
+      </div>
+      <p class="mt-md"><strong>See it in action:</strong> Tucson MakeFashion Edu Runway, 2019.</p>
+      <div class="video-embed">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/N12ziwUm8cE"
+          title="Tucson MakeFashion Edu Runway 2019"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       WHO YOU WILL MEET
+       ===================================================================== -->
+  <section class="section" aria-label="Who you will meet">
+    <div class="container">
+      <h2>Who You Will Meet</h2>
+      <hr class="accent-rule" />
+      <p class="mt-md">
+        Throughout the course you'll meet experts with deep knowledge in their
+        fields and ample experience in fashion technology. What they show you is
+        one way to do it — by no means the only way. Explore every concept
+        through your own lens!
+      </p>
+      <ul class="expert-list" role="list">
+        {experts.map(e => (
+          <li>
+            {e.href
+              ? <a href={e.href}><strong>{e.name}</strong></a>
+              : <strong>{e.name}</strong>}
+            <span class="expert-role">{e.role}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       MATERIALS
+       ===================================================================== -->
+  <section class="section section--alt" aria-label="Materials list">
+    <div class="container">
+      <h2>Materials List</h2>
+      <hr class="accent-rule" />
+      <div class="materials-grid mt-md">
+        <div>
+          <h3>Essentials</h3>
+          <ul><li>Computer with WiFi connection</li><li>Sewing machine</li></ul>
+          <h3>The Basics</h3>
+          <ul>
+            <li>Adhesives (tape, glue, hot glue)</li>
+            <li>Writing/coloring tools</li>
+            <li>Connectors (staples, paper clips, binder clips, string/yarn/thread)</li>
+            <li>Scissors</li>
+            <li>Measuring tools</li>
+          </ul>
+          <h3>Basic Tech</h3>
+          <ul>
+            <li>Fairy lights</li>
+            <li>Single LEDs</li>
+            <li>Copper tape or Maker tape</li>
+            <li>Coin cell batteries (CR2032)</li>
+          </ul>
+        </div>
+        <div>
+          <h3>More Advanced Tech</h3>
+          <ul>
+            <li>Mosfet</li>
+            <li>LED strips</li>
+            <li>Microcontroller (Micro:bit, Circuit Playground Express)</li>
+            <li>Power supply</li>
+          </ul>
+          <h3>Trashion Fashion Construction</h3>
+          <ul>
+            <li>Recyclables: paper, aluminum foil, fabric scraps, grocery bags —
+                whatever imaginative materials you find!</li>
+          </ul>
+          <h3>Runway Fashion Tech Pieces</h3>
+          <ul>
+            <li>Thrifted dresses, shirts, shorts, pants, jackets, etc.</li>
+            <li>Variety of fabric</li>
+            <li>Sewing notions: thread, needles, pins</li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-muted mt-md">
+        Hardware sourcing links live on <a href="/theshelf/">The Shelf</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       WORKSHEETS
+       ===================================================================== -->
+  <section class="section" aria-label="Course worksheets">
+    <div class="container">
+      <h2>Printable Worksheets</h2>
+      <hr class="accent-rule" />
+      <p class="mt-md">
+        Every worksheet used in the course, in one place. Each also appears in
+        the lesson it belongs to.
+      </p>
+      <ul class="worksheet-list" role="list">
+        {worksheets.map(([label, file]) => (
+          <li><a href={`/downloads/mfedu-course/${file}`} download>{label}</a> <span class="text-muted">(PDF)</span></li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<script>
+  const KEY = 'course-progress:mfedu-intro';
+  const read = (): Record<string, boolean> => {
+    try { return JSON.parse(localStorage.getItem(KEY) ?? '{}'); }
+    catch { return {}; }
+  };
+
+  const rows = document.querySelectorAll<HTMLElement>('[data-lesson]');
+  const fill = document.querySelector<HTMLElement>('[data-progress-fill]');
+  const label = document.querySelector<HTMLElement>('[data-progress-label]');
+
+  function paint() {
+    const done = read();
+    let count = 0;
+    rows.forEach(row => {
+      const isDone = !!done[row.dataset.lesson ?? ''];
+      row.classList.toggle('lesson-row--done', isDone);
+      if (isDone) count++;
+    });
+    if (fill) fill.style.width = `${(count / Math.max(rows.length, 1)) * 100}%`;
+    if (label) label.textContent = `${count} of ${rows.length} complete`;
+  }
+  paint();
+
+  document.querySelector('[data-reset-btn]')?.addEventListener('click', () => {
+    if (confirm('Reset all course progress on this device?')) {
+      localStorage.removeItem(KEY);
+      paint();
+    }
+  });
+</script>
+
+<style>
+  .course-kicker {
+    font-size: var(--text-sm);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-yellow);
+    margin-bottom: var(--space-xs);
+  }
+
+  .progress-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+  }
+  .progress-label {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-text-muted);
+  }
+  .progress-track {
+    height: 8px;
+    background: var(--color-gray-light);
+    border-radius: 999px;
+    overflow: hidden;
+    margin-block: var(--space-sm);
+  }
+  .progress-fill {
+    height: 100%;
+    width: 0;
+    background: var(--color-teal);
+    border-radius: 999px;
+    transition: width 0.3s;
+  }
+
+  .lesson-group h3 {
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-xs);
+    color: var(--color-dark);
+  }
+  .lesson-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: var(--space-xs);
+  }
+  .lesson-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-xs) var(--space-sm);
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: transform 0.12s, box-shadow 0.12s;
+  }
+  .lesson-row:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+    opacity: 1;
+  }
+  .lesson-check {
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--color-gray-light);
+    color: var(--color-dark);
+    font-weight: 700;
+    font-size: var(--text-sm);
+    display: grid;
+    place-items: center;
+  }
+  .lesson-row--done .lesson-check {
+    background: var(--color-yellow);
+    color: var(--color-black);
+  }
+  .lesson-row--done .lesson-check::after { content: ' ✓'; }
+  .lesson-info { display: flex; flex-direction: column; }
+  .lesson-title { font-weight: 600; color: var(--color-dark); }
+  .lesson-desc { font-size: var(--text-sm); color: var(--color-text-muted); }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--space-sm);
+  }
+  .step-card {
+    background: var(--color-white);
+    border-radius: var(--radius);
+    border-top: 4px solid var(--color-yellow);
+    padding: var(--space-sm);
+  }
+  .step-card h3 { color: var(--color-dark); margin-bottom: 0.2rem; }
+  .step-card p { font-size: var(--text-sm); color: var(--color-text-muted); margin: 0; }
+
+  .expert-list {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-md);
+    display: grid;
+    gap: var(--space-xs);
+  }
+  .expert-list strong { color: var(--color-dark); }
+  .expert-role { color: var(--color-text-muted); font-size: var(--text-sm); margin-left: 0.5rem; }
+
+  .materials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+  }
+  .materials-grid h3 { color: var(--color-dark); margin-top: var(--space-sm); margin-bottom: var(--space-xs); }
+  .materials-grid ul { color: var(--color-dark); }
+
+  .worksheet-list {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-md);
+    display: grid;
+    gap: var(--space-xs);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+</style>
