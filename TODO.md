@@ -24,8 +24,9 @@ the items teammates need visibility on.
       localStorage progress; then repoint the course CTAs (flagged in
       makefashion-edu.astro) from /shelf/ to the real course landing.
 - [ ] **Design-token pass** from the brand guide + Mapet design review.
-- [ ] **Ben: heritage page on WordPress** — paste-ready copy in
-      reference/makefashion-ca-edu-heritage-copy.md.
+- [x] **Ben: heritage page on WordPress** — live on makefashion.ca/edu and
+      verified (wording matches reference/makefashion-ca-edu-heritage-copy.md,
+      2015 date fixed on both sides).
 
 ## Domain cutover checklist (target: by Sept 1, HostPresto renewal Sept 7)
 
