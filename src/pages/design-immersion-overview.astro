@@ -1,0 +1,328 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+/* Academic presentation of the Design Immersion Curriculum.
+   THIS URL (/design-immersion-overview/) IS CITED IN ACADEMIC PAPERS —
+   it must never move or redirect. Content from the published PDF
+   (Shaw, Simpson & Leung), served at /downloads/. */
+
+const APA = "Shaw, M., Simpson, J., & Leung, C. (2021). The SteamHead Design Immersion Curriculum: A collaborative project supporting maker education and design thinking in the classroom. SteamHead. https://steamhead.space/design-immersion-overview/";
+const MLA = "Shaw, Michael, et al. The SteamHead Design Immersion Curriculum: A Collaborative Project Supporting Maker Education and Design Thinking in the Classroom. SteamHead, 2021, steamhead.space/design-immersion-overview/.";
+---
+
+<BaseLayout
+  title="The SteamHead Design Immersion Curriculum"
+  description="A collaborative project supporting maker education and design thinking in the classroom. Shaw, Simpson & Leung (2021). Full text, PDF, and citation formats."
+>
+
+  <!-- =====================================================================
+       TITLE BLOCK
+       ===================================================================== -->
+  <section class="hero hero--short" aria-label="Publication title">
+    <div class="container hero__content">
+      <p class="pub-kicker">SteamHead · Curriculum Publication</p>
+      <h1>The SteamHead Design Immersion Curriculum</h1>
+      <p class="hero__tagline">
+        A Collaborative Project Supporting Maker Education and Design Thinking
+        in the Classroom
+      </p>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       PUBLICATION METADATA
+       ===================================================================== -->
+  <section class="section" aria-label="Publication details">
+    <div class="container">
+      <div class="pub-meta">
+        <div>
+          <span class="pub-label">Authors</span>
+          <span>Michael Shaw, James Simpson, and Carrie Leung</span>
+        </div>
+        <div>
+          <span class="pub-label">Published</span>
+          <span>First published December 2018 · Revised February 2021</span>
+        </div>
+        <div>
+          <span class="pub-label">Publisher</span>
+          <span>SteamHead, in collaboration with MakerSAIS, MakeFashion Edu, and Cultivative</span>
+        </div>
+        <div>
+          <span class="pub-label">License</span>
+          <span>
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">
+              Creative Commons BY-NC-SA 4.0
+            </a>
+          </span>
+        </div>
+      </div>
+      <div class="pub-actions mt-md">
+        <a href="/downloads/SteamHead_Design_Immersion_Curriculum.pdf" class="btn btn--primary" download>
+          Download the PDF
+        </a>
+        <a href="/maker-badges/" class="btn btn--outline">See the Badge System</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       HOW TO CITE
+       ===================================================================== -->
+  <section class="section section--alt" aria-label="How to cite">
+    <div class="container">
+      <h2>How to Cite This Work</h2>
+      <hr class="accent-rule" />
+
+      <div class="cite-block mt-md">
+        <div class="cite-head">
+          <h3>APA 7</h3>
+          <button class="copy-btn" data-copy={APA}>Copy</button>
+        </div>
+        <p class="cite-text">
+          Shaw, M., Simpson, J., &amp; Leung, C. (2021). <em>The SteamHead Design
+          Immersion Curriculum: A collaborative project supporting maker education
+          and design thinking in the classroom</em>. SteamHead.
+          https://steamhead.space/design-immersion-overview/
+        </p>
+      </div>
+
+      <div class="cite-block">
+        <div class="cite-head">
+          <h3>MLA 9</h3>
+          <button class="copy-btn" data-copy={MLA}>Copy</button>
+        </div>
+        <p class="cite-text">
+          Shaw, Michael, et al. <em>The SteamHead Design Immersion Curriculum: A
+          Collaborative Project Supporting Maker Education and Design Thinking in
+          the Classroom</em>. SteamHead, 2021,
+          steamhead.space/design-immersion-overview/.
+        </p>
+      </div>
+
+      <div class="cite-block">
+        <div class="cite-head"><h3>In-Text Citations</h3></div>
+        <p class="cite-text">
+          APA parenthetical: <strong>(Shaw et al., 2021)</strong> · APA narrative:
+          <strong>Shaw et al. (2021)</strong> · MLA: <strong>(Shaw et al.)</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       ABSTRACT + FULL TEXT
+       ===================================================================== -->
+  <section class="section" aria-label="Full text">
+    <div class="container pub-body">
+
+      <h2>Abstract</h2>
+      <hr class="accent-rule" />
+      <p class="pub-abstract">
+        The SteamHead Design Immersion Curriculum builds upon the established
+        educational values of existing design and technology curriculums to
+        instill creativity, critical thinking, and problem-solving skills in
+        students across all subjects, in a holistic program that prepares them
+        for the challenges of the future. Lessons are defined and measured via
+        a series of "badges" that represent the level and degree of
+        accomplishment in a given skill as students progress. "Immersion"
+        encapsulates the integrated approach: like language, design thinking
+        and technology are embedded in nearly every aspect of educational,
+        personal, and business life, and design immersion frees these concepts
+        from traditionally siloed subjects to cultivate creative problem
+        solving as a dialect of learning.
+      </p>
+
+      <h2>Introduction</h2>
+      <hr class="accent-rule" />
+      <p>
+        The curriculum is meant to teach students all the tools they need to be
+        innovative creators: from the high-level concepts of design planning and
+        community impact all the way through to the hands-on digital and
+        physical tools needed to enact their ideas. This method allows the most
+        freedom and flexibility to students as possible.
+      </p>
+      <p>
+        The curriculum developed over several years of implementation and
+        experimentation in the classrooms at Shenzhen American International
+        School (SAIS), which made Project Based Learning central to its
+        curriculum and philosophy and became the first entirely PBL school in
+        Shenzhen — the ideal environment to develop this work. It is presented
+        as a living document so that others in the education community might
+        benefit; it may be used under the CC BY-NC-SA 4.0 license. For a
+        commercial license or consulting services, <a href="/contact-us/">contact SteamHead</a>.
+      </p>
+
+      <h2>Learning Pathways</h2>
+      <hr class="accent-rule" />
+      <p>
+        Design thinking requires both a thorough understanding of abstract
+        heuristics and hands-on interactive skills. The curriculum builds on the
+        Stanford d.school's Design Thinking Process of "empathize, define,
+        ideate, prototype, and test," as well as a version of the "head, heart,
+        hands" model. Four learning pathways divide skills into sensible
+        categories, but should be understood as one gestalt design and creation
+        process.
+      </p>
+
+      <h3>Community Impact</h3>
+      <p>
+        The most important, but also most esoteric, pathway — it addresses the
+        need for meaning and purpose in students' work. Design thinking begins
+        with empathy not only as a virtue but as a pathway to listening to and
+        thinking about the needs of those around us, then defining a problem to
+        solve. Students share their work as the final aspect of this pathway,
+        reinforcing that their project has impact outside the classroom.
+      </p>
+
+      <h3>Design Process</h3>
+      <p>
+        The methods students need to ideate, manage, and revise their projects.
+        Students pick up the problem defined in Community Impact and attempt to
+        solve it: ideating solutions, drafting, organizing the steps and tools
+        needed to prototype. The pathway teaches iteration and testing — the
+        essential lesson that, contrary to the traditional mindset of "right or
+        wrong answers," we often learn most from the trials and prototypes that
+        don't work.
+      </p>
+
+      <h3>Fabrication Tools</h3>
+      <p>
+        Few things inspire more than seeing an idea come to life in physical
+        form. The Fabrication Tools pathway grounds the design process and gives
+        students the means to solve problems identified in Community Impact,
+        requiring forethought, attention to detail, safety, and management of
+        resources — whether through papercraft, woodcraft, and stitching, or 3D
+        printers, laser cutters, and block circuits.
+      </p>
+
+      <h3>Digital Tools</h3>
+      <p>
+        Individual apps and languages are quickly swallowed by technological
+        change, so this pathway focuses on the digital literacy, frameworks, and
+        heuristics needed to use any digital tool. Students arrive steeped in
+        the digital world, but they need educators modeling positive habits —
+        from data security and privacy to file management. Digital tools open up
+        entirely new modes of thinking and working, and students must be
+        empowered with them to be ready for the future.
+      </p>
+
+      <h2>System of Badges</h2>
+      <hr class="accent-rule" />
+      <p>
+        The curriculum relies on a system of digital badges to measure student
+        progress, allow open learning pathways, and encourage
+        self-documentation. Badges can be implemented on open platforms such as
+        Badgr and Mozilla's Open Badge Infrastructure. Research by Mozilla and
+        ISTE among others has shown badges to be an effective, evidence-based
+        system for measuring student performance based on actions taken, not
+        facts memorized — important for the subjective topic of design. As
+        students progress they self-document and "apply" for badges, so teachers
+        can measure and reward progress in skills even when efforts toward a
+        finished product fail or are abandoned: there is true, measurable
+        educational value in the exploration and drafting phases of design.
+      </p>
+      <p>
+        The full badge matrix — 18 core design-thinking skills and the maker
+        skill tiers — is presented on the
+        <a href="/maker-badges/">Maker Badges</a> page.
+      </p>
+
+    </div>
+  </section>
+
+</BaseLayout>
+
+<script>
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const text = (btn as HTMLElement).dataset.copy ?? '';
+      await navigator.clipboard.writeText(text);
+      btn.textContent = 'Copied ✓';
+      setTimeout(() => { btn.textContent = 'Copy'; }, 2000);
+    });
+  });
+</script>
+
+<style>
+  .hero--short { padding-block: var(--space-lg); }
+  .pub-kicker {
+    font-size: var(--text-sm);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-yellow);
+    margin-bottom: var(--space-xs);
+  }
+
+  .pub-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-md);
+  }
+  .pub-meta > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-gray-light);
+    border-left: 4px solid var(--color-yellow);
+    border-radius: var(--radius);
+    color: var(--color-dark);
+  }
+  .pub-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #888;
+  }
+  .pub-actions { display: flex; gap: var(--space-sm); flex-wrap: wrap; }
+
+  .cite-block {
+    background: var(--color-white);
+    border-radius: var(--radius);
+    padding: var(--space-md);
+    margin-top: var(--space-sm);
+  }
+  .cite-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-xs);
+  }
+  .cite-head h3 {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-dark);
+  }
+  .cite-text {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--color-dark);
+    margin: 0;
+    /* hanging indent, as the citation would appear in a reference list */
+    padding-left: 2rem;
+    text-indent: -2rem;
+    user-select: all;
+  }
+  .copy-btn {
+    background: var(--color-dark);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--radius);
+    padding: 0.35rem 0.9rem;
+    font-size: var(--text-sm);
+    cursor: pointer;
+  }
+  .copy-btn:hover { background: var(--color-teal); }
+
+  .pub-body { max-width: 75ch; }
+  .pub-body h2 { margin-top: var(--space-lg); }
+  .pub-body h3 { margin-top: var(--space-md); margin-bottom: var(--space-xs); }
+  .pub-body p { margin-bottom: var(--space-sm); }
+  .pub-abstract {
+    font-style: italic;
+    color: #444;
+  }
+</style>

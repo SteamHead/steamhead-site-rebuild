@@ -1,0 +1,234 @@
+{
+ "designThinking": [
+  {
+   "skill": "Share",
+   "tiers": [
+    {
+     "name": "Workshop",
+     "desc": "Teach a real class on how to build your project!"
+    },
+    {
+     "name": "Service",
+     "desc": "Install or implement your project in a real world location"
+    },
+    {
+     "name": "Digital Citizen Post",
+     "desc": "Write a article and post a photo about your pr0ject."
+    }
+   ]
+  },
+  {
+   "skill": "Empathize",
+   "tiers": [
+    {
+     "name": "Interviews",
+     "desc": "Interview people to understand who they are, what they do, why, and in what environment"
+    },
+    {
+     "name": "Field Research",
+     "desc": "Visit real world locations and record data on your users"
+    },
+    {
+     "name": "Empowered Searcher",
+     "desc": "Find the history of your audience to understand their culture and environment"
+    }
+   ]
+  },
+  {
+   "skill": "Define",
+   "tiers": [
+    {
+     "name": "User Stories",
+     "desc": "Write or record stories of people having problems that you want to address, using an AGILE format"
+    },
+    {
+     "name": "Roleplay",
+     "desc": "Using simple props, express your insights into the situations and needs of your subjects"
+    },
+    {
+     "name": "Mind Map",
+     "desc": "Create a wall size map, showing people, problems, and solutions"
+    }
+   ]
+  },
+  {
+   "skill": "Ideate",
+   "tiers": [
+    {
+     "name": "Sketching",
+     "desc": "Drawing rough drafts of  solutions you think of; only good enough  to convey general meanings."
+    },
+    {
+     "name": "Story Boarding",
+     "desc": "Create a comic book illustrating solutions you would like your subjects to have"
+    },
+    {
+     "name": "Brain Storm",
+     "desc": "Discuss and record 5-10 ideas for designs, from typical to wild."
+    }
+   ]
+  },
+  {
+   "skill": "Prototype",
+   "tiers": [
+    {
+     "name": "Work Plan",
+     "desc": "From setup and cleanup tasklists, DT boards, or even full business plans, create a plan!"
+    },
+    {
+     "name": "Physical Prototype",
+     "desc": "Create a model of your design (skill ideas below). Prototypes are not meant to be fully functional, but rather to show some of your ideas in a physical form."
+    },
+    {
+     "name": "Digital Prototype",
+     "desc": "Create a digital model of your design. Show your ideas in visual form instead of relying on live communication to express details."
+    }
+   ]
+  },
+  {
+   "skill": "Testing",
+   "tiers": [
+    {
+     "name": "Gather Feedback",
+     "desc": "Get constructive feedback from others, via a presentation, sharing experience, or series of demonstrations"
+    },
+    {
+     "name": "Reflection",
+     "desc": "To better understand others, reflect upon your own purpose, biases, viewpoint, and goals in an essay."
+    },
+    {
+     "name": "Beta Test",
+     "desc": "Use your prototype in a controlled situation, but with real users and environments"
+    }
+   ]
+  }
+ ],
+ "makerSkills": [
+  {
+   "skill": "Hand Crafts",
+   "tiers": [
+    {
+     "name": "Hand Tools",
+     "desc": "Hand drills, hand saws, screw drivers, pliers\u2026 and use them on wood alongside other materials!"
+    },
+    {
+     "name": "Block Circuits",
+     "desc": "Build a guided project, open project, and solo invention using Little Bits or similar"
+    },
+    {
+     "name": "Card Craft",
+     "desc": "Manipulating cardboard, foam core, and card stock is a core prototyping skill! Start simple, and keep adding projects (forever)"
+    },
+    {
+     "name": "Stitch Craft",
+     "desc": "Measure, outline, cut, sew, dye and print onto fabric to create softgoods!"
+    }
+   ]
+  },
+  {
+   "skill": "Power Tools",
+   "tiers": [
+    {
+     "name": "Power Carpentry",
+     "desc": "Create simple projects using electric tools! Drills, sanders, saws? Be careful!"
+    },
+    {
+     "name": "Power Stitch Craft",
+     "desc": "Electric sewing machines are fun! Make tool belts, pillow, etc"
+    },
+    {
+     "name": "Electro Craft",
+     "desc": "Solder wires, use heat guns, and power supplies while making projects"
+    },
+    {
+     "name": "Metal Working",
+     "desc": "Welding, cutting, melting and manipulating metals!"
+    }
+   ]
+  },
+  {
+   "skill": "Automated Fabrication",
+   "tiers": [
+    {
+     "name": "Simple Printers",
+     "desc": "Give students control! Large scale, tiled, new media. Responsible and effective use of this tool is where to start."
+    },
+    {
+     "name": "Laser Cutter",
+     "desc": "Start off downloading premade design files and using the machine, later design your own!"
+    },
+    {
+     "name": "3D Printer",
+     "desc": "Start off downloading premade design files and using the machine, later design your own!"
+    },
+    {
+     "name": "CNC Drill",
+     "desc": "Utilize computer-controlled drilling machines to create precise and complex holes and shapes in materials like wood and metal"
+    }
+   ]
+  },
+  {
+   "skill": "Circuit Design",
+   "tiers": [
+    {
+     "name": "Simple PCBs",
+     "desc": "voice recorder beatbox, electronic sythesizer, BIY arduino board"
+    },
+    {
+     "name": "Microprocessors",
+     "desc": "microbit, arduino, rasberry pi, jet nano, edison"
+    },
+    {
+     "name": "Electronic Sensors",
+     "desc": "Light, motion, and sound to start, more sensors possible"
+    },
+    {
+     "name": "Breadboards",
+     "desc": "Custom circuit design"
+    }
+   ]
+  },
+  {
+   "skill": "Media",
+   "tiers": [
+    {
+     "name": "Photo Editing",
+     "desc": ""
+    },
+    {
+     "name": "Vector Artwork",
+     "desc": "Use 2D vector editing programs to create designs including art, infographics, and design elements."
+    },
+    {
+     "name": "3D Modeling",
+     "desc": "3D drawing of a physical model, using measurements"
+    },
+    {
+     "name": "Videography",
+     "desc": "Shoot a video to communicate something creatively"
+    }
+   ]
+  },
+  {
+   "skill": "Coding",
+   "tiers": [
+    {
+     "name": "Hacking",
+     "desc": "Download and modify programs or media"
+    },
+    {
+     "name": "App Design",
+     "desc": "Design a game or application"
+    },
+    {
+     "name": "Robotics Coding",
+     "desc": "Use sensors and actuators to create cars, robots, machines"
+    },
+    {
+     "name": "iOT App Design",
+     "desc": "Design a game or application that sends and receives data over the internet"
+    }
+   ]
+  }
+ ]
+}
