@@ -1,0 +1,218 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import badges from '../data/badges.json';
+
+/* /maker-badges/ — preserved URL from the old site (it linked out to a
+   Google Sheet; this renders the badge system natively). Data extracted
+   from "Badges Design Immersion Web Post.xlsx" into src/data/badges.json. */
+
+const pathwayOf = (skill: string) =>
+  skill === 'Share' ? 'Heart' :
+  ['Empathize', 'Define', 'Ideate'].includes(skill) ? 'Head' : 'Hand';
+const toolGroupOf = (skill: string) =>
+  ['Hand Crafts', 'Power Tools', 'Automated Fabrication'].includes(skill)
+    ? 'Fabrication Tools' : 'Digital Tools';
+---
+
+<BaseLayout
+  title="Maker Badges — Design Immersion Skill Badges"
+  description="SteamHead's full system of Maker Badges: 18 core design-thinking skills across Heart, Head, and Hand, plus fabrication and digital tool skill tiers. CC BY-NC-SA."
+>
+
+  <section class="hero hero--short" aria-label="Maker Badges">
+    <div class="container hero__content">
+      <h1>Maker Badges</h1>
+      <p class="hero__tagline">
+        The Design Immersion skill badges — how we measure learning by actions
+        taken, not facts memorized.
+      </p>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       INTRO
+       ===================================================================== -->
+  <section class="section" aria-label="About the badges">
+    <div class="container">
+      <p>
+        Here is our full system of Maker Badges! Badges are evidence-based,
+        co-owned artifacts: students self-document their work and "apply" for
+        badges, so teachers can measure and reward progress in skills even while
+        efforts toward a finished product fail or are abandoned. The badges
+        implement the learning pathways of the
+        <a href="/design-immersion-overview/">SteamHead Design Immersion Curriculum</a>.
+      </p>
+      <p>
+        This is a public version and we welcome edits and discussion — save your
+        own copy, modify as you like, or contribute your changes back to us.
+      </p>
+      <div class="badge-actions">
+        <a href="/downloads/SteamHead_Maker_Badges_Skill_Track.xlsx" class="btn btn--primary" download>
+          Download the Badge &amp; Skill Track Spreadsheet
+        </a>
+        <a href="/design-immersion-overview/" class="btn btn--outline">Read the Curriculum</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       DESIGN THINKING BADGES — Heart / Head / Hand
+       ===================================================================== -->
+  <section class="section section--alt" aria-label="Design thinking badges">
+    <div class="container">
+      <h2>Design Thinking Skills — Heart · Head · Hand</h2>
+      <hr class="accent-rule" />
+      <p class="mt-md">
+        Six core skills, each with three badge tiers. <strong>Heart</strong> skills
+        connect projects to real people; <strong>Head</strong> skills define and
+        develop ideas; <strong>Hand</strong> skills bring them to life and test them.
+      </p>
+      <div class="badge-grid mt-md">
+        {badges.designThinking.map(col => (
+          <div class="badge-col">
+            <span class={`badge-pathway badge-pathway--${pathwayOf(col.skill).toLowerCase()}`}>
+              {pathwayOf(col.skill)}
+            </span>
+            <h3>{col.skill}</h3>
+            {col.tiers.map((tier, i) => (
+              <div class="badge-tier">
+                <span class="badge-tier__level" aria-label={`Tier ${i + 1}`}>{i + 1}</span>
+                <div>
+                  <h4>{tier.name}</h4>
+                  <p>{tier.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       MAKER SKILL BADGES — Fabrication / Digital tools
+       ===================================================================== -->
+  <section class="section" aria-label="Maker skill badges">
+    <div class="container">
+      <h2>Maker Skills — Fabrication &amp; Digital Tools</h2>
+      <hr class="accent-rule" />
+      <p class="mt-md">
+        Hands-on tool skills in escalating tiers, from hand tools and card craft
+        through CNC machines, microprocessors, and IoT app design.
+      </p>
+      <div class="badge-grid mt-md">
+        {badges.makerSkills.map(col => (
+          <div class="badge-col">
+            <span class={`badge-pathway badge-pathway--${toolGroupOf(col.skill) === 'Fabrication Tools' ? 'fab' : 'digital'}`}>
+              {toolGroupOf(col.skill)}
+            </span>
+            <h3>{col.skill}</h3>
+            {col.tiers.map((tier, i) => (
+              <div class="badge-tier">
+                <span class="badge-tier__level" aria-label={`Tier ${i + 1}`}>{i + 1}</span>
+                <div>
+                  <h4>{tier.name}</h4>
+                  <p>{tier.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SKILL TRACK NOTE
+       ===================================================================== -->
+  <section class="section section--alt" aria-label="Skill track">
+    <div class="container">
+      <h2>The Five-Level Skill Track</h2>
+      <hr class="accent-rule" />
+      <p class="mt-md">
+        Beyond the badge tiers, the downloadable spreadsheet includes a full
+        skill track that grades 36 core skills across five levels — Introductory,
+        Early, Preparatory, Intermediate, and Advanced — to help teachers place
+        badge work per grade, per project, per class, or even per individual
+        student.
+      </p>
+      <p>
+        Licensed
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>,
+        like the curriculum itself. If you build something with it, we'd love to
+        hear about it — <a href="/contact-us/">get in touch</a>.
+      </p>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .hero--short { padding-block: var(--space-lg); }
+
+  .badge-actions { display: flex; gap: var(--space-sm); flex-wrap: wrap; margin-top: var(--space-md); }
+
+  .badge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-md);
+  }
+  .badge-col {
+    background: var(--color-white);
+    border-radius: var(--radius);
+    padding: var(--space-md);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  }
+  .badge-col h3 {
+    color: var(--color-dark);
+    margin: 0.3rem 0 var(--space-sm);
+  }
+  .badge-pathway {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    background: var(--color-gray-light);
+    color: #666;
+  }
+  .badge-pathway--heart   { background: #fde8e8; color: #b0413e; }
+  .badge-pathway--head    { background: #e8f0fd; color: #2b5aa7; }
+  .badge-pathway--hand    { background: #e9f7ec; color: #2c7a3f; }
+  .badge-pathway--fab     { background: #fdf3e0; color: #9a6a12; }
+  .badge-pathway--digital { background: #efe8fd; color: #5f3ba7; }
+
+  .badge-tier {
+    display: flex;
+    gap: var(--space-sm);
+    align-items: flex-start;
+    padding-block: var(--space-xs);
+    border-top: 1px solid #eee;
+  }
+  .badge-tier__level {
+    flex-shrink: 0;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    background: var(--color-yellow);
+    color: var(--color-black);
+    font-weight: 700;
+    font-size: var(--text-sm);
+    display: grid;
+    place-items: center;
+    margin-top: 0.15rem;
+  }
+  .badge-tier h4 {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: 700;
+    color: var(--color-dark);
+    margin: 0;
+  }
+  .badge-tier p {
+    font-size: var(--text-sm);
+    color: #666;
+    margin: 0.15rem 0 0;
+  }
+</style>
