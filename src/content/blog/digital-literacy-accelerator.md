@@ -8,10 +8,10 @@ categories:
   - "James"
   - "MakeFashion Edu"
 image: "/images/2021/11/officeofedtech.png"
-imageAlt: "Digital Literacy Accelerator"
+imageAlt: "US Department of Education Office of Educational Technology logo"
 ---
 
-![](/images/2021/11/officeofedtech.png)
+![US Department of Education Office of Educational Technology logo](/images/2021/11/officeofedtech.png)
 
 SteamHead has been accepted to the Digital Learning Accelerator which is supported by the US Department of Education. It is a 4 month program, and we have three educators that will share and develop the MakeFashion Edu program's focus on advocacy. In a MakeFashion Edu season, students identify issues that they personally care about, **research** them, and then build fashion tech outfits to represent and call attention to their causes.
 

@@ -7,7 +7,7 @@ program: general
 categories:
   - "Events"
 image: "/images/2019/03/aangad-2.jpg"
-imageAlt: "Offline Kickstarter at SAIS"
+imageAlt: "Two students review funding charts on a project poster at a school fair"
 ---
 
 https://www.youtube.com/watch?v=qlwKQ-b74io

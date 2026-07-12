@@ -9,7 +9,7 @@ categories:
   - "MakeFashion Edu"
   - "Maker Education"
 image: "/images/2019/07/james-teach.jpg"
-imageAlt: "Fashion Tech Teaching Plan"
+imageAlt: "Video thumbnail titled 'Fashion Tech Teaching Plan by SteamHead' with James presenting near a costume"
 ---
 
 https://youtu.be/BeacBNzfWR0

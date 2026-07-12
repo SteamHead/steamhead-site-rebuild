@@ -7,7 +7,7 @@ program: general
 categories:
   - "Great Projects"
 image: "/images/2019/10/20191005_182233.jpg"
-imageAlt: "AR Sandbox linux setup"
+imageAlt: "Two makers troubleshooting laptops during a software setup session"
 ---
 
 Local Maker and Hacker Hardi Huang is setting up a linux laptop for our upcoming AR Sandbox, set to be installed at a K-12 school. Hardi works at MG Space and does this stuff all day for a lot of hours, but still finds it fun to come to SteamHead and put things together! #HackerLife

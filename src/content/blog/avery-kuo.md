@@ -7,7 +7,7 @@ program: general
 categories:
   - "Great People"
 image: "/images/2021/11/averykuo.jpg"
-imageAlt: "Avery Kuo"
+imageAlt: "Avery Kuo smiling on a marble staircase"
 ---
 
 Avery Kuo is a high school senior (Class of 2022) from Pleasanton, California. One of her close family members was recently diagnosed with breast cancer. Having witnessed the impacts of cancer personally, Avery aims to use her strengths, computer science and mathematics, to better women’s health.

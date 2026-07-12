@@ -8,7 +8,7 @@ categories:
   - "Great Projects"
   - "Paul"
 image: "/images/2019/06/thehtta2019residency.jpg"
-imageAlt: "The HTTA 2019 Residency"
+imageAlt: "Paul working at a cluttered workbench in the SteamHead workshop"
 ---
 
 During the three week SteamHead residency, Paul spent many happy working hours on some projects in the SteamHead main work room.

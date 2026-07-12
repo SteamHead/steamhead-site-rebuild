@@ -7,7 +7,7 @@ program: general
 categories:
   - "STEAM"
 image: "/images/2018/12/projects-on-table.jpg"
-imageAlt: "In-Depth Look at Our 3D Printing Class at Dongwan Elementary"
+imageAlt: "3D-printed rooster, candle holders, and shapes displayed on a workbench"
 ---
 
 https://youtu.be/cmgabwXLXjw
@@ -18,4 +18,4 @@ This year we got a grant from the Shekou Community Foundation to expand our work
 
 We visited Luke's class in November to document the class and interview Luke and our school liaison Jane Liang. Then we caught up with James and the school's technology teacher Mr. Chen at the Nanshan School Maker Faire to see the kids in action.
 
-![](/images/2018/12/projects-on-table.jpg) ![](/images/2018/12/everyone-crowded-around-printers.jpg) ![](/images/2018/12/kids-at-faire-interview-scaled.jpg) ![](/images/2018/12/luke-working-with-kids.jpg) ![](/images/2018/12/everyone-waive.jpg)
+![3D-printed rooster, candle holders, and shapes displayed on a workbench](/images/2018/12/projects-on-table.jpg) ![Students and a teacher crowded around a desktop 3D printer](/images/2018/12/everyone-crowded-around-printers.jpg) ![Two students smiling beside a 3D printer and printed models](/images/2018/12/kids-at-faire-interview-scaled.jpg) ![Teacher leaning over students at computers running 3D design software](/images/2018/12/luke-working-with-kids.jpg) ![Group of students and teachers waving at a Maker Faire booth](/images/2018/12/everyone-waive.jpg)

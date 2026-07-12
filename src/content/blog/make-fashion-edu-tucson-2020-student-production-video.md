@@ -8,7 +8,7 @@ categories:
   - "Great Projects"
   - "MakeFashion Edu"
 image: "/images/2020/08/tucson_2020_thumbnail-1-e1600804432700.jpg"
-imageAlt: "Make Fashion Edu Tucson 2020 Student Production Video"
+imageAlt: "Student models in illuminated costumes on runway, titled 'Tucson 2020 Highlights'"
 ---
 
 Gavin, SteamHead’s Californian intern and current middle school student, edited and cut together this year’s MakeFashion Edu video! This is our first student-led production, with students both filming and editing. Here are some words from Gavin on the project:  

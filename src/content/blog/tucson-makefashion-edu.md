@@ -7,7 +7,7 @@ program: makefashion-edu
 categories:
   - "MakeFashion Edu"
 image: "/images/2019/02/Shaw-1016965.jpg"
-imageAlt: "Tucson MakeFashion Edu"
+imageAlt: "Two students in illuminated sugar skull masks and LED costumes"
 ---
 
 MakeFashion Edu has landed with a flash in Tucson, Arizona! Check out this video of the runway show we just finished.
@@ -26,4 +26,4 @@ https://www.youtube.com/watch?v=N12ziwUm8cE
 
 Want to bring a program like this to your school district, or even just your classroom? Contact the team at [http://www.makefashion.ca/edu/home/contact/](http://www.makefashion.ca/edu/home/contact/)
 
-![](/images/2019/02/20190124_161325-e1549307378249.jpg) ![](/images/2019/02/Shaw-1027656.jpg) ![](/images/2019/02/Shaw-1016965.jpg)
+![Two students backstage before a MakeFashion Edu runway show](/images/2019/02/20190124_161325-e1549307378249.jpg) ![Two adults and a student model glowing LED top hats and headbands](/images/2019/02/Shaw-1027656.jpg) ![Two students in illuminated sugar skull masks and LED costumes](/images/2019/02/Shaw-1016965.jpg)

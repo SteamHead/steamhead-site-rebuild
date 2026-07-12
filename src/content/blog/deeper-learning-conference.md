@@ -9,10 +9,10 @@ categories:
   - "Maker Education"
   - "Neighborhood Earth"
 image: "/images/2021/03/index-screenshot.jpg"
-imageAlt: "Deeper Learning Conference"
+imageAlt: "Virtual reality gallery dome displaying MakeFashion Edu project images"
 ---
 
-![](/images/2021/03/DL-HUB-LOGO-WHITE-EDGES-300x121.jpg)
+![Deeper Learning Hub logo](/images/2021/03/DL-HUB-LOGO-WHITE-EDGES-300x121.jpg)
 
 ###### **Storytelling through Fashion Technology with MakeFashion Edu**
 

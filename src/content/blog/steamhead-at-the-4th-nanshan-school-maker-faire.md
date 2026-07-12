@@ -7,7 +7,7 @@ program: general
 categories:
   - "Events"
 image: "/images/2019/01/Makerfaire-thumb-4x3.jpg"
-imageAlt: "SteamHead at the 4th Nanshan School Maker Faire"
+imageAlt: "Aerial view of Design Society building with Nanshan School Maker Faire banner"
 ---
 
 https://youtu.be/oYqKO9Dv4Nk
@@ -26,4 +26,4 @@ Design Society at [http://www.designsociety.cn/en](http://www.designsociety.cn/e
 
 SAIS - Shenzhen American International School [http://www.szsais.org/](<http://www.szsais.org/ >)
 
-![](/images/2019/01/RC-robot.jpg)![](/images/2019/01/girl-at-microbit-cars.jpg) ![](/images/2019/01/crowd-from-above.jpg) ![](/images/2019/01/Design-Society-Seaworld-Arts-Center.jpg) ![](/images/2019/01/kid-at-3d-modeling-laptop-dongwan-scaled.jpg) ![](/images/2019/01/nerdy-derby-1.jpg)
+![A student drives a wheeled robot with a remote control at a maker faire booth](/images/2019/01/RC-robot.jpg)![A young student watches a micro:bit-controlled car demo](/images/2019/01/girl-at-microbit-cars.jpg) ![Aerial view of crowds browsing maker faire exhibit tables](/images/2019/01/crowd-from-above.jpg) ![Exterior of the Design Society Seaworld Arts and Culture Center building](/images/2019/01/Design-Society-Seaworld-Arts-Center.jpg) ![A student sculpts a 3D model on a laptop at an outdoor table](/images/2019/01/kid-at-3d-modeling-laptop-dongwan-scaled.jpg) ![A man and young student pose beside a wooden nerdy derby ramp](/images/2019/01/nerdy-derby-1.jpg)

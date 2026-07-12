@@ -7,10 +7,10 @@ program: general
 categories:
   - "SteamHead Productions"
 image: "/images/2021/10/Screenshot-2021-10-20-at-8.23.32-pm-1024x501.png"
-imageAlt: "What's New in steamhead.space"
+imageAlt: "Screenshot of the redesigned SteamHead homepage with a mission statement and lit sculpture"
 ---
 
-![](/images/2021/10/Screenshot-2021-10-20-at-8.23.32-pm-1024x501.png)
+![Screenshot of the redesigned SteamHead homepage with a mission statement and lit sculpture](/images/2021/10/Screenshot-2021-10-20-at-8.23.32-pm-1024x501.png)
 
 After months of brainstorming and hard work, we are very excited to announce the launch of the newly designed Steamhead website!
 

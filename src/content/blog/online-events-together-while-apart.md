@@ -10,7 +10,7 @@ categories:
   - "Neighborhood Earth"
   - "SteamHead Spaces"
 image: "/images/2023/01/20200922_052346489_iOS-2-scaled.jpg"
-imageAlt: "Online Events: Together While Apart"
+imageAlt: "Dual monitors show a video call and MakeFashion footage being edited"
 ---
 
 Written by ChatGPT, Prompt/Edit by Carrie
@@ -27,7 +27,7 @@ Through this experience, we have learned a lot about what works well in a virtua
 
 As the world reopens, we are excited to meet in person again, but we are also grateful for the new remote tools and skills we have acquired. We are looking forward to seeing what new opportunities and connections will come from this experience, and we would like to give a shoutout to all the organizers, presenters, and attendees who have made it possible.
 
-![](/images/2023/01/covid-timeline-6.png) ![](/images/2023/01/Screenshot-109.png)![](/images/2023/01/20200916_213312793_iOS.jpg)![](/images/2023/01/Screenshot-89.jpg)
+![Hexagon timeline chart of online events from July 2020 to December 2022](/images/2023/01/covid-timeline-6.png) ![Mentimeter word cloud responses to the prompt Community to me is](/images/2023/01/Screenshot-109.png)![A man takes a selfie with teammates recording a livestream in front of a green screen](/images/2023/01/20200916_213312793_iOS.jpg)![Screenshot of a Mozilla Hubs virtual gallery showing MakeFashion Edu garment photos](/images/2023/01/Screenshot-89.jpg)
 
 -   Hackers on Planet Earth, New York, NY - [https://hope.net/](https://hope.net/)
 -   Make: Maker Kits, Bay Area, CA  - [https://makezine.com/article/maker-news/plan-c-live-educational-kits/](https://makezine.com/article/maker-news/plan-c-live-educational-kits/)

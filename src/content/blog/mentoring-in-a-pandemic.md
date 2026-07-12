@@ -8,7 +8,7 @@ categories:
   - "JamesEd"
   - "Maker Education"
 image: "/images/2020/05/coding-isometric-12.png"
-imageAlt: "Mentoring in a Pandemic"
+imageAlt: "Isometric illustration of coding and online learning icons"
 ---
 
 ## Online Learning Support: Technology Integration during the 2020 Pandemic
@@ -17,7 +17,7 @@ During the unexpected Online Learning event of 2020, the Technology Integration 
 
 It went through several revisions, and often served as a starting position for support rather than a end. Here we share an overview, lessons learned, and advice for future projects.
 
-![](/images/2020/05/coding-isometric-12.png)
+![Isometric illustration of coding and online learning icons](/images/2020/05/coding-isometric-12.png)
 
 ## Topics on our Site
 
@@ -47,7 +47,7 @@ https://www.youtube.com/watch?v=CGpf1ot6kU4
 
 https://www.youtube.com/watch?v=9j4sQDLZrss
 
-![](/images/2020/05/Screen-Shot-2020-05-11-at-9.19.37-PM.jpg) ![](/images/2020/05/Screen-Shot-2020-05-11-at-9.17.41-PM.png)![](/images/2020/05/Screen-Shot-2020-05-11-at-9.23.01-PM.png)
+![Word document showing PYP online learning guidelines with a video call thumbnail](/images/2020/05/Screen-Shot-2020-05-11-at-9.19.37-PM.jpg) ![Online learning schedule table with a video play button overlay](/images/2020/05/Screen-Shot-2020-05-11-at-9.17.41-PM.png)![Four colored action button icons for close, undo, redo, and confirm](/images/2020/05/Screen-Shot-2020-05-11-at-9.23.01-PM.png)
 
 ## What the ISNS Community Said
 
@@ -79,8 +79,8 @@ Though much of our support was live, we also created guides and curated graphics
 
 Together we shared out to the ISNS leadership team to determine the best conferencing software for our students, and then broke out as individuals to inform our teams about the Learning Management software best for different situations. ManageBac, SeeSaw, and OneNote were supported by Lori, Jennifer, and James separately to give teacher's the best software for their situation.
 
-![](/images/2020/05/Screen-Shot-2020-05-11-at-9.29.42-PM.jpg)
+![Website columns showing a Zoom security infographic, teacher illustration, and OneNote guide](/images/2020/05/Screen-Shot-2020-05-11-at-9.29.42-PM.jpg)
 
 In addition to selecting apps and training teachers, students, and sometimes parents, we also occasionally helped with custom lesson plans that integrated these technologies.
 
-![](/images/2020/05/Screen-Shot-2020-05-11-at-9.29.03-PM.jpg)
+![Ed Tech Resources webpage listing library, video editing, and SeeSaw guides](/images/2020/05/Screen-Shot-2020-05-11-at-9.29.03-PM.jpg)

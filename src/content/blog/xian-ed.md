@@ -9,7 +9,7 @@ categories:
   - "Great Projects"
   - "Paul"
 image: "/images/2019/12/image001.jpg"
-imageAlt: "Xi'an Makers Education Scene"
+imageAlt: "LED screen showing a video greeting outside a school building in Xi'an"
 ---
 
 **By Diane Kern Hamilton**
@@ -20,11 +20,11 @@ I was travelling with the group: Hackers Trip Through China 2019, or HTTC for sh
 
 Our visit began with Feng Xi Middle School, where we were greeted like rock stars! We didn't know what to expect, but we certainly didn't expect that. We came together with students and teachers in the school's theatre for introductions and speeches. The message was clear: STEAM is the starting place for Makers and Makers are changing the world.
 
-![](/images/2019/12/image001-300x195.jpg) Figure 1: None of us were prepared for this greeting! ![](/images/2019/12/image002-1-300x131.jpg) Figure 2: Meeting the executives at Feng Xi Middle School
+![Students welcoming visitors with a large video screen and card displays](/images/2019/12/image001-300x195.jpg) Figure 1: None of us were prepared for this greeting! ![Delegation meeting with school administrators around a conference table](/images/2019/12/image002-1-300x131.jpg) Figure 2: Meeting the executives at Feng Xi Middle School
 
 From there, we were split into groups for some hands on education. I led a group of students from 8-10 years olds in a class I called Up-cycling a Tee Shirt. The goal was to use scissors, a stapler, felt pens and found objects to personalize a plain white tee shirt. The students were quite enthusiastic about the task at hand and happily went about creating their own work of art. The adults in the room were a bit more reticent. But in the end, each group produced a shirt that told their story and everyone, adults included, happily showed off their work.
 
-![](/images/2019/12/image003-1-300x185.jpg) Figure 3: Drone workshop ![](/images/2019/12/image004-300x282.jpg) Figure 4: Learning Chinese Caligraphy
+![Instructor leading a workshop discussion with seated students](/images/2019/12/image003-1-300x185.jpg) Figure 3: Drone workshop ![Visitor examining an ink stone at a calligraphy demonstration](/images/2019/12/image004-300x282.jpg) Figure 4: Learning Chinese Caligraphy
 
 This itinerary was the model for our many school visits over the next nine days. In some instances we visited more than three schools a day. The speeches varied from school to school, dependent upon the school's focus. Each, however, wanted to hear from our tour leader, Mitch Altman and his experiences as an international Hacker. Other presenters included:
 
@@ -49,4 +49,4 @@ Throughout the course of our days in Xi'an we were busy answering questions and 
 
 I have had one final thought about what I learned in Xi'an: If we all took care to be curious, creative and collaborative at school, at work and at play we would be living in the best Maker Space in the world: the World.
 
-![](/images/2019/12/image005-300x172.jpg) Figure 5: The Wheels on the Bus Go Round and Round is fun in any language ![](/images/2019/12/image006-300x199.jpg) Figure 6: Tee Shirt Hacking ![](/images/2019/12/image007-300x233.jpg) Figure 7: Our guide, Mitch Altman (left) leading a recycling workshop
+![Children holding hands in a circle game with a Wheels on the Bus slide showing](/images/2019/12/image005-300x172.jpg) Figure 5: The Wheels on the Bus Go Round and Round is fun in any language ![Students decorating tee shirts with craft supplies at a table](/images/2019/12/image006-300x199.jpg) Figure 6: Tee Shirt Hacking ![Mitch Altman leading a recycled bottle craft workshop with students](/images/2019/12/image007-300x233.jpg) Figure 7: Our guide, Mitch Altman (left) leading a recycling workshop

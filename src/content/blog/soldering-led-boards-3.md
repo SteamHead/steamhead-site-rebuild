@@ -8,10 +8,10 @@ categories:
   - "Great Projects"
   - "Paul"
 image: "/images/2019/07/image001-8.jpg"
-imageAlt: "Soldering LED Boards"
+imageAlt: "Paul soldering a circuit board, smiling at the camera"
 ---
 
-![](/images/2019/07/image001-8.jpg) ![](/images/2019/07/image002-8.jpg)
+![Paul soldering a circuit board, smiling at the camera](/images/2019/07/image001-8.jpg) ![Close-up of a round green LED breakout circuit board](/images/2019/07/image002-8.jpg)
 
 Paul was busy working on a personal project at SteamHead one morning when James called up saying that he would be over with a gentleman called Fisherman to visit the space. He presumed it was to show him around the space and explain what happens at SteamHead.
 

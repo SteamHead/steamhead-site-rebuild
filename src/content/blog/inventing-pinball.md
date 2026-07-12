@@ -9,7 +9,7 @@ categories:
   - "Hardi"
   - "SteamHead Spaces"
 image: "/images/2021/03/微信图片_20210302092407-768x576-1.jpg"
-imageAlt: "Inventing Pinball"
+imageAlt: "Handmade pinball machine board with wiring and an LED display reading 'Full'"
 ---
 
 Hardi Huang and company created their own pinball machine from scratch! Check out Hardi's blog for the details on the electronics and circuit design: [http://hardihuang.info/blog/2021/03/02/pinball-machine-demo/](http://hardihuang.info/blog/2021/03/02/pinball-machine-demo/)
