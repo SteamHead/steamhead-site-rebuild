@@ -205,7 +205,7 @@ Students saw that complex systems require multiple roles — coding, hardware, m
 
 ## Video Walkthrough
 
-https://steamhead.space/wp-content/uploads/2026/03/output2.mp4
+https://youtu.be/CZjXuXmYZhU
 
 I record a short explanation video for students whenever possible. It serves two purposes:  
 

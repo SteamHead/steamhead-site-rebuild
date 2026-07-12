@@ -16,8 +16,8 @@ Hardi Huang and company created their own pinball machine from scratch! Check ou
 
 One mother of the students involved with this project called me with thanks for SteamHead in providing a place where her son could be expressive, challenged, and empathetic. Where else besides a makerspace can you find those skills in such high demand, and a community that cheers each other on to exhibit them?
 
-https://steamhead.space/wp-content/uploads/2021/03/1515.mp4
+https://youtu.be/w2pBxiqgDc4
 
-https://steamhead.space/wp-content/uploads/2021/03/1516.mp4
+https://youtu.be/wCHlfRJJAww
 
-https://steamhead.space/wp-content/uploads/2021/03/1514.mp4
+https://youtu.be/BN1y0XdOHfA

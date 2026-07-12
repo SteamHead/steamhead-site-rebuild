@@ -27,7 +27,7 @@ heritage_text: >
   and SteamHead, our maker-education nonprofit.
 
 
-  The story starts at the 2017 Shenzhen Maker Faire, organized by Erin Pan and
+  The story starts at the 2015 Shenzhen Maker Faire, organized by Erin Pan and
   Violet Su. Carrie Leung and James Simpson — looking, by all accounts, like
   two confused teachers peeking around — were spotted by Kevin Lau, co-founder
   and CEO of Chaihuo Makerspace, who asked them a few questions and then

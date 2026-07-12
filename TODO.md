@@ -5,16 +5,13 @@ the items teammates need visibility on.
 
 ## Waiting on Blake
 
-- [ ] **The 5 missing videos** — upload to the SteamHead Productions YouTube
-      channel, then hand the YouTube URLs to Claude (posts auto-embed
-      YouTube links). Source files, by original name:
-      1. `1514.mp4` (Mar 2021) — MG Space Cardboard Engineering post
-      2. `1515.mp4` (Mar 2021) — MG Space Cardboard Engineering post
-      3. `1516.mp4` (Mar 2021) — Inventing Pinball post
-      4. `03-未来城市-复盘-双语字幕-low… .mov` (Jan 2025) — bilingual-subtitle
-         recap video
-      5. `output2.mp4` (Mar 2026, 96 MB) — Snow Drop Grade 2 post
-      Must be done before domain cutover (their old-site URLs die then).
+- [ ] **The last missing video** — 4 of 5 are on YouTube and embedded
+      (Inventing Pinball ×3, Snow Drop ×1). Remaining: the bilingual-subtitle
+      class recap `.mov` in the MG Space Cardboard Engineering post — its
+      old-site URL already 404s, so the file is gone from the server. It's
+      actually three concatenated recap videos (01 Pen Holder Project /
+      02 Future Robots / 03 Future City, 复盘-双语字幕-low). Likely sources:
+      the DingTalk doc linked in that post, or Hardi Huang (MG Space).
 ## Queued work
 
 - [ ] **Alt-text pass** (~300 migrated images) — GitHub issue #8. Next up.
