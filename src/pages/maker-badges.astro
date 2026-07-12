@@ -161,22 +161,24 @@ const toolGroupOf = (skill: string) =>
     background: var(--color-white);
     border-radius: var(--radius);
     padding: var(--space-md);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    box-shadow: var(--shadow-card);
   }
   .badge-col h3 {
     color: var(--color-dark);
     margin: 0.3rem 0 var(--space-sm);
   }
   .badge-pathway {
-    font-size: 0.68rem;
+    font-size: var(--text-xs);
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     padding: 0.15rem 0.5rem;
     border-radius: 999px;
     background: var(--color-gray-light);
-    color: #666;
+    color: var(--color-text-muted);
   }
+  /* Categorical pathway colors — intentionally outside the brand palette
+     (five distinguishable hues for five pathways). Design-review item. */
   .badge-pathway--heart   { background: #fde8e8; color: #b0413e; }
   .badge-pathway--head    { background: #e8f0fd; color: #2b5aa7; }
   .badge-pathway--hand    { background: #e9f7ec; color: #2c7a3f; }
@@ -188,7 +190,7 @@ const toolGroupOf = (skill: string) =>
     gap: var(--space-sm);
     align-items: flex-start;
     padding-block: var(--space-xs);
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--color-border);
   }
   .badge-tier__level {
     flex-shrink: 0;
@@ -212,7 +214,7 @@ const toolGroupOf = (skill: string) =>
   }
   .badge-tier p {
     font-size: var(--text-sm);
-    color: #666;
+    color: var(--color-text-muted);
     margin: 0.15rem 0 0;
   }
 </style>

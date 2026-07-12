@@ -25,6 +25,16 @@
   --color-gray-light:   #F4F4F4;
   --color-white:        #ffffff;
 
+  /* Derived neutrals — not in the brand guide's palette, but needed as
+     roles the guide doesn't specify. Keep every gray on the site coming
+     from one of these instead of ad-hoc hex values. */
+  --color-text-muted:   #666666;             /* secondary text on light backgrounds (WCAG AA) */
+  --color-text-dim:     #aaaaaa;             /* secondary text on dark backgrounds */
+  --color-border:       var(--color-gray-mid);  /* hairlines/dividers on light backgrounds */
+  --color-dark-surface: #111111;             /* panels sitting on black sections */
+  --color-dark-raised:  #1e1e1e;             /* hover/raised state on dark surfaces */
+  --color-dark-border:  #2a2a2a;             /* hairlines/dividers on dark backgrounds */
+
   /* Semantic roles */
   --color-text:         var(--color-dark);
   --color-heading:      var(--color-yellow);
@@ -34,10 +44,15 @@
   --color-nav-bg:       var(--color-black);
   --color-section-alt:  var(--color-gray-light);
 
+  /* Shadows */
+  --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.08);
+  --shadow-pop:  0 8px 24px rgba(0, 0, 0, 0.4);
+
   /* Typography */
   --font-heading:  'Varela Round', sans-serif;
   --font-body:     'Montserrat', sans-serif;
 
+  --text-xs:    0.72rem;   /* tiny uppercase labels/kickers */
   --text-sm:    0.875rem;
   --text-base:  1rem;
   --text-lg:    1.125rem;
@@ -213,7 +228,7 @@ img { max-width: 100%; height: auto; display: block; border-radius: var(--radius
   background: var(--color-white);
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
 }
@@ -295,7 +310,7 @@ img { max-width: 100%; height: auto; display: block; border-radius: var(--radius
 /* --- Utility --- */
 .text-yellow  { color: var(--color-yellow); }
 .text-teal    { color: var(--color-teal); }
-.text-muted   { color: #888; font-size: var(--text-sm); }
+.text-muted   { color: var(--color-text-muted); font-size: var(--text-sm); }
 .mt-md        { margin-top: var(--space-md); }
 .mt-lg        { margin-top: var(--space-lg); }
 
