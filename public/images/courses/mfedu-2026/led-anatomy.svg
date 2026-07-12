@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="t">
+  <title id="t">Anatomy of an LED: the longer leg is the positive anode, the shorter leg is the negative cathode</title>
+  <style>
+    .label { font: 700 22px 'Montserrat', sans-serif; fill: #474747; }
+    .sub   { font: 400 17px 'Montserrat', sans-serif; fill: #666666; }
+    .mark  { font: 800 30px 'Montserrat', sans-serif; }
+  </style>
+  <rect width="640" height="420" fill="#ffffff"/>
+  <!-- LED body -->
+  <path d="M245 60 a75 75 0 0 1 150 0 v110 h-150 z" fill="#F1D302" stroke="#474747" stroke-width="6"/>
+  <rect x="233" y="170" width="174" height="22" rx="8" fill="#F1D302" stroke="#474747" stroke-width="6"/>
+  <!-- legs -->
+  <line x1="285" y1="192" x2="285" y2="380" stroke="#474747" stroke-width="10" stroke-linecap="round"/>
+  <line x1="355" y1="192" x2="355" y2="320" stroke="#474747" stroke-width="10" stroke-linecap="round"/>
+  <!-- glow -->
+  <path d="M180 55 l-40 -28 M200 20 l-25 -38 M440 20 l25 -38 M460 55 l40 -28" stroke="#EDA83E" stroke-width="8" stroke-linecap="round"/>
+  <!-- labels -->
+  <text class="mark" x="255" y="410" fill="#2c7a3f">+</text>
+  <text class="label" x="60" y="345">Anode</text>
+  <text class="sub" x="60" y="370">longer leg · positive</text>
+  <line x1="180" y1="350" x2="270" y2="360" stroke="#5EB1BF" stroke-width="4" stroke-dasharray="8 6"/>
+  <text class="mark" x="342" y="360" fill="#b0413e">−</text>
+  <text class="label" x="450" y="290">Cathode</text>
+  <text class="sub" x="450" y="315">shorter leg · negative</text>
+  <line x1="440" y1="295" x2="370" y2="300" stroke="#5EB1BF" stroke-width="4" stroke-dasharray="8 6"/>
+  <text class="label" x="450" y="100">Light comes</text>
+  <text class="label" x="450" y="126">out here!</text>
+</svg>

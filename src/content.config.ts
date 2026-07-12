@@ -99,10 +99,13 @@ const courses = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/courses' }),
   schema: z.object({
     title:       z.string(),
-    course:      z.enum(['mfedu-intro']),
+    course:      z.enum(['mfedu-intro', 'mfedu-2026']),
     order:       z.number(),
     section:     z.string(),
     description: z.string().optional(),
+    // Maker Badges pathway this lesson feeds (2026 course) — shown as a
+    // chip linking to /maker-badges/.
+    badge:       z.string().optional(),
   }).strict(),
 });
 

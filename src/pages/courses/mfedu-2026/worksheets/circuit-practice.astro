@@ -1,0 +1,47 @@
+---
+import WorksheetLayout from '../../../../layouts/WorksheetLayout.astro';
+---
+<WorksheetLayout
+  title="Paper Circuit Practice"
+  lesson="/courses/mfedu-2026/paper-circuits/"
+  intro="Lay copper tape along the thick gray paths, leave gaps for your LEDs, and light all three circuits."
+>
+  <h2>1. Simple circuit — one path, one LED</h2>
+  <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Simple circuit template: a rectangular tape path with one battery position and one LED gap" style="width:100%; height:auto;">
+    <path d="M80 60 H620 V200 H80 Z" stroke="#D7D7D7" stroke-width="16" fill="none"/>
+    <circle cx="80" cy="130" r="34" fill="none" stroke="#474747" stroke-width="4" stroke-dasharray="8 6"/>
+    <text x="52" y="136" font-family="Montserrat, sans-serif" font-size="15" fill="#474747">battery</text>
+    <rect x="600" y="105" width="46" height="50" fill="#ffffff" stroke="#474747" stroke-width="3" stroke-dasharray="8 6"/>
+    <text x="588" y="90" font-family="Montserrat, sans-serif" font-size="15" fill="#474747">LED gap</text>
+  </svg>
+
+  <h2>2. Parallel circuit — every LED gets its own path</h2>
+  <svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Parallel circuit template: two rails with three rungs, each rung has an LED gap" style="width:100%; height:auto;">
+    <path d="M80 60 H620 M80 240 H620" stroke="#D7D7D7" stroke-width="16" fill="none"/>
+    <path d="M80 60 V240 M300 60 V125 M300 175 V240 M470 60 V125 M470 175 V240 M620 60 V125 M620 175 V240" stroke="#D7D7D7" stroke-width="16" fill="none"/>
+    <circle cx="80" cy="150" r="34" fill="none" stroke="#474747" stroke-width="4" stroke-dasharray="8 6"/>
+    <text x="52" y="156" font-family="Montserrat, sans-serif" font-size="15" fill="#474747">battery</text>
+    {[300, 470, 620].map(x => (
+      <rect x={x - 23} y="125" width="46" height="50" fill="#ffffff" stroke="#474747" stroke-width="3" stroke-dasharray="8 6"/>
+    ))}
+  </svg>
+
+  <h2>3. Series circuit — one path through every LED</h2>
+  <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Series circuit template: one loop with two LED gaps along the top" style="width:100%; height:auto;">
+    <path d="M80 60 H250 M330 60 H470 M550 60 H620 V200 H80 Z" stroke="#D7D7D7" stroke-width="16" fill="none"/>
+    <circle cx="80" cy="130" r="34" fill="none" stroke="#474747" stroke-width="4" stroke-dasharray="8 6"/>
+    <text x="52" y="136" font-family="Montserrat, sans-serif" font-size="15" fill="#474747">battery</text>
+    <rect x="252" y="35" width="76" height="50" fill="#ffffff" stroke="#474747" stroke-width="3" stroke-dasharray="8 6"/>
+    <rect x="472" y="35" width="76" height="50" fill="#ffffff" stroke="#474747" stroke-width="3" stroke-dasharray="8 6"/>
+  </svg>
+
+  <h2>Observations</h2>
+  <p>Which circuit lit brightest? What happened when you removed one LED from the parallel circuit — and from the series circuit?</p>
+  <div class="ws-lines"><div></div><div></div><div></div><div></div></div>
+
+  <ul class="ws-checks">
+    <li>Positive tape path never touches the negative path (no short circuits!)</li>
+    <li>Long LED legs on the positive side, short legs on the negative</li>
+    <li>All three circuits lit</li>
+  </ul>
+</WorksheetLayout>

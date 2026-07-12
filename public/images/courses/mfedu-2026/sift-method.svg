@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 260" role="img" aria-labelledby="t">
+  <title id="t">The SIFT method: Stop, Investigate the source, Find better coverage, Trace to the original</title>
+  <style>
+    .big { font: 800 34px 'Montserrat', sans-serif; fill: #ffffff; }
+    .h   { font: 700 21px 'Montserrat', sans-serif; fill: #474747; }
+    .s   { font: 400 15px 'Montserrat', sans-serif; fill: #666666; }
+  </style>
+  <rect width="960" height="260" fill="#ffffff"/>
+  <g>
+    <circle cx="120" cy="90" r="56" fill="#EF7B44"/>
+    <text class="big" x="103" y="103">S</text>
+    <text class="h" x="78" y="185">Stop</text>
+    <text class="s" x="30" y="212">pause before you share</text>
+    <text class="s" x="42" y="232">or believe it</text>
+  </g>
+  <g>
+    <circle cx="360" cy="90" r="56" fill="#409FCD"/>
+    <text class="big" x="348" y="103">I</text>
+    <text class="h" x="288" y="185">Investigate</text>
+    <text class="s" x="278" y="212">look into the source,</text>
+    <text class="s" x="286" y="232">not just the claim</text>
+  </g>
+  <g>
+    <circle cx="600" cy="90" r="56" fill="#5EB1BF"/>
+    <text class="big" x="583" y="103">F</text>
+    <text class="h" x="576" y="185">Find</text>
+    <text class="s" x="518" y="212">look for better coverage</text>
+    <text class="s" x="540" y="232">of the same topic</text>
+  </g>
+  <g>
+    <circle cx="840" cy="90" r="56" fill="#F2B705"/>
+    <text class="big" x="822" y="103">T</text>
+    <text class="h" x="810" y="185">Trace</text>
+    <text class="s" x="758" y="212">follow claims and media</text>
+    <text class="s" x="768" y="232">back to their original</text>
+  </g>
+  <path d="M188 90 h100 M428 90 h100 M668 90 h100" stroke="#D7D7D7" stroke-width="6" stroke-linecap="round"/>
+</svg>

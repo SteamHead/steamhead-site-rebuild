@@ -54,9 +54,13 @@ const worksheets = [
         Guide young designers to create fashion tech pieces that tell the story
         of an advocacy project — learn, design, construct, and exhibit on the runway.
       </p>
-      <a href={`/courses/mfedu-intro/${lessons[0]?.id}/`} class="btn btn--primary" data-start-btn>
+      <a href={`/courses/mfedu-intro/${lessons[0]?.id.split('/').pop()}/`} class="btn btn--primary" data-start-btn>
         Start the Course
       </a>
+      <p class="edition-note">
+        This is the original 2022 course, preserved in full. A restructured
+        <a href="/courses/mfedu-2026/">2026 updated edition</a> is also available.
+      </p>
     </div>
   </section>
 
@@ -80,7 +84,7 @@ const worksheets = [
           <ol class="lesson-list" role="list">
             {group.items.map(lesson => (
               <li>
-                <a class="lesson-row" href={`/courses/mfedu-intro/${lesson.id}/`} data-lesson={lesson.id}>
+                <a class="lesson-row" href={`/courses/mfedu-intro/${lesson.id.split('/').pop()}/`} data-lesson={lesson.id.split('/').pop()}>
                   <span class="lesson-check" aria-hidden="true">{lesson.data.order}</span>
                   <span class="lesson-info">
                     <span class="lesson-title">{lesson.data.title}</span>
@@ -396,4 +400,6 @@ const worksheets = [
     gap: var(--space-xs);
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
+  .edition-note { margin-top: var(--space-sm); font-size: var(--text-sm); color: var(--color-text-dim); }
+  .edition-note a { color: var(--color-yellow); }
 </style>

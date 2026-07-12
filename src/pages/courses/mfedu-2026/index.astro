@@ -1,0 +1,303 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+/* MakeFashion Edu — Advocacy by Design (2026 edition).
+   A complete rewrite of the Introduction Course, authored by Blake
+   (SteamHead's openly disclosed, human-reviewed AI teammate) with the
+   2022 combined guide as source. Progress lives in localStorage under
+   'course-progress:mfedu-2026'. */
+
+const lessons = (await getCollection('courses', c => c.data.course === 'mfedu-2026'))
+  .sort((a, b) => a.data.order - b.data.order);
+
+const slugOf = (id: string) => id.split('/').pop();
+
+const modules: { label: string; blurb: string; items: typeof lessons }[] = [];
+const blurbs: Record<string, string> = {
+  'Find Your Story': 'What clothing argues, how movements wore their messages, and the cause your team will carry.',
+  'Research It': 'Advocacy runs on facts. SIFT yours before they go on fabric.',
+  'Design It': 'Line, color, shape, texture — aimed at your story, on paper, cheaply.',
+  'Light It Up': 'From one LED and a coin cell to circuits you can wear.',
+  'Build It': 'Headwear warm-up, the Trashion signature build, and real sewing.',
+  'Show It': 'The runway walk and a gallery that celebrates the whole journey.',
+  'Level Up': 'Optional extra credit: programmable light, sensors, and pieces that respond.',
+};
+for (const lesson of lessons) {
+  const last = modules[modules.length - 1];
+  if (last && last.label === lesson.data.section) last.items.push(lesson);
+  else modules.push({ label: lesson.data.section, blurb: blurbs[lesson.data.section] ?? '', items: [lesson] });
+}
+
+const worksheets = [
+  ['Cause Finder', 'cause-finder'],
+  ['SIFT Fact Check', 'sift-check'],
+  ['Elements Explorer', 'elements-explorer'],
+  ['Client Brief', 'client-brief'],
+  ['Design Notes', 'design-notes'],
+  ['Croquis Figures', 'croquis-figures'],
+  ['Paper Circuit Practice', 'circuit-practice'],
+  ['Artist Statement', 'artist-statement'],
+  ['Exhibition Plan', 'exhibition-plan'],
+];
+---
+
+<BaseLayout
+  title="Advocacy by Design — MakeFashion Edu Course (2026)"
+  description="The 2026 edition of the MakeFashion Edu course: one project arc from finding your cause to walking the runway — circuits, design, media literacy, and wearable tech, free and self-paced."
+>
+
+  <section class="hero" aria-label="Advocacy by Design">
+    <div class="container hero__content">
+      <p class="course-kicker">SteamHead Courses · 2026 Edition · Free &amp; Self-Paced</p>
+      <h1>Advocacy by Design</h1>
+      <p class="hero__tagline">
+        One project, start to finish: find a cause you believe in, fact-check it,
+        design for it, wire it with light, build it from rescued materials — and
+        walk it down a runway.
+      </p>
+      <a href={`/courses/mfedu-2026/${slugOf(lessons[0]?.id ?? '')}/`} class="btn btn--primary">
+        Start the Course
+      </a>
+      <img
+        class="arc-img"
+        src="/images/courses/mfedu-2026/project-arc.svg"
+        alt="The course arc: Find Your Story, Research It, Design It, Light It Up, Build It, Show It"
+      />
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       LESSON INDEX + PROGRESS
+       ===================================================================== -->
+  <section class="section" aria-label="Lessons">
+    <div class="container">
+      <div class="progress-head">
+        <h2>The Lessons</h2>
+        <span class="progress-label" data-progress-label>0 of {lessons.length} complete</span>
+      </div>
+      <hr class="accent-rule" />
+      <div class="progress-track" role="progressbar" aria-label="Course progress">
+        <div class="progress-fill" data-progress-fill></div>
+      </div>
+
+      {modules.map((mod, i) => (
+        <div class="lesson-group">
+          <h3><span class="mod-num">Module {i + 1}</span> {mod.label}</h3>
+          {mod.blurb && <p class="mod-blurb">{mod.blurb}</p>}
+          <ol class="lesson-list" role="list">
+            {mod.items.map(lesson => (
+              <li>
+                <a class="lesson-row" href={`/courses/mfedu-2026/${slugOf(lesson.id)}/`} data-lesson={slugOf(lesson.id)}>
+                  <span class="lesson-check" aria-hidden="true">{lesson.data.order}</span>
+                  <span class="lesson-info">
+                    <span class="lesson-title">{lesson.data.title}</span>
+                    {lesson.data.description && (
+                      <span class="lesson-desc">{lesson.data.description}</span>
+                    )}
+                  </span>
+                  {lesson.data.badge && (
+                    <span class="lesson-badge">{lesson.data.badge}</span>
+                  )}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </div>
+      ))}
+
+      <p class="text-muted mt-md">
+        The badge on each lesson is the <a href="/maker-badges/">Maker Badges</a>
+        pathway it feeds — teachers can award progress as designers go.
+      </p>
+      <button class="btn btn--outline" data-reset-btn type="button">
+        Reset Course Progress
+      </button>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       WORKSHEETS
+       ===================================================================== -->
+  <section class="section section--alt" aria-label="Worksheets">
+    <div class="container">
+      <h2>Printable Worksheets</h2>
+      <hr class="accent-rule" />
+      <p class="mt-md">
+        Every worksheet is a web page with a print button — always current, no
+        downloads to lose. Each one also lives inside its lesson.
+      </p>
+      <ul class="worksheet-list" role="list">
+        {worksheets.map(([label, slug]) => (
+          <li><a href={`/courses/mfedu-2026/worksheets/${slug}/`}>{label}</a></li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       ABOUT / CREDITS
+       ===================================================================== -->
+  <section class="section" aria-label="About this edition">
+    <div class="container">
+      <h2>About This Edition</h2>
+      <hr class="accent-rule" />
+      <p class="mt-md">
+        <strong>Advocacy by Design</strong> is a complete 2026 rewrite of the
+        MakeFashion Edu Introduction Course, restructured around a single project
+        arc and extended with a wearable-electronics module. It draws its
+        activities, student stories, and hard-won classroom wisdom from the
+        <a href="/courses/mfedu-intro/">original 2022 course</a> by the
+        MakeFashion Edu team — Twila Busby, Carrie Leung, Elisa Busby, James
+        Simpson, and collaborators — which remains available in full.
+      </p>
+      <p>
+        Written by <strong>Blake</strong>, SteamHead's openly disclosed AI
+        teammate, and human-reviewed before publication — the same rule as
+        everything Blake writes here. Today, MakeFashion Edu's programs,
+        courses, and runway events are run by SteamHead, in collaboration with
+        <a href="https://makefashion.ca">MakeFashion</a>.
+      </p>
+      <p>
+        Licensed <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>,
+        like the <a href="/design-immersion-overview/">Design Immersion Curriculum</a>
+        it builds on. Hardware sourcing lives on <a href="/theshelf/">The Shelf</a>.
+      </p>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<script>
+  const KEY = 'course-progress:mfedu-2026';
+  const read = (): Record<string, boolean> => {
+    try { return JSON.parse(localStorage.getItem(KEY) ?? '{}'); }
+    catch { return {}; }
+  };
+
+  const rows = document.querySelectorAll<HTMLElement>('[data-lesson]');
+  const fill = document.querySelector<HTMLElement>('[data-progress-fill]');
+  const label = document.querySelector<HTMLElement>('[data-progress-label]');
+
+  function paint() {
+    const done = read();
+    let count = 0;
+    rows.forEach(row => {
+      const isDone = !!done[row.dataset.lesson ?? ''];
+      row.classList.toggle('lesson-row--done', isDone);
+      if (isDone) count++;
+    });
+    if (fill) fill.style.width = `${(count / Math.max(rows.length, 1)) * 100}%`;
+    if (label) label.textContent = `${count} of ${rows.length} complete`;
+  }
+  paint();
+
+  document.querySelector('[data-reset-btn]')?.addEventListener('click', () => {
+    if (confirm('Reset all course progress on this device?')) {
+      localStorage.removeItem(KEY);
+      paint();
+    }
+  });
+</script>
+
+<style>
+  .course-kicker {
+    font-size: var(--text-sm);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-yellow);
+    margin-bottom: var(--space-xs);
+  }
+  .arc-img {
+    margin-top: var(--space-lg);
+    width: 100%;
+    max-width: 860px;
+    border-radius: 0;
+  }
+
+  .progress-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+  }
+  .progress-label { font-size: var(--text-sm); font-weight: 600; color: var(--color-text-muted); }
+  .progress-track {
+    height: 8px;
+    background: var(--color-gray-light);
+    border-radius: 999px;
+    overflow: hidden;
+    margin-block: var(--space-sm);
+  }
+  .progress-fill { height: 100%; width: 0; background: var(--color-teal); border-radius: 999px; transition: width 0.3s; }
+
+  .lesson-group h3 { margin-top: var(--space-md); margin-bottom: 0.2rem; color: var(--color-dark); }
+  .mod-num {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: var(--color-yellow);
+    color: var(--color-black);
+    border-radius: 999px;
+    padding: 0.15rem 0.6rem;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+  }
+  .mod-blurb { color: var(--color-text-muted); font-size: var(--text-sm); margin-bottom: var(--space-xs); }
+  .lesson-list { list-style: none; padding: 0; display: grid; gap: var(--space-xs); }
+  .lesson-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-xs) var(--space-sm);
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: transform 0.12s, box-shadow 0.12s;
+  }
+  .lesson-row:hover { transform: translateY(-2px); box-shadow: var(--shadow-card); opacity: 1; }
+  .lesson-check {
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--color-gray-light);
+    color: var(--color-dark);
+    font-weight: 700;
+    font-size: var(--text-sm);
+    display: grid;
+    place-items: center;
+  }
+  .lesson-row--done .lesson-check { background: var(--color-yellow); color: var(--color-black); }
+  .lesson-row--done .lesson-check::after { content: ' ✓'; }
+  .lesson-info { display: flex; flex-direction: column; min-width: 0; }
+  .lesson-title { font-weight: 600; color: var(--color-dark); }
+  .lesson-desc { font-size: var(--text-sm); color: var(--color-text-muted); }
+  .lesson-badge {
+    margin-left: auto;
+    flex-shrink: 0;
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-teal);
+    border: 1px solid var(--color-teal);
+    border-radius: 999px;
+    padding: 0.1rem 0.55rem;
+  }
+  @media (max-width: 640px) { .lesson-badge { display: none; } }
+
+  .worksheet-list {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-md);
+    display: grid;
+    gap: var(--space-xs);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+  .worksheet-list a { font-weight: 600; }
+</style>

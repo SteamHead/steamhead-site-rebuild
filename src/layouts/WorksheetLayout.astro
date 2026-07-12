@@ -1,0 +1,155 @@
+---
+/* Printable worksheet layout — MakeFashion Edu: Advocacy by Design (2026).
+   Minimal on screen, clean handout in print (the top bar hides itself).
+   Shared printable primitives: .ws-lines, .ws-box, .ws-grid, .ws-checks. */
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  lesson?: string;      // path of the lesson this worksheet belongs to
+  intro?: string;
+}
+const { title, lesson, intro } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>{title} — MakeFashion Edu Worksheet</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <div class="ws-topbar">
+      <a href={lesson ?? '/courses/mfedu-2026/'}>← Back to the course</a>
+      <button type="button" onclick="window.print()" class="btn btn--primary">Print this worksheet</button>
+    </div>
+
+    <main class="ws-page">
+      <header class="ws-head">
+        <p class="ws-kicker">MakeFashion Edu · Advocacy by Design</p>
+        <h1>{title}</h1>
+        {intro && <p class="ws-intro">{intro}</p>}
+        <div class="ws-nameline">
+          <span>Designer:</span><span class="ws-fill"></span>
+          <span>Date:</span><span class="ws-fill ws-fill--short"></span>
+        </div>
+      </header>
+      <slot />
+      <footer class="ws-foot">
+        steamhead.space/courses/mfedu-2026/ · CC BY-NC-SA 4.0
+      </footer>
+    </main>
+
+    <style is:global>
+      body { background: var(--color-gray-light); }
+      .ws-topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--space-sm) var(--space-md);
+        background: var(--color-black);
+      }
+      .ws-topbar a { color: var(--color-yellow); font-weight: 600; text-decoration: none; }
+
+      .ws-page {
+        max-width: 800px;
+        margin: var(--space-md) auto;
+        background: var(--color-white);
+        padding: var(--space-lg);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-card);
+      }
+      .ws-kicker {
+        font-size: var(--text-xs);
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--color-text-muted);
+        margin-bottom: 0.3rem;
+      }
+      .ws-head h1 { color: var(--color-dark); font-size: var(--text-3xl); margin-bottom: var(--space-xs); }
+      .ws-intro { color: var(--color-text-muted); }
+      .ws-nameline {
+        display: flex;
+        gap: 0.6rem;
+        align-items: baseline;
+        margin-top: var(--space-sm);
+        font-weight: 600;
+        color: var(--color-dark);
+      }
+      .ws-fill { flex: 1; border-bottom: 2px solid var(--color-dark); min-height: 1.4rem; }
+      .ws-fill--short { flex: 0 0 130px; }
+
+      .ws-page h2 {
+        color: var(--color-dark);
+        font-size: var(--text-xl);
+        margin-top: var(--space-md);
+        margin-bottom: var(--space-xs);
+        border-bottom: 3px solid var(--color-yellow);
+        display: inline-block;
+        padding-bottom: 0.15rem;
+      }
+      .ws-page p { color: var(--color-dark); }
+
+      .ws-lines { margin-top: var(--space-xs); }
+      .ws-lines > div {
+        border-bottom: 1.5px solid var(--color-gray-mid);
+        height: 2.1rem;
+      }
+      .ws-box {
+        border: 2px solid var(--color-dark);
+        border-radius: var(--radius);
+        min-height: 180px;
+        margin-top: var(--space-xs);
+      }
+      .ws-box--tall { min-height: 320px; }
+      .ws-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-sm);
+        margin-top: var(--space-xs);
+      }
+      .ws-checks { list-style: none; padding: 0; margin-top: var(--space-xs); }
+      .ws-checks li {
+        display: flex;
+        gap: 0.6rem;
+        align-items: flex-start;
+        margin-bottom: 0.55rem;
+        color: var(--color-dark);
+      }
+      .ws-checks li::before {
+        content: '';
+        flex-shrink: 0;
+        width: 1.1rem;
+        height: 1.1rem;
+        border: 2px solid var(--color-dark);
+        border-radius: 3px;
+        margin-top: 0.15rem;
+      }
+      .ws-hint { font-size: var(--text-sm); color: var(--color-text-muted); font-style: italic; }
+      .ws-foot {
+        margin-top: var(--space-lg);
+        font-size: var(--text-xs);
+        color: var(--color-text-muted);
+        text-align: center;
+      }
+
+      @media print {
+        body { background: #fff; }
+        .ws-topbar { display: none; }
+        .ws-page {
+          box-shadow: none;
+          border-radius: 0;
+          margin: 0;
+          padding: 0.5in 0.4in;
+          max-width: none;
+        }
+        .ws-box, .ws-lines > div, .ws-fill { break-inside: avoid; }
+        h2 { break-after: avoid; }
+      }
+    </style>
+  </body>
+</html>
