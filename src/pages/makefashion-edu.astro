@@ -6,12 +6,13 @@ import { marked } from 'marked';
 const entry = await getEntry('pages', 'makefashion-edu');
 const {
   hero_title, hero_tagline, engineering_text, heritage_text, runway_text,
-  classes_text, getintouch_text, instagram_url, instagram_photos,
+  classes_text, getintouch_text, publishing,
 } = entry.data;
 
 /* Layout mirrors the original makefashion.ca/edu landing page (section
-   order and structure), expressed in this site's design system with the
-   darker treatment — the WordPress original stays light; ours is dark. */
+   order and structure), expressed in this site's design system. Dark
+   treatment is limited to the hero + section strip; the rest alternates
+   white and grey. */
 
 const md = (s: string) => marked.parse(s ?? '');
 
@@ -70,7 +71,7 @@ const engineeringGrid = [
   <!-- =====================================================================
        ENGINEERING + FASHION
        ===================================================================== -->
-  <section class="section section--dark" aria-label="Engineering and Fashion">
+  <section class="section" aria-label="Engineering and Fashion">
     <div class="container">
       <div class="two-col">
         <div>
@@ -93,7 +94,7 @@ const engineeringGrid = [
        two pages must tell the same story in the same words.
        DRAFT: origin story needs Ben's review/expansion
        ===================================================================== -->
-  <section class="section" aria-label="Our story">
+  <section class="section section--alt" aria-label="Our story">
     <div class="container">
       <h2>Born in Shenzhen</h2>
       <hr class="accent-rule" />
@@ -104,7 +105,7 @@ const engineeringGrid = [
   <!-- =====================================================================
        THE RUNWAY
        ===================================================================== -->
-  <section class="section section--dark" aria-label="The Runway">
+  <section class="section" aria-label="The Runway">
     <div class="container">
       <div class="two-col two-col--reverse">
         <img
@@ -128,7 +129,7 @@ const engineeringGrid = [
   <!-- =====================================================================
        THE CLASSES
        ===================================================================== -->
-  <section class="section" aria-label="The Classes">
+  <section class="section section--alt" aria-label="The Classes">
     <div class="container">
       <div class="two-col">
         <div>
@@ -161,7 +162,7 @@ const engineeringGrid = [
        build lands (route does not exist yet; /shelf/ is where the course
        lives today).
        ===================================================================== -->
-  <section class="section section--dark cta-band" aria-label="Online course">
+  <section class="section cta-band" aria-label="Online course">
     <div class="container">
       <h2>Bring FashionTech to Your Classroom</h2>
       <hr class="accent-rule" />
@@ -175,34 +176,27 @@ const engineeringGrid = [
   </section>
 
   <!-- =====================================================================
-       MFEDU SOCIAL — curated grid, CMS-editable
+       MAKEFASHION EDU PUBLISHING
        ===================================================================== -->
-  <section class="section" aria-label="MFEdu social">
+  <section class="section section--alt" aria-label="MakeFashion Edu Publishing">
     <div class="container">
-      <h2>MFEdu Social</h2>
+      <h2>MakeFashion Edu Publishing</h2>
       <hr class="accent-rule" />
-      <div class="insta-grid mt-md">
-        {(instagram_photos ?? []).map((photo: { image: string; alt?: string }) => (
-          <a href={instagram_url} target="_blank" rel="noopener" class="insta-item">
-            <img src={photo.image} alt={photo.alt ?? "MakeFashion Edu on Instagram"} loading="lazy" />
+      <div class="pub-grid mt-md">
+        {(publishing ?? []).map((item: { name: string; url: string; image: string }) => (
+          <a href={item.url} target="_blank" rel="noopener" class="pub-card">
+            <img src={item.image} alt={`MakeFashion Edu on ${item.name}`} loading="lazy" />
+            <span>{item.name}</span>
           </a>
         ))}
       </div>
-      <a
-        href={instagram_url}
-        class="btn btn--primary mt-md"
-        target="_blank"
-        rel="noopener"
-      >
-        @makefashionedu on Instagram
-      </a>
     </div>
   </section>
 
   <!-- =====================================================================
        GET IN TOUCH
        ===================================================================== -->
-  <section class="section section--dark" aria-label="Get in touch">
+  <section class="section" aria-label="Get in touch">
     <div class="container">
       <h2>Get In Touch</h2>
       <hr class="accent-rule" />
@@ -344,18 +338,33 @@ const engineeringGrid = [
     margin-top: var(--space-md);
   }
 
-  .insta-grid {
+  .pub-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: var(--space-sm);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-md);
   }
-  .insta-item img {
-    width: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
-    border-radius: var(--radius);
+  .pub-card {
+    position: relative;
     display: block;
-    transition: opacity 0.15s;
+    border-radius: var(--radius);
+    overflow: hidden;
+    text-decoration: none;
   }
-  .insta-item:hover img { opacity: 0.85; }
+  .pub-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.2s;
+  }
+  .pub-card:hover img { transform: scale(1.03); }
+  .pub-card span {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 0.6rem var(--space-sm);
+    background: rgba(0, 0, 0, 0.65);
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    letter-spacing: 0.05em;
+  }
 </style>

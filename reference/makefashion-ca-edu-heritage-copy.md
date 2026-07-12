@@ -47,13 +47,25 @@ below.
 MakeFashion Edu was born from a collaboration between two maker communities:
 MakeFashion, the Calgary wearable-technology collective that brings artists,
 designers, and technologists to the runway, and SteamHead, our maker-education
-nonprofit. The story starts in Shenzhen, China, where SteamHead co-founder
-Carrie Leung met MakeFashion co-founder Shanon Hoover — and the two saw the
-same opportunity: put the magic of the runway to work in classrooms.
-MakeFashion brought years of wearable-tech showmanship; SteamHead brought
-classroom practice and educator networks. Together they created MakeFashion
-Edu: fashion tech by students, for their own communities. Today, MakeFashion
-Edu's programs, courses, and runway events are run by SteamHead.
+nonprofit.
+
+The story starts at the 2017 Shenzhen Maker Faire, organized by Erin Pan and
+Violet Su. Carrie Leung and James Simpson — looking, by all accounts, like two
+confused teachers peeking around — were spotted by Kevin Lau, co-founder and
+CEO of Chaihuo Makerspace, who asked them a few questions and then handed them
+front-row tickets to Shannon Hoover's MakeFashion runway show. The show was
+amazing. Carrie's students had been building their own electronic accessories
+and outfits, and when she got back to their booth the next day, the students
+were already clamoring about MakeFashion — they had discovered its booth on
+their own while exploring the faire, and dragged their classmates back to ooh
+over the exhibit. Their excitement sent Carrie to meet Shannon, who had seen
+the students marveling at his work. The two quickly became great associates
+and friends, and Shannon and Maria Hoover advised Carrie on creating the
+program — their advice on the core of MakeFashion Edu, the runway, was
+invaluable.
+
+Today, MakeFashion Edu's programs, courses, and runway events are run by
+SteamHead.
 
 Link "MakeFashion" to: https://makefashion.ca
 Link "SteamHead" to: https://steamhead.space
