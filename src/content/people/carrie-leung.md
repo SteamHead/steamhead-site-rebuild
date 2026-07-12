@@ -9,7 +9,7 @@ imageAlt: "Carrie Leung"
 
 Carrie Leung is a San Francisco native, a techie turned teacher. She is a maker-educator focused on building open-community platforms for students, parents, educators, and industry to collaborate, learn, and connect. She has spent eight years in Shenzhen, China building project-based learning programs, embedding Maker Education, and experiential learning into classrooms. She recently piloted an Electronics and Media program at High Tech High, HTMNC in California.
 
-Outside the classroom, her notable work include co-founding [MakeFashion Edu](/makefashionedu/), [SteamHead non-profit](https://steamhead.space/), and developing the K-12 design program for V&A's Design Society.  Carrie believes in actively arming the youth with positive physical, mental, and emotional tools they need to shape the future we will all live in.
+Outside the classroom, her notable work include co-founding [MakeFashion Edu](/makefashion-edu/), [SteamHead non-profit](https://steamhead.space/), and developing the K-12 design program for V&A's Design Society.  Carrie believes in actively arming the youth with positive physical, mental, and emotional tools they need to shape the future we will all live in.
 
  
 
@@ -17,7 +17,7 @@ Carrie Leung is a San Francisco native, a techie turned teacher. She is a maker-
 
 Carrie is a maker-educator focused on building open community platforms for young makers, innovative educators, and cutting-edge industry to collaborate, learn, and connect. She spent eight years in Shenzhen, China teaching in project-based learning classrooms and exploring ways to embed the maker mindset and real-life experiences into education. In 2019 she began building an Electronics and Media Program at High Tech High in California.
 
-Outside the classroom, her notable work include co-founding [MakeFashion Edu](/makefashionedu/), [SteamHead non-profit](https://steamhead.space/), and developing the K-12 design program for V&A's Design Society.  Carrie believes in actively arming the youth with positive physical, mental, and emotional tools they need to shape the future we will all live in.
+Outside the classroom, her notable work include co-founding [MakeFashion Edu](/makefashion-edu/), [SteamHead non-profit](https://steamhead.space/), and developing the K-12 design program for V&A's Design Society.  Carrie believes in actively arming the youth with positive physical, mental, and emotional tools they need to shape the future we will all live in.
 
 Carrie believes it’s all too common, in communities across the world, that these kind of collaborative opportunities exist but are not taken advantage of: whether that’s due to lack of connections, insular organizational culture, or competitiveness, the fact is that open-source collaboration and sharing is the best path for everyone to thrive and to make relevant education accessible.
 

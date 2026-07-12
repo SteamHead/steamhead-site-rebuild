@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import MFEduNav from '../../components/MFEduNav.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('mfedu');
+  return pages.map(page => ({ params: { slug: page.id }, props: { page } }));
+}
+
+const { page } = Astro.props;
+const { Content } = await render(page);
+const sectionLabel = {
+  'runway-shows': 'Runway Shows',
+  'run-the-program': 'Run the Program',
+  'about': 'MakeFashion Edu',
+}[page.data.section];
+---
+
+<BaseLayout
+  title={`${page.data.title} — MakeFashion Edu`}
+  description={page.data.description ?? `${page.data.title} — part of MakeFashion Edu, run by SteamHead.`}
+>
+
+  <section class="hero hero--short" aria-label={page.data.title}>
+    <div class="container hero__content">
+      <p class="mfedu-crumb">
+        <a href="/makefashion-edu/">MakeFashion Edu</a> / {sectionLabel}
+      </p>
+      <h1>{page.data.title}</h1>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Page content">
+    <div class="container mfedu-layout">
+      <article class="mfedu-body">
+        <Content />
+      </article>
+      <aside>
+        <MFEduNav currentSlug={page.id} />
+      </aside>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .hero--short { padding-block: var(--space-lg); }
+
+  .mfedu-crumb {
+    font-size: var(--text-sm);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #aaa;
+    margin-bottom: var(--space-xs);
+  }
+  .mfedu-crumb a {
+    color: var(--color-yellow);
+    text-decoration: none;
+  }
+
+  .mfedu-layout {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: var(--space-lg);
+    align-items: start;
+  }
+  @media (max-width: 900px) {
+    .mfedu-layout { grid-template-columns: 1fr; }
+    /* nav moves below content on small screens */
+    .mfedu-layout aside { order: 2; }
+  }
+
+  .mfedu-body :global(h2) { margin-top: var(--space-md); margin-bottom: var(--space-xs); }
+  .mfedu-body :global(h3) { margin-top: var(--space-md); margin-bottom: var(--space-xs); }
+  .mfedu-body :global(p)  { margin-bottom: var(--space-sm); }
+  .mfedu-body :global(ul),
+  .mfedu-body :global(ol) { margin-bottom: var(--space-sm); }
+
+  /* Gallery treatment: any paragraph that is a run of images becomes a grid */
+  .mfedu-body :global(p:has(> img)) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: var(--space-sm);
+  }
+  .mfedu-body :global(p:has(> img)) :global(img) {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: var(--radius);
+    margin: 0;
+  }
+  /* a paragraph with exactly one image keeps natural proportions */
+  .mfedu-body :global(p:has(> img:only-child)) {
+    display: block;
+  }
+  .mfedu-body :global(p:has(> img:only-child)) :global(img) {
+    aspect-ratio: auto;
+    max-width: 100%;
+    width: auto;
+  }
+</style>

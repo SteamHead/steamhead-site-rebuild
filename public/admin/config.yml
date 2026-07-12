@@ -127,19 +127,22 @@ collections:
         label: MakeFashion Edu Page
         file: src/content/pages/makefashion-edu.md
         fields:
+          - { label: "Hero Title",     name: hero_title,     widget: string }
           - { label: "Hero Tagline",   name: hero_tagline,   widget: text }
-          - { label: "About Body",     name: about_body,     widget: markdown }
+          - { label: "Engineering + Fashion", name: engineering_text, widget: markdown }
+          - { label: "Heritage (origin story)", name: heritage_text, widget: markdown,
+              hint: "Must stay word-for-word identical to the heritage section on makefashion.ca/edu" }
           - { label: "Runway Text",    name: runway_text,    widget: markdown }
           - { label: "Classes Text",   name: classes_text,   widget: markdown }
-          - { label: "Books Text",     name: books_text,     widget: markdown }
-          - { label: "Instagram URL",  name: instagram_url,  widget: string }
-          - label: "Instagram Photos"
-            name: instagram_photos
+          - { label: "Get In Touch",   name: getintouch_text, widget: markdown }
+          - label: "Publishing Channels"
+            name: publishing
             widget: list
-            hint: "Curated grid on the page — swap these whenever; they link to the Instagram account"
+            hint: "The MakeFashion Edu Publishing cards (Instagram / YouTube / Facebook)"
             fields:
-              - { label: Photo,          name: image, widget: image }
-              - { label: "Alt Text",     name: alt,   widget: string, required: false }
+              - { label: Name,  name: name,  widget: string }
+              - { label: URL,   name: url,   widget: string }
+              - { label: Image, name: image, widget: image }
 
       - name: neighborhood-earth
         label: Neighborhood Earth Page

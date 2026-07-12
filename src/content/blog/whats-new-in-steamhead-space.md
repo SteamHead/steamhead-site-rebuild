@@ -16,7 +16,7 @@ After months of brainstorming and hard work, we are very excited to announce the
 
 The goal of this design revamp is to provide visitors an easier way to learn about SteamHead's initiatives, our mission, and for educators to have easy access to great resources. Our aim is to make the website easy to navigate, user-friendly, and unique.
 
-It is important to us that Steamhead's main initiatives - [Makerspace](/makerspace/), [MakeFashion Edu](/makefashionedu/), [Neighborhood Earth](/neighborhood-earth/), and [Productions](/productions/), are featured and that visitors are able to find useful information about the projects and achievements.
+It is important to us that Steamhead's main initiatives - [Makerspace](/makerspace/), [MakeFashion Edu](/makefashion-edu/), [Neighborhood Earth](/neighborhood-earth/), and [Productions](/productions/), are featured and that visitors are able to find useful information about the projects and achievements.
 
 We are especially proud of [The Shelf](/shop/) --- Steamhead Makerspace's virtual front room shelf which contains stuff that are fun and teacher-tested! On The Shelf, we feature inspirational projects and a place where you can shop for tech supplies and merchandise.
 

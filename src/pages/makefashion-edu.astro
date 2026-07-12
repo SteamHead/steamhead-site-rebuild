@@ -1,67 +1,111 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getEntry, render } from 'astro:content';
+import { getEntry } from 'astro:content';
+import { marked } from 'marked';
 
 const entry = await getEntry('pages', 'makefashion-edu');
-const { Content } = await render(entry);
-const { hero_tagline, runway_text, classes_text, books_text, instagram_url, instagram_photos } = entry.data;
+const {
+  hero_title, hero_tagline, engineering_text, heritage_text, runway_text,
+  classes_text, getintouch_text, publishing,
+} = entry.data;
+
+/* Layout mirrors the original makefashion.ca/edu landing page (section
+   order and structure), expressed in this site's design system. Dark
+   treatment is limited to the hero + section strip; the rest alternates
+   white and grey. */
+
+const md = (s: string) => marked.parse(s ?? '');
+
+const engineeringGrid = [
+  { src: "/images/mfedu/1206673384-1-scaled.jpg", alt: "Students collaborating on a fashion tech piece" },
+  { src: "/images/mfedu/IMG_8816.jpg",            alt: "Student work in progress" },
+  { src: "/images/mfedu/IMG_1041.jpg",            alt: "MakeFashion Edu student at work" },
+  { src: "/images/mfedu/Shaw-1170582.jpg",        alt: "MakeFashion Edu runway showcase" },
+];
 ---
 
 <BaseLayout
   title="MakeFashion Edu"
-  description="We're the educational heart of the award-winning MakeFashion platform, driven by creativity and innovation. Students weave together fashion and technology, crafting outfits while mastering design thinking and hands-on building."
+  description="FashionTech in every classroom. Students combine fashion and technology in pieces they design from the ground up — MakeFashion Edu's programs, courses, and runway events are run by SteamHead."
 >
 
   <!-- =====================================================================
-       HERO
+       HERO — the iconic scattered-photo top from makefashion.ca/edu,
+       recreated on the site's dark treatment. Ghost "MFEDU", right-aligned
+       title block, five staggered photos.
        ===================================================================== -->
-  <section class="hero" aria-label="MakeFashion Edu">
-    <img
-      class="hero__bg"
-      src="/images/2024/01/IMG_8823-scaled.jpg"
-      alt="MakeFashion Edu students on the runway"
-    />
-    <div class="container hero__content">
-      <h1>MakeFashion Edu</h1>
-      <p class="hero__tagline">{hero_tagline}</p>
-      <a href="/contact-us/" class="btn btn--primary">
-        Get Involved
-      </a>
+  <section class="mfedu-hero" aria-label="MakeFashion Edu">
+    <div class="container mfedu-hero__grid">
+      <span class="mfedu-hero__ghost" aria-hidden="true">MFEDU</span>
+
+      <div class="mfedu-hero__text">
+        <h1>{hero_title}</h1>
+        <p>{hero_tagline}</p>
+        <a href="/shelf/" class="btn btn--primary mt-md">Take the Online Course</a>
+      </div>
+
+      <img class="ph ph--a" src="/images/mfedu/20180527_181848639_iOS.jpg"
+        alt="Student in an illuminated dress walking the MakeFashion Edu runway" />
+      <img class="ph ph--b" src="/images/mfedu/1080-2622-1.jpg"
+        alt="Student designer wearing a lighted hoop piece" loading="lazy" />
+      <img class="ph ph--c" src="/images/mfedu/WeChat-Image_20181205214747.jpg"
+        alt="Two students in glowing fashion tech pieces" loading="lazy" />
+      <img class="ph ph--d" src="/images/mfedu/7V4A8258.jpg"
+        alt="Young designer in a handmade outfit with props" loading="lazy" />
+      <img class="ph ph--e" src="/images/mfedu/Shaw-lr-1016638.jpg"
+        alt="Student wearing an LED wearable creation" loading="lazy" />
     </div>
   </section>
 
+  <!-- MFEdu section navigation strip -->
+  <nav class="mfedu-strip" aria-label="MakeFashion Edu sections">
+    <div class="container mfedu-strip__inner">
+      <a href="/makefashion-edu/runwayshows/">Runway Shows</a>
+      <a href="/makefashion-edu/mfedu-program-benefits/">Run the Program</a>
+      <a href="/makefashion-edu/partners/">Our Partners</a>
+      <a href="/makefashion-edu/resources/">Resources</a>
+      <a href="/shelf/">Online Course</a>
+    </div>
+  </nav>
+
   <!-- =====================================================================
-       INTRODUCTION
+       ENGINEERING + FASHION
        ===================================================================== -->
-  <section class="section" aria-label="About MakeFashion Edu">
+  <section class="section" aria-label="Engineering and Fashion">
     <div class="container">
       <div class="two-col">
         <div>
-          <h2>About the Program</h2>
+          <h2>Engineering + Fashion</h2>
           <hr class="accent-rule" />
-          <Content />
+          <div set:html={md(engineering_text)} />
         </div>
-        <img
-          src="/images/2021/03/s3.jpeg"
-          alt="MakeFashion Edu student showcasing wearable tech"
-        />
+        <div class="photo-grid">
+          {engineeringGrid.map(img => (
+            <img src={img.src} alt={img.alt} loading="lazy" />
+          ))}
+        </div>
       </div>
     </div>
   </section>
 
   <!-- =====================================================================
-       BANNER
+       HERITAGE — the origin story
+       Same wording as reference/makefashion-ca-edu-heritage-copy.md; the
+       two pages must tell the same story in the same words.
+       DRAFT: origin story needs Ben's review/expansion
        ===================================================================== -->
-  <img
-    class="banner-img"
-    src="/images/2024/01/hr-nologo-1170467-scaled.jpg"
-    alt="MakeFashion Edu community"
-  />
+  <section class="section section--alt" aria-label="Our story">
+    <div class="container">
+      <h2>Born in Shenzhen</h2>
+      <hr class="accent-rule" />
+      <div class="heritage-body mt-md" set:html={md(heritage_text)} />
+    </div>
+  </section>
 
   <!-- =====================================================================
        THE RUNWAY
        ===================================================================== -->
-  <section class="section section--alt" aria-label="The Runway">
+  <section class="section" aria-label="The Runway">
     <div class="container">
       <div class="two-col two-col--reverse">
         <img
@@ -72,6 +116,11 @@ const { hero_tagline, runway_text, classes_text, books_text, instagram_url, inst
           <h2>The Runway</h2>
           <hr class="accent-rule" />
           <p>{runway_text}</p>
+          <p>
+            Every season's show is captured in a full gallery publication —
+            find them all on The Shelf.
+          </p>
+          <a href="/shelf/" class="btn btn--outline mt-md">See the Season Books</a>
         </div>
       </div>
     </div>
@@ -80,13 +129,18 @@ const { hero_tagline, runway_text, classes_text, books_text, instagram_url, inst
   <!-- =====================================================================
        THE CLASSES
        ===================================================================== -->
-  <section class="section" aria-label="The Classes">
+  <section class="section section--alt" aria-label="The Classes">
     <div class="container">
       <div class="two-col">
         <div>
           <h2>The Classes</h2>
           <hr class="accent-rule" />
           <p>{classes_text}</p>
+          <p>
+            Ready-to-teach course guides — including the full-semester guide and
+            Simple Circuits activities — are free on The Shelf.
+          </p>
+          <a href="/shelf/" class="btn btn--outline mt-md">Get the Course Guides</a>
         </div>
         <div class="img-pair">
           <img
@@ -103,104 +157,214 @@ const { hero_tagline, runway_text, classes_text, books_text, instagram_url, inst
   </section>
 
   <!-- =====================================================================
-       THE BOOKS
+       ONLINE COURSE — primary CTA
+       TODO: repoint at the course landing page when the course-sequence
+       build lands (route does not exist yet; /shelf/ is where the course
+       lives today).
        ===================================================================== -->
-  <section class="section section--alt" aria-label="The Books">
+  <section class="section cta-band" aria-label="Online course">
     <div class="container">
-      <div class="two-col two-col--reverse">
-        <img
-          src="/images/2024/02/Screenshot-2024-02-22-at-10.53.10.jpg"
-          alt="MakeFashion Edu publication"
-        />
-        <div>
-          <h2>The Books</h2>
-          <hr class="accent-rule" />
-          <p>{books_text}</p>
-          <a href="/shelf/" class="btn btn--primary mt-md">Browse Publications</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =====================================================================
-       PHOTO FROM CLASS
-       ===================================================================== -->
-  <section class="section section--dark" aria-label="Program highlights">
-    <div class="container">
-      <div class="two-col">
-        <div>
-          <h2>A Powerful Entry Point</h2>
-          <hr class="accent-rule" />
-          <p>
-            MakeFashion Edu has proven to be a powerful entry point for students of all
-            perspectives and backgrounds — but especially for girls who are hesitant to
-            engage with science and technology subjects.
-          </p>
-          <p>
-            By grounding technology in self-expression and storytelling, the program
-            makes engineering feel relevant and accessible to learners who might otherwise
-            opt out of STEAM pathways.
-          </p>
-          <a href="/contact-us/" class="btn btn--outline mt-md">
-            Bring MFEdu to Your School
-          </a>
-        </div>
-        <img
-          src="/images/2024/01/IMG_1041.jpg"
-          alt="MakeFashion Edu student at work"
-        />
-      </div>
-    </div>
-  </section>
-
-  <!-- =====================================================================
-       INSTAGRAM
-       Curated photo grid, edited via the CMS — deliberately NOT a live
-       embed (no third-party scripts, nothing to break).
-       ===================================================================== -->
-  <section class="section" aria-label="Follow us on Instagram">
-    <div class="container">
-      <h2>Follow Us on Instagram</h2>
+      <h2>Bring FashionTech to Your Classroom</h2>
       <hr class="accent-rule" />
-      <div class="insta-grid mt-md">
-        {(instagram_photos ?? []).map((photo: { image: string; alt?: string }) => (
-          <a href={instagram_url} target="_blank" rel="noopener" class="insta-item">
-            <img src={photo.image} alt={photo.alt ?? "MakeFashion Edu on Instagram"} loading="lazy" />
+      <p class="mt-md">
+        The MakeFashion Edu Online Course walks educators and students through
+        the whole journey — design thinking, electronics, and fashion tech —
+        at your own pace, no experience required.
+      </p>
+      <a href="/shelf/" class="btn btn--primary mt-md">Start the Online Course</a>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       MAKEFASHION EDU PUBLISHING
+       ===================================================================== -->
+  <section class="section section--alt" aria-label="MakeFashion Edu Publishing">
+    <div class="container">
+      <h2>MakeFashion Edu Publishing</h2>
+      <hr class="accent-rule" />
+      <div class="pub-grid mt-md">
+        {(publishing ?? []).map((item: { name: string; url: string; image: string }) => (
+          <a href={item.url} target="_blank" rel="noopener" class="pub-card">
+            <img src={item.image} alt={`MakeFashion Edu on ${item.name}`} loading="lazy" />
+            <span>{item.name}</span>
           </a>
         ))}
       </div>
-      <a
-        href={instagram_url}
-        class="btn btn--primary mt-md"
-        target="_blank"
-        rel="noopener"
-      >
-        @makefashionedu on Instagram
-      </a>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       GET IN TOUCH
+       ===================================================================== -->
+  <section class="section" aria-label="Get in touch">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <hr class="accent-rule" />
+      <div class="mt-md" set:html={md(getintouch_text)} />
+      <div class="cta-row">
+        <a href="https://www.facebook.com/groups/steamhead.space" class="btn btn--primary" target="_blank" rel="noopener">
+          Join the Facebook Group
+        </a>
+        <a href="/contact-us/" class="btn btn--outline">Contact Us</a>
+      </div>
     </div>
   </section>
 
 </BaseLayout>
 
 <style>
+  /* ------- Iconic scattered hero ------- */
+  .mfedu-hero {
+    background: var(--color-black);
+    color: var(--color-white);
+    overflow: hidden;
+    padding-block: var(--space-lg) var(--space-xl);
+  }
+  .mfedu-hero__grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 5fr 4fr 2.5fr 2fr;
+    grid-template-rows: auto auto auto;
+    gap: var(--space-md);
+    align-items: start;
+  }
+  .mfedu-hero__ghost {
+    position: absolute;
+    top: -1.5rem;
+    left: 34%;
+    font-family: var(--font-heading);
+    font-size: clamp(4rem, 10vw, 8.5rem);
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.08);
+    pointer-events: none;
+    line-height: 1;
+    z-index: 0;
+  }
+  .mfedu-hero__text {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    text-align: right;
+    align-self: center;
+    z-index: 1;
+    margin-top: var(--space-lg);
+  }
+  .mfedu-hero__text h1 {
+    color: var(--color-yellow);
+    line-height: 1.05;
+  }
+  .mfedu-hero__text p {
+    margin-top: var(--space-sm);
+    color: #ccc;
+    font-size: var(--text-sm);
+    max-width: 34ch;
+    margin-left: auto;
+  }
+  .mfedu-hero .ph {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+    z-index: 1;
+  }
+  .ph--a { grid-column: 2; grid-row: 1 / 3; aspect-ratio: 3 / 4; margin-top: 3.5rem; }
+  .ph--b { grid-column: 3 / 5; grid-row: 1; aspect-ratio: 4 / 3; margin-top: 1rem; }
+  .ph--c { grid-column: 3 / 5; grid-row: 2; aspect-ratio: 21 / 9; }
+  .ph--d { grid-column: 2; grid-row: 3; aspect-ratio: 3 / 4; width: 78%; justify-self: center; margin-top: -1rem; }
+  .ph--e { grid-column: 3 / 5; grid-row: 3; aspect-ratio: 4 / 5; width: 85%; }
+
+  @media (max-width: 820px) {
+    .mfedu-hero__grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: none;
+    }
+    .mfedu-hero__ghost { position: static; grid-column: 1 / 3; text-align: center; }
+    .mfedu-hero__text {
+      grid-column: 1 / 3; grid-row: auto;
+      text-align: center; margin-top: 0;
+    }
+    .mfedu-hero__text p { margin-inline: auto; }
+    .ph--a, .ph--b, .ph--c, .ph--d, .ph--e {
+      grid-column: auto; grid-row: auto;
+      margin: 0; width: 100%; aspect-ratio: 3 / 4; justify-self: stretch;
+    }
+    .ph--c { grid-column: 1 / 3; aspect-ratio: 21 / 9; }
+  }
+
+  /* ------- Section strip nav ------- */
+  .mfedu-strip {
+    background: #111;
+    border-block: 1px solid #222;
+  }
+  .mfedu-strip__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    padding-block: 0.7rem;
+  }
+  .mfedu-strip a {
+    color: #ccc;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .mfedu-strip a:hover { color: var(--color-yellow); opacity: 1; }
+
+  .photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+  }
+  .photo-grid img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  .heritage-body { max-width: 70ch; }
+
   .img-pair {
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
   }
 
-  .insta-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  .cta-band { text-align: left; }
+
+  .cta-row {
+    display: flex;
     gap: var(--space-sm);
+    flex-wrap: wrap;
+    margin-top: var(--space-md);
   }
-  .insta-item img {
-    width: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
-    border-radius: var(--radius);
+
+  .pub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-md);
+  }
+  .pub-card {
+    position: relative;
     display: block;
-    transition: opacity 0.15s;
+    border-radius: var(--radius);
+    overflow: hidden;
+    text-decoration: none;
   }
-  .insta-item:hover img { opacity: 0.85; }
+  .pub-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.2s;
+  }
+  .pub-card:hover img { transform: scale(1.03); }
+  .pub-card span {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 0.6rem var(--space-sm);
+    background: rgba(0, 0, 0, 0.65);
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    letter-spacing: 0.05em;
+  }
 </style>

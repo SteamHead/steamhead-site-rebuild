@@ -69,6 +69,19 @@ const settings = defineCollection({
   schema: z.object({}).passthrough(),
 });
 
+// MakeFashion Edu subsite pages (runway shows, Run the Program steps,
+// partners) — migrated from makefashion.ca/edu; rendered under
+// /makefashion-edu/<slug>/ with the MFEdu section nav.
+const mfedu = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/mfedu' }),
+  schema: z.object({
+    title:       z.string(),
+    section:     z.enum(['runway-shows', 'run-the-program', 'about']),
+    order:       z.number(),
+    description: z.string().optional(),
+  }).strict(),
+});
+
 // Long-form resource guides (course guides, activity guides, etc.)
 const guides = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/guides' }),
@@ -78,4 +91,4 @@ const guides = defineCollection({
   }),
 });
 
-export const collections = { blog, people, pages, settings, guides };
+export const collections = { blog, people, pages, settings, guides, mfedu };

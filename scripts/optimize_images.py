@@ -65,30 +65,36 @@ for p in sorted(IMAGES.rglob('*')):
         im = im.resize((round(im.width * scale), round(im.height * scale)), Image.LANCZOS)
 
     new_path, buf = p, None
-    if ext in ('.jpg', '.jpeg'):
-        buf = encode_jpeg(im)
-    elif ext == '.heic':
-        buf = encode_jpeg(im)
-        new_path = p.with_suffix('.jpg')
-    else:  # png
-        # alpha counts only if a meaningful share of pixels use it — many
-        # WordPress-exported photos carry a vestigial alpha channel with a
-        # handful of stray transparent pixels
-        has_alpha = False
-        if im.mode in ('RGBA', 'LA', 'PA'):
-            hist = im.convert('RGBA').getchannel('A').histogram()
-            has_alpha = sum(hist[:250]) / (im.width * im.height) > 0.01
-        if has_alpha:
-            buf = encode_png(im, quantize=False)
-        else:
-            thumb = im.convert('RGB')
-            thumb.thumbnail((256, 256))
-            ncolors = len(set(thumb.getdata()))
-            if ncolors > PHOTO_COLORS:
-                buf = encode_jpeg(im)
-                new_path = p.with_suffix('.jpg')
+    try:
+        if ext in ('.jpg', '.jpeg'):
+            buf = encode_jpeg(im)
+        elif ext == '.heic':
+            buf = encode_jpeg(im)
+            new_path = p.with_suffix('.jpg')
+        else:  # png
+            # alpha counts only if a meaningful share of pixels use it — many
+            # WordPress-exported photos carry a vestigial alpha channel with a
+            # handful of stray transparent pixels
+            has_alpha = False
+            if im.mode in ('RGBA', 'LA', 'PA'):
+                hist = im.convert('RGBA').getchannel('A').histogram()
+                has_alpha = sum(hist[:250]) / (im.width * im.height) > 0.01
+            if has_alpha:
+                buf = encode_png(im, quantize=False)
             else:
-                buf = encode_png(im.convert('RGB'), quantize=True)
+                thumb = im.convert('RGB')
+                thumb.thumbnail((256, 256))
+                ncolors = len(set(thumb.getdata()))
+                if ncolors > PHOTO_COLORS:
+                    buf = encode_jpeg(im)
+                    new_path = p.with_suffix('.jpg')
+                else:
+                    buf = encode_png(im.convert('RGB'), quantize=True)
+    except Exception as e:
+        print(f'  !! encode failed, original kept: {p} ({e})', file=sys.stderr)
+        kept += 1
+        after_total += orig_size
+        continue
 
     win = 1 - buf.tell() / orig_size
     must_rename = new_path != p
