@@ -18,8 +18,10 @@ the items teammates need visibility on.
       no student names; galleries verified image-by-image. Flagged for later:
       4 people profiles share an LED-strip placeholder photo, 4 use cartoon
       avatars, and thats-a-wrap.md has a near-black photo worth replacing.
-- [ ] **People section design** — 41 Team/Resident profiles migrated and
-      waiting; pages vs. popups is a design discussion with Mapet.
+- [x] **People section** — done in PR #15: grids on /about-us (Team then
+      Residents), 30 profile pages with build-time blog mentions, old WP
+      profile URLs redirected. Photo gaps remain: 4 profiles share an
+      LED-strip placeholder, 4 use cartoon avatars.
 - [ ] **MFEdu course-sequence build** — sequential Astro pages with
       localStorage progress; then repoint the course CTAs (flagged in
       makefashion-edu.astro) from /shelf/ to the real course landing.
