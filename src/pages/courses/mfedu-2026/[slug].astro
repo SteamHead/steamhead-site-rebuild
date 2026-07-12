@@ -2,12 +2,12 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getCollection, render } from 'astro:content';
 
-/* One lesson of the MakeFashion Edu Introduction Course.
-   Visiting a lesson auto-marks it complete in localStorage
-   ('course-progress:mfedu-intro'); the pill under the title unchecks it. */
+/* One lesson of Advocacy by Design (2026). Auto-marks complete on visit;
+   the pill under the title unchecks. Progress key:
+   'course-progress:mfedu-2026'. */
 
 export async function getStaticPaths() {
-  const lessons = (await getCollection('courses', c => c.data.course === 'mfedu-intro'))
+  const lessons = (await getCollection('courses', c => c.data.course === 'mfedu-2026'))
     .sort((a, b) => a.data.order - b.data.order);
   return lessons.map((lesson, i) => ({
     params: { slug: lesson.id.split('/').pop()! },
@@ -22,24 +22,32 @@ export async function getStaticPaths() {
 
 const { lesson, prev, next, total } = Astro.props;
 const { Content } = await render(lesson);
-const { title, order, section, description } = lesson.data;
+const { title, order, section, description, badge } = lesson.data;
+const slugOf = (id: string) => id.split('/').pop();
 ---
 
 <BaseLayout
-  title={`${title} — MakeFashion Edu Introduction Course`}
-  description={description ?? `Lesson ${order} of the MakeFashion Edu Introduction Course.`}
+  title={`${title} — Advocacy by Design`}
+  description={description ?? `Lesson ${order} of Advocacy by Design, the 2026 MakeFashion Edu course.`}
 >
 
   <section class="hero hero--short" aria-label={title}>
     <div class="container hero__content">
       <p class="lesson-crumb">
-        <a href="/courses/mfedu-intro/">MFEdu Introduction Course</a>
+        <a href="/courses/mfedu-2026/">Advocacy by Design</a>
         &nbsp;/&nbsp; Lesson {order} of {total} · {section}
       </p>
       <h1>{title}</h1>
-      <button class="done-pill" data-done-toggle data-lesson={lesson.id.split('/').pop()} type="button">
-        Marked complete — tap to unmark
-      </button>
+      <div class="lesson-meta">
+        <button class="done-pill" data-done-toggle data-lesson={slugOf(lesson.id)} type="button">
+          Marked complete — tap to unmark
+        </button>
+        {badge && (
+          <a class="badge-chip" href="/maker-badges/" title="The Maker Badges pathway this lesson feeds">
+            Badge pathway: {badge}
+          </a>
+        )}
+      </div>
     </div>
   </section>
 
@@ -52,24 +60,24 @@ const { title, order, section, description } = lesson.data;
   <section class="section section--alt" aria-label="Lesson navigation">
     <div class="container lesson-nav">
       {prev ? (
-        <a class="lesson-nav__link" href={`/courses/mfedu-intro/${prev.id.split('/').pop()}/`}>
+        <a class="lesson-nav__link" href={`/courses/mfedu-2026/${slugOf(prev.id)}/`}>
           <span class="lesson-nav__dir">← Previous</span>
           <span>{prev.data.title}</span>
         </a>
       ) : (
-        <a class="lesson-nav__link" href="/courses/mfedu-intro/">
+        <a class="lesson-nav__link" href="/courses/mfedu-2026/">
           <span class="lesson-nav__dir">← Course Home</span>
           <span>Lesson index</span>
         </a>
       )}
-      <a class="lesson-nav__home" href="/courses/mfedu-intro/">All lessons</a>
+      <a class="lesson-nav__home" href="/courses/mfedu-2026/">All lessons</a>
       {next ? (
-        <a class="lesson-nav__link lesson-nav__link--next" href={`/courses/mfedu-intro/${next.id.split('/').pop()}/`}>
+        <a class="lesson-nav__link lesson-nav__link--next" href={`/courses/mfedu-2026/${slugOf(next.id)}/`}>
           <span class="lesson-nav__dir">Next →</span>
           <span>{next.data.title}</span>
         </a>
       ) : (
-        <a class="lesson-nav__link lesson-nav__link--next" href="/courses/mfedu-intro/">
+        <a class="lesson-nav__link lesson-nav__link--next" href="/courses/mfedu-2026/">
           <span class="lesson-nav__dir">Finish →</span>
           <span>Back to the course page</span>
         </a>
@@ -80,7 +88,7 @@ const { title, order, section, description } = lesson.data;
 </BaseLayout>
 
 <script>
-  const KEY = 'course-progress:mfedu-intro';
+  const KEY = 'course-progress:mfedu-2026';
   const btn = document.querySelector<HTMLElement>('[data-done-toggle]');
   const slug = btn?.dataset.lesson ?? '';
 
@@ -99,7 +107,6 @@ const { title, order, section, description } = lesson.data;
       : 'Not complete — tap to mark done';
   }
 
-  /* Auto-complete on visit */
   if (slug) {
     const p = read();
     if (!p[slug]) { p[slug] = true; write(p); }
@@ -126,8 +133,14 @@ const { title, order, section, description } = lesson.data;
   }
   .lesson-crumb a { color: var(--color-yellow); text-decoration: none; }
 
-  .done-pill {
+  .lesson-meta {
+    display: flex;
+    gap: var(--space-sm);
+    align-items: center;
+    flex-wrap: wrap;
     margin-top: var(--space-sm);
+  }
+  .done-pill {
     font-size: var(--text-xs);
     font-weight: 700;
     letter-spacing: 0.06em;
@@ -144,6 +157,17 @@ const { title, order, section, description } = lesson.data;
     border-color: var(--color-yellow);
     color: var(--color-black);
   }
+  .badge-chip {
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-teal);
+    border: 1px solid var(--color-teal);
+    border-radius: 999px;
+    padding: 0.3rem 0.9rem;
+    text-decoration: none;
+  }
 
   .lesson-body { max-width: 75ch; }
   .lesson-body :global(h2) { margin-top: var(--space-md); margin-bottom: var(--space-xs); }
@@ -159,7 +183,9 @@ const { title, order, section, description } = lesson.data;
     margin-block: var(--space-sm);
     color: var(--color-dark);
   }
-  .lesson-body :global(blockquote p) { margin: 0; }
+  .lesson-body :global(blockquote p) { margin: 0 0 var(--space-xs); }
+  .lesson-body :global(blockquote p:last-child) { margin: 0; }
+  .lesson-body :global(img) { margin-block: var(--space-sm); }
 
   .lesson-nav {
     display: grid;
@@ -167,9 +193,7 @@ const { title, order, section, description } = lesson.data;
     gap: var(--space-sm);
     align-items: center;
   }
-  @media (max-width: 640px) {
-    .lesson-nav { grid-template-columns: 1fr; }
-  }
+  @media (max-width: 640px) { .lesson-nav { grid-template-columns: 1fr; } }
   .lesson-nav__link {
     display: flex;
     flex-direction: column;
@@ -189,8 +213,5 @@ const { title, order, section, description } = lesson.data;
     text-transform: uppercase;
     color: var(--color-text-muted);
   }
-  .lesson-nav__home {
-    font-size: var(--text-sm);
-    font-weight: 600;
-  }
+  .lesson-nav__home { font-size: var(--text-sm); font-weight: 600; }
 </style>

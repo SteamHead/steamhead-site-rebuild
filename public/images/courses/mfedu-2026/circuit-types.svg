@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="t">
+  <title id="t">Three circuit types: a simple circuit with one LED, a parallel circuit where each LED has its own path, and a series circuit where LEDs share one path</title>
+  <style>
+    .h   { font: 700 22px 'Montserrat', sans-serif; fill: #474747; }
+    .s   { font: 400 15px 'Montserrat', sans-serif; fill: #666666; }
+    .pm  { font: 800 20px 'Montserrat', sans-serif; }
+    .wire { stroke: #EDA83E; stroke-width: 8; fill: none; stroke-linecap: round; }
+    .led  { fill: #F1D302; stroke: #474747; stroke-width: 4; }
+    .bat  { fill: #5EB1BF; stroke: #474747; stroke-width: 4; }
+  </style>
+  <rect width="960" height="420" fill="#ffffff"/>
+
+  <!-- SIMPLE -->
+  <g transform="translate(20,20)">
+    <text class="h" x="70" y="24">Simple</text>
+    <text class="s" x="10" y="368">one path, one LED</text>
+    <path class="wire" d="M60 90 h180 v190 h-180 z"/>
+    <circle class="bat" cx="60" cy="185" r="34"/>
+    <text class="pm" x="50" y="178" fill="#ffffff">+</text>
+    <text class="pm" x="50" y="208" fill="#474747">−</text>
+    <circle class="led" cx="240" cy="185" r="26"/>
+    <path d="M262 150 l18 -14 M268 178 l22 -6" stroke="#EDA83E" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- PARALLEL -->
+  <g transform="translate(340,20)">
+    <text class="h" x="55" y="24">Parallel</text>
+    <text class="s" x="0" y="368">a path for every LED — brightest, and one</text>
+    <text class="s" x="0" y="388">going out doesn't stop the others</text>
+    <path class="wire" d="M60 90 h220 M60 280 h220 M60 90 v190 M160 90 v190 M280 90 v190"/>
+    <circle class="bat" cx="60" cy="185" r="34"/>
+    <text class="pm" x="50" y="178" fill="#ffffff">+</text>
+    <text class="pm" x="50" y="208" fill="#474747">−</text>
+    <circle class="led" cx="160" cy="185" r="26"/>
+    <circle class="led" cx="280" cy="185" r="26"/>
+  </g>
+
+  <!-- SERIES -->
+  <g transform="translate(660,20)">
+    <text class="h" x="70" y="24">Series</text>
+    <text class="s" x="10" y="368">one path through every LED —</text>
+    <text class="s" x="10" y="388">if one goes out, they all do</text>
+    <path class="wire" d="M60 90 h220 v190 h-220 z"/>
+    <circle class="bat" cx="60" cy="185" r="34"/>
+    <text class="pm" x="50" y="178" fill="#ffffff">+</text>
+    <text class="pm" x="50" y="208" fill="#474747">−</text>
+    <circle class="led" cx="170" cy="90" r="26"/>
+    <circle class="led" cx="280" cy="185" r="26"/>
+  </g>
+</svg>

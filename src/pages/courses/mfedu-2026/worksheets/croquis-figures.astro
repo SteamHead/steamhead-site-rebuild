@@ -1,0 +1,37 @@
+---
+import WorksheetLayout from '../../../../layouts/WorksheetLayout.astro';
+
+/* Croquis: simple fashion figures to trace or draw over, so designers
+   focus on the design instead of the drawing. */
+const figure = (x: number) => `translate(${x},0)`;
+---
+<WorksheetLayout
+  title="Croquis Figures"
+  lesson="/courses/mfedu-2026/sketch-to-story/"
+  intro="A croquis is the fashion world's quick sketch figure. Trace one or draw right on top — the idea matters, not the drawing."
+>
+  <h2>Standing figures</h2>
+  <svg viewBox="0 0 760 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three simple standing fashion figures to trace or design over" style="width:100%; height:auto;">
+    {[60, 310, 560].map(x => (
+      <g transform={figure(x)} stroke="#D7D7D7" stroke-width="4" fill="none" stroke-linecap="round">
+        <circle cx="70" cy="50" r="30" />
+        <path d="M70 80 v170" />
+        <path d="M70 110 l-45 90 M70 110 l45 90" />
+        <path d="M70 250 l-30 240 M70 250 l30 240" />
+        <path d="M40 490 h-18 M100 490 h18" />
+      </g>
+    ))}
+  </svg>
+  <p class="ws-hint">Tip: put a blank sheet over this page and trace, so the figures stay reusable for your next idea.</p>
+
+  <h2>Head &amp; shoulders (for headwear designs)</h2>
+  <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two head and shoulders outlines for designing headwear" style="width:100%; height:auto;">
+    {[120, 480].map(x => (
+      <g transform={`translate(${x},0)`} stroke="#D7D7D7" stroke-width="4" fill="none" stroke-linecap="round">
+        <ellipse cx="80" cy="110" rx="55" ry="70" />
+        <path d="M80 180 v40" />
+        <path d="M0 285 q80 -70 160 0" />
+      </g>
+    ))}
+  </svg>
+</WorksheetLayout>

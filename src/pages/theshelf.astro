@@ -76,9 +76,14 @@ const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
           <h2>MakeFashion Edu Online Course</h2>
           <hr class="accent-rule" />
           <p>{course_body}</p>
-          <a href="/courses/mfedu-intro/" class="btn btn--primary mt-md">
-            Start the Course — Free
-          </a>
+          <div class="course-links mt-md">
+            <a href="/courses/mfedu-2026/" class="btn btn--primary">
+              Start the 2026 Updated Edition
+            </a>
+            <a href="/courses/mfedu-intro/" class="btn btn--outline">
+              Original 2022 Course
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -389,4 +394,5 @@ const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
     font-weight: 600;
   }
   .guide-link-teacher:hover { opacity: 0.75; }
+  .course-links { display: flex; gap: var(--space-sm); flex-wrap: wrap; }
 </style>
