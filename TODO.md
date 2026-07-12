@@ -1,30 +1,45 @@
 # Site TODO
 
-Requests captured during review. Header/footer items from 2026-07-10
-(blog link, Programs dropdown, logo graphic, media kit link, favicon) were
-implemented in PR #9 — see GitHub issues #3–#7.
+Working list, kept current by Blake's Claude sessions. GitHub issues mirror
+the items teammates need visibility on.
 
-## Content
+## Waiting on Blake
 
-- [ ] **Blake to provide the 5 missing videos** — 5 videos couldn't be pulled
-      from the old site during migration (list in `scripts/migration-report.md`
-      + MIGRATION.md parking lot, incl. the 96 MB `output2.mp4` from the Snow
-      Drop post). Blake has the source files; once provided, upload to YouTube
-      and replace the old-site URLs in the affected posts. Must happen before
-      domain cutover. (Logged 2026-07-11 — Blake asked not to be allowed to
-      forget this.)
-- [ ] **Alt text for all images** — migrated post images currently reuse the
-      post title as alt text; real descriptive alt text should be generated
-      (AI-assisted pass over ~300 images) or hand-written for the important
-      ones. Accessibility item from the evaluation's week-6 pass.
-      (Blake, 2026-07-11)
-- [x] **Media kit page** — rebuilt at `/media_kit/` (same URL as old site);
-      footer link now internal. Note: its Certification section still links
-      the old site's design-immersion-curriculum and maker-badges pages,
-      which need homes or redirects before domain cutover.
-- [ ] **makefashion.ca/edu mirror** — static snapshot under
-      `/makefashion-edu/site/`, original stays up. Planned as its own work
-      chain after the current PR deploys. (Blake, 2026-07-11)
-- [x] **Instagram photos on MakeFashion Edu page** — done as a curated
-      static grid (CMS-editable, links to @makefashionedu); Carrie/Mapet
-      can swap the six starter photos via the CMS whenever.
+- [ ] **The 5 missing videos** — upload to the SteamHead Productions YouTube
+      channel, then hand the YouTube URLs to Claude (posts auto-embed
+      YouTube links). Source files, by original name:
+      1. `1514.mp4` (Mar 2021) — MG Space Cardboard Engineering post
+      2. `1515.mp4` (Mar 2021) — MG Space Cardboard Engineering post
+      3. `1516.mp4` (Mar 2021) — Inventing Pinball post
+      4. `03-未来城市-复盘-双语字幕-low… .mov` (Jan 2025) — bilingual-subtitle
+         recap video
+      5. `output2.mp4` (Mar 2026, 96 MB) — Snow Drop Grade 2 post
+      Must be done before domain cutover (their old-site URLs die then).
+- [ ] **Carrie's origin-story voice memo** — polish "Born in Shenzhen" when
+      it arrives; keep the heritage copy file word-for-word identical.
+
+## Queued work
+
+- [ ] **Alt-text pass** (~300 migrated images) — GitHub issue #8. Next up.
+- [ ] **Design Immersion Curriculum + Maker Badges pages** — the media kit's
+      Certification section links these on the old site; need homes or
+      redirects before domain cutover.
+- [ ] **People section design** — 41 Team/Resident profiles migrated and
+      waiting; pages vs. popups is a design discussion with Mapet.
+- [ ] **MFEdu course-sequence build** — sequential Astro pages with
+      localStorage progress; then repoint the course CTAs (flagged in
+      makefashion-edu.astro) from /shelf/ to the real course landing.
+- [ ] **Design-token pass** from the brand guide + Mapet design review.
+- [ ] **Ben: heritage page on WordPress** — paste-ready copy in
+      reference/makefashion-ca-edu-heritage-copy.md.
+
+## Domain cutover checklist (target: by Sept 1, HostPresto renewal Sept 7)
+
+- [ ] Videos re-hosted (above)
+- [ ] Old-site links resolved: certification pages, any remaining
+      steamhead.space/wp-content references
+- [ ] Add steamhead.space zone to James's Cloudflare account; attach custom
+      domain to the Worker
+- [ ] Update GitHub OAuth app homepage URL
+- [ ] Final WordPress export archived in Drive; decline HostPresto renewal
+- [ ] Repo public flip (secrets scan already clean) — optional, any time
