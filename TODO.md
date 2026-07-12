@@ -22,9 +22,12 @@ the items teammates need visibility on.
       Residents), 30 profile pages with build-time blog mentions, old WP
       profile URLs redirected. Photo gaps remain: 4 profiles share an
       LED-strip placeholder, 4 use cartoon avatars.
-- [ ] **MFEdu course-sequence build** — sequential Astro pages with
-      localStorage progress; then repoint the course CTAs (flagged in
-      makefashion-edu.astro) from /shelf/ to the real course landing.
+- [x] **MFEdu course-sequence build** — /courses/mfedu-intro/: 14 lessons
+      from the 2022 combined guide, localStorage progress (auto-complete +
+      uncheck + reset), 11 worksheet PDFs mirrored to /downloads/mfedu-course/,
+      all course CTAs repointed. Missing assets flagged for Blake: Croquis
+      worksheet (dead Drive link), Student Handout, Paper Sewing Guides,
+      Design Process video.
 - [ ] **Design-token pass** from the brand guide + Mapet design review.
 - [x] **Ben: heritage page on WordPress** — live on makefashion.ca/edu and
       verified (wording matches reference/makefashion-ca-edu-heritage-copy.md,
