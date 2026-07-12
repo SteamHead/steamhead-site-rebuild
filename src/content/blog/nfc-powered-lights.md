@@ -7,7 +7,7 @@ program: general
 categories:
   - "Great Projects"
 image: "/images/2019/10/20191004_160016.jpg"
-imageAlt: "NFC powered lights"
+imageAlt: "Macro shot of an NFC antenna circuit with LEDs on flexible PCB"
 ---
 
 These NFC powered lights adorn the SteamHead door. Check out the upclose photo of the circuit!

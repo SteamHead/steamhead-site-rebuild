@@ -9,7 +9,7 @@ categories:
   - "Maker Education"
   - "STEAM"
 image: "/images/2025/01/mgspace-scaled.jpeg"
-imageAlt: "MG Space Cardboard Engineering Semester Course"
+imageAlt: "Students examining a cardboard future-city model together"
 ---
 
 ### **Empowering Young Creators with Cardboard and Creativity**

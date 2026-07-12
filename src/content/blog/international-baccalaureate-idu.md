@@ -8,7 +8,7 @@ categories:
   - "James"
   - "JamesEd"
 image: "/images/2023/01/IDU-Math-InS.jpg"
-imageAlt: "International Baccalaureate IDUs: I&S+Math"
+imageAlt: "Students solving equations on a whiteboard in a math classroom"
 ---
 
 I.B. teachers, trying to come up with an IDU concept? I have three suggestions here, and one is from an AI! I worked as a Tech Integrator at an I.B. school in Shenzhen, China. Our hallways were filled with students of different backgrounds and cultures, and the program turned out to be an excellent fit for the school and the teachers. One aspect of I.B. that was often challenging for new teachers was the Inter-Disciplinary Units (explanation added at the bottom if you'd like it - TL;DR it's a project that spans two subjects. Think math isn't useful? Try combining it with any other subject to see it's immense use!).

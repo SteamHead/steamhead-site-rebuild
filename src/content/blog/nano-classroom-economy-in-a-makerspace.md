@@ -9,7 +9,7 @@ categories:
   - "JamesEd"
   - "SteamBeans"
 image: "/images/2023/01/student-bank.jpg"
-imageAlt: "Nano Classroom Economy in a Makerspace"
+imageAlt: "Illustration of gold coins on a desk with cartoon students nearby"
 ---
 
 A SteamHead member and teacher managed a grade 5 makerspace class, and her students learned some financial literacy through using nano cryptocurrency.

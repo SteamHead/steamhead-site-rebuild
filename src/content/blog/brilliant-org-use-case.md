@@ -9,7 +9,7 @@ categories:
   - "JamesEd"
   - "Maker Education"
 image: "/images/2022/12/00116-926890418-a-grade-6-student-using-a-macbook-and-a-website-to-study-geometry.jpg"
-imageAlt: "Brilliant.org Use Case"
+imageAlt: "Two students at desks, one using a laptop, in a classroom"
 ---
 
 As a middle school technology integrator, I have recently been using the website Brilliant.org in my teacher's classroom and have had mixed feelings about it. On the one hand, I have found the learning games on the website to be extremely engaging and effective at teaching complex concepts to my students. The interactive nature of the games makes them feel more like fun activities than traditional lessons, which has helped to keep my students motivated and engaged.

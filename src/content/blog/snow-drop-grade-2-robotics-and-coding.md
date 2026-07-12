@@ -8,7 +8,7 @@ categories:
   - "Great Projects"
   - "Maker Education"
 image: "/images/2026/03/snow2.jpg"
-imageAlt: "Snow Drop! Grade 2 Robotics and Coding"
+imageAlt: "Cardboard snow-release box beside a tablet running OctoStudio"
 ---
 
 A story of collaboration, authentic audience, cross-grade mentorship, creative coding, and physical computing written to encourage educators!
@@ -109,9 +109,9 @@ The coding was simple and clear: send a beam when a button is tapped.
 
 Images:
 
-![](/images/2026/03/IMG_9878-235x512.jpg)
+![OctoStudio app screen with a snowman character and stop button](/images/2026/03/IMG_9878-235x512.jpg)
 
-![](/images/2026/03/snow1-523x512.jpg)
+![Cardboard snow box wired to a micro:bit and servo](/images/2026/03/snow1-523x512.jpg)
 
 * * *
 
@@ -123,7 +123,7 @@ The micro:bit ran a MicroBlocks program that:
 -   Rotated the servo to open the trap door
 -   Returned the servo to closed position
 
-Image: ![](/images/2026/03/microblocks_octo-634x512.png)
+Image: ![MicroBlocks code blocks controlling a servo motor via micro:bit buttons](/images/2026/03/microblocks_octo-634x512.png)
 
 Uploading directly via MicroBlocks made iteration fast — especially useful during rehearsal testing.
 

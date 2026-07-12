@@ -8,7 +8,7 @@ order: 0
 
 MakeFashion Edu STEAM Runway Shows are fashion tech events showcasing young designers' integration of STEAM skills into wearables on a flat fashion runway.
 
-![](/images/mfedu/2021/05/0A5A4492-Edit-scaled.jpg)
+![Two students in elegant dresses wearing floral unicorn crowns](/images/mfedu/2021/05/0A5A4492-Edit-scaled.jpg)
 
 ## CALGARY
 
@@ -16,7 +16,7 @@ Calgary is the home of MakeFashion, the professional designer platform and names
 
 \[2019 Semester 1\](/makefashion-edu/calgary2019/)
 
-![](/images/mfedu/2019/09/1080-2811.jpg)
+![Student in white shirt wearing large pink sculptural skirt with toy vehicles and lights](/images/mfedu/2019/09/1080-2811.jpg)
 
 ## SAN MARCOS
 
@@ -26,7 +26,7 @@ San Marcos is the home of High Tech Middle, a progressive "Project Based Learnin
 
 \[2020 Semester 1\](/makefashion-edu/sanmarcos2020s1/)
 
-![](/images/mfedu/2021/05/IMG_1052-scaled.jpg)
+![Two students on runway, one in white fringed dress, other with unicorn ears and wand](/images/mfedu/2021/05/IMG_1052-scaled.jpg)
 
 ## SHENZHEN
 
@@ -36,7 +36,7 @@ We began our runway program in Shenzhen, and thanks to the Design Society, a gro
 
 \[2018 Semester 1\](/makefashion-edu/shenzhen2018/)
 
-![](/images/mfedu/2021/05/ed-nologo-nocrop-4555-2-scaled.jpg)
+![Student wearing illuminated dinosaur head and LED light-up wings](/images/mfedu/2021/05/ed-nologo-nocrop-4555-2-scaled.jpg)
 
 ## TUCSON
 

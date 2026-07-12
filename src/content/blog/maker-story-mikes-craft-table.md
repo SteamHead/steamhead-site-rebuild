@@ -8,7 +8,7 @@ categories:
   - "Great Projects"
   - "Mike"
 image: "/images/2020/08/thumbnail-how-hard-could-it-bethumb.jpg"
-imageAlt: "Mike's Maker Story: Building My First Table"
+imageAlt: "Video thumbnail 'Build a Crafting Table! How Hard Could It Be?' with Mike beside the table"
 ---
 
 This video is the story of how I wanted to fill the need for a crafting table in my wife's workspace, and how I dove in head first to building it from wood, knowing very little about woodworking. How-to videos often come from the perspective of an expert showing off their craft; my video is more of a how-to on how to approach being a maker, how to learn new skills, how to be flexible, how to fail, and how to get help. I am NO expert woodworker. I'm a novice, at best--if I can lay claim to that title at all. The thing I can do is tell stories, and I'm trying to point that skill toward myself as a way to communicate the value of making things and to inspire others to become makers.

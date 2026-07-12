@@ -8,7 +8,7 @@ categories:
   - "Maker Education"
   - "Twila"
 image: "/images/2018/09/20180620_031231978_iOS-scaled.jpg"
-imageAlt: "Getting to know the SteamHead Team: Twila Busby"
+imageAlt: "Teachers and students gathered in a school hallway for a photo"
 ---
 
 _We'd love for you to get to know the SteamHead team better. In this series of posts, we ask the great people behind SteamHead some questions about the organization, the pandemic and their hobbies!_
@@ -17,7 +17,7 @@ _We'd love for you to get to know the SteamHead team better. In this series of p
 
 Next up is **Twila Busby**.
 
-![](/images/2018/09/20180620_073326593_iOS-300x225.jpg)
+![Teachers and young makers posing together for a group photo](/images/2018/09/20180620_073326593_iOS-300x225.jpg)
 
 **What's your favourite student project and why?**  
 I can't remember the project piece, but I will always remember a young designer telling me that the MakeFashion Edu Runway Show was the "best day of her life"! I think kids do not have enough opportunities to create something wonderful and share it with others (besides their class and teacher). So when they can show and talk about their work with adults who are interested, I think that is very motivating for them.
@@ -52,4 +52,4 @@ Just finished Netflix's Baking Impossible, where a baker and an engineer are pai
 
 Learn more about Twila by reading her profile [here](/people/twila-busby/).
 
-![](/images/2018/10/twila2-300x268.jpg)
+![Twila Busby smiling in a portrait against an orange background](/images/2018/10/twila2-300x268.jpg)

@@ -7,10 +7,10 @@ program: general
 categories:
   - "Events"
 image: "/images/2019/09/nsmf-1-e1569678125578.jpeg"
-imageAlt: "School Maker Faire"
+imageAlt: "Red robot mascot for the Nanshan School Maker Faire"
 ---
 
-![](/images/2019/09/nsmf-172x300.jpeg)
+![Nanshan School Maker Faire poster with QR code and event date](/images/2019/09/nsmf-172x300.jpeg)
 
 Call for Makers!!! There is one week left to sign up for a table to present your incredilble creativity at the School Maker Faire: Nanshan. Come as you are… share maker projects, drama performances, art, or a school project you are currently doing. But sign up now!!! Please follow the QR code above. The deadline to sign up has been extended to Friday September 27th.
 

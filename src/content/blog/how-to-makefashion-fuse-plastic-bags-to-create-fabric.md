@@ -7,7 +7,7 @@ program: makefashion-edu
 categories:
   - "MakeFashion Edu"
 image: "/images/2019/04/Noname.jpg"
-imageAlt: "How-to MakeFashion: Fuse Plastic Bags to Create Fabric"
+imageAlt: "Video still of hands peeling parchment paper off fused plastic bag fabric"
 ---
 
 http://youtube.com/embed/rBcuPSlV-kI

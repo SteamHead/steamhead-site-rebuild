@@ -4,7 +4,7 @@ role: team
 date: 2020-02-27
 description: "Hardi is our new full time resident!"
 image: "/images/2020/02/hardihuang-1.jpg"
-imageAlt: "Hardi Huang"
+imageAlt: "Hardi Huang in a workshop with LED equipment"
 ---
 
 Hardi is our new full time resident! He makes a TON of design and tech content on [Facebook](https://www.facebook.com/huanghao521) and [Bilibili](https://www.bilibili.com/video/av40988771/)

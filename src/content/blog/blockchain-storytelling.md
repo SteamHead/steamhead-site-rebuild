@@ -9,10 +9,10 @@ categories:
   - "JamesEd"
   - "SteamBeans"
 image: "/images/2021/12/Story-Chain.jpg"
-imageAlt: "Blockchain Storytelling"
+imageAlt: "Bitcoin logo over a glowing blockchain network with \"Story Chain\" text"
 ---
 
-![](/images/2021/12/Story-Chain-300x251.jpg)My students get exposure to the concepts I have learned about as a result of my cryptocurrency studies. I find "financial sovereignty" very relatable to "self agency", which is (the most?) an important element in motivating students. John Dewey progressive education essays and Standford's "Design Thinking" process have been my favorite references, but the realm of knowledge covered in crypto educational media is a worthy contender.
+![Bitcoin logo over a glowing blockchain network with "Story Chain" text](/images/2021/12/Story-Chain-300x251.jpg)My students get exposure to the concepts I have learned about as a result of my cryptocurrency studies. I find "financial sovereignty" very relatable to "self agency", which is (the most?) an important element in motivating students. John Dewey progressive education essays and Standford's "Design Thinking" process have been my favorite references, but the realm of knowledge covered in crypto educational media is a worthy contender.
 
 We have used crypto currency for purchasing display space in a virtual museum, as quadratic voting tokens, and more. Many of these activities do not rely upon crypto, but rather use it as an additional tool in order to bring more learning into the lessons. Blockchain Storytelling did not use any crypto, but rather I formulated my class discussion points very differently, and with new terms, because of my exposure to crypto currency media (YouTubes and podcasts). Because of the philosophy behind these concepts, I feel a need to expose my students to some of the terms and perspectives that I find.
 

@@ -8,7 +8,7 @@ categories:
   - "JamesEd"
   - "SteamBeans"
 image: "/images/2022/09/quadraticvoting_64784026c.jpg"
-imageAlt: "Field Trip Quadratic Voting"
+imageAlt: "AI-generated abstract diagram with garbled text about voting"
 ---
 
 I recently taught a lesson on [quadratic voting](https://en.wikipedia.org/wiki/Quadratic_voting) to my middle school students. Understanding non-traditional political and economic systems is important to me, because I think it creates better world citizens. These topics should be baked into lessons throughout K-12.

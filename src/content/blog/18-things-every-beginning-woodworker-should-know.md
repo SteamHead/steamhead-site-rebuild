@@ -7,7 +7,7 @@ program: general
 categories:
   - "STEAM"
 image: "/images/2019/04/maxresdefault1.jpg"
-imageAlt: "18 Things Every Beginning Woodworker Should Know"
+imageAlt: "Man in a workshop holds two banana-shaped tools beside \"Tools aren't as important as you think\" text"
 ---
 
 http://youtube.com/embed/hXjTXeXeTpI

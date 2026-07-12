@@ -4,7 +4,7 @@ role: resident
 date: 2018-08-22
 description: "Oliver came down for a full month's residency in August! We will be posting some of the projects and events he hosted."
 image: "/images/2018/08/oliverchild.jpg"
-imageAlt: "Oliver Child"
+imageAlt: "Oliver Child holding a paper parasol and decorated foam wand"
 ---
 
 Oliver came down for a full month's residency in August! We will be posting some of the projects and events he hosted. He created a HUGE wall drawing machine, he coached primary school students in 3D modeling, he developed a MakeFashion Edu flashy badge template, a 3D modeled and repaired our projector screen holders, and a more!

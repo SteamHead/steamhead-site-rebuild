@@ -4,7 +4,7 @@ role: team
 date: 2021-08-01
 description: "Christy Wang is an ex-CPA who followed a traditional career path working for PricewaterhouseCoopers, Merrill Lynch, and finally MTV Networks before realizing she just really wasn’t that traditional."
 image: "/images/2021/08/christywang-1.jpg"
-imageAlt: "Christy Wang"
+imageAlt: "Christy Wang in a makerspace with 3D printers"
 ---
 
 Christy Wang is an ex-CPA who followed a traditional career path working for PricewaterhouseCoopers, Merrill Lynch, and finally MTV Networks before realizing she just really wasn’t that traditional. For a year of her life, she committed to living according to whatever felt intuitively right rather than what made rational sense. She started a jewelry business that got written up in Time Out New York, studied Tai Chi and eastern spirituality while living on Wudang mountain in China, and volunteer taught former street children accounting and math while living outside an ashram in India.

@@ -9,7 +9,7 @@ categories:
   - "JamesEd"
   - "Maker Education"
 image: "/images/2023/01/two-teachers-5.jpeg"
-imageAlt: "Student Group-Work Issues and Solutions (ai generated)"
+imageAlt: "AI-generated illustration of two educators in a video call with a glowing mandala screen"
 ---
 
 Two SteamHead educators discussed collaborative project options between classes, and worked around some typical issues with student group work. Let's tune in: Professor Sassoubre: ...I'm doing well, thank you. I understand you wanted to discuss a potential collaboration between your high school design class and my university engineering students. Is that correct?Mr. James: Yes, that's correct. I think it would be a great opportunity for both groups of students to learn from each other and work on a project together. However, **I'm a little concerned that the high school students won't have much to contribute** to the project and will just be receiving advice from the university students. I want to make sure that all of the students are motivated to work on the project and feel like they are contributing.

@@ -18,11 +18,11 @@ https://www.youtube.com/watch?v=9bTMRAbPU4M
 
 ## LOGO
 
-![](/images/mfedu/2021/06/mfedublue.png)
+![MakeFashion Edu program logo](/images/mfedu/2021/06/mfedublue.png)
 
 ## STICKERS
 
-![](/images/mfedu/2021/06/StickerSheet.png)
+![Sheet of MakeFashion Participant stickers](/images/mfedu/2021/06/StickerSheet.png)
 
 ### RUN THE PROGRAM
 

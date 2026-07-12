@@ -9,7 +9,7 @@ categories:
   - "JamesEd"
   - "Maker Education"
 image: "/images/2019/04/peeled-badge-470x353.jpg"
-imageAlt: "What are Open Badges?"
+imageAlt: "Open Badge illustration revealing hidden circuit board data inside"
 ---
 
 Open Badges are verifiable, portable digital badges with embedded metadata about skills and achievements. They comply with the Open Badges Specification and are shareable across the web.

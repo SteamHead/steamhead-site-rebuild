@@ -7,7 +7,7 @@ description: >
   projects, educator stories, maker events, and ideas from communities around
   the world.
 image: /images/2025/05/20221004_095453326_iOS-scaled.jpg
-imageAlt: Students collaborating in a makerspace
+imageAlt: "Educators and a student sharing a laugh over colored-pencil artwork in class"
 ---
 
 The Great Things Blog is where we share what's happening across SteamHead's programs and communities.

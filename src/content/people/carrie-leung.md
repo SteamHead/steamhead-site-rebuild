@@ -4,7 +4,7 @@ role: team
 date: 2021-09-30
 description: "Carrie Leung is a San Francisco native, a techie turned teacher."
 image: "/images/2021/09/carrieleung.jpg"
-imageAlt: "Carrie Leung"
+imageAlt: "Carrie Leung in a classroom with bookshelves"
 ---
 
 Carrie Leung is a San Francisco native, a techie turned teacher. She is a maker-educator focused on building open-community platforms for students, parents, educators, and industry to collaborate, learn, and connect. She has spent eight years in Shenzhen, China building project-based learning programs, embedding Maker Education, and experiential learning into classrooms. She recently piloted an Electronics and Media program at High Tech High, HTMNC in California.

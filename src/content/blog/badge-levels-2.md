@@ -9,7 +9,7 @@ categories:
   - "JamesEd"
   - "Maker Education"
 image: "/images/2019/04/badgelevels-bluegreen.png"
-imageAlt: "Badge Levels"
+imageAlt: "Watch, Try, Do, Teach cycle diagram numbered one through four"
 ---
 
 We don't tend to measure Open Badges with traditional grading systems. Instead, we adopted a "Skill Matrix" from project management systems, to indicate the level of skill used to earn a badge.  
