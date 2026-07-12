@@ -7,18 +7,18 @@ program: general
 categories:
   - "JamesEd"
 image: "/images/2023/02/aclassroomfullofstudentsw_34808902.jpg"
-imageAlt: "Seating Arrangements for Students with Disabilities"
+imageAlt: "Illustrated classroom of students seated at desks facing the front"
 ---
 
 In my 2018 classroom, I had the privilege of working with 18 students, two of whom presented with disabilities. Specifically, Theo was diagnosed with moderate autism, which impacted his social abilities, and Maria had a sensory processing disorder that resulted in high sensitivity to certain sensory experiences, such as physical stimuli and sound. My personal experience with misophonia helped me to connect with Maria and understand her challenges.
 
-![](/images/2023/02/astudentsittinginacorner_79652497-150x150.jpg)
+![Illustrated student sitting cross-legged reading near a bookshelf](/images/2023/02/astudentsittinginacorner_79652497-150x150.jpg)
 
 \*Theo, sitting in the corner\*
 
 The seating arrangements in my classroom were designed to cater to the diverse needs and preferences of my students. Theo was granted the privilege of sitting almost exclusively on the floor in the front corner of the classroom. This arrangement allowed him to avoid unexpected social situations and be in a familiar and predictable environment. Furthermore, he was permitted to start working before my instructions had concluded, which facilitated his active learning and information retention, as well as reduced his dependence on support from his peers.
 
-![](/images/2023/02/astudentcoveringherearss_89786313-150x150.jpg)
+![Illustrated student with hand raised to her head looking distressed](/images/2023/02/astudentcoveringherearss_89786313-150x150.jpg)
 
 \*Maria, experiencing distress from a sound\*
 

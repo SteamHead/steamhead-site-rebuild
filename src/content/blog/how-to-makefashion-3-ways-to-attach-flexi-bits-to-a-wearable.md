@@ -7,7 +7,7 @@ program: makefashion-edu
 categories:
   - "MakeFashion Edu"
 image: "/images/2019/04/flex.bits-youtube.jpg"
-imageAlt: "How-to MakeFashion: 3 Ways to Attach Flexi.Bits to a Wearable"
+imageAlt: "LED light strand glowing beside \"How would you attach flexi.bits to a wearable?\" text"
 ---
 
 http://youtube.com/embed/QMcywk0XAUE

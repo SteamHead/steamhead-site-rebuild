@@ -7,7 +7,7 @@ program: makefashion-edu
 categories:
   - "MakeFashion Edu"
 image: "/images/2019/07/maxresdefault.jpg"
-imageAlt: "MakeFashion Edu Insights: Kiki Yi - Dual Emotions Hoop Dress"
+imageAlt: "Three students walk the runway in colorful illuminated MakeFashion Edu skirts"
 ---
 
 https://www.youtube.com/watch?v=SyfGzWgNhWY

@@ -7,10 +7,10 @@ program: makefashion-edu
 categories:
   - "MakeFashion Edu"
 image: "/images/2018/08/7V4A8195.jpg"
-imageAlt: "Quinceañera - Las Florecitas"
+imageAlt: "Student wearing a wide feathered hat and floral quinceañera dress"
 ---
 
-![](/images/2018/09/7V4A8205.jpg)
+![Four students pose together, one wearing a feathered hat and floral quinceañera dress](/images/2018/09/7V4A8205.jpg)
 
 Emily Cao, Alice Xiao, Amy Luo, and Winnie Gu are a mixed grade-two/grade-three team from Shen Wai International School in Shenzhen, China.
 
@@ -38,4 +38,4 @@ _by Nick Shriner_
 
   
 
-![](/images/2018/08/7V4A8199.jpg) ![](/images/2018/08/7V4A8197.jpg) ![](/images/2018/08/7V4A8195.jpg)
+![Student models a flower-covered quinceañera dress with a wide feathered hat](/images/2018/08/7V4A8199.jpg) ![Side profile of a student wearing a wide feathered hat and lace dress](/images/2018/08/7V4A8197.jpg) ![Close-up of a student wearing a feathered hat and floral quinceañera dress](/images/2018/08/7V4A8195.jpg)

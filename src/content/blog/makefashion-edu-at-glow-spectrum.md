@@ -8,7 +8,7 @@ categories:
   - "Events"
   - "MakeFashion Edu"
 image: "/images/2019/09/Makefashion-edu-logo-blue.png"
-imageAlt: "MakeFashion Edu at Glow - Spectrum"
+imageAlt: "MakeFashion Edu logo"
 ---
 
 http://youtube.com/embed/9bTMRAbPU4M

@@ -8,7 +8,7 @@ categories:
   - "JamesEd"
   - "SteamBeans"
 image: "/images/2023/01/class-shelf.jpg"
-imageAlt: "Monetary Policy: Ledgers in a Classroom"
+imageAlt: "A student reaching for colorful supply bins on a classroom shelf"
 ---
 
 Using a classroom economy to control student access to craft materials can be a useful tool for teaching financial literacy and encouraging responsible behavior. James, Twila, and Elisa implemented this technique in their STEAM summer camp by using poker chips from one set of poker chips as a form of currency during the first week, and a public ledger to track student balances in the second week.

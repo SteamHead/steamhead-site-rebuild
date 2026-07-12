@@ -14,7 +14,10 @@ the items teammates need visibility on.
       the DingTalk doc linked in that post, or Hardi Huang (MG Space).
 ## Queued work
 
-- [ ] **Alt-text pass** (~300 migrated images) — GitHub issue #8. Next up.
+- [x] **Alt-text pass** — done in PR #13 (issue #8): ~440 images described;
+      no student names; galleries verified image-by-image. Flagged for later:
+      4 people profiles share an LED-strip placeholder photo, 4 use cartoon
+      avatars, and thats-a-wrap.md has a near-black photo worth replacing.
 - [ ] **People section design** — 41 Team/Resident profiles migrated and
       waiting; pages vs. popups is a design discussion with Mapet.
 - [ ] **MFEdu course-sequence build** — sequential Astro pages with

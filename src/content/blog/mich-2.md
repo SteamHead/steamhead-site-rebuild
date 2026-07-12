@@ -8,7 +8,7 @@ categories:
   - "Great People"
   - "Great Projects"
 image: "/images/2019/10/20191117_110202521_iOS.jpg"
-imageAlt: "Michelle's Residency 2"
+imageAlt: "Makers working at laptop-covered tables during the arcade jam"
 ---
 
 Urban farmer and food maker, Michelle visited Steamhead again later in the year, working on new projects looking at building community at SH.  
@@ -43,4 +43,4 @@ With this residency period, it's about learning to think creatively with blank w
 
   
 
-![](/images/2020/02/20191116_131222086_iOS-300x225.jpg) ![](/images/2020/02/20191117_110159203_iOS-300x225.jpg) ![](/images/2020/02/20191117_105805144_iOS.jpg) ![](/images/2020/02/20191117_105336556_iOS-225x300.jpg) ![](/images/2019/10/20191117_110202521_iOS-300x225.jpg)
+![Three people crafting at a table under a lit paper lantern](/images/2020/02/20191116_131222086_iOS-300x225.jpg) ![Two men laughing at a laptop, one raising a hand](/images/2020/02/20191117_110159203_iOS-300x225.jpg) ![Group gathered around a glowing pink LED sculpture on a workbench](/images/2020/02/20191117_105805144_iOS.jpg) ![Infinity mirror reflecting a face and a toy hamburger](/images/2020/02/20191117_105336556_iOS-225x300.jpg) ![Makers working at laptop-covered tables during the arcade jam](/images/2019/10/20191117_110202521_iOS-300x225.jpg)

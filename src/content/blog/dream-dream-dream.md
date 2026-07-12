@@ -7,11 +7,11 @@ program: general
 categories:
   - "Uncategorized"
 image: "/images/2020/10/Copy-of-edMS-LR-4428.jpg"
-imageAlt: "Dream Dream Dream"
+imageAlt: "Four young makers in illuminated nightgowns holding stuffed animals"
 draft: true
 ---
 
-![](/images/2020/10/Copy-of-edMS-LR-4428.jpg)
+![Four young makers in illuminated nightgowns holding stuffed animals](/images/2020/10/Copy-of-edMS-LR-4428.jpg)
 
 ## Dream, Dream, Dream
 

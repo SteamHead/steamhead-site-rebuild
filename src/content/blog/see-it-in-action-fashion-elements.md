@@ -8,7 +8,7 @@ categories:
   - "MakeFashion Edu"
   - "STEAM"
 image: "/images/2021/03/Screen-Shot-2023-01-10-at-9.59.05-PM-e1673416970750.png"
-imageAlt: "See it in Action: Fashion Elements"
+imageAlt: "Slide reading 'What You Wear Tells a Story'"
 ---
 
 Carrie Leung, a fashion tech educator and founder of MakeFashion Edu, recognized the need for an accessible and comprehensive online course to help teachers start their own fashion tech programs in their classrooms. In response, she and the team at SteamHead created "SteamHead's Introduction to MakeFashion Edu," a free online course designed to give teachers all the startup information they need, including materials, instructions, and even self-paced learning opportunities for students.

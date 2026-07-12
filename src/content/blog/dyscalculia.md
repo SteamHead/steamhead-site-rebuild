@@ -7,12 +7,12 @@ program: general
 categories:
   - "JamesEd"
 image: "/images/2023/02/aclassroomofstudentstaking_14157638.jpg"
-imageAlt: "Dyscalculia + Microsoft Teams"
+imageAlt: "Illustrated classroom of students taking notes at their desks"
 ---
 
 Dyscalculia is a congenital condition that affects an individual's ability to acquire and perform mathematical tasks. It is a lifelong condition, and here is a [Numberphile YouTube](https://www.youtube.com/watch?v=p_Hqdqe84Uc) video on it.They say 3-6% of people have it!
 
-![](/images/2023/02/astudentsolvingamathprobl_83192539-150x150.jpg)Having dyscalculia does not mean a person won't be successful and happy, but it can often mean that academic or other life tasks are not well-designed for them.
+![Illustrated student standing in thought beside bookshelves](/images/2023/02/astudentsolvingamathprobl_83192539-150x150.jpg)Having dyscalculia does not mean a person won't be successful and happy, but it can often mean that academic or other life tasks are not well-designed for them.
 
 I read a pretty long academic paper, or five, on the condition, it's identification and possible "treatments" (awful word choice by the academics, imo). Funnily enough, when seen through the eyes of technology-integration, a large amount of the "treatments" fell into things I do anyways for all of my students.
 

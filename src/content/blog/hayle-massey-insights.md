@@ -7,7 +7,7 @@ program: makefashion-edu
 categories:
   - "MakeFashion Edu"
 image: "/images/2019/12/Screen-Shot-2021-09-09-at-12.07.03-PM.jpg"
-imageAlt: "MakeFashion Edu Project Insights: Hayle Massey"
+imageAlt: "Runway model wearing an illuminated wide-brim hat and dress"
 ---
 
 https://www.youtube.com/watch?v=EE-aVaSVrH0

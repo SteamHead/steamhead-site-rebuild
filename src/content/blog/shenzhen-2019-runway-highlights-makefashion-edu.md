@@ -7,7 +7,7 @@ program: makefashion-edu
 categories:
   - "MakeFashion Edu"
 image: "/images/2019/12/Screen-Shot-2019-12-11-at-9.42.13-AM.jpg"
-imageAlt: "MakeFashion Edu: Shenzhen 2019 Highlights"
+imageAlt: "Model in a glowing indigo costume with umbrella at the Shenzhen MakeFashion Edu runway show"
 ---
 
 https://youtu.be/82Fei8qsahI

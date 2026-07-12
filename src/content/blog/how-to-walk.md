@@ -7,7 +7,7 @@ program: makefashion-edu
 categories:
   - "MakeFashion Edu"
 image: "/images/2020/02/maxresdefault.jpg"
-imageAlt: "MakeFashion Edu Tutorial: How to Walk the Runway"
+imageAlt: "Candice Massey in the How To Walk the Runway video title card"
 ---
 
 https://www.youtube.com/watch?v=PRsp4Q\_P7tc

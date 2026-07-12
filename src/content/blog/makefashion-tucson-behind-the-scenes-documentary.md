@@ -7,7 +7,7 @@ program: makefashion-edu
 categories:
   - "MakeFashion Edu"
 image: "/images/2019/03/Shaw-1016789.jpg"
-imageAlt: "MakeFashion Edu Behind-The-Scenes Documentary"
+imageAlt: "Student in purple LED scale wings holds a glowing circuit board pendant"
 ---
 
 https://youtu.be/Uk-tq2zZfc0
@@ -26,4 +26,4 @@ Search for neo-pixels on Instructables.com, and you can find a bunch of stuff!
 
 Want to bring a program like this to your school district, or even just your classroom? Contact the team at [http://www.makefashion.ca/edu/home/contact/](http://www.makefashion.ca/edu/home/contact/)
 
-![](/images/2019/03/Shaw-1016789.jpg) ![](/images/2019/03/Shaw-1170679.jpg) ![](/images/2019/03/Shaw-lr-1017248.jpg) ![](/images/2019/03/Shaw-lr-1027647.jpg)
+![Student wearing purple LED scale wings holding a lit circuit board pendant](/images/2019/03/Shaw-1016789.jpg) ![Student wearing a glowing spiked LED helmet and orange wig](/images/2019/03/Shaw-1170679.jpg) ![Woman in a tall light-up top hat posing beside a student in an LED headband](/images/2019/03/Shaw-lr-1017248.jpg) ![Two women with two students in glowing cream costumes and a toddler boy](/images/2019/03/Shaw-lr-1027647.jpg)

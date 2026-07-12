@@ -7,7 +7,7 @@ program: makefashion-edu
 categories:
   - "MakeFashion Edu"
 image: "/images/2018/11/carrie-closeup-smile.jpg"
-imageAlt: "Bring Fashion Tech into your Classroom"
+imageAlt: "Workshop presenter smiling while gesturing in a classroom"
 ---
 
 https://www.youtube.com/watch?v=3\_HlJUDzJKw
@@ -22,4 +22,4 @@ In this workshop, we were introducing fellow teachers to the idea of Fashion Tec
 
 The workshop was fully booked, and we've already heard from some of the attendees working on their own programs! It can take a school a full year to add a program, so we are pretty happy to see a few quick changes this time around.
 
-![](/images/2018/11/carrie-closeup-smile.jpg) ![](/images/2018/11/lum-ben-explains-3.jpg) ![](/images/2018/11/lum-grace-in-audience.jpg)
+![Workshop presenter smiling while gesturing in a classroom](/images/2018/11/carrie-closeup-smile.jpg) ![Presenter explaining a concept in a classroom decorated for birthdays](/images/2018/11/lum-ben-explains-3.jpg) ![Teachers seated together listening during the workshop](/images/2018/11/lum-grace-in-audience.jpg)

@@ -12,7 +12,7 @@ categories:
   - "Maker Education"
   - "Mike"
 image: "/images/2021/02/Screen-Shot-2021-08-25-at-2.05.55-PM.png"
-imageAlt: "The SteamHead Design Immersion Curriculum"
+imageAlt: "Title page for 'The SteamHead Design Immersion Curriculum' with SteamHead logo"
 ---
 
 **A Collaborative Project Supporting Maker Education** **and Design Thinking in the Classroom**

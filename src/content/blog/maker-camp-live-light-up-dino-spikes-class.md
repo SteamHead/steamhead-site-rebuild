@@ -10,7 +10,7 @@ categories:
   - "MakeFashion Edu"
   - "Mike"
 image: "/images/2020/08/about-to-start.jpg"
-imageAlt: "Maker Camp Live! Light Up Dino Spikes Class"
+imageAlt: "Carrie modeling light-up dino spikes beside 'Maker Camp Live! Dino + Light' title card"
 ---
 
 The SteamHead MakeFashion Edu Team joined forces with Make Media and participated in their Maker Camp Live Series. We broadcast this video out to all their channels, and we hope some kids, parents, and kids at heart enjoy this fun, light-up dino spike project! Thanks to Mike Shaw for hosting us in his home studio and producing this project.
@@ -19,7 +19,7 @@ In the class, we teach how to up-cycle plastic for use in wearable tech (and any
 
 Thanks to Make and Maker Camp. Check out the rest of this great program at [http://makercamp.com/](http://makercamp.com/)
 
-![](/images/2020/08/Makercamp-Hero-Shot-with-words-e1597702377658-300x256.jpeg)
+![Illuminated dino spikes with text 'Light My Spikes! Build your own touch sensor'](/images/2020/08/Makercamp-Hero-Shot-with-words-e1597702377658-300x256.jpeg)
 
 **Dino Spikes**: [https://makercamp.com/event/makefashionedu-0828/](https://makercamp.com/event/makefashionedu-0828/)
 

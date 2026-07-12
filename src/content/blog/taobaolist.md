@@ -7,7 +7,7 @@ program: makefashion-edu
 categories:
   - "MakeFashion Edu"
 image: "/images/2018/10/a27d24_3e513c1eb1644e7080f503e6fb9f6977mv2.jpg"
-imageAlt: "MakerEd Taobao List"
+imageAlt: "Table of Taobao maker-supply listings with prices and links"
 ---
 
 Hi all, we have a list of [Taobao.com](http://taobao.com/) purchases for Maker Projects!

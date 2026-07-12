@@ -7,7 +7,7 @@ program: general
 categories:
   - "SteamBeans"
 image: "/images/2023/01/Beans-Lightning-1.png"
-imageAlt: "Let’s Connect: SteamHead’s Lightning Node!"
+imageAlt: "Network graph illustration connected to a smiling coffee bean mascot holding a lightning bolt"
 draft: true
 ---
 
@@ -23,7 +23,7 @@ To create a channel with us, here is our Lightning Node ID:
 
 Activity on this node will provide a valuable learning environment for us. You will be helping our students, parents, and teachers learn and discuss about how value can be expressed across people, places, and things. We believe that this is an excellent opportunity to gain knowledge together and deepen our understanding of how financial and economic forces might shape our lives, choices, and community.
 
-A tutorial is in the works, in the meantime these are the resources we found helpful in getting us set up:  ![](/images/2022/12/beanbeanery-223x300.png)    
+A tutorial is in the works, in the meantime these are the resources we found helpful in getting us set up:  ![Cartoon coffee bean mascot standing with a content smile](/images/2022/12/beanbeanery-223x300.png)    
 
   
 -   Step by step video: [https://youtu.be/Fa9AvF4jk1o](https://youtu.be/Fa9AvF4jk1o)

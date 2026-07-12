@@ -7,7 +7,7 @@ program: general
 categories:
   - "STEAM"
 image: "/images/2018/11/mmexport1539605744650-4.jpg"
-imageAlt: "3D Design in Primary Schools: A University Research Study"
+imageAlt: "Students using 3D design software at computers in a classroom"
 ---
 
 3D Modeling and Printing is a super fun and useful engineering activity. Lots of educators know that it has a place in the classroom, but run into trouble when trying to get approval for funding or training. Thank you [Macquarie University’s Department of Educational Studies](https://www.mq.edu.au/about/about-the-university/faculties-and-departments/faculty-of-human-sciences/departments-and-centres/department-of-educational-studies)! They followed 24 classes of K through Grade 2 students for 1 year, and created [a huge report of their 3D Modeling and Printing educational findings](https://primarymakers.com/). Complete with statistics, formal tests, academic theories and reflections, this thing is 279 pages long! If you need justification for your program, print this bad boy out and bring it to your next formal meeting.
@@ -18,4 +18,4 @@ imageAlt: "3D Design in Primary Schools: A University Research Study"
 
 This is a real win for the maker education, and I'm eagerly awaiting this report to be picked apart and referenced in smaller, more consumable formats. Just to add a small contribution to that, check out page 111, "Screen Recording Summaries by Year Group". See the multi-page table below? Read a few of those blocks, and you will have a good idea for how a typical 3D design lesson can go. A lot of teachers aren't sure how fast or slow students should be moving through the materials, and I think these little blocks do a great job for informing teacher expectations.
 
-![](/images/2018/11/mmexport1539605691684-1.jpg) ![](/images/2018/11/mmexport1539605687703-1.jpg) ![](/images/2018/11/mmexport1539605680084-3.jpg)
+![Monitor displaying colorful 3D shapes in modeling software](/images/2018/11/mmexport1539605691684-1.jpg) ![Monitor showing a blue 3D robot figure built in 123D Design](/images/2018/11/mmexport1539605687703-1.jpg) ![Monitor showing yellow and silver 3D shapes in design software](/images/2018/11/mmexport1539605680084-3.jpg)

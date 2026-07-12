@@ -4,7 +4,7 @@ role: resident
 date: 2018-01-15
 description: "Zachary is a artist and maker living between Shenzhen and the US."
 image: "/images/2018/01/zachary.jpg"
-imageAlt: "Zachary"
+imageAlt: "Zachary working on his laser-cut art installation"
 ---
 
 Zachary is a artist and maker living between Shenzhen and the US. He came to SteamHead to work on the design and construction of this laser cut lamp, which has become quite famous in Shenzhen.

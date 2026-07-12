@@ -4,7 +4,7 @@ role: team
 date: 2019-11-22
 description: "Mike's Vlog, Ep Zer0 \"China Prep\" Michael Shaw grew up on the Big Island of Hawaii, but has lived in the San Francisco Bay Area for more than fifteen years."
 image: "/images/2019/11/mikeshaw.jpg"
-imageAlt: "Mike Shaw"
+imageAlt: "Mike Shaw recording with camera and headphones"
 ---
 
 https://youtu.be/W6FPeAodkaY

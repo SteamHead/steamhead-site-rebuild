@@ -18,14 +18,14 @@ tags:
   - "solar"
   - "twila"
 image: "/images/2023/01/desert-solar.jpg"
-imageAlt: "Desert Solar Journey"
+imageAlt: "Solar panels laid across desert ground near Joshua trees"
 ---
 
 Solar panels are a way for an individual to create a tradable commodity: electricity. It often goes unappreciated that even a middle school student is able to create a tradable commodity. And we are not talking about growing a few grains of rice and eating it at home; electricity can be traded for money by any anonymous person with a computer, the internet, and some electricity. In terms of educational philosophy - energy independence is a pillar of the systems thinking that we teach to students of middle school and up. That could be literally electricity, like it is in this case, but it also includes time, money, and even motivation. Esoteric, perhaps, but we can also boil it down to "creating what you want". In the end we are all required to do so, we are just not taught many ways to accomplish the tasks, nor given many explanations about the systems behind energy.
 
 Exerting your personal preferences is a tough skill for students to gain personal advancement from, because they rarely have support and mentor-ship in discovering their preferences. MakeFashion Edu excels at that. But once you are able to set your own course, knowing the rules of the system is key.
 
-![](https://sat02pap003files.storage.live.com/y4mNxI3I7nXGM63aGJlDWBl7mH87KxoOIXNs9YSKjBiCj2Zgc0hvQHmCdfIlxm88x-oFz96EQNss19znUQI1qkSEUhDm9_Qw-62I2CmYKbnKNrpDLu3agmnRBxuAnId4mVNcZ5D7yf-PRMYtiUCD9tGpISYK6i7IuoiLmYWMmk0axgbkYI1K1Ys9sPgcY7uw6LJYz95EbbgNyEUD5ikxXjIHA?encodeFailures=1&width=402&height=716)
+![Screenshot of a Craigslist ad for used solar panels](https://sat02pap003files.storage.live.com/y4mNxI3I7nXGM63aGJlDWBl7mH87KxoOIXNs9YSKjBiCj2Zgc0hvQHmCdfIlxm88x-oFz96EQNss19znUQI1qkSEUhDm9_Qw-62I2CmYKbnKNrpDLu3agmnRBxuAnId4mVNcZ5D7yf-PRMYtiUCD9tGpISYK6i7IuoiLmYWMmk0axgbkYI1K1Ys9sPgcY7uw6LJYz95EbbgNyEUD5ikxXjIHA?encodeFailures=1&width=402&height=716)
 
 \*the craigslist posting for our used solar panels\*
 

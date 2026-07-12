@@ -26,7 +26,7 @@ https://www.youtube.com/watch?v=NKvJ2gJkuf8&list=PLvhCEpOVqszrS-VQG1sr6TVvNcuXYC
 
 ## MakeFashion Edu Books
 
-![](/images/mfedu/2021/06/Screenshot-2021-06-29-at-1.02.20-pm.jpg)
+![MakeFashion Edu Season 1 book cover with student model](/images/mfedu/2021/06/Screenshot-2021-06-29-at-1.02.20-pm.jpg)
 
 ### RUN THE PROGRAM
 

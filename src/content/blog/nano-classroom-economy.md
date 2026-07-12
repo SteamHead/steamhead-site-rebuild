@@ -8,7 +8,7 @@ categories:
   - "Great Projects"
   - "SteamBeans"
 image: "/images/2020/12/Screen-Shot-2020-12-23-at-8.36.13-PM.jpg"
-imageAlt: "Nano Classroom Economy"
+imageAlt: "Screenshot of a Mozilla Hubs virtual gallery displaying MakeFashion Edu garment photos"
 ---
 
 In September 2020, James reached out to the Reddit cryptocurrency channels for advice about using crypto in a classroom. A "nano" advocate from the Netherlands convinced him of the currency and walked him through setting up wallets and an initial exchange (and donated some nano to the students!). With this setup, the pandemic continued and James' real-life class scheduled was cancelled and another phase of online learning was planned. James wondered, "How can we use nano in online classes?"

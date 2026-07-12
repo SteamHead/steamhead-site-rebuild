@@ -16,7 +16,7 @@ Use this 3 month calendar of activities as a guide for all the events leading up
 
 [**Sample Participant Calendar**](/images/mfedu/2021/06/MFEdu-Run-The-Program-Participant-Calendar.pdf)
 
-![](/images/mfedu/2021/06/RunwayParticipantMonth1.png)![](/images/mfedu/2021/06/RunwayParticipantMonth2.png)![](/images/mfedu/2021/06/RunwayParticipantMonth3.png)
+![Month 1 runway participant calendar with activities schedule](/images/mfedu/2021/06/RunwayParticipantMonth1.png)![Month 2 runway participant calendar with activities schedule](/images/mfedu/2021/06/RunwayParticipantMonth2.png)![Month 3 runway participant calendar with activities schedule](/images/mfedu/2021/06/RunwayParticipantMonth3.png)
 
 ### RUN THE PROGRAM
 

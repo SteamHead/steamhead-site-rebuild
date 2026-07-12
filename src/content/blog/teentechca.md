@@ -7,10 +7,10 @@ program: general
 categories:
   - "Events"
 image: "/images/2019/02/Noname.jpg"
-imageAlt: "Teen Tech Week in California!"
+imageAlt: "Poster reading 'Libraries Are For Making' with maker icons"
 ---
 
-**![](/images/2019/02/getconnected.png)**
+**![Logo reading 'Get Connected Teen Tech Week'](/images/2019/02/getconnected.png)**
 
 **“Hack Your Pack” Design & Wearable Tech Project**
 

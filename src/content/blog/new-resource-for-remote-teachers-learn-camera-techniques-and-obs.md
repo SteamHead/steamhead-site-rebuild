@@ -9,7 +9,7 @@ categories:
   - "Mike"
   - "SteamHead Spaces"
 image: "/images/2020/09/thumb-obs-for-teachers-small.jpg"
-imageAlt: "New Resource for Remote Teachers Learn Camera Techniques and OBS"
+imageAlt: "Thumbnail reading 'Virtual Learning Space' with the OBS logo and a man in a plaid shirt"
 ---
 
 Resident Mike Shaw created a new video that walks educators through how to make their online videos look better, be more dynamic and interesting, as well as ways to send out more than just your face to your video calls. Check it out, and share it to the teachers and educators you know. This is a great resource.

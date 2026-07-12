@@ -7,7 +7,7 @@ program: makefashion-edu
 categories:
   - "MakeFashion Edu"
 image: "/images/2019/07/runway-full.jpg"
-imageAlt: "MakeFashion Edu: Shenzhen 2019 Runway Full Version"
+imageAlt: "Student model in a glowing LED dress on the runway, titled 'Shenzhen Runway 2019'"
 ---
 
 https://www.youtube.com/watch?v=GO1TqJfs8FI  

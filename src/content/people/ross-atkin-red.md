@@ -4,7 +4,7 @@ role: resident
 date: 2018-03-22
 description: "Ross stayed with us for just a few nights!"
 image: "/images/2018/03/rossatkin.jpg"
-imageAlt: "Ross Atkin"
+imageAlt: "Ross Atkin with a colleague at a workshop"
 ---
 
 Ross stayed with us for just a few nights! Also, he was an exceptional resident who had already been working out the details of his community service, and had everything prepared and planned as the main purpose of his trip. We offer a free residency room to makers willing to help out the local community, usually their service is in tandem with their personal goals but here they were one and the same!

@@ -4,7 +4,7 @@ role: team
 date: 2021-09-29
 description: "James is empowering Maker Ed teachers, students, and schools with techniques and formalization of their makerspace programs."
 image: "/images/2021/09/bensimpson.jpg"
-imageAlt: "Benjamin \"James\" Simpson"
+imageAlt: "James Simpson in a workshop with shelves of equipment"
 ---
 
 James is empowering Maker Ed teachers, students, and schools with techniques and formalization of their makerspace programs. Living in Shenzhen for 8 years, coming from San Francisco, he is using his engineering and academic mindset to organize the chaotic world of Making into a system of learnable innovation by releasing Open Source tools, hosting public meetings, and donating time to organizations in Shenzhen and San Francisco.

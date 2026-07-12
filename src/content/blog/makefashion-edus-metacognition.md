@@ -8,7 +8,7 @@ categories:
   - "JamesEd"
   - "MakeFashion Edu"
 image: "/images/2023/06/mfedu.jpg"
-imageAlt: "MakeFashion Edu's Metacognition"
+imageAlt: "Costumed young makers posing on a lit MakeFashion Edu runway stage"
 ---
 
 MakeFashion Edu is not just a fun project, it has solid connections to progressive education philosophy and academic musings. For newcomers, this is our project where students choose advocacy issues and then combine fashion and electronics for a public runway, exemplifies Dale Schunk's (noted education academic) notion that learning and cognition are shaped by a learner's beliefs, which in turn, are influenced by personal, social, and cultural factors. This project-based approach promotes Social Learning Theory.

@@ -4,7 +4,7 @@ role: resident
 date: 2018-02-12
 description: "Anina is an international model turned maker! She joined us in Shenzhen to bring attitude and fashion to electronics and education."
 image: "/images/2018/02/aninanet.jpg"
-imageAlt: "Anina Net"
+imageAlt: "Anina Net teaching children at a workshop"
 ---
 
 Anina is an international model turned maker! She joined us in Shenzhen to bring attitude and fashion to electronics and education. Find her on [http://www.anina.net/](http://www.anina.net/) and [http://www.360fashion.net/](http://www.360fashion.net/)

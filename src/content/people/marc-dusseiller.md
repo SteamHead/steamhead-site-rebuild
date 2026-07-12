@@ -4,7 +4,7 @@ role: resident
 date: 2018-10-25
 description: "Marc came with a crew of organizers and participants to Shenzhen to work on the Shenzhen GOSH( event."
 image: "/images/2018/10/marcdusseiller.jpg"
-imageAlt: "Marc Dusseiller"
+imageAlt: "Marc Dusseiller with tropical drink among plants"
 ---
 
 Marc came with a crew of organizers and participants to Shenzhen to work on the [Shenzhen GOSH](https://forum.openhardware.science/t/gosh-shenzhen-introduce-yourself/1206) event. SteamHead was filled with great folks from the event, and they gave a lot back to not only Shenzhen but also the global community with their event, which took place at Open FIESTA.  

@@ -9,7 +9,7 @@ categories:
   - "JamesEd"
   - "Maker Education"
 image: "/images/2018/11/construction-icon-7-yellow.png"
-imageAlt: "Badge Levels"
+imageAlt: "Yellow building icon representing a badge level"
 ---
 
 [Google Sheets Link](https://docs.google.com/spreadsheets/d/1Mne5usC7w_RfRTtgTwFchQCwl_DXEUBqGTf_3SQvk18/edit#gid=1464004448)

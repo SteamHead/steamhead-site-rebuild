@@ -7,7 +7,7 @@ program: makefashion-edu
 categories:
   - "MakeFashion Edu"
 image: "/images/2019/03/MFedu-Tuscon-Poster.jpg"
-imageAlt: "MakeFashion Edu Behind-The-Scenes Video"
+imageAlt: "Poster for 'MakeFashion Edu Behind the Scenes' with a dancer in a lit costume"
 ---
 
 https://www.youtube.com/watch?v=Uk-tq2zZfc0&t=693s
@@ -28,4 +28,4 @@ Be inspired by the [Tuscon projects in detail here](http://www.makefashion.ca/ed
 
 Twila Busby, local educator at Hollinger K-8, discusses the challenges of trying to make a difference in education and starting a new school program. Busby says she had support from the community and administrators to make this possible as well as community donations, Donors Choose, and Arizona tax credits. Busby encourages other teachers wanting to bring programs like this to their school to “Just start...on a small scale, do one project” and build from there. MakeFashion Edu provides assistance to teachers writing program and grant proposals.
 
-![](/images/2019/03/Shaw-lr-1017006.jpg) ![](/images/2019/03/Shaw-1170679.jpg) ![](/images/2019/03/Shaw-1016638.jpg) ![](/images/2019/03/Shaw-1016866.jpg)
+![Two students, one in an illuminated sugar skull mask and dress](/images/2019/03/Shaw-lr-1017006.jpg) ![A student wearing a glowing mechanical LED helmet](/images/2019/03/Shaw-1170679.jpg) ![A student wearing an illuminated hoop skirt with paper flowers](/images/2019/03/Shaw-1016638.jpg) ![A student in a light-up robot head costume making a rock-on gesture](/images/2019/03/Shaw-1016866.jpg)

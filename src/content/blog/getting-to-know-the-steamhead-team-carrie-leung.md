@@ -8,7 +8,7 @@ categories:
   - "Carrie"
   - "Maker Education"
 image: "/images/2017/12/2019-Carrie-Portrait.jpg"
-imageAlt: "Getting to know the SteamHead Team: Carrie Leung"
+imageAlt: "Carrie Leung smiling outdoors in a black vest"
 ---
 
 _We'd love for you to get to know the SteamHead team better. In this series of posts, we ask the great people behind SteamHead some questions about the organization, the pandemic and their hobbies!_
@@ -17,7 +17,7 @@ _We'd love for you to get to know the SteamHead team better. In this series of p
 
 Starting it off with our co-founder, **Carrie Leung**.
 
-![](/images/2017/12/2019-Carrie-Portrait.jpg)
+![Carrie Leung smiling outdoors in a black vest](/images/2017/12/2019-Carrie-Portrait.jpg)
 
 **What's your proudest SteamHead moment?**  
 Hard question, it's like asking what's your favorite movie! If I really had to say one thing, it's that I know we created lasting change in the education community of Shenzhen that can be evidenced today - still going strong and continously evolving on it's own (without us being there). The SteamHead community as a network has put makerspaces in schools, carved out roles for educators in the Maker Movement, celebrated student work at the School Maker Faire and MakeFashion Edu Runway events, inspired teachers and students (and these can be anyone - moms to grandparents to students) through opensourcing our methods, playbooks, resources and just simply by getting people into the same space. I experienced first hand through all the challenges and successes, that a group of people with a shared vision can definitely make a lasting difference.

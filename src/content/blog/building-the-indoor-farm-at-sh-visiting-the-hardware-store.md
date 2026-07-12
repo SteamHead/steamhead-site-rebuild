@@ -8,7 +8,7 @@ categories:
   - "Great Projects"
   - "James"
 image: "/images/2019/02/indoor-garden-2.jpg"
-imageAlt: "Building the Indoor Farm at SH: Visiting the Hardware Store"
+imageAlt: "Hardware store employee climbing shelving to reach PVC pipe stock"
 ---
 
 To build prototypes for the indoor farm at SH, Michelle went to the hardware store down the road, to purchase everyday materials such as PVC pipes and tubings. Sold in lengths of 3m long, she got quite a few stares from neighbors trying to cross the road while balancing these pipes on her shoulder!
@@ -17,5 +17,5 @@ Shenzhen Maker Tips Chinese construction stores have everything you need! It mig
 
    
 
-[![](/images/2019/02/indoor-garden-2-300x225.jpg)](https://steamhead.space/?attachment_id=1515)  
-[![](/images/2019/02/indoor-garden-300x225.jpg)](https://steamhead.space/?attachment_id=1516)
+[![Employee reaching for PVC pipes stocked on hardware store shelves](/images/2019/02/indoor-garden-2-300x225.jpg)](https://steamhead.space/?attachment_id=1515)  
+[![Person kneeling to inspect an exposed pipe under a broken tile floor](/images/2019/02/indoor-garden-300x225.jpg)](https://steamhead.space/?attachment_id=1516)

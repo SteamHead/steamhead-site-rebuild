@@ -9,7 +9,7 @@ categories:
   - "MakeFashion Edu"
   - "Neighborhood Earth"
 image: "/images/2020/09/Maker-Ed-Conv.png"
-imageAlt: "Maker Convening"
+imageAlt: "Poster reading 'Making It Happen: Equity and Joy' with maker icon grid"
 ---
 
 ## Hello Maker Convening Educators!  
@@ -30,7 +30,7 @@ Rushing to another session and can’t make it to the live chat? Become part of 
 
 ## Our Resources
 
-![](/images/2020/09/coding-isometric-06.png)
+![Isometric illustration promoting MakeFashion Edu coding resources](/images/2020/09/coding-isometric-06.png)
 
 ## Find Us on Social Media
 
@@ -52,11 +52,11 @@ Support us by donating directly through PayPal or buying a book!
 
 Links to Learn More about MakeFashion Edu
 
-![](/images/2020/09/coding-isometric-08.png)
+![Isometric illustration linking to MakeFashion Edu learning resources](/images/2020/09/coding-isometric-08.png)
 
 ## Advocacy in Print!
 
-![](/images/2020/09/Screen-Shot-2020-09-23-at-10.14.06-PM.png)![](/images/2020/09/Amazon-book-page.png)
+![Amazon listing for the 'Fashion as Change' MakeFashion Edu lookbook](/images/2020/09/Screen-Shot-2020-09-23-at-10.14.06-PM.png)![Amazon listing for the 'MakeFashion Edu: Season 1' book](/images/2020/09/Amazon-book-page.png)
 
 ## Haley Massey
 

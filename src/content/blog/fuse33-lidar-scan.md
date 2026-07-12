@@ -9,7 +9,7 @@ categories:
   - "James"
   - "SteamHead Spaces"
 image: "/images/2023/01/Screen-Shot-2023-01-08-at-3.30.32-PM.jpg"
-imageAlt: "Fuse33 LiDAR Scan"
+imageAlt: "LiDAR 3D scan of the Fuse33 makerspace shop floor and workbenches"
 ---
 
 Fast and easy 3D building scans: I recently used an [iPhone 12 Pro](https://www.google.com/search?q=backmarket+iphone+12+pro&client=firefox-b-1-d&sxsrf=AJOqlzXqPJekMK40O36lIsz6TBxxnMf2fQ%3A1673215464954&ei=6D27Y9rzOcyWkPIP7JuG4AM&ved=0ahUKEwjah6-r_bj8AhVMC0QIHeyNATwQ4dUDCA8&uact=5&oq=backmarket+iphone+12+pro&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCAAQgAQyBQgAEIAEMgYIABAWEB4yBggAEBYQHjIICAAQFhAeEAoyBggAEBYQHjIICAAQFhAeEAoyBggAEBYQHjIGCAAQFhAeMgYIABAWEB46CggAEEcQ1gQQsAM6BAgjECc6DQguELEDEMcBENEDEEM6CAgAEIAEELEDOgsILhCDARCxAxCABDoICC4QsQMQgwE6EQguEIAEELEDEIMBEMcBENEDOggIABCxAxCDAToECAAQQzoICC4Q5QQQkQI6BQgAEJECOgsILhCxAxDHARDRAzoOCC4QgAQQsQMQxwEQ0QM6CAguEIAEELEDOgsILhCABBCxAxDUAjoKCAAQgAQQhwIQFDoHCAAQsQMQQzoNCAAQgAQQhwIQsQMQFDoLCAAQgAQQsQMQgwE6BwgAEIAEEAo6CQgAEBYQHhDxBEoECEEYAEoECEYYAFD9BlijKGDyKWgDcAF4AIABmAGIAYkSkgEEMjAuNJgBAKABAcgBCMABAQ&sclient=gws-wiz-serp) with LiDAR and the [PolyCam](https://poly.cam) app to create a 3D scan of the shop floor at Fuse33, a makerspace in Calgary. The resulting 3D data was composed of voxels, and the image was painted on from the iPhone's camera. It is blurry, but only took about 15 minutes!  
