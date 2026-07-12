@@ -26,6 +26,11 @@ is the surviving source of truth (the machine that did the earlier work died).
   manual `wrangler deploy` or dashboard work.
 - Manual deploy: `npm run deploy` (build + `wrangler deploy`).
   Local preview of the Worker: `npm run preview`.
+- **Branch preview URLs**: every push builds a new Worker version; the
+  preview is `https://<first-8-chars-of-version-id>-steamhead-astro-scaffold.james-068.workers.dev`.
+  Get the newest version id via `npx wrangler versions list --name
+  steamhead-astro-scaffold --json` sorted by `metadata.created_on`
+  (list order is NOT newest-first).
 
 ## Content schema (locked 2026-07-10)
 
@@ -37,7 +42,23 @@ A separate `people` collection holds Team/Resident profiles (never shown in
 the blog). Filename = URL slug: posts render at `/blog/<filename>/`.
 See MIGRATION.md for the full locked migration decisions. Keep `config.yml`
 (CMS fields) and `content.config.ts` (build validation) in sync when the
-schema changes.
+schema changes. The `mfedu`, `guides`, and `courses` collections are
+repo-edited (not exposed in the CMS).
+
+## Sections built on top of the migration
+
+- **People** (`src/content/people/` + `src/lib/people.ts`): card grids on
+  /about-us; profiles WITH body content get pages at /people/<slug>/ with
+  build-time "blog mentions" (name-matched across all posts, nickname-aware).
+  Frontmatter-only profiles are cards without links — that's intentional.
+- **Courses** (`src/content/courses/<course>/*.md`): two live courses —
+  the 2022 original at /courses/mfedu-intro/ (worksheet PDFs in
+  /downloads/mfedu-course/) and Blake's 2026 rewrite "Advocacy by Design"
+  at /courses/mfedu-2026/ (printable web worksheets under
+  .../worksheets/, SVG illustrations in /images/courses/mfedu-2026/).
+  Progress is localStorage per course ('course-progress:<course>');
+  lessons auto-complete on visit. Lesson files live in per-course
+  subfolders; pages derive the URL slug via `id.split('/').pop()`.
 
 ## Rules
 

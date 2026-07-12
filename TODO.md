@@ -12,30 +12,46 @@ the items teammates need visibility on.
       actually three concatenated recap videos (01 Pen Holder Project /
       02 Future Robots / 03 Future City, 复盘-双语字幕-low). Likely sources:
       the DingTalk doc linked in that post, or Hardi Huang (MG Space).
-## Queued work
+- [ ] **Missing 2022-course assets** — the Croquis worksheet Drive file is
+      dead (404; a rebuilt web version ships with the 2026 course), and the
+      Student Handout, Paper Sewing Guides, and "Design Process" video were
+      never linked in the guide. Recover from the MFEdu Intro 2022 Drive
+      folder if wanted for the original course at /courses/mfedu-intro/.
+- [ ] **People photos** — 4 profiles share an LED-strip placeholder image
+      (Emma, Marco Bartsch, Olivier, Kaspar) and 4 use cartoon avatars
+      (Julia, Lauren Sassoubre, Maria Ellena Villagomez, Mapet Enriquez).
+      Also thats-a-wrap.md has a near-black photo worth replacing.
 
-- [x] **Alt-text pass** — done in PR #13 (issue #8): ~440 images described;
-      no student names; galleries verified image-by-image. Flagged for later:
-      4 people profiles share an LED-strip placeholder photo, 4 use cartoon
-      avatars, and thats-a-wrap.md has a near-black photo worth replacing.
-- [x] **People section** — done in PR #15: grids on /about-us (Team then
-      Residents), 30 profile pages with build-time blog mentions, old WP
-      profile URLs redirected. Photo gaps remain: 4 profiles share an
-      LED-strip placeholder, 4 use cartoon avatars.
-- [x] **MFEdu course-sequence build** — /courses/mfedu-intro/: 14 lessons
-      from the 2022 combined guide, localStorage progress (auto-complete +
-      uncheck + reset), 11 worksheet PDFs mirrored to /downloads/mfedu-course/,
-      all course CTAs repointed. Missing assets flagged for Blake: Croquis
-      worksheet (dead Drive link), Student Handout, Paper Sewing Guides,
-      Design Process video.
-- [ ] **Design-token pass** from the brand guide + Mapet design review.
-- [x] **Ben: heritage page on WordPress** — live on makefashion.ca/edu and
-      verified (wording matches reference/makefashion-ca-edu-heritage-copy.md,
-      2015 date fixed on both sides).
+## Reviews to schedule
+
+- [ ] **Mapet token review** — how-to guide in tokenreview.md. Open items
+      for her: badge-pathway pill colors, token-pass contrast fixes, people
+      cards / "Read profile" indicator.
+- [ ] **Mapet + Blake course review** — read-through of Advocacy by Design
+      (/courses/mfedu-2026/, live): tone, pedagogy, teacher callouts. After
+      review, decide whether sitewide course CTAs flip from the 2022 original
+      to the 2026 edition (currently they point at /courses/mfedu-intro/;
+      The Shelf offers both).
+
+## Done (recent)
+
+- [x] **Alt-text pass** — PR #13 (issue #8): ~440 images described.
+- [x] **Design-token pass** — PR #14: all colors/shadows/sizes from
+      global.css tokens; rule added to CLAUDE.md.
+- [x] **People section** — PR #15: /about-us grids, 30 profile pages with
+      build-time blog mentions, old profile URLs redirected.
+- [x] **MFEdu Introduction Course (2022)** — PR #16: /courses/mfedu-intro/,
+      14 lessons, localStorage progress, 11 worksheet PDFs mirrored.
+- [x] **Advocacy by Design (2026)** — PR #17: /courses/mfedu-2026/, Blake's
+      17-lesson rewrite (project arc + Level Up module, 9 printable web
+      worksheets, 4 SVG illustrations, Maker Badges tie-ins).
+- [x] **Supporters & Friends page** — partner logos de-greened, logo wall
+      with org names; /shelf → /theshelf; System Upgrade rework.
+- [x] **Ben: heritage page on WordPress** — live and verified.
 
 ## Domain cutover checklist (target: by Sept 1, HostPresto renewal Sept 7)
 
-- [ ] Videos re-hosted (above)
+- [ ] Videos re-hosted (see "last missing video" above)
 - [ ] Old-site links resolved: any remaining steamhead.space/wp-content
       references (certification pages done: /design-immersion-overview/ and
       /maker-badges/ are live top-level pages — the overview URL is cited in
