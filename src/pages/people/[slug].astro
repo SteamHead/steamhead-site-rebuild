@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+import { personHasPage, blogMentions } from '../../lib/people';
+
+export async function getStaticPaths() {
+  const people = await getCollection('people', personHasPage);
+  return people.map(person => ({ params: { slug: person.id }, props: { person } }));
+}
+
+const { person } = Astro.props;
+const { Content } = await render(person);
+const { name, role, description, image, imageAlt } = person.data;
+const roleLabel = role === 'team' ? 'Team' : 'Resident';
+
+/* Tagline: use the description unless it's just a clone of the name. */
+const tagline = description && description.trim() !== name ? description : null;
+
+const mentions = blogMentions(name, await getCollection('blog'));
+---
+
+<BaseLayout
+  title={`${name} — SteamHead ${roleLabel}`}
+  description={tagline ?? `${name} is part of the SteamHead community.`}
+>
+
+  <section class="hero hero--short" aria-label={name}>
+    <div class="container hero__content">
+      <p class="person-crumb">
+        <a href="/about-us/">About Us</a> / {roleLabel}
+      </p>
+      <h1>{name}</h1>
+      {tagline && <p class="hero__tagline">{tagline}</p>}
+    </div>
+  </section>
+
+  <section class="section" aria-label="Profile">
+    <div class="container person-layout">
+      {image && (
+        <img class="person-portrait" src={image} alt={imageAlt ?? name} />
+      )}
+      <article class="person-body">
+        <Content />
+      </article>
+    </div>
+  </section>
+
+  {mentions.length > 0 && (
+    <section class="section section--alt" aria-label="Blog mentions">
+      <div class="container">
+        <h2>{name.split(' ')[0]} on the Blog</h2>
+        <hr class="accent-rule" />
+        <p class="mt-md text-muted">
+          Posts that mention {name} by name, found automatically each time the
+          site is published.
+        </p>
+        <ul class="mention-list">
+          {mentions.map(post => (
+            <li>
+              <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+              <span class="mention-date">
+                {post.data.date.toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                })}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )}
+
+</BaseLayout>
+
+<style>
+  .hero--short { padding-block: var(--space-lg); }
+
+  .person-crumb {
+    font-size: var(--text-sm);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-text-dim);
+    margin-bottom: var(--space-xs);
+  }
+  .person-crumb a {
+    color: var(--color-yellow);
+    text-decoration: none;
+  }
+
+  .person-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: var(--space-lg);
+    align-items: start;
+  }
+  @media (max-width: 768px) {
+    .person-layout { grid-template-columns: 1fr; }
+    .person-portrait { max-width: 320px; }
+  }
+
+  .person-portrait {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: var(--radius);
+  }
+
+  .person-body :global(h2),
+  .person-body :global(h3) { margin-top: var(--space-md); margin-bottom: var(--space-xs); }
+  .person-body :global(p)  { margin-bottom: var(--space-sm); }
+  .person-body :global(ul),
+  .person-body :global(ol) { margin-bottom: var(--space-sm); }
+
+  .mention-list {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-md);
+  }
+  .mention-list li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-sm);
+    padding-block: var(--space-xs);
+    border-top: 1px solid var(--color-border);
+  }
+  .mention-list li:last-child { border-bottom: 1px solid var(--color-border); }
+  .mention-date {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-left: auto;
+    white-space: nowrap;
+  }
+</style>
