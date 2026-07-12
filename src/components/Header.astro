@@ -81,7 +81,7 @@ const inPrograms = programLinks.some(l => currentPath === l.href);
     top: 0;
     z-index: 100;
     background: var(--color-nav-bg);
-    border-bottom: 2px solid #1a1a1a;
+    border-bottom: 2px solid var(--color-dark-border);
   }
 
   .site-nav {
@@ -120,7 +120,7 @@ const inPrograms = programLinks.some(l => currentPath === l.href);
     font-size: var(--text-sm);
     font-weight: 500;
     letter-spacing: 0.04em;
-    color: #ccc;
+    color: var(--color-gray-mid);
     text-decoration: none;
     padding: 0.3rem 0.5rem;
     border-radius: var(--radius);
@@ -158,9 +158,9 @@ const inPrograms = programLinks.some(l => currentPath === l.href);
     margin: 0;
     padding: 0.4rem;
     background: var(--color-nav-bg);
-    border: 1px solid #2a2a2a;
+    border: 1px solid var(--color-dark-border);
     border-radius: var(--radius);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    box-shadow: var(--shadow-pop);
     flex-direction: column;
     gap: 0.15rem;
   }
@@ -199,7 +199,7 @@ const inPrograms = programLinks.some(l => currentPath === l.href);
       align-items: stretch;
       width: 100%;
       padding: var(--space-sm) 0 var(--space-sm);
-      border-top: 1px solid #222;
+      border-top: 1px solid var(--color-dark-border);
       gap: 0;
     }
     .nav-links.is-open { display: flex; }

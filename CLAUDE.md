@@ -50,6 +50,11 @@ schema changes.
    committed, it breaks CMS login on the live site.
 3. The RAG/drafting pipeline is a separate project. This site only exposes the
    interface: strict schema + PR review gate.
+4. **Design tokens**: all colors, shadows, and font sizes come from the
+   `:root` tokens in `src/styles/global.css` (sourced from the brand guide,
+   `public/downloads/2021_SteamHead_Brand_Guide.pdf`). Don't introduce ad-hoc
+   hex values in pages/components — add or reuse a token. Sole exception:
+   the categorical badge-pathway colors in `maker-badges.astro`.
 
 ## Pointers
 

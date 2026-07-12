@@ -293,8 +293,8 @@ const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
     aspect-ratio: 8.5 / 11;
     object-fit: cover;
     border-radius: var(--radius);
-    border: 1px solid #333;
-    background: #111;
+    border: 1px solid var(--color-dark-border);
+    background: var(--color-dark-surface);
   }
   .book-cover--placeholder {
     display: flex;
@@ -302,7 +302,7 @@ const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
     justify-content: center;
     text-align: center;
     padding: var(--space-sm);
-    background: linear-gradient(160deg, #1c1c1c 0%, #111 60%);
+    background: linear-gradient(160deg, var(--color-dark-raised) 0%, var(--color-dark-surface) 60%);
     border-left: 6px solid var(--color-yellow);
   }
   .book-cover--placeholder span {
@@ -314,9 +314,9 @@ const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
   .book-slide h3 { font-family: var(--font-body); font-size: var(--text-sm); font-weight: 600; color: var(--color-white); }
   .carousel-btn {
     flex-shrink: 0;
-    background: #111;
+    background: var(--color-dark-surface);
     color: var(--color-yellow);
-    border: 1px solid #333;
+    border: 1px solid var(--color-dark-border);
     border-radius: 50%;
     width: 44px;
     height: 44px;
@@ -324,7 +324,7 @@ const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
     cursor: pointer;
     transition: background 0.15s, border-color 0.15s;
   }
-  .carousel-btn:hover { background: #1e1e1e; border-color: var(--color-yellow); }
+  .carousel-btn:hover { background: var(--color-dark-raised); border-color: var(--color-yellow); }
 
   .guide-tagline {
     color: var(--color-dark);
@@ -342,7 +342,7 @@ const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
     align-items: baseline;
     gap: var(--space-sm);
     padding: var(--space-sm) 0;
-    border-bottom: 1px solid #e8e8e8;
+    border-bottom: 1px solid var(--color-border);
   }
   .guide-link {
     font-family: var(--font-heading);
@@ -354,13 +354,13 @@ const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
   }
   .guide-link:hover { opacity: 0.75; }
   .guide-link--coming {
-    color: #aaa;
+    color: var(--color-text-dim);
     cursor: default;
     pointer-events: none;
   }
   .guide-desc {
     font-size: var(--text-sm);
-    color: #888;
+    color: var(--color-text-dim);
   }
   .guide-link-teacher {
     color: var(--color-teal);
