@@ -9,7 +9,7 @@ Course Guide
 
 Companion to the [Shared Activity Guide](/guides/simple-circuits-shared/). Three lessons, 30–50 minutes each. Appropriate for K*–3, or as a short drop-in activity at any grade level.
 
-[← Back to The Shelf](/shelf/)
+[← Back to The Shelf](/theshelf/)
 
 ---
 

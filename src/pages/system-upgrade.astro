@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getEntry } from 'astro:content';
 
 const entry = await getEntry('pages', 'system-upgrade');
-const { hero_tagline, intro_text, sfusd_body, productions_body, course_body, badges_body } = entry.data;
+const { hero_tagline, intro_text, productions_body, course_body, curriculum_body } = entry.data;
 ---
 
 <BaseLayout
@@ -50,12 +50,18 @@ const { hero_tagline, intro_text, sfusd_body, productions_body, course_body, bad
             Documenting our journey, one lesson at a time.
           </p>
           <p>
-            The SHTEAM Labs Activities Journals are our latest collection of lesson plans,
-            student reflections, and activity guides. They are custom-tailored resources
-            designed for particular classrooms — and you might find that they suit your
-            classroom as well.
+            The SHTEAM Labs Activities Journals are our latest collection of lesson
+            plans, student reflections, and activity guides — custom-tailored
+            resources designed for particular classrooms. They're also the
+            activities powering our newest STEAM programs at Ulloa and Sunset
+            Elementary Schools in the San Francisco Unified School District,
+            where each journal is shaped around the specific needs of its
+            community.
           </p>
-          <a href="/shelf/" class="btn btn--primary mt-md">Browse SHTEAM Labs Resources</a>
+          <p>
+            You might find they suit your classroom as well.
+          </p>
+          <a href="/theshelf/" class="btn btn--primary mt-md">Browse SHTEAM Labs Resources</a>
         </div>
         <img
           src="/images/2023/09/1.png"
@@ -70,7 +76,7 @@ const { hero_tagline, intro_text, sfusd_body, productions_body, course_body, bad
        ===================================================================== -->
   <section class="section" aria-label="SteamHead Productions">
     <div class="container">
-      <div class="two-col two-col--reverse">
+      <div class="two-col">
         <img
           src="/images/2021/04/20181027_115108-crop.jpg"
           alt="Teachers sharing classroom experiences during a filmed interview"
@@ -79,6 +85,14 @@ const { hero_tagline, intro_text, sfusd_body, productions_body, course_body, bad
           <h2>SteamHead Productions</h2>
           <hr class="accent-rule" />
           <p>{productions_body}</p>
+          <div class="productions-links mt-md">
+            <a href="https://www.youtube.com/steamheadproductions" class="btn btn--primary" target="_blank" rel="noopener">
+              Watch on YouTube
+            </a>
+            <a href="https://instagram.com/makefashionedu" class="btn btn--outline" target="_blank" rel="noopener">
+              Follow on Instagram
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -94,7 +108,7 @@ const { hero_tagline, intro_text, sfusd_body, productions_body, course_body, bad
           <h2>MakeFashion Edu Online Course</h2>
           <hr class="accent-rule" />
           <p>{course_body}</p>
-          <a href="/shelf/" class="btn btn--primary mt-md">Explore the Course</a>
+          <a href="/theshelf/" class="btn btn--primary mt-md">Explore the Course</a>
         </div>
         <img
           src="/images/2021/08/GettingStartedWithMFEDU.jpg"
@@ -105,21 +119,22 @@ const { hero_tagline, intro_text, sfusd_body, productions_body, course_body, bad
   </section>
 
   <!-- =====================================================================
-       MAKERSPACE BADGES
+       DESIGN IMMERSION CURRICULUM
        ===================================================================== -->
-  <section class="section section--alt" aria-label="Makerspace Badges">
+  <section class="section section--alt" aria-label="Design Immersion Curriculum">
     <div class="container">
-      <div class="two-col">
-        <img
-          src="/images/2024/05/badges_sm.png"
-          alt="SteamHead Makerspace Badges"
-        />
-        <div>
-          <h2>Makerspace Badges</h2>
-          <hr class="accent-rule" />
-          <p>{badges_body}</p>
-        </div>
-      </div>
+      <h2>The Design Immersion Curriculum</h2>
+      <hr class="accent-rule" />
+      <p class="mt-md">{curriculum_body}</p>
+      <p>
+        To put the curriculum to work in the classroom, the
+        <a href="/theshelf/">Maker Badges on The Shelf</a> implement its learning
+        pathways — a concrete way for teachers to measure and reward student
+        progress by actions taken, not facts memorized.
+      </p>
+      <a href="/design-immersion-overview/" class="btn btn--primary mt-md">
+        Read the Curriculum Overview
+      </a>
     </div>
   </section>
 
@@ -144,17 +159,6 @@ const { hero_tagline, intro_text, sfusd_body, productions_body, course_body, bad
         reviews every post before it goes live.
       </p>
       <a href="/blog/" class="btn btn--primary mt-md">Read the Great Things Blog</a>
-    </div>
-  </section>
-
-  <!-- =====================================================================
-       SFUSD PARTNERSHIP
-       ===================================================================== -->
-  <section class="section section--alt" aria-label="SFUSD partnership">
-    <div class="container">
-      <h2>SteamHead &amp; the SFUSD</h2>
-      <hr class="accent-rule" />
-      <p class="mt-md">{sfusd_body}</p>
     </div>
   </section>
 
@@ -188,5 +192,10 @@ const { hero_tagline, intro_text, sfusd_body, productions_body, course_body, bad
     font-size: var(--text-xl);
     max-width: 60ch;
     line-height: 1.6;
+  }
+  .productions-links {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
   }
 </style>

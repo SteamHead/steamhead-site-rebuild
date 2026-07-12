@@ -160,10 +160,9 @@ collections:
         fields:
           - { label: "Hero Tagline",   name: hero_tagline,   widget: text }
           - { label: "Intro Text",     name: intro_text,     widget: text }
-          - { label: "SFUSD Body",     name: sfusd_body,     widget: markdown }
           - { label: "Productions Body", name: productions_body, widget: markdown }
           - { label: "Course Body",    name: course_body,    widget: markdown }
-          - { label: "Badges Body",    name: badges_body,    widget: markdown }
+          - { label: "Curriculum Body", name: curriculum_body, widget: markdown }
 
       - name: shelf
         label: The Shelf Page

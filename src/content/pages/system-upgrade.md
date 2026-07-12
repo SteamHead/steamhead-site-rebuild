@@ -6,22 +6,20 @@ intro_text: >
   The System Upgrade initiative equips educators with tools and resources to
   revolutionize education, disrupt outdated standards, and deliver impactful,
   relevant content across diverse fields.
-sfusd_body: >
-  We are thrilled to announce the launch of exciting new STEAM programs at Ulloa
-  and Sunset Elementary Schools. This development underscores our dedication to
-  tailoring our educational initiatives to meet the specific needs of each community.
 productions_body: >
-  We launched SteamHead Productions with the aim of capturing and disseminating
-  the stories of our students, alongside sharing our accumulated knowledge with
-  educators worldwide. Collaborating with Cultivative and media director Mike Shaw,
-  we transformed this initiative into a comprehensive platform.
+  We launched SteamHead Productions to capture and share the stories of our
+  students, and to pass our accumulated knowledge on to educators worldwide.
+  Working with Cultivative and media director Mike Shaw, it has grown into a
+  full publishing platform — runway films, class documentaries, and teacher
+  resources on YouTube, with life from the programs on Instagram.
 course_body: >
   Our MakeFashion Edu Online Course brings the intersection of technology and
   self-expression into classrooms worldwide. Through engaging modules, students
   learn design thinking, electronics, and fashion tech — transforming ideas into
   wearable creations.
-badges_body: >
-  The Makerspace Badges give teachers a pathway to guide students through meaningful
-  makerspace experiences. Not "how to 3D print" — but why and for who, basing
-  learning on empathy and authentic problem solving.
+curriculum_body: >
+  The SteamHead Design Immersion Curriculum is the foundation under everything
+  on this page: a holistic program that embeds design thinking and maker skills
+  across subjects, developed through years of classroom implementation and
+  published openly for any school to use.
 ---
