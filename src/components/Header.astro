@@ -9,7 +9,7 @@ const navLinks = [
   { href: "/",          label: "Home" },
   { href: "/about-us/", label: "About Us" },
   { href: "/blog/",     label: "Blog" },
-  { href: "/shelf/",    label: "The Shelf" },
+  { href: "/theshelf/",    label: "The Shelf" },
 ];
 
 const { currentPath = "/" } = Astro.props;
@@ -68,7 +68,7 @@ const inPrograms = programLinks.some(l => currentPath === l.href);
         <a href="/blog/" class:list={["nav-link", { "nav-link--active": currentPath.startsWith("/blog") }]}>Blog</a>
       </li>
       <li>
-        <a href="/shelf/" class:list={["nav-link", { "nav-link--active": currentPath === "/shelf/" }]}>The Shelf</a>
+        <a href="/theshelf/" class:list={["nav-link", { "nav-link--active": currentPath === "/theshelf/" }]}>The Shelf</a>
       </li>
     </ul>
 

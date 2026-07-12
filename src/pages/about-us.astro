@@ -8,10 +8,17 @@ const { Content } = await render(entry);
 const { mission, vision, values, funding } = entry.data;
 
 /* People grids: everyone appears as a card; profiles with written content
-   link to their page at /people/<slug>/ (see src/lib/people.ts). */
+   link to their page at /people/<slug>/ (see src/lib/people.ts).
+   The founders and longest-serving team members lead; the rest follow
+   alphabetically. */
+const featured = ['carrie-leung', 'james', 'twila-busby', 'mike-shaw-welcome'];
+const rank = (id: string) => {
+  const i = featured.indexOf(id);
+  return i === -1 ? featured.length : i;
+};
 const people = (await getCollection('people', p => !p.data.draft))
   .map(p => ({ ...p, hasPage: personHasPage(p) }))
-  .sort((a, b) => a.data.name.localeCompare(b.data.name));
+  .sort((a, b) => rank(a.id) - rank(b.id) || a.data.name.localeCompare(b.data.name));
 const team = people.filter(p => p.data.role === 'team');
 const residents = people.filter(p => p.data.role === 'resident');
 ---
@@ -26,7 +33,7 @@ const residents = people.filter(p => p.data.role === 'resident');
        ===================================================================== -->
   <section class="hero hero--short" aria-label="About Us">
     <img
-      class="hero__bg"
+      class="hero__bg hero__bg--about"
       src="/images/2021/04/20181019_1855150-scaled.jpg"
       alt="SteamHead community group photo around a project table at an evening meetup"
     />
@@ -215,6 +222,12 @@ const residents = people.filter(p => p.data.role === 'resident');
   .mvv-card h2 { font-size: var(--text-2xl); margin-bottom: var(--space-xs); }
   .mvv-card ul { margin-top: var(--space-xs); color: var(--color-dark); }
   .mvv-card li { margin-bottom: 0.4rem; }
+
+  /* Hero photo: mirrored, and framed higher so no faces are cut off */
+  .hero__bg--about {
+    transform: scaleX(-1);
+    object-position: center 22%;
+  }
 
   /* --- People grids --- */
   .people-group {

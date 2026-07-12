@@ -9,7 +9,7 @@ Course Guide
 
 Three hands-on lessons using LEDs, copper tape, and coin cell batteries. Each lesson is 30–50 minutes and can stand alone. Appropriate for K–3, or as a short drop-in activity at any grade level.
 
-[← Back to The Shelf](/shelf/)
+[← Back to The Shelf](/theshelf/)
 
 ---
 
