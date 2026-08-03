@@ -1,0 +1,167 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getEntry, render } from 'astro:content';
+
+const entry = await getEntry('pages', 'launches-from-earth');
+const { Content } = await render(entry);
+const {
+  hero_tagline,
+  guiding_question,
+  why_body,
+  learn_intro,
+  learn_questions,
+  how_body,
+  classroom_body,
+  limitations_body,
+  github_url,
+} = entry.data;
+---
+
+<BaseLayout
+  title="Launches from Earth"
+  description="An interactive globe for exploring upcoming space launches around the world — where they happen, when they launch, and what they reveal about our increasingly connected planet."
+>
+
+  <!-- =====================================================================
+       HERO
+       ===================================================================== -->
+  <section class="hero" aria-label="Launches from Earth">
+    <div class="container hero__content">
+      <p class="text-muted" style="color: var(--color-gray-light);">
+        <a href="/neighborhood-earth/" style="color: var(--color-yellow);">Neighborhood Earth</a>
+        · a project by SteamHead
+      </p>
+      <h1>Launches from Earth</h1>
+      <p class="hero__tagline">{hero_tagline}</p>
+      <a href="#explore" class="btn btn--primary">Explore the globe</a>
+      <a href={github_url} class="btn btn--outline" target="_blank" rel="noopener">View on GitHub</a>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       1. EXPLORE THE GLOBE
+       ===================================================================== -->
+  <section class="section" id="explore" aria-label="Explore the globe">
+    <div class="container">
+      <div class="section__header">
+        <h2>Explore the globe</h2>
+        <p>{guiding_question}</p>
+      </div>
+      <div class="app-embed">
+        <iframe
+          src="/projects/launches-from-earth/"
+          title="Launches from Earth — interactive globe of upcoming space launches"
+          loading="lazy"
+        ></iframe>
+      </div>
+      <p class="text-muted mt-md">
+        Having trouble with the embed? <a href="/projects/launches-from-earth/" target="_blank" rel="noopener">Open it full-screen in a new tab</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       2. WHY WE MADE IT
+       ===================================================================== -->
+  <section class="section section--alt" aria-label="Why we made it">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <h2>Why we made it</h2>
+          <hr class="accent-rule" />
+          <p>{why_body}</p>
+        </div>
+        <div>
+          <h3>Launches from Earth</h3>
+          <p class="text-muted">A Neighborhood Earth project by SteamHead</p>
+          <Content />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       3. WHAT YOU CAN LEARN
+       ===================================================================== -->
+  <section class="section" aria-label="What you can learn">
+    <div class="container">
+      <h2>What you can learn</h2>
+      <hr class="accent-rule" />
+      <p>{learn_intro}</p>
+      <ul>
+        {learn_questions.map((q: string) => <li>{q}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       4. HOW IT WORKS
+       ===================================================================== -->
+  <section class="section section--dark" aria-label="How it works">
+    <div class="container">
+      <h2>How it works</h2>
+      <hr class="accent-rule" />
+      <p>{how_body}</p>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       5. USE IT IN A CLASSROOM
+       ===================================================================== -->
+  <section class="section" aria-label="Use it in a classroom">
+    <div class="container">
+      <h2>Use it in a classroom</h2>
+      <hr class="accent-rule" />
+      <p>{classroom_body}</p>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       6. VIEW OR CONTRIBUTE ON GITHUB
+       ===================================================================== -->
+  <section class="section section--alt" aria-label="View or contribute on GitHub">
+    <div class="container">
+      <h2>View or contribute on GitHub</h2>
+      <hr class="accent-rule" />
+      <p>
+        The source code is publicly available so that others can study, adapt, improve, and
+        build upon the project — it's a single self-contained HTML file with no build step.
+      </p>
+      <a href={github_url} class="btn btn--primary" target="_blank" rel="noopener">
+        github.com/SteamHead/launches-from-earth
+      </a>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       7. KNOWN DATA LIMITATIONS
+       ===================================================================== -->
+  <section class="section" aria-label="Known data limitations">
+    <div class="container">
+      <h2>Known data limitations</h2>
+      <hr class="accent-rule" />
+      <p>{limitations_body}</p>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .hero .btn { margin-right: var(--space-xs); margin-top: var(--space-xs); }
+  .app-embed {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    background: #111;
+  }
+  .app-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  @media (max-width: 600px) {
+    .app-embed { aspect-ratio: 3 / 4; }
+  }
+</style>
