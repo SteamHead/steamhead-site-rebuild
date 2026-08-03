@@ -53,7 +53,7 @@ limitations_body: >
   the countdown and the card's confidence line reflect that uncertainty
   rather than hiding it. Mission details are only as complete as what
   launch providers choose to publish.
-github_url: https://github.com/SteamHead/earth-launches
+github_url: https://github.com/boomtown001/earth-launches
 ---
 
 Launches from Earth is an interactive globe that lets people explore upcoming space launches around the world. Visitors can watch live countdowns, locate launch sites, and select individual spaceports to learn more about the missions beginning there.
