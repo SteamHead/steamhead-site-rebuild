@@ -56,6 +56,14 @@ the items teammates need visibility on.
       references (certification pages done: /design-immersion-overview/ and
       /maker-badges/ are live top-level pages — the overview URL is cited in
       academic papers and must never move)
+- [ ] **Launches from Earth (PR #18, live under Neighborhood Earth)**:
+      confirm the live Launch Library API call and its CORS behavior work
+      from the real `steamhead.space` origin, not just the
+      `*.workers.dev` preview/production Worker URL — flip to the bundled
+      snapshot fallback if the API rejects the custom domain. Verify the
+      "View on GitHub" link resolves to `github.com/SteamHead/earth-launches`
+      (repo now transferred from boomtown001) and that the
+      `/images/2024/04/neighborhoodearth.jpg` card image renders.
 - [ ] Add steamhead.space zone to James's Cloudflare account; attach custom
       domain to the Worker
 - [ ] Update GitHub OAuth app homepage URL
