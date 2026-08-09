@@ -13,4 +13,4 @@ Find me on LinkedIn: [https://www.linkedin.com/in/xrkarenxr/](https://www.linked
   
   
 
-[![](/images/2019/02/karen-300x300.jpg)](https://steamhead.space/?attachment_id=1491)
+![](/images/2019/02/karen-300x300.jpg)

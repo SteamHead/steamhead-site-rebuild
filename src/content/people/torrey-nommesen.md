@@ -56,4 +56,4 @@ Below are some of my current projects. The best way to contact me at the moment 
   
    
 
-[![](/images/2019/02/Torrey-300x200.jpg)](https://steamhead.space/?attachment_id=1469)
+![](/images/2019/02/Torrey-300x200.jpg)

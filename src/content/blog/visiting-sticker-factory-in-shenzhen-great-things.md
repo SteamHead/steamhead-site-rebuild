@@ -16,4 +16,4 @@ Maker Tips Stickers in Shenzhen can be as cheap as 200RMB (30USD) per 1,000! If 
 
    
 
-[![Sticker factory production floor with rolls of printed labels](/images/2019/02/sticker-factory-mich-300x225.jpg)](https://steamhead.space/?attachment_id=1513)
+![Sticker factory production floor with rolls of printed labels](/images/2019/02/sticker-factory-mich-300x225.jpg)

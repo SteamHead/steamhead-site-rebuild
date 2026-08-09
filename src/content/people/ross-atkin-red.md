@@ -13,7 +13,7 @@ From Ross’s [website](http://www.rossatkin.com/wp/?page_id=12):
 
 > I am a designer and engineer based in Hackney, East London. I am interested in older and disabled people, digital technology and public space ad work on projects that combine at least two of these areas.
 > 
-> ![](https://i0.wp.com/steamhead.space/images/2018/10/VennDiagram-1024x989.png)
+> ![](/images/2018/10/VennDiagram-1024x989.png)
 
 _Source: rossatkin.com_
 

@@ -11,8 +11,8 @@ Olivia is an artist who loves to upcycle found objects into art! She has been at
   
   
 
-[![](/images/2019/02/20180903_174403-300x225.jpg)](https://steamhead.space/?attachment_id=1497)  
+![](/images/2019/02/20180903_174403-300x225.jpg)  
   
-[![](/images/2019/02/20180903_160138-300x225.jpg)](https://steamhead.space/?attachment_id=1498)  
+![](/images/2019/02/20180903_160138-300x225.jpg)  
   
-[![](/images/2019/02/20180907_170254-300x225.jpg)](https://steamhead.space/?attachment_id=1499)
+![](/images/2019/02/20180907_170254-300x225.jpg)

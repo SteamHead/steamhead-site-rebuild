@@ -61,7 +61,7 @@ A gymnasium full of students cheering as snow dropped on cue — triggered by se
 
 The servo motors were mounted to bottom-facing doors on cardboard boxes suspended in the auditorium. When activated, the doors opened and released paper snow.
 
-![OctoStudio code screenshot showing beam trigger](https://i0.wp.com/steamhead.space/images/2026/03/IMG_9878.jpg)
+![OctoStudio code screenshot showing beam trigger](/images/2026/03/IMG_9878.jpg)
 
 OctoStudio beam trigger code (single sprite shown; replicated across others).
 
@@ -75,7 +75,7 @@ The micro:bit ran a MicroBlocks program that:
 -   Rotated the servo to open the trap door
 -   Returned the servo to closed position
 
-![MicroBlocks code screenshot showing micro:bit receiving beam and actuating servo](https://i0.wp.com/steamhead.space/images/2026/03/microblocks_octo.png)
+![MicroBlocks code screenshot showing micro:bit receiving beam and actuating servo](/images/2026/03/microblocks_octo.png)
 
 MicroBlocks receiver code running on micro:bit.
 
@@ -104,11 +104,11 @@ The snow boxes were simple but effective:
 -   Servo arm connected to the door
 -   Suspended in the auditorium
 
-![Cardboard snow dropper box suspended, view 1](https://i0.wp.com/steamhead.space/images/2026/03/snow1.jpg)
+![Cardboard snow dropper box suspended, view 1](/images/2026/03/snow1.jpg)
 
 Snow dropper box (view 1).
 
-![Cardboard snow dropper box suspended, view 2](https://i0.wp.com/steamhead.space/images/2026/03/snow2.jpg)
+![Cardboard snow dropper box suspended, view 2](/images/2026/03/snow2.jpg)
 
 Snow dropper box (view 2).
 

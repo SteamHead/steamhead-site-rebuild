@@ -18,6 +18,6 @@ Reposted from dusseiller.ch: [www.dusseiller.ch/labs/?page\_id=2](http://www.dus
 
    
 
-[![](/images/2019/02/dusjagr_coconut-300x300.jpg)](https://steamhead.space/?attachment_id=1478)  
+![](/images/2019/02/dusjagr_coconut-300x300.jpg)  
   
-[![](/images/2019/02/wx_camera_1535119559282-169x300.jpg)](https://steamhead.space/?attachment_id=1479)
+![](/images/2019/02/wx_camera_1535119559282-169x300.jpg)

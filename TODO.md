@@ -50,10 +50,19 @@ the items teammates need visibility on.
 ## Domain cutover checklist (target: by Sept 1, HostPresto renewal Sept 7)
 
 - [ ] Videos re-hosted (see "last missing video" above)
-- [ ] Old-site links resolved: any remaining steamhead.space/wp-content
-      references (certification pages done: /design-immersion-overview/ and
-      /maker-badges/ are live top-level pages — the overview URL is cited in
-      academic papers and must never move)
+- [ ] Old-site links resolved (in progress): 13 dead `?attachment_id=`
+      links and 15 images still hotlinked via WordPress's Jetpack Photon
+      CDN (`i0.wp.com`/`i2.wp.com`) have been fixed — all pointed at
+      images already mirrored locally under `public/images/`. Citation
+      links to `steamhead.space/design-immersion-overview/` are
+      intentional (cited in academic papers, must never move) and left
+      alone. **Outstanding, needs a decision**: `theshelf.astro` (2
+      "Get It" buttons) and `settings/general.md`'s `support_url` all
+      point at `steamhead.space/shop/` and `/support-us/` — old
+      WooCommerce/donation pages with no equivalent in this repo and no
+      redirect. Need to know if there's a replacement URL (external
+      store/donation page) or if these need to be rebuilt here before
+      cutover.
 - [ ] **Launches from Earth (PR #18, live under Neighborhood Earth)**:
       confirm the live Launch Library API call and its CORS behavior work
       from the real `steamhead.space` origin, not just the

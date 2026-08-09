@@ -17,5 +17,5 @@ Shenzhen Maker Tips Chinese construction stores have everything you need! It mig
 
    
 
-[![Employee reaching for PVC pipes stocked on hardware store shelves](/images/2019/02/indoor-garden-2-300x225.jpg)](https://steamhead.space/?attachment_id=1515)  
-[![Person kneeling to inspect an exposed pipe under a broken tile floor](/images/2019/02/indoor-garden-300x225.jpg)](https://steamhead.space/?attachment_id=1516)
+![Employee reaching for PVC pipes stocked on hardware store shelves](/images/2019/02/indoor-garden-2-300x225.jpg)  
+![Person kneeling to inspect an exposed pipe under a broken tile floor](/images/2019/02/indoor-garden-300x225.jpg)

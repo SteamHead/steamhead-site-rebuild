@@ -8,7 +8,7 @@ categories:
   - "MakeFashion Edu"
 ---
 
-![Two students posing with a light-up cardboard guitar and headphones](https://i0.wp.com/steamhead.space/images/2018/09/7V4A8523.jpg)
+![Two students posing with a light-up cardboard guitar and headphones](/images/2018/09/7V4A8523.jpg)
 
   
 London Reese and Cassandra Durand, age 12, designed a touch sensitive [micro:bit](https://www.microbit.org/) guitar. If they press one of the [copper tape](https://item.taobao.com/item.htm?id=544540941731&ns=1&abbucket=4#detail) strips, midi sounds blast out of speakers or a gaming headset. They also have a string of bit lights across the front to visualize the music. Different colors for different notes.
@@ -17,7 +17,7 @@ London and Cassandra designed the project as part of an after school electronics
 
 The idea came up as part of a [wilderness survival challenge](https://steamhead.space/project/wilderness-survival/), inspired by [Tuft University’s Novel Engineering](http://www.novelengineering.org/) concept, where students read books about wilderness survival and then used electronics to invent ways of addressing problems they identified.
 
-![Two students standing back to back with the illuminated guitar](https://i0.wp.com/steamhead.space/images/2018/09/7V4A8522-1.jpg) ![Student headbanging while playing the LED-lit cardboard guitar](https://i0.wp.com/steamhead.space/images/2018/09/7V4A8518.jpg) ![Student wearing headphones beside the glowing guitar neck](https://i0.wp.com/steamhead.space/images/2018/09/7V4A8525.jpg)
+![Two students standing back to back with the illuminated guitar](/images/2018/09/7V4A8522-1.jpg) ![Student headbanging while playing the LED-lit cardboard guitar](/images/2018/09/7V4A8518.jpg) ![Student wearing headphones beside the glowing guitar neck](/images/2018/09/7V4A8525.jpg)
 
   
 London and Cassandra actually pointed to the dangers of depression and hopelessness, portrayed in [Gary Paulsen’s Hatchet](https://www.amazon.com/Hatchet-Brians-Saga-Book-1-ebook/dp/B002MBLU9U), as something that is rarely addressed in survival scenarios. Each team of students in the challenge came up with their own invention to help people survive a month lost in the wilderness. Other projects included devices to scare away dangerous animals, a hand-motion controlled car to help a single person use “pack hunt” strategies to hunt rabbits, and means of carrying gear while on the move.

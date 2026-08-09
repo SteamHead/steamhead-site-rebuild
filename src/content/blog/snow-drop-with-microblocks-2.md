@@ -14,7 +14,7 @@ draft: true
   
 
   
-![Grade 2 students' paper snow falling during the winter performance](https://i0.wp.com/steamhead.space/images/2026/03/snow2.jpg)  
+![Grade 2 students' paper snow falling during the winter performance](/images/2026/03/snow2.jpg)  
 
   
 
@@ -138,11 +138,11 @@ I was first introduced to MicroBlocks by Kathy Giori at the Bay Area Maker Faire
 
 They designed and built cardboard "snow release" boxes, engineered simple bottom doors, produced paper snow, programmed OctoStudio to send beam signals, rehearsed timing during performance practice, and triggered the snow live. The coding was simple and clear: send a beam when a button is tapped.
 
-![OctoStudio app showing the beam trigger program](https://i0.wp.com/steamhead.space/images/2026/03/IMG_9878.jpg)
+![OctoStudio app showing the beam trigger program](/images/2026/03/IMG_9878.jpg)
 
 The OctoStudio program — students tap to send a beam signal that triggers the micro:bit.
 
-![Students preparing the snow release boxes](https://i0.wp.com/steamhead.space/images/2026/03/snow1.jpg)
+![Students preparing the snow release boxes](/images/2026/03/snow1.jpg)
 
 Grade 2 students preparing their cardboard snow release boxes for the performance.
 
@@ -150,7 +150,7 @@ Grade 2 students preparing their cardboard snow release boxes for the performanc
 
 The micro:bit ran a MicroBlocks program that listened for a specific beam ID, rotated the servo to open the trap door, and returned the servo to closed position. Uploading directly via MicroBlocks made iteration fast — especially useful during rehearsal testing.
 
-![MicroBlocks code blocks for the snow drop servo control](https://i0.wp.com/steamhead.space/images/2026/03/microblocks_octo.png)
+![MicroBlocks code blocks for the snow drop servo control](/images/2026/03/microblocks_octo.png)
 
 The MicroBlocks program — teacher-created, but accessible enough for most 3rd graders.
 

@@ -15,4 +15,4 @@ Since construction the piece has been featured at 3 Maker Faires, been seen by t
 
 As part of his Resident Educator duties, Zachary has also coached makers at SteamHead Makerspace in his design techniques, and provided technical expertise in the areas of laser cutting and LED usage.
 
-![](https://i0.wp.com/steamhead.space/images/2018/02/20171111_082737870_iOS.jpg) ![](https://i0.wp.com/steamhead.space/images/2018/02/20181014_121613.jpg) ![](https://i0.wp.com/steamhead.space/images/2018/02/wx_camera_1539332066651.jpg)
+![](/images/2018/02/20171111_082737870_iOS.jpg) ![](/images/2018/02/20181014_121613.jpg) ![](/images/2018/02/wx_camera_1539332066651.jpg)
