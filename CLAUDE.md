@@ -18,8 +18,9 @@ is the surviving source of truth (the machine that did the earlier work died).
 ## Deploy path
 
 - Push to `main` on GitHub (`SteamHead/steamhead-site-rebuild`) → Cloudflare
-  Workers Builds auto-builds and deploys the Worker (`steamhead-astro-scaffold`
-  per `wrangler.jsonc`).
+  Workers Builds auto-builds and deploys the Worker (`steamhead`
+  per `wrangler.jsonc`). Renamed from `steamhead-astro-scaffold` on
+  2026-08-08 (old Worker kept around briefly for comparison, then deleted).
 - Deploys go to **James's Cloudflare account**, account ID
   `068bd0bae77f7c068677cd14996466fe`. **Caveat: `wrangler login` can see two
   accounts** — always confirm you're targeting this account ID before any
@@ -27,9 +28,9 @@ is the surviving source of truth (the machine that did the earlier work died).
 - Manual deploy: `npm run deploy` (build + `wrangler deploy`).
   Local preview of the Worker: `npm run preview`.
 - **Branch preview URLs**: every push builds a new Worker version; the
-  preview is `https://<first-8-chars-of-version-id>-steamhead-astro-scaffold.james-068.workers.dev`.
+  preview is `https://<first-8-chars-of-version-id>-steamhead.james-068.workers.dev`.
   Get the newest version id via `npx wrangler versions list --name
-  steamhead-astro-scaffold --json` sorted by `metadata.created_on`
+  steamhead --json` sorted by `metadata.created_on`
   (list order is NOT newest-first).
 
 ## Content schema (locked 2026-07-10)

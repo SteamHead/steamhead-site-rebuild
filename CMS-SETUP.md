@@ -27,7 +27,7 @@ Sveltia provides a pre-built Cloudflare Worker for this.
 1. Go to: https://github.com/settings/developers → **OAuth Apps → New OAuth App**
 2. Fill in:
    - **Application name:** SteamHead CMS
-   - **Homepage URL:** `https://steamhead-astro-scaffold.<your-subdomain>.workers.dev` (the site's Worker URL — find it under **Workers & Pages → steamhead-astro-scaffold** in the Cloudflare dashboard)
+   - **Homepage URL:** `https://steamhead.<your-subdomain>.workers.dev` (the site's Worker URL — find it under **Workers & Pages → steamhead** in the Cloudflare dashboard)
    - **Authorization callback URL:** `https://sveltia-cms-auth.YOUR_NAME.workers.dev/callback`
 3. Click **Register application**
 4. Copy the **Client ID**
@@ -61,7 +61,7 @@ base_url: https://sveltia-cms-auth.YOUR_NAME.workers.dev
 
 ## How to use the CMS
 
-Once deployed, staff visit: `https://steamhead-astro-scaffold.<your-subdomain>.workers.dev/admin/` (or `/admin/` on the real domain once it's connected)
+Once deployed, staff visit: `https://steamhead.<your-subdomain>.workers.dev/admin/` (or `/admin/` on the real domain once it's connected)
 
 - **Blog Posts** — create, edit, delete posts in the "Great Things Blog"
 - **Pages** — edit the copy on each of the 6 main pages
