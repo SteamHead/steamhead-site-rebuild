@@ -66,9 +66,8 @@ the items teammates need visibility on.
       fallback link now points at the existing Amazon collection link
       instead; `/support-us/` was an unused template (the `support_url`
       field was never referenced anywhere in the site code) — deleted
-      from `settings/general.md`. Still open: the "SHTEAM Labs 1" **Get
-      It** button on `/theshelf/` has no known real destination now that
-      `/shop/` is gone — needs a decision on where it should point.
+      from `settings/general.md`. "SHTEAM Labs 1" **Get It** button now
+      points at its real Canva share link (confirmed by Blake).
 - [ ] **Launches from Earth (PR #18, live under Neighborhood Earth)**:
       confirm the live Launch Library API call and its CORS behavior work
       from the real `steamhead.space` origin, not just the
