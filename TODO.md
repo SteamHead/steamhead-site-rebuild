@@ -28,6 +28,12 @@ the items teammates need visibility on.
 
 ## Done (recent)
 
+- [x] **Earth-launches transferred to the SteamHead org** — was
+      `boomtown001/earth-launches`, now `SteamHead/earth-launches`. PR #18
+      added its project page under Neighborhood Earth and merged.
+- [x] **Worker renamed to `steamhead`** and manually deployed/verified live
+      at `steamhead.james-068.workers.dev` — see "Deploy path" in CLAUDE.md
+      for the auto-deploy gap this created (not yet fixed).
 - [x] **MG Space Cardboard Engineering post removed** — its recap video
       (bilingual-subtitle .mov) was already gone from the dead WordPress
       server with no other source found, so the post was cut rather than
@@ -48,6 +54,39 @@ the items teammates need visibility on.
 - [x] **Ben: heritage page on WordPress** — live and verified.
 
 ## Domain cutover checklist (target: by Sept 1, HostPresto renewal Sept 7)
+
+**Status as of 2026-08-09**: Blake emailed HostPresto to change
+`steamhead.space`'s nameservers to Cloudflare's (`addilyn.ns.cloudflare.com`
+/ `lars.ns.cloudflare.com`) — the Cloudflare zone already exists and is
+`status: pending`, waiting on that. Expect at least a day for the email to
+be processed and DNS to propagate; live nameservers were still HostPresto's
+(`ns[1-4].hpdns.net`) as of this check. Full WordPress backup (see "New
+machine setup" above) is done, so it's safe to proceed once DNS clears.
+Next concrete steps, in order:
+
+1. Re-check nameservers (`dig NS steamhead.space`) / the Cloudflare zone
+   status until it flips to `active`.
+2. Workers & Pages → `steamhead` → Settings → Domains & Routes → Add Custom
+   Domain → `steamhead.space` (and `www.steamhead.space`). This was tried
+   on 2026-08-08 while still pending and Cloudflare showed
+   "steamhead.space (pending)" — expected, not stuck; retry once the zone
+   is active. (Not doable via the API token in use — it's Workers-scoped
+   only, no Zone/DNS permission, and Claude Code's own safety classifier
+   blocks any `workers/domains` API call outright, read or write — this
+   step needs a human in the dashboard.)
+3. Verify the live site on the real domain: homepage, blog, a person page,
+   `/neighborhood-earth/launches-from-earth/`, `/admin/` CMS login.
+4. Update the GitHub OAuth app's Homepage URL (Developer Settings → OAuth
+   Apps) to `https://steamhead.space`.
+5. Only after 3 and 4 check out: decline the HostPresto renewal (due
+   Sept 7).
+6. Once `steamhead` is confirmed solid: delete the old
+   `steamhead-astro-scaffold` Worker (see "Deploy path" above — it's still
+   the one auto-deploying on every push right now, `steamhead` is not).
+
+MX record check: Cloudflare's initial zone scan already copied the existing
+Google Workspace MX/SPF records over automatically — confirmed fine,
+no manual re-entry needed.
 
 - [ ] **Videos re-hosted** — three 2021 clips + the 96MB `output2.mp4`
       (Snow Drop post) still point at dead `steamhead.space/wp-content/...`
@@ -76,8 +115,13 @@ the items teammates need visibility on.
       "View on GitHub" link resolves to `github.com/SteamHead/earth-launches`
       (repo now transferred from boomtown001) and that the
       `/images/2024/04/neighborhoodearth.jpg` card image renders.
-- [ ] Add steamhead.space zone to James's Cloudflare account; attach custom
-      domain to the Worker
+- [x] `steamhead.space` zone added to James's Cloudflare account (status:
+      pending as of 2026-08-09, awaiting nameserver propagation) — see
+      status block above for the custom-domain-attachment follow-up.
 - [ ] Update GitHub OAuth app homepage URL
 - [ ] Final WordPress export archived in Drive; decline HostPresto renewal
+- [ ] Set up git-connected Workers Build for `steamhead` (see "Deploy path"
+      above) so pushes auto-deploy the right Worker again
+- [ ] Delete `steamhead-astro-scaffold` once `steamhead` is confirmed good
+      on the real domain
 - [ ] Repo public flip (secrets scan already clean) — optional, any time

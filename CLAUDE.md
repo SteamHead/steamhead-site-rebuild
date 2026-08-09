@@ -17,21 +17,37 @@ is the surviving source of truth (the machine that did the earlier work died).
 
 ## Deploy path
 
-- Push to `main` on GitHub (`SteamHead/steamhead-site-rebuild`) → Cloudflare
-  Workers Builds auto-builds and deploys the Worker (`steamhead`
-  per `wrangler.jsonc`). Renamed from `steamhead-astro-scaffold` on
-  2026-08-08 (old Worker kept around briefly for comparison, then deleted).
+- **Worker renamed `steamhead-astro-scaffold` → `steamhead` on 2026-08-08**
+  (in `wrangler.jsonc`/`package.json`). Important gotcha discovered that
+  day: Cloudflare's git-connected "Workers Builds" pipeline is bound to the
+  *original* service at the dashboard level and ignores the `name` field in
+  `wrangler.jsonc` — pushing to `main` still auto-deploys
+  **`steamhead-astro-scaffold`** (the old Worker), NOT `steamhead`. Confirmed
+  via the GitHub check-run's `output.summary`, which literally says `Script:
+  steamhead-astro-scaffold` even after the rename.
+- **`steamhead` (the real one going forward) currently has NO auto-deploy.**
+  Every push to `main` must be followed by a manual deploy: `npm run deploy`
+  (or `npx wrangler deploy`, same thing) using the `CLOUDFLARE_API_TOKEN` in
+  `.env`. To fix this properly: Cloudflare dashboard → Workers & Pages →
+  Create → Import a repository → connect `SteamHead/steamhead-site-rebuild`
+  main branch as a *new* Build pipeline targeting `steamhead`. Not yet done
+  as of 2026-08-08 (see TODO.md domain-cutover checklist).
+- Both Workers are live right now: `steamhead-astro-scaffold` (stale, still
+  auto-deploying, slated for deletion once `steamhead` is confirmed good on
+  the real domain) and `steamhead` (the target, manually deployed).
 - Deploys go to **James's Cloudflare account**, account ID
   `068bd0bae77f7c068677cd14996466fe`. **Caveat: `wrangler login` can see two
   accounts** — always confirm you're targeting this account ID before any
   manual `wrangler deploy` or dashboard work.
-- Manual deploy: `npm run deploy` (build + `wrangler deploy`).
-  Local preview of the Worker: `npm run preview`.
-- **Branch preview URLs**: every push builds a new Worker version; the
-  preview is `https://<first-8-chars-of-version-id>-steamhead.james-068.workers.dev`.
+- Local preview of the Worker: `npm run preview`.
+- **Branch preview URLs** (only apply to the old, git-connected
+  `steamhead-astro-scaffold`): every push builds a new Worker version; the
+  preview is `https://<first-8-chars-of-version-id>-steamhead-astro-scaffold.james-068.workers.dev`.
   Get the newest version id via `npx wrangler versions list --name
-  steamhead --json` sorted by `metadata.created_on`
-  (list order is NOT newest-first).
+  steamhead-astro-scaffold --json` sorted by `metadata.created_on` (list
+  order is NOT newest-first). For `steamhead`, there's no push-triggered
+  preview yet — each manual `wrangler deploy` prints its own Version ID and
+  the live URL directly.
 
 ## Content schema (locked 2026-07-10)
 
@@ -90,7 +106,7 @@ repo-edited (not exposed in the CMS).
 
 ## New machine setup
 
-Everything needed to continue lives in this repo except two things:
+Everything needed to continue lives in this repo except a few things:
 
 1. **Cloudflare API token** — create a `.env` in the repo root (gitignored):
    ```
@@ -100,12 +116,32 @@ Everything needed to continue lives in this repo except two things:
    Token lives in the team password manager, or mint a new one at
    dash.cloudflare.com → My Profile → API Tokens ("Edit Cloudflare Workers"
    template, scoped to James's account only). Wrangler reads `.env`
-   automatically. Never commit it.
-2. **WordPress export XML** (`steamhead.WordPress.2026-07-11.xml`, ~3.6 MB,
+   automatically. Never commit it. **Already set up on Blake's machine**
+   as of 2026-08-08 — token is Workers-scoped only (no Zone/DNS permission,
+   so it can't read or edit DNS records; attaching a custom domain to a
+   Worker also needs to be done by hand in the dashboard, not via API).
+2. **Node.js >=22.12.0 is required** (Astro 6 refuses to build on anything
+   older — v20 fails with "Node.js v20.x.x is not supported by Astro!").
+   If a machine/sandbox has no Node, or an older one, and there's no sudo
+   for a system install, a portable no-sudo install works fine:
+   ```
+   curl -sL -o node.tar.xz https://nodejs.org/dist/v22.12.0/node-v22.12.0-linux-x64.tar.xz
+   tar -xJf node.tar.xz --strip-components=1 -C <some local dir>
+   export PATH="<that dir>/bin:$PATH"
+   ```
+   Then `npm install && npm run build` works normally. (Used on 2026-08-08
+   in a sandbox with no Node at all, downloaded straight into the session's
+   scratch dir — not persistent, so redo it if it's gone next session.)
+3. **WordPress export XML** (`steamhead.WordPress.2026-07-11.xml`, ~3.6 MB,
    migration source for the old blog) — archived in the SteamHead Google
    Drive. Do NOT commit it to this repo: it's gitignored deliberately
    because the repo is intended to go public and a raw WordPress export
    can contain non-public data (draft posts, commenter emails).
+4. **Full WordPress media backup** (UpdraftPlus, taken 2026-08-08 11pm,
+   covers everything the migration script didn't — see the video re-hosting
+   item in TODO.md) — saved to the "shmac" laptop and SteamHead's OneDrive,
+   not in this repo or Drive.
 
-Then: `npm install && npm run dev`. Deploys happen automatically on push to
-main (Workers Builds); manual fallback is `npm run deploy`.
+Then: `npm install && npm run dev`. **Deploys are NOT fully automatic right
+now** — see "Deploy path" above for the `steamhead` vs
+`steamhead-astro-scaffold` split; manual deploy is `npm run deploy`.
