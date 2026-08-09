@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Navigation Shell v1 · The Atlas → Class Page → Journal</title>
+<!--
+  ============================================================================
+  NAV SHELL v2 · vs.opushigh · Living Lessons front-of-house
+  Screens: The Atlas (map + timeline) -> Class Page (skill chart above fold,
+  Class Journal below with grey future entries) -> Hexagon Selector (big list).
+  Data: 68 real classes (2017-2025, 4 cities) injected from classes/ sample.
+  CHANGES (rollback tags):
+   [N1] Atlas: illustrated placeholder world map (blobby SVG, decorative);
+        pins are CITIES with count badges; flyout lists schools -> classes.
+   [N2] Timeline scrubber, year resolution 2017-2025 + All; filters pins,
+        flyouts, and class lists.
+   [N3] Class Page: skill chart ABOVE the fold (sample chart, NOT the final
+        chart design - that is a later round); journal + rest below.
+   [N4] Class Journal: completed entries oldest-first, then grey "not yet
+        planned" slots; default 16 sessions, +/- to adjust.
+   [N5] Grey entry click -> Hexagon Selector overlay: big list of the 13 real
+        hexagons; "Open in Stage Rail" is the handoff point to D18's screen.
+  V2 CHANGES:
+   [V2-1] Lit pins z-lifted above dim pins; hover raises further. (free)
+   [V2-2] Map zoom: 1x/1.8x/2.8x buttons + drag-to-pan; pins reproject on
+          zoom. Pure CSS width scaling — no perf cost.
+   [V2-3] Completed journal entries are clickable -> freeform entry screen
+          (blog-style, no required fields) + Living Studio composer preview
+          with the copyable transcription->journal prompt.
+   [V2-4] Hexagon Selector filters: GRADE (auto-set from the class) + SKILL
+          (parsed from badges). Two filters only, per James.
+  ============================================================================
+-->
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--yellow:#F1D302;--orange:#EDA83E;--teal:#5EB1BF;--acc-or:#EF7B44;--acc-bl:#409FCD;
+--dark:#474747;--ink:#2b2b2b;--gray:#D7D7D7;--light:#F4F4F4;--white:#fff;
+--heart:#EF7B44;--head:#409FCD;--hand:#F2B705;
+--disp:'Varela Round',system-ui,sans-serif;--body:'Montserrat',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+body{background:var(--light);color:var(--ink);font-family:var(--body)}
+button{font-family:inherit;cursor:pointer}
+:focus-visible{outline:4px solid var(--acc-bl);outline-offset:2px}
+.screen{display:none;min-height:100vh}
+.screen.show{display:block}
+header{display:flex;align-items:center;gap:18px;padding:18px 32px}
+.title{font-family:var(--disp);font-size:30px}
+.title small{display:block;font-family:var(--body);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#8a8a8a}
+.back{border:0;background:var(--white);border-radius:999px;padding:10px 18px;font-weight:700;box-shadow:0 2px 0 var(--gray)}
+
+/* ============ ATLAS ============ */
+#mapwrap{position:relative;margin:0 32px;background:#dceef1;border-radius:26px;overflow:hidden;box-shadow:0 3px 0 var(--gray)}
+#mapview{overflow:auto;cursor:grab;scrollbar-width:thin}
+#mapview.grabbing{cursor:grabbing}
+#mapinner{position:relative;width:100%}
+.zoomctl{position:absolute;top:16px;left:16px;z-index:30;display:flex;gap:6px}
+.zoomctl button{border:0;background:var(--white);border-radius:10px;padding:8px 13px;font-weight:800;box-shadow:0 2px 0 var(--gray)}
+.zoomctl button.on{background:var(--yellow)}
+#mapwrap svg{display:block;width:100%;height:auto}
+.landmass{fill:#bfe0c8;stroke:#8fc3a0;stroke-width:2}
+.pin{position:absolute;transform:translate(-50%,-100%);border:0;background:none;text-align:center;z-index:3}
+.pin.dim{z-index:1}
+.pin:hover,.pin:focus-visible{z-index:20}
+.pin .hex{width:54px;height:60px;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+ background:var(--yellow);display:grid;place-items:center;font-family:var(--disp);font-size:20px;margin:0 auto;transition:transform .15s}
+.pin:hover .hex{transform:scale(1.15)}
+.pin.dim .hex{background:#cfcfc6;color:#8a8a8a}
+.pin .lbl{font-weight:800;font-size:13px;background:var(--white);border-radius:999px;padding:2px 10px;box-shadow:0 2px 0 var(--gray);margin-top:4px;display:inline-block}
+.timeline{display:flex;justify-content:center;gap:8px;padding:22px 32px}
+.timeline button{border:0;background:var(--white);border-radius:12px;padding:10px 16px;font-weight:800;font-size:16px;box-shadow:0 2px 0 var(--gray)}
+.timeline button.on{background:var(--yellow);box-shadow:0 2px 0 #c9b100}
+.flyout{position:absolute;top:20px;right:20px;width:340px;max-height:calc(100% - 40px);overflow:auto;background:var(--white);border-radius:18px;box-shadow:0 10px 26px rgba(0,0,0,.18);padding:18px 20px;display:none}
+.flyout.open{display:block}
+.flyout h3{font-family:var(--disp);font-size:22px}
+.flyout .cnt{color:#8a8a8a;font-weight:600;font-size:13px;margin-bottom:10px}
+.flyout h4{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:#8a8a8a;margin:12px 0 6px}
+.flyout .cls{display:flex;justify-content:space-between;width:100%;border:0;background:var(--light);border-radius:10px;padding:9px 12px;margin-bottom:6px;font-weight:600;font-size:14px}
+.flyout .cls:hover{background:var(--yellow)}
+.flyout .cls small{color:#8a8a8a;font-weight:700}
+
+/* ============ CLASS PAGE ============ */
+.fold{min-height:calc(100vh - 96px);display:flex;flex-direction:column;padding:0 32px 10px}
+.chartcard{flex:1;background:var(--white);border-radius:24px;box-shadow:0 3px 0 var(--gray);padding:26px 34px}
+.chartcard .note{font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#b0a100;background:#fdf6c8;display:inline-block;padding:4px 12px;border-radius:999px;margin-bottom:14px}
+.domains{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px}
+.dom h3{font-family:var(--disp);font-size:22px;padding-bottom:8px;border-bottom:4px solid}
+.dom.heart h3{border-color:var(--heart)}.dom.head h3{border-color:var(--head)}.dom.hand h3{border-color:var(--hand)}
+.badge{display:flex;align-items:center;gap:12px;padding:10px 4px;border-bottom:1px solid #eee}
+.badge .hx{width:40px;height:45px;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);display:grid;place-items:center;font-family:var(--disp);font-size:15px;color:var(--ink);flex:none}
+.dom.heart .hx{background:var(--heart)}.dom.head .hx{background:var(--head)}.dom.hand .hx{background:var(--hand)}
+.badge.zero .hx{background:#e7e7e0;color:#aaa}
+.badge b{font-size:15px;display:block}
+.badge .pips{display:flex;gap:3px;margin-top:3px}
+.badge .pips i{width:10px;height:10px;border-radius:50%;background:#e2e2da}
+.badge .pips i.on{background:var(--dark)}
+.badge .xp{margin-left:auto;font-weight:800;font-size:13px;color:#8a8a8a;white-space:nowrap}
+.scrollhint{text-align:center;color:#8a8a8a;font-weight:700;padding:12px 0 4px}
+
+/* journal */
+.journal{padding:26px 32px 60px;max-width:1150px;margin:0 auto}
+.journal h2{font-family:var(--disp);font-size:30px;margin-bottom:4px}
+.journal .sub{color:#8a8a8a;font-weight:600;margin-bottom:18px}
+.entry{background:var(--white);border-radius:18px;box-shadow:0 3px 0 var(--gray);padding:18px 24px;margin-bottom:14px;display:flex;gap:18px;align-items:center}
+.entry .num{font-family:var(--disp);font-size:22px;background:var(--yellow);width:52px;height:52px;border-radius:14px;display:grid;place-items:center;flex:none}
+.entry .body{flex:1}
+.entry h3{font-family:var(--disp);font-size:20px}
+.entry .meta{color:#8a8a8a;font-weight:600;font-size:13px}
+.entry p{font-size:15px;margin-top:4px}
+.entry .ph{width:84px;height:64px;border-radius:10px;background:repeating-linear-gradient(45deg,#e9e9e2,#e9e9e2 8px,#f4f4ee 8px,#f4f4ee 16px);border:2px dashed #c7c7bd;flex:none;display:grid;place-items:center;font-size:10px;color:#9a9a90;text-align:center}
+.entry.future{background:#ecece4;box-shadow:0 3px 0 #d8d8cd;border:2px dashed #c9c9bd;cursor:pointer}
+.entry.future .num{background:#d8d8cd;color:#8a8a80}
+.entry.future h3{color:#8a8a80}
+.entry.future:hover{background:#e4e4d8}
+.sessionctl{display:flex;align-items:center;gap:12px;justify-content:center;padding:8px 0 0;color:#8a8a8a;font-weight:700}
+.sessionctl button{border:0;background:var(--white);border-radius:10px;width:38px;height:38px;font-size:20px;font-weight:800;box-shadow:0 2px 0 var(--gray)}
+
+/* journal entry screen */
+.entrybody{background:var(--white);border-radius:20px;box-shadow:0 3px 0 var(--gray);padding:30px 36px;margin-bottom:22px}
+.entrybody h2{font-family:var(--disp);font-size:30px}
+.entrybody .meta{color:#8a8a8a;font-weight:700;margin:4px 0 16px}
+.entrybody .hexchip{display:inline-block;background:var(--yellow);font-weight:800;font-size:13px;border-radius:999px;padding:4px 14px;margin-left:10px;vertical-align:middle}
+.entrybody p{font-size:17px;line-height:1.65;margin-bottom:14px;max-width:70ch}
+.mediarow{display:flex;gap:14px;margin:16px 0}
+.mediarow .ph{width:220px;height:150px;border-radius:14px;background:repeating-linear-gradient(45deg,#e9e9e2,#e9e9e2 12px,#f4f4ee 12px,#f4f4ee 24px);border:3px dashed #c7c7bd;display:grid;place-items:center;color:#9a9a90;font-size:12px;text-align:center}
+.composer{background:#eef3f4;border:3px dashed #b9d3d8;border-radius:20px;padding:24px 30px}
+.composer h3{font-family:var(--disp);font-size:20px;margin-bottom:6px}
+.composer .chint{font-size:14.5px;color:#5a6f74;line-height:1.5;margin-bottom:12px;max-width:80ch}
+.composer textarea{width:100%;border:0;border-radius:12px;padding:14px 16px;font-family:ui-monospace,monospace;font-size:13px;line-height:1.55;color:#333;resize:vertical}
+.copybtn{margin-top:10px;border:0;background:var(--teal);color:#fff;border-radius:10px;padding:10px 18px;font-weight:800}
+
+/* selector overlay */
+.ovl{position:fixed;inset:0;background:rgba(43,43,43,.55);display:none;place-items:center;z-index:60}
+.ovl.open{display:grid}
+.panel{background:var(--light);border-radius:24px;width:min(1100px,94vw);max-height:88vh;overflow:auto;padding:26px 32px}
+.panel h2{font-family:var(--disp);font-size:28px}
+.panel .sub{color:#777;font-weight:600;margin:4px 0 16px}
+.hexrow{display:flex;align-items:center;gap:16px;width:100%;text-align:left;border:0;background:var(--white);border-radius:16px;padding:14px 18px;margin-bottom:10px;box-shadow:0 2px 0 var(--gray)}
+.hexrow:hover{box-shadow:0 3px 0 var(--dark)}
+.hexrow .hx{width:44px;height:50px;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);background:var(--yellow);flex:none;display:grid;place-items:center;font-family:var(--disp);font-size:12px}
+.hexrow b{font-family:var(--disp);font-size:18px;display:block}
+.hexrow .bmeta{font-size:13px;color:#8a8a8a;font-weight:600}
+.hexrow .launch{margin-left:auto;background:var(--teal);color:#fff;border-radius:10px;padding:9px 14px;font-weight:800;font-size:13px;white-space:nowrap}
+</style></head><body>
+
+<!-- ============ SCREEN 1: THE ATLAS ============ -->
+<section class="screen show" id="scr-atlas">
+  <header>
+    <div class="title">The Atlas<small>SteamHead Living Lessons · pick a class</small></div>
+  </header>
+  <div id="mapwrap"><div class="zoomctl">
+  <button onclick="setZoom(1)" id="z1" class="on">1×</button>
+  <button onclick="setZoom(1.8)" id="z2">2×</button>
+  <button onclick="setZoom(2.8)" id="z3">3×</button></div>
+ <div id="mapview"><div id="mapinner">
+    <svg viewBox="0 0 1000 470" aria-label="Illustrated world map (placeholder art)">
+      <path class="landmass" d="M60,90 Q110,50 190,60 Q280,55 300,95 Q320,130 280,160 Q260,200 220,215 Q195,250 175,225 Q130,215 110,180 Q70,150 60,90 Z"/>
+      <path class="landmass" d="M235,255 Q280,240 300,270 Q315,320 295,370 Q280,420 255,415 Q235,370 240,320 Q228,285 235,255 Z"/>
+      <path class="landmass" d="M470,95 Q520,70 575,80 Q600,95 585,120 Q550,140 510,135 Q480,125 470,95 Z"/>
+      <path class="landmass" d="M470,160 Q540,140 590,170 Q615,230 595,290 Q575,345 540,350 Q505,330 495,280 Q470,220 470,160 Z"/>
+      <path class="landmass" d="M600,80 Q700,45 810,70 Q880,90 870,140 Q855,190 800,200 Q760,230 720,210 Q660,190 630,150 Q605,120 600,80 Z"/>
+      <path class="landmass" d="M790,300 Q850,285 890,315 Q900,355 865,375 Q815,385 795,355 Q780,325 790,300 Z"/>
+      <line x1="0" y1="235" x2="1000" y2="235" stroke="#a8d3da" stroke-width="2" stroke-dasharray="8 10"/>
+    </svg>
+    <div id="pins"></div></div></div>
+    <div class="flyout" id="flyout"></div>
+  </div>
+  <div class="timeline" id="timeline"></div>
+</section>
+
+<!-- ============ SCREEN 2: CLASS PAGE ============ -->
+<section class="screen" id="scr-class">
+  <header>
+    <button class="back" onclick="showScreen('scr-atlas')">← Atlas</button>
+    <div class="title" id="cp-title">Class<small id="cp-sub">school · year</small></div>
+  </header>
+  <div class="fold">
+    <div class="chartcard">
+      <span class="note">Sample skill chart — the real chart design is its own future round</span>
+      <div class="domains" id="chart"></div>
+    </div>
+    <div class="scrollhint">▼ scroll · Class Journal below</div>
+  </div>
+  <div class="journal">
+    <h2>Class Journal</h2>
+    <div class="sub">Oldest first. Grey entries are sessions not yet planned — click one to choose a hexagon.</div>
+    <div id="entries"></div>
+    <div class="sessionctl">
+      <button onclick="sessions=Math.max(doneCount,sessions-1);drawJournal()">−</button>
+      <span id="sesslabel"></span>
+      <button onclick="sessions=Math.min(40,sessions+1);drawJournal()">+</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCREEN 3: JOURNAL ENTRY ============ -->
+<section class="screen" id="scr-entry">
+  <header>
+    <button class="back" onclick="showScreen('scr-class')">← Class Page</button>
+    <div class="title" id="en-title">Entry<small id="en-sub"></small></div>
+  </header>
+  <div class="journal" style="padding-top:6px">
+    <div class="entrybody" id="en-body"></div>
+    <div class="composer">
+      <h3>Teacher input · Living Studio preview</h3>
+      <p class="chint">Journal entries are freeform — write anything, paste anything, drop photos in.
+      Most teachers will record a voice note, transcribe it with an LLM, and paste the result here.
+      Use this prompt with your transcription for consistent, readable entries:</p>
+      <textarea readonly id="prompttext" rows="9"></textarea>
+      <button class="copybtn" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('prompttext').value);this.textContent='Copied!'">Copy prompt</button>
+    </div>
+  </div>
+</section>
+
+<!-- selector overlay -->
+<div class="ovl" id="ovl" role="dialog" aria-modal="true"><div class="panel">
+  <h2>Choose a hexagon for <span id="sel-session"></span></h2>
+  <div class="sub">Grade is pre-filtered to this class — change it if you're borrowing across grades.</div>
+  <div style="display:flex;gap:12px;margin-bottom:14px">
+    <select id="f-grade" onchange="drawHexList()" style="font-family:inherit;font-weight:700;border:0;border-radius:10px;padding:10px 14px;box-shadow:0 2px 0 var(--gray)"></select>
+    <select id="f-skill" onchange="drawHexList()" style="font-family:inherit;font-weight:700;border:0;border-radius:10px;padding:10px 14px;box-shadow:0 2px 0 var(--gray)"></select>
+  </div>
+  <div id="hexlist"></div>
+</div></div>
+
+<script>
+const CLASSES = [{"id": "sunset-gk-2024", "name": "Kinder Makers", "school": "Sunset Elementary", "city": "San Francisco", "country": "US", "lat": 37.749, "lng": -122.499, "year": 2024, "grade": "K", "status": "archived"}, {"id": "sunset-g1-2024", "name": "Grade 1 Makers", "school": "Sunset Elementary", "city": "San Francisco", "country": "US", "lat": 37.749, "lng": -122.499, "year": 2024, "grade": "1", "status": "archived"}, {"id": "sunset-g2-2024", "name": "Grade 2 Makers", "school": "Sunset Elementary", "city": "San Francisco", "country": "US", "lat": 37.749, "lng": -122.499, "year": 2024, "grade": "2", "status": "archived"}, {"id": "sunset-g3-2024", "name": "Grade 3 Makers", "school": "Sunset Elementary", "city": "San Francisco", "country": "US", "lat": 37.749, "lng": -122.499, "year": 2024, "grade": "3", "status": "archived"}, {"id": "sunset-g4-2024", "name": "Grade 4 Makers", "school": "Sunset Elementary", "city": "San Francisco", "country": "US", "lat": 37.749, "lng": -122.499, "year": 2024, "grade": "4", "status": "archived"}, {"id": "sunset-g5-2024", "name": "Grade 5 Makers", "school": "Sunset Elementary", "city": "San Francisco", "country": "US", "lat": 37.749, "lng": -122.499, "year": 2024, "grade": "5", "status": "archived"}, {"id": "sunset-gk-2025", "name": "Kinder Makers", "school": "Sunset Elementary", "city": "San Francisco", "country": "US", "lat": 37.749, "lng": -122.499, "year": 2025, "grade": "K", "status": "active"}, {"id": "sunset-g1-2025", "name": "Grade 1 Makers", "school": "Sunset Elementary", "city": "San Francisco", "country": "US", "lat": 37.749, "lng": -122.499, "year": 2025, "grade": "1", "status": "active"}, {"id": "sunset-g2-2025", "name": "Grade 2 Makers", "school": "Sunset Elementary", "city": "San Francisco", "country": "US", "lat": 37.749, "lng": -122.499, "year": 2025, "grade": "2", "status": "active"}, {"id": "sunset-g3-2025", "name": "Grade 3 Makers", "school": "Sunset Elementary", "city": "San Francisco", "country": "US", "lat": 37.749, "lng": -122.499, "year": 2025, "grade": "3", "status": "active"}, {"id": "sunset-g4-2025", "name": "Grade 4 Makers", "school": "Sunset Elementary", "city": "San Francisco", "country": "US", "lat": 37.749, "lng": -122.499, "year": 2025, "grade": "4", "status": "active"}, {"id": "sunset-g5-2025", "name": "Grade 5 Makers", "school": "Sunset Elementary", "city": "San Francisco", "country": "US", "lat": 37.749, "lng": -122.499, "year": 2025, "grade": "5", "status": "active"}, {"id": "ulloa-gk-2023", "name": "Kinder Makers", "school": "Ulloa Elementary", "city": "San Francisco", "country": "US", "lat": 37.74, "lng": -122.5, "year": 2023, "grade": "K", "status": "archived"}, {"id": "ulloa-g1-2023", "name": "Grade 1 Makers", "school": "Ulloa Elementary", "city": "San Francisco", "country": "US", "lat": 37.74, "lng": -122.5, "year": 2023, "grade": "1", "status": "archived"}, {"id": "ulloa-g2-2023", "name": "Grade 2 Makers", "school": "Ulloa Elementary", "city": "San Francisco", "country": "US", "lat": 37.74, "lng": -122.5, "year": 2023, "grade": "2", "status": "archived"}, {"id": "ulloa-g3-2023", "name": "Grade 3 Makers", "school": "Ulloa Elementary", "city": "San Francisco", "country": "US", "lat": 37.74, "lng": -122.5, "year": 2023, "grade": "3", "status": "archived"}, {"id": "ulloa-g4-2023", "name": "Grade 4 Makers", "school": "Ulloa Elementary", "city": "San Francisco", "country": "US", "lat": 37.74, "lng": -122.5, "year": 2023, "grade": "4", "status": "archived"}, {"id": "ulloa-g5-2023", "name": "Grade 5 Makers", "school": "Ulloa Elementary", "city": "San Francisco", "country": "US", "lat": 37.74, "lng": -122.5, "year": 2023, "grade": "5", "status": "archived"}, {"id": "ulloa-gk-2024", "name": "Kinder Makers", "school": "Ulloa Elementary", "city": "San Francisco", "country": "US", "lat": 37.74, "lng": -122.5, "year": 2024, "grade": "K", "status": "archived"}, {"id": "ulloa-g1-2024", "name": "Grade 1 Makers", "school": "Ulloa Elementary", "city": "San Francisco", "country": "US", "lat": 37.74, "lng": -122.5, "year": 2024, "grade": "1", "status": "archived"}, {"id": "ulloa-g2-2024", "name": "Grade 2 Makers", "school": "Ulloa Elementary", "city": "San Francisco", "country": "US", "lat": 37.74, "lng": -122.5, "year": 2024, "grade": "2", "status": "archived"}, {"id": "ulloa-g3-2024", "name": "Grade 3 Makers", "school": "Ulloa Elementary", "city": "San Francisco", "country": "US", "lat": 37.74, "lng": -122.5, "year": 2024, "grade": "3", "status": "archived"}, {"id": "ulloa-g4-2024", "name": "Grade 4 Makers", "school": "Ulloa Elementary", "city": "San Francisco", "country": "US", "lat": 37.74, "lng": -122.5, "year": 2024, "grade": "4", "status": "archived"}, {"id": "ulloa-g5-2024", "name": "Grade 5 Makers", "school": "Ulloa Elementary", "city": "San Francisco", "country": "US", "lat": 37.74, "lng": -122.5, "year": 2024, "grade": "5", "status": "archived"}, {"id": "ulloa-gk-2025", "name": "Kinder Makers", "school": "Ulloa Elementary", "city": "San Francisco", "country": "US", "lat": 37.74, "lng": -122.5, "year": 2025, "grade": "K", "status": "active"}, {"id": "ulloa-g1-2025", "name": "Grade 1 Makers", "school": "Ulloa Elementary", "city": "San Francisco", "country": "US", "lat": 37.74, "lng": -122.5, "year": 2025, "grade": "1", "status": "active"}, {"id": "ulloa-g2-2025", "name": "Grade 2 Makers", "school": "Ulloa Elementary", "city": "San Francisco", "country": "US", "lat": 37.74, "lng": -122.5, "year": 2025, "grade": "2", "status": "active"}, {"id": "ulloa-g3-2025", "name": "Grade 3 Makers", "school": "Ulloa Elementary", "city": "San Francisco", "country": "US", "lat": 37.74, "lng": -122.5, "year": 2025, "grade": "3", "status": "active"}, {"id": "ulloa-g4-2025", "name": "Grade 4 Makers", "school": "Ulloa Elementary", "city": "San Francisco", "country": "US", "lat": 37.74, "lng": -122.5, "year": 2025, "grade": "4", "status": "active"}, {"id": "ulloa-g5-2025", "name": "Grade 5 Makers", "school": "Ulloa Elementary", "city": "San Francisco", "country": "US", "lat": 37.74, "lng": -122.5, "year": 2025, "grade": "5", "status": "active"}, {"id": "htms-g6-2020", "name": "Grade 6 Makers", "school": "High Tech Middle School", "city": "San Marcos", "country": "US", "lat": 33.14, "lng": -117.185, "year": 2020, "grade": "6", "status": "archived"}, {"id": "htms-g7-2020", "name": "Grade 7 Makers", "school": "High Tech Middle School", "city": "San Marcos", "country": "US", "lat": 33.14, "lng": -117.185, "year": 2020, "grade": "7", "status": "archived"}, {"id": "htms-g8-2020", "name": "Grade 8 Makers", "school": "High Tech Middle School", "city": "San Marcos", "country": "US", "lat": 33.14, "lng": -117.185, "year": 2020, "grade": "8", "status": "archived"}, {"id": "htms-g6-2021", "name": "Grade 6 Makers", "school": "High Tech Middle School", "city": "San Marcos", "country": "US", "lat": 33.14, "lng": -117.185, "year": 2021, "grade": "6", "status": "archived"}, {"id": "htms-g7-2021", "name": "Grade 7 Makers", "school": "High Tech Middle School", "city": "San Marcos", "country": "US", "lat": 33.14, "lng": -117.185, "year": 2021, "grade": "7", "status": "archived"}, {"id": "htms-g8-2021", "name": "Grade 8 Makers", "school": "High Tech Middle School", "city": "San Marcos", "country": "US", "lat": 33.14, "lng": -117.185, "year": 2021, "grade": "8", "status": "archived"}, {"id": "claudias-g4-2022", "name": "Grade 4 Makers", "school": "Claudia's School", "city": "Prague", "country": "CZ", "lat": 50.083, "lng": 14.43, "year": 2022, "grade": "4", "status": "archived"}, {"id": "keiths-g5-2022", "name": "Grade 5 Makers", "school": "Keith's School", "city": "Prague", "country": "CZ", "lat": 50.076, "lng": 14.44, "year": 2022, "grade": "5", "status": "archived"}, {"id": "isns-g6-2020", "name": "Grade 6 Makers", "school": "ISNS", "city": "Shenzhen", "country": "CN", "lat": 22.523, "lng": 113.93, "year": 2020, "grade": "6", "status": "archived"}, {"id": "isns-g7-2020", "name": "Grade 7 Makers", "school": "ISNS", "city": "Shenzhen", "country": "CN", "lat": 22.523, "lng": 113.93, "year": 2020, "grade": "7", "status": "archived"}, {"id": "isns-g8-2020", "name": "Grade 8 Makers", "school": "ISNS", "city": "Shenzhen", "country": "CN", "lat": 22.523, "lng": 113.93, "year": 2020, "grade": "8", "status": "archived"}, {"id": "sais-gk-2017", "name": "Kinder Makers", "school": "SAIS", "city": "Shenzhen", "country": "CN", "lat": 22.487, "lng": 113.912, "year": 2017, "grade": "K", "status": "archived"}, {"id": "sais-g1-2017", "name": "Grade 1 Makers", "school": "SAIS", "city": "Shenzhen", "country": "CN", "lat": 22.487, "lng": 113.912, "year": 2017, "grade": "1", "status": "archived"}, {"id": "sais-g2-2017", "name": "Grade 2 Makers", "school": "SAIS", "city": "Shenzhen", "country": "CN", "lat": 22.487, "lng": 113.912, "year": 2017, "grade": "2", "status": "archived"}, {"id": "sais-g3-2017", "name": "Grade 3 Makers", "school": "SAIS", "city": "Shenzhen", "country": "CN", "lat": 22.487, "lng": 113.912, "year": 2017, "grade": "3", "status": "archived"}, {"id": "sais-g4-2017", "name": "Grade 4 Makers", "school": "SAIS", "city": "Shenzhen", "country": "CN", "lat": 22.487, "lng": 113.912, "year": 2017, "grade": "4", "status": "archived"}, {"id": "sais-g5-2017", "name": "Grade 5 Makers", "school": "SAIS", "city": "Shenzhen", "country": "CN", "lat": 22.487, "lng": 113.912, "year": 2017, "grade": "5", "status": "archived"}, {"id": "sais-g6-2017", "name": "Grade 6 Makers", "school": "SAIS", "city": "Shenzhen", "country": "CN", "lat": 22.487, "lng": 113.912, "year": 2017, "grade": "6", "status": "archived"}, {"id": "sais-g7-2017", "name": "Grade 7 Makers", "school": "SAIS", "city": "Shenzhen", "country": "CN", "lat": 22.487, "lng": 113.912, "year": 2017, "grade": "7", "status": "archived"}, {"id": "sais-g8-2017", "name": "Grade 8 Makers", "school": "SAIS", "city": "Shenzhen", "country": "CN", "lat": 22.487, "lng": 113.912, "year": 2017, "grade": "8", "status": "archived"}, {"id": "sais-gk-2018", "name": "Kinder Makers", "school": "SAIS", "city": "Shenzhen", "country": "CN", "lat": 22.487, "lng": 113.912, "year": 2018, "grade": "K", "status": "archived"}, {"id": "sais-g1-2018", "name": "Grade 1 Makers", "school": "SAIS", "city": "Shenzhen", "country": "CN", "lat": 22.487, "lng": 113.912, "year": 2018, "grade": "1", "status": "archived"}, {"id": "sais-g2-2018", "name": "Grade 2 Makers", "school": "SAIS", "city": "Shenzhen", "country": "CN", "lat": 22.487, "lng": 113.912, "year": 2018, "grade": "2", "status": "archived"}, {"id": "sais-g3-2018", "name": "Grade 3 Makers", "school": "SAIS", "city": "Shenzhen", "country": "CN", "lat": 22.487, "lng": 113.912, "year": 2018, "grade": "3", "status": "archived"}, {"id": "sais-g4-2018", "name": "Grade 4 Makers", "school": "SAIS", "city": "Shenzhen", "country": "CN", "lat": 22.487, "lng": 113.912, "year": 2018, "grade": "4", "status": "archived"}, {"id": "sais-g5-2018", "name": "Grade 5 Makers", "school": "SAIS", "city": "Shenzhen", "country": "CN", "lat": 22.487, "lng": 113.912, "year": 2018, "grade": "5", "status": "archived"}, {"id": "sais-g6-2018", "name": "Grade 6 Makers", "school": "SAIS", "city": "Shenzhen", "country": "CN", "lat": 22.487, "lng": 113.912, "year": 2018, "grade": "6", "status": "archived"}, {"id": "sais-g7-2018", "name": "Grade 7 Makers", "school": "SAIS", "city": "Shenzhen", "country": "CN", "lat": 22.487, "lng": 113.912, "year": 2018, "grade": "7", "status": "archived"}, {"id": "sais-g8-2018", "name": "Grade 8 Makers", "school": "SAIS", "city": "Shenzhen", "country": "CN", "lat": 22.487, "lng": 113.912, "year": 2018, "grade": "8", "status": "archived"}, {"id": "sais-gk-2019", "name": "Kinder Makers", "school": "SAIS", "city": "Shenzhen", "country": "CN", "lat": 22.487, "lng": 113.912, "year": 2019, "grade": "K", "status": "archived"}, {"id": "sais-g1-2019", "name": "Grade 1 Makers", "school": "SAIS", "city": "Shenzhen", "country": "CN", "lat": 22.487, "lng": 113.912, "year": 2019, "grade": "1", "status": "archived"}, {"id": "sais-g2-2019", "name": "Grade 2 Makers", "school": "SAIS", "city": "Shenzhen", "country": "CN", "lat": 22.487, "lng": 113.912, "year": 2019, "grade": "2", "status": "archived"}, {"id": "sais-g3-2019", "name": "Grade 3 Makers", "school": "SAIS", "city": "Shenzhen", "country": "CN", "lat": 22.487, "lng": 113.912, "year": 2019, "grade": "3", "status": "archived"}, {"id": "sais-g4-2019", "name": "Grade 4 Makers", "school": "SAIS", "city": "Shenzhen", "country": "CN", "lat": 22.487, "lng": 113.912, "year": 2019, "grade": "4", "status": "archived"}, {"id": "sais-g5-2019", "name": "Grade 5 Makers", "school": "SAIS", "city": "Shenzhen", "country": "CN", "lat": 22.487, "lng": 113.912, "year": 2019, "grade": "5", "status": "archived"}, {"id": "sais-g6-2019", "name": "Grade 6 Makers", "school": "SAIS", "city": "Shenzhen", "country": "CN", "lat": 22.487, "lng": 113.912, "year": 2019, "grade": "6", "status": "archived"}, {"id": "sais-g7-2019", "name": "Grade 7 Makers", "school": "SAIS", "city": "Shenzhen", "country": "CN", "lat": 22.487, "lng": 113.912, "year": 2019, "grade": "7", "status": "archived"}, {"id": "sais-g8-2019", "name": "Grade 8 Makers", "school": "SAIS", "city": "Shenzhen", "country": "CN", "lat": 22.487, "lng": 113.912, "year": 2019, "grade": "8", "status": "archived"}];
+const HEXES = [
+ {id:"hex-simple-circuits",t:"Simple Circuits — Figure It Out",b:"Craft Circuits L1",g:"K–5",gr:["K","1","2","3","4","5"],time:"15–20 min"},
+ {id:"hex-copper-tape-circuit",t:"Copper Tape Circuit",b:"Craft Circuits L2",g:"2–5",gr:["2","3","4","5"],time:"25–30 min"},
+ {id:"hex-space-wearables",t:"Space Wearables — Pack for Zero Gravity",b:"Card Craft L1 · Brainstorm L1",g:"K–2",gr:["K","1","2"],time:"20–25 min"},
+ {id:"hex-space-station-modules",t:"Space Station Modules",b:"Craft Circuits L1 · Card Craft L2",g:"K–2",gr:["K","1","2"],time:"2 sessions"},
+ {id:"hex-paper-tower",t:"Paper Tower Challenge",b:"Card Craft L1 · Setup & Cleanup L1",g:"1–5",gr:["1","2","3","4","5"],time:"15 min"},
+ {id:"hex-paper-tower-2",t:"Paper Tower 2 — Carrying Over",b:"Card Craft L1 · Sketching L1",g:"1–5",gr:["1","2","3","4","5"],time:"20 min"},
+ {id:"hex-paper-headwear",t:"Paper Headwear Challenge",b:"Card Craft L2 · Sketching L1",g:"1–5",gr:["1","2","3","4","5"],time:"25–30 min"},
+ {id:"hex-cardboard-cutter-license",t:"Cardboard Cutter License",b:"Learning Station L2 · Setup & Cleanup L2",g:"2–5",gr:["2","3","4","5"],time:"20 min"},
+ {id:"hex-hot-glue-license",t:"Hot Glue License",b:"Learning Station L2 · Setup & Cleanup L2",g:"2–5",gr:["2","3","4","5"],time:"20–25 min"},
+ {id:"hex-client-box",t:"Client Box — Prototype for a Real Client",b:"Card Craft L4 · User Stories L1",g:"3–5",gr:["3","4","5"],time:"2 sessions"},
+ {id:"hex-attachment-poster",t:"Attachment Methods Poster for 1st Graders",b:"Workshop L3 · Setup & Cleanup L3",g:"3–5",gr:["3","4","5"],time:"2 sessions"},
+ {id:"hex-makeymakey-inputs",t:"MakeyMakey Inputs",b:"Learning Station L3 · Craft Circuits L3",g:"4–5",gr:["4","5"],time:"40 min"},
+ {id:"hex-cardboard-controller",t:"Cardboard Game Controller",b:"Craft Circuits L4 · Card Craft L4",g:"4–5",gr:["4","5"],time:"2 sessions"},
+];
+const CHART_SAMPLE = {
+ heart:[["Learning Station",2,7],["Field Trip",1,2],["Interviews",0,0],["Digital Storytelling",1,1]],
+ head:[["Sketching",1,4],["Brainstorm",1,3],["Mind Map",0,0],["Driving Question",0,0]],
+ hand:[["Craft Circuits",3,6],["Card Craft",2,9],["Setup and Cleanup",2,11],["Beta Test",0,0]]
+};
+const YEARS=[2017,2018,2019,2020,2021,2022,2023,2024,2025];
+let yearSel="all", currentClass=null, sessions=16, doneCount=3, selSession=null;
+
+function showScreen(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('show'));
+ document.getElementById(id).classList.add('show');window.scrollTo(0,0);}
+
+/* ---- Atlas ---- */
+function proj(lat,lng){const w=document.getElementById('mapinner').clientWidth;
+ const h=w*470/1000; return [ (lng+180)/360*w, (90-lat)/180*h ];}
+function cities(){const m={};
+ CLASSES.forEach(c=>{if(yearSel!=="all"&&c.year!==yearSel)return;
+  (m[c.city]=m[c.city]||{lat:c.lat,lng:c.lng,classes:[]}).classes.push(c);
+  m[c.city].lat=c.lat;m[c.city].lng=c.lng;});
+ return m;}
+function drawPins(){const box=document.getElementById('pins');box.innerHTML='';
+ const cm=cities();
+ // include dim pins for cities inactive this year
+ const all={};CLASSES.forEach(c=>{all[c.city]={lat:c.lat,lng:c.lng}});
+ Object.entries(all).forEach(([city,pos])=>{
+  const act=cm[city];const [x,y]=proj(pos.lat,pos.lng);
+  const b=document.createElement('button');
+  b.className='pin'+(act?'':' dim');b.style.left=x+'px';b.style.top=y+'px';
+  b.innerHTML=`<div class="hex">${act?act.classes.length:'·'}</div><span class="lbl">${city}</span>`;
+  if(act)b.onclick=()=>openFlyout(city,act.classes);
+  else b.onclick=()=>{document.getElementById('flyout').classList.remove('open')};
+  box.appendChild(b);});}
+function openFlyout(city,list){
+ const schools={};list.forEach(c=>(schools[c.school]=schools[c.school]||[]).push(c));
+ const f=document.getElementById('flyout');
+ f.innerHTML=`<h3>${city}</h3><div class="cnt">${Object.keys(schools).length} school(s) · ${list.length} class(es)${yearSel==="all"?" · all years":" · "+yearSel}</div>`+
+  Object.entries(schools).map(([s,cl])=>`<h4>${s}</h4>`+cl.sort((a,b)=>a.year-b.year||(''+a.grade).localeCompare(''+b.grade))
+   .map(c=>`<button class="cls" onclick='openClass(${JSON.stringify(c)})'><span>${c.name}</span><small>${c.year}-${String(c.year+1).slice(2)}</small></button>`).join('')).join('');
+ f.classList.add('open');}
+function drawTimeline(){document.getElementById('timeline').innerHTML=
+ [`<button class="${yearSel==='all'?'on':''}" onclick="yearSel='all';refreshAtlas()">All years</button>`,
+  ...YEARS.map(y=>`<button class="${yearSel===y?'on':''}" onclick="yearSel=${y};refreshAtlas()">${y}</button>`)].join('');}
+function refreshAtlas(){drawTimeline();drawPins();document.getElementById('flyout').classList.remove('open');}
+
+/* ---- Class Page ---- */
+function openClass(c){currentClass=c;sessions=16;
+ document.getElementById('cp-title').childNodes[0].nodeValue=c.name+" ";
+ document.getElementById('cp-sub').textContent=`${c.school} · ${c.city} · ${c.year}-${String(c.year+1).slice(2)} · grade ${c.grade}`;
+ drawChart();drawJournal();showScreen('scr-class');}
+function drawChart(){
+ const dom=(k,label)=>`<div class="dom ${k}"><h3>${label}</h3>`+CHART_SAMPLE[k].map(([n,d,x])=>
+  `<div class="badge ${d===0?'zero':''}"><div class="hx">${d>0?'L'+d:'–'}</div>
+   <div><b>${n}</b><div class="pips">${[1,2,3,4,5].map(i=>`<i class="${i<=d?'on':''}"></i>`).join('')}</div></div>
+   <span class="xp">${x>0?'×'+x:''}</span></div>`).join('')+`</div>`;
+ document.getElementById('chart').innerHTML=dom('heart','Heart')+dom('head','Head')+dom('hand','Hand');}
+const DONE=[
+ {t:"Paper Tower Challenge",d:"Sep 12",p:"First towers! The fold discovery spread table to table.",hex:"hex-paper-tower"},
+ {t:"Hot Glue License",d:"Sep 19",p:"Whole class licensed. Two burns, both boring — as designed.",hex:"hex-hot-glue-license"},
+ {t:"Simple Circuits — Figure It Out",d:"Sep 26",p:"Every table reached first light without instructions.",hex:"hex-simple-circuits"},
+];
+function drawJournal(){doneCount=DONE.length;
+ const e=document.getElementById('entries');let html='';
+ DONE.forEach((en,i)=>{html+=`<div class="entry" style="cursor:pointer" onclick="openEntry(${i})"><div class="num">${i+1}</div>
+  <div class="body"><h3>${en.t}</h3><div class="meta">${en.d} · completed</div><p>${en.p}</p></div>
+  <div class="ph">blurred<br>class photo</div></div>`;});
+ for(let i=doneCount;i<sessions;i++){
+  html+=`<div class="entry future" onclick="openSelector(${i+1})"><div class="num">${i+1}</div>
+   <div class="body"><h3>Session ${i+1} — not yet planned</h3><div class="meta">click to choose a hexagon</div></div></div>`;}
+ e.innerHTML=html;
+ document.getElementById('sesslabel').textContent=`${sessions} sessions this year`;}
+
+/* ---- journal entry ---- */
+const PROMPT=`Turn my rough voice transcription below into a short Class Journal entry for our elementary makerspace class.
+
+Rules:
+- 2 to 4 short paragraphs, under 200 words total, no headings or bullet lists.
+- Keep my voice: plain, warm, specific. Keep the funny or human moments.
+- Never use student names. Say "one maker," "a third grader," "one table."
+- Rough shape: what we did, what surprised us, where we're headed next.
+- Only mention badges or skills if I mentioned them.
+- Do not invent details that are not in my transcription.
+- If I mentioned a plan for next session, end with one line about it.
+
+Transcription:
+[PASTE TRANSCRIPTION HERE]`;
+function openEntry(i){const en=DONE[i];
+ document.getElementById('en-title').childNodes[0].nodeValue="Session "+(i+1)+" ";
+ document.getElementById('en-sub').textContent=currentClass?`${currentClass.name} · ${en.d}`:en.d;
+ document.getElementById('en-body').innerHTML=`<h2>${en.t}<span class="hexchip">hexagon</span></h2>
+  <div class="meta">${en.d} · written by the teacher</div>
+  <p>${en.p}</p>
+  <p>Sample of the freeform space: any paragraphs, photos, or video the teacher wants. No required fields, no forms to fill — an entry can be two sentences or a full story.</p>
+  <div class="mediarow"><div class="ph">blurred class photo</div><div class="ph">blurred class photo</div><div class="ph">video embed</div></div>`;
+ document.getElementById('prompttext').value=PROMPT;
+ showScreen('scr-entry');}
+
+/* ---- selector ---- */
+function skillsOf(h){return h.b.split('·').map(s=>s.trim().replace(/ L\d$/,''))}
+function openSelector(n){selSession=n;
+ document.getElementById('sel-session').textContent="Session "+n;
+ const gsel=document.getElementById('f-grade');
+ const grades=["All grades","K","1","2","3","4","5"];
+ gsel.innerHTML=grades.map(g=>`<option ${currentClass&&g===currentClass.grade?'selected':''}>${g}</option>`).join('');
+ const skills=[...new Set(HEXES.flatMap(skillsOf))].sort();
+ document.getElementById('f-skill').innerHTML=['All skills',...skills].map(s=>`<option>${s}</option>`).join('');
+ drawHexList();
+ document.getElementById('ovl').classList.add('open')}
+function drawHexList(){const n=selSession;
+ const g=document.getElementById('f-grade').value, sk=document.getElementById('f-skill').value;
+ const list=HEXES.filter(h=>(g==='All grades'||h.gr.includes(g))&&(sk==='All skills'||skillsOf(h).includes(sk)));
+ document.getElementById('hexlist').innerHTML=(list.length?list:[]).map(h=>
+  `<button class="hexrow" onclick="alert('Prototype handoff: Session ${n} → ${h.t}\\nThis would open the Stage Rail screen (D18) with this hexagon loaded.')">
+    <div class="hx">HEX</div><div><b>${h.t}</b><span class="bmeta">${h.b} · grades ${h.g} · ${h.time}</span></div>
+    <span class="launch">Open in Stage Rail →</span></button>`).join('');
+ document.getElementById('ovl').classList.add('open');}
+document.getElementById('ovl').onclick=e=>{if(e.target.id==='ovl')document.getElementById('ovl').classList.remove('open')};
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('ovl').classList.remove('open')});
+
+let zoom=1;
+function setZoom(z){zoom=z;const inner=document.getElementById('mapinner');
+ const view=document.getElementById('mapview');
+ const cx=(view.scrollLeft+view.clientWidth/2)/inner.clientWidth;
+ const cy=(view.scrollTop+view.clientHeight/2)/inner.clientHeight;
+ inner.style.width=(z*100)+'%';
+ [['z1',1],['z2',1.8],['z3',2.8]].forEach(([id,v])=>document.getElementById(id).classList.toggle('on',v===z));
+ drawPins();
+ view.scrollLeft=cx*inner.clientWidth-view.clientWidth/2;
+ view.scrollTop=cy*inner.clientHeight-view.clientHeight/2;}
+(function(){const v=document.getElementById('mapview');let drag=null;
+ v.addEventListener('pointerdown',e=>{if(e.target.closest('.pin'))return;drag={x:e.clientX,y:e.clientY,l:v.scrollLeft,t:v.scrollTop};v.classList.add('grabbing')});
+ window.addEventListener('pointermove',e=>{if(!drag)return;v.scrollLeft=drag.l-(e.clientX-drag.x);v.scrollTop=drag.t-(e.clientY-drag.y)});
+ window.addEventListener('pointerup',()=>{drag=null;v.classList.remove('grabbing')});})();
+window.addEventListener('resize',drawPins);
+refreshAtlas();
+</script></body></html>
