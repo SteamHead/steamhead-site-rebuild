@@ -69,11 +69,13 @@ path:
 
 ### Parking lot
 
-- **5 videos must move to YouTube/Drive before domain cutover** — they're
+- **4 videos must move to YouTube/Drive before domain cutover** — they're
   currently linked at their old steamhead.space/wp-content URLs, which die
   when the domain moves. List in `scripts/migration-report.md` (three 2021
-  clips, one 2025 .mov, and the 96 MB `output2.mp4` from the Snow Drop
-  post — too big for Workers assets even if we wanted to host it).
+  clips and the 96 MB `output2.mp4` from the Snow Drop post — too big for
+  Workers assets even if we wanted to host it). The fifth, a 2025 .mov in
+  the MG Space Cardboard Engineering post, was unrecoverable (already gone
+  from the dead server) — that post was removed instead, see TODO.md.
 - 4 images 404'd on the live site during download (see report) — posts
   reference them but the originals are already gone; decide fix or remove.
 - 4 posts kept raw `<iframe>` embeds — check they render acceptably:

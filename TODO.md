@@ -5,13 +5,6 @@ the items teammates need visibility on.
 
 ## Waiting on Blake
 
-- [ ] **The last missing video** — 4 of 5 are on YouTube and embedded
-      (Inventing Pinball ×3, Snow Drop ×1). Remaining: the bilingual-subtitle
-      class recap `.mov` in the MG Space Cardboard Engineering post — its
-      old-site URL already 404s, so the file is gone from the server. It's
-      actually three concatenated recap videos (01 Pen Holder Project /
-      02 Future Robots / 03 Future City, 复盘-双语字幕-low). Likely sources:
-      the DingTalk doc linked in that post, or Hardi Huang (MG Space).
 - [ ] **Missing 2022-course assets** — the Croquis worksheet Drive file is
       dead (404; a rebuilt web version ships with the 2026 course), and the
       Student Handout, Paper Sewing Guides, and "Design Process" video were
@@ -35,6 +28,11 @@ the items teammates need visibility on.
 
 ## Done (recent)
 
+- [x] **MG Space Cardboard Engineering post removed** — its recap video
+      (bilingual-subtitle .mov) was already gone from the dead WordPress
+      server with no other source found, so the post was cut rather than
+      published with a dead video. Redirect for its old permalink removed
+      from `public/_redirects` too.
 - [x] **Alt-text pass** — PR #13 (issue #8): ~440 images described.
 - [x] **Design-token pass** — PR #14: all colors/shadows/sizes from
       global.css tokens; rule added to CLAUDE.md.
