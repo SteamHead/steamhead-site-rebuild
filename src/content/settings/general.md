@@ -6,5 +6,4 @@ mission: >
   design, technology, and community.
 facebook_url: https://www.facebook.com/steamHead.Space
 contact_url: /contact-us/
-support_url: https://www.steamhead.space/support-us/
 ---

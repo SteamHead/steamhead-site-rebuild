@@ -49,20 +49,26 @@ the items teammates need visibility on.
 
 ## Domain cutover checklist (target: by Sept 1, HostPresto renewal Sept 7)
 
-- [ ] Videos re-hosted (see "last missing video" above)
-- [ ] Old-site links resolved (in progress): 13 dead `?attachment_id=`
-      links and 15 images still hotlinked via WordPress's Jetpack Photon
-      CDN (`i0.wp.com`/`i2.wp.com`) have been fixed — all pointed at
-      images already mirrored locally under `public/images/`. Citation
-      links to `steamhead.space/design-immersion-overview/` are
-      intentional (cited in academic papers, must never move) and left
-      alone. **Outstanding, needs a decision**: `theshelf.astro` (2
-      "Get It" buttons) and `settings/general.md`'s `support_url` all
-      point at `steamhead.space/shop/` and `/support-us/` — old
-      WooCommerce/donation pages with no equivalent in this repo and no
-      redirect. Need to know if there's a replacement URL (external
-      store/donation page) or if these need to be rebuilt here before
-      cutover.
+- [ ] **Videos re-hosted** — three 2021 clips + the 96MB `output2.mp4`
+      (Snow Drop post) still point at dead `steamhead.space/wp-content/...`
+      URLs. Should be recoverable from the 2026-08-08 UpdraftPlus backup
+      (see memory) rather than re-sourced externally — check "shmac" /
+      OneDrive for the originals, then upload to YouTube/Drive and
+      re-point the posts.
+- [x] Old-site links resolved: 13 dead `?attachment_id=` links and 15
+      images hotlinked via WordPress's Jetpack Photon CDN
+      (`i0.wp.com`/`i2.wp.com`) fixed — all pointed at images already
+      mirrored locally under `public/images/`. Citation links to
+      `steamhead.space/design-immersion-overview/` are intentional (cited
+      in academic papers, must never move) and left alone. `/shop/` and
+      `/support-us/` resolved: `/shop/`'s purpose is fully replicated by
+      `/theshelf/` itself (confirmed by Blake) — `theshelf.astro`'s book
+      fallback link now points at the existing Amazon collection link
+      instead; `/support-us/` was an unused template (the `support_url`
+      field was never referenced anywhere in the site code) — deleted
+      from `settings/general.md`. Still open: the "SHTEAM Labs 1" **Get
+      It** button on `/theshelf/` has no known real destination now that
+      `/shop/` is gone — needs a decision on where it should point.
 - [ ] **Launches from Earth (PR #18, live under Neighborhood Earth)**:
       confirm the live Launch Library API call and its CORS behavior work
       from the real `steamhead.space` origin, not just the
