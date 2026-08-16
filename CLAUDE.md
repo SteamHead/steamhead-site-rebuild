@@ -17,37 +17,44 @@ is the surviving source of truth (the machine that did the earlier work died).
 
 ## Deploy path
 
-- **Worker renamed `steamhead-astro-scaffold` → `steamhead` on 2026-08-08**
-  (in `wrangler.jsonc`/`package.json`). Important gotcha discovered that
-  day: Cloudflare's git-connected "Workers Builds" pipeline is bound to the
-  *original* service at the dashboard level and ignores the `name` field in
-  `wrangler.jsonc` — pushing to `main` still auto-deploys
-  **`steamhead-astro-scaffold`** (the old Worker), NOT `steamhead`. Confirmed
-  via the GitHub check-run's `output.summary`, which literally says `Script:
-  steamhead-astro-scaffold` even after the rename.
-- **`steamhead` (the real one going forward) currently has NO auto-deploy.**
-  Every push to `main` must be followed by a manual deploy: `npm run deploy`
-  (or `npx wrangler deploy`, same thing) using the `CLOUDFLARE_API_TOKEN` in
-  `.env`. To fix this properly: Cloudflare dashboard → Workers & Pages →
-  Create → Import a repository → connect `SteamHead/steamhead-site-rebuild`
-  main branch as a *new* Build pipeline targeting `steamhead`. Not yet done
-  as of 2026-08-08 (see TODO.md domain-cutover checklist).
-- Both Workers are live right now: `steamhead-astro-scaffold` (stale, still
-  auto-deploying, slated for deletion once `steamhead` is confirmed good on
-  the real domain) and `steamhead` (the target, manually deployed).
+**Fixed 2026-08-15.** Pushing to `main` now auto-deploys the live site. The
+history below explains a confusion that persisted for a week — read it before
+trusting any older note about deploys.
+
+- **`steamhead` is the only Worker.** It serves `steamhead.space` and
+  `www.steamhead.space` (custom domains, both enabled) and now has the
+  git-connected Workers Builds pipeline on `main`.
+- **`steamhead-astro-scaffold` was deleted 2026-08-15.** It never held a custom
+  domain or route and carried no production traffic — but it owned the *only*
+  build pipeline. So from 2026-08-08 to 2026-08-15 every push built and deployed
+  a Worker nobody could reach, while the public site updated only when someone
+  ran `npm run deploy` by hand. The live site looked current purely because
+  nobody pushed between Aug 9 and Aug 15.
+- **Build settings:** build `npm run build`, deploy `npx wrangler deploy`, root
+  `/`, branch `main`. Do NOT set the deploy command to `npm run deploy` — that
+  script is `npm run build && wrangler deploy`, so it would build twice.
+- **`.nvmrc` pins Node 22 and must stay.** Astro 6 requires >=22.12, declared in
+  `package.json` engines — which Workers Builds does not read. Without `.nvmrc`
+  a build can fail on whatever Node version Cloudflare happens to default to.
 - Deploys go to **James's Cloudflare account**, account ID
   `068bd0bae77f7c068677cd14996466fe`. **Caveat: `wrangler login` can see two
-  accounts** — always confirm you're targeting this account ID before any
+  accounts** — always confirm you are targeting this account ID before any
   manual `wrangler deploy` or dashboard work.
-- Local preview of the Worker: `npm run preview`.
-- **Branch preview URLs** (only apply to the old, git-connected
-  `steamhead-astro-scaffold`): every push builds a new Worker version; the
-  preview is `https://<first-8-chars-of-version-id>-steamhead-astro-scaffold.james-068.workers.dev`.
-  Get the newest version id via `npx wrangler versions list --name
-  steamhead-astro-scaffold --json` sorted by `metadata.created_on` (list
-  order is NOT newest-first). For `steamhead`, there's no push-triggered
-  preview yet — each manual `wrangler deploy` prints its own Version ID and
-  the live URL directly.
+- Manual deploy remains the fallback: `npm run deploy` with
+  `CLOUDFLARE_API_TOKEN` in `.env` (gitignored, so absent from fresh clones).
+- Local preview of the Worker build: `npm run preview`.
+
+⚠️ **To verify which Worker a build actually targeted**, read the GitHub
+check-run's `output.summary` — it names the script explicitly:
+`gh api repos/SteamHead/steamhead-site-rebuild/commits/main/check-runs`.
+On 2026-08-15 Cloudflare's AI dashboard assistant reported "no build
+configuration" on both Workers *while the scaffold pipeline was actively
+building*. It was right about domains and wrong about build config. Trust the
+check-run over the assistant.
+
+⚠️ **Pushing to `main` publishes to the public site immediately.** There is no
+staging step and no review gate. Preview with `npm run dev -- --host` and check
+`http://splinter:4321` before you push.
 
 ## Content schema (locked 2026-07-10)
 

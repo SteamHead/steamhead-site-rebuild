@@ -120,8 +120,8 @@ no manual re-entry needed.
       status block above for the custom-domain-attachment follow-up.
 - [ ] Update GitHub OAuth app homepage URL
 - [ ] Final WordPress export archived in Drive; decline HostPresto renewal
-- [ ] Set up git-connected Workers Build for `steamhead` (see "Deploy path"
-      above) so pushes auto-deploy the right Worker again
-- [ ] Delete `steamhead-astro-scaffold` once `steamhead` is confirmed good
-      on the real domain
+- [x] **Set up git-connected Workers Build for `steamhead`** — done
+      2026-08-15. Pushes to `main` now auto-deploy the live site.
+- [x] **Deleted `steamhead-astro-scaffold`** — 2026-08-15. It held no domain
+      or route and took the misdirected build pipeline with it.
 - [ ] Repo public flip (secrets scan already clean) — optional, any time
