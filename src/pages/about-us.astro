@@ -9,16 +9,22 @@ const { mission, vision, values, funding } = entry.data;
 
 /* People grids: everyone appears as a card; profiles with written content
    link to their page at /people/<slug>/ (see src/lib/people.ts).
-   The founders and longest-serving team members lead; the rest follow
-   alphabetically. */
-const featured = ['carrie-leung', 'james', 'twila-busby', 'mike-shaw-welcome'];
-const rank = (id: string) => {
-  const i = featured.indexOf(id);
-  return i === -1 ? featured.length : i;
+   The founders and longest-serving team members lead (in this fixed order),
+   then everyone else with a profile page, alphabetically, then everyone
+   without a profile page, alphabetically. `demoted` is a manual override for
+   specific people who should sit at the very end regardless of profile
+   status. */
+const featured = ['carrie-leung', 'james', 'twila-busby', 'mike-shaw-welcome', 'mapet-enriquez', 'shannon-hoover'];
+const demoted = ['candice-massey', 'christy-wang'];
+const rank = (id: string, hasPage: boolean) => {
+  const featuredIndex = featured.indexOf(id);
+  if (featuredIndex !== -1) return featuredIndex;
+  if (demoted.includes(id)) return 1000;
+  return hasPage ? 100 : 500;
 };
 const people = (await getCollection('people', p => !p.data.draft))
   .map(p => ({ ...p, hasPage: personHasPage(p) }))
-  .sort((a, b) => rank(a.id) - rank(b.id) || a.data.name.localeCompare(b.data.name));
+  .sort((a, b) => rank(a.id, a.hasPage) - rank(b.id, b.hasPage) || a.data.name.localeCompare(b.data.name));
 const team = people.filter(p => p.data.role === 'team');
 const residents = people.filter(p => p.data.role === 'resident');
 ---
