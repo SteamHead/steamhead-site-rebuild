@@ -43,35 +43,64 @@ const { hero_heading, hero_tagline } = entry.data;
       <div class="card-grid">
 
         <!-- Neighborhood Earth -->
-        <article class="card card--initiative card--earth">
+        <article class="card card--earth">
+          <img
+            class="card__image"
+            src="/images/2024/04/neighborhoodearth.jpg"
+            alt="Neighborhood Earth initiative"
+          />
           <div class="card__body">
             <h3 class="card__title">Neighborhood Earth</h3>
-            <p class="card__text">Educator exchanges around the world</p>
+            <p class="card__text">
+              Global educator exchanges and place-based learning projects. We connect
+              educators and learning communities around the world to share practices,
+              ideas, and locally rooted STEAM projects that reflect environmental and
+              cultural contexts.
+            </p>
           </div>
           <div class="card__footer">
-            <a href="/neighborhood-earth/" class="card__link">Learn More</a>
+            <a href="/neighborhood-earth/" class="btn btn--outline">Learn More</a>
           </div>
         </article>
 
         <!-- System Upgrade -->
-        <article class="card card--initiative card--upgrade">
+        <article class="card card--upgrade">
+          <img
+            class="card__image"
+            src="/images/2024/04/systemupgrade.jpg"
+            alt="System Upgrade initiative"
+          />
           <div class="card__body">
             <h3 class="card__title">System Upgrade</h3>
-            <p class="card__text">Disruption through authentic education</p>
+            <p class="card__text">
+              Rethinking education through authentic learning experiences. System Upgrade
+              explores how schools can move beyond traditional instruction toward
+              project-based, learner-driven models that prioritise curiosity, relevance,
+              and real-world problem-solving.
+            </p>
           </div>
           <div class="card__footer">
-            <a href="/system-upgrade/" class="card__link">Learn More</a>
+            <a href="/system-upgrade/" class="btn btn--outline">Learn More</a>
           </div>
         </article>
 
         <!-- MakeFashion Edu -->
-        <article class="card card--initiative card--mfedu">
+        <article class="card card--mfedu">
+          <img
+            class="card__image"
+            src="/images/2024/04/makefashionedu.jpg"
+            alt="MakeFashion Edu initiative"
+          />
           <div class="card__body">
             <h3 class="card__title">MakeFashion Edu</h3>
-            <p class="card__text">Advocating through fashion and technology</p>
+            <p class="card__text">
+              Advocacy, identity, and technology through fashion. MakeFashion Edu
+              integrates design, wearable technology, and social themes to help learners
+              explore identity, sustainability, and creative expression through making.
+            </p>
           </div>
           <div class="card__footer">
-            <a href="/makefashion-edu/" class="card__link">Learn More</a>
+            <a href="/makefashion-edu/" class="btn btn--outline">Learn More</a>
           </div>
         </article>
 
@@ -218,40 +247,8 @@ const { hero_heading, hero_tagline } = entry.data;
 </BaseLayout>
 
 <style>
-  /* Solid-color variant of .card, used only for the "Our Initiatives"
-     cards on this page. */
-  .card--initiative {
-    justify-content: center;
-    min-height: 260px;
-  }
-  .card--initiative .card__body {
-    justify-content: center;
-    gap: var(--space-sm);
-    padding: var(--space-lg) var(--space-md);
-  }
-  .card--initiative .card__title {
-    color: var(--color-black);
-    font-size: var(--text-2xl);
-  }
-  .card--initiative .card__text {
-    color: rgba(0, 0, 0, 0.7);
-    flex: none;
-  }
-  .card--initiative .card__footer {
-    padding: 0 var(--space-md) var(--space-lg);
-  }
-  .card--initiative .card__link {
-    display: inline-block;
-    font-family: var(--font-body);
-    font-weight: 700;
-    font-size: var(--text-sm);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--color-white);
-    text-decoration: none;
-  }
-  .card--initiative .card__link:hover { text-decoration: underline; }
-
+  /* Initiative accent color behind the card body/footer, matching each
+     initiative's mockup color. */
   .card--earth   { background: var(--color-init-earth); }
   .card--upgrade { background: var(--color-init-upgrade); }
   .card--mfedu   { background: var(--color-init-mfedu); }
