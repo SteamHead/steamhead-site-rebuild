@@ -253,6 +253,29 @@ const { hero_heading, hero_tagline } = entry.data;
   .card--upgrade { background: var(--color-init-upgrade); }
   .card--mfedu   { background: var(--color-init-mfedu); }
 
+  /* On these solid-color card bodies, the brand burnt-orange heading and
+     button outline read poorly — use plain black instead. */
+  .card--earth .card__title,
+  .card--upgrade .card__title,
+  .card--mfedu .card__title,
+  .card--earth .card__text,
+  .card--upgrade .card__text,
+  .card--mfedu .card__text {
+    color: var(--color-black);
+  }
+  .card--earth .btn--outline,
+  .card--upgrade .btn--outline,
+  .card--mfedu .btn--outline {
+    border-color: transparent;
+    color: var(--color-black);
+  }
+  .card--earth .btn--outline:hover,
+  .card--upgrade .btn--outline:hover,
+  .card--mfedu .btn--outline:hover {
+    background: transparent;
+    color: var(--color-black);
+  }
+
   .method-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
