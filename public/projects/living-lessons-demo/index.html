@@ -44,7 +44,7 @@ button{font-family:inherit;cursor:pointer}
 .screen.show{display:block}
 header{display:flex;align-items:center;gap:18px;padding:18px 32px}
 .title{font-family:var(--disp);font-size:30px}
-.title small{display:block;font-family:var(--body);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#8a8a8a}
+.title small{display:block;font-family:var(--body);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#5c5c5c}
 .back{border:0;background:var(--white);border-radius:999px;padding:10px 18px;font-weight:700;box-shadow:0 2px 0 var(--gray)}
 
 /* ============ ATLAS ============ */
@@ -63,7 +63,7 @@ header{display:flex;align-items:center;gap:18px;padding:18px 32px}
 .pin .hex{width:54px;height:60px;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
  background:var(--yellow);display:grid;place-items:center;font-family:var(--disp);font-size:20px;margin:0 auto;transition:transform .15s}
 .pin:hover .hex{transform:scale(1.15)}
-.pin.dim .hex{background:#cfcfc6;color:#8a8a8a}
+.pin.dim .hex{background:#cfcfc6;color:#5c5c5c}
 .pin .lbl{font-weight:800;font-size:13px;background:var(--white);border-radius:999px;padding:2px 10px;box-shadow:0 2px 0 var(--gray);margin-top:4px;display:inline-block}
 .timeline{display:flex;justify-content:center;gap:8px;padding:22px 32px}
 .timeline button{border:0;background:var(--white);border-radius:12px;padding:10px 16px;font-weight:800;font-size:16px;box-shadow:0 2px 0 var(--gray)}
@@ -71,11 +71,11 @@ header{display:flex;align-items:center;gap:18px;padding:18px 32px}
 .flyout{position:absolute;top:20px;right:20px;width:340px;max-height:calc(100% - 40px);overflow:auto;background:var(--white);border-radius:18px;box-shadow:0 10px 26px rgba(0,0,0,.18);padding:18px 20px;display:none}
 .flyout.open{display:block}
 .flyout h3{font-family:var(--disp);font-size:22px}
-.flyout .cnt{color:#8a8a8a;font-weight:600;font-size:13px;margin-bottom:10px}
-.flyout h4{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:#8a8a8a;margin:12px 0 6px}
+.flyout .cnt{color:#5c5c5c;font-weight:600;font-size:13px;margin-bottom:10px}
+.flyout h4{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:#5c5c5c;margin:12px 0 6px}
 .flyout .cls{display:flex;justify-content:space-between;width:100%;border:0;background:var(--light);border-radius:10px;padding:9px 12px;margin-bottom:6px;font-weight:600;font-size:14px}
 .flyout .cls:hover{background:var(--yellow)}
-.flyout .cls small{color:#8a8a8a;font-weight:700}
+.flyout .cls small{color:#5c5c5c;font-weight:700}
 
 /* ============ CLASS PAGE ============ */
 .fold{min-height:calc(100vh - 96px);display:flex;flex-direction:column;padding:0 32px 10px}
@@ -92,31 +92,31 @@ header{display:flex;align-items:center;gap:18px;padding:18px 32px}
 .badge .pips{display:flex;gap:3px;margin-top:3px}
 .badge .pips i{width:10px;height:10px;border-radius:50%;background:#e2e2da}
 .badge .pips i.on{background:var(--dark)}
-.badge .xp{margin-left:auto;font-weight:800;font-size:13px;color:#8a8a8a;white-space:nowrap}
-.scrollhint{text-align:center;color:#8a8a8a;font-weight:700;padding:12px 0 4px}
+.badge .xp{margin-left:auto;font-weight:800;font-size:13px;color:#5c5c5c;white-space:nowrap}
+.scrollhint{text-align:center;color:#5c5c5c;font-weight:700;padding:12px 0 4px}
 
 /* journal */
 .journal{padding:26px 32px 60px;max-width:1150px;margin:0 auto}
 .journal h2{font-family:var(--disp);font-size:30px;margin-bottom:4px}
-.journal .sub{color:#8a8a8a;font-weight:600;margin-bottom:18px}
+.journal .sub{color:#5c5c5c;font-weight:600;margin-bottom:18px}
 .entry{background:var(--white);border-radius:18px;box-shadow:0 3px 0 var(--gray);padding:18px 24px;margin-bottom:14px;display:flex;gap:18px;align-items:center}
 .entry .num{font-family:var(--disp);font-size:22px;background:var(--yellow);width:52px;height:52px;border-radius:14px;display:grid;place-items:center;flex:none}
 .entry .body{flex:1}
 .entry h3{font-family:var(--disp);font-size:20px}
-.entry .meta{color:#8a8a8a;font-weight:600;font-size:13px}
+.entry .meta{color:#5c5c5c;font-weight:600;font-size:13px}
 .entry p{font-size:15px;margin-top:4px}
 .entry .ph{width:84px;height:64px;border-radius:10px;background:repeating-linear-gradient(45deg,#e9e9e2,#e9e9e2 8px,#f4f4ee 8px,#f4f4ee 16px);border:2px dashed #c7c7bd;flex:none;display:grid;place-items:center;font-size:10px;color:#9a9a90;text-align:center}
 .entry.future{background:#ecece4;box-shadow:0 3px 0 #d8d8cd;border:2px dashed #c9c9bd;cursor:pointer}
 .entry.future .num{background:#d8d8cd;color:#8a8a80}
 .entry.future h3{color:#8a8a80}
 .entry.future:hover{background:#e4e4d8}
-.sessionctl{display:flex;align-items:center;gap:12px;justify-content:center;padding:8px 0 0;color:#8a8a8a;font-weight:700}
+.sessionctl{display:flex;align-items:center;gap:12px;justify-content:center;padding:8px 0 0;color:#5c5c5c;font-weight:700}
 .sessionctl button{border:0;background:var(--white);border-radius:10px;width:38px;height:38px;font-size:20px;font-weight:800;box-shadow:0 2px 0 var(--gray)}
 
 /* journal entry screen */
 .entrybody{background:var(--white);border-radius:20px;box-shadow:0 3px 0 var(--gray);padding:30px 36px;margin-bottom:22px}
 .entrybody h2{font-family:var(--disp);font-size:30px}
-.entrybody .meta{color:#8a8a8a;font-weight:700;margin:4px 0 16px}
+.entrybody .meta{color:#5c5c5c;font-weight:700;margin:4px 0 16px}
 .entrybody .hexchip{display:inline-block;background:var(--yellow);font-weight:800;font-size:13px;border-radius:999px;padding:4px 14px;margin-left:10px;vertical-align:middle}
 .entrybody p{font-size:17px;line-height:1.65;margin-bottom:14px;max-width:70ch}
 .mediarow{display:flex;gap:14px;margin:16px 0}
@@ -137,7 +137,7 @@ header{display:flex;align-items:center;gap:18px;padding:18px 32px}
 .hexrow:hover{box-shadow:0 3px 0 var(--dark)}
 .hexrow .hx{width:44px;height:50px;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);background:var(--yellow);flex:none;display:grid;place-items:center;font-family:var(--disp);font-size:12px}
 .hexrow b{font-family:var(--disp);font-size:18px;display:block}
-.hexrow .bmeta{font-size:13px;color:#8a8a8a;font-weight:600}
+.hexrow .bmeta{font-size:13px;color:#5c5c5c;font-weight:600}
 .hexrow .launch{margin-left:auto;background:var(--teal);color:#fff;border-radius:10px;padding:9px 14px;font-weight:800;font-size:13px;white-space:nowrap}
 </style></head><body>
 

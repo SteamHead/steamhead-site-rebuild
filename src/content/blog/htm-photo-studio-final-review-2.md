@@ -10,7 +10,7 @@ categories:
   - "Mike"
 ---
 
-<iframe src="//www.youtube.com/embed/MqvCvGEnGz4" width="480" height="270" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+<iframe src="//www.youtube.com/embed/MqvCvGEnGz4" title="YouTube video" width="480" height="270" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 **High Tech Middle North County San Diego Photography Studio - 2020**
 
