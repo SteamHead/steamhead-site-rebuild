@@ -39,17 +39,21 @@
      as TEXT/borders on white or light-gray backgrounds, where the raw
      --color-yellow/--color-blue/--color-teal fail WCAG AA contrast
      (yellow-on-white ~1.5:1, blue/teal-on-white ~2.5-3:1, against a 4.5:1
-     minimum). Same hue family as their raw counterparts, just darkened to
-     clear ~5:1. The raw hues stay in use for backgrounds, borders/badges
+     minimum). The raw hues stay in use for backgrounds, borders/badges
      with black text, and text on dark (black) sections/heroes, where they
-     already pass comfortably. */
-  --color-yellow-text:  #806f00;
+     already pass comfortably.
+     --color-heading-text is a dark burnt-orange derived from
+     --color-coral (not from --color-yellow) — headings/outline-buttons on
+     light backgrounds read as accessible dark orange rather than dark
+     yellow/olive; --color-yellow itself is unchanged and still used as-is
+     on dark backgrounds. */
+  --color-heading-text: #AD572F;
   --color-blue-text:    #2c7395;
   --color-teal-text:    #3c747e;
 
   /* Semantic roles */
   --color-text:         var(--color-dark);
-  --color-heading:      var(--color-yellow-text);
+  --color-heading:      var(--color-heading-text);
   --color-link:         var(--color-blue-text);
   --color-cta-bg:       var(--color-teal);
   --color-cta-text:     var(--color-black);
@@ -225,10 +229,10 @@ img { max-width: 100%; height: auto; display: block; border-radius: var(--radius
 }
 .btn--outline {
   background: transparent;
-  border: 2px solid var(--color-yellow-text);
-  color: var(--color-yellow-text);
+  border: 2px solid var(--color-heading-text);
+  color: var(--color-heading-text);
 }
-.btn--outline:hover { background: var(--color-yellow-text); color: var(--color-white); opacity: 1; }
+.btn--outline:hover { background: var(--color-heading-text); color: var(--color-white); opacity: 1; }
 
 /* Dark (black) backgrounds have enough contrast to use the bright brand
    yellow directly, so restore it there instead of the darkened text-safe
