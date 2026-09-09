@@ -51,6 +51,15 @@
   --color-blue-text:    #2c7395;
   --color-teal-text:    #3c747e;
 
+  /* Initiative accent colors — full-bleed backgrounds for the three
+     homepage "Our Initiatives" cards (Neighborhood Earth, System Upgrade,
+     MakeFashion Edu), matched to approved mockups. The purple/pink has no
+     equivalent in the brand guide's core palette, so this group sits
+     outside it, same as the badge-pathway colors in maker-badges.astro. */
+  --color-init-earth:   #e8b368;
+  --color-init-upgrade: #d685dd;
+  --color-init-mfedu:   #74cfe8;
+
   /* Semantic roles */
   --color-text:         var(--color-dark);
   --color-heading:      var(--color-heading-text);
