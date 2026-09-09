@@ -3,8 +3,7 @@ title: "MakeFashion Edu — Full Semester Guide"
 description: "Combined teacher & student project guide for the MakeFashion Edu introduction course. Covers storytelling, advocacy, media literacy, fashion design elements, circuits, and the runway exhibition."
 ---
 
-# MakeFashion Edu — Introduction Course
-### Combined Teacher & Student Project Guide
+**Combined Teacher & Student Project Guide**
 *Source: MakeFashion Edu Intro 2022 Revision*
 
 ---

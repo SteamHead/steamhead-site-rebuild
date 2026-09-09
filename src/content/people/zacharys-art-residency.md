@@ -15,4 +15,4 @@ Since construction the piece has been featured at 3 Maker Faires, been seen by t
 
 As part of his Resident Educator duties, Zachary has also coached makers at SteamHead Makerspace in his design techniques, and provided technical expertise in the areas of laser cutting and LED usage.
 
-![](/images/2018/02/20171111_082737870_iOS.jpg) ![](/images/2018/02/20181014_121613.jpg) ![](/images/2018/02/wx_camera_1539332066651.jpg)
+![Close-up of an intricate wood laser-cut mandala pattern with layered petal shapes](/images/2018/02/20171111_082737870_iOS.jpg) ![Illuminated laser-cut wood mandala sculpture viewed by a small crowd from behind](/images/2018/02/20181014_121613.jpg) ![A laser-cut geometric wood panel displayed near photos of students building electronics](/images/2018/02/wx_camera_1539332066651.jpg)

@@ -8,18 +8,18 @@ const { hero_tagline, mms_body, virtual_body, makerspace_body } = entry.data;
 
 /* Mobile Makerspace chapter images — in order */
 const mmsChapters = [
-  { src: "/images/2024/09/mms01.jpg", alt: "Mobile Makerspace chapter 1" },
-  { src: "/images/2024/09/mms02.jpg", alt: "Mobile Makerspace chapter 2" },
-  { src: "/images/2024/09/mms03.jpg", alt: "Mobile Makerspace chapter 3" },
-  { src: "/images/2024/09/mms04.jpg", alt: "Mobile Makerspace chapter 4" },
-  { src: "/images/2024/09/mms05.jpg", alt: "Mobile Makerspace chapter 5" },
-  { src: "/images/2024/09/mms06.jpg", alt: "Mobile Makerspace chapter 6" },
-  { src: "/images/2024/09/mms07.png", alt: "Mobile Makerspace chapter 7" },
-  { src: "/images/2025/01/mms08.jpg", alt: "Mobile Makerspace chapter 8" },
-  { src: "/images/2025/01/mms09.jpg", alt: "Mobile Makerspace chapter 9" },
-  { src: "/images/2025/01/mms10.jpg", alt: "Mobile Makerspace chapter 10" },
-  { src: "/images/2025/01/mms11.jpg", alt: "Mobile Makerspace chapter 11" },
-  { src: "/images/2025/01/mms12.jpg", alt: "Mobile Makerspace chapter 12" },
+  { src: "/images/2024/09/mms01.jpg", alt: "Mobile Makerspace chapter 1: vintage silver Airstream trailer parked in a desert campsite" },
+  { src: "/images/2024/09/mms02.jpg", alt: "Mobile Makerspace chapter 2: the Airstream with its door open, parked in a shaded driveway" },
+  { src: "/images/2024/09/mms03.jpg", alt: "Mobile Makerspace chapter 3: a masked volunteer standing inside the stripped Airstream interior" },
+  { src: "/images/2024/09/mms04.jpg", alt: "Mobile Makerspace chapter 4: three volunteers removing old paneling inside the trailer" },
+  { src: "/images/2024/09/mms05.jpg", alt: "Mobile Makerspace chapter 5: the trailer's bare steel frame set on a flatbed truck in the desert" },
+  { src: "/images/2024/09/mms06.jpg", alt: "Mobile Makerspace chapter 6: a volunteer posing with a floor jack beside the parked Airstream" },
+  { src: "/images/2024/09/mms07.png", alt: "Mobile Makerspace chapter 7: CAD sketch of a wooden bench and table build with dimension labels" },
+  { src: "/images/2025/01/mms08.jpg", alt: "Mobile Makerspace chapter 8: two volunteers smiling inside the gutted, cream-colored Airstream interior" },
+  { src: "/images/2025/01/mms09.jpg", alt: "Mobile Makerspace chapter 9: a volunteer spray-painting pegboard panels in a plant-filled driveway" },
+  { src: "/images/2025/01/mms10.jpg", alt: "Mobile Makerspace chapter 10: four volunteers posing and pointing inside the newly yellow-painted trailer interior" },
+  { src: "/images/2025/01/mms11.jpg", alt: "Mobile Makerspace chapter 11: interior of the yellow-painted Airstream with new plywood flooring and cabinetry" },
+  { src: "/images/2025/01/mms12.jpg", alt: "Mobile Makerspace chapter 12: a hand-lettered sign reading 'Ulloa Outdoor Makerspace'" },
 ];
 ---
 
@@ -35,7 +35,7 @@ const mmsChapters = [
     <img
       class="hero__bg"
       src="/images/2024/04/neighborhoodearth.jpg"
-      alt="Neighborhood Earth"
+      alt="SteamHead facilitators leading a workshop with uniformed students on a mountainside school campus in Bhutan"
     />
     <div class="container hero__content">
       <h1>Neighborhood Earth</h1>
@@ -168,7 +168,9 @@ const mmsChapters = [
       <!-- Chapter image strip -->
       <div class="img-strip" role="list" aria-label="Mobile Makerspace progress photos">
         {mmsChapters.map(ch => (
-          <img src={ch.src} alt={ch.alt} role="listitem" loading="lazy" />
+          <div role="listitem">
+            <img src={ch.src} alt={ch.alt} loading="lazy" />
+          </div>
         ))}
       </div>
 

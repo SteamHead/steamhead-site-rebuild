@@ -13,7 +13,7 @@ From Ross’s [website](http://www.rossatkin.com/wp/?page_id=12):
 
 > I am a designer and engineer based in Hackney, East London. I am interested in older and disabled people, digital technology and public space ad work on projects that combine at least two of these areas.
 > 
-> ![](/images/2018/10/VennDiagram-1024x989.png)
+> ![Venn diagram showing "Accessibility," "Assistive Technology," and "Smart City" as overlaps between Older & Disabled People, Public Space, and Digital Technology](/images/2018/10/VennDiagram-1024x989.png)
 
 _Source: rossatkin.com_
 

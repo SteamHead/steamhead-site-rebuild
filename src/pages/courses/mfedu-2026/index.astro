@@ -77,7 +77,15 @@ const worksheets = [
         <span class="progress-label" data-progress-label>0 of {lessons.length} complete</span>
       </div>
       <hr class="accent-rule" />
-      <div class="progress-track" role="progressbar" aria-label="Course progress">
+      <div
+        class="progress-track"
+        role="progressbar"
+        aria-label="Course progress"
+        aria-valuemin="0"
+        aria-valuemax={lessons.length}
+        aria-valuenow="0"
+        data-progress-track
+      >
         <div class="progress-fill" data-progress-fill></div>
       </div>
 
@@ -178,6 +186,7 @@ const worksheets = [
   const rows = document.querySelectorAll<HTMLElement>('[data-lesson]');
   const fill = document.querySelector<HTMLElement>('[data-progress-fill]');
   const label = document.querySelector<HTMLElement>('[data-progress-label]');
+  const track = document.querySelector<HTMLElement>('[data-progress-track]');
 
   function paint() {
     const done = read();
@@ -189,6 +198,7 @@ const worksheets = [
     });
     if (fill) fill.style.width = `${(count / Math.max(rows.length, 1)) * 100}%`;
     if (label) label.textContent = `${count} of ${rows.length} complete`;
+    track?.setAttribute('aria-valuenow', String(count));
   }
   paint();
 
@@ -284,8 +294,8 @@ const worksheets = [
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--color-teal);
-    border: 1px solid var(--color-teal);
+    color: var(--color-teal-text);
+    border: 1px solid var(--color-teal-text);
     border-radius: 999px;
     padding: 0.1rem 0.55rem;
   }

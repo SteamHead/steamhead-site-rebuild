@@ -25,4 +25,4 @@ Carrie is a San Francisco Native who left her Silicon Valley tech-finance career
 
 Find [Carrie in articles here](https://docs.google.com/spreadsheets/d/16bJCt73g9NHd0-GdLnkKMRl7jusyWxrZ3u7pK1YYPWk/edit?usp=sharing)
 
-![](/images/2017/12/2019-Carrie-Portrait.jpg) ![](/images/2017/12/2019-Carrie-portrait-3.jpg) ![](/images/2017/12/2019-James-and-Carrie-2.jpg)
+![Carrie Leung smiling outdoors in front of desert rock formations](/images/2017/12/2019-Carrie-Portrait.jpg) ![Carrie Leung looking off to the side and smiling among large boulders](/images/2017/12/2019-Carrie-portrait-3.jpg) ![James Simpson and Carrie Leung sitting together on a boulder at sunset](/images/2017/12/2019-James-and-Carrie-2.jpg)

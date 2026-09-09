@@ -86,9 +86,9 @@ Kids have options. The options exist, and they are plentiful and amazing. That i
 Why are we distributing content, visiting schools, creating spaces, and sharing stories? Because it is not nearly enough to simply create, we must share.
 
 Action Shots  
-![](/images/2018/08/20180826_183454-scaled.jpg)  
-![](/images/2018/08/20180619_024852224_iOS-e1536222474984.jpg)  
-![](/images/2018/08/20180611_052805114_iOS-scaled.jpg)  
+![Two young men lean over a laptop and notebook, examining an electronics circuit at a workbench](/images/2018/08/20180826_183454-scaled.jpg)  
+![A man attaches a wearable electronics sensor to a smiling girl's arm at a sewing workshop table](/images/2018/08/20180619_024852224_iOS-e1536222474984.jpg)  
+![A man in a red shirt shows a boy how to work with a lit LED at a workbench](/images/2018/08/20180611_052805114_iOS-scaled.jpg)  
 High Res Photos  
-![](/images/2017/12/2019-James-portrait-2.jpg)  
-![](/images/2017/12/2019-James-and-Carrie-2.jpg)
+![James Simpson smiling outdoors in front of desert boulders and rock formations](/images/2017/12/2019-James-portrait-2.jpg)  
+![James Simpson and Carrie Leung sitting together on a boulder at sunset](/images/2017/12/2019-James-and-Carrie-2.jpg)
