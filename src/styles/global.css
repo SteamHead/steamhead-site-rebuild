@@ -51,7 +51,7 @@
   --color-text:         var(--color-dark);
   --color-heading:      var(--color-yellow-text);
   --color-link:         var(--color-blue-text);
-  --color-cta-bg:       var(--color-teal);
+  --color-cta-bg:       var(--color-yellow);
   --color-cta-text:     var(--color-black);
   --color-nav-bg:       var(--color-black);
   --color-section-alt:  var(--color-gray-light);
@@ -247,8 +247,8 @@ img { max-width: 100%; height: auto; display: block; border-radius: var(--radius
 /* Default link color on dark (black) backgrounds — the accessible darkened
    --color-link is tuned for white/light backgrounds and would be too dim
    on black; the raw brand blue already passes comfortably there. */
-.hero a,
-.section--dark a {
+.hero a:not(.btn),
+.section--dark a:not(.btn) {
   color: var(--color-blue);
 }
 
