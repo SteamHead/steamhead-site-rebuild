@@ -27,10 +27,37 @@ function remarkYouTubeEmbed() {
   };
 }
 
+// GFM task-list checkboxes (`- [ ] text`) render as a bare, disabled
+// <input type="checkbox"> with no <label>, which axe/WCAG 4.1.2 flags as an
+// unnamed form field even though the checkbox is disabled. Wrap the
+// checkbox and its inline text in a <label> so it has an accessible name,
+// stopping before any block-level continuation content (nested lists, etc).
+function rehypeTaskListLabel() {
+  const blockTags = new Set(['ul', 'ol', 'p', 'div', 'pre', 'blockquote', 'table']);
+  return tree => {
+    visit(tree, 'element', node => {
+      if (node.tagName !== 'li') return;
+      const className = node.properties?.className;
+      if (!Array.isArray(className) || !className.includes('task-list-item')) return;
+      const checkboxIndex = node.children.findIndex(
+        c => c.type === 'element' && c.tagName === 'input' && c.properties?.type === 'checkbox'
+      );
+      if (checkboxIndex === -1) return;
+      let end = checkboxIndex;
+      while (end < node.children.length && !(node.children[end].type === 'element' && blockTags.has(node.children[end].tagName))) {
+        end++;
+      }
+      const label = { type: 'element', tagName: 'label', properties: {}, children: node.children.slice(checkboxIndex, end) };
+      node.children = [...node.children.slice(0, checkboxIndex), label, ...node.children.slice(end)];
+    });
+  };
+}
+
 // https://astro.build/config
 export default defineConfig({
 	markdown: {
 		remarkPlugins: [remarkYouTubeEmbed],
+		rehypePlugins: [rehypeTaskListLabel],
 	},
 	// Deploys as a Cloudflare Worker (see wrangler.jsonc, which points its
 	// `main` at this adapter's server entrypoint). Pages are prerendered
