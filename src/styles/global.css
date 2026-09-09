@@ -8,10 +8,15 @@
 
 /* --- Brand Tokens --- */
 :root {
-  /* Main brand */
-  --color-yellow:       #F1D302;
-  --color-yellow-amber: #EDA83E;
-  --color-teal:         #5EB1BF;
+  /* Main brand — §3 Color of the 2026-06 brand guide (values sampled from
+     the live site). --color-yellow is "SteamHead Gold", the signature
+     color, for accents/text on black. --color-button-yellow is the
+     separate, slightly softer "Button Yellow" the guide reserves for
+     action buttons on white with black text. */
+  --color-yellow:        #F4CD15;
+  --color-button-yellow: #F4DF53;
+  --color-yellow-amber:  #EDA83E;
+  --color-teal:          #5EB1BF;
 
   /* Accent */
   --color-amber:        #F2B705;
@@ -24,6 +29,7 @@
   --color-gray-mid:     #D7D7D7;
   --color-gray-light:   #F4F4F4;
   --color-white:        #ffffff;
+  --color-mint:         #E4EDEA;  /* brand guide §3: alternating section backgrounds; quiet, never for text */
 
   /* Derived neutrals — not in the brand guide's palette, but needed as
      roles the guide doesn't specify. Keep every gray on the site coming
@@ -35,39 +41,35 @@
   --color-dark-raised:  #1e1e1e;             /* hover/raised state on dark surfaces */
   --color-dark-border:  #2a2a2a;             /* hairlines/dividers on dark backgrounds */
 
-  /* Accessibility-driven darker variants of the vivid brand hues, for use
-     as TEXT/borders on white or light-gray backgrounds, where the raw
-     --color-yellow/--color-blue/--color-teal fail WCAG AA contrast
-     (yellow-on-white ~1.5:1, blue/teal-on-white ~2.5-3:1, against a 4.5:1
-     minimum). The raw hues stay in use for backgrounds, borders/badges
-     with black text, and text on dark (black) sections/heroes, where they
-     already pass comfortably.
-     --color-heading-text is a dark burnt-orange derived from
-     --color-coral (not from --color-yellow) — headings/outline-buttons on
-     light backgrounds read as accessible dark orange rather than dark
-     yellow/olive; --color-yellow itself is unchanged and still used as-is
-     on dark backgrounds. */
-  --color-heading-text: #AD572F;
+  /* Accessibility-driven darker variants of the vivid non-brand-guide hues,
+     for use as TEXT/borders on white or light-gray backgrounds, where the
+     raw --color-blue/--color-teal fail WCAG AA contrast (~2.5-3:1 against
+     a 4.5:1 minimum). The raw hues stay in use for backgrounds, borders,
+     and text on dark (black) sections/heroes, where they already pass
+     comfortably. Headings don't need a variant like this any more — the
+     brand guide's core palette assigns headings to SteamHead Black
+     outright, which has no contrast problem anywhere it's used. */
   --color-blue-text:    #2c7395;
   --color-teal-text:    #3c747e;
 
-  /* Initiative accent colors — full-bleed backgrounds for the three
-     homepage "Our Initiatives" cards (Neighborhood Earth, System Upgrade,
-     MakeFashion Edu), matched to approved mockups. The purple/pink has no
-     equivalent in the brand guide's core palette, so this group sits
-     outside it, same as the badge-pathway colors in maker-badges.astro. */
-  --color-init-earth:   #e8b368;
-  --color-init-upgrade: #d685dd;
-  --color-init-mfedu:   #74cfe8;
+  /* Initiative accent colors — brand guide §3, one per initiative:
+     full-bleed backgrounds for the homepage "Our Initiatives" cards
+     (Neighborhood Earth, System Upgrade, MakeFashion Edu) and any other
+     graphics about that program. All four are light, so per the guide's
+     contrast rule text on them must stay black — never white. */
+  --color-init-earth:   #FABF64;  /* Earth Orange — Neighborhood Earth */
+  --color-init-upgrade: #E88BE3;  /* Upgrade Magenta — System Upgrade */
+  --color-init-mfedu:   #6BE0F4;  /* Fashion Cyan — MakeFashion Edu */
+  --color-peach:        #FDB467;  /* Peach — footer buttons/links on black (secondary) */
 
   /* Semantic roles */
   --color-text:         var(--color-dark);
-  --color-heading:      var(--color-heading-text);
+  --color-heading:      var(--color-black);
   --color-link:         var(--color-blue-text);
-  --color-cta-bg:       var(--color-yellow);
+  --color-cta-bg:       var(--color-button-yellow);
   --color-cta-text:     var(--color-black);
   --color-nav-bg:       var(--color-black);
-  --color-section-alt:  var(--color-gray-light);
+  --color-section-alt:  var(--color-mint);
 
   /* Shadows */
   --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.08);
@@ -238,10 +240,10 @@ img { max-width: 100%; height: auto; display: block; border-radius: var(--radius
 }
 .btn--outline {
   background: transparent;
-  border: 2px solid var(--color-heading-text);
-  color: var(--color-heading-text);
+  border: 2px solid var(--color-black);
+  color: var(--color-black);
 }
-.btn--outline:hover { background: var(--color-heading-text); color: var(--color-white); opacity: 1; }
+.btn--outline:hover { background: var(--color-black); color: var(--color-white); opacity: 1; }
 
 /* Dark (black) backgrounds have enough contrast to use the bright brand
    yellow directly, so restore it there instead of the darkened text-safe
