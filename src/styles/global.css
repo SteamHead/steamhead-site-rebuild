@@ -96,6 +96,13 @@
   --space-lg:  4rem;
   --space-xl:  6rem;
 
+  /* Section vertical rhythm — top/bottom padding for .section and hero
+     blocks site-wide. Scales with viewport (the "6vw" in --space-section)
+     but is clamped so it never falls below the old fixed values on
+     mobile or balloons on very wide screens. */
+  --space-section: clamp(5rem, 6vw, 8rem);
+  --space-hero:    clamp(7rem, 8vw, 10rem);
+
   /* Layout */
   --max-width:  1200px;
   --nav-height: 68px;
@@ -153,7 +160,7 @@ img { max-width: 100%; height: auto; display: block; border-radius: var(--radius
 
 /* --- Sections --- */
 .section {
-  padding-block: var(--space-lg);
+  padding-block: var(--space-section);
 }
 .section--alt {
   background: var(--color-section-alt);
@@ -191,7 +198,7 @@ img { max-width: 100%; height: auto; display: block; border-radius: var(--radius
   position: relative;
   background: var(--color-black);
   color: var(--color-white);
-  padding-block: var(--space-xl);
+  padding-block: var(--space-hero);
   overflow: hidden;
 }
 .hero__bg {
