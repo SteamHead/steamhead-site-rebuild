@@ -5,8 +5,6 @@ description: Three hands-on lessons introducing circuits through LED art, paper 
 
 Course Guide
 
-# Simple Circuits Activities — Shared Guide
-
 Three hands-on lessons using LEDs, copper tape, and coin cell batteries. Each lesson is 30–50 minutes and can stand alone. Appropriate for K–3, or as a short drop-in activity at any grade level.
 
 [← Back to The Shelf](/theshelf/)
@@ -35,12 +33,12 @@ Three hands-on lessons using LEDs, copper tape, and coin cell batteries. Each le
 
 ---
 
-# Lesson 1 — LED Art
+## Lesson 1 — LED Art
 **Time:** 30–50 min
 
 ---
 
-## Before You Start (Optional Extensions)
+### Before You Start (Optional Extensions)
 
 > ⭐ **Extension — Classroom Rules & Sharing (5 min)**
 > Before handing out materials, talk about how the LED colors work — some students might want to try every color. Set up a trading system: each student starts with a few LEDs and is welcome to swap with others during the activity. Taking turns and sharing is part of the lesson.
@@ -54,9 +52,9 @@ Three hands-on lessons using LEDs, copper tape, and coin cell batteries. Each le
 
 ---
 
-## Part 1 — Free Exploration (~10 min)
+### Part 1 — Free Exploration (~10 min)
 
-### The Challenge
+#### The Challenge
 
 You have a battery and some LEDs. **Can you make one light up?**
 
@@ -66,7 +64,7 @@ That's it. Figure it out.
 
 ---
 
-### What Did You Notice?
+#### What Did You Notice?
 
 Once your LED is glowing, look closely:
 
@@ -81,14 +79,14 @@ This is called a **circuit** - a path for electricity to flow.
 
 ---
 
-## Part 2 — LED Art (~20–30 min)
+### Part 2 — LED Art (~20–30 min)
 
 > ⭐ **Extension — Book Inspiration (5 min, before drawing)**
 > Grab a book from the classroom. Hold your LED and battery up behind a page and shine the light through different characters and scenes. Which ones look interesting when lit up from behind? Use this as inspiration for your drawing.
 
 ---
 
-### Make a Glowing Drawing
+#### Make a Glowing Drawing
 
 1. **Choose your idea.** Think of something that has a light in it — a lighthouse, Rudolph's red nose, a cave explorer's flashlight, a Jedi lightsaber, a firefly, a street lamp, a volcano, a birthday candle.
 
@@ -111,18 +109,18 @@ This is called a **circuit** - a path for electricity to flow.
 
 ---
 
-# Lesson 2 — Paper Circuits
+## Lesson 2 — Paper Circuits
 **Time:** 30–50 min
 
 ---
 
-## What Is a Paper Circuit?
+### What Is a Paper Circuit?
 
 A paper circuit uses **copper tape** as the wire. The tape conducts electricity the same way a metal wire does — you just stick it to paper.
 
 ---
 
-## Part 1 — Follow the Template (~15–20 min)
+### Part 1 — Follow the Template (~15–20 min)
 
 **1. Get your template.** Look at the circuit diagram before you start building.
 
@@ -137,7 +135,7 @@ A paper circuit uses **copper tape** as the wire. The tape conducts electricity 
 **6. Does it light up?** ✔
 ---
 
-### Troubleshooting
+#### Troubleshooting
 
 LED not lighting up? Check these first:
 
@@ -148,7 +146,7 @@ LED not lighting up? Check these first:
 
 ---
 
-## Part 2 — Three Circuit Types (~10–15 min)
+### Part 2 — Three Circuit Types (~10–15 min)
 
 Build all three and compare what happens:
 
@@ -174,7 +172,7 @@ Build all three and compare what happens:
 
 ---
 
-## Part 3 — Design Challenge: Hoodie (~10 min)
+### Part 3 — Design Challenge: Hoodie (~10 min)
 
 Take a hoodie template.
 
@@ -187,12 +185,12 @@ Then build it with copper tape and LEDs.
 
 ---
 
-# Lesson 3 — Wearable Copper Tape
+## Lesson 3 — Wearable Copper Tape
 **Time:** 30–50 min
 
 ---
 
-## From Paper to Fabric
+### From Paper to Fabric
 
 Paper circuits use the same ideas as wearable circuits. The difference:
 
@@ -202,7 +200,7 @@ Paper circuits use the same ideas as wearable circuits. The difference:
 
 ---
 
-## Part 1 — Build a Wearable Circuit (~20 min)
+### Part 1 — Build a Wearable Circuit (~20 min)
 
 1. Cut two strips of copper tape the length you need — your **positive rail** and **negative rail**
 2. Keep them **parallel but not touching** (a gap of about 1 cm)
@@ -214,7 +212,7 @@ Paper circuits use the same ideas as wearable circuits. The difference:
 
 ---
 
-## Part 2 — Design with Purpose (~10–15 min)
+### Part 2 — Design with Purpose (~10–15 min)
 
 A wearable isn't just a circuit — it's something someone will wear. Where the light goes matters.
 
@@ -240,7 +238,7 @@ Build your sketch using copper tape and LEDs on a fabric scrap.
 
 ---
 
-## What's Next?
+### What's Next?
 
 These three lessons are the foundation for the full MakeFashion Edu course — where students design and build wearable fashion tech pieces for a runway show.
 

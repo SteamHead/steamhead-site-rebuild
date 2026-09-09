@@ -5,8 +5,6 @@ description: Teacher preparation, timing, facilitation notes, and troubleshootin
 
 Course Guide
 
-# Simple Circuits — Teacher Guide
-
 Companion to the [Shared Activity Guide](/guides/simple-circuits-shared/). Three lessons, 30–50 minutes each. Appropriate for K*–3, or as a short drop-in activity at any grade level.
 
 [← Back to The Shelf](/theshelf/)
@@ -53,9 +51,9 @@ Companion to the [Shared Activity Guide](/guides/simple-circuits-shared/). Three
 
 ---
 
-# Lesson 1 — LED Art
+## Lesson 1 — LED Art
 
-## Timing Guide
+### Timing Guide
 
 | Segment | Time | Notes |
 |---|---|---|
@@ -70,15 +68,15 @@ Companion to the [Shared Activity Guide](/guides/simple-circuits-shared/). Three
 
 ---
 
-## Facilitation Notes
+### Facilitation Notes
 
-### Optional Extension — Classroom Rules & Sharing
+#### Optional Extension — Classroom Rules & Sharing
 This is worth doing if you have mixed-age groups or if sharing is a known challenge in your class. Set up the expectation before materials are distributed: each student gets a few LEDs, but they're welcome to trade to try different colors. This models the kind of collaborative making environment students will encounter throughout the course.
 
-### Optional Extension — Electricity Video (Grades 3+)
+#### Optional Extension — Electricity Video (Grades 3+)
 The video at [https://www.youtube.com/watch?v=MrLWLWpS1Gw](https://www.youtube.com/watch?v=MrLWLWpS1Gw) is a good 5-minute primer for students who have some reading ability and attention span for it. For K–2, skip it — the free exploration is a better first encounter with the concept. For Grade 3 and up, watching first gives students a framework that makes the exploration more purposeful.
 
-### Free Exploration
+#### Free Exploration
 **The most important instruction here is to give none.** Hand out the battery and LEDs and say: *"See if you can make the LED light up. That's your only goal right now."*
 
 Resist explaining positive/negative before students have had a chance to discover it. When a student figures it out, ask: *"What did you notice? Why do you think it works one way and not the other?"* Let them explain it in their own words first.
@@ -87,10 +85,10 @@ Resist explaining positive/negative before students have had a chance to discove
 
 For K–1 specifically: some students will struggle with the fine motor task of holding the LED legs against the battery. Pair these students or pre-bend the LED legs outward slightly so they grip the battery edge more easily.
 
-### Optional Extension — Book Inspiration
+#### Optional Extension — Book Inspiration
 Have students hold their lit LED and battery up behind the pages of a picture book. This works beautifully — characters with glowing eyes, windows that suddenly have light in them, scenes that transform. It usually takes about 2 minutes before students are enthusiastically trading books. Keep it to 5 minutes or it becomes its own activity. The goal is to warm up their visual imagination before they draw.
 
-### LED Art Activity
+#### LED Art Activity
 The key framing is *what part of your drawing needs light?* — not "draw something and add an LED." Students who start with the light source in mind (a lighthouse beam, a glowing nose, a lightsaber) tend to make more satisfying pieces than students who draw first and then figure out where to put the LED.
 
 Good prompts if students are stuck: *"What in your drawing would actually glow?"* / *"Where does the light come from in your picture?"*
@@ -101,12 +99,12 @@ For Grades 2–3: students can attempt two LEDs if they're confident, holding on
 
 **The diffusion effect** surprises most students. When the LED is behind the paper, the glow spreads out softly. Point this out explicitly: *"The paper is spreading the light — we call that diffusion. It's the same thing that happens with a lampshade."*
 
-### Optional Extension — Greeting Card
+#### Optional Extension — Greeting Card
 A genuinely satisfying 10-minute add-on. Pre-fold a sample card to show the concept. The labeling activity inside the card (LED, battery, + leg, − leg) doubles as a vocabulary reinforcement moment. For older students, encourage them to write a message that connects to the light — "You light up my day," "Shine on," etc. Cards make excellent take-home pieces that share the project with families.
 
 ---
 
-## Troubleshooting
+### Troubleshooting
 
 | Problem | Most likely cause | Fix |
 |---|---|---|
@@ -119,9 +117,9 @@ A genuinely satisfying 10-minute add-on. Pre-fold a sample card to show the conc
 
 ---
 
-# Lesson 2 — Paper Circuits
+## Lesson 2 — Paper Circuits
 
-## Timing Guide
+### Timing Guide
 
 | Segment | Time | Notes |
 |---|---|---|
@@ -134,14 +132,14 @@ A genuinely satisfying 10-minute add-on. Pre-fold a sample card to show the conc
 
 ---
 
-## Facilitation Notes
+### Facilitation Notes
 
-### Copper Tape Introduction
+#### Copper Tape Introduction
 Demonstrate the corner technique before students start — pull the tape back on itself, then fold in the new direction. If your copper tape has non-conductive adhesive (white rather than copper-coloured on the back), this technique is essential: the conductive copper side must be touching itself at corners, not the adhesive side.
 
 Show students how to peel slowly — rushing causes the tape to crinkle and lose contact.
 
-### Following the Template
+#### Following the Template
 Walk through the steps on the projector briefly, then let students build. Most issues are:
 
 - **Corners** — tape lifted off the paper, breaking the circuit. Press firmly all the way along.
@@ -150,20 +148,20 @@ Walk through the steps on the projector briefly, then let students build. Most i
 
 Students who finish early: challenge them to build the parallel and series versions of the same circuit and compare brightness.
 
-### Three Circuit Types
+#### Three Circuit Types
 Don't explain the results before students experiment. Let them build all three and observe. Ask: *"Which is brighter? What happens when you pull one LED out of the series circuit — do the others stay on?"* The series failure is always a memorable moment.
 
 The takeaway to land: **parallel is better for wearables** because one broken connection doesn't take everything else down.
 
-### Optional Extension — Make a Switch
+#### Optional Extension — Make a Switch
 This is a favourite with students who like to fidget. Once they understand the gap-and-flap concept, many will start inventing their own switch designs — folded flaps, coin bridges, a finger touching the gap. All valid. The concept is the same: a switch is just a controllable gap.
 
-### Design Challenge: Hoodie
+#### Design Challenge: Hoodie
 Treat it as a design activity before a build activity. The more useful question is *"Where do you want the lights, and why?"* before *"How does the circuit work?"* Students who have a reason for their layout (lights along the hood edge, lights spelling initials) make more intentional decisions about circuit type.
 
 ---
 
-## Troubleshooting
+### Troubleshooting
 
 | Problem | Most likely cause | Fix |
 |---|---|---|
@@ -179,9 +177,9 @@ Treat it as a design activity before a build activity. The more useful question 
 
 ---
 
-# Lesson 3 — Wearable Copper Tape
+## Lesson 3 — Wearable Copper Tape
 
-## Timing Guide
+### Timing Guide
 
 | Segment | Time | Notes |
 |---|---|---|
@@ -194,31 +192,31 @@ Treat it as a design activity before a build activity. The more useful question 
 
 ---
 
-## Facilitation Notes
+### Facilitation Notes
 
-### Paper vs Fabric
+#### Paper vs Fabric
 The key difference to establish upfront: fabric moves. A paper circuit can stay flat forever; a wearable gets bent, stretched, and tugged. Connections need to be more deliberate. This framing helps students understand why the parallel rail approach (two strips running alongside each other) is used instead of a complex drawn circuit.
 
 Show a sample rail circuit on fabric if you have one. Even a scrap of fabric with two strips of tape and a single LED makes the concept clear in seconds.
 
-### Building the Wearable Circuit
+#### Building the Wearable Circuit
 Pairs work better than individuals here — one student holds the fabric taut and flat while the other lays the tape. Fabric that bunches under the tape loses contact.
 
 **Common issue:** Students place the two rails too close together. A 1 cm gap is the minimum; 1.5 cm is more forgiving. If the battery bridges both rails when placed, the gap is too narrow.
 
 **Short circuits on fabric:** Same symptom as on paper — warm battery, no light. But on fabric it's sometimes harder to find the bridge because the tape can shift under the fabric's texture. Have students lift their work and look at the tape from behind.
 
-### Design with Purpose
+#### Design with Purpose
 This is where the lesson connects to the larger MakeFashion Edu themes. The prompt isn't just *"where do the lights go"* — it's *"what do you want someone to notice, and why?"*
 
 Good prompts: *"If someone saw this from across the room, what would they see first?"* / *"Is the light the focus, or is it supporting something else?"* / *"What story does this tell?"*
 
 For K–2: keep the design simple — one or two LEDs with a clear intention. For Grades 3+: push toward a specific message or identity element.
 
-### Optional Extension — Message Wearable
+#### Optional Extension — Message Wearable
 This extension works best after students have a working circuit and some confidence. Give them a clear constraint: choose one thing you care about and make the lights communicate something about it. The constraint focuses the creative work. Share-out at the end of class is worth the 3–4 minutes it takes — students explain their message and others try to guess it first.
 
-### Optional Extension — Conductive Thread
+#### Optional Extension — Conductive Thread
 Only attempt if you have materials and at least 10 uninterrupted minutes. Pre-thread the needles to save time. The main teaching point is that the concept is identical — the thread carries current, LED legs connect across positive and negative lines — but the execution demands more patience and fine motor control. Frame it as a preview of what's possible, not a full mastery activity.
 
 ---

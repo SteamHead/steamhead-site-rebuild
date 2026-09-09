@@ -17,4 +17,4 @@ While SAIS had one of the first dedicated school makerspaces, Twila promoted the
 
 Twila holds a M.A. in Educational Psychology and prior to coming to China her work with school transformation led to her school receiving awards of Magnet School of Excellence and School of Distinction.
 
-![](/images/2018/09/20180620_073326593_iOS-scaled.jpg) ![](/images/2018/09/20180620_031231978_iOS-scaled.jpg) ![](/images/2018/09/20180614_061138705_iOS.jpg)
+![Twila Busby standing with a group of seated students holding cardboard and craft inventions](/images/2018/09/20180620_073326593_iOS-scaled.jpg) ![Twila Busby talking with two colleagues around a shared table](/images/2018/09/20180620_031231978_iOS-scaled.jpg) ![Twila Busby demonstrating a craft material to a group of children gathered around a table](/images/2018/09/20180614_061138705_iOS.jpg)

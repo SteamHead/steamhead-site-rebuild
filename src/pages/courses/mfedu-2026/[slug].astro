@@ -39,7 +39,7 @@ const slugOf = (id: string) => id.split('/').pop();
       </p>
       <h1>{title}</h1>
       <div class="lesson-meta">
-        <button class="done-pill" data-done-toggle data-lesson={slugOf(lesson.id)} type="button">
+        <button class="done-pill" data-done-toggle data-lesson={slugOf(lesson.id)} type="button" aria-pressed="true">
           Marked complete — tap to unmark
         </button>
         {badge && (
@@ -102,6 +102,7 @@ const slugOf = (id: string) => id.split('/').pop();
   function paint() {
     const done = !!read()[slug];
     btn?.classList.toggle('done-pill--done', done);
+    btn?.setAttribute('aria-pressed', String(done));
     if (btn) btn.textContent = done
       ? '✓ Marked complete — tap to unmark'
       : 'Not complete — tap to mark done';

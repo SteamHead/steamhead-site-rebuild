@@ -4,10 +4,10 @@ role: resident
 date: 2017-10-22
 description: "We are hosting Helen Steer in November! She will be living, working, and teaching from our resident's room in Shekou."
 image: "/images/2017/10/helensteer.jpg"
-imageAlt: "Helen Steer"
+imageAlt: "Helen Steer smiling in front of a colorful abstract mural"
 ---
 
-![](/images/2018/10/a27d24_cac37db909e64e5c8dd5c5648ae8dc2dmv2_d_2271_2272_s_2-300x300.jpg)
+![A woman with curly hair speaks in front of a paper cutout of Earth, surrounded by craft displays](/images/2018/10/a27d24_cac37db909e64e5c8dd5c5648ae8dc2dmv2_d_2271_2272_s_2-300x300.jpg)
 
  
 

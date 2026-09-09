@@ -26,6 +26,7 @@ const groups = [
           <li>
             <a
               href={`/makefashion-edu/${e.id}/`}
+              aria-current={e.id === currentSlug ? "page" : undefined}
               class:list={["mfedu-nav__link", { "mfedu-nav__link--active": e.id === currentSlug }]}
             >
               {e.data.title}
@@ -61,7 +62,7 @@ const groups = [
     color: var(--color-dark);
     text-decoration: none;
   }
-  .mfedu-nav__home:hover { color: var(--color-teal); opacity: 1; }
+  .mfedu-nav__home:hover { color: var(--color-teal-text); opacity: 1; }
   .mfedu-nav__group h3 {
     font-family: var(--font-body);
     font-size: var(--text-xs);
@@ -85,9 +86,9 @@ const groups = [
     display: block;
     padding: 0.15rem 0;
   }
-  .mfedu-nav__link:hover { color: var(--color-teal); opacity: 1; }
+  .mfedu-nav__link:hover { color: var(--color-teal-text); opacity: 1; }
   .mfedu-nav__link--active {
-    color: var(--color-teal);
+    color: var(--color-teal-text);
     font-weight: 700;
   }
 

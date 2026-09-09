@@ -30,8 +30,8 @@ Overall, we directly impacted over 30 students, 20 teachers (wow!), and 100 make
 
  
 
-![](/images/2018/10/anina2.jpg)
+![Anina Net demonstrating an electronics project to a group of seated children at a table](/images/2018/10/anina2.jpg)
 
-![](/images/2018/10/anina3.jpg)
+![Anina Net helping students sort colorful fabric scraps at a workshop table](/images/2018/10/anina3.jpg)
 
-![](/images/2018/10/20170925_234336000_iOS.mp4.00_00_50_00.Still003.jpg)
+![Anina Net working at a laptop with two other makers during a programming session](/images/2018/10/20170925_234336000_iOS.mp4.00_00_50_00.Still003.jpg)

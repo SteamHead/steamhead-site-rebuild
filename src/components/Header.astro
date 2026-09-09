@@ -36,10 +36,10 @@ const inPrograms = programLinks.some(l => currentPath === l.href);
     <!-- Nav links -->
     <ul class="nav-links" id="nav-menu" role="list">
       <li>
-        <a href="/" class:list={["nav-link", { "nav-link--active": currentPath === "/" }]}>Home</a>
+        <a href="/" aria-current={currentPath === "/" ? "page" : undefined} class:list={["nav-link", { "nav-link--active": currentPath === "/" }]}>Home</a>
       </li>
       <li>
-        <a href="/about-us/" class:list={["nav-link", { "nav-link--active": currentPath === "/about-us/" }]}>About Us</a>
+        <a href="/about-us/" aria-current={currentPath === "/about-us/" ? "page" : undefined} class:list={["nav-link", { "nav-link--active": currentPath === "/about-us/" }]}>About Us</a>
       </li>
 
       <li class="nav-dropdown">
@@ -55,6 +55,7 @@ const inPrograms = programLinks.some(l => currentPath === l.href);
             <li>
               <a
                 href={link.href}
+                aria-current={currentPath === link.href ? "page" : undefined}
                 class:list={["nav-link", { "nav-link--active": currentPath === link.href }]}
               >
                 {link.label}
@@ -65,10 +66,10 @@ const inPrograms = programLinks.some(l => currentPath === l.href);
       </li>
 
       <li>
-        <a href="/blog/" class:list={["nav-link", { "nav-link--active": currentPath.startsWith("/blog") }]}>Blog</a>
+        <a href="/blog/" aria-current={currentPath.startsWith("/blog") ? "page" : undefined} class:list={["nav-link", { "nav-link--active": currentPath.startsWith("/blog") }]}>Blog</a>
       </li>
       <li>
-        <a href="/theshelf/" class:list={["nav-link", { "nav-link--active": currentPath === "/theshelf/" }]}>The Shelf</a>
+        <a href="/theshelf/" aria-current={currentPath === "/theshelf/" ? "page" : undefined} class:list={["nav-link", { "nav-link--active": currentPath === "/theshelf/" }]}>The Shelf</a>
       </li>
     </ul>
 
@@ -134,6 +135,10 @@ const inPrograms = programLinks.some(l => currentPath === l.href);
   .nav-link--active {
     color: var(--color-yellow);
     opacity: 1;
+  }
+  .nav-link--active {
+    text-decoration: underline;
+    text-underline-offset: 4px;
   }
 
   /* Programs dropdown */
