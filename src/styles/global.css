@@ -214,6 +214,25 @@ img { max-width: 100%; height: auto; display: block; border-radius: var(--radius
   position: relative;
   z-index: 1;
 }
+
+/* Below this, the heading/tagline wrap onto enough lines that a fixed
+   aspect-ratio height risks clipping CMS-edited text. From here up, give
+   the hero photo more room to breathe instead of the tight, content-sized
+   band above — matching its native 4:3 ratio so object-fit: cover crops as
+   little as possible, capped so it never eats the whole viewport. */
+@media (min-width: 768px) {
+  .hero {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    min-height: 420px;
+    max-height: 85vh;
+  }
+  .hero__content {
+    width: 100%;
+  }
+}
 .hero h1 {
   color: var(--color-yellow);
   margin-bottom: var(--space-sm);
