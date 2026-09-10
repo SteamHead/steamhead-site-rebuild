@@ -28,29 +28,6 @@ const { hero_heading, hero_tagline, impact_stats } = entry.data;
   </section>
 
   <!-- =====================================================================
-       IMPACT SNAPSHOT
-       ===================================================================== -->
-  <section class="section section--dark" aria-label="Our impact">
-    <div class="container">
-      <div class="section__header">
-        <h2>Our Impact</h2>
-        <p>
-          Approximate figures, updated as programs grow — see the full
-          picture on our <a href="/funders-partnerships/">Funders &amp; Partnerships</a> page.
-        </p>
-      </div>
-      <div class="stat-grid">
-        {(impact_stats ?? []).map((s: { number: string; label: string }) => (
-          <div class="stat-tile">
-            <span class="stat-tile__number">{s.number}</span>
-            <span class="stat-tile__label">{s.label}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- =====================================================================
        OUR INITIATIVES
        ===================================================================== -->
   <section class="section" aria-label="Our initiatives">
@@ -127,6 +104,25 @@ const { hero_heading, hero_tagline, impact_stats } = entry.data;
           </div>
         </article>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       IMPACT SNAPSHOT
+       ===================================================================== -->
+  <section class="section section--dark" aria-label="Our impact">
+    <div class="container">
+      <div class="section__header">
+        <h2>Our Impact</h2>
+      </div>
+      <div class="stat-grid">
+        {(impact_stats ?? []).map((s: { number: string; label: string }) => (
+          <div class="stat-tile">
+            <span class="stat-tile__number">{s.number}</span>
+            <span class="stat-tile__label">{s.label}</span>
+          </div>
+        ))}
       </div>
     </div>
   </section>
@@ -270,7 +266,7 @@ const { hero_heading, hero_tagline, impact_stats } = entry.data;
   <!-- =====================================================================
        SUPPORT CTA
        ===================================================================== -->
-  <section class="section section--dark" aria-label="Support SteamHead">
+  <section class="section section--alt" aria-label="Support SteamHead">
     <div class="container support-cta">
       <h2>Support Our Work</h2>
       <hr class="accent-rule" />
