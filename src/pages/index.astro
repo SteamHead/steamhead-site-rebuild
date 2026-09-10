@@ -28,29 +28,6 @@ const { hero_heading, hero_tagline, impact_stats } = entry.data;
   </section>
 
   <!-- =====================================================================
-       IMPACT SNAPSHOT
-       ===================================================================== -->
-  <section class="section section--dark" aria-label="Our impact">
-    <div class="container">
-      <div class="section__header">
-        <h2>Our Impact</h2>
-        <p>
-          Approximate figures, updated as programs grow — see the full
-          picture on our <a href="/funders-partnerships/">Funders &amp; Partnerships</a> page.
-        </p>
-      </div>
-      <div class="stat-grid">
-        {(impact_stats ?? []).map((s: { number: string; label: string }) => (
-          <div class="stat-tile">
-            <span class="stat-tile__number">{s.number}</span>
-            <span class="stat-tile__label">{s.label}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- =====================================================================
        OUR INITIATIVES
        ===================================================================== -->
   <section class="section" aria-label="Our initiatives">
@@ -132,9 +109,28 @@ const { hero_heading, hero_tagline, impact_stats } = entry.data;
   </section>
 
   <!-- =====================================================================
+       IMPACT SNAPSHOT
+       ===================================================================== -->
+  <section class="section section--alt" aria-label="Our impact">
+    <div class="container">
+      <div class="section__header">
+        <h2>Our Impact</h2>
+      </div>
+      <div class="stat-grid">
+        {(impact_stats ?? []).map((s: { number: string; label: string }) => (
+          <div class="stat-tile">
+            <span class="stat-tile__number">{s.number}</span>
+            <span class="stat-tile__label">{s.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
        METHODOLOGY
        ===================================================================== -->
-  <section class="section section--alt" aria-label="Our methodology">
+  <section class="section" aria-label="Our methodology">
     <div class="container">
       <div class="section__header">
         <h2>Our Methodology</h2>
@@ -270,7 +266,7 @@ const { hero_heading, hero_tagline, impact_stats } = entry.data;
   <!-- =====================================================================
        SUPPORT CTA
        ===================================================================== -->
-  <section class="section section--dark" aria-label="Support SteamHead">
+  <section class="section" aria-label="Support SteamHead">
     <div class="container support-cta">
       <h2>Support Our Work</h2>
       <hr class="accent-rule" />
@@ -298,22 +294,23 @@ const { hero_heading, hero_tagline, impact_stats } = entry.data;
   .stat-tile {
     text-align: center;
     padding: var(--space-md);
-    background: var(--color-dark-surface);
+    background: var(--color-white);
     border-radius: var(--radius);
     border-top: 4px solid var(--color-yellow);
+    box-shadow: var(--shadow-card);
   }
   .stat-tile__number {
     display: block;
     font-family: var(--font-heading);
     font-size: var(--text-4xl);
-    color: var(--color-yellow);
+    color: var(--color-black);
     line-height: 1.1;
   }
   .stat-tile__label {
     display: block;
     margin-top: 0.4rem;
     font-size: var(--text-sm);
-    color: var(--color-gray-light);
+    color: var(--color-text-muted);
   }
 
   .support-cta { max-width: 70ch; }
