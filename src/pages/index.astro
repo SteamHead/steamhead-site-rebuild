@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getEntry } from 'astro:content';
 
 const entry = await getEntry('pages', 'home');
-const { hero_heading, hero_tagline } = entry.data;
+const { hero_heading, hero_tagline, impact_stats } = entry.data;
 ---
 
 <BaseLayout
@@ -24,6 +24,29 @@ const { hero_heading, hero_tagline } = entry.data;
       <h1>{hero_heading}</h1>
       <p class="hero__tagline">{hero_tagline}</p>
       <a href="/about-us/" class="btn btn--primary">About SteamHead</a>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       IMPACT SNAPSHOT
+       ===================================================================== -->
+  <section class="section section--dark" aria-label="Our impact">
+    <div class="container">
+      <div class="section__header">
+        <h2>Our Impact</h2>
+        <p>
+          Approximate figures, updated as programs grow — see the full
+          picture on our <a href="/funders-partnerships/">Funders &amp; Partnerships</a> page.
+        </p>
+      </div>
+      <div class="stat-grid">
+        {(impact_stats ?? []).map((s: { number: string; label: string }) => (
+          <div class="stat-tile">
+            <span class="stat-tile__number">{s.number}</span>
+            <span class="stat-tile__label">{s.label}</span>
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 
@@ -244,9 +267,62 @@ const { hero_heading, hero_tagline } = entry.data;
     </div>
   </section>
 
+  <!-- =====================================================================
+       SUPPORT CTA
+       ===================================================================== -->
+  <section class="section section--dark" aria-label="Support SteamHead">
+    <div class="container support-cta">
+      <h2>Support Our Work</h2>
+      <hr class="accent-rule" />
+      <p class="mt-md">
+        SteamHead is a 501(c)(3) nonprofit that runs on grants, donations, and
+        volunteer time. Whether you're a funder exploring a partnership or want
+        to give directly, we'd love to hear from you.
+      </p>
+      <div class="cta-row mt-md">
+        <a href="/funders-partnerships/" class="btn btn--primary">Funders &amp; Partnerships</a>
+        <a href="/contact-us/" class="btn btn--outline">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
 </BaseLayout>
 
 <style>
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+  .stat-tile {
+    text-align: center;
+    padding: var(--space-md);
+    background: var(--color-dark-surface);
+    border-radius: var(--radius);
+    border-top: 4px solid var(--color-yellow);
+  }
+  .stat-tile__number {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: var(--text-4xl);
+    color: var(--color-yellow);
+    line-height: 1.1;
+  }
+  .stat-tile__label {
+    display: block;
+    margin-top: 0.4rem;
+    font-size: var(--text-sm);
+    color: var(--color-gray-light);
+  }
+
+  .support-cta { max-width: 70ch; }
+  .cta-row {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+  }
+
   .method-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

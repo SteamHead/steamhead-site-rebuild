@@ -1,0 +1,126 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getEntry } from 'astro:content';
+import { marked } from 'marked';
+
+const entry = await getEntry('pages', 'funders-partnerships');
+const {
+  hero_tagline, intro_body, get_involved_body,
+  contact_name, contact_email, impact_stats,
+} = entry.data;
+
+const md = (s: string) => marked.parse(s ?? '');
+---
+
+<BaseLayout
+  title="Funders & Partnerships"
+  description="SteamHead is a 501(c)(3) nonprofit funded by grants, donations, and volunteer time. Learn how to partner with us or give directly."
+>
+
+  <!-- =====================================================================
+       HERO
+       ===================================================================== -->
+  <section class="hero hero--short" aria-label="Funders and Partnerships">
+    <div class="container hero__content">
+      <h1>Funders &amp; Partnerships</h1>
+      <p class="hero__tagline">{hero_tagline}</p>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       IMPACT AT A GLANCE
+       ===================================================================== -->
+  <section class="section" aria-label="Impact at a glance">
+    <div class="container">
+      <h2>Impact at a Glance</h2>
+      <hr class="accent-rule" />
+      <div class="impact-grid mt-md">
+        {(impact_stats ?? []).map((s: { metric: string; detail: string }) => (
+          <div class="impact-item">
+            <span class="impact-item__metric">{s.metric}</span>
+            <p class="impact-item__detail">{s.detail}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       WHAT WE'RE SEEKING
+       ===================================================================== -->
+  <section class="section section--alt" aria-label="What we're seeking">
+    <div class="container">
+      <h2>How Funding Works at SteamHead</h2>
+      <hr class="accent-rule" />
+      <div class="mt-md prose" set:html={md(intro_body)} />
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       HOW TO GET INVOLVED
+       ===================================================================== -->
+  <section class="section" aria-label="How to get involved">
+    <div class="container">
+      <h2>How to Get Involved</h2>
+      <hr class="accent-rule" />
+      <div class="mt-md prose" set:html={md(get_involved_body)} />
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       CONTACT
+       ===================================================================== -->
+  <section class="section section--dark" aria-label="Contact for funding inquiries">
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <hr class="accent-rule" />
+      <p class="mt-md">
+        {contact_name} handles funding and partnership inquiries directly:
+        <a href={`mailto:${contact_email}`}>{contact_email}</a>.
+      </p>
+      <div class="cta-row mt-md">
+        <a href={`mailto:${contact_email}`} class="btn btn--primary">Email Us</a>
+        <a href="/faq/" class="btn btn--outline">Read the FAQ</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .hero--short { padding-block: var(--space-lg); }
+
+  .prose :global(p) { margin-bottom: var(--space-sm); }
+  .prose :global(strong) { color: var(--color-dark); }
+  .section--alt .prose :global(strong) { color: var(--color-dark); }
+
+  .impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space-md);
+  }
+  .impact-item {
+    background: var(--color-gray-light);
+    border-left: 4px solid var(--color-yellow);
+    border-radius: var(--radius);
+    padding: var(--space-md);
+  }
+  .impact-item__metric {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    color: var(--color-heading);
+    margin-bottom: 0.3rem;
+  }
+  .impact-item__detail {
+    font-size: var(--text-sm);
+    color: var(--color-dark);
+    margin: 0;
+  }
+
+  .cta-row {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+  }
+</style>

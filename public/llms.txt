@@ -1,0 +1,77 @@
+# SteamHead
+
+> SteamHead is a 501(c)(3) nonprofit maker education organisation. It
+> partners with schools and learning communities to deliver hands-on,
+> project-based STEAM programs, and supports educators in adopting
+> maker-centered teaching practices. Legal name: "SteamHead" (no "LLC").
+> Volunteer work began in 2011; recognized as a 501(c)(3) public charity in
+> California in 2018. EIN 82-4533355.
+
+## Programs
+
+- [MakeFashion Edu](https://steamhead.space/makefashion-edu/): FashionTech in
+  the classroom — students combine fashion and technology in wearable pieces
+  they design themselves. Free to schools; typically ~100 hours of adult
+  supervisor time, mostly in-class with students. Runway shows and season
+  books archived on [The Shelf](https://steamhead.space/theshelf/). An online
+  course is also available at
+  [/courses/mfedu-intro/](https://steamhead.space/courses/mfedu-intro/) and
+  [/courses/mfedu-2026/](https://steamhead.space/courses/mfedu-2026/).
+- [Neighborhood Earth](https://steamhead.space/neighborhood-earth/):
+  SteamHead's longest-running program — global educator outreach and
+  place-based learning, active in nine countries since 2011 (US, China,
+  Bhutan, Brazil, Germany, Canada, UK, Sri Lanka, Italy). Includes Maker
+  Events and the Mobile Makerspace (Argosy Airstream) project.
+  - Resident Educators (SteamHead R.ED): by invitation only, based in
+    California (previously hosted at the Shenzhen makerspace).
+  - Shenzhen Makerspace: closed in 2024.
+  - Virtual Maker Exhibition: historical, held 2020–2021.
+- [System Upgrade](https://steamhead.space/system-upgrade/): rethinking
+  education through authentic, project-based learning. Includes SHTEAM Labs
+  activity journals and a multi-year partnership with the San Francisco
+  Unified School District (~900 students over 3 years) and Tucson Unified
+  School District. SteamHead Productions produces runway films, class
+  documentaries, and teacher resources.
+
+## Impact (approximate)
+
+- Founded 2011; 501(c)(3) since 2018.
+- Direct contact with roughly 1,000 elementary, ~30 middle school, 6 high
+  school, and ~20 university students each year, plus an estimated 2,000+
+  more reached indirectly (exhibitions, social media, runway events, online
+  tutorials).
+- Primary school partners: San Francisco Unified School District and Tucson
+  Unified School District, plus 3–4 additional schools or learning
+  communities worldwide each year for individual projects.
+- Nine countries reached: US, China, Bhutan, Brazil, Germany, Canada, UK,
+  Sri Lanka, Italy.
+- Cities include Shenzhen, San Francisco, Tucson, and Calgary.
+
+## Funding & Partnerships
+
+SteamHead runs on volunteer time, in-kind support, project-based grants, and
+donations of any amount. It does not run fixed-tier sponsorship packages;
+funding and partnership conversations happen case by case. Details:
+[/funders-partnerships/](https://steamhead.space/funders-partnerships/).
+Contact: James Simpson, james@steamhead.space.
+
+## Governance
+
+Volunteer Board of Directors: Christy P. Wang (President), Carrie Leung
+(Treasurer; board member since Feb. 2018), Benjamin (James) Simpson
+(Secretary), Twila Busby, Maria Ellena Villagomez, Shannon Hoover. Full
+listing: [/about-us/](https://steamhead.space/about-us/).
+
+## Key pages
+
+- [/about-us/](https://steamhead.space/about-us/) — mission, team, board,
+  funding.
+- [/faq/](https://steamhead.space/faq/) — common questions.
+- [/funders-partnerships/](https://steamhead.space/funders-partnerships/) —
+  how to fund or partner with SteamHead.
+- [/form-990-n/](https://steamhead.space/form-990-n/) — nonprofit status,
+  EIN, and links to verify directly with the IRS.
+- [/blog/](https://steamhead.space/blog/) — the Great Things Blog.
+
+This entire site is open to indexing by AI crawlers and search engines; no
+pages are blocked.
