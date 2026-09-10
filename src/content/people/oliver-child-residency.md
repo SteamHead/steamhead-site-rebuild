@@ -29,4 +29,4 @@ Here is an introduction from his site, [OliverChild.com](http://oliverchild.com)
 
 [Scissor Jaws!](<http://Designing Scissor Jaws in Fusion>),  [Glowing Jelly](https://www.instructables.com/id/Glowing-Jelly/), [Cell Phone Video Rig](https://www.instructables.com/id/pan-tilt-device-for-cell-phone/)
 
-![](/images/2018/10/552559567.jpg) ![](/images/2018/10/20180826_120028.jpg) ![](/images/2018/10/20180823_132206.jpg)
+![Oliver Child soldering electronics at a workbench beneath a large carved wooden wall sculpture](/images/2018/10/552559567.jpg) ![Oliver Child holding up a large paper template in front of a chalkboard mural](/images/2018/10/20180826_120028.jpg) ![Oliver Child kneeling on the floor attaching LED lights to a fabric costume piece](/images/2018/10/20180823_132206.jpg)

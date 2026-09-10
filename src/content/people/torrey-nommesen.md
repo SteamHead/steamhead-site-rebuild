@@ -4,7 +4,7 @@ role: resident
 date: 2018-12-15
 description: "I am a teacher, artist, maker, and wantreprenuer. Below are some of my current projects."
 image: "/images/2018/12/torreynommesen.jpg"
-imageAlt: "Torrey Nommesen"
+imageAlt: "Torrey Nommesen looking down at the camera against a green gradient background"
 ---
 
 I am a teacher, artist, maker, and wantreprenuer.
@@ -56,4 +56,4 @@ Below are some of my current projects. The best way to contact me at the moment 
   
    
 
-![](/images/2019/02/Torrey-300x200.jpg)
+![Torrey Nommesen in a close-up portrait against a green gradient background](/images/2019/02/Torrey-300x200.jpg)

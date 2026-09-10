@@ -66,7 +66,7 @@ const { hero_heading, hero_tagline, impact_stats } = entry.data;
       <div class="card-grid">
 
         <!-- Neighborhood Earth -->
-        <article class="card">
+        <article class="card card--earth">
           <img
             class="card__image"
             src="/images/2024/04/neighborhoodearth.jpg"
@@ -82,12 +82,12 @@ const { hero_heading, hero_tagline, impact_stats } = entry.data;
             </p>
           </div>
           <div class="card__footer">
-            <a href="/neighborhood-earth/" class="btn btn--outline">Learn More</a>
+            <a href="/neighborhood-earth/" class="btn btn--outline" aria-label="Learn more about Neighborhood Earth">Learn More</a>
           </div>
         </article>
 
         <!-- System Upgrade -->
-        <article class="card">
+        <article class="card card--upgrade">
           <img
             class="card__image"
             src="/images/2024/04/systemupgrade.jpg"
@@ -103,12 +103,12 @@ const { hero_heading, hero_tagline, impact_stats } = entry.data;
             </p>
           </div>
           <div class="card__footer">
-            <a href="/system-upgrade/" class="btn btn--outline">Learn More</a>
+            <a href="/system-upgrade/" class="btn btn--outline" aria-label="Learn more about System Upgrade">Learn More</a>
           </div>
         </article>
 
         <!-- MakeFashion Edu -->
-        <article class="card">
+        <article class="card card--mfedu">
           <img
             class="card__image"
             src="/images/2024/04/makefashionedu.jpg"
@@ -123,7 +123,7 @@ const { hero_heading, hero_tagline, impact_stats } = entry.data;
             </p>
           </div>
           <div class="card__footer">
-            <a href="/makefashion-edu/" class="btn btn--outline">Learn More</a>
+            <a href="/makefashion-edu/" class="btn btn--outline" aria-label="Learn more about MakeFashion Edu">Learn More</a>
           </div>
         </article>
 
@@ -321,6 +321,40 @@ const { hero_heading, hero_tagline, impact_stats } = entry.data;
     display: flex;
     gap: var(--space-sm);
     flex-wrap: wrap;
+  }
+
+  /* Initiative accent color behind the card body/footer, matching each
+     initiative's mockup color. */
+  .card--earth   { background: var(--color-init-earth); }
+  .card--upgrade { background: var(--color-init-upgrade); }
+  .card--mfedu   { background: var(--color-init-mfedu); }
+
+  /* On these solid-color card bodies, the brand burnt-orange heading and
+     button outline read poorly — use plain black instead. */
+  .card--earth .card__title,
+  .card--upgrade .card__title,
+  .card--mfedu .card__title,
+  .card--earth .card__text,
+  .card--upgrade .card__text,
+  .card--mfedu .card__text {
+    color: var(--color-black);
+  }
+  .card--earth .btn--outline,
+  .card--upgrade .btn--outline,
+  .card--mfedu .btn--outline {
+    border-color: transparent;
+    color: var(--color-black);
+  }
+  .card--earth .btn--outline:hover,
+  .card--upgrade .btn--outline:hover,
+  .card--mfedu .btn--outline:hover {
+    background: transparent;
+    color: var(--color-black);
+  }
+  .card--earth .card__footer,
+  .card--upgrade .card__footer,
+  .card--mfedu .card__footer {
+    text-align: center;
   }
 
   .method-grid {

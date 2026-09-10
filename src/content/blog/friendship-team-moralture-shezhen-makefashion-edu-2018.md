@@ -10,7 +10,7 @@ categories:
 
 ![Model in an illuminated peacock-inspired costume at a MakeFashion Edu runway show](https://i.ytimg.com/vi/dCXeAV8nEww/maxresdefault.jpg)
 
-<iframe id="okplayer" style="position: absolute; top: 0px; left: 0px; width: 480px; height: 270px;" src="http://youtube.com/embed/dCXeAV8nEww" width="480" height="270" frameborder="0" scrolling="no" seamless="seamless" allowfullscreen="allowfullscreen"></iframe>
+<iframe id="okplayer" title="YouTube video" style="position: absolute; top: 0px; left: 0px; width: 480px; height: 270px;" src="http://youtube.com/embed/dCXeAV8nEww" width="480" height="270" frameborder="0" scrolling="no" seamless="seamless" allowfullscreen="allowfullscreen"></iframe>
 
 Friendship, Team Moralture, Shezhen MakeFashion Edu 2018
 

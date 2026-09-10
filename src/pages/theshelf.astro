@@ -49,6 +49,7 @@ const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
               class="btn btn--primary"
               target="_blank"
               rel="noopener"
+              aria-label="Get SHTEAM Labs 1"
             >
               Get It
             </a>
@@ -172,6 +173,7 @@ const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
                 class="btn btn--outline"
                 target="_blank"
                 rel="noopener"
+                aria-label={`View ${book.title}`}
               >
                 View
               </a>
@@ -216,9 +218,9 @@ const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
           </span>
         </li>
         <li>
-          <a href="#" class="guide-link guide-link--coming">
+          <span class="guide-link guide-link--coming" aria-disabled="true">
             Fashion Intro Activities
-          </a>
+          </span>
           <span class="guide-desc">Coming soon</span>
         </li>
       </ul>
@@ -254,7 +256,7 @@ const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
 </script>
 
 <style>
-  .hero--short { padding-block: var(--space-lg); }
+  .hero--short { padding-block: var(--space-section); }
 
   .product-card {
     background: var(--color-gray-light);
@@ -371,25 +373,24 @@ const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
   .guide-link {
     font-family: var(--font-heading);
     font-size: var(--text-lg);
-    color: var(--color-teal);
+    color: var(--color-teal-text);
     text-decoration: none;
     white-space: nowrap;
     transition: opacity 0.15s;
   }
   .guide-link:hover { opacity: 0.75; }
   .guide-link--coming {
-    color: var(--color-text-dim);
+    color: var(--color-text-muted);
     cursor: default;
     pointer-events: none;
   }
   .guide-desc {
     font-size: var(--text-sm);
-    color: var(--color-text-dim);
+    color: var(--color-text-muted);
   }
   .guide-link-teacher {
-    color: var(--color-teal);
+    color: var(--color-teal-text);
     font-size: var(--text-sm);
-    text-decoration: none;
     font-family: var(--font-body);
     font-weight: 600;
   }

@@ -18,6 +18,6 @@ Reposted from dusseiller.ch: [www.dusseiller.ch/labs/?page\_id=2](http://www.dus
 
    
 
-![](/images/2019/02/dusjagr_coconut-300x300.jpg)  
+![Marc Dusseiller drinking from a fresh coconut through a straw among green foliage](/images/2019/02/dusjagr_coconut-300x300.jpg)  
   
-![](/images/2019/02/wx_camera_1535119559282-169x300.jpg)
+![A hand holds a purple circuit board while two people talk in the background](/images/2019/02/wx_camera_1535119559282-169x300.jpg)

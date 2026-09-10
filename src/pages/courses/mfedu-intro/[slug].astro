@@ -37,7 +37,7 @@ const { title, order, section, description } = lesson.data;
         &nbsp;/&nbsp; Lesson {order} of {total} · {section}
       </p>
       <h1>{title}</h1>
-      <button class="done-pill" data-done-toggle data-lesson={lesson.id.split('/').pop()} type="button">
+      <button class="done-pill" data-done-toggle data-lesson={lesson.id.split('/').pop()} type="button" aria-pressed="true">
         Marked complete — tap to unmark
       </button>
     </div>
@@ -94,6 +94,7 @@ const { title, order, section, description } = lesson.data;
   function paint() {
     const done = !!read()[slug];
     btn?.classList.toggle('done-pill--done', done);
+    btn?.setAttribute('aria-pressed', String(done));
     if (btn) btn.textContent = done
       ? '✓ Marked complete — tap to unmark'
       : 'Not complete — tap to mark done';
@@ -115,7 +116,7 @@ const { title, order, section, description } = lesson.data;
 </script>
 
 <style>
-  .hero--short { padding-block: var(--space-lg); }
+  .hero--short { padding-block: var(--space-section); }
 
   .lesson-crumb {
     font-size: var(--text-sm);
@@ -124,7 +125,7 @@ const { title, order, section, description } = lesson.data;
     color: var(--color-text-dim);
     margin-bottom: var(--space-xs);
   }
-  .lesson-crumb a { color: var(--color-yellow); text-decoration: none; }
+  .lesson-crumb a { color: var(--color-yellow); }
 
   .done-pill {
     margin-top: var(--space-sm);

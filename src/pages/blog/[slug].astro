@@ -25,7 +25,7 @@ const formattedDate = post.data.date.toLocaleDateString('en-US', {
        ===================================================================== -->
   <section class="hero hero--post" aria-label={post.data.title}>
     {post.data.image && (
-      <img class="hero__bg" src={post.data.image} alt={post.data.imageAlt ?? ''} />
+      <img class="hero__bg" src={post.data.image} alt={post.data.imageAlt ?? post.data.title} />
     )}
     <div class="container hero__content">
       <time class="post-date" datetime={post.data.date.toISOString()}>{formattedDate}</time>
@@ -49,7 +49,7 @@ const formattedDate = post.data.date.toLocaleDateString('en-US', {
 </BaseLayout>
 
 <style>
-  .hero--post { padding-block: var(--space-lg); }
+  .hero--post { padding-block: var(--space-section); }
   .post-date {
     display: block;
     font-size: var(--text-sm);
