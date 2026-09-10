@@ -13,10 +13,10 @@ productions_body: >
   full publishing platform — runway films, class documentaries, and teacher
   resources on YouTube, with life from the programs on Instagram.
 course_body: >
-  Our MakeFashion Edu Online Course brings the intersection of technology and
-  self-expression into classrooms worldwide. Through engaging modules, students
-  learn design thinking, electronics, and fashion tech — transforming ideas into
-  wearable creations.
+  The MakeFashion Edu Online Course lives on the MakeFashion Edu page — its
+  primary home. We keep it here too, as one entry in our compiled toolkit of
+  tools and content for educators, alongside the Design Immersion Curriculum
+  and The Shelf.
 curriculum_body: >
   The SteamHead Design Immersion Curriculum is the foundation under everything
   on this page: a holistic program that embeds design thinking and maker skills

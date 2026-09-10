@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getEntry } from 'astro:content';
+import { marked } from 'marked';
+
+const entry = await getEntry('pages', 'faq');
+const { hero_tagline, questions } = entry.data;
+
+const md = (s: string) => marked.parse(s ?? '');
+---
+
+<BaseLayout
+  title="FAQ"
+  description="Answers to the questions we hear most about SteamHead's programs, cost model, nonprofit status, and how to get involved."
+>
+
+  <!-- =====================================================================
+       HERO
+       ===================================================================== -->
+  <section class="hero hero--short" aria-label="Frequently Asked Questions">
+    <div class="container hero__content">
+      <h1>FAQ</h1>
+      <p class="hero__tagline">{hero_tagline}</p>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       QUESTIONS
+       ===================================================================== -->
+  <section class="section" aria-label="Questions and answers">
+    <div class="container">
+      <div class="faq-list">
+        {(questions ?? []).map((q: { question: string; answer: string }) => (
+          <div class="faq-item">
+            <h2>{q.question}</h2>
+            <div class="faq-item__answer" set:html={md(q.answer)} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       STILL HAVE QUESTIONS
+       ===================================================================== -->
+  <section class="section section--alt" aria-label="Still have questions">
+    <div class="container">
+      <p>
+        Don't see your question here? <a href="/contact-us/">Get in touch</a> —
+        we're happy to help.
+      </p>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .hero--short { padding-block: var(--space-lg); }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    max-width: 70ch;
+  }
+  .faq-item h2 {
+    font-size: var(--text-xl);
+  }
+  .faq-item__answer {
+    margin-top: var(--space-xs);
+  }
+</style>

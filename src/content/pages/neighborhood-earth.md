@@ -13,12 +13,12 @@ virtual_body: >
   a dynamic online environment that combines elements of a video game with live
   conferencing features.
 makerspace_body: >
-  Now retired, the SteamHead Makerspace in Shenzhen became a cornerstone of
-  creativity and collaboration. Founded in 2017 by educators Carrie and James,
-  it rapidly emerged as a beacon of hands-on learning in one of the world's most
-  dynamic engineering cities.
+  The SteamHead Makerspace in Shenzhen was a cornerstone of creativity and
+  collaboration. Founded in 2017 by educators Carrie and James, it rapidly
+  emerged as a beacon of hands-on learning in one of the world's most dynamic
+  engineering cities — closing its doors in 2024.
 ---
 
 Neighborhood Earth is SteamHead's longest running program — existing before SteamHead itself. In 2011, James entered China as a manufacturing engineer, found that locals highly valued education, and started free classes for factory workers. Concurrently, Carrie and Twila were in Shenzhen organizing educators and parents interested in hands-on, project-based maker learning — with activities inside and outside of classrooms and in community centers.
 
-Since then, James and Carrie have held free classes in Brazil, Germany, Canada, China, the UK, and the US.
+Since then, James and Carrie have held free classes and led projects across nine countries: Brazil, Germany, Canada, China, the UK, the US, Bhutan, Sri Lanka, and Italy — including work with DreamSpace in Batticaloa, Sri Lanka, and with local educators and makers around Prato, Italy.

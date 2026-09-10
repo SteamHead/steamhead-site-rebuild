@@ -109,6 +109,13 @@ collections:
         fields:
           - { label: "Hero Heading",   name: hero_heading,  widget: string }
           - { label: "Hero Tagline",   name: hero_tagline,  widget: text }
+          - label: "Impact Stats"
+            name: impact_stats
+            widget: list
+            hint: "Shown as the homepage impact snapshot — keep to 3–5 short figures"
+            fields:
+              - { label: Number, name: number, widget: string }
+              - { label: Label,  name: label,  widget: string }
 
       - name: about
         label: About Us Page
@@ -122,6 +129,14 @@ collections:
             field: { label: Value, name: value, widget: string }
           - { label: "About Us Body",  name: body,     widget: markdown }
           - { label: "Funding Text",   name: funding,  widget: markdown }
+          - label: "Board of Directors"
+            name: board
+            widget: list
+            hint: "Public governance record — name, role, and board-member-since date only. Do not add emails or phone numbers here."
+            fields:
+              - { label: Name,  name: name,  widget: string }
+              - { label: Role,  name: role,  widget: string }
+              - { label: "Board Member Since", name: since, widget: string }
 
       - name: makefashion-edu
         label: MakeFashion Edu Page
@@ -163,6 +178,34 @@ collections:
           - { label: "Productions Body", name: productions_body, widget: markdown }
           - { label: "Course Body",    name: course_body,    widget: markdown }
           - { label: "Curriculum Body", name: curriculum_body, widget: markdown }
+
+      - name: faq
+        label: FAQ Page
+        file: src/content/pages/faq.md
+        fields:
+          - { label: "Hero Tagline", name: hero_tagline, widget: text }
+          - label: Questions
+            name: questions
+            widget: list
+            fields:
+              - { label: Question, name: question, widget: string }
+              - { label: Answer,   name: answer,   widget: markdown }
+
+      - name: funders-partnerships
+        label: Funders & Partnerships Page
+        file: src/content/pages/funders-partnerships.md
+        fields:
+          - { label: "Hero Tagline",  name: hero_tagline,  widget: text }
+          - { label: "Intro Body",    name: intro_body,    widget: markdown }
+          - { label: "How to Get Involved", name: get_involved_body, widget: markdown }
+          - { label: "Contact Name",  name: contact_name,  widget: string }
+          - { label: "Contact Email", name: contact_email, widget: string }
+          - label: "Impact Stats"
+            name: impact_stats
+            widget: list
+            fields:
+              - { label: Metric, name: metric, widget: string }
+              - { label: Detail, name: detail, widget: text }
 
       - name: shelf
         label: The Shelf Page
