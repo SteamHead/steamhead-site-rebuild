@@ -139,8 +139,8 @@ p:last-child { margin-bottom: 0; }
 
 a {
   color: var(--color-link);
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  font-weight: 700;
+  text-decoration: none;
   transition: opacity 0.15s;
 }
 a:hover { opacity: 0.75; }
