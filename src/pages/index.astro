@@ -1,9 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getEntry } from 'astro:content';
+import { getEntry, getCollection } from 'astro:content';
 
 const entry = await getEntry('pages', 'home');
 const { hero_heading, hero_tagline, impact_stats } = entry.data;
+
+const latestPosts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
 ---
 
 <BaseLayout
@@ -176,6 +180,53 @@ const { hero_heading, hero_tagline, impact_stats } = entry.data;
       </div>
     </div>
   </section>
+
+  <!-- =====================================================================
+       LATEST FROM THE BLOG
+       ===================================================================== -->
+  {latestPosts.length > 0 && (
+    <section class="section section--alt" aria-label="Latest from the blog">
+      <div class="container">
+        <div class="section__header">
+          <h2>Latest from the Great Things Blog</h2>
+          <p>
+            Stories, projects, and ideas from SteamHead's global community of
+            makers and educators — updated every time a new post goes live.
+          </p>
+        </div>
+
+        <div class="post-grid">
+          {latestPosts.map(post => (
+            <article class="post-card">
+              {post.data.image && (
+                <a href={`/blog/${post.id}/`}>
+                  <img
+                    class="post-card__image"
+                    src={post.data.image}
+                    alt={post.data.imageAlt ?? post.data.title}
+                    loading="lazy"
+                  />
+                </a>
+              )}
+              <div class="post-card__body">
+                <time class="text-muted" datetime={post.data.date.toISOString()}>
+                  {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                </time>
+                <h3 class="post-card__title">
+                  <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+                </h3>
+                <p>{post.data.description}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div class="post-grid__footer">
+          <a href="/blog/" class="btn btn--outline">Read the Blog</a>
+        </div>
+      </div>
+    </section>
+  )}
 
   <!-- =====================================================================
        COMMUNITY
@@ -376,5 +427,46 @@ const { hero_heading, hero_tagline, impact_stats } = entry.data;
     height: 3px;
     background: var(--color-yellow);
     margin-top: 0.4rem;
+  }
+
+  .post-grid {
+    display: grid;
+    gap: var(--space-lg);
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  .post-card {
+    background: var(--color-white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+  }
+  .post-card__image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+    background: var(--color-gray-light);
+    border-radius: 0;
+  }
+  .post-card__body {
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    flex: 1;
+  }
+  .post-card__title {
+    font-size: var(--text-xl);
+    margin-top: var(--space-xs);
+  }
+  .post-card__title a {
+    color: var(--color-heading);
+    text-decoration: none;
+  }
+  .post-card__title a:hover { opacity: 0.8; }
+  .post-grid__footer {
+    text-align: center;
+    margin-top: var(--space-md);
   }
 </style>
