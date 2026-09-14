@@ -15,6 +15,19 @@ the items teammates need visibility on.
       (Julia, Lauren Sassoubre, Maria Ellena Villagomez, Mapet Enriquez).
       Also thats-a-wrap.md has a near-black photo worth replacing.
 
+## Needs doing
+
+- [ ] **Launches from Earth embed is 3 weeks stale** (issue #34) — the
+      vendored copy at `public/projects/launches-from-earth/index.html` is
+      pre-dbd0167, so the live page runs the *broken* `mode=list` live feed
+      and falls back to its bundled 23 Aug snapshot. Verified against
+      production: 77,800 bytes served vs 93,683 in `SteamHead/earth-launches`,
+      no Refresh button, no Feedback dialog, 36 missions instead of 61.
+      Immediate fix is `cp ../earth-launches/index.html
+      public/projects/launches-from-earth/index.html && npm run deploy`, but
+      that repo rebuilds its snapshot daily, so it needs a sync step or the
+      copy goes stale again within a day. Options in the issue.
+
 ## Reviews to schedule
 
 - [ ] **Mapet token review** — how-to guide in tokenreview.md. Open items
