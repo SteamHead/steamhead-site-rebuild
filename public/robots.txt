@@ -1,28 +1,38 @@
 # SteamHead — https://steamhead.space
 #
-# Cloudflare's "Managed robots.txt" (zone setting) PREPENDS its content-signal
-# and AI-crawler block ABOVE this file — verified live 2026-09-13. So what you
-# fetch at /robots.txt is Cloudflare's block first, then this one. Keep this
-# file to what Cloudflare does not provide: pointers to our machine-readable
-# indexes. Do not restate the Content-Signal or AI-crawler lines here — those
-# are managed in the Cloudflare dashboard, and a second copy would drift.
+# Cloudflare's "Managed robots.txt" zone setting was DISABLED on 2026-09-13,
+# so this file is now the entirety of /robots.txt — nothing is prepended any
+# more. If that setting is ever switched back on, Cloudflare's own
+# content-signal and AI-crawler block returns ABOVE this file and the two
+# will disagree: its managed defaults restrict AI training, which is the
+# opposite of the policy below. Reconcile them if that ever happens.
 #
-# The duplicate "User-agent: *" group this creates is fine: per RFC 9309
-# crawlers merge groups that share a user-agent, so the managed Allow: / and
-# our Disallow: /admin/ combine. "Sitemap:" is a non-group directive and
-# applies wherever it appears.
+# Policy: SteamHead's purpose is to spread maker-education practice as widely
+# as possible. Crawling, search indexing, AI grounding, and AI training are
+# all permitted, deliberately. That is stated positively below rather than
+# left to the mere absence of a Disallow, so intent is unambiguous to anyone
+# (or anything) reading this file.
+#
+# See also /llms.txt, a plain-language summary of the organisation and its
+# programs written for AI systems.
 
 User-agent: *
+# Content signals vocabulary, as used by Cloudflare's managed block:
+#   search   — building a search index and returning links/excerpts
+#   ai-input — using content as AI input (RAG, grounding, generated answers)
+#   ai-train — training or fine-tuning AI models
+# Set to permit, not restrict.
+Content-Signal: search=yes,ai-input=yes,ai-train=yes
 Allow: /
 
-# The CMS admin UI is an app, not content. Nothing to index.
+# The CMS admin UI is an application, not content. Nothing to index, and it
+# is the one path on the site where crawling serves no purpose.
 Disallow: /admin/
 
-# Discovery. Cloudflare's managed block carries no Sitemap: line, which is the
-# only reason this file exists — without it the sitemap is unreachable to any
-# crawler that was not told about it by hand.
+# Discovery. Without this line the sitemap is reachable only by crawlers that
+# were told about it by hand (e.g. via Google Search Console).
 Sitemap: https://steamhead.space/sitemap-index.xml
 
-# Blog feed, for RSS-to-email and automation (not a crawler directive; here so
-# it is discoverable alongside the sitemap).
+# Blog feed, for RSS-to-email and automation. Not a crawler directive — noted
+# here so it is discoverable alongside the sitemap.
 # Feed: https://steamhead.space/rss.xml
