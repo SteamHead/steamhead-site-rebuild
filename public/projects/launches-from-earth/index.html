@@ -345,13 +345,14 @@ const SITES = [
   {id:'x1', name:"Haiyang Oriental Spaceport", place:"[object Object]", lat:31.2, lon:123.7},
   {id:'x1', name:"Haiyang Oriental Spaceport", place:"[object Object]", lat:31.2, lon:123.7},
   {id:'x1', name:"Haiyang Oriental Spaceport", place:"[object Object]", lat:31.2, lon:123.7},
+  {id:'x1', name:"Haiyang Oriental Spaceport", place:"[object Object]", lat:31.2, lon:123.7},
 ];
 
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
   {site:"ccsfs", net:"2026-09-13T18:49:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"O3b mPower 11-13", orbit:"Medium Earth Orbit", status:"Go for Launch",
+   mission:"O3b mPower 11-13", orbit:"Medium Earth Orbit", status:"Launch Successful",
    brief:"3 high-throughput communications satellites in Medium Earth Orbit (MEO) built by Boeing and operated by SES."},
   {site:"kou", net:"2026-09-15T01:21:07Z", p:"time", veh:"Vega-C", who:"Avio S.p.A",
    mission:"Sentinel-3C & FLEX", orbit:"Sun-Synchronous Orbit", status:"Go for Launch",
@@ -434,9 +435,6 @@ const LAUNCHES = [
   {site:"ccsfs", net:"2026-10-31T00:00:00Z", p:"quarter", veh:"Falcon Heavy", who:"SpaceX",
    mission:"NROL-97", orbit:"Unknown", status:"To Be Determined",
    brief:"Classified payload for the US National Reconnaissance Office"},
-  {site:"vos", net:"2026-11-19T00:00:00Z", p:"day", veh:"Soyuz 2.1a Fregat-M", who:"Russian Federal Space Agency (ROSCOSMOS)",
-   mission:"MKA Kinosputnik, KOEN and others", orbit:"Sun-Synchronous Orbit", status:"To Be Determined",
-   brief:"Share-ride of multiple satellites, including dual-use optical Earth observation satellites and drone-guiding satellites:\r\n\r\n* MKA Kinosputnik\r\n* KOEN, KA MT-LAB\r\n* NPO Kaisant 6U cubesat with a Germes modem\r\n* NPO Kaisant 16U cubesat with Gonets modems"},
   {site:"bai", net:"2026-11-24T05:03:00Z", p:"time", veh:"Soyuz 2.1b", who:"Russian Federal Space Agency (ROSCOSMOS)",
    mission:"Progress MS-36 (97P)", orbit:"Low Earth Orbit", status:"To Be Confirmed",
    brief:"Progress resupply mission to the International Space Station."},
@@ -530,6 +528,9 @@ const LAUNCHES = [
   {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Atlas V N22", who:"United Launch Alliance",
    mission:"Starliner-1", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Starliner-1 is the first operational flight of a Starliner spacecraft to the International Space Station as part of NASA's Commercial Crew Program."},
+  {site:"lc1", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Electron", who:"Rocket Lab",
+   mission:"BlackSky Gen-3 7", orbit:"Low Earth Orbit", status:"To Be Determined",
+   brief:"BlackSky Gen-3 Earth-imaging satellites"},
 ];
 
 /* ---------------- helpers ---------------- */
@@ -961,7 +962,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 13 Sep 2026';
+    : '<b>Snapshot</b> · 14 Sep 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
