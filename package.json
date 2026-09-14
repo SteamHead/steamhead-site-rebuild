@@ -16,6 +16,7 @@
   "dependencies": {
     "@astrojs/cloudflare": "^14.3.1",
     "@astrojs/markdown-remark": "^7.3.1",
+    "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.4",
     "astro": "^7.3.2",
     "marked": "^18.0.13"

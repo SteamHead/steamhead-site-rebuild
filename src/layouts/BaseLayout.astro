@@ -63,6 +63,15 @@ const orgSchema = {
 
     <link rel="icon" type="image/png" href="/favicon.png" />
 
+    <!-- Feed auto-discovery: how readers and RSS-to-email tools find /rss.xml
+         when someone hands them just "steamhead.space". -->
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="SteamHead — Great Things Blog"
+      href="/rss.xml"
+    />
+
     <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
   </head>
   <body>

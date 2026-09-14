@@ -1,0 +1,21 @@
+# SteamHead — https://steamhead.space
+#
+# Cloudflare's "Managed robots.txt" (zone setting) APPENDS its content-signal
+# and AI-crawler block below this file. Keep this file to what Cloudflare does
+# not provide: pointers to our machine-readable indexes. Do not duplicate the
+# Content-Signal lines here — they are managed in the Cloudflare dashboard.
+
+User-agent: *
+Allow: /
+
+# The CMS admin UI is an app, not content. Nothing to index.
+Disallow: /admin/
+
+# Discovery. Cloudflare's managed block carries no Sitemap: line, which is the
+# only reason this file exists — without it the sitemap is unreachable to any
+# crawler that was not told about it by hand.
+Sitemap: https://steamhead.space/sitemap-index.xml
+
+# Blog feed, for RSS-to-email and automation (not a crawler directive; here so
+# it is discoverable alongside the sitemap).
+# Feed: https://steamhead.space/rss.xml
