@@ -56,6 +56,40 @@ check-run over the assistant.
 staging step and no review gate. Preview with `npm run dev -- --host` and check
 `http://splinter:4321` before you push.
 
+## Vendored apps under `public/projects/`
+
+Some pages embed a standalone app that is **developed in another repo and
+vendored here as a copy**. These are the easiest thing in the repo to get
+wrong, because the copy looks like an ordinary source file and nothing about
+it says "this has an upstream".
+
+Currently one:
+
+| Page | Vendored file | Upstream |
+|------|---------------|----------|
+| `/neighborhood-earth/launches-from-earth/` | `public/projects/launches-from-earth/index.html` | [`SteamHead/earth-launches`](https://github.com/SteamHead/earth-launches) |
+
+The Astro page iframes the vendored file; it does **not** iframe the upstream
+repo or its Pages mirror. So an upstream fix reaches visitors only when the
+copy is updated here.
+
+⚠️ **This has already bitten once.** The copy sat at its 23 Aug version for
+three weeks while upstream had fixed the app's live feed on 29 Aug. The
+deployed page went on calling the Launch Library API with `mode=list`, which
+returns **HTTP 200** but carries no pad coordinates — so the page's `r.ok`
+check passed, every launch was then dropped by the `isNaN(lat)` guard, and it
+fell back to a bundled snapshot with nothing logged to the console. Nobody
+could have spotted it from this repo. See issue #34.
+
+**`earth-launches` CI now pushes the file here** whenever its copy and ours
+differ, which triggers a deploy like any other push to `main`. That needs a
+`SITE_SYNC_TOKEN` secret on `earth-launches` (fine-grained PAT, Contents:
+read and write on this repo); without it the step skips quietly and the copy
+drifts again as the upstream snapshot rebuilds daily.
+
+If you add another vendored app, add it to the table and give it a sync path
+before it ships — not after.
+
 ## Astro 7 (upgraded 2026-09-13)
 
 Upgraded from Astro 6.3.3 → 7.3.2, `@astrojs/cloudflare` 13 → 14, wrangler
