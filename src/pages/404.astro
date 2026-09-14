@@ -1,0 +1,157 @@
+---
+/*
+  404.astro — "page not found".
+
+  Served by Cloudflare's static-asset runtime, not by Astro: the site is
+  fully prerendered, so there is no Worker to render a 404 at request time.
+  `assets.not_found_handling: "404-page"` in wrangler.jsonc is what makes
+  Cloudflare return this file (with a 404 status) for unmatched paths.
+  Without that setting this page still builds, but nobody ever sees it.
+
+  Keep every link here absolute and static. This one file answers for every
+  bad URL on the site, so it can't know where the visitor came from.
+*/
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// The places a lost visitor most plausibly wanted. Ordered by how often a
+// dead link is likely to have pointed there: the old WordPress site's posts
+// dominate (see the 156 redirects in public/_redirects), then the programs.
+const destinations = [
+  {
+    href: '/blog/',
+    title: 'Great Things Blog',
+    text: 'Ten years of projects, workshops, and residencies. Most old steamhead.space links live here now.',
+  },
+  {
+    href: '/about-us/',
+    title: 'About Us',
+    text: 'Who we are, the team, and how a nonprofit makerspace ends up teaching fashion tech.',
+  },
+  {
+    href: '/makefashion-edu/',
+    title: 'MakeFashion Edu',
+    text: 'Wearable tech curriculum, runway shows, and the free course for educators.',
+  },
+  {
+    href: '/neighborhood-earth/',
+    title: 'Neighborhood Earth',
+    text: 'Space, science, and storytelling — our travelling exhibition programme.',
+  },
+  {
+    href: '/system-upgrade/',
+    title: 'System Upgrade',
+    text: 'Rethinking how schools and makerspaces work together.',
+  },
+  {
+    href: '/theshelf/',
+    title: 'The Shelf',
+    text: 'Guides, worksheets, and downloads you can take straight into a classroom.',
+  },
+];
+---
+
+<BaseLayout
+  title="Page Not Found"
+  description="That page isn't here. Find SteamHead's blog, programs, courses, and classroom resources instead."
+>
+
+  <!-- =====================================================================
+       HERO
+       ===================================================================== -->
+  <section class="hero hero--404" aria-label="Page not found">
+    <div class="container hero__content">
+      <p class="error-code" aria-hidden="true">404</p>
+      <h1>This Page Didn't Make It</h1>
+      <p class="hero__tagline">
+        Every good workshop has a pile of prototypes that didn't work out.
+        Looks like you found ours. The page you wanted has been moved,
+        renamed, or retired.
+      </p>
+      <a href="/" class="btn btn--primary">Back to the Home Page</a>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       WHERE TO GO INSTEAD
+       ===================================================================== -->
+  <section class="section" aria-labelledby="destinations-heading">
+    <div class="container">
+      <h2 id="destinations-heading">Try one of these instead</h2>
+      <hr class="accent-rule" />
+
+      <div class="card-grid mt-md">
+        {destinations.map(d => (
+          <div class="card">
+            <div class="card__body">
+              <h3 class="card__title">
+                <a href={d.href} class="card__link">{d.title}</a>
+              </h3>
+              <p class="card__text">{d.text}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       STILL STUCK
+       ===================================================================== -->
+  <section class="section section--alt" aria-labelledby="stuck-heading">
+    <div class="container stuck">
+      <h2 id="stuck-heading" class="stuck__title">Still can't find it?</h2>
+      <p>
+        If you followed a link from somewhere else and landed here, we'd like
+        to know — it usually means something on our end needs fixing. Drop us
+        a line at
+        <a href="mailto:james@steamhead.space" class="contact-email">james@steamhead.space</a>
+        and tell us what you were looking for.
+      </p>
+      <p class="text-muted">
+        You can also ask the community in our
+        <a href="https://www.facebook.com/groups/steamhead.space" target="_blank" rel="noopener">Facebook group</a>.
+      </p>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* The 404 hero has no background photo, so the tall 4:3 aspect-ratio the
+     shared .hero rule applies at >=768px would leave a large empty black
+     band. Opt back out to a content-sized band. */
+  .hero--404 { padding-block: var(--space-section); }
+  @media (min-width: 768px) {
+    .hero--404 { aspect-ratio: auto; min-height: 0; max-height: none; }
+  }
+
+  .error-code {
+    font-family: var(--font-heading);
+    font-size: clamp(4rem, 14vw, 9rem);
+    line-height: 1;
+    color: var(--color-yellow);
+    opacity: 0.28;
+    margin-bottom: var(--space-xs);
+  }
+
+  .card__link {
+    color: var(--color-heading);
+    text-decoration: none;
+  }
+  .card__link:hover { color: var(--color-blue-text); }
+  /* Make the whole card clickable without nesting interactive elements. */
+  .card__link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+  .card { position: relative; }
+
+  .stuck { max-width: 60ch; }
+  .stuck__title { font-size: var(--text-xl); }
+  .contact-email {
+    color: var(--color-teal-text);
+    font-weight: 600;
+  }
+  .contact-email:hover { opacity: 0.75; }
+</style>

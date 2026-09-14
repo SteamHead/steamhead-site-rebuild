@@ -5,7 +5,11 @@
 	"main": "@astrojs/cloudflare/entrypoints/server",
 	"assets": {
 		"directory": "./dist",
-		"binding": "ASSETS"
+		"binding": "ASSETS",
+		// The site is fully prerendered, so no Worker runs on a miss — this is
+		// what makes Cloudflare serve the built 404.html (with a 404 status)
+		// for unmatched paths. Without it, bad URLs get a bare, unbranded 404.
+		"not_found_handling": "404-page"
 	},
 	"observability": {
 		"enabled": true

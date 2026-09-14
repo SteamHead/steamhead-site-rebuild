@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import { unified } from '@astrojs/markdown-remark';
+import sitemap from '@astrojs/sitemap';
 import cloudflare from '@astrojs/cloudflare';
 import { visit } from 'unist-util-visit';
 
@@ -72,6 +73,15 @@ export default defineConfig({
 	// `true` keeps Astro 6's HTML-aware compression, so migrated prose spacing
 	// is unchanged.
 	compressHTML: true,
+	// Emits /sitemap-index.xml + /sitemap-0.xml for search engines and other
+	// crawlers. Needs `site` (set below) to build absolute URLs. The 404 page
+	// is excluded: it is a real built page, but listing it would invite
+	// crawlers to index a soft-404.
+	integrations: [
+		sitemap({
+			filter: page => page !== 'https://steamhead.space/404/',
+		}),
+	],
 	// Deploys as a Cloudflare Worker (see wrangler.jsonc, which points its
 	// `main` at this adapter's server entrypoint). Pages are prerendered
 	// static by default; the Worker serves them via the ASSETS binding.
