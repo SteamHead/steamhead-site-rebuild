@@ -33,6 +33,21 @@ the items teammates need visibility on.
       does not yet have — `steamhead-standards` lists one as planned. The two
       should be reconciled when it is written, so they don't drift.
 
+## Standing — this repo has a downstream
+
+- [ ] **Living Lessons mirrors this stack — tell it when the stack moves.**
+      `SteamHead/living-lessons` deliberately copies this repo's Astro config,
+      content-collection and zod patterns, and Worker/Wrangler setup, so James
+      only learns one setup. Its `CLAUDE.md` pins the versions it inherited.
+      That means an upgrade here silently makes its notes wrong: the Astro
+      6 -> 7 move on 2026-09-13 invalidated them within hours of their being
+      written. **When Astro, `@astrojs/cloudflare`, or wrangler changes here,
+      update `living-lessons/CLAUDE.md` in the same round** — including any
+      gotcha found on the way, like the `overrides: { "vite": "^7" }` left by
+      Cloudflare's autoconfig bot, which breaks an Astro 7 build with a
+      misleading "likely a bug in Astro". Not a one-off task; it applies to
+      every future upgrade.
+
 ## Reviews to schedule
 
 - [ ] **Mapet token review** — how-to guide in tokenreview.md. Open items
