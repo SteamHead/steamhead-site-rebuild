@@ -1,9 +1,16 @@
 # SteamHead — https://steamhead.space
 #
-# Cloudflare's "Managed robots.txt" (zone setting) APPENDS its content-signal
-# and AI-crawler block below this file. Keep this file to what Cloudflare does
-# not provide: pointers to our machine-readable indexes. Do not duplicate the
-# Content-Signal lines here — they are managed in the Cloudflare dashboard.
+# Cloudflare's "Managed robots.txt" (zone setting) PREPENDS its content-signal
+# and AI-crawler block ABOVE this file — verified live 2026-09-13. So what you
+# fetch at /robots.txt is Cloudflare's block first, then this one. Keep this
+# file to what Cloudflare does not provide: pointers to our machine-readable
+# indexes. Do not restate the Content-Signal or AI-crawler lines here — those
+# are managed in the Cloudflare dashboard, and a second copy would drift.
+#
+# The duplicate "User-agent: *" group this creates is fine: per RFC 9309
+# crawlers merge groups that share a user-agent, so the managed Allow: / and
+# our Disallow: /admin/ combine. "Sitemap:" is a non-group directive and
+# applies wherever it appears.
 
 User-agent: *
 Allow: /
