@@ -15,6 +15,24 @@ the items teammates need visibility on.
       (Julia, Lauren Sassoubre, Maria Ellena Villagomez, Mapet Enriquez).
       Also thats-a-wrap.md has a near-black photo worth replacing.
 
+## Open — from the licensing policy (2026-09-13)
+
+- [ ] **Media-release coverage for the 2017-2026 event photos.** ~340 event
+      photographs under `public/images/<year>/` have no recorded release
+      status. MakeFashion Edu (145 images) and the filmed school events are
+      confirmed covered, and confirmed to permit SteamHead granting others
+      permission in turn. The rest is simply unknown. The published policy is
+      deliberately conservative enough to hold either way — photographs of
+      people are reserved regardless — so nothing is blocked on this. But if
+      a release turns out not to exist for a given child, the question stops
+      being "who may reuse this" and becomes "should it be published at all",
+      which is a different and more urgent decision. Worth an audit.
+- [ ] **Privacy policy.** `/license/` now publishes a no-questions-asked
+      takedown commitment for anyone appearing in a photograph. That
+      commitment would normally live inside a privacy policy, which SteamHead
+      does not yet have — `steamhead-standards` lists one as planned. The two
+      should be reconciled when it is written, so they don't drift.
+
 ## Reviews to schedule
 
 - [ ] **Mapet token review** — how-to guide in tokenreview.md. Open items
@@ -28,6 +46,33 @@ the items teammates need visibility on.
 
 ## Done (recent)
 
+- [x] **Licensing policy published** (2026-09-13) — CC BY-SA 4.0 for writing
+      and curriculum, MIT for code, **photographs and video of identifiable
+      people all rights reserved** (a CC licence grants copyright only and
+      cannot grant the likeness rights of the students pictured), trademark
+      stated for the name and logo. `LICENSE` / `LICENSE-DOCS` /
+      `LICENSE-MEDIA` at the root, plain-language statement at `/license/`,
+      linked from the footer sitewide, plus a takedown route. Authoritative
+      policy lives in `SteamHead/steamhead-standards` → `licensing.md`;
+      correcting that document's false claim that student photos never enter
+      a repo was part of the same work.
+- [x] **Astro 7 upgrade** (2026-09-13) — Astro 6.3.3 → 7.3.2, Cloudflare
+      adapter 13 → 14, wrangler 4.93 → 4.131. Cleared a critical advisory
+      chain (14 vulnerabilities → 0). Two v7 defaults are deliberately
+      overridden — see the "Astro 7" section in CLAUDE.md before touching
+      `astro.config.mjs`.
+- [x] **404 page, sitemap, RSS feed, robots.txt** (2026-09-13) — branded
+      `/404/` (needs `not_found_handling` in wrangler.jsonc to be reachable
+      at all, since no Worker runs on a miss), `/sitemap-index.xml` (229
+      URLs), `/rss.xml` (30 most recent posts, full content), and a
+      `robots.txt` that advertises the sitemap. Cloudflare's Managed
+      robots.txt was disabled, so `public/robots.txt` is now the whole file.
+- [x] **AI crawlers unblocked deliberately** (2026-09-13) — Cloudflare's
+      managed block had been disallowing ClaudeBot, GPTBot, Google-Extended
+      and others while `llms.txt` existed to help those very crawlers.
+      Content signals now read `search=yes,ai-input=yes,ai-train=yes`. The
+      photography exception can't be expressed in that switch and is stated
+      in words in `robots.txt`, `llms.txt` and `/license/`.
 - [x] **Earth-launches transferred to the SteamHead org** — was
       `boomtown001/earth-launches`, now `SteamHead/earth-launches`. PR #18
       added its project page under Neighborhood Earth and merged.
@@ -54,6 +99,18 @@ the items teammates need visibility on.
 - [x] **Ben: heritage page on WordPress** — live and verified.
 
 ## Domain cutover checklist (target: by Sept 1, HostPresto renewal Sept 7)
+
+**Status as of 2026-09-13: the cutover is done.** Verified directly today —
+`dig NS steamhead.space` returns `addilyn.ns.cloudflare.com` /
+`lars.ns.cloudflare.com`, so the nameserver change went through; both
+`steamhead.space` and `www.steamhead.space` serve the live site (www 301s to
+the apex); and every built route answers 200 on the real domain, including
+`/admin/` and `/neighborhood-earth/launches-from-earth/`. Steps 1-3 of the
+original list below are therefore complete and are left in place only as a
+record of how it was done. Two items were NOT verifiable from a terminal and
+remain open, listed separately underneath.
+
+Original checklist, retained for the record:
 
 **Status as of 2026-08-09**: Blake emailed HostPresto to change
 `steamhead.space`'s nameservers to Cloudflare's (`addilyn.ns.cloudflare.com`
@@ -87,6 +144,18 @@ Next concrete steps, in order:
 MX record check: Cloudflare's initial zone scan already copied the existing
 Google Workspace MX/SPF records over automatically — confirmed fine,
 no manual re-entry needed.
+
+**Still open from the cutover** (neither can be checked from a terminal —
+both need someone signed in to the relevant dashboard):
+
+- [ ] **GitHub OAuth app homepage URL** — Developer Settings → OAuth Apps,
+      should now read `https://steamhead.space`. Affects the `/admin/` CMS
+      login flow. `/admin/` serves fine, but that only proves the page loads,
+      not that the OAuth round-trip uses the right homepage URL.
+- [ ] **HostPresto renewal** — was due Sept 7, i.e. already past as of
+      2026-09-13. Confirm whether it was declined or silently auto-renewed.
+      The domain is on Cloudflare nameservers regardless, so the site is
+      unaffected either way; this is a billing question, not a hosting one.
 
 - [ ] **Videos re-hosted** — three 2021 clips + the 96MB `output2.mp4`
       (Snow Drop post) still point at dead `steamhead.space/wp-content/...`
@@ -124,4 +193,6 @@ no manual re-entry needed.
       2026-08-15. Pushes to `main` now auto-deploy the live site.
 - [x] **Deleted `steamhead-astro-scaffold`** — 2026-08-15. It held no domain
       or route and took the misdirected build pipeline with it.
-- [ ] Repo public flip (secrets scan already clean) — optional, any time
+- [x] **Repo public flip** — done; `SteamHead/steamhead-site-rebuild` is
+      public. Note this is why the licensing work above mattered: the
+      repository, images included, is world-readable.
