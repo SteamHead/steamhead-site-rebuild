@@ -50,23 +50,16 @@ the items teammates need visibility on.
 
 ## Needs doing
 
-- [ ] **Launches from Earth embed — add `SITE_SYNC_TOKEN` to earth-launches**
-      (issue #34). The stale embed itself is **fixed and live**: the vendored
-      copy at `public/projects/launches-from-earth/index.html` had sat at the
-      23 Aug version, serving the broken `mode=list` feed that returns HTTP 200
-      with no pad coordinates — so every launch was silently discarded and the
-      page fell back to its bundled snapshot with no Refresh button. Synced in
-      9c780e3 and verified in production (93,683 bytes, `mode=normal`, Refresh
-      present).
-
-      **Remaining:** the earth-launches daily workflow now pushes the file here
-      whenever the two differ, but that step needs a `SITE_SYNC_TOKEN` secret on
-      `SteamHead/earth-launches` — a fine-grained PAT with **Contents: read and
-      write** on this repo. Until it exists the step skips (CI stays green) and
-      the embed drifts again as the snapshot rebuilds daily. Sync by hand
-      meanwhile: `cp ../earth-launches/index.html
-      public/projects/launches-from-earth/index.html`, then commit and push —
-      pushing to `main` auto-deploys, no `npm run deploy` needed.
+- [x] **Launches from Earth embed — drift fixed, sync automated.** The vendored
+      copy at `public/projects/launches-from-earth/index.html` had sat at its
+      23 Aug version, serving the broken `mode=list` feed — which returns HTTP
+      200 but no pad coordinates, so every launch was silently dropped and the
+      page fell back to a stale snapshot with no Refresh button. Synced in
+      9c780e3; `earth-launches` CI now pushes the file here whenever the two
+      differ, authenticated by a write deploy key (private half is
+      `SITE_SYNC_KEY` there). Verified end to end 2026-09-14: CI rebuild →
+      push here → deploy → live. See `CLAUDE.md` → *Vendored apps under
+      `public/projects/`* and issue #34.
 
 ## Reviews to schedule
 

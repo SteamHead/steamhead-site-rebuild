@@ -82,10 +82,19 @@ fell back to a bundled snapshot with nothing logged to the console. Nobody
 could have spotted it from this repo. See issue #34.
 
 **`earth-launches` CI now pushes the file here** whenever its copy and ours
-differ, which triggers a deploy like any other push to `main`. That needs a
-`SITE_SYNC_TOKEN` secret on `earth-launches` (fine-grained PAT, Contents:
-read and write on this repo); without it the step skips quietly and the copy
-drifts again as the upstream snapshot rebuilds daily.
+differ, which triggers a deploy like any other push to `main`. Live since
+2026-09-14 and verified end to end.
+
+It authenticates with a **write deploy key** on this repo, titled *earth-launches
+embed sync (write)* — the private half is the `SITE_SYNC_KEY` secret on
+`earth-launches`. If you see bot commits here named *"Sync Launches from Earth
+embed from earth-launches"*, that is this, and it is expected. Do not delete
+that deploy key without replacing it: the sync step's failure mode is a **green
+skip**, so it would stop silently rather than alerting anyone.
+
+Note what it carries — the whole file, **app code included**, not just the daily
+launch snapshot. That is the point: the outage below was a code fix that could
+not reach the site.
 
 If you add another vendored app, add it to the table and give it a sync path
 before it ships — not after.
