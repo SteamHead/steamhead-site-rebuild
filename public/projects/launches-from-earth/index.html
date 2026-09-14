@@ -346,14 +346,13 @@ const SITES = [
   {id:'x1', name:"Haiyang Oriental Spaceport", place:"[object Object]", lat:31.2, lon:123.7},
   {id:'x1', name:"Haiyang Oriental Spaceport", place:"[object Object]", lat:31.2, lon:123.7},
   {id:'x1', name:"Haiyang Oriental Spaceport", place:"[object Object]", lat:31.2, lon:123.7},
+  {id:'x1', name:"Haiyang Oriental Spaceport", place:"[object Object]", lat:31.2, lon:123.7},
+  {id:'x1', name:"Haiyang Oriental Spaceport", place:"[object Object]", lat:31.2, lon:123.7},
 ];
 
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"ccsfs", net:"2026-09-13T18:49:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"O3b mPower 11-13", orbit:"Medium Earth Orbit", status:"Launch Successful",
-   brief:"3 high-throughput communications satellites in Medium Earth Orbit (MEO) built by Boeing and operated by SES."},
   {site:"kou", net:"2026-09-15T01:21:07Z", p:"time", veh:"Vega-C", who:"Avio S.p.A",
    mission:"Sentinel-3C & FLEX", orbit:"Sun-Synchronous Orbit", status:"Go for Launch",
    brief:"Sentinel-3C is the third satellite in the Sentinel-3 constellation, which provides high-accuracy optical, radar and altimetry data for marine and land services."},
@@ -375,15 +374,15 @@ const LAUNCHES = [
   {site:"jiu", net:"2026-09-17T02:35:00Z", p:"time", veh:"Kuaizhou 11", who:"ExPace",
    mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
    brief:"Details TBD."},
-  {site:"star", net:"2026-09-18T12:15:00Z", p:"time", veh:"Starship V3", who:"SpaceX",
-   mission:"Flight 14", orbit:"Low Earth Orbit", status:"To Be Confirmed",
-   brief:"14th test flight of the two-stage Starship launch vehicle."},
   {site:"tai", net:"2026-09-19T10:50:00Z", p:"time", veh:"Long March 2D", who:"China Aerospace Science and Technology Corporation",
    mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
    brief:"Details TBD."},
   {site:"vsfb", net:"2026-09-20T01:47:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Starlink Group 15-27", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
+  {site:"star", net:"2026-09-22T12:15:00Z", p:"time", veh:"Starship V3", who:"SpaceX",
+   mission:"Flight 14", orbit:"Low Earth Orbit", status:"To Be Confirmed",
+   brief:"14th test flight of the two-stage Starship launch vehicle."},
   {site:"lc1", net:"2026-09-30T00:00:00Z", p:"month", veh:"Electron", who:"Rocket Lab",
    mission:"LOXSAT 1", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"LOXSAT 1 is a demonstration satellite of a complete cryogenic oxygen fluid management system in orbit, developed by Eta Space and sponsored by NASA's Tipping Point program."},
@@ -530,6 +529,9 @@ const LAUNCHES = [
    brief:"Starliner-1 is the first operational flight of a Starliner spacecraft to the International Space Station as part of NASA's Commercial Crew Program."},
   {site:"lc1", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Electron", who:"Rocket Lab",
    mission:"BlackSky Gen-3 7", orbit:"Low Earth Orbit", status:"To Be Determined",
+   brief:"BlackSky Gen-3 Earth-imaging satellites"},
+  {site:"lc1", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Electron", who:"Rocket Lab",
+   mission:"BlackSky Gen-3 8", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"BlackSky Gen-3 Earth-imaging satellites"},
 ];
 
