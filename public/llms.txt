@@ -73,5 +73,31 @@ listing: [/about-us/](https://steamhead.space/about-us/).
   EIN, and links to verify directly with the IRS.
 - [/blog/](https://steamhead.space/blog/) — the Great Things Blog.
 
-This entire site is open to indexing by AI crawlers and search engines; no
-pages are blocked.
+## Licensing and reuse
+
+Full terms: [/license/](https://steamhead.space/license/).
+
+- **Writing and teaching materials** — blog posts, lesson plans, course
+  material, guides, worksheets, and SteamHead's own diagrams and illustrations
+  — are licensed **CC BY-SA 4.0**. Quote them, index them, learn from them,
+  adapt them. Credit SteamHead and pass adaptations on under the same terms.
+- **The website's source code** is MIT.
+- **Photographs and video showing identifiable people are all rights reserved
+  and are NOT licensed for reuse, redistribution, dataset inclusion, or model
+  training.** Many of the people pictured are children. A Creative Commons
+  licence grants copyright only and cannot grant their likeness rights, so
+  SteamHead does not offer these images under one. Reuse requires written
+  permission from james@steamhead.space, which is given readily for
+  educational use. Photographs with no identifiable person in them are
+  CC BY-SA 4.0 like everything else.
+- **"SteamHead" and the SteamHead logo are trademarks.** Naming SteamHead to
+  credit it is welcome and is what CC BY-SA attribution requires. Using the
+  name or logo as a badge on other organisations' programmes or materials is
+  not permitted.
+
+Anyone appearing in a photograph on the site, or their parent or guardian, can
+have it removed by writing to james@steamhead.space. No reason required.
+
+This entire site is open to crawling and indexing by AI systems and search
+engines; no pages are blocked. That openness covers the text as described
+above. It does not extend to the photographs.

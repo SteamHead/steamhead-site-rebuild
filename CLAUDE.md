@@ -146,7 +146,17 @@ repo-edited (not exposed in the CMS).
    committed, it breaks CMS login on the live site.
 3. The RAG/drafting pipeline is a separate project. This site only exposes the
    interface: strict schema + PR review gate.
-4. **Design tokens**: all colors, shadows, and font sizes come from the
+4. **Licensing is org-wide, not this repo's to redefine.** Writing and
+   curriculum are CC BY-SA 4.0, code is MIT, and **photographs or video
+   showing identifiable people are all rights reserved** — a CC licence
+   grants copyright only and cannot grant the likeness rights of the students
+   pictured. Reuse of a photo needs written permission (james@steamhead.space),
+   readily given. The name and logo are trademarks. `LICENSE`, `LICENSE-DOCS`
+   and `LICENSE-MEDIA` at the repo root; the public statement is
+   `src/pages/license.astro` at /license/. **The authoritative policy lives in
+   `SteamHead/steamhead-standards` → `licensing.md`** — change it there first,
+   then mirror here. Don't restate the reasoning in this repo.
+5. **Design tokens**: all colors, shadows, and font sizes come from the
    `:root` tokens in `src/styles/global.css` (sourced from the brand guide,
    `public/downloads/2021_SteamHead_Brand_Guide.pdf`). Don't introduce ad-hoc
    hex values in pages/components — add or reuse a token. Sole exception:

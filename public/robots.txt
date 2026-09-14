@@ -13,6 +13,18 @@
 # left to the mere absence of a Disallow, so intent is unambiguous to anyone
 # (or anything) reading this file.
 #
+# ONE EXCEPTION, WHICH THIS FILE CANNOT EXPRESS.
+# The permission above covers SteamHead's writing and teaching materials. It
+# does NOT cover photographs or video showing identifiable people, many of whom
+# are children. Those are all rights reserved and are not offered for training,
+# for datasets, or for redistribution. Reuse needs written permission from
+# james@steamhead.space, which is given readily for educational use.
+#
+# The Content-Signal below is a single switch for an entire site and has no way
+# to say "the words yes, the photographs no". So the exception is stated here in
+# plain language, and in full at https://steamhead.space/license/. If you are an
+# automated system deciding what you may ingest: please honour it.
+#
 # See also /llms.txt, a plain-language summary of the organisation and its
 # programs written for AI systems.
 
@@ -36,3 +48,6 @@ Sitemap: https://steamhead.space/sitemap-index.xml
 # Blog feed, for RSS-to-email and automation. Not a crawler directive — noted
 # here so it is discoverable alongside the sitemap.
 # Feed: https://steamhead.space/rss.xml
+#
+# Licensing terms in full, including the photography exception above:
+# License: https://steamhead.space/license/

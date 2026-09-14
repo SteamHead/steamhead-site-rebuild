@@ -1,0 +1,277 @@
+---
+/*
+  license.astro — the human-readable version of the org licensing standard.
+
+  The authoritative policy lives in SteamHead/steamhead-standards →
+  licensing.md (private repo). This page is the public statement of the same
+  decision, written for teachers rather than for lawyers. If the two ever
+  disagree, the standard wins — update it there first, then mirror here.
+
+  Tone matters on this page. The reserved-photographs section is the one place
+  the site says "no" to anything, and it must not read as defensive: SteamHead
+  grants permission readily, and the page should sound like an invitation.
+*/
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const PERMISSIONS_EMAIL = 'james@steamhead.space';
+
+const tiers = [
+  {
+    what: 'Writing and teaching materials',
+    detail:
+      'Blog posts, lesson plans, course material, guides, worksheets, and the diagrams and illustrations we drew ourselves.',
+    license: 'CC BY-SA 4.0',
+    licenseHref: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    summary: 'Yours to use, adapt and teach with — credit us, and pass improvements on under the same terms.',
+    open: true,
+  },
+  {
+    what: 'The website code',
+    detail: 'The source of this site, and our scripts and configuration.',
+    license: 'MIT',
+    licenseHref: 'https://opensource.org/licenses/MIT',
+    summary: 'Do essentially anything with it. Keep the copyright notice.',
+    open: true,
+  },
+  {
+    what: 'Photographs and video of people',
+    detail:
+      'Any photo or video frame showing someone you could recognise — students, educators, visitors.',
+    license: 'All rights reserved',
+    licenseHref: null,
+    summary: 'Please ask. We say yes readily for educational use.',
+    open: false,
+  },
+  {
+    what: 'The SteamHead name and logo',
+    detail: 'Our trademarks.',
+    license: 'Trademarked',
+    licenseHref: null,
+    summary: 'Name us to credit us — always welcome. Don’t badge your own materials with our mark.',
+    open: false,
+  },
+];
+---
+
+<BaseLayout
+  title="Licensing and Reuse"
+  description="SteamHead's curriculum and writing are free to reuse under CC BY-SA 4.0. Photographs of people are reserved — ask us, and we'll usually say yes."
+>
+
+  <!-- =====================================================================
+       HERO
+       ===================================================================== -->
+  <section class="hero hero--license" aria-label="Licensing and reuse">
+    <div class="container hero__content">
+      <h1>Take This and Use It</h1>
+      <p class="hero__tagline">
+        SteamHead exists to spread maker education as far as it will go. Almost
+        everything here is yours to take, adapt and teach with. There is one
+        careful exception, and it is about the children in our photographs.
+      </p>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       THE FOUR TIERS
+       ===================================================================== -->
+  <section class="section" aria-labelledby="what-you-can-use">
+    <div class="container">
+      <h2 id="what-you-can-use">What you can use, and how</h2>
+      <hr class="accent-rule" />
+
+      <div class="tier-grid mt-md">
+        {tiers.map(t => (
+          <div class:list={['tier', t.open ? 'tier--open' : 'tier--ask']}>
+            <p class="tier__badge">
+              {t.licenseHref ? (
+                <a href={t.licenseHref} target="_blank" rel="noopener">{t.license}</a>
+              ) : t.license}
+            </p>
+            <h3 class="tier__what">{t.what}</h3>
+            <p class="tier__detail">{t.detail}</p>
+            <p class="tier__summary">{t.summary}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       THE PHOTOGRAPHS — the part that needs explaining
+       ===================================================================== -->
+  <section class="section section--alt" aria-labelledby="photographs">
+    <div class="container prose">
+      <h2 id="photographs">About the photographs</h2>
+      <hr class="accent-rule" />
+
+      <p>
+        <strong>If you'd like to use one of our photographs, write to
+        <a href={`mailto:${PERMISSIONS_EMAIL}`} class="contact-email">{PERMISSIONS_EMAIL}</a>
+        and tell us what you have in mind.</strong> We grant permission readily
+        for educational and non-commercial use. This is a checkpoint, not a
+        barrier, and the answer is usually yes.
+      </p>
+
+      <h3>Why we didn't just make them Creative Commons</h3>
+      <p>
+        A Creative Commons licence covers copyright and nothing else. It can't
+        grant the rights of the people <em>in</em> the picture — their likeness
+        and privacy are not ours to give away. So stamping CC BY-SA on a photo
+        of a student would promise you something we can't actually deliver.
+        You'd read it as "I can use this freely," when in truth you'd still need
+        the consent of the person pictured, with no way to get it.
+      </p>
+      <p>
+        Many of the people in these photographs are children. We hold media
+        releases for the MakeFashion Edu students and for the school events we
+        film, and those releases do let us pass permission on to you — which is
+        exactly why asking works here and isn't a polite way of saying no.
+      </p>
+      <p>
+        We keep the checkpoint anyway, because a public licence can never be
+        taken back and can't be limited to particular uses. A permission we
+        grant on request can be. If a use wouldn't be right for the young person
+        in the frame, we want to be able to say so. Being able to exercise that
+        judgment on their behalf is the whole reason we hold a release.
+      </p>
+
+      <h3>Which photos this covers</h3>
+      <p>
+        Any photograph or video frame with an identifiable person in it — not
+        only the ones with children. You can't reliably tell a seventeen-year-old
+        from a nineteen-year-old, and you shouldn't have to try; the adults in
+        our photographs have likeness rights too. A clear line is one we can both
+        follow.
+      </p>
+      <p>
+        Photos with nobody identifiable in them — a close-up of a circuit, a
+        garment on a stand, an empty workshop — are ordinary documentation and
+        fall under CC BY-SA 4.0 with everything else.
+      </p>
+
+      <h3>If you're in one of these photos</h3>
+      <p>
+        If you appear in a photograph here, or you're the parent or guardian of
+        someone who does, and you'd like it taken down, email
+        <a href={`mailto:${PERMISSIONS_EMAIL}`} class="contact-email">{PERMISSIONS_EMAIL}</a>
+        and we'll remove it. You don't need to give a reason.
+      </p>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       NAME AND LOGO
+       ===================================================================== -->
+  <section class="section" aria-labelledby="trademark">
+    <div class="container prose">
+      <h2 id="trademark">Our name and logo</h2>
+      <hr class="accent-rule" />
+      <p>
+        "SteamHead" and the SteamHead logo are trademarks, and neither licence
+        above passes them along. We mention it only because someone who has just
+        been told the lesson plans are free might reasonably wonder whether the
+        logo came with them.
+      </p>
+      <p>
+        Naming us is different from branding with us, and naming us is always
+        welcome — "adapted from SteamHead's MakeFashion Edu curriculum" is
+        exactly right, and CC BY-SA asks you to credit us anyway. What we'd ask
+        you not to do is put our name or mark on your own programme or materials
+        in a way that suggests we made it or endorsed it. If you're not sure
+        which side of the line you're on, just ask.
+      </p>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       AI AND AUTOMATED REUSE
+       ===================================================================== -->
+  <section class="section section--alt" aria-labelledby="ai">
+    <div class="container prose">
+      <h2 id="ai">AI systems and automated reuse</h2>
+      <hr class="accent-rule" />
+      <p>
+        We're glad for AI systems to read, index, learn from and quote
+        SteamHead's writing and teaching materials. Spreading these ideas is the
+        point, and our <a href="/llms.txt">llms.txt</a> exists to help them
+        describe us accurately. Our <a href="/robots.txt">robots.txt</a> says
+        the same in machine-readable terms.
+      </p>
+      <p>
+        <strong>That permission does not extend to the photographs.</strong>
+        Images of identifiable people, and children in particular, are excluded
+        from it — they are not offered for training, for datasets, or for
+        redistribution, whatever a site-wide crawler signal may appear to say.
+        A crawler directive is a single switch for a whole website and cannot
+        tell a lesson plan from a photograph of a seven-year-old, so we are
+        saying it here in words instead: please don't.
+      </p>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       FINE PRINT
+       ===================================================================== -->
+  <section class="section" aria-labelledby="fine-print">
+    <div class="container prose">
+      <h2 id="fine-print">The fine print</h2>
+      <hr class="accent-rule" />
+      <p>
+        The full licence texts live alongside the site's source:
+        <a href="https://github.com/SteamHead/steamhead-site-rebuild/blob/main/LICENSE" target="_blank" rel="noopener">LICENSE</a> (MIT, for the code),
+        <a href="https://github.com/SteamHead/steamhead-site-rebuild/blob/main/LICENSE-DOCS" target="_blank" rel="noopener">LICENSE-DOCS</a> (CC BY-SA 4.0, for the writing) and
+        <a href="https://github.com/SteamHead/steamhead-site-rebuild/blob/main/LICENSE-MEDIA" target="_blank" rel="noopener">LICENSE-MEDIA</a> (the photography terms).
+      </p>
+      <p class="text-muted">
+        SteamHead is a 501(c)(3) nonprofit. This page describes how we license
+        our own work; it isn't legal advice about yours.
+      </p>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .hero--license { padding-block: var(--space-section); }
+  @media (min-width: 768px) {
+    .hero--license { aspect-ratio: auto; min-height: 0; max-height: none; }
+  }
+
+  .tier-grid {
+    display: grid;
+    gap: var(--space-md);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+  .tier {
+    background: var(--color-white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-card);
+    padding: var(--space-md);
+    border-top: 4px solid var(--color-gray-mid);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+  .tier--open { border-top-color: var(--color-teal); }
+  .tier--ask  { border-top-color: var(--color-yellow-amber); }
+
+  .tier__badge {
+    font-family: var(--font-heading);
+    font-size: var(--text-sm);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+  .tier--open .tier__badge a { color: var(--color-teal-text); }
+  .tier__what { font-size: var(--text-xl); margin: 0; }
+  .tier__detail { color: var(--color-text-muted); font-size: var(--text-sm); flex: 1; }
+  .tier__summary { font-weight: 600; }
+
+  .prose { max-width: 68ch; }
+  .prose h3 { margin-top: var(--space-md); }
+  .prose p { margin-bottom: var(--space-sm); }
+
+  .contact-email { color: var(--color-teal-text); font-weight: 600; }
+  .contact-email:hover { opacity: 0.75; }
+</style>
