@@ -35,8 +35,12 @@ const orgSchema = {
   description: "SteamHead is a 501(c)(3) nonprofit maker education organisation, founded in 2011, delivering hands-on, project-based STEAM programs for students and educators.",
   foundingDate: "2011",
   taxID: "82-4533355",
+  // sameAs tells search engines these profiles are the same organisation as
+  // this site — it is how a channel or group gets associated with SteamHead
+  // rather than treated as an unrelated account.
   sameAs: [
     "https://www.facebook.com/groups/steamhead.space",
+    "https://www.youtube.com/channel/UCrw4Xp93J8I4xXdldmW8vJg",
   ],
   contactPoint: {
     "@type": "ContactPoint",
