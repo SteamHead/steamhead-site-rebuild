@@ -5,7 +5,7 @@ is the surviving source of truth (the machine that did the earlier work died).
 
 ## Stack
 
-- **Astro 6** static-first site, **@astrojs/cloudflare** adapter, deployed as a
+- **Astro 7** static-first site, **@astrojs/cloudflare** adapter, deployed as a
   **Cloudflare Worker** (NOT Cloudflare Pages — ignore any doc that says Pages).
 - **Sveltia CMS** at `/admin/` (config in `public/admin/config.yml`) so
   non-technical staff edit content in the browser; saves become git commits.
@@ -33,7 +33,7 @@ trusting any older note about deploys.
 - **Build settings:** build `npm run build`, deploy `npx wrangler deploy`, root
   `/`, branch `main`. Do NOT set the deploy command to `npm run deploy` — that
   script is `npm run build && wrangler deploy`, so it would build twice.
-- **`.nvmrc` pins Node 22 and must stay.** Astro 6 requires >=22.12, declared in
+- **`.nvmrc` pins Node 22 and must stay.** Astro 7 requires >=22.12, declared in
   `package.json` engines — which Workers Builds does not read. Without `.nvmrc`
   a build can fail on whatever Node version Cloudflare happens to default to.
 - Deploys go to **James's Cloudflare account**, account ID
@@ -55,6 +55,57 @@ check-run over the assistant.
 ⚠️ **Pushing to `main` publishes to the public site immediately.** There is no
 staging step and no review gate. Preview with `npm run dev -- --host` and check
 `http://splinter:4321` before you push.
+
+## Astro 7 (upgraded 2026-09-13)
+
+Upgraded from Astro 6.3.3 → 7.3.2, `@astrojs/cloudflare` 13 → 14, wrangler
+4.93 → 4.131. This also cleared a critical advisory chain (XSS in spread
+props / transitions, AVIF-decode RCE) that affected `astro <= 7.2.7`;
+`npm audit` is now clean. Two v7 defaults are deliberately overridden in
+`astro.config.mjs` — read this before "tidying" them away:
+
+- **`markdown.processor: unified()`.** Astro 7 switched the default Markdown
+  pipeline to its native Sätteri engine, which runs **neither** remark nor
+  rehype plugins. This config has both — `remarkYouTubeEmbed` (bare YouTube
+  URL → responsive iframe) and `rehypeTaskListLabel` (wraps GFM task-list
+  checkboxes in a `<label>` for WCAG 4.1.2). Taking the new default would
+  have failed both *silently*: 70 video embeds back to bare URLs and the axe
+  violation reintroduced. So the site stays on `unified()` via
+  `@astrojs/markdown-remark`, now an explicit dependency. Porting both to
+  Sätteri MDAST/HAST plugins is a worthwhile follow-up, but must be its own
+  reviewable change: it re-renders all Markdown at once.
+- **`compressHTML: true`.** Astro 7 defaults to `'jsx'`, which strips
+  whitespace between inline elements (`<span>a</span><em>b</em>` → `ab`).
+  `true` keeps Astro 6's HTML-aware compression so migrated prose spacing is
+  untouched. Switching to `'jsx'` means auditing every inline-element pair.
+
+**The deploy artifact changed shape.** Because every route is prerendered,
+adapter 14 now emits *no Worker script at all* — `dist/server/` is empty and
+`dist/client/wrangler.json` is an assets-only config (no `main`, no `ASSETS`
+binding). `npx wrangler deploy` still works unchanged: the build writes
+`.wrangler/deploy/config.json`, which redirects wrangler to that generated
+config. Consequences:
+
+- Static assets are served directly by Cloudflare, never invoking a Worker —
+  faster and cheaper, and `_redirects` (all 156 legacy WordPress rules) is now
+  handled by the asset runtime rather than by Astro's router. Verified working.
+- Adapter 14 also emits `dist/client/_headers` with immutable caching for
+  `/_astro/*`. That file is generated; don't hand-edit it.
+- **The moment any route opts out of prerendering** (`export const prerender =
+  false`, an API route, a form handler), the build starts emitting a real
+  Worker again and the deployed shape changes back. Expect that, and re-test
+  redirects and 404s if it happens.
+- There is still no `src/pages/404.astro`, so unknown paths get Cloudflare's
+  default 404 rather than a branded page. Pre-existing, but more visible now.
+
+Verified at upgrade time: all 232 pages build with no compiler errors (the
+new Rust compiler is stricter about unclosed/invalid HTML and found none),
+and rendered **visible text is byte-identical to the Astro 6 output on 231
+of 232 pages**. The one difference is an upstream SmartyPants fix —
+`stories?"` in `guides/mfedu-full-semester-guide` closed with `“` under
+Astro 6 and now correctly closes with `”`. Both Markdown plugins verified
+still firing: 70 YouTube embeds and 14 label-wrapped checkboxes, matching
+the Astro 6 output exactly.
 
 ## Content schema (locked 2026-07-10)
 
@@ -127,7 +178,7 @@ Everything needed to continue lives in this repo except a few things:
    as of 2026-08-08 — token is Workers-scoped only (no Zone/DNS permission,
    so it can't read or edit DNS records; attaching a custom domain to a
    Worker also needs to be done by hand in the dashboard, not via API).
-2. **Node.js >=22.12.0 is required** (Astro 6 refuses to build on anything
+2. **Node.js >=22.12.0 is required** (Astro 7 refuses to build on anything
    older — v20 fails with "Node.js v20.x.x is not supported by Astro!").
    If a machine/sandbox has no Node, or an older one, and there's no sudo
    for a system install, a portable no-sudo install works fine:

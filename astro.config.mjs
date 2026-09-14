@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import { unified } from '@astrojs/markdown-remark';
 import cloudflare from '@astrojs/cloudflare';
 import { visit } from 'unist-util-visit';
 
@@ -56,9 +57,21 @@ function rehypeTaskListLabel() {
 // https://astro.build/config
 export default defineConfig({
 	markdown: {
+		// Astro 7 defaults to its native Sätteri pipeline, which runs neither
+		// remark nor rehype plugins. Stay on unified() so remarkYouTubeEmbed
+		// (video embeds) and rehypeTaskListLabel (WCAG 4.1.2 task-list labels)
+		// above keep working — without it both fail silently, reverting embeds
+		// to bare URLs and reintroducing the axe violation. Porting them to
+		// Sätteri MDAST/HAST plugins is a separate, reviewable change.
+		processor: unified(),
 		remarkPlugins: [remarkYouTubeEmbed],
 		rehypePlugins: [rehypeTaskListLabel],
 	},
+	// Astro 7 changed the default to 'jsx', which strips whitespace between
+	// inline elements (`<span>hello</span><em>world</em>` renders "helloworld").
+	// `true` keeps Astro 6's HTML-aware compression, so migrated prose spacing
+	// is unchanged.
+	compressHTML: true,
 	// Deploys as a Cloudflare Worker (see wrangler.jsonc, which points its
 	// `main` at this adapter's server entrypoint). Pages are prerendered
 	// static by default; the Worker serves them via the ASSETS binding.
