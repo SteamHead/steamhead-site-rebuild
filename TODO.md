@@ -17,16 +17,23 @@ the items teammates need visibility on.
 
 ## Needs doing
 
-- [ ] **Launches from Earth embed is 3 weeks stale** (issue #34) — the
-      vendored copy at `public/projects/launches-from-earth/index.html` is
-      pre-dbd0167, so the live page runs the *broken* `mode=list` live feed
-      and falls back to its bundled 23 Aug snapshot. Verified against
-      production: 77,800 bytes served vs 93,683 in `SteamHead/earth-launches`,
-      no Refresh button, no Feedback dialog, 36 missions instead of 61.
-      Immediate fix is `cp ../earth-launches/index.html
-      public/projects/launches-from-earth/index.html && npm run deploy`, but
-      that repo rebuilds its snapshot daily, so it needs a sync step or the
-      copy goes stale again within a day. Options in the issue.
+- [ ] **Launches from Earth embed — add `SITE_SYNC_TOKEN` to earth-launches**
+      (issue #34). The stale embed itself is **fixed and live**: the vendored
+      copy at `public/projects/launches-from-earth/index.html` had sat at the
+      23 Aug version, serving the broken `mode=list` feed that returns HTTP 200
+      with no pad coordinates — so every launch was silently discarded and the
+      page fell back to its bundled snapshot with no Refresh button. Synced in
+      9c780e3 and verified in production (93,683 bytes, `mode=normal`, Refresh
+      present).
+
+      **Remaining:** the earth-launches daily workflow now pushes the file here
+      whenever the two differ, but that step needs a `SITE_SYNC_TOKEN` secret on
+      `SteamHead/earth-launches` — a fine-grained PAT with **Contents: read and
+      write** on this repo. Until it exists the step skips (CI stays green) and
+      the embed drifts again as the snapshot rebuilds daily. Sync by hand
+      meanwhile: `cp ../earth-launches/index.html
+      public/projects/launches-from-earth/index.html`, then commit and push —
+      pushing to `main` auto-deploys, no `npm run deploy` needed.
 
 ## Reviews to schedule
 
