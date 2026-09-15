@@ -348,17 +348,18 @@ const SITES = [
   {id:'x1', name:"Haiyang Oriental Spaceport", place:"[object Object]", lat:31.2, lon:123.7},
   {id:'x1', name:"Haiyang Oriental Spaceport", place:"[object Object]", lat:31.2, lon:123.7},
   {id:'x1', name:"Haiyang Oriental Spaceport", place:"[object Object]", lat:31.2, lon:123.7},
+  {id:'x1', name:"Haiyang Oriental Spaceport", place:"[object Object]", lat:31.2, lon:123.7},
 ];
 
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
   {site:"kou", net:"2026-09-15T01:21:07Z", p:"time", veh:"Vega-C", who:"Avio S.p.A",
-   mission:"Sentinel-3C & FLEX", orbit:"Sun-Synchronous Orbit", status:"Go for Launch",
+   mission:"Sentinel-3C & FLEX", orbit:"Sun-Synchronous Orbit", status:"Launch Successful",
    brief:"Sentinel-3C is the third satellite in the Sentinel-3 constellation, which provides high-accuracy optical, radar and altimetry data for marine and land services."},
-  {site:"jiu", net:"2026-09-15T06:25:00Z", p:"time", veh:"Zhuque-2E Block 2", who:"LandSpace",
-   mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
-   brief:"Possibly launch of a batch of SpaceSail LEO communication satellites."},
+  {site:"jiu", net:"2026-09-15T06:26:00Z", p:"time", veh:"Zhuque-2E Block 2", who:"LandSpace",
+   mission:"SpaceSail Polar Group #15", orbit:"Polar Orbit", status:"Launch Successful",
+   brief:"10 Low Earth Orbit communication satellites with Ku, Q and V band payloads for the G60 constellation operated by Shanghai Spacesail Technologies with funding backed by the Shanghai local government."},
   {site:"x1", net:"2026-09-15T21:55:00Z", p:"time", veh:"Gravity-1", who:"Orienspace Technology",
    mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
    brief:"Possibly launch of a batch of SpaceSail LEO communication satellites."},
@@ -964,7 +965,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 14 Sep 2026';
+    : '<b>Snapshot</b> · 15 Sep 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
