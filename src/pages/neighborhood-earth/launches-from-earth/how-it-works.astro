@@ -1,0 +1,632 @@
+---
+/*
+  How This Works page for Launches from Earth.
+
+  The first page built to SteamHead/steamhead-standards → how-it-works-pages.md:
+  a 10-15 minute illustrated explainer of the real mechanism, honest about what
+  is unfinished, ending with a gateway that hands the reader specific questions.
+
+  Every colour here comes from a global.css token (repo rule 5). The diagram
+  uses classes rather than fill/stroke attributes so it stays on the tokens.
+*/
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="How Launches from Earth works"
+  description="A spinning globe, sixty upcoming rocket launches, and a small machine that quietly rewrites the page once a day — explained end to end, including the week it broke."
+>
+
+  <!-- ===================================================================
+       HERO
+       =================================================================== -->
+  <section class="hero" aria-label="How Launches from Earth works">
+    <div class="container hero__content">
+      <div class="hero-split">
+        <div>
+          <p class="text-muted" style="color: var(--color-gray-light);">
+            <a href="/neighborhood-earth/" style="color: var(--color-yellow);">Neighborhood Earth</a>
+            · How this works
+          </p>
+          <h1>Inside Launches from Earth</h1>
+          <p class="hero__tagline">
+            A spinning globe, sixty upcoming rocket launches, and a small machine that
+            quietly rewrites the page once a day. Here is all of it, with nothing left out.
+          </p>
+          <a href="/neighborhood-earth/launches-from-earth/" class="btn btn--primary">Open the globe</a>
+          <a href="https://github.com/SteamHead/earth-launches" class="btn btn--outline" target="_blank" rel="noopener">View the code</a>
+        </div>
+        <svg class="hero-globe" viewBox="0 0 132 132" role="img" aria-label="A simplified globe with launch-site pins">
+          <circle cx="66" cy="66" r="60" class="g-line" stroke-width="1.5" opacity=".55" />
+          <ellipse cx="66" cy="66" rx="24" ry="60" class="g-line" opacity=".3" />
+          <ellipse cx="66" cy="66" rx="48" ry="60" class="g-line" opacity=".3" />
+          <line x1="6" y1="66" x2="126" y2="66" class="g-line" opacity=".3" />
+          <path d="M14 42 H118" class="g-line" opacity=".22" />
+          <path d="M14 90 H118" class="g-line" opacity=".22" />
+          <circle cx="48" cy="46" r="4.5" class="g-pin" />
+          <circle cx="86" cy="58" r="4.5" class="g-pin" />
+          <circle cx="58" cy="88" r="4.5" class="g-pin" />
+          <circle cx="96" cy="84" r="4.5" class="g-pin-hot" />
+          <circle cx="96" cy="84" r="9" class="g-ring" opacity=".6" />
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       WHAT IT IS
+       =================================================================== -->
+  <section class="section" aria-label="What it is">
+    <div class="container prose">
+      <h2>What it is</h2>
+      <hr class="accent-rule" />
+      <p>
+        <a href="/neighborhood-earth/launches-from-earth/">Launches from Earth</a> is an
+        interactive globe showing where rockets are about to leave the planet. Spin it, tap
+        a spaceport, and you get the mission, the vehicle, who is flying it, and a countdown
+        converted to the time on your own device.
+      </p>
+      <p>
+        We built it to ask a question we think is more interesting than any single launch:
+        <strong>what can worldwide space launches teach us about how Earth is connected?</strong>
+        Launches usually arrive as isolated events — a rocket, a company, a countdown. Put a
+        few months of them on one globe and you get geography, engineering, economics and
+        international politics in the same picture.
+      </p>
+      <div class="stat-row">
+        <div class="stat"><b>60</b><span>Missions tracked</span></div>
+        <div class="stat"><b>30</b><span>Spaceports</span></div>
+        <div class="stat"><b>1</b><span>File, start to finish</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       HOW IT ACTUALLY WORKS
+       =================================================================== -->
+  <section class="section section--alt" aria-label="How it actually works">
+    <div class="container prose">
+      <h2>How it actually works</h2>
+      <hr class="accent-rule" />
+
+      <h3>The globe is arithmetic, not 3D</h3>
+      <p>
+        There is no 3D engine here, and no graphics library. The globe is drawn with the
+        plain 2D canvas — the same tool you would use to draw a rectangle. Every frame, the
+        page takes a list of latitude and longitude pairs, works out where each one lands on
+        a circle, throws away everything on the far side of the planet, and draws the lines
+        that survive.
+      </p>
+      <p>
+        That is the entire trick. The sense of a sphere turning in space comes from
+        trigonometry and a drop shadow.
+      </p>
+      <p>
+        A third of the file — <strong>32,865 bytes of a 93,423-byte page</strong> — is a
+        single line holding the world's coastlines and borders as raw coordinates, traced
+        from the <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a>
+        public dataset. It was written once and has never been edited since. Continents do
+        not ship updates.
+      </p>
+
+      <h3>Three sets of data, and only one of them moves</h3>
+      <p>
+        It is tempting to imagine the app pulling from several feeds and blending them. It
+        does not. It holds three separate tables joined by short ids, and they change at
+        wildly different rates:
+      </p>
+      <ul class="parts">
+        <li>
+          <span class="part-name">The coastlines</span>
+          <span class="part-role">Baked into the page. Never changes.</span>
+        </li>
+        <li>
+          <span class="part-name">The spaceports</span>
+          <span class="part-role">Baked into the page. Edited by hand, rarely — though the daily job can add one it has never seen.</span>
+        </li>
+        <li>
+          <span class="part-name">The launches</span>
+          <span class="part-role">Rebuilt automatically every day from one source: The Space Devs' Launch Library API.</span>
+        </li>
+      </ul>
+      <p>
+        Each launch carries a short site id — <code>vsfb</code>, <code>jiu</code> — pointing
+        at a spaceport, which carries the coordinates, which get drawn against the
+        coastlines. Three tables joined by ids: a very small database, living inside a web
+        page.
+      </p>
+
+      <h3>It asks the same source twice, by two different routes</h3>
+      <p>
+        When you open the page, it tries the Launch Library API live from your browser, and
+        the header says <em>Live feed</em> if that works. If the request fails — the API is
+        rate-limited and does occasionally go down — the page falls back to a copy of the
+        data baked into the file itself, so it is never blank.
+      </p>
+      <p>
+        The daily rebuild exists so that fallback copy is never more than about a day old.
+        Same source, belt and braces.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       WHERE THE SELF-UPDATING LIVES
+       =================================================================== -->
+  <section class="section" aria-label="Where the self-updating lives">
+    <div class="container prose">
+      <h2>Where the self-updating lives</h2>
+      <hr class="accent-rule" />
+      <p>
+        This is the part people usually get wrong, and the answer is worth stating plainly:
+        <strong>the machinery that updates the app does not live on this website.</strong>
+        It lives in the app's own code repository, and the website is a passive recipient —
+        it contains no scheduled jobs at all.
+      </p>
+
+      <figure class="diagram">
+        <div class="diagram__scroll">
+          <svg viewBox="0 0 560 688" role="img" aria-label="The daily update relay: a scheduler inside the earth-launches repository fetches launch data, rewrites the page, checks it parses, and saves the change, then copies the file across a boundary into the website, where Cloudflare rebuilds and serves it.">
+            <defs>
+              <marker id="dg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" class="dg-head" />
+              </marker>
+            </defs>
+
+            <rect x="12" y="12" width="536" height="412" rx="4" class="dg-zone" />
+            <text x="532" y="36" class="dg-zone-label">EARTH-LAUNCHES — THE UPDATE ENGINE LIVES HERE</text>
+
+            <rect x="40" y="56" width="320" height="48" rx="4" class="dg-box" />
+            <text x="200" y="76" class="dg-t">Daily scheduler</text>
+            <text x="200" y="93" class="dg-s">a cron job on GitHub's servers</text>
+
+            <line x1="200" y1="104" x2="200" y2="130" class="dg-line" marker-end="url(#dg-arrow)" />
+            <text x="212" y="121" class="dg-edge">once a day</text>
+
+            <rect x="40" y="132" width="320" height="48" rx="4" class="dg-box" />
+            <text x="200" y="152" class="dg-t">Fetch the launches</text>
+            <text x="200" y="169" class="dg-s">Launch Library API · 60 missions</text>
+
+            <line x1="200" y1="180" x2="200" y2="206" class="dg-line" marker-end="url(#dg-arrow)" />
+
+            <rect x="40" y="208" width="320" height="48" rx="4" class="dg-box" />
+            <text x="200" y="228" class="dg-t">Rewrite the page</text>
+            <text x="200" y="245" class="dg-s">replaces the baked-in launch list</text>
+
+            <line x1="200" y1="256" x2="200" y2="282" class="dg-line" marker-end="url(#dg-arrow)" />
+
+            <rect x="40" y="284" width="320" height="48" rx="4" class="dg-box dg-hi" />
+            <text x="200" y="304" class="dg-t dg-hi-t">Check it still runs</text>
+            <text x="200" y="321" class="dg-s dg-hi-s">stop everything if the code is broken</text>
+
+            <line x1="200" y1="332" x2="200" y2="358" class="dg-line" marker-end="url(#dg-arrow)" />
+            <text x="212" y="349" class="dg-edge">only if valid</text>
+
+            <rect x="40" y="360" width="320" height="48" rx="4" class="dg-box" />
+            <text x="200" y="380" class="dg-t">Save the change</text>
+            <text x="200" y="397" class="dg-s">only when the data actually moved</text>
+
+            <line x1="200" y1="408" x2="200" y2="530" class="dg-line" marker-end="url(#dg-arrow)" />
+            <text x="212" y="446" class="dg-edge dg-edge--strong">copies the whole file</text>
+            <text x="212" y="462" class="dg-edge">whenever the two differ</text>
+
+            <rect x="12" y="492" width="536" height="180" rx="4" class="dg-zone" />
+            <text x="532" y="516" class="dg-zone-label">THIS WEBSITE — PURELY ON THE RECEIVING END</text>
+
+            <rect x="40" y="532" width="320" height="48" rx="4" class="dg-box" />
+            <text x="200" y="552" class="dg-t">The site's own copy</text>
+            <text x="200" y="569" class="dg-s">steamhead.space keeps its own</text>
+
+            <line x1="200" y1="580" x2="200" y2="606" class="dg-line" marker-end="url(#dg-arrow)" />
+            <text x="212" y="597" class="dg-edge">a change triggers a build</text>
+
+            <rect x="40" y="608" width="320" height="48" rx="4" class="dg-box" />
+            <text x="200" y="628" class="dg-t">Cloudflare rebuilds</text>
+            <text x="200" y="645" class="dg-s">and serves it to you</text>
+          </svg>
+        </div>
+        <figcaption>
+          The daily relay. Everything above the boundary happens in the app's own
+          repository; this website only receives the finished file. The highlighted step is
+          the one we added most recently, and the reason is further down this page.
+        </figcaption>
+      </figure>
+
+      <h3>So what does Cloudflare do?</h3>
+      <p>
+        Nothing at all to do with rockets. This trips people up because Cloudflare genuinely
+        is in the chain, just at a different link: <strong>Cloudflare is this website.</strong>
+        It stores the pages, rebuilds them when something changes, and delivers them to your
+        browser. It is the delivery van, not the newsroom. It never knows that a launch
+        schedule moved.
+      </p>
+      <p>
+        There is a second Cloudflare piece built for this project — a small service to
+        collect visitor feedback without storing anyone's IP address — but it is written and
+        not yet switched on, so the feedback button stays hidden. More on that below.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       WHAT IT IS MADE OF
+       =================================================================== -->
+  <section class="section section--alt" aria-label="What it is made of">
+    <div class="container prose">
+      <h2>What it is made of</h2>
+      <hr class="accent-rule" />
+      <p>Every name here is a real thing you can go and read about. That is the point of listing them.</p>
+      <ul class="parts">
+        <li>
+          <span class="part-name">The 2D Canvas API</span>
+          <span class="part-role">The browser feature that draws the globe. Standard in every browser; endless tutorials.</span>
+        </li>
+        <li>
+          <span class="part-name">Natural Earth</span>
+          <span class="part-role">Free public-domain map data. The coastlines and borders come from here.</span>
+        </li>
+        <li>
+          <span class="part-name">The Space Devs' Launch Library API</span>
+          <span class="part-role">A free, open database of past and upcoming launches worldwide.</span>
+        </li>
+        <li>
+          <span class="part-name">GitHub Actions</span>
+          <span class="part-role">The scheduler that runs the daily rebuild on someone else's computer, for free.</span>
+        </li>
+        <li>
+          <span class="part-name">Git</span>
+          <span class="part-role">Version control. Every daily update is a saved snapshot you can compare against yesterday's.</span>
+        </li>
+        <li>
+          <span class="part-name">Astro and Cloudflare Workers</span>
+          <span class="part-role">How steamhead.space itself is built and served.</span>
+        </li>
+      </ul>
+      <div class="note">
+        <p>
+          The app has no build step, no frameworks and no dependencies. One file, opened
+          directly, works offline. That is unusual today and it was a deliberate choice — it
+          means a student can read the whole programme from top to bottom.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       WHAT IS HARD, UNFINISHED, OR WENT WRONG
+       =================================================================== -->
+  <section class="section" aria-label="What is hard, unfinished, or went wrong">
+    <div class="container prose">
+      <h2>What is hard, unfinished, or went wrong</h2>
+      <hr class="accent-rule" />
+      <p>We would rather show you this than a page implying everything went smoothly.</p>
+
+      <h3>The globe disappeared for eight days</h3>
+      <p>
+        In September 2026 the daily job added a new spaceport to the page's list and left out
+        a single comma. Because every line of this app lives in one block of code, that one
+        character stopped <em>the entire programme</em> from running. Not a broken feature — a
+        blank space where the globe should be, in every browser, for eight days.
+      </p>
+      <p>
+        The uncomfortable part is that all the automated checks stayed green the whole time.
+        They confirmed the job had run; nobody had thought to check that what it produced
+        could still run. So we added the highlighted step in the diagram above: the job now
+        has to prove the page still works before it is allowed to save it.
+      </p>
+      <div class="note">
+        <p>
+          Working systems teach you that things work. Broken ones teach you how they work.
+          This failure is more useful than the eight months it ran correctly.
+        </p>
+      </div>
+
+      <h3>Launch dates are genuinely unreliable</h3>
+      <p>
+        Dates move constantly, and are sometimes only accurate to the month or the quarter.
+        Rather than hide that, the countdown changes its own precision to match — seconds
+        when a launch is hours away, <em>roughly 2 months</em> when that is honestly all
+        anyone knows — and each mission says plainly whether its date is a published target,
+        a "no earlier than" window, or an estimate.
+      </p>
+
+      <h3>The feedback box is built but switched off</h3>
+      <p>
+        There is a working design for letting visitors send a short note, including a careful
+        approach to privacy: it stores a scrambled, daily-rotating fingerprint rather than
+        anyone's IP address, so it can block abuse without tracking people. It has never been
+        connected, so the button hides itself. Written, not shipped.
+      </p>
+
+      <h3>The daily job runs about five hours late</h3>
+      <p>
+        It is scheduled for 06:10 UTC and reliably runs closer to 11:30. Free scheduled jobs
+        go to the back of the queue. It does not matter here, but it is a good lesson in the
+        difference between what a schedule says and what a system does.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       WAS ANY OF THIS AI?
+       =================================================================== -->
+  <section class="section section--dark" aria-label="Was any of this AI?">
+    <div class="container prose">
+      <h2>Was any of this AI?</h2>
+      <hr class="accent-rule" />
+      <p>A fair question, and the answer has two halves worth keeping apart.</p>
+      <p>
+        <strong class="on-dark">AI helped write the programme.</strong> SteamHead builds
+        openly with AI assistance and we say so rather than leaving it implied.
+      </p>
+      <p>
+        <strong class="on-dark">The programme itself contains no AI whatsoever.</strong> The
+        daily update is about 155 lines of ordinary instructions: fetch the data, reshape it,
+        write it into the file, save it. Fixed rules all the way down — if a launch pad is
+        within 1.2 degrees of a known spaceport, call it that spaceport; take the first
+        sentence of the description by stopping at the first full stop. It makes no
+        judgements and it cannot surprise you.
+      </p>
+      <p>
+        For something that publishes to a live website unattended every day, being
+        predictable is exactly what you want. The eight-day outage proves it: the failure was
+        not bad judgement, it was a missing comma.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       WHERE TO GO NEXT
+       =================================================================== -->
+  <section class="section" aria-label="Where to go next">
+    <div class="container prose">
+      <h2>Where to go next</h2>
+      <hr class="accent-rule" />
+      <p>If any of this caught your interest, here are the questions we would chase first.</p>
+      <ul class="qs">
+        <li>Why are spaceports where they are? Why does almost everyone launch eastward, and why is a site near the equator worth so much?</li>
+        <li>How do you draw a sphere on a flat screen — and what does every world map have to distort to exist?</li>
+        <li>What is an API, and what changes about the world when public data is free to use?</li>
+        <li>How often does a "scheduled" launch actually move? Every daily snapshot of this project is saved, so this one is measurable rather than a matter of opinion.</li>
+      </ul>
+
+      <h3>Take it to an AI assistant</h3>
+      <p>
+        Copy this into Claude, ChatGPT, Gemini, or whichever you use. Swap the parts in
+        brackets for whatever you actually want to know.
+      </p>
+      <div class="prompt">
+<pre id="promptText">Read https://www.steamhead.space/neighborhood-earth/launches-from-earth/how-it-works/
+and explain [why launch sites sit where they do] to me at
+[curious beginner / high school / undergraduate] level.
+Then ask me three questions to check whether I understood.</pre>
+        <div class="prompt__actions">
+          <button class="btn btn--primary" id="copyBtn" type="button">Copy the prompt</button>
+          <span class="copied" id="copiedMsg" hidden>Copied.</span>
+        </div>
+      </div>
+      <p class="text-muted">
+        That last line does the real work: it turns an explanation into a conversation where
+        you get to find out what you missed. Note that some assistants cannot open web pages
+        — that is why the topic is named inside the prompt as well as linked.
+      </p>
+      <p class="text-muted">
+        We name several tools rather than recommending one, and none of this needs an account
+        or any personal information. If you would rather not use an AI at all, the same
+        questions work perfectly well in a search engine, a library, or on a teacher.
+      </p>
+
+      <h3>Somewhere that isn't a screen</h3>
+      <p>
+        Your nearest space or science centre almost certainly has someone who lights up when
+        asked why rockets launch eastward.
+        <a href="https://www.thespacedevs.com/" target="_blank" rel="noopener">The Space Devs</a>
+        are a volunteer group who maintain the launch database this project runs on, in
+        public and for free — a good example of the kind of open infrastructure most people
+        never hear about.
+      </p>
+
+      <h3>Read the actual code</h3>
+      <p>
+        The whole project is open source and deliberately small enough to read. It is one
+        file.
+        <a href="https://github.com/SteamHead/earth-launches" target="_blank" rel="noopener">Everything is on GitHub</a>,
+        including every daily snapshot since the day it launched.
+      </p>
+      <p class="mt-md">
+        <a href="/neighborhood-earth/launches-from-earth/" class="btn btn--primary">Back to the globe</a>
+      </p>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* ---- hero ---- */
+  .hero-split {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--space-md);
+    align-items: center;
+  }
+  .hero-globe { width: 180px; height: 180px; flex: 0 0 auto; }
+  .g-line { fill: none; stroke: var(--color-yellow); stroke-width: 1; }
+  .g-pin { fill: var(--color-init-earth); }
+  .g-pin-hot { fill: var(--color-coral); }
+  .g-ring { fill: none; stroke: var(--color-coral); stroke-width: 1.5; }
+  .hero .btn { margin-right: var(--space-xs); margin-top: var(--space-xs); }
+  @media (max-width: 720px) {
+    .hero-split { grid-template-columns: 1fr; }
+    .hero-globe { width: 120px; height: 120px; }
+  }
+
+  /* ---- reading column ---- */
+  .prose { max-width: 820px; }
+  .prose h3 { margin-top: var(--space-md); margin-bottom: var(--space-xs); }
+  .prose p { margin-bottom: var(--space-sm); }
+  .prose code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.9em;
+    background: var(--color-gray-light);
+    padding: 0.1em 0.35em;
+    border-radius: var(--radius);
+  }
+  .section--alt .prose code { background: var(--color-white); }
+  .on-dark { color: var(--color-yellow); }
+
+  /* ---- stat row ---- */
+  .stat-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm) var(--space-lg);
+    margin-top: var(--space-md);
+  }
+  .stat { display: flex; flex-direction: column; }
+  .stat b {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: var(--text-3xl);
+    color: var(--color-heading);
+    font-variant-numeric: tabular-nums;
+    line-height: 1.1;
+  }
+  .stat span {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+  }
+
+  /* ---- parts list ---- */
+  .parts {
+    list-style: none;
+    padding: 0;
+    margin-block: var(--space-md);
+    display: grid;
+    gap: 1px;
+    background: var(--color-border);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .parts li {
+    background: var(--color-white);
+    padding: var(--space-sm);
+    display: grid;
+    gap: 0.15rem;
+  }
+  .part-name { font-weight: 700; color: var(--color-heading); }
+  .part-role { font-size: var(--text-sm); color: var(--color-text-muted); }
+
+  /* ---- pull note ---- */
+  .note {
+    border-left: 3px solid var(--color-init-earth);
+    padding: 0.25rem 0 0.25rem var(--space-sm);
+    margin-block: var(--space-md);
+  }
+  .note p { color: var(--color-text-muted); margin-bottom: 0; }
+
+  /* ---- question list ---- */
+  .qs { display: grid; gap: var(--space-xs); margin-block: var(--space-sm); }
+
+  /* ---- prompt block ---- */
+  .prompt {
+    background: var(--color-gray-light);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: var(--space-sm);
+    margin-block: var(--space-md);
+    display: grid;
+    gap: var(--space-sm);
+  }
+  .prompt pre {
+    margin: 0;
+    overflow-x: auto;
+    font-size: var(--text-sm);
+    line-height: 1.6;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    color: var(--color-dark);
+  }
+  .prompt__actions { display: flex; align-items: center; gap: var(--space-sm); flex-wrap: wrap; }
+  .copied { font-size: var(--text-sm); color: var(--color-text-muted); }
+
+  /* ---- diagram ---- */
+  .diagram { margin: var(--space-md) 0; display: grid; gap: var(--space-sm); justify-items: center; }
+  .diagram__scroll { width: 100%; overflow-x: auto; display: flex; justify-content: center; }
+  .diagram svg { width: 100%; max-width: 480px; height: auto; }
+  .diagram figcaption {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    max-width: 60ch;
+    text-align: center;
+  }
+  .dg-zone {
+    fill: none;
+    stroke: var(--color-text-muted);
+    stroke-width: 1;
+    stroke-dasharray: 5 4;
+  }
+  .dg-zone-label {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-anchor: end;
+    fill: var(--color-text-muted);
+  }
+  .dg-box { fill: none; stroke: var(--color-dark); stroke-width: 1.5; }
+  .dg-hi { fill: var(--color-init-earth); stroke: var(--color-init-earth); }
+  .dg-line { stroke: var(--color-dark); stroke-width: 1.5; }
+  .dg-head { fill: var(--color-dark); }
+  .dg-t {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 700;
+    text-anchor: middle;
+    fill: var(--color-heading);
+  }
+  .dg-s {
+    font-family: var(--font-body);
+    font-size: 11px;
+    text-anchor: middle;
+    fill: var(--color-text-muted);
+  }
+  .dg-hi-t { fill: var(--color-black); }
+  .dg-hi-s { fill: var(--color-black); opacity: 0.75; }
+  .dg-edge {
+    font-family: var(--font-body);
+    font-size: 11px;
+    fill: var(--color-text-muted);
+  }
+  .dg-edge--strong { font-weight: 700; fill: var(--color-dark); }
+</style>
+
+<script>
+  const btn = document.getElementById('copyBtn');
+  const msg = document.getElementById('copiedMsg');
+  const src = document.getElementById('promptText');
+
+  if (btn && msg && src) {
+    btn.addEventListener('click', () => {
+      const text = src.textContent ?? '';
+      const done = () => {
+        msg.hidden = false;
+        window.setTimeout(() => { msg.hidden = true; }, 2400);
+      };
+      const fallback = () => {
+        const range = document.createRange();
+        range.selectNodeContents(src);
+        const sel = window.getSelection();
+        sel?.removeAllRanges();
+        sel?.addRange(range);
+        try { document.execCommand('copy'); done(); } catch { /* leave it selected to copy by hand */ }
+      };
+      if (navigator.clipboard?.writeText) {
+        navigator.clipboard.writeText(text).then(done, fallback);
+      } else {
+        fallback();
+      }
+    });
+  }
+</script>
