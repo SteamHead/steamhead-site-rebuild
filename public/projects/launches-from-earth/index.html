@@ -341,23 +341,11 @@ const SITES = [
   {id:'sem',   name:'Imam Khomeini Spaceport',   place:'Semnan, Iran',            lat:35.234, lon:53.921},
   {id:'soh',   name:'Sohae Launching Station',   place:'North Korea',             lat:39.66,  lon:124.705},
   {id:'pal',   name:'Palmachim Airbase',         place:'Israel',                  lat:31.884, lon:34.681}
-  {id:'x1', name:"Haiyang Oriental Spaceport", place:"[object Object]", lat:31.2, lon:123.7},
-  {id:'x1', name:"Haiyang Oriental Spaceport", place:"[object Object]", lat:31.2, lon:123.7},
-  {id:'x1', name:"Haiyang Oriental Spaceport", place:"[object Object]", lat:31.2, lon:123.7},
-  {id:'x1', name:"Haiyang Oriental Spaceport", place:"[object Object]", lat:31.2, lon:123.7},
-  {id:'x1', name:"Haiyang Oriental Spaceport", place:"[object Object]", lat:31.2, lon:123.7},
-  {id:'x1', name:"Haiyang Oriental Spaceport", place:"[object Object]", lat:31.2, lon:123.7},
-  {id:'x1', name:"Haiyang Oriental Spaceport", place:"[object Object]", lat:31.2, lon:123.7},
-  {id:'x1', name:"Haiyang Oriental Spaceport", place:"[object Object]", lat:31.2, lon:123.7},
-  {id:'x1', name:"Haiyang Oriental Spaceport", place:"[object Object]", lat:31.2, lon:123.7},
 ];
 
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"ple", net:"2026-09-17T16:50:00Z", p:"time", veh:"Soyuz 2.1b Fregat-M", who:"Russian Space Forces",
-   mission:"Kosmos (Unknown Payload)", orbit:"Unknown", status:"Launch Successful",
-   brief:"Note: Launch vehicle and payload identities not confirmed."},
   {site:"lc1", net:"2026-09-19T03:15:00Z", p:"time", veh:"Electron", who:"Rocket Lab",
    mission:"Owl By The Dozen (StriX Launch 12)", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"Synthetic aperture radar satellite for Japanese Earth imaging company Synspective."},
@@ -368,6 +356,12 @@ const LAUNCHES = [
    mission:"Starlink Group 15-27", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
   {site:"jiu", net:"2026-09-20T04:00:00Z", p:"time", veh:"Kinetica 1", who:"CAS Space",
+   mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
+   brief:"Details TBD."},
+  {site:"wen", net:"2026-09-23T13:30:00Z", p:"time", veh:"Long March 8A", who:"China Aerospace Science and Technology Corporation",
+   mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
+   brief:"Details TBD."},
+  {site:"tai", net:"2026-09-24T08:45:00Z", p:"time", veh:"Long March 6A", who:"China Aerospace Science and Technology Corporation",
    mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
    brief:"Details TBD."},
   {site:"vsfb", net:"2026-09-26T11:56:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
@@ -382,9 +376,6 @@ const LAUNCHES = [
   {site:"jiu", net:"2026-09-30T00:00:00Z", p:"month", veh:"Long March 12A", who:"China Aerospace Science and Technology Corporation",
    mission:"Flight 2", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Second test launch of CASC/SAST’s Long March 12A rocket."},
-  {site:"wen", net:"2026-09-30T00:00:00Z", p:"month", veh:"Long March 8A", who:"China Aerospace Science and Technology Corporation",
-   mission:"Unknown Payload", orbit:"Unknown", status:"To Be Determined",
-   brief:"Details TBD."},
   {site:"ccsfs", net:"2026-09-30T00:00:00Z", p:"month", veh:"Vulcan VC6L", who:"United Launch Alliance",
    mission:"Amazon Leo (LV-01)", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon."},
@@ -394,6 +385,9 @@ const LAUNCHES = [
   {site:"lc1", net:"2026-09-30T00:00:00Z", p:"quarter", veh:"Electron", who:"Rocket Lab",
    mission:"BlackSky Gen-3 6", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"BlackSky Gen-3 Earth-imaging satellites"},
+  {site:"ccsfs", net:"2026-10-01T15:10:06Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Crew-13", orbit:"Low Earth Orbit", status:"To Be Confirmed",
+   brief:"SpaceX Crew-13 is the thirteenth crewed operational flight of a Crew Dragon spacecraft to the International Space Station as part of NASA's Commercial Crew Program."},
   {site:"sax", net:"2026-10-05T00:00:00Z", p:"day", veh:"SR75", who:"HyImpulse",
    mission:"Flight 2", orbit:"Suborbital", status:"To Be Determined",
    brief:"Test flight of HyImpulse's SR75 sounding rocket."},
@@ -409,9 +403,6 @@ const LAUNCHES = [
   {site:"ccsfs", net:"2026-10-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Bandwagon 5 (Dedicated Mid-Inclination Rideshare)", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Dedicated rideshare flight to a mid-inclination orbit with dozens of small microsatellites and nanosatellites for commercial and government customers."},
-  {site:"ccsfs", net:"2026-10-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"Crew-13", orbit:"Low Earth Orbit", status:"To Be Determined",
-   brief:"SpaceX Crew-13 is the thirteenth crewed operational flight of a Crew Dragon spacecraft to the International Space Station as part of NASA's Commercial Crew Program."},
   {site:"ccsfs", net:"2026-10-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Dragon CRS-2 SpX-35", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"35th commercial resupply services mission to the International Space Station operated by SpaceX."},
@@ -945,7 +936,12 @@ async function tryLive(){
       if(isNaN(lat)||isNaN(lon)) continue;
       let site=Object.values(sitesById).find(s=>Math.hypot(s.lat-lat,s.lon-lon)<1.2);
       if(!site){
-        site={id:'x'+mapped.length,name:(loc.name||'Unlisted site').split(',')[0],place:loc.country||loc.name||'',lat,lon,launches:[]};
+        // Step past ids the snapshot already uses, or this overwrites one.
+        let n=1; while(sitesById['x'+n]) n++;
+        // location.country is an object in API 2.3.0; using it raw renders
+        // as the literal "[object Object]" in the detail card.
+        const country=typeof loc.country==='string'?loc.country:loc.country&&loc.country.name;
+        site={id:'x'+n,name:(loc.name||'Unlisted site').split(',')[0],place:country||loc.name||'',lat,lon,launches:[]};
         sitesById[site.id]=site;
       }
       const prec=(it.net_precision&&it.net_precision.name||'').toLowerCase();
