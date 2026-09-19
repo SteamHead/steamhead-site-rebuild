@@ -346,8 +346,8 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"lc1", net:"2026-09-19T03:15:00Z", p:"time", veh:"Electron", who:"Rocket Lab",
-   mission:"Owl By The Dozen (StriX Launch 12)", orbit:"Low Earth Orbit", status:"Go for Launch",
+  {site:"lc1", net:"2026-09-19T03:22:00Z", p:"time", veh:"Electron", who:"Rocket Lab",
+   mission:"Owl By The Dozen (StriX Launch 12)", orbit:"Low Earth Orbit", status:"Payload Deployed",
    brief:"Synthetic aperture radar satellite for Japanese Earth imaging company Synspective."},
   {site:"tai", net:"2026-09-19T10:50:00Z", p:"time", veh:"Long March 2D", who:"China Aerospace Science and Technology Corporation",
    mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
@@ -364,27 +364,21 @@ const LAUNCHES = [
   {site:"tai", net:"2026-09-24T08:45:00Z", p:"time", veh:"Long March 6A", who:"China Aerospace Science and Technology Corporation",
    mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
    brief:"Details TBD."},
+  {site:"lc1", net:"2026-09-26T00:15:00Z", p:"time", veh:"Electron", who:"Rocket Lab",
+   mission:"Owlright, Owlright, Owlright (StriX Launch 13)", orbit:"Low Earth Orbit", status:"Go for Launch",
+   brief:"Synthetic aperture radar satellite for Japanese Earth imaging company Synspective."},
   {site:"vsfb", net:"2026-09-26T11:56:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"USSF-385", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A classified mission for the United States Space Force."},
   {site:"star", net:"2026-09-28T12:15:00Z", p:"time", veh:"Starship V3", who:"SpaceX",
    mission:"Starlink Group 31-1 (Starship Flight 14)", orbit:"Low Earth Orbit", status:"To Be Confirmed",
    brief:"14th test flight of the two-stage Starship launch vehicle."},
-  {site:"lc1", net:"2026-09-30T00:00:00Z", p:"month", veh:"Electron", who:"Rocket Lab",
-   mission:"LOXSAT 1", orbit:"Low Earth Orbit", status:"To Be Determined",
-   brief:"LOXSAT 1 is a demonstration satellite of a complete cryogenic oxygen fluid management system in orbit, developed by Eta Space and sponsored by NASA's Tipping Point program."},
   {site:"jiu", net:"2026-09-30T00:00:00Z", p:"month", veh:"Long March 12A", who:"China Aerospace Science and Technology Corporation",
    mission:"Flight 2", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Second test launch of CASC/SAST’s Long March 12A rocket."},
   {site:"ccsfs", net:"2026-09-30T00:00:00Z", p:"month", veh:"Vulcan VC6L", who:"United Launch Alliance",
    mission:"Amazon Leo (LV-01)", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon."},
-  {site:"lc1", net:"2026-09-30T00:00:00Z", p:"quarter", veh:"Electron", who:"Rocket Lab",
-   mission:"6x HawkEye 360", orbit:"Low Earth Orbit", status:"To Be Determined",
-   brief:"HawkEye 360 is a a space-based civil global intelligence satellite network using radio frequency (RF) technology to help monitor transportation across air, land and sea and assist with emergencies, and to provide civil SIGINT (Signal Intelligence) mission."},
-  {site:"lc1", net:"2026-09-30T00:00:00Z", p:"quarter", veh:"Electron", who:"Rocket Lab",
-   mission:"BlackSky Gen-3 6", orbit:"Low Earth Orbit", status:"To Be Determined",
-   brief:"BlackSky Gen-3 Earth-imaging satellites"},
   {site:"ccsfs", net:"2026-10-01T15:10:06Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Crew-13", orbit:"Low Earth Orbit", status:"To Be Confirmed",
    brief:"SpaceX Crew-13 is the thirteenth crewed operational flight of a Crew Dragon spacecraft to the International Space Station as part of NASA's Commercial Crew Program."},
@@ -427,9 +421,6 @@ const LAUNCHES = [
   {site:"alc", net:"2026-11-30T00:00:00Z", p:"month", veh:"HANBIT-Nano", who:"Innospace",
    mission:"InnoSat-0", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Innospace's first in-house test satellite, 'InnoSat-0', will test various technologies for future development of satellites by Innospace themselves."},
-  {site:"lc1", net:"2026-12-31T00:00:00Z", p:"month", veh:"Electron", who:"Rocket Lab",
-   mission:"StriX Launch 13", orbit:"Sun-Synchronous Orbit", status:"To Be Determined",
-   brief:"Synthetic aperture radar satellite for Japanese Earth imaging company Synspective."},
   {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Cygnus CRS-2 NG-25", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"This is the 25th flight of the Orbital ATK's uncrewed resupply spacecraft Cygnus and its 24th flight to the International Space Station under the Commercial Resupply Services contract with NASA."},
@@ -503,6 +494,12 @@ const LAUNCHES = [
    mission:"Starliner-1", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Starliner-1 is the first operational flight of a Starliner spacecraft to the International Space Station as part of NASA's Commercial Crew Program."},
   {site:"lc1", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Electron", who:"Rocket Lab",
+   mission:"6x HawkEye 360", orbit:"Low Earth Orbit", status:"To Be Determined",
+   brief:"HawkEye 360 is a a space-based civil global intelligence satellite network using radio frequency (RF) technology to help monitor transportation across air, land and sea and assist with emergencies, and to provide civil SIGINT (Signal Intelligence) mission."},
+  {site:"lc1", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Electron", who:"Rocket Lab",
+   mission:"BlackSky Gen-3 6", orbit:"Low Earth Orbit", status:"To Be Determined",
+   brief:"BlackSky Gen-3 Earth-imaging satellites"},
+  {site:"lc1", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Electron", who:"Rocket Lab",
    mission:"BlackSky Gen-3 7", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"BlackSky Gen-3 Earth-imaging satellites"},
   {site:"lc1", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Electron", who:"Rocket Lab",
@@ -520,6 +517,9 @@ const LAUNCHES = [
   {site:"lc1", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Electron", who:"Rocket Lab",
    mission:"iQPS Launch 9", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Synthetic aperture radar Earth observation satellite for Japanese Earth imaging company iQPS."},
+  {site:"lc1", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Electron", who:"Rocket Lab",
+   mission:"LOXSAT 1", orbit:"Low Earth Orbit", status:"To Be Determined",
+   brief:"LOXSAT 1 is a demonstration satellite of a complete cryogenic oxygen fluid management system in orbit, developed by Eta Space and sponsored by NASA's Tipping Point program."},
   {site:"tan", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Epsilon S", who:"Japan Aerospace Exploration Agency",
    mission:"JV-LOTUSat-1", orbit:"Sun-Synchronous Orbit", status:"To Be Determined",
    brief:"Vietnamese Synthetic Aperture Radar Earth observation satellite build by NEC Corporation of Japan, based on Japan's ASNARO 2 satellite and the NEXTAR NX-300L satellite bus."},
@@ -962,7 +962,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 18 Sep 2026';
+    : '<b>Snapshot</b> · 19 Sep 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
