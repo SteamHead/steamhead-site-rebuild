@@ -69,6 +69,33 @@
   .btn:disabled{opacity:.45;cursor:default}
   .btn.working{color:var(--verdigris)}
 
+  /* ---------- masthead menu ---------- */
+  .vh{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+  .menuwrap{position:relative}
+  .btn--icon{display:inline-flex;align-items:center;justify-content:center;padding:5px 7px;line-height:0}
+  .menu{
+    position:absolute;right:0;top:calc(100% + 6px);z-index:70;min-width:190px;
+    background:var(--paper-lit);border:1px solid var(--rule);border-radius:2px;
+    box-shadow:0 12px 32px rgba(27,42,51,.22);display:flex;flex-direction:column;
+  }
+  .menu[hidden]{display:none}
+  .menu-item{
+    font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-soft);background:transparent;border:0;border-radius:0;
+    padding:9px 12px;text-align:left;white-space:nowrap;cursor:pointer;text-decoration:none;
+    transition:color .15s,background .15s;
+  }
+  .menu-item + .menu-item{border-top:1px solid var(--hair)}
+  .menu-item:hover{color:var(--verdigris);background:var(--wash)}
+  .menu-item:focus-visible{outline:2px solid var(--verdigris);outline-offset:-2px}
+
+  /* ---------- credits dialog ---------- */
+  .cr-list{margin:0;padding:0 0 0 16px;font-size:12.5px;line-height:1.6;color:var(--ink-soft)}
+  .cr-list li{margin-bottom:9px}
+  .cr-list li:last-child{margin-bottom:0}
+  .cr-list b{font-weight:400;color:var(--ink)}
+  .cr-list a{color:var(--verdigris)}
+
   /* ---------- feedback dialog ---------- */
   .fb-scrim{
     position:fixed;inset:0;z-index:80;display:none;align-items:center;justify-content:center;
@@ -250,7 +277,20 @@
     <div class="feedwrap">
       <div class="feed" id="feed">Reading feed…</div>
       <button class="btn" id="refresh" type="button" title="Re-check Launch Library for schedule changes">Refresh</button>
-      <button class="btn" id="fbOpen" type="button" title="Tell us what you think of this page">Feedback</button>
+      <div class="menuwrap">
+        <button class="btn btn--icon" id="menuBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu" title="More">
+          <svg viewBox="0 0 16 12" width="16" height="12" aria-hidden="true" focusable="false">
+            <path d="M0 1h16M0 6h16M0 11h16" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          </svg>
+          <span class="vh">More</span>
+        </button>
+        <div class="menu" id="menu" role="menu" hidden>
+          <a class="menu-item" role="menuitem" href="https://steamhead.space/neighborhood-earth/launches-from-earth/how-it-works/" target="_blank" rel="noopener">How this works</a>
+          <button class="menu-item" role="menuitem" type="button" id="fbOpen">Send feedback</button>
+          <button class="menu-item" role="menuitem" type="button" id="crOpen">Credits &amp; sources</button>
+          <a class="menu-item" role="menuitem" href="https://github.com/SteamHead/earth-launches" target="_blank" rel="noopener">View the code</a>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -279,6 +319,21 @@
       </div>
     </section>
   </main>
+</div>
+
+<div class="fb-scrim" id="crScrim" role="dialog" aria-modal="true" aria-labelledby="crTitle">
+  <div class="fb-box">
+    <h2 id="crTitle">Credits &amp; sources</h2>
+    <p>Everything on this globe comes from somewhere. Here is where.</p>
+    <ul class="cr-list">
+      <li><b>Launch data</b> — <a href="https://thespacedevs.com/llapi" target="_blank" rel="noopener">The Space Devs' Launch Library</a>, maintained by volunteers and free to use.</li>
+      <li><b>Coastlines and borders</b> — <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a>, public domain.</li>
+      <li><b>The globe itself</b> — the browser's 2D canvas. No 3D engine, no libraries, no build step.</li>
+      <li><b>Made by</b> — <a href="https://www.steamhead.space" target="_blank" rel="noopener">SteamHead</a>, as part of Neighborhood Earth. Built with AI assistance; the program itself contains none.</li>
+      <li><b>Licence</b> — MIT, and the whole thing is one readable file.</li>
+    </ul>
+    <div class="fb-foot"><div class="fb-actions"><button class="btn" id="crClose" type="button">Close</button></div></div>
+  </div>
 </div>
 
 <div class="fb-scrim" id="fbScrim" role="dialog" aria-modal="true" aria-labelledby="fbTitle">
@@ -347,11 +402,11 @@ const SITES = [
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
   {site:"lc1", net:"2026-09-19T03:22:00Z", p:"time", veh:"Electron", who:"Rocket Lab",
-   mission:"Owl By The Dozen (StriX Launch 12)", orbit:"Low Earth Orbit", status:"Payload Deployed",
+   mission:"Owl By The Dozen (StriX Launch 12)", orbit:"Low Earth Orbit", status:"Launch Successful",
    brief:"Synthetic aperture radar satellite for Japanese Earth imaging company Synspective."},
   {site:"tai", net:"2026-09-19T10:50:00Z", p:"time", veh:"Long March 2D", who:"China Aerospace Science and Technology Corporation",
-   mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
-   brief:"Details TBD."},
+   mission:"PIESAT-2 13-16", orbit:"Sun-Synchronous Orbit", status:"Launch Successful",
+   brief:"4 X-band synthetic-aperture radar Earth observation satellites for the Chinese Earth observation satellite company PIESAT."},
   {site:"vsfb", net:"2026-09-20T01:47:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Starlink Group 15-27", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
@@ -990,7 +1045,31 @@ refreshBtn.addEventListener('click',manualRefresh);
    stores the message, the time, a salted daily hash of the IP, and the country.
    The raw IP is never stored. If FEEDBACK_ENDPOINT is left unset the button
    removes itself, so the page stays correct before the Worker is deployed. */
-const FEEDBACK_ENDPOINT = '';   // e.g. 'https://earth-launches-feedback.<subdomain>.workers.dev/feedback'
+const FEEDBACK_ENDPOINT = 'https://earth-launches-feedback.james-068.workers.dev/feedback';
+/* ---------- masthead menu ---------- */
+const menuBtn=$('#menuBtn'), menu=$('#menu');
+const closeMenu=()=>{ menu.hidden=true; menuBtn.setAttribute('aria-expanded','false'); };
+menuBtn.addEventListener('click',e=>{
+  e.stopPropagation();
+  const willOpen=menu.hidden;
+  menu.hidden=!willOpen;
+  menuBtn.setAttribute('aria-expanded',String(willOpen));
+});
+// Any activation inside the menu dismisses it, including a link that opens a tab.
+menu.addEventListener('click',closeMenu);
+document.addEventListener('click',e=>{
+  if(!menu.hidden && !menu.contains(e.target) && !menuBtn.contains(e.target)) closeMenu();
+});
+addEventListener('keydown',e=>{ if(e.key==='Escape'&&!menu.hidden){ closeMenu(); menuBtn.focus(); } });
+
+/* ---------- credits dialog ---------- */
+const crScrim=$('#crScrim');
+const closeCr=()=>crScrim.classList.remove('open');
+$('#crOpen').addEventListener('click',()=>{ crScrim.classList.add('open'); $('#crClose').focus(); });
+$('#crClose').addEventListener('click',closeCr);
+crScrim.addEventListener('click',e=>{ if(e.target===crScrim) closeCr(); });
+addEventListener('keydown',e=>{ if(e.key==='Escape'&&crScrim.classList.contains('open')) closeCr(); });
+
 const FB_MAX = 300;
 
 const fbScrim=$('#fbScrim'), fbText=$('#fbText'), fbCount=$('#fbCount'),
