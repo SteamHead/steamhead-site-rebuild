@@ -330,12 +330,22 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
         a "no earlier than" window, or an estimate.
       </p>
 
-      <h3>The feedback box is built but switched off</h3>
+      <h3>Collecting feedback without collecting people</h3>
       <p>
-        There is a working design for letting visitors send a short note, including a careful
-        approach to privacy: it stores a scrambled, daily-rotating fingerprint rather than
-        anyone's IP address, so it can block abuse without tracking people. It has never been
-        connected, so the button hides itself. Written, not shipped.
+        You can send us a short note from the menu at the top of the globe. The hard part
+        was not the button — it was working out how to stop one person flooding it without
+        keeping track of anybody.
+      </p>
+      <p>
+        What gets stored is the message, the date, a two-letter country code, and a
+        scrambled fingerprint of your connection. <strong>Never your IP address.</strong>
+        The scrambling changes every day, so it can tell that fifty notes came from one
+        person this afternoon, and cannot tell that you were also here yesterday.
+      </p>
+      <p>
+        That matters because this is built for classrooms. Storing real addresses would
+        make us a handler of children's personal data, with everything that follows. This
+        way we get the same protection against abuse and none of that.
       </p>
 
       <h3>The daily job runs about five hours late</h3>
