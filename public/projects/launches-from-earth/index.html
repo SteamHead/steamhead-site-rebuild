@@ -401,12 +401,6 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"vsfb", net:"2026-09-20T01:47:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"Starlink Group 15-27", orbit:"Low Earth Orbit", status:"Launch Successful",
-   brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
-  {site:"jiu", net:"2026-09-20T04:03:00Z", p:"time", veh:"Kinetica 1", who:"CAS Space",
-   mission:"9 satellites", orbit:"Sun-Synchronous Orbit", status:"Launch Successful",
-   brief:"Share-ride of 9 commercial Earth observation and technology demonstration satellites to SSO, details TBD."},
   {site:"wen", net:"2026-09-23T13:30:00Z", p:"time", veh:"Long March 8A", who:"China Aerospace Science and Technology Corporation",
    mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
    brief:"Details TBD."},
@@ -422,7 +416,7 @@ const LAUNCHES = [
   {site:"star", net:"2026-09-28T12:15:00Z", p:"time", veh:"Starship V3", who:"SpaceX",
    mission:"Starlink Group 31-1 (Starship Flight 14)", orbit:"Low Earth Orbit", status:"To Be Confirmed",
    brief:"14th test flight of the two-stage Starship launch vehicle."},
-  {site:"vsfb", net:"2026-09-30T14:00:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+  {site:"vsfb", net:"2026-09-30T16:00:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Starlink Group 15-25", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
   {site:"ccsfs", net:"2026-10-01T15:10:06Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
@@ -580,6 +574,12 @@ const LAUNCHES = [
    brief:"This is the 25th flight of the Orbital ATK's uncrewed resupply spacecraft Cygnus and its 24th flight to the International Space Station under the Commercial Resupply Services contract with NASA."},
   {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Rivada 1", orbit:"Polar Orbit", status:"To Be Determined",
+   brief:"24 satellites for Rivada's internet constellation."},
+  {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Rivada 10", orbit:"Polar Orbit", status:"To Be Determined",
+   brief:"24 satellites for Rivada's internet constellation."},
+  {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Rivada 11", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"24 satellites for Rivada's internet constellation."},
 ];
 
@@ -1017,7 +1017,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 20 Sep 2026';
+    : '<b>Snapshot</b> · 21 Sep 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
