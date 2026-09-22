@@ -416,12 +416,12 @@ const LAUNCHES = [
   {site:"star", net:"2026-09-28T12:15:00Z", p:"time", veh:"Starship V3", who:"SpaceX",
    mission:"Starlink Group 31-1 (Starship Flight 14)", orbit:"Low Earth Orbit", status:"To Be Confirmed",
    brief:"14th test flight of the two-stage Starship launch vehicle."},
-  {site:"vsfb", net:"2026-09-30T16:00:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"Starlink Group 15-25", orbit:"Low Earth Orbit", status:"Go for Launch",
-   brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
   {site:"ccsfs", net:"2026-10-01T15:10:06Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Crew-13", orbit:"Low Earth Orbit", status:"To Be Confirmed",
    brief:"SpaceX Crew-13 is the thirteenth crewed operational flight of a Crew Dragon spacecraft to the International Space Station as part of NASA's Commercial Crew Program."},
+  {site:"vsfb", net:"2026-10-01T18:08:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Transporter 18 (Dedicated SSO Rideshare)", orbit:"Sun-Synchronous Orbit", status:"To Be Confirmed",
+   brief:"Dedicated rideshare flight to a sun-synchronous orbit with dozens of small microsatellites and nanosatellites for commercial and government customers."},
   {site:"sax", net:"2026-10-05T00:00:00Z", p:"day", veh:"SR75", who:"HyImpulse",
    mission:"Flight 2", orbit:"Suborbital", status:"To Be Determined",
    brief:"Test flight of HyImpulse's SR75 sounding rocket."},
@@ -431,6 +431,9 @@ const LAUNCHES = [
   {site:"nar", net:"2026-10-07T03:23:00Z", p:"time", veh:"KSLV-2 Nuri", who:"Korea Aerospace Research Institute",
    mission:"NeonSat-2 to 6", orbit:"Sun-Synchronous Orbit", status:"Go for Launch",
    brief:"NeonSat-2 to 6 are part of the South Korean government's Earth observation micro-satellite constellation NeonSat (New-space Earth Observation Satellite)."},
+  {site:"vsfb", net:"2026-10-10T16:00:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Starlink Group 15-25", orbit:"Low Earth Orbit", status:"Go for Launch",
+   brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
   {site:"tan", net:"2026-10-19T19:41:03Z", p:"time", veh:"H3-24", who:"Mitsubishi Heavy Industries",
    mission:"Martian Moon eXplorer (MMX)", orbit:"Mars Orbit", status:"Go for Launch",
    brief:"MMX is a Japanese scientific mission to land on Phobos, one of the two moons of Mars, to collect samples before bringing them back to Earth."},
@@ -443,9 +446,6 @@ const LAUNCHES = [
   {site:"vsfb", net:"2026-10-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"SDA Tranche 1 Transport Layer A", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"Tranche 1 Transport Layer A is one of six missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Transport Layer constellation, which will provide assured, resilient, low-latency military data and connectivity worldwide to the full range of warfighter platforms from Low Earth Orbit satellites."},
-  {site:"vsfb", net:"2026-10-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"Transporter 18 (Dedicated SSO Rideshare)", orbit:"Sun-Synchronous Orbit", status:"To Be Determined",
-   brief:"Dedicated rideshare flight to a sun-synchronous orbit with dozens of small microsatellites and nanosatellites for commercial and government customers."},
   {site:"jiu", net:"2026-10-31T00:00:00Z", p:"month", veh:"Long March 12A", who:"China Aerospace Science and Technology Corporation",
    mission:"Flight 2", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Second test launch of CASC/SAST’s Long March 12A rocket."},
@@ -1017,7 +1017,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 21 Sep 2026';
+    : '<b>Snapshot</b> · 22 Sep 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
