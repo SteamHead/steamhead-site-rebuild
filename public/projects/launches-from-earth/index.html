@@ -401,12 +401,12 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"wen", net:"2026-09-23T13:30:00Z", p:"time", veh:"Long March 8A", who:"China Aerospace Science and Technology Corporation",
-   mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
-   brief:"Details TBD."},
-  {site:"tai", net:"2026-09-24T08:45:00Z", p:"time", veh:"Long March 6A", who:"China Aerospace Science and Technology Corporation",
-   mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
-   brief:"Details TBD."},
+  {site:"wen", net:"2026-09-23T13:32:00Z", p:"time", veh:"Long March 8A", who:"China Aerospace Science and Technology Corporation",
+   mission:"SatNet LEO Group 26", orbit:"Low Earth Orbit", status:"Launch Successful",
+   brief:"A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group."},
+  {site:"tai", net:"2026-09-24T08:46:00Z", p:"time", veh:"Long March 6A", who:"China Aerospace Science and Technology Corporation",
+   mission:"Yaogan 40 Group 04", orbit:"Polar Orbit", status:"Launch Successful",
+   brief:"3 Chinese reconnaissance satellites of unknown purposes, officially reported as for \"Electromagnetic environment probing\"."},
   {site:"lc1", net:"2026-09-26T00:15:00Z", p:"time", veh:"Electron", who:"Rocket Lab",
    mission:"Owlright, Owlright, Owlright (StriX Launch 13)", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"Synthetic aperture radar satellite for Japanese Earth imaging company Synspective."},
@@ -1017,7 +1017,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 23 Sep 2026';
+    : '<b>Snapshot</b> · 24 Sep 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
