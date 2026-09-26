@@ -401,10 +401,10 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"lc1", net:"2026-09-26T00:26:00Z", p:"time", veh:"Electron", who:"Rocket Lab",
-   mission:"Owlright, Owlright, Owlright (StriX Launch 13)", orbit:"Low Earth Orbit", status:"Go for Launch",
+  {site:"lc1", net:"2026-09-26T00:39:00Z", p:"time", veh:"Electron", who:"Rocket Lab",
+   mission:"Owlright, Owlright, Owlright (StriX Launch 13)", orbit:"Low Earth Orbit", status:"Launch Successful",
    brief:"Synthetic aperture radar satellite for Japanese Earth imaging company Synspective."},
-  {site:"vsfb", net:"2026-09-26T11:56:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+  {site:"vsfb", net:"2026-09-26T14:00:54Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"USSF-385", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A classified mission for the United States Space Force."},
   {site:"star", net:"2026-09-28T12:15:00Z", p:"time", veh:"Starship V3", who:"SpaceX",
@@ -422,9 +422,9 @@ const LAUNCHES = [
   {site:"sax", net:"2026-10-05T00:00:00Z", p:"day", veh:"SR75", who:"HyImpulse",
    mission:"Flight 2", orbit:"Suborbital", status:"To Be Determined",
    brief:"Test flight of HyImpulse's SR75 sounding rocket."},
-  {site:"kou", net:"2026-10-07T00:00:00Z", p:"day", veh:"Ariane 64 Block 2", who:"Arianespace",
-   mission:"Amazon Leo (LE-04)", orbit:"Low Earth Orbit", status:"To Be Determined",
-   brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon."},
+  {site:"vsfb", net:"2026-10-05T08:06:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"SDA Tranche 1 Transport Layer A", orbit:"Polar Orbit", status:"To Be Confirmed",
+   brief:"Tranche 1 Transport Layer A is one of six missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Transport Layer constellation, which will provide assured, resilient, low-latency military data and connectivity worldwide to the full range of warfighter platforms from Low Earth Orbit satellites."},
   {site:"nar", net:"2026-10-07T03:23:00Z", p:"time", veh:"KSLV-2 Nuri", who:"Korea Aerospace Research Institute",
    mission:"NeonSat-2 to 6", orbit:"Sun-Synchronous Orbit", status:"Go for Launch",
    brief:"NeonSat-2 to 6 are part of the South Korean government's Earth observation micro-satellite constellation NeonSat (New-space Earth Observation Satellite)."},
@@ -437,15 +437,15 @@ const LAUNCHES = [
   {site:"tan", net:"2026-10-19T19:41:03Z", p:"time", veh:"H3-24", who:"Mitsubishi Heavy Industries",
    mission:"Martian Moon eXplorer (MMX)", orbit:"Mars Orbit", status:"Go for Launch",
    brief:"MMX is a Japanese scientific mission to land on Phobos, one of the two moons of Mars, to collect samples before bringing them back to Earth."},
+  {site:"kou", net:"2026-10-31T00:00:00Z", p:"month", veh:"Ariane 64 Block 2", who:"Arianespace",
+   mission:"Amazon Leo (LE-04)", orbit:"Low Earth Orbit", status:"To Be Determined",
+   brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon."},
   {site:"ccsfs", net:"2026-10-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Bandwagon 5 (Dedicated Mid-Inclination Rideshare)", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Dedicated rideshare flight to a mid-inclination orbit with dozens of small microsatellites and nanosatellites for commercial and government customers."},
   {site:"ccsfs", net:"2026-10-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Dragon CRS-2 SpX-35", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"35th commercial resupply services mission to the International Space Station operated by SpaceX."},
-  {site:"vsfb", net:"2026-10-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"SDA Tranche 1 Transport Layer A", orbit:"Polar Orbit", status:"To Be Determined",
-   brief:"Tranche 1 Transport Layer A is one of six missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Transport Layer constellation, which will provide assured, resilient, low-latency military data and connectivity worldwide to the full range of warfighter platforms from Low Earth Orbit satellites."},
   {site:"jiu", net:"2026-10-31T00:00:00Z", p:"month", veh:"Long March 12A", who:"China Aerospace Science and Technology Corporation",
    mission:"Flight 2", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Second test launch of CASC/SAST’s Long March 12A rocket."},
@@ -1017,7 +1017,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 25 Sep 2026';
+    : '<b>Snapshot</b> · 26 Sep 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
