@@ -401,14 +401,11 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"lc1", net:"2026-09-26T00:39:00Z", p:"time", veh:"Electron", who:"Rocket Lab",
-   mission:"Owlright, Owlright, Owlright (StriX Launch 13)", orbit:"Low Earth Orbit", status:"Launch Successful",
-   brief:"Synthetic aperture radar satellite for Japanese Earth imaging company Synspective."},
   {site:"vsfb", net:"2026-09-26T14:00:54Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"USSF-385", orbit:"Low Earth Orbit", status:"Go for Launch",
+   mission:"USSF-385", orbit:"Low Earth Orbit", status:"Launch Successful",
    brief:"A classified mission for the United States Space Force."},
   {site:"star", net:"2026-09-28T12:15:00Z", p:"time", veh:"Starship V3", who:"SpaceX",
-   mission:"Starlink Group 31-1 (Starship Flight 14)", orbit:"Low Earth Orbit", status:"To Be Confirmed",
+   mission:"Starlink Group 31-1 (Starship Flight 14)", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"14th test flight of the two-stage Starship launch vehicle."},
   {site:"ccsfs", net:"2026-10-01T15:10:06Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Crew-13", orbit:"Low Earth Orbit", status:"Go for Launch",
@@ -449,6 +446,9 @@ const LAUNCHES = [
   {site:"jiu", net:"2026-10-31T00:00:00Z", p:"month", veh:"Long March 12A", who:"China Aerospace Science and Technology Corporation",
    mission:"Flight 2", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Second test launch of CASC/SAST’s Long March 12A rocket."},
+  {site:"sdsc", net:"2026-10-31T00:00:00Z", p:"month", veh:"SSLV", who:"Indian Space Research Organization",
+   mission:"AayulSAT-1A & others", orbit:"Low Earth Orbit", status:"To Be Determined",
+   brief:"Ride-share launch of multiple satellites, including the in-orbit refueling demonstration satellite AayulSAT-1A from OrbitAID Aerospace."},
   {site:"ccsfs", net:"2026-10-31T00:00:00Z", p:"month", veh:"Vulcan VC6L", who:"United Launch Alliance",
    mission:"Amazon Leo (LV-01)", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon."},
@@ -464,6 +464,12 @@ const LAUNCHES = [
   {site:"alc", net:"2026-11-30T00:00:00Z", p:"month", veh:"HANBIT-Nano", who:"Innospace",
    mission:"InnoSat-0", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Innospace's first in-house test satellite, 'InnoSat-0', will test various technologies for future development of satellites by Innospace themselves."},
+  {site:"sdsc", net:"2026-11-30T00:00:00Z", p:"month", veh:"Launch Vehicle Mark-3 (GSLV Mk III)", who:"Indian Space Research Organization",
+   mission:"Gaganyaan-1", orbit:"Low Earth Orbit", status:"To Be Determined",
+   brief:"First uncrewed orbital test flight of the Gaganyaan capsule."},
+  {site:"sdsc", net:"2026-11-30T00:00:00Z", p:"month", veh:"PSLV XL", who:"Indian Space Research Organization",
+   mission:"TDS-01", orbit:"Geostationary Transfer Orbit", status:"To Be Determined",
+   brief:"TDS-01 (Technology Demonstration Satellite-01) is an Indian geostationary orbit technology demonstration satellite carrying payloads for the Indian Space Research Organisation (ISRO)’s Institute of Plasma Research, Gandhinagar and the CSIR-CEERI, Pilani."},
   {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Cygnus CRS-2 NG-25", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"This is the 25th flight of the Orbital ATK's uncrewed resupply spacecraft Cygnus and its 24th flight to the International Space Station under the Commercial Resupply Services contract with NASA."},
@@ -476,6 +482,9 @@ const LAUNCHES = [
   {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Telesat Lightspeed 1", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Up to 18 satellites manufactured by MDA for Canadian satellite operator Telesat's Lightspeed constellation."},
+  {site:"sdsc", net:"2026-12-31T00:00:00Z", p:"month", veh:"Launch Vehicle Mark-3 (GSLV Mk III)", who:"Indian Space Research Organization",
+   mission:"GSAT-32 (GSAT-N3)", orbit:"Geostationary Transfer Orbit", status:"To Be Determined",
+   brief:"GSAT-32 is a geostationary communications satellite for the Indian Space Research Organization (ISRO)."},
   {site:"kou", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Ariane 62", who:"Arianespace",
    mission:"Galileo L15 (FOC FM28 & FM31)", orbit:"Medium Earth Orbit", status:"To Be Determined",
    brief:"Payload consists of two satellites for Europe's Galileo navigation system."},
@@ -506,9 +515,6 @@ const LAUNCHES = [
   {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Firefly Alpha Block 2", who:"Firefly Aerospace",
    mission:"ConnectedCosmos Launch 2", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"Second of at least four missions carrying 6 satellites for Open Cosmos' secure LEO broadband constellation, designed to provide independent and resilient connectivity infrastructure for Europe and the world using high-priority Ka-band spectrum filings by the Principality of Liechtenstein."},
-  {site:"sdsc", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Launch Vehicle Mark-3 (GSLV Mk III)", who:"Indian Space Research Organization",
-   mission:"Gaganyaan-1", orbit:"Low Earth Orbit", status:"To Be Determined",
-   brief:"First uncrewed orbital test flight of the Gaganyaan capsule."},
   {site:"and", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Spectrum", who:"Isar Aerospace",
    mission:"1 x Pelican satellite", orbit:"Sun-Synchronous Orbit", status:"To Be Determined",
    brief:"Payload consists of a single Pelican high-resolution imaging satellite for Planet Labs Germany."},
@@ -574,12 +580,6 @@ const LAUNCHES = [
    brief:"24 satellites for Rivada's internet constellation."},
   {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Rivada 10", orbit:"Polar Orbit", status:"To Be Determined",
-   brief:"24 satellites for Rivada's internet constellation."},
-  {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"Rivada 11", orbit:"Polar Orbit", status:"To Be Determined",
-   brief:"24 satellites for Rivada's internet constellation."},
-  {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"Rivada 12", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"24 satellites for Rivada's internet constellation."},
 ];
 
@@ -1017,7 +1017,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 26 Sep 2026';
+    : '<b>Snapshot</b> · 27 Sep 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
