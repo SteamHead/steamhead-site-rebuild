@@ -401,9 +401,6 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"star", net:"2026-09-28T12:48:59Z", p:"time", veh:"Starship V3", who:"SpaceX",
-   mission:"Starlink Group 31-1 (Starship Flight 14)", orbit:"Low Earth Orbit", status:"Launch Successful",
-   brief:"14th test flight of the two-stage Starship launch vehicle."},
   {site:"ccsfs", net:"2026-10-01T15:10:06Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Crew-13", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"SpaceX Crew-13 is the thirteenth crewed operational flight of a Crew Dragon spacecraft to the International Space Station as part of NASA's Commercial Crew Program."},
@@ -422,6 +419,9 @@ const LAUNCHES = [
   {site:"nar", net:"2026-10-07T03:23:00Z", p:"time", veh:"KSLV-2 Nuri", who:"Korea Aerospace Research Institute",
    mission:"NeonSat-2 to 6", orbit:"Sun-Synchronous Orbit", status:"Go for Launch",
    brief:"NeonSat-2 to 6 are part of the South Korean government's Earth observation micro-satellite constellation NeonSat (New-space Earth Observation Satellite)."},
+  {site:"wen", net:"2026-10-09T19:25:00Z", p:"time", veh:"Long March 12", who:"China Aerospace Science and Technology Corporation",
+   mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
+   brief:"Details TBD."},
   {site:"vsfb", net:"2026-10-10T16:00:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Starlink Group 15-25", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
@@ -1017,7 +1017,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 29 Sep 2026';
+    : '<b>Snapshot</b> · 30 Sep 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
