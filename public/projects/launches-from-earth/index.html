@@ -410,11 +410,8 @@ const LAUNCHES = [
   {site:"ccsfs", net:"2026-10-02T03:53:00Z", p:"time", veh:"Falcon Heavy", who:"SpaceX",
    mission:"NROL-97", orbit:"Unknown", status:"Go for Launch",
    brief:"Classified payload for the US National Reconnaissance Office."},
-  {site:"sax", net:"2026-10-05T00:00:00Z", p:"day", veh:"SR75", who:"HyImpulse",
-   mission:"Flight 2", orbit:"Suborbital", status:"To Be Determined",
-   brief:"Test flight of HyImpulse's SR75 sounding rocket."},
-  {site:"vsfb", net:"2026-10-05T08:06:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"SDA Tranche 1 Transport Layer A", orbit:"Polar Orbit", status:"To Be Confirmed",
+  {site:"vsfb", net:"2026-10-05T08:16:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"SDA Tranche 1 Transport Layer A", orbit:"Polar Orbit", status:"Go for Launch",
    brief:"Tranche 1 Transport Layer A is one of six missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Transport Layer constellation, which will provide assured, resilient, low-latency military data and connectivity worldwide to the full range of warfighter platforms from Low Earth Orbit satellites."},
   {site:"nar", net:"2026-10-07T03:23:00Z", p:"time", veh:"KSLV-2 Nuri", who:"Korea Aerospace Research Institute",
    mission:"NeonSat-2 to 6", orbit:"Sun-Synchronous Orbit", status:"Go for Launch",
@@ -422,7 +419,7 @@ const LAUNCHES = [
   {site:"wen", net:"2026-10-09T19:25:00Z", p:"time", veh:"Long March 12", who:"China Aerospace Science and Technology Corporation",
    mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
    brief:"Details TBD."},
-  {site:"vsfb", net:"2026-10-10T16:00:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+  {site:"vsfb", net:"2026-10-10T23:00:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Starlink Group 15-25", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
   {site:"sdsc", net:"2026-10-13T17:00:00Z", p:"time", veh:"GSLV Mk. II", who:"Indian Space Research Organization",
@@ -580,6 +577,9 @@ const LAUNCHES = [
    brief:"24 satellites for Rivada's internet constellation."},
   {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Rivada 11", orbit:"Polar Orbit", status:"To Be Determined",
+   brief:"24 satellites for Rivada's internet constellation."},
+  {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Rivada 12", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"24 satellites for Rivada's internet constellation."},
 ];
 
@@ -1017,7 +1017,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 30 Sep 2026';
+    : '<b>Snapshot</b> · 1 Oct 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
