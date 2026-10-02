@@ -402,15 +402,15 @@ const SITES = [
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
   {site:"ccsfs", net:"2026-10-01T15:10:06Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"Crew-13", orbit:"Low Earth Orbit", status:"Go for Launch",
+   mission:"Crew-13", orbit:"Low Earth Orbit", status:"Launch Successful",
    brief:"SpaceX Crew-13 is the thirteenth crewed operational flight of a Crew Dragon spacecraft to the International Space Station as part of NASA's Commercial Crew Program."},
-  {site:"vsfb", net:"2026-10-01T18:18:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"Transporter 18 (Dedicated SSO Rideshare)", orbit:"Sun-Synchronous Orbit", status:"Go for Launch",
+  {site:"vsfb", net:"2026-10-01T18:32:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Transporter 18 (Dedicated SSO Rideshare)", orbit:"Sun-Synchronous Orbit", status:"Launch Successful",
    brief:"Dedicated rideshare flight to a sun-synchronous orbit with dozens of small microsatellites and nanosatellites for commercial and government customers."},
-  {site:"ccsfs", net:"2026-10-02T03:53:00Z", p:"time", veh:"Falcon Heavy", who:"SpaceX",
-   mission:"NROL-97", orbit:"Unknown", status:"Go for Launch",
+  {site:"ccsfs", net:"2026-10-02T03:54:00Z", p:"time", veh:"Falcon Heavy", who:"SpaceX",
+   mission:"NROL-97", orbit:"Unknown", status:"Launch Successful",
    brief:"Classified payload for the US National Reconnaissance Office."},
-  {site:"vsfb", net:"2026-10-05T08:16:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+  {site:"vsfb", net:"2026-10-05T08:17:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"SDA Tranche 1 Transport Layer A", orbit:"Polar Orbit", status:"Go for Launch",
    brief:"Tranche 1 Transport Layer A is one of six missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Transport Layer constellation, which will provide assured, resilient, low-latency military data and connectivity worldwide to the full range of warfighter platforms from Low Earth Orbit satellites."},
   {site:"nar", net:"2026-10-07T03:23:00Z", p:"time", veh:"KSLV-2 Nuri", who:"Korea Aerospace Research Institute",
@@ -422,9 +422,9 @@ const LAUNCHES = [
   {site:"vsfb", net:"2026-10-10T23:00:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Starlink Group 15-25", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
-  {site:"sdsc", net:"2026-10-13T17:00:00Z", p:"time", veh:"GSLV Mk. II", who:"Indian Space Research Organization",
-   mission:"IRNSS-1L (NVS-03)", orbit:"Geostationary Transfer Orbit", status:"To Be Confirmed",
-   brief:"This is a replacement satellite for the Indian Regional Navigation Satellite System."},
+  {site:"ccsfs", net:"2026-10-13T10:33:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Dragon CRS-2 SpX-35", orbit:"Low Earth Orbit", status:"To Be Confirmed",
+   brief:"35th commercial resupply services mission to the International Space Station operated by SpaceX."},
   {site:"tan", net:"2026-10-19T19:41:03Z", p:"time", veh:"H3-24", who:"Mitsubishi Heavy Industries",
    mission:"Martian Moon eXplorer (MMX)", orbit:"Mars Orbit", status:"Go for Launch",
    brief:"MMX is a Japanese scientific mission to land on Phobos, one of the two moons of Mars, to collect samples before bringing them back to Earth."},
@@ -434,9 +434,9 @@ const LAUNCHES = [
   {site:"ccsfs", net:"2026-10-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Bandwagon 5 (Dedicated Mid-Inclination Rideshare)", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Dedicated rideshare flight to a mid-inclination orbit with dozens of small microsatellites and nanosatellites for commercial and government customers."},
-  {site:"ccsfs", net:"2026-10-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"Dragon CRS-2 SpX-35", orbit:"Low Earth Orbit", status:"To Be Determined",
-   brief:"35th commercial resupply services mission to the International Space Station operated by SpaceX."},
+  {site:"sdsc", net:"2026-10-31T00:00:00Z", p:"month", veh:"GSLV Mk. II", who:"Indian Space Research Organization",
+   mission:"IRNSS-1L (NVS-03)", orbit:"Geostationary Transfer Orbit", status:"To Be Determined",
+   brief:"This is a replacement satellite for the Indian Regional Navigation Satellite System."},
   {site:"jiu", net:"2026-10-31T00:00:00Z", p:"month", veh:"Long March 12A", who:"China Aerospace Science and Technology Corporation",
    mission:"Flight 2", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Second test launch of CASC/SAST’s Long March 12A rocket."},
@@ -452,12 +452,6 @@ const LAUNCHES = [
   {site:"kou", net:"2026-11-30T00:00:00Z", p:"month", veh:"Ariane 62", who:"Arianespace",
    mission:"Metop-SG B1", orbit:"Sun-Synchronous Orbit", status:"To Be Determined",
    brief:"Second of EUMETSAT's second generation of Metop weather satellites."},
-  {site:"ccsfs", net:"2026-11-30T00:00:00Z", p:"month", veh:"Falcon Heavy", who:"SpaceX",
-   mission:"Griffin Mission One", orbit:"Lunar Orbit", status:"To Be Determined",
-   brief:"Demonstration flight of the Astrobotic Griffin lander and its engines, initially contracted for the cancelled NASA VIPER (Volatiles Investigating Polar Exploration Rover) mission."},
-  {site:"alc", net:"2026-11-30T00:00:00Z", p:"month", veh:"HANBIT-Nano", who:"Innospace",
-   mission:"InnoSat-0", orbit:"Low Earth Orbit", status:"To Be Determined",
-   brief:"Innospace's first in-house test satellite, 'InnoSat-0', will test various technologies for future development of satellites by Innospace themselves."},
   {site:"sdsc", net:"2026-11-30T00:00:00Z", p:"month", veh:"Launch Vehicle Mark-3 (GSLV Mk III)", who:"Indian Space Research Organization",
    mission:"Gaganyaan-1", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"First uncrewed orbital test flight of the Gaganyaan capsule."},
@@ -479,6 +473,9 @@ const LAUNCHES = [
   {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Telesat Lightspeed 1", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Up to 18 satellites manufactured by MDA for Canadian satellite operator Telesat's Lightspeed constellation."},
+  {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"month", veh:"Falcon Heavy", who:"SpaceX",
+   mission:"Griffin Mission One", orbit:"Lunar Orbit", status:"To Be Determined",
+   brief:"Demonstration flight of the Astrobotic Griffin lander and its engines, initially contracted for the cancelled NASA VIPER (Volatiles Investigating Polar Exploration Rover) mission."},
   {site:"sdsc", net:"2026-12-31T00:00:00Z", p:"month", veh:"Launch Vehicle Mark-3 (GSLV Mk III)", who:"Indian Space Research Organization",
    mission:"GSAT-32 (GSAT-N3)", orbit:"Geostationary Transfer Orbit", status:"To Be Determined",
    brief:"GSAT-32 is a geostationary communications satellite for the Indian Space Research Organization (ISRO)."},
@@ -580,6 +577,9 @@ const LAUNCHES = [
    brief:"24 satellites for Rivada's internet constellation."},
   {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Rivada 12", orbit:"Polar Orbit", status:"To Be Determined",
+   brief:"24 satellites for Rivada's internet constellation."},
+  {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Rivada 2", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"24 satellites for Rivada's internet constellation."},
 ];
 
@@ -1017,7 +1017,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 1 Oct 2026';
+    : '<b>Snapshot</b> · 2 Oct 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
