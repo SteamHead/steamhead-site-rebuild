@@ -401,15 +401,6 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"ccsfs", net:"2026-10-01T15:10:06Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"Crew-13", orbit:"Low Earth Orbit", status:"Launch Successful",
-   brief:"SpaceX Crew-13 is the thirteenth crewed operational flight of a Crew Dragon spacecraft to the International Space Station as part of NASA's Commercial Crew Program."},
-  {site:"vsfb", net:"2026-10-01T18:32:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"Transporter 18 (Dedicated SSO Rideshare)", orbit:"Sun-Synchronous Orbit", status:"Launch Successful",
-   brief:"Dedicated rideshare flight to a sun-synchronous orbit with dozens of small microsatellites and nanosatellites for commercial and government customers."},
-  {site:"ccsfs", net:"2026-10-02T03:54:00Z", p:"time", veh:"Falcon Heavy", who:"SpaceX",
-   mission:"NROL-97", orbit:"Unknown", status:"Launch Successful",
-   brief:"Classified payload for the US National Reconnaissance Office."},
   {site:"vsfb", net:"2026-10-05T08:17:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"SDA Tranche 1 Transport Layer A", orbit:"Polar Orbit", status:"Go for Launch",
    brief:"Tranche 1 Transport Layer A is one of six missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Transport Layer constellation, which will provide assured, resilient, low-latency military data and connectivity worldwide to the full range of warfighter platforms from Low Earth Orbit satellites."},
@@ -422,8 +413,8 @@ const LAUNCHES = [
   {site:"vsfb", net:"2026-10-10T23:00:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Starlink Group 15-25", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
-  {site:"ccsfs", net:"2026-10-13T10:33:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"Dragon CRS-2 SpX-35", orbit:"Low Earth Orbit", status:"To Be Confirmed",
+  {site:"ccsfs", net:"2026-10-13T10:33:44Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Dragon CRS-2 SpX-35", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"35th commercial resupply services mission to the International Space Station operated by SpaceX."},
   {site:"tan", net:"2026-10-19T19:41:03Z", p:"time", veh:"H3-24", who:"Mitsubishi Heavy Industries",
    mission:"Martian Moon eXplorer (MMX)", orbit:"Mars Orbit", status:"Go for Launch",
@@ -580,6 +571,15 @@ const LAUNCHES = [
    brief:"24 satellites for Rivada's internet constellation."},
   {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Rivada 2", orbit:"Polar Orbit", status:"To Be Determined",
+   brief:"24 satellites for Rivada's internet constellation."},
+  {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Rivada 3", orbit:"Polar Orbit", status:"To Be Determined",
+   brief:"24 satellites for Rivada's internet constellation."},
+  {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Rivada 4", orbit:"Polar Orbit", status:"To Be Determined",
+   brief:"24 satellites for Rivada's internet constellation."},
+  {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Rivada 5", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"24 satellites for Rivada's internet constellation."},
 ];
 
@@ -1017,7 +1017,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 2 Oct 2026';
+    : '<b>Snapshot</b> · 3 Oct 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
