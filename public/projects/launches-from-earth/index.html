@@ -401,7 +401,7 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"vsfb", net:"2026-10-05T08:17:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+  {site:"vsfb", net:"2026-10-06T08:17:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"SDA Tranche 1 Transport Layer A", orbit:"Polar Orbit", status:"Go for Launch",
    brief:"Tranche 1 Transport Layer A is one of six missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Transport Layer constellation, which will provide assured, resilient, low-latency military data and connectivity worldwide to the full range of warfighter platforms from Low Earth Orbit satellites."},
   {site:"nar", net:"2026-10-07T03:23:00Z", p:"time", veh:"KSLV-2 Nuri", who:"Korea Aerospace Research Institute",
@@ -443,6 +443,9 @@ const LAUNCHES = [
   {site:"kou", net:"2026-11-30T00:00:00Z", p:"month", veh:"Ariane 62", who:"Arianespace",
    mission:"Metop-SG B1", orbit:"Sun-Synchronous Orbit", status:"To Be Determined",
    brief:"Second of EUMETSAT's second generation of Metop weather satellites."},
+  {site:"ccsfs", net:"2026-11-30T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Cygnus CRS-2 NG-25", orbit:"Low Earth Orbit", status:"To Be Determined",
+   brief:"This is the 25th flight of the Orbital ATK's uncrewed resupply spacecraft Cygnus and its 24th flight to the International Space Station under the Commercial Resupply Services contract with NASA."},
   {site:"sdsc", net:"2026-11-30T00:00:00Z", p:"month", veh:"Launch Vehicle Mark-3 (GSLV Mk III)", who:"Indian Space Research Organization",
    mission:"Gaganyaan-1", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"First uncrewed orbital test flight of the Gaganyaan capsule."},
@@ -452,9 +455,6 @@ const LAUNCHES = [
   {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"month", veh:"Atlas V N22", who:"United Launch Alliance",
    mission:"Starliner-1", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Starliner-1 is the first operational flight of a Starliner spacecraft to the International Space Station as part of NASA's Commercial Crew Program."},
-  {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"Cygnus CRS-2 NG-25", orbit:"Low Earth Orbit", status:"To Be Determined",
-   brief:"This is the 25th flight of the Orbital ATK's uncrewed resupply spacecraft Cygnus and its 24th flight to the International Space Station under the Commercial Resupply Services contract with NASA."},
   {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"SDA Tranche 2 Transport Layer D", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"Classified mission launched by the Space Development Agency (SDA) for Tranche 2 Transport Layer."},
@@ -1017,7 +1017,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 4 Oct 2026';
+    : '<b>Snapshot</b> · 5 Oct 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
