@@ -401,8 +401,8 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"nar", net:"2026-10-07T03:23:00Z", p:"time", veh:"KSLV-2 Nuri", who:"Korea Aerospace Research Institute",
-   mission:"NeonSat-2 to 6", orbit:"Sun-Synchronous Orbit", status:"Go for Launch",
+  {site:"nar", net:"2026-10-07T03:25:00Z", p:"time", veh:"KSLV-2 Nuri", who:"Korea Aerospace Research Institute",
+   mission:"NeonSat-2 to 6", orbit:"Sun-Synchronous Orbit", status:"Launch Successful",
    brief:"NeonSat-2 to 6 are part of the South Korean government's Earth observation micro-satellite constellation NeonSat (New-space Earth Observation Satellite)."},
   {site:"vsfb", net:"2026-10-08T07:54:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"SDA Tranche 1 Transport Layer A", orbit:"Polar Orbit", status:"Go for Launch",
@@ -455,9 +455,6 @@ const LAUNCHES = [
   {site:"sdsc", net:"2026-11-30T00:00:00Z", p:"month", veh:"PSLV XL", who:"Indian Space Research Organization",
    mission:"TDS-01", orbit:"Geostationary Transfer Orbit", status:"To Be Determined",
    brief:"TDS-01 (Technology Demonstration Satellite-01) is an Indian geostationary orbit technology demonstration satellite carrying payloads for the Indian Space Research Organisation (ISRO)’s Institute of Plasma Research, Gandhinagar and the CSIR-CEERI, Pilani."},
-  {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"month", veh:"Atlas V N22", who:"United Launch Alliance",
-   mission:"Starliner-1", orbit:"Low Earth Orbit", status:"To Be Determined",
-   brief:"Starliner-1 is the first operational flight of a Starliner spacecraft to the International Space Station as part of NASA's Commercial Crew Program."},
   {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"SDA Tranche 2 Transport Layer D", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"Classified mission launched by the Space Development Agency (SDA) for Tranche 2 Transport Layer."},
@@ -512,6 +509,9 @@ const LAUNCHES = [
   {site:"star", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Starship V3", who:"SpaceX",
    mission:"Flight 15", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"15th test flight of the two-stage Starship launch vehicle and 4th flight of Starship V3."},
+  {site:"esr", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Themis Demonstrator", who:"European Space Agency",
+   mission:"T1H-1", orbit:"Suborbital", status:"To Be Determined",
+   brief:"First low-altitude hop test of a Themis demonstrator, with a targeted altitude up to 100 m."},
   {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Vulcan VC4L", who:"United Launch Alliance",
    mission:"Dream Chaser CRS 2 Flight 1", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"First flight of the Dream Chaser Spaceplane, on a free-flying mission in Low Earth Orbit."},
@@ -1017,7 +1017,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 6 Oct 2026';
+    : '<b>Snapshot</b> · 7 Oct 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
