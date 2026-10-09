@@ -407,18 +407,21 @@ const LAUNCHES = [
   {site:"vsfb", net:"2026-10-10T07:29:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"SDA Tranche 1 Transport Layer A", orbit:"Polar Orbit", status:"Go for Launch",
    brief:"Tranche 1 Transport Layer A is one of six missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Transport Layer constellation, which will provide assured, resilient, low-latency military data and connectivity worldwide to the full range of warfighter platforms from Low Earth Orbit satellites."},
-  {site:"vsfb", net:"2026-10-11T23:00:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+  {site:"vsfb", net:"2026-10-12T23:00:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Starlink Group 15-25", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
   {site:"ccsfs", net:"2026-10-13T10:33:44Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Dragon CRS-2 SpX-35", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"35th commercial resupply services mission to the International Space Station operated by SpaceX."},
   {site:"vsfb", net:"2026-10-15T23:44:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"USSF-xxx (\"TH-2\")", orbit:"Polar Orbit", status:"To Be Confirmed",
-   brief:"Classified mission for the United States Space Force."},
+   mission:"USSF-481", orbit:"Polar Orbit", status:"Go for Launch",
+   brief:"A classified mission for the United States Space Force."},
   {site:"tan", net:"2026-10-19T19:41:03Z", p:"time", veh:"H3-24", who:"Mitsubishi Heavy Industries",
    mission:"Martian Moon eXplorer (MMX)", orbit:"Mars Orbit", status:"Go for Launch",
    brief:"MMX is a Japanese scientific mission to land on Phobos, one of the two moons of Mars, to collect samples before bringing them back to Earth."},
+  {site:"ccsfs", net:"2026-10-29T00:00:00Z", p:"day", veh:"Vulcan VC6L", who:"United Launch Alliance",
+   mission:"Amazon Leo (LV-01)", orbit:"Low Earth Orbit", status:"To Be Determined",
+   brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon."},
   {site:"kou", net:"2026-10-31T00:00:00Z", p:"month", veh:"Ariane 64 Block 2", who:"Arianespace",
    mission:"Amazon Leo (LE-04)", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon."},
@@ -434,9 +437,6 @@ const LAUNCHES = [
   {site:"sdsc", net:"2026-10-31T00:00:00Z", p:"month", veh:"SSLV", who:"Indian Space Research Organization",
    mission:"AayulSAT-1A & others", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Ride-share launch of multiple satellites, including the in-orbit refueling demonstration satellite AayulSAT-1A from OrbitAID Aerospace."},
-  {site:"ccsfs", net:"2026-10-31T00:00:00Z", p:"month", veh:"Vulcan VC6L", who:"United Launch Alliance",
-   mission:"Amazon Leo (LV-01)", orbit:"Low Earth Orbit", status:"To Be Determined",
-   brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon."},
   {site:"bai", net:"2026-11-24T05:03:00Z", p:"time", veh:"Soyuz 2.1b", who:"Russian Federal Space Agency (ROSCOSMOS)",
    mission:"Progress MS-36 (97P)", orbit:"Low Earth Orbit", status:"To Be Confirmed",
    brief:"Progress resupply mission to the International Space Station."},
@@ -1017,7 +1017,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 8 Oct 2026';
+    : '<b>Snapshot</b> · 9 Oct 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
