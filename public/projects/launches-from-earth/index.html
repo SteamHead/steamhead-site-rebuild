@@ -401,11 +401,11 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"wen", net:"2026-10-09T19:25:00Z", p:"time", veh:"Long March 12", who:"China Aerospace Science and Technology Corporation",
-   mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
-   brief:"Details TBD."},
-  {site:"vsfb", net:"2026-10-10T07:29:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"SDA Tranche 1 Transport Layer A", orbit:"Polar Orbit", status:"Go for Launch",
+  {site:"wen", net:"2026-10-09T19:27:00Z", p:"time", veh:"Long March 12", who:"China Aerospace Science and Technology Corporation",
+   mission:"SatNet LEO Group 27", orbit:"Low Earth Orbit", status:"Launch Successful",
+   brief:"A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group."},
+  {site:"vsfb", net:"2026-10-10T07:39:44Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"SDA Tranche 1 Transport Layer A", orbit:"Polar Orbit", status:"Launch in Flight",
    brief:"Tranche 1 Transport Layer A is one of six missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Transport Layer constellation, which will provide assured, resilient, low-latency military data and connectivity worldwide to the full range of warfighter platforms from Low Earth Orbit satellites."},
   {site:"vsfb", net:"2026-10-12T23:00:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Starlink Group 15-25", orbit:"Low Earth Orbit", status:"Go for Launch",
@@ -417,7 +417,7 @@ const LAUNCHES = [
    mission:"USSF-481", orbit:"Polar Orbit", status:"Go for Launch",
    brief:"A classified mission for the United States Space Force."},
   {site:"tan", net:"2026-10-19T19:41:03Z", p:"time", veh:"H3-24", who:"Mitsubishi Heavy Industries",
-   mission:"Martian Moon eXplorer (MMX)", orbit:"Mars Orbit", status:"Go for Launch",
+   mission:"Martian Moons eXploration (MMX)", orbit:"Mars Orbit", status:"Go for Launch",
    brief:"MMX is a Japanese scientific mission to land on Phobos, one of the two moons of Mars, to collect samples before bringing them back to Earth."},
   {site:"ccsfs", net:"2026-10-29T00:00:00Z", p:"day", veh:"Vulcan VC6L", who:"United Launch Alliance",
    mission:"Amazon Leo (LV-01)", orbit:"Low Earth Orbit", status:"To Be Determined",
@@ -1017,7 +1017,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 9 Oct 2026';
+    : '<b>Snapshot</b> · 10 Oct 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
