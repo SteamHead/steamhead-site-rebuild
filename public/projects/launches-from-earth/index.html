@@ -401,12 +401,6 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"wen", net:"2026-10-09T19:27:00Z", p:"time", veh:"Long March 12", who:"China Aerospace Science and Technology Corporation",
-   mission:"SatNet LEO Group 27", orbit:"Low Earth Orbit", status:"Launch Successful",
-   brief:"A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group."},
-  {site:"vsfb", net:"2026-10-10T07:39:44Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"SDA Tranche 1 Transport Layer A", orbit:"Polar Orbit", status:"Launch in Flight",
-   brief:"Tranche 1 Transport Layer A is one of six missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Transport Layer constellation, which will provide assured, resilient, low-latency military data and connectivity worldwide to the full range of warfighter platforms from Low Earth Orbit satellites."},
   {site:"vsfb", net:"2026-10-12T23:00:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Starlink Group 15-25", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
@@ -467,6 +461,9 @@ const LAUNCHES = [
   {site:"sdsc", net:"2026-12-31T00:00:00Z", p:"month", veh:"Launch Vehicle Mark-3 (GSLV Mk III)", who:"Indian Space Research Organization",
    mission:"GSAT-32 (GSAT-N3)", orbit:"Geostationary Transfer Orbit", status:"To Be Determined",
    brief:"GSAT-32 is a geostationary communications satellite for the Indian Space Research Organization (ISRO)."},
+  {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"month", veh:"New Glenn", who:"Blue Origin",
+   mission:"Blue Ring-1", orbit:"Geostationary Transfer Orbit", status:"To Be Determined",
+   brief:"The first mission of Blue Ring, Blue Origin's all-in-one, high-powered hybrid solar electric and chemical propelled spacecraft, will test the spacecraft's operations in Geostationary Transfer Orbit (GTO), as well as subsequent operations after reaching Geostationary Orbit (GEO)."},
   {site:"kou", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Ariane 62", who:"Arianespace",
    mission:"Galileo L15 (FOC FM28 & FM31)", orbit:"Medium Earth Orbit", status:"To Be Determined",
    brief:"Payload consists of two satellites for Europe's Galileo navigation system."},
@@ -580,6 +577,9 @@ const LAUNCHES = [
    brief:"24 satellites for Rivada's internet constellation."},
   {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Rivada 5", orbit:"Polar Orbit", status:"To Be Determined",
+   brief:"24 satellites for Rivada's internet constellation."},
+  {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Rivada 6", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"24 satellites for Rivada's internet constellation."},
 ];
 
@@ -1017,7 +1017,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 10 Oct 2026';
+    : '<b>Snapshot</b> · 11 Oct 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
