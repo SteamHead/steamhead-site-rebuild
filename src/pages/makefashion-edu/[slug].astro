@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import MFEduNav from '../../components/MFEduNav.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -15,6 +14,10 @@ const sectionLabel = {
   'run-the-program': 'Run the Program',
   'about': 'MakeFashion Edu',
 }[page.data.section];
+// Only Runway Shows has an index page to link back to
+const sectionHref = page.data.section === 'runway-shows' && page.id !== 'runwayshows'
+  ? '/makefashion-edu/runwayshows/'
+  : undefined;
 ---
 
 <BaseLayout
@@ -25,22 +28,17 @@ const sectionLabel = {
   <section class="hero hero--short" aria-label={page.data.title}>
     <div class="container hero__content">
       <p class="mfedu-crumb">
-        <a href="/makefashion-edu/">MakeFashion Edu</a> / {sectionLabel}
+        <a href="/makefashion-edu/">MakeFashion Edu</a> / {sectionHref ? <a href={sectionHref}>{sectionLabel}</a> : sectionLabel}
       </p>
       <h1>{page.data.title}</h1>
     </div>
   </section>
 
   <section class="section" aria-label="Page content">
-    <div class:list={['container', { 'mfedu-layout': page.data.sidebar }]}>
+    <div class="container">
       <article class="mfedu-body">
         <Content />
       </article>
-      {page.data.sidebar && (
-        <aside>
-          <MFEduNav currentSlug={page.id} />
-        </aside>
-      )}
     </div>
   </section>
 
@@ -60,18 +58,6 @@ const sectionLabel = {
     color: var(--color-yellow);
   }
 
-  .mfedu-layout {
-    display: grid;
-    grid-template-columns: 1fr 260px;
-    gap: var(--space-lg);
-    align-items: start;
-  }
-  @media (max-width: 900px) {
-    .mfedu-layout { grid-template-columns: 1fr; }
-    /* nav moves below content on small screens */
-    .mfedu-layout aside { order: 2; }
-  }
-
   .mfedu-body :global(h2) { margin-top: var(--space-md); margin-bottom: var(--space-xs); }
   .mfedu-body :global(h3) { margin-top: var(--space-md); margin-bottom: var(--space-xs); }
   .mfedu-body :global(p)  { margin-bottom: var(--space-sm); }
@@ -80,6 +66,8 @@ const sectionLabel = {
 
   /* Gallery treatment: any paragraph that is a run of images becomes a grid */
   .mfedu-body :global(p:has(> img)) {
+    /* galleries span the full content width; prose keeps the global 68ch measure */
+    max-width: none;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     gap: var(--space-sm);
