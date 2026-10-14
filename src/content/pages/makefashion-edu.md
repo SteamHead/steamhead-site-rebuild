@@ -69,10 +69,10 @@ getintouch_text: >
 publishing:
   - name: Instagram
     url: https://instagram.com/MakeFashionEdu
-    image: /images/mfedu/7V4A8258.jpg
+    image: /images/mfedu/2018/06/7V4A8307.jpg
   - name: YouTube
     url: https://www.youtube.com/steamheadproductions
-    image: /images/2019/07/runway-full.jpg
+    image: /images/mfedu/2019/06/1080-2945.jpg
   - name: Facebook
     url: https://www.facebook.com/MakeFashionEdu/
     image: /images/2023/06/mfedu.jpg

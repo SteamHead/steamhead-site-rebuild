@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getEntry } from 'astro:content';
+import { getEntry, getCollection } from 'astro:content';
 import { marked } from 'marked';
 
 const entry = await getEntry('pages', 'makefashion-edu');
@@ -16,12 +16,31 @@ const {
 
 const md = (s: string) => marked.parse(s ?? '');
 
+/* Student pieces shot on black — shows the "engineering + fashion" result
+   rather than repeating the classroom photos used in The Classes below. */
 const engineeringGrid = [
-  { src: "/images/mfedu/1206673384-1-scaled.jpg", alt: "Students collaborating on a fashion tech piece" },
-  { src: "/images/mfedu/IMG_8816.jpg",            alt: "Student work in progress" },
-  { src: "/images/mfedu/IMG_1041.jpg",            alt: "MakeFashion Edu student at work" },
-  { src: "/images/mfedu/Shaw-1170582.jpg",        alt: "MakeFashion Edu runway showcase" },
+  { src: "/images/mfedu/2022/06/proj_changeyouraltitude01-scaled.jpg", alt: "Student in red plaid outfit with warm LED lights and illuminated backpack" },
+  { src: "/images/mfedu/2022/06/proj_octo01-scaled.jpg",               alt: "Student wearing octopus costume with glowing blue and pink LED tentacles" },
+  { src: "/images/mfedu/2022/06/proj_moodmusic04-scaled.jpg",          alt: "Student holding illuminated guitar with star and moon design and glowing edge lights" },
+  { src: "/images/mfedu/2022/06/proj_keepearthbeautiful09-scaled.jpg", alt: "Student in dress with large green skirt decorated with glowing multicolor LED hem" },
 ];
+
+/* Runway seasons, grouped by city, straight from the mfedu collection so
+   the list can't drift from the season pages that actually exist. Titles
+   are "<City> <Year>[ S<n>]". */
+const seasons = (await getCollection('mfedu'))
+  .filter(p => p.data.section === 'runway-shows' && /\d{4}/.test(p.data.title))
+  .map(p => ({
+    city:  p.data.title.replace(/\s+\d{4}.*$/, ''),
+    label: p.data.title.replace(/^.*?(\d{4})(.*)$/, '$1$2').trim(),
+    year:  Number(p.data.title.match(/\d{4}/)![0]),
+    href:  `/makefashion-edu/${p.id}/`,
+  }))
+  .sort((a, b) => a.year - b.year || a.label.localeCompare(b.label));
+const cities = [...new Set(seasons.map(s => s.city))]
+  .map(city => ({ city, shows: seasons.filter(s => s.city === city) }))
+  .sort((a, b) => a.shows[0].year - b.shows[0].year);
+const firstYear = seasons[0]?.year;
 
 const directory = [
   { title: "Runway Shows",    href: "/makefashion-edu/runwayshows/",             text: "Every season's STEAM runway, from Shenzhen to Tucson." },
@@ -87,19 +106,25 @@ const directory = [
   <!-- =====================================================================
        ENGINEERING + FASHION
        ===================================================================== -->
-  <section class="section" aria-label="Engineering and Fashion">
+  <section class="section" aria-labelledby="mfedu-eng-heading">
     <div class="container">
       <div class="two-col">
         <div>
-          <h2>Engineering + Fashion</h2>
+          <h2 id="mfedu-eng-heading">Engineering + Fashion</h2>
           <hr class="accent-rule" />
-          <div set:html={md(engineering_text)} />
+          <div class="prose-lead" set:html={md(engineering_text)} />
         </div>
-        <div class="photo-grid">
-          {engineeringGrid.map(img => (
-            <img src={img.src} alt={img.alt} loading="lazy" />
-          ))}
-        </div>
+        <figure class="showcase">
+          <div class="showcase__grid">
+            {engineeringGrid.map(img => (
+              <img src={img.src} alt={img.alt} loading="lazy" />
+            ))}
+          </div>
+          <figcaption>
+            Student pieces from the Tucson runways.
+            <a href="/makefashion-edu/runwayshows/">See every show →</a>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -107,36 +132,77 @@ const directory = [
   <!-- =====================================================================
        HERITAGE — the origin story
        Same wording as reference/makefashion-ca-edu-heritage-copy.md; the
-       two pages must tell the same story in the same words.
+       two pages must tell the same story in the same words. The aside only
+       restates facts already in that text — don't add new claims there.
        DRAFT: origin story needs Ben's review/expansion
        ===================================================================== -->
-  <section class="section section--alt" aria-label="Our story">
+  <section class="section section--alt" aria-labelledby="mfedu-heritage-heading">
     <div class="container">
-      <h2>Born in Shenzhen</h2>
+      <h2 id="mfedu-heritage-heading">Born in Shenzhen</h2>
       <hr class="accent-rule" />
-      <div class="heritage-body mt-md" set:html={md(heritage_text)} />
+      <div class="heritage mt-md">
+        <div class="heritage__body" set:html={md(heritage_text)} />
+        <aside class="heritage__aside" aria-label="Key moments">
+          <ol class="timeline" role="list">
+            <li>
+              <span class="timeline__when">2015</span>
+              <span class="timeline__what">Carrie Leung and James Simpson see the MakeFashion runway at the Shenzhen Maker Faire.</span>
+            </li>
+            <li>
+              <span class="timeline__when">Next</span>
+              <span class="timeline__what">Shannon and Maria Hoover advise Carrie on building the program around the runway.</span>
+            </li>
+            <li>
+              <span class="timeline__when">Today</span>
+              <span class="timeline__what">MakeFashion Edu's programs, courses, and runway events are run by SteamHead.</span>
+            </li>
+          </ol>
+          <a href="https://makefashion.ca" class="heritage__link" target="_blank" rel="noopener">
+            Visit MakeFashion <span aria-hidden="true">↗</span>
+          </a>
+        </aside>
+      </div>
     </div>
   </section>
 
   <!-- =====================================================================
        THE RUNWAY
        ===================================================================== -->
-  <section class="section" aria-label="The Runway">
+  <section class="section" aria-labelledby="mfedu-runway-heading">
     <div class="container">
       <div class="two-col two-col--reverse">
         <img
+          class="runway-photo"
           src="/images/2024/02/shenzhen2019_02.jpg"
-          alt="MakeFashion Edu runway show in Shenzhen 2019"
+          alt="Student's light-up solar-system hoop skirt on the Shenzhen 2019 runway"
+          loading="lazy"
         />
         <div>
-          <h2>The Runway</h2>
+          <h2 id="mfedu-runway-heading">The Runway</h2>
           <hr class="accent-rule" />
           <p>{runway_text}</p>
-          <p>
-            Every season's show is captured in a full gallery publication —
-            find them all on The Shelf.
-          </p>
-          <a href="/theshelf/" class="btn btn--outline mt-md">See the Season Books</a>
+          {seasons.length > 0 && (
+            <p class="runway-stats">
+              <strong>{seasons.length}</strong> runway shows ·{' '}
+              <strong>{cities.length}</strong> cities · since <strong>{firstYear}</strong>
+            </p>
+          )}
+          <ul class="runway-cities" role="list">
+            {cities.map(c => (
+              <li>
+                <span class="runway-cities__city">{c.city}</span>
+                <span class="runway-cities__years">
+                  {c.shows.map(show => (
+                    <a href={show.href} aria-label={`${c.city} ${show.label}`}>{show.label}</a>
+                  ))}
+                </span>
+              </li>
+            ))}
+          </ul>
+          <div class="cta-row">
+            <a href="/makefashion-edu/runwayshows/" class="btn btn--outline">Browse the Runway Shows</a>
+            <a href="/theshelf/" class="text-link">Season books on The Shelf →</a>
+          </div>
         </div>
       </div>
     </div>
@@ -145,27 +211,38 @@ const directory = [
   <!-- =====================================================================
        THE CLASSES
        ===================================================================== -->
-  <section class="section section--alt" aria-label="The Classes">
+  <section class="section section--alt" aria-labelledby="mfedu-classes-heading">
     <div class="container">
       <div class="two-col">
         <div>
-          <h2>The Classes</h2>
+          <h2 id="mfedu-classes-heading">The Classes</h2>
           <hr class="accent-rule" />
           <p>{classes_text}</p>
           <p>
             Ready-to-teach course guides — including the full-semester guide and
             Simple Circuits activities — are free on The Shelf.
           </p>
-          <a href="/theshelf/" class="btn btn--outline mt-md">Get the Course Guides</a>
+          <div class="cta-row">
+            <a href="/theshelf/" class="btn btn--outline">Get the Course Guides</a>
+            <a href="/makefashion-edu/mfedu-program-benefits/" class="text-link">How to run the program →</a>
+          </div>
         </div>
-        <div class="img-pair">
+        <div class="class-photos">
           <img
+            class="class-photos__main"
             src="/images/2024/01/mfedu_landing02.jpg"
-            alt="MakeFashion Edu classroom activity"
+            alt="Teacher helping a student fit a folded-paper dragon headpiece"
+            loading="lazy"
           />
           <img
             src="/images/2024/01/mfedu_landing03.jpg"
-            alt="Students presenting their MakeFashion projects"
+            alt="Student wiring a circuit onto a cardboard cutout"
+            loading="lazy"
+          />
+          <img
+            src="/images/mfedu/IMG_8823.jpg"
+            alt="Two students working together at a classroom table"
+            loading="lazy"
           />
         </div>
       </div>
@@ -173,52 +250,75 @@ const directory = [
   </section>
 
   <!-- =====================================================================
-       ONLINE COURSE — primary CTA
+       ONLINE COURSES — primary CTA. Mirrors The Shelf: the 2026 edition is
+       the recommended start, the 2022 original stays available.
        ===================================================================== -->
-  <section class="section cta-band" aria-label="Online course">
+  <section class="section" aria-labelledby="mfedu-course-heading">
     <div class="container">
-      <h2>Bring FashionTech to Your Classroom</h2>
-      <hr class="accent-rule" />
-      <p class="mt-md">
-        The MakeFashion Edu Online Course walks educators and students through
-        the whole journey — design thinking, electronics, and fashion tech —
-        at your own pace, no experience required.
-      </p>
-      <a href="/courses/mfedu-intro/" class="btn btn--primary mt-md">Start the Online Course</a>
-    </div>
-  </section>
-
-  <!-- =====================================================================
-       MAKEFASHION EDU PUBLISHING
-       ===================================================================== -->
-  <section class="section section--alt" aria-label="MakeFashion Edu Publishing">
-    <div class="container">
-      <h2>MakeFashion Edu Publishing</h2>
-      <hr class="accent-rule" />
-      <div class="pub-grid mt-md">
-        {(publishing ?? []).map((item: { name: string; url: string; image: string }) => (
-          <a href={item.url} target="_blank" rel="noopener" class="pub-card">
-            <img src={item.image} alt={`MakeFashion Edu on ${item.name}`} loading="lazy" />
-            <span>{item.name}</span>
-          </a>
-        ))}
+      <div class="course-panel">
+        <p class="kicker">Free · Self-paced · No experience required</p>
+        <h2 id="mfedu-course-heading">Bring FashionTech to Your Classroom</h2>
+        <hr class="accent-rule" />
+        <p>
+          The MakeFashion Edu Online Course walks educators and students through
+          the whole journey — design thinking, electronics, and fashion tech —
+          at your own pace, no experience required.
+        </p>
+        <img
+          class="course-panel__arc"
+          src="/images/courses/mfedu-2026/project-arc.svg"
+          alt="The course arc: Find Your Story, Research It, Design It, Light It Up, Build It, Show It"
+          loading="lazy"
+        />
+        <ul class="course-options" role="list">
+          <li class="course-option course-option--primary">
+            <span class="course-option__tag">2026 edition</span>
+            <h3>Advocacy by Design</h3>
+            <p>One project, start to finish: find a cause, fact-check it, design for it, wire it with light — and walk it down a runway.</p>
+            <a href="/courses/mfedu-2026/" class="btn btn--primary">Start the 2026 Course</a>
+          </li>
+          <li class="course-option">
+            <span class="course-option__tag">2022 original</span>
+            <h3>Introduction Course</h3>
+            <p>The original course: lights, circuits, and recycled materials used to tell advocacy stories, with printable worksheets.</p>
+            <a href="/courses/mfedu-intro/" class="btn btn--outline">Open the Original Course</a>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
 
   <!-- =====================================================================
-       GET IN TOUCH
+       COMMUNITY — get in touch + where MakeFashion Edu publishes
        ===================================================================== -->
-  <section class="section" aria-label="Get in touch">
+  <section class="section section--alt" aria-labelledby="mfedu-touch-heading">
     <div class="container">
-      <h2>Get In Touch</h2>
-      <hr class="accent-rule" />
-      <div class="mt-md" set:html={md(getintouch_text)} />
-      <div class="cta-row">
-        <a href="https://www.facebook.com/groups/steamhead.space" class="btn btn--primary" target="_blank" rel="noopener">
-          Join the Facebook Group
-        </a>
-        <a href="/contact-us/" class="btn btn--outline">Contact Us</a>
+      <div class="two-col community">
+        <div>
+          <h2 id="mfedu-touch-heading">Get In Touch</h2>
+          <hr class="accent-rule" />
+          <div class="mt-md" set:html={md(getintouch_text)} />
+          <div class="cta-row">
+            <a href="https://www.facebook.com/groups/steamhead.space" class="btn btn--primary" target="_blank" rel="noopener">
+              Join the Facebook Group
+            </a>
+            <a href="/contact-us/" class="btn btn--outline">Contact Us</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="community__heading">Follow MakeFashion Edu</h3>
+          <ul class="pub-list" role="list">
+            {(publishing ?? []).map((item: { name: string; url: string; image: string }) => (
+              <li>
+                <a href={item.url} target="_blank" rel="noopener" class="pub-card">
+                  <img src={item.image} alt="" loading="lazy" />
+                  <span class="pub-card__name">{item.name}</span>
+                  <span class="pub-card__arrow" aria-hidden="true">↗</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -364,61 +464,275 @@ const directory = [
     .mfedu-dir__title { font-size: var(--text-base); }
   }
 
-  .photo-grid {
+  /* ------- Shared bits ------- */
+  .cta-row {
+    display: flex;
+    gap: var(--space-sm) var(--space-md);
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: var(--space-md);
+  }
+  .text-link { white-space: nowrap; }
+  .kicker {
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xs);
+  }
+
+  /* ------- Engineering + Fashion ------- */
+  .showcase { margin: 0; }
+  .showcase__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-xs);
+    background: var(--color-black);
+    padding: var(--space-xs);
+    border-radius: var(--radius);
+  }
+  .showcase__grid img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+  }
+  .showcase figcaption {
+    margin-top: var(--space-xs);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+  @media (min-width: 821px) {
+    .showcase__grid { grid-template-columns: 1fr 1fr; }
+    .showcase__grid img { aspect-ratio: 1 / 1; object-position: center 20%; }
+  }
+
+  /* ------- Heritage ------- */
+  .heritage {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: var(--space-lg);
+    align-items: start;
+  }
+  .heritage__body :global(p) { max-width: 66ch; }
+  .heritage__aside {
+    position: sticky;
+    top: var(--space-md);
+    background: var(--color-white);
+    border-top: 4px solid var(--color-init-mfedu);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-card);
+    padding: var(--space-md);
+  }
+  .timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .timeline li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    position: relative;
+    padding: 0 0 var(--space-sm) var(--space-sm);
+    margin: 0;
+    border-left: 2px solid var(--color-border);
+  }
+  .timeline li:last-child { padding-bottom: 0; border-left-color: transparent; }
+  .timeline li::before {
+    content: "";
+    position: absolute;
+    left: -7px;
+    top: 0.3rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--color-yellow);
+  }
+  .timeline__when {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    color: var(--color-heading);
+    line-height: 1.2;
+  }
+  .timeline__what { font-size: var(--text-sm); }
+  .heritage__link {
+    display: inline-block;
+    margin-top: var(--space-md);
+    font-size: var(--text-sm);
+  }
+  @media (max-width: 900px) {
+    .heritage { grid-template-columns: 1fr; gap: var(--space-md); }
+    .heritage__aside { position: static; }
+  }
+
+  /* ------- Runway ------- */
+  .runway-photo {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+  .runway-stats {
+    margin-top: var(--space-md);
+    font-size: var(--text-sm);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+  .runway-stats strong {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    letter-spacing: 0;
+    color: var(--color-heading);
+  }
+  .runway-cities {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid var(--color-border);
+  }
+  .runway-cities li {
+    display: grid;
+    grid-template-columns: 8.5rem 1fr;
+    gap: var(--space-xs);
+    align-items: baseline;
+    padding-block: 0.45rem;
+    margin: 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: var(--text-sm);
+  }
+  .runway-cities__city {
+    font-weight: 700;
+    color: var(--color-heading);
+  }
+  .runway-cities__years {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.9rem;
+  }
+  @media (max-width: 480px) {
+    .runway-cities li { grid-template-columns: 1fr; gap: 0.15rem; }
+  }
+
+  /* ------- Classes: one wide photo over two ------- */
+  .class-photos {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-sm);
   }
-  .photo-grid img {
+  .class-photos img {
     width: 100%;
+    height: 100%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
   }
+  .class-photos__main {
+    grid-column: 1 / -1;
+    aspect-ratio: 16 / 9 !important;
+  }
 
-  .heritage-body { max-width: 70ch; }
+  /* ------- Online courses ------- */
+  .course-panel {
+    border: 1px solid var(--color-border);
+    border-top: 6px solid var(--color-yellow);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-card);
+    padding: var(--space-lg) var(--space-md);
+  }
+  .course-panel__arc {
+    width: 100%;
+    max-width: 760px;
+    margin: var(--space-md) auto;
+    border-radius: 0;
+  }
+  .course-options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
+  .course-option {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    padding: var(--space-md);
+    background: var(--color-gray-light);
+    border-radius: var(--radius);
+  }
+  .course-option--primary {
+    background: var(--color-black);
+    color: var(--color-gray-light);
+  }
+  .course-option--primary h3 { color: var(--color-yellow); }
+  .course-option h3 { margin-bottom: var(--space-xs); }
+  .course-option p {
+    flex: 1;
+    font-size: var(--text-sm);
+  }
+  .course-option__tag {
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xs);
+  }
+  .course-option--primary .course-option__tag { color: var(--color-init-mfedu); }
+  @media (max-width: 820px) {
+    .course-options { grid-template-columns: 1fr; }
+    .course-panel { padding: var(--space-md) var(--space-sm); }
+  }
+  /* The arc's labels drop below legible size on phones; the course page
+     itself shows it full width. */
+  @media (max-width: 600px) {
+    .course-panel__arc { display: none; }
+  }
 
-  .img-pair {
+  /* ------- Community / social ------- */
+  .community { align-items: start; }
+  .community__heading {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-sm);
+  }
+  .pub-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
   }
-
-  .cta-band { text-align: left; }
-
-  .cta-row {
-    display: flex;
-    gap: var(--space-sm);
-    flex-wrap: wrap;
-    margin-top: var(--space-md);
-  }
-
-  .pub-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: var(--space-md);
-  }
+  .pub-list li { margin: 0; }
   .pub-card {
-    position: relative;
-    display: block;
+    display: grid;
+    grid-template-columns: 120px 1fr auto;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-xs);
+    padding-right: var(--space-sm);
+    background: var(--color-white);
     border-radius: var(--radius);
-    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    color: var(--color-heading);
     text-decoration: none;
+    transition: transform 0.15s;
   }
+  .pub-card:hover,
+  .pub-card:focus-visible { transform: translateX(4px); opacity: 1; }
   .pub-card img {
-    width: 100%;
-    aspect-ratio: 4 / 3;
+    width: 120px;
+    aspect-ratio: 3 / 2;
     object-fit: cover;
-    display: block;
-    transition: transform 0.2s;
   }
-  .pub-card:hover img { transform: scale(1.03); }
-  .pub-card span {
-    position: absolute;
-    inset: auto 0 0 0;
-    padding: 0.6rem var(--space-sm);
-    background: rgba(0, 0, 0, 0.65);
-    color: var(--color-white);
+  .pub-card__name {
     font-family: var(--font-heading);
-    letter-spacing: 0.05em;
+    font-size: var(--text-lg);
+  }
+  .pub-card__arrow {
+    font-size: var(--text-xl);
+    color: var(--color-link);
   }
 </style>
