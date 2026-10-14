@@ -21,6 +21,7 @@ MakeFashion Edu STEAM Runway Shows are fashion tech events showcasing young desi
     </div>
   </article>
   <article class="card">
+    <img class="card__image" src="/images/mfedu/sanfrancisco/astronaut-led-helmet.webp" style="object-position: center top" alt="Student in an orange astronaut suit wearing a space helmet lit inside with rainbow LEDs" loading="lazy" />
     <div class="card__body">
       <h2 class="card__title">San Francisco</h2>
       <p class="card__text">In San Francisco the runway belongs to the students. The Black Student Union at Ulloa Elementary School designs, builds and produces its own fashion tech show each year, honoring Black American icons and excellence in light-up wings, outfits and umbrellas. BSU members do every job themselves, from designers and models to MC, DJ, lighting and photography.</p>
