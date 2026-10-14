@@ -1,7 +1,7 @@
 ---
 title: "Tucson 2021"
 section: runway-shows
-order: 2
+order: 8
 ---
 
 ## TUCSON 2021

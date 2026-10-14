@@ -1,7 +1,7 @@
 ---
 title: "San Marcos 2020 S1"
 section: runway-shows
-order: 6
+order: 12
 ---
 
 ## SAN MARCOS 2020

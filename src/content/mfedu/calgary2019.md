@@ -1,7 +1,7 @@
 ---
 title: "Calgary 2019"
 section: runway-shows
-order: 9
+order: 15
 ---
 
 ## CALGARY 2019

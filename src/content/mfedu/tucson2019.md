@@ -1,7 +1,7 @@
 ---
 title: "Tucson 2019"
 section: runway-shows
-order: 4
+order: 10
 ---
 
 ## TUCSON 2019
