@@ -79,6 +79,8 @@ const mfedu = defineCollection({
     section:     z.enum(['runway-shows', 'run-the-program', 'about']),
     order:       z.number(),
     description: z.string().optional(),
+    // false hides the MakeFashion Edu section nav and lets content run full width
+    sidebar:     z.boolean().default(true),
   }).strict(),
 });
 

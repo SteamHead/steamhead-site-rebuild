@@ -32,13 +32,15 @@ const sectionLabel = {
   </section>
 
   <section class="section" aria-label="Page content">
-    <div class="container mfedu-layout">
+    <div class:list={['container', { 'mfedu-layout': page.data.sidebar }]}>
       <article class="mfedu-body">
         <Content />
       </article>
-      <aside>
-        <MFEduNav currentSlug={page.id} />
-      </aside>
+      {page.data.sidebar && (
+        <aside>
+          <MFEduNav currentSlug={page.id} />
+        </aside>
+      )}
     </div>
   </section>
 
