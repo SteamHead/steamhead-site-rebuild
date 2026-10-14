@@ -99,6 +99,52 @@ const sectionLabel = {
     width: auto;
   }
 
+  /* Location cards (Runway Shows): one .card per city, photo on top,
+     links to that city's shows as chips underneath */
+  .mfedu-body :global(.location-cards) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-md);
+    margin-block: var(--space-md);
+  }
+  .mfedu-body :global(.location-cards .card) {
+    border: 1px solid var(--color-border);
+  }
+  .mfedu-body :global(.location-cards .card__image) {
+    aspect-ratio: 4 / 3;
+    object-position: center 25%;
+    margin: 0;
+  }
+  .mfedu-body :global(.location-cards .card__title) {
+    margin: 0;
+  }
+  .mfedu-body :global(.location-cards .card__text) {
+    font-size: var(--text-sm);
+    margin: 0;
+  }
+  .mfedu-body :global(.show-links) {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-xs) 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+  }
+  .mfedu-body :global(.show-links a) {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border: 1px solid var(--color-link);
+    border-radius: 999px;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .mfedu-body :global(.show-links a:hover),
+  .mfedu-body :global(.show-links a:focus-visible) {
+    background: var(--color-link);
+    color: var(--color-white);
+  }
+
   /* Logo wall (Supporters & Friends): logos contained on white tiles,
      never cropped, with the organization name captioned underneath */
   .mfedu-body :global(.logo-wall) {
