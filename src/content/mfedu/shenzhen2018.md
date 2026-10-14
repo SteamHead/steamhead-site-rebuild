@@ -1,7 +1,7 @@
 ---
 title: "Shenzhen 2018"
 section: runway-shows
-order: 8
+order: 14
 ---
 
 ## Shenzhen 2018

@@ -1,7 +1,7 @@
 ---
 title: "Tucson 2022"
 section: runway-shows
-order: 1
+order: 7
 ---
 
 ## TUCSON 2022

@@ -16,7 +16,18 @@ MakeFashion Edu STEAM Runway Shows are fashion tech events showcasing young desi
       <h2 class="card__title">Calgary</h2>
       <p class="card__text">Calgary is the home of MakeFashion, the professional designer platform and namesake of MakeFashion Edu! Students in Calgary received mentorship from professional designers familiar with technology on the runway - a scarce resource across the entire world. These outfits were displayed at a city-wide festival of lights, and garnered a lot of impact due to the deep roots that MakeFashion has established in this innovation-embracing city.</p>
       <ul class="show-links" aria-label="Calgary shows">
+        <li><a href="/makefashion-edu/calgary2022/">2022</a></li>
         <li><a href="/makefashion-edu/calgary2019/">2019 Semester 1</a></li>
+      </ul>
+    </div>
+  </article>
+  <article class="card">
+    <div class="card__body">
+      <h2 class="card__title">San Francisco</h2>
+      <p class="card__text">In San Francisco the runway belongs to the students. The Black Student Union at Ulloa Elementary School designs, builds and produces its own fashion tech show each year, honoring Black American icons and excellence in light-up wings, outfits and umbrellas. BSU members do every job themselves, from designers and models to MC, DJ, lighting and photography.</p>
+      <ul class="show-links" aria-label="San Francisco shows">
+        <li><a href="/makefashion-edu/sanfrancisco2026/">2026</a></li>
+        <li><a href="/makefashion-edu/sanfrancisco2025/">2025</a></li>
       </ul>
     </div>
   </article>
@@ -48,6 +59,9 @@ MakeFashion Edu STEAM Runway Shows are fashion tech events showcasing young desi
       <h2 class="card__title">Tucson</h2>
       <p class="card__text">Tucson is the home of several international school teachers that helped form the initial show in Shenzhen, China. They brought the program back to the US, and established MakeFashion Edu's presence in America. The students in Tucson have not had extensive access to new technologies, so this program has brought a lot of change to the community, including surrounding universities with Fashion programs.</p>
       <ul class="show-links" aria-label="Tucson shows">
+        <li><a href="/makefashion-edu/tucson2025/">2025</a></li>
+        <li><a href="/makefashion-edu/tucson2024/">2024</a></li>
+        <li><a href="/makefashion-edu/tucson2023/">2023</a></li>
         <li><a href="/makefashion-edu/tucson2022/">2022</a></li>
         <li><a href="/makefashion-edu/tucson2021/">2021</a></li>
         <li><a href="/makefashion-edu/tucson2020/">2020 Semester 2</a></li>

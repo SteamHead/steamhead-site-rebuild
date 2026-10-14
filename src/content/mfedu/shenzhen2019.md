@@ -1,7 +1,7 @@
 ---
 title: "Shenzhen 2019"
 section: runway-shows
-order: 7
+order: 13
 ---
 
 ## Shenzhen 2019

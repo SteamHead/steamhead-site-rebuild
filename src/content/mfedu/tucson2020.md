@@ -1,7 +1,7 @@
 ---
 title: "Tucson 2020"
 section: runway-shows
-order: 3
+order: 9
 ---
 
 ## TUCSON 2020
