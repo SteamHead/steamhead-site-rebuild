@@ -401,12 +401,6 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"vsfb", net:"2026-10-13T00:28:11Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"Starlink Group 15-25", orbit:"Low Earth Orbit", status:"Launch Successful",
-   brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
-  {site:"ccsfs", net:"2026-10-13T10:33:44Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"Dragon CRS-2 SpX-35", orbit:"Low Earth Orbit", status:"Launch Successful",
-   brief:"35th commercial resupply services mission to the International Space Station operated by SpaceX."},
   {site:"jiu", net:"2026-10-14T11:40:00Z", p:"time", veh:"Zhuque-2E", who:"LandSpace",
    mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
    brief:"Details TBD."},
@@ -414,7 +408,7 @@ const LAUNCHES = [
    mission:"USSF-481", orbit:"Polar Orbit", status:"Go for Launch",
    brief:"A classified mission for the United States Space Force."},
   {site:"ccsfs", net:"2026-10-19T10:30:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"Bandwagon 5 (Dedicated Mid-Inclination Rideshare)", orbit:"Low Earth Orbit", status:"To Be Confirmed",
+   mission:"Bandwagon 5 (Dedicated Mid-Inclination Rideshare)", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"Dedicated rideshare flight to a mid-inclination orbit with dozens of small microsatellites and nanosatellites for commercial and government customers."},
   {site:"tan", net:"2026-10-19T19:41:03Z", p:"time", veh:"H3-24", who:"Mitsubishi Heavy Industries",
    mission:"Martian Moons eXploration (MMX)", orbit:"Mars Orbit", status:"Go for Launch",
@@ -425,11 +419,11 @@ const LAUNCHES = [
   {site:"lc1", net:"2026-10-21T00:00:00Z", p:"day", veh:"Electron", who:"Rocket Lab",
    mission:"We're Not Hawking Around (3x HawkEye 360)", orbit:"Sun-Synchronous Orbit", status:"To Be Determined",
    brief:"HawkEye 360 is a a space-based civil global intelligence satellite network using radio frequency (RF) technology to help monitor transportation across air, land and sea and assist with emergencies, and to provide civil SIGINT (Signal Intelligence) mission."},
+  {site:"vsfb", net:"2026-10-24T05:29:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Starlink Group 15-16", orbit:"Low Earth Orbit", status:"Go for Launch",
+   brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
   {site:"ccsfs", net:"2026-10-29T00:00:00Z", p:"day", veh:"Vulcan VC6L", who:"United Launch Alliance",
    mission:"Amazon Leo (LV-01)", orbit:"Low Earth Orbit", status:"To Be Determined",
-   brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon."},
-  {site:"kou", net:"2026-10-31T00:00:00Z", p:"month", veh:"Ariane 64 Block 2", who:"Arianespace",
-   mission:"Amazon Leo (LE-04)", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon."},
   {site:"sdsc", net:"2026-10-31T00:00:00Z", p:"month", veh:"GSLV Mk. II", who:"Indian Space Research Organization",
    mission:"IRNSS-1L (NVS-03)", orbit:"Geostationary Transfer Orbit", status:"To Be Determined",
@@ -449,9 +443,9 @@ const LAUNCHES = [
   {site:"bai", net:"2026-11-24T05:03:00Z", p:"time", veh:"Soyuz 2.1b", who:"Russian Federal Space Agency (ROSCOSMOS)",
    mission:"Progress MS-36 (97P)", orbit:"Low Earth Orbit", status:"To Be Confirmed",
    brief:"Progress resupply mission to the International Space Station."},
-  {site:"kou", net:"2026-11-30T00:00:00Z", p:"month", veh:"Ariane 62", who:"Arianespace",
-   mission:"Metop-SG B1", orbit:"Sun-Synchronous Orbit", status:"To Be Determined",
-   brief:"Second of EUMETSAT's second generation of Metop weather satellites."},
+  {site:"kou", net:"2026-11-30T00:00:00Z", p:"month", veh:"Ariane 64 Block 2", who:"Arianespace",
+   mission:"Amazon Leo (LE-04)", orbit:"Low Earth Orbit", status:"To Be Determined",
+   brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon."},
   {site:"ccsfs", net:"2026-11-30T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Cygnus CRS-2 NG-25", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"This is the 25th flight of the Orbital ATK's uncrewed resupply spacecraft Cygnus and its 24th flight to the International Space Station under the Commercial Resupply Services contract with NASA."},
@@ -461,6 +455,9 @@ const LAUNCHES = [
   {site:"sdsc", net:"2026-11-30T00:00:00Z", p:"month", veh:"PSLV XL", who:"Indian Space Research Organization",
    mission:"TDS-01", orbit:"Geostationary Transfer Orbit", status:"To Be Determined",
    brief:"TDS-01 (Technology Demonstration Satellite-01) is an Indian geostationary orbit technology demonstration satellite carrying payloads for the Indian Space Research Organisation (ISRO)’s Institute of Plasma Research, Gandhinagar and the CSIR-CEERI, Pilani."},
+  {site:"kou", net:"2026-12-31T00:00:00Z", p:"month", veh:"Ariane 62", who:"Arianespace",
+   mission:"Metop-SG B1", orbit:"Sun-Synchronous Orbit", status:"To Be Determined",
+   brief:"Second of EUMETSAT's second generation of Metop weather satellites."},
   {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"SDA Tranche 2 Transport Layer D", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"Classified mission launched by the Space Development Agency (SDA) for Tranche 2 Transport Layer."},
@@ -479,9 +476,6 @@ const LAUNCHES = [
   {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"month", veh:"New Glenn", who:"Blue Origin",
    mission:"Blue Ring-1", orbit:"Geostationary Transfer Orbit", status:"To Be Determined",
    brief:"The first mission of Blue Ring, Blue Origin's all-in-one, high-powered hybrid solar electric and chemical propelled spacecraft, will test the spacecraft's operations in Geostationary Transfer Orbit (GTO), as well as subsequent operations after reaching Geostationary Orbit (GEO)."},
-  {site:"kou", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Ariane 62", who:"Arianespace",
-   mission:"Galileo L15 (FOC FM28 & FM31)", orbit:"Medium Earth Orbit", status:"To Be Determined",
-   brief:"Payload consists of two satellites for Europe's Galileo navigation system."},
   {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"CHORUS", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"CHORUS is MDA's next generation Earth observation constellation, consisting of 2 radar satellites (C-band SAR and X-band SAR), in a 53.5 degree 600 km altitude LEO, with the X-band trailing the C-band by 60 minutes."},
@@ -533,9 +527,6 @@ const LAUNCHES = [
   {site:"and", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Spectrum", who:"Isar Aerospace",
    mission:"AT-Astra and Others (Spectrum Flight 3)", orbit:"Sun-Synchronous Orbit", status:"To Be Determined",
    brief:"Third test flight of the Isar Spectrum launch vehicle."},
-  {site:"kou", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Ariane 64", who:"Arianespace",
-   mission:"Ariane 64 | GO-1", orbit:"Not disclosed", status:"To Be Determined",
-   brief:"No mission description has been published."},
   {site:"lc1", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Electron", who:"Rocket Lab",
    mission:"BlackSky Gen-3 6", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"BlackSky Gen-3 Earth-imaging satellites"},
@@ -580,6 +571,15 @@ const LAUNCHES = [
    brief:"24 satellites for Rivada's internet constellation."},
   {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Rivada 4", orbit:"Polar Orbit", status:"To Be Determined",
+   brief:"24 satellites for Rivada's internet constellation."},
+  {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Rivada 5", orbit:"Polar Orbit", status:"To Be Determined",
+   brief:"24 satellites for Rivada's internet constellation."},
+  {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Rivada 6", orbit:"Polar Orbit", status:"To Be Determined",
+   brief:"24 satellites for Rivada's internet constellation."},
+  {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Rivada 7", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"24 satellites for Rivada's internet constellation."},
 ];
 
@@ -1017,7 +1017,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 13 Oct 2026';
+    : '<b>Snapshot</b> · 14 Oct 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
