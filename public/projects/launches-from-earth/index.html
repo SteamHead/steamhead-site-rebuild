@@ -401,10 +401,10 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"jiu", net:"2026-10-14T11:40:00Z", p:"time", veh:"Zhuque-2E", who:"LandSpace",
-   mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
-   brief:"Details TBD."},
-  {site:"vsfb", net:"2026-10-15T23:44:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+  {site:"jiu", net:"2026-10-14T11:40:00Z", p:"time", veh:"Zhuque-2E Block 2", who:"LandSpace",
+   mission:"10 satellites", orbit:"Sun-Synchronous Orbit", status:"Launch Successful",
+   brief:"Ride-share of 10 satellites to sun-synchronous orbit, including LandSpace's own Guangchuan-03 & 04 for testing and demonstrating LEO communication satellite constellation technologies."},
+  {site:"vsfb", net:"2026-10-15T23:57:05Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"USSF-481", orbit:"Polar Orbit", status:"Go for Launch",
    brief:"A classified mission for the United States Space Force."},
   {site:"ccsfs", net:"2026-10-19T10:30:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
@@ -440,12 +440,12 @@ const LAUNCHES = [
   {site:"lc1", net:"2026-11-10T00:00:00Z", p:"day", veh:"Electron", who:"Rocket Lab",
    mission:"The Mountain God Rises (iQPS Launch 10)", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Synthetic aperture radar Earth observation satellite for Japanese Earth imaging company iQPS."},
+  {site:"kou", net:"2026-11-23T00:00:00Z", p:"day", veh:"Ariane 64 Block 2", who:"Arianespace",
+   mission:"Amazon Leo (LE-04)", orbit:"Low Earth Orbit", status:"To Be Determined",
+   brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon."},
   {site:"bai", net:"2026-11-24T05:03:00Z", p:"time", veh:"Soyuz 2.1b", who:"Russian Federal Space Agency (ROSCOSMOS)",
    mission:"Progress MS-36 (97P)", orbit:"Low Earth Orbit", status:"To Be Confirmed",
    brief:"Progress resupply mission to the International Space Station."},
-  {site:"kou", net:"2026-11-30T00:00:00Z", p:"month", veh:"Ariane 64 Block 2", who:"Arianespace",
-   mission:"Amazon Leo (LE-04)", orbit:"Low Earth Orbit", status:"To Be Determined",
-   brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon."},
   {site:"ccsfs", net:"2026-11-30T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Cygnus CRS-2 NG-25", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"This is the 25th flight of the Orbital ATK's uncrewed resupply spacecraft Cygnus and its 24th flight to the International Space Station under the Commercial Resupply Services contract with NASA."},
@@ -1017,7 +1017,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 14 Oct 2026';
+    : '<b>Snapshot</b> · 15 Oct 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
