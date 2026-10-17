@@ -402,9 +402,6 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"vsfb", net:"2026-10-16T00:01:05Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"USSF-481", orbit:"Polar Orbit", status:"Launch Successful",
-   brief:"A classified mission for the United States Space Force."},
   {site:"ccsfs", net:"2026-10-19T10:30:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Bandwagon 5 (Dedicated Mid-Inclination Rideshare)", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"Dedicated rideshare flight to a mid-inclination orbit with dozens of small microsatellites and nanosatellites for commercial and government customers."},
@@ -420,8 +417,8 @@ const LAUNCHES = [
   {site:"lc1", net:"2026-10-21T05:00:00Z", p:"time", veh:"Electron", who:"Rocket Lab",
    mission:"We're Not Hawking Around (3x HawkEye 360)", orbit:"Sun-Synchronous Orbit", status:"To Be Confirmed",
    brief:"HawkEye 360 is a a space-based civil global intelligence satellite network using radio frequency (RF) technology to help monitor transportation across air, land and sea and assist with emergencies, and to provide civil SIGINT (Signal Intelligence) mission."},
-  {site:"wen", net:"2026-10-22T02:00:00Z", p:"time", veh:"Long March 8A", who:"China Aerospace Science and Technology Corporation",
-   mission:"Unknown Payload", orbit:"Unknown", status:"To Be Confirmed",
+  {site:"wen", net:"2026-10-22T02:57:00Z", p:"time", veh:"Long March 8A", who:"China Aerospace Science and Technology Corporation",
+   mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
    brief:"Details TBD."},
   {site:"jiu", net:"2026-10-23T18:00:00Z", p:"time", veh:"Long March 4B", who:"China Aerospace Science and Technology Corporation",
    mission:"Unknown Payload", orbit:"Unknown", status:"To Be Confirmed",
@@ -581,6 +578,9 @@ const LAUNCHES = [
    brief:"24 satellites for Rivada's internet constellation."},
   {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Rivada 4", orbit:"Polar Orbit", status:"To Be Determined",
+   brief:"24 satellites for Rivada's internet constellation."},
+  {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Rivada 5", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"24 satellites for Rivada's internet constellation."},
 ];
 
@@ -1018,7 +1018,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 16 Oct 2026';
+    : '<b>Snapshot</b> · 17 Oct 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
