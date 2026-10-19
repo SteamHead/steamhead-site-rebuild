@@ -402,12 +402,12 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"ccsfs", net:"2026-10-19T10:30:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"Bandwagon 5 (Dedicated Mid-Inclination Rideshare)", orbit:"Low Earth Orbit", status:"Go for Launch",
-   brief:"Dedicated rideshare flight to a mid-inclination orbit with dozens of small microsatellites and nanosatellites for commercial and government customers."},
   {site:"tan", net:"2026-10-19T19:41:03Z", p:"time", veh:"H3-24", who:"Mitsubishi Heavy Industries",
    mission:"Martian Moons eXploration (MMX)", orbit:"Mars Orbit", status:"Go for Launch",
    brief:"MMX is a Japanese scientific mission to land on Phobos, one of the two moons of Mars, to collect samples before bringing them back to Earth."},
+  {site:"ccsfs", net:"2026-10-20T10:30:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Bandwagon 5 (Dedicated Mid-Inclination Rideshare)", orbit:"Low Earth Orbit", status:"Go for Launch",
+   brief:"Dedicated rideshare flight to a mid-inclination orbit with dozens of small microsatellites and nanosatellites for commercial and government customers."},
   {site:"vsfb", net:"2026-10-20T22:14:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Starlink Group 15-15", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
@@ -1018,7 +1018,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 18 Oct 2026';
+    : '<b>Snapshot</b> · 19 Oct 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
