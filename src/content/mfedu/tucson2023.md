@@ -2,34 +2,18 @@
 title: "Tucson 2023"
 section: runway-shows
 order: 5
+description: "Tucson students turned Earth's biomes into wearable tech for the 2023 Neighborhood Earth runway."
 ---
 
-## TUCSON 2023
+<dl class="show-facts">
+  <div><dt>Where</dt><dd>Tucson, Arizona, USA</dd></div>
+  <div><dt>When</dt><dd>2023</dd></div>
+  <div><dt>Theme</dt><dd>&ldquo;Neighborhood Earth&rdquo;</dd></div>
+  <div><dt>Season book</dt><dd><a href="https://www.amazon.com/dp/B0C79JTJZS">Read the book</a></dd></div>
+</dl>
 
-## Tucson, Arizona, USA
+The 2023 Tucson runway was built around [Neighborhood Earth](/neighborhood-earth/), the idea that the whole planet is one neighborhood. Students turned Earth's biomes into wearable tech: the Sonoran Desert, forests, grasslands, oceans, rainforests, tundra and wetlands. Other teams took on space, their own communities and the issues they care about. This was the fifth MakeFashion Edu runway in Tucson, and each piece was documented with the designers' own story in the season book.
 
-## "Neighborhood Earth"
+### Gallery
 
-The 2023 Tucson runway was built around [Neighborhood Earth](/neighborhood-earth/), the idea that the whole planet is one neighborhood. Students turned Earth's biomes into wearable tech: the Sonoran Desert, forests, grasslands, oceans, rainforests, tundra and wetlands. Other teams took on space, their own communities and the issues they care about.
-
-### On the runway
-
-- Desert Biome: Desert Dweller, Neighbors in Harmony, Saguaro Strong, Sonoran Scene
-- Forest Biome: Evergreen, Falling Leaves
-- Grassland Biome: Animal Kingdom, Safari
-- Ocean Biome: Ocean Waves, Warming Oceans
-- Tropical Biome: Flora, Rainforest
-- Tundra Biome: Northern Lights, Polar Animals
-- Wetland Biome: Mangrove, See Ya Later Alligator
-- Alien Twins
-- Celestial Neighbors
-- Queen of the Cosmos
-- Continental Drift
-- Crime
-- Denim Pollution
-- Friends
-- Fungi Fashion
-- Guardians of the Neighborhood
-- La Quinceañera
-- Neighborhoods Matter: The Atom
-- Yin Yang Gender Equality
+![Queen of the Cosmos: student in a full hoop skirt of galaxy-print fabric with a black top, fairy lights glowing in the skirt](/images/mfedu/tucson/2023/queen-of-the-cosmos.webp)![Alien Twins: two students in silver bodysuits, antenna headbands and flared pink and gold spaceship skirts](/images/mfedu/tucson/2023/alien-twins.webp)![Celestial Neighbors: two students in metallic dresses over round skirt cages, one glowing gold as the sun and one silver as the moon](/images/mfedu/tucson/2023/celestial-neighbors.webp)![Guardians of the Neighborhood: student in a camouflage suit with lights running along the arms and legs](/images/mfedu/tucson/2023/guardians-of-the-neighborhood.webp)![La Quinceañera: student in a white gown trimmed with red roses and green leaves, lights glowing in the skirt](/images/mfedu/tucson/2023/la-quinceanera.webp)![Friends: student in a cream dress decorated with felt cut-out figures holding hands in different colors](/images/mfedu/tucson/2023/friends.webp)![Crime: student in a dress made of yellow crime scene tape](/images/mfedu/tucson/2023/crime.webp)![Denim Pollution: two students in ripped jeans and denim jackets lined with lights, one in a cap with a scrolling LED message](/images/mfedu/tucson/2023/denim-pollution.webp)![Yin Yang Gender Equality: student in a shift dress split into black and white halves along a curved line of lights](/images/mfedu/tucson/2023/yin-yang-gender-equality.webp)![Neighborhoods’ Matter: The Atom: student in black clothes circled by three crossing rings of lights](/images/mfedu/tucson/2023/the-atom.webp)![Fungi Fashion: student kneeling in a patterned dress, wearing a large red mushroom-cap hat trailing green vines](/images/mfedu/tucson/2023/fungi-fashion.webp)![Continental Drift: two students back to back, one in a blue dress and one in a pale blue outfit, both glowing with lights](/images/mfedu/tucson/2023/continental-drift.webp)![Polar Animals: student in an all-white outfit with arms raised, lit from within by white lights](/images/mfedu/tucson/2023/polar-animals.webp)![Northern Lights: hooded cream cape glowing with scattered white and green lights](/images/mfedu/tucson/2023/northern-lights.webp)![Warming Oceans: student in a long dress printed with bright red, orange and teal coral colors](/images/mfedu/tucson/2023/warming-oceans.webp)![Ocean Waves: student in a blue gown with arms raised in a wave, blue lights glowing through the skirt](/images/mfedu/tucson/2023/ocean-waves.webp)![Evergreen: student in a halter dress printed with a forest of tall green trees](/images/mfedu/tucson/2023/evergreen.webp)![Falling Leaves: back view of a wide white cape painted with a golden tree and green leaves, fringed with rainbow ribbons](/images/mfedu/tucson/2023/falling-leaves.webp)![Animal Kingdom: student in a long robe pieced from tiger, leopard and zebra prints](/images/mfedu/tucson/2023/animal-kingdom.webp)![Safari: student in a khaki safari outfit and leopard-print hat, holding binoculars](/images/mfedu/tucson/2023/safari.webp)![Neighbors in Harmony: student spreading a dark cape decorated with desert plants and edged in lights](/images/mfedu/tucson/2023/neighbors-in-harmony.webp)![Sonoran Scene: student in a shirt printed with desert scenes and a lit headband](/images/mfedu/tucson/2023/sonoran-scene.webp)![Desert Dweller: student in a hooded jacket with a lizard-scale pattern glowing green and orange](/images/mfedu/tucson/2023/desert-dweller.webp)![Saguaro Strong: student in a pale green saguaro costume and flowering headpiece, arm raised like a cactus arm](/images/mfedu/tucson/2023/saguaro-strong.webp)![See Ya Later, Alligator: student in a glowing red outfit, arms outstretched](/images/mfedu/tucson/2023/see-ya-later-alligator.webp)![Mangrove: student in a long pale blue coat embroidered with flowing root lines](/images/mfedu/tucson/2023/mangrove.webp)![Rain Forest: student holding an umbrella topped with giant tropical leaves, wearing a leaf-print dress](/images/mfedu/tucson/2023/rain-forest.webp)![Flora: student under a leafy umbrella in a floral top and glowing purple tutu](/images/mfedu/tucson/2023/flora.webp)

@@ -45,7 +45,13 @@ const sectionHref = page.data.section === 'runway-shows' && page.id !== 'runways
 </BaseLayout>
 
 <style>
-  .hero--short { padding-block: var(--space-section); }
+  /* No hero photo here, so drop the global 4:3 photo-hero sizing (which
+     leaves a near-full-screen empty band on desktop) and size to the title */
+  .hero--short {
+    padding-block: var(--space-lg);
+    aspect-ratio: auto;
+    min-height: 0;
+  }
 
   .mfedu-crumb {
     font-size: var(--text-sm);
@@ -63,6 +69,27 @@ const sectionHref = page.data.section === 'runway-shows' && page.id !== 'runways
   .mfedu-body :global(p)  { margin-bottom: var(--space-sm); }
   .mfedu-body :global(ul),
   .mfedu-body :global(ol) { margin-bottom: var(--space-sm); }
+
+  /* Show facts (Runway Shows): Where / When / Theme at the top of each show */
+  .mfedu-body :global(.show-facts) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm) var(--space-md);
+    margin: 0 0 var(--space-md);
+    padding: var(--space-sm) 0;
+    border-block: 1px solid var(--color-border);
+  }
+  .mfedu-body :global(.show-facts dt) {
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+  .mfedu-body :global(.show-facts dd) {
+    margin: 0;
+    font-weight: 600;
+  }
 
   /* Gallery treatment: any paragraph that is a run of images becomes a grid */
   .mfedu-body :global(p:has(> img)) {

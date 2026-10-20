@@ -2,39 +2,18 @@
 title: "Tucson 2024"
 section: runway-shows
 order: 4
+description: "Student teams designed, built and modeled their own light-up pieces for the 2024 Drachman runway, themed Connections."
 ---
 
-## TUCSON 2024
+<dl class="show-facts">
+  <div><dt>Where</dt><dd>Drachman, Tucson, Arizona, USA</dd></div>
+  <div><dt>When</dt><dd>2024</dd></div>
+  <div><dt>Theme</dt><dd>&ldquo;Connections&rdquo;</dd></div>
+  <div><dt>Season book</dt><dd><a href="https://www.amazon.com/dp/B0DB68C8SZ">Read the book</a></dd></div>
+</dl>
 
-## Tucson, Arizona, USA at Drachman
+Student teams designed, built and modeled their own light-up pieces for the 2024 Drachman runway. The theme was "Connections": half the collections explored connections in the natural world (pollination, seed spreading and ecosystems), and half explored how people connect, now and in the future. Tutti-Fruity is a typical example: the team shaped fruit from cheesecloth and glue, painted it, and set programmable fairy lights inside each piece. Side-lit LED strips ring the hat's brim, so the whole design glows.
 
-Student teams designed, built and modeled their own light-up pieces for the 2024 Drachman runway. Tutti-Fruity is a typical example: the team shaped fruit from cheesecloth and glue, painted it, and set programmable fairy lights inside each piece. Side-lit LED strips ring the hat's brim, so the whole design glows.
+### Gallery
 
-### On the runway
-
-- Bee Bold
-- Tubular
-- Hummer
-- The Bat
-- Vermillion
-- Tutti-Fruity
-- Veggie Out
-- WildFlower
-- By Any Other Name
-- Decompose
-- Madame Butterfly
-- Tied Up-Cycle
-- Shining Armor
-- Sunshine, Sunbright
-- Recycled Rectangles
-- Robot²
-- Spring: Renewal
-- Tech Connect
-- Culture Connections
-- Disconnect
-- Words
-- P2P
-- Poseidon: Water
-- Mother Earth
-- Colors of the Wind
-- Flaming Hot
+![Bee Bold: student in a bright yellow tailcoat with black stripes, bow tie and black top hat](/images/mfedu/tucson/2024/bee-bold.webp)![Vegging Out: student in a gold dress holding up a wide hat piled with colorful felt vegetables](/images/mfedu/tucson/2024/vegging-out.webp)![Tutti-Fruity: student in a sparkly silver dress under a wide hat of painted fruit, its brim ringed with light](/images/mfedu/tucson/2024/tutti-fruity.webp)![The Bat: student in black spreading wings lit with purple LED strips](/images/mfedu/tucson/2024/the-bat.webp)![Tubular: student in a glowing white bodice and yellow-green tulle skirt with a lit flower headpiece](/images/mfedu/tucson/2024/tubular.webp)![Hummer: student in an iridescent green jacket, white tie and a hat topped with a hummingbird](/images/mfedu/tucson/2024/hummer.webp)![Madame Butterfly: student in a teal kimono-style top dotted with white butterflies and a butterfly headpiece](/images/mfedu/tucson/2024/madame-butterfly.webp)![Vermillion: student in a black top hat, holding a cane, with red feathers and lights at the collar](/images/mfedu/tucson/2024/vermillion.webp)![Colors of the Wind: student in a white hat and a top covered in glowing puffballs, over a pastel tulle skirt](/images/mfedu/tucson/2024/colors-of-the-wind.webp)![Wildflower: student in a pale green ball gown wrapped with garlands of colorful lit flowers](/images/mfedu/tucson/2024/wildflower.webp)![Flaming Hot: student in a red top and a red and orange tulle skirt that glows like flames](/images/mfedu/tucson/2024/flaming-hot.webp)![By Any Other Name: student in a pink rose-inspired gown with a lit flower headpiece and glowing pink hem](/images/mfedu/tucson/2024/by-any-other-name.webp)![Mother Earth: student in a black gown scattered with bright flowers and a flower crown](/images/mfedu/tucson/2024/mother-earth.webp)![Decompose: student in a brown hat and a jacket covered in dark leaves](/images/mfedu/tucson/2024/decompose.webp)![Recycled Rectangles: student in a jacket and pants made of reflective recycled packaging, dotted with lights](/images/mfedu/tucson/2024/recycled-rectangles.webp)![Poseidon: Water: student in a shimmering blue outfit with lights glowing like water](/images/mfedu/tucson/2024/poseidon-water.webp)![Sunshine, Sunbright: student in a coral dress glowing with white lights and a round sun at the waist](/images/mfedu/tucson/2024/sunshine-sunbright.webp)![Spring: New Beginnings: student in a gold corset and pale blue tiered tulle skirt lit from within](/images/mfedu/tucson/2024/spring-new-beginnings.webp)![P2P: student in a purple T-shirt with a heart of two linked figures and a headband of red hearts](/images/mfedu/tucson/2024/p2p.webp)![Words: student in a green skirt hung with felt pencils and a T-shirt printed with book covers](/images/mfedu/tucson/2024/words.webp)![Tied Up-Cycle: student in a white T-shirt and a skirt made of upcycled neckties threaded with lights](/images/mfedu/tucson/2024/tied-up-cycle.webp)![Culture Connects: student with one arm raised in a red skirt dotted with lights and a handwritten message on the top](/images/mfedu/tucson/2024/culture-connects.webp)![Shining Armor: student in a blue T-shirt and a skirt of mirrored diamond panels with a sequined diamond on the front](/images/mfedu/tucson/2024/shining-armor.webp)![Disconnect: student in a top with a red STOP sign, yellow striped sleeves and pants glowing with green lights](/images/mfedu/tucson/2024/disconnect.webp)![Robot²: student in a black box robot costume with a glowing purple LED matrix screen](/images/mfedu/tucson/2024/robot-squared.webp)![TechConnect: student in light-up glasses and a silver jacket with glowing screen panels on the chest](/images/mfedu/tucson/2024/techconnect.webp)
