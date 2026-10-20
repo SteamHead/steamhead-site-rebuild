@@ -9,6 +9,7 @@ description: "The Black Student Union at Ulloa Elementary built light-up wings h
   <div><dt>Where</dt><dd>Ulloa Elementary School, San Francisco, California, USA</dd></div>
   <div><dt>When</dt><dd>February 28, 2025</dd></div>
   <div><dt>Theme</dt><dd>&ldquo;American Icons&rdquo;</dd></div>
+  <div><dt>Season book</dt><dd><a href="https://www.amazon.com/dp/B0FKGP353F">Read the book</a></dd></div>
 </dl>
 
 MakeFashion Edu's first San Francisco runway was led by the school's Black Student Union (BSU). Over six weeks of lunchtime sessions in the makerspace, BSU designers each chose an American icon. They built a pair of wings to symbolize that person, then "iconized" the wings with lights and electronics. They also ran the show themselves: a student MC, a DJ and audio-visual team, a light manager and student photographers. "American Icons" walked from the back of the auditorium to the stage at the school's Black History Month assemblies on February 28, 2025.

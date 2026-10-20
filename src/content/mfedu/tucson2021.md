@@ -8,6 +8,7 @@ description: "Student fashion tech projects from the 2021 MakeFashion Edu season
 <dl class="show-facts">
   <div><dt>Where</dt><dd>Tucson, Arizona, USA</dd></div>
   <div><dt>When</dt><dd>2021</dd></div>
+  <div><dt>Season book</dt><dd><a href="https://www.amazon.com/dp/B0B28B2PYP">Read the book</a></dd></div>
 </dl>
 
 ### Gallery
