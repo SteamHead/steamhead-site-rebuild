@@ -4,6 +4,9 @@ import { unified } from '@astrojs/markdown-remark';
 import sitemap from '@astrojs/sitemap';
 import cloudflare from '@astrojs/cloudflare';
 import { visit } from 'unist-util-visit';
+import { toString } from 'mdast-util-to-string';
+
+const escapeAttr = s => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 
 // Markdown paragraphs that are just a bare YouTube URL become responsive
 // embeds. Content stays a plain URL (easy for the CMS and the converter);
@@ -19,11 +22,15 @@ function remarkYouTubeEmbed() {
         : child.type === 'text' ? child.value.trim() : '';
       const id = url && !/\s/.test(url) ? ytId(url) : undefined;
       if (!id) return;
+      // `[Some title](youtube-url)` names the iframe for screen readers;
+      // a bare URL falls back to the generic title
+      const text = child.type === 'link' ? toString(child).trim() : '';
+      const title = text && text !== url ? escapeAttr(text) : 'YouTube video';
       node.type = 'html';
       node.children = undefined;
       node.value =
         `<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/${id}" ` +
-        `title="YouTube video" loading="lazy" allowfullscreen ` +
+        `title="${title}" loading="lazy" allowfullscreen ` +
         `allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div>`;
     });
   };
@@ -55,6 +62,20 @@ function rehypeTaskListLabel() {
   };
 }
 
+// MakeFashion Edu season pages are long photo galleries written as plain
+// Markdown images; defer offscreen ones so a 28-photo page doesn't load
+// everything up front. Scoped to that collection so other pages render as before.
+function rehypeLazyMfeduImages() {
+  return (tree, file) => {
+    if (!file.path?.includes('/src/content/mfedu/')) return;
+    visit(tree, 'element', node => {
+      if (node.tagName !== 'img') return;
+      node.properties.loading ??= 'lazy';
+      node.properties.decoding ??= 'async';
+    });
+  };
+}
+
 // https://astro.build/config
 export default defineConfig({
 	markdown: {
@@ -66,7 +87,7 @@ export default defineConfig({
 		// Sätteri MDAST/HAST plugins is a separate, reviewable change.
 		processor: unified(),
 		remarkPlugins: [remarkYouTubeEmbed],
-		rehypePlugins: [rehypeTaskListLabel],
+		rehypePlugins: [rehypeTaskListLabel, rehypeLazyMfeduImages],
 	},
 	// Astro 7 changed the default to 'jsx', which strips whitespace between
 	// inline elements (`<span>hello</span><em>world</em>` renders "helloworld").

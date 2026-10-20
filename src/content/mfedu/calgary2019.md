@@ -16,7 +16,7 @@ Read more: [MakeFashion Edu at Glow - Spectrum](/blog/makefashion-edu-at-glow-sp
 
 ### Video
 
-https://www.youtube.com/watch?v=O9K45H46GiA
+[Calgary 2019 runway at Glow](https://www.youtube.com/watch?v=O9K45H46GiA)
 
 ### Gallery
 
