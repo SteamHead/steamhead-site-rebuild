@@ -17,19 +17,3 @@ Use this 3 month calendar of activities as a guide for all the events leading up
 [**Sample Participant Calendar**](/images/mfedu/2021/06/MFEdu-Run-The-Program-Participant-Calendar.pdf)
 
 ![Month 1 runway participant calendar with activities schedule](/images/mfedu/2021/06/RunwayParticipantMonth1.png)![Month 2 runway participant calendar with activities schedule](/images/mfedu/2021/06/RunwayParticipantMonth2.png)![Month 3 runway participant calendar with activities schedule](/images/mfedu/2021/06/RunwayParticipantMonth3.png)
-
-### RUN THE PROGRAM
-
-#### [Program Benefits](/makefashion-edu/mfedu-program-benefits/)  
-**Get Ready**  
-[Facilitate the Curriculum](/makefashion-edu/mfedu-facilitate-the-curriculum/)  
-[Exhibit the Results](/makefashion-edu/mfedu-exhibit-the-results/)  
-[Publish with MakeFashion Edu](/makefashion-edu/mfedu-publish-with-makefashion-edu/)
-
-### Resources
-
-#### Videos  
-Posters  
-Social  
-Logo  
-Stickers

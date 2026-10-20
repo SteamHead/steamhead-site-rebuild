@@ -17,19 +17,3 @@ The process can guide instructors through a learning sequence or they can select
 -   Intermediate Skills for Fashion Tech
 
 -   More MakeFashion Edu Project Starters all available on our **[Free Online Learning Course](/courses/mfedu-intro/)**
-
-### RUN THE PROGRAM
-
-#### [Program Benefits](/makefashion-edu/mfedu-program-benefits/)  
-[Get Ready](/makefashion-edu/mfedu-get-ready/)  
-**Facilitate the Curriculum**  
-[Exhibit the Results](/makefashion-edu/mfedu-exhibit-the-results/)  
-[Publish with MakeFashion Edu](/makefashion-edu/mfedu-publish-with-makefashion-edu/)
-
-### Resources
-
-#### Videos  
-Posters  
-Social  
-Logo  
-Stickers

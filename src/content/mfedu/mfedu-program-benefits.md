@@ -13,17 +13,3 @@ At MakeFashion Edu our goal is to guide educators, mentors, makerspace facilitat
 https://www.youtube.com/watch?v=SyfGzWgNhWY
 
 https://www.youtube.com/watch?v=EE-aVaSVrH0
-
-### RUN THE PROGRAM
-
-#### **Program Benefits**  
-[Get Ready](/makefashion-edu/mfedu-get-ready/)  
-[Facilitate the Curriculum](/makefashion-edu/mfedu-facilitate-the-curriculum/)  
-[Exhibit the Results](/makefashion-edu/mfedu-exhibit-the-results/)  
-[Publish with MakeFashion Edu](/makefashion-edu/mfedu-publish-with-makefashion-edu/)
-
-### Resources
-
-#### Videos  
-Logo  
-Stickers

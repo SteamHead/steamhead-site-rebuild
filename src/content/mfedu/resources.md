@@ -1,6 +1,6 @@
 ---
 title: "Resources"
-section: run-the-program
+section: resources
 order: 6
 ---
 
@@ -23,17 +23,3 @@ https://www.youtube.com/watch?v=9bTMRAbPU4M
 ## STICKERS
 
 ![Sheet of MakeFashion Participant stickers](/images/mfedu/2021/06/StickerSheet.png)
-
-### RUN THE PROGRAM
-
-#### [Program Benefits](/makefashion-edu/mfedu-program-benefits/)  
-[Get Ready](/makefashion-edu/mfedu-get-ready/)  
-[Facilitate the Curriculum](/makefashion-edu/mfedu-facilitate-the-curriculum/)  
-[Exhibit the Results](/makefashion-edu/mfedu-exhibit-the-results/)  
-[Publish with MakeFashion Edu](/makefashion-edu/mfedu-publish-with-makefashion-edu/)
-
-### Resources
-
-#### Videos  
-Logo  
-Stickers

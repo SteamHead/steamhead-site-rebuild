@@ -12,7 +12,7 @@ Sharing the work of the MakeFashion Edu designers is paramount to the process. Y
 
 ## STEAM Runway
 
-https://www.youtube.com/watch?v=WuzfB\_V2aPQ
+https://www.youtube.com/watch?v=WuzfB_V2aPQ
 
 ## The Gallery
 
@@ -43,17 +43,3 @@ Join the Discord chat where you can find a guide and helpful people!
 “The program introduces young students to technology who started out only interested in art. It brings the two together in a way that makes students imagine big things!”
 
 **— Aisling Yue (Makerspace Manager)**
-
-### RUN THE PROGRAM
-
-#### [Program Benefits](/makefashion-edu/mfedu-program-benefits/)  
-[Get Ready](/makefashion-edu/mfedu-get-ready/)  
-[Facilitate the Curriculum](/makefashion-edu/mfedu-facilitate-the-curriculum/)  
-**Exhibit the Results**  
-[Publish with MakeFashion Edu](/makefashion-edu/mfedu-publish-with-makefashion-edu/)
-
-### Resources
-
-#### Videos  
-Logo  
-Stickers
