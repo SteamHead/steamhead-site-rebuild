@@ -49,8 +49,8 @@
      comfortably. Headings don't need a variant like this any more — the
      brand guide's core palette assigns headings to SteamHead Black
      outright, which has no contrast problem anywhere it's used. */
-  --color-blue-text:    #2c7395;
-  --color-teal-text:    #3c747e;
+  --color-blue-text:    #286b8b;
+  --color-teal-text:    #366b74;
 
   /* Initiative accent colors — brand guide §3, one per initiative:
      full-bleed backgrounds for the homepage "Our Initiatives" cards

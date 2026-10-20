@@ -28,10 +28,6 @@ We’re on October 3rd @ 11:15am ([MakerEd.org](https://makered.org/convening-20
 
 Rushing to another session and can’t make it to the live chat? Become part of our open community of students, teachers and makers on Discord and hop in on the discussions!
 
-## Our Resources
-
-![Isometric illustration promoting MakeFashion Edu coding resources](/images/2020/09/coding-isometric-06.png)
-
 ## Find Us on Social Media
 
 twitter
@@ -49,10 +45,6 @@ SteamHead is a 501c3 nonprofit, and we use these resources to support out commun
 Support us by donating directly through PayPal or buying a book!
 
 ![](https://www.paypal.com/en_US/i/scr/pixel.gif)
-
-Links to Learn More about MakeFashion Edu
-
-![Isometric illustration linking to MakeFashion Edu learning resources](/images/2020/09/coding-isometric-08.png)
 
 ## Advocacy in Print!
 

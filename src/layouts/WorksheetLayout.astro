@@ -18,8 +18,9 @@ const { title, lesson, intro } = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex" />
+    <meta name="description" content={intro ?? `Printable ${title} worksheet from the MakeFashion Edu course Advocacy by Design.`} />
     <title>{title} — MakeFashion Edu Worksheet</title>
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
   </head>
   <body>
     <div class="ws-topbar">
