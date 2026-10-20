@@ -7,8 +7,6 @@ program: general
 categories:
   - "JamesEd"
   - "Maker Education"
-image: "/images/2020/05/coding-isometric-12.png"
-imageAlt: "Isometric illustration of coding and online learning icons"
 ---
 
 ## Online Learning Support: Technology Integration during the 2020 Pandemic
@@ -17,7 +15,6 @@ During the unexpected Online Learning event of 2020, the Technology Integration 
 
 It went through several revisions, and often served as a starting position for support rather than a end. Here we share an overview, lessons learned, and advice for future projects.
 
-![Isometric illustration of coding and online learning icons](/images/2020/05/coding-isometric-12.png)
 
 ## Topics on our Site
 

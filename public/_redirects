@@ -154,3 +154,11 @@
 /twila-busby/ /people/twila-busby/ 301
 /zacharys-art-residency/ /people/zacharys-art-residency/ 301
 /shelf/ /theshelf/ 301
+
+# Old WordPress pages still linked from migrated blog posts
+/shop/ /theshelf/ 301
+/productions/ /system-upgrade/ 301
+/open-badges /maker-badges/ 301
+/open-badges/ /maker-badges/ 301
+/steamhead-online-learning/ /courses/mfedu-intro/ 301
+/vme/ /blog/virtual-maker-exhibition-steamhead-teacher-tour/ 301
