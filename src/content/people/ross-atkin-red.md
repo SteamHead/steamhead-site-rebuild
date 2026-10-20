@@ -23,7 +23,7 @@ _Source: rossatkin.com_
 
 These two girls created everything with the help of their parents. A funny bit is that the girls and the parents were ALL not focused on engineering or anything technical. They wanted to Use technology for their project, but weren’t interested in learning all the details. This is FANTASTIC!
 
-![](http://www.rossatkin.com/wp/images/2017/11/AyalaCairaNicoleRoss1024.jpg)
+![](https://www.rossatkin.com/wp/images/2017/11/AyalaCairaNicoleRoss1024.jpg)
 
 “Making”, EdTech, Design Thinking – all of these things seem to be focused on STEM careers but I feel they are actually not. Using technology doesn’t mean that you love engineering. Keep that in mind while building your own fashion tech projects!
 

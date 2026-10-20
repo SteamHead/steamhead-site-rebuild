@@ -12,7 +12,7 @@ description: "Tucson's second MakeFashion Edu runway, with students from several
 
 Tucson's second MakeFashion Edu runway, with students from several Tucson Unified School District (TUSD) schools. The highlights video below was MakeFashion Edu's first student-led production: students filmed the show, and SteamHead's middle-school intern Gavin edited it.
 
-Read more: [Tucson 2020 Highlights](/blog/new-video-upload-makefashion-edu-tucson-2020-highlights/) and [Tucson 2020 Student Production Video](/blog/make-fashion-edu-tucson-2020-student-production-video/).
+Read more: [Tucson 2020 Student Production Video](/blog/make-fashion-edu-tucson-2020-student-production-video/).
 
 ### Video
 

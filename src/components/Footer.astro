@@ -132,6 +132,14 @@
     color: var(--color-text-dim);
     margin: 0;
   }
+  /* The global link blue fails contrast on black (3.99:1). */
+  .footer-bottom a {
+    color: inherit;
+    text-decoration: underline;
+  }
+  .footer-bottom a:hover {
+    color: var(--color-peach);
+  }
 
   @media (max-width: 768px) {
     .footer-inner {
