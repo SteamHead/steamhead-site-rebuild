@@ -16,7 +16,7 @@ Read more: [Tucson 2020 Highlights](/blog/new-video-upload-makefashion-edu-tucso
 
 ### Video
 
-https://www.youtube.com/watch?v=WuzfB_V2aPQ
+[Tucson 2020 runway highlights](https://www.youtube.com/watch?v=WuzfB_V2aPQ)
 
 ### Gallery
 

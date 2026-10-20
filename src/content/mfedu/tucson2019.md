@@ -16,7 +16,7 @@ Read more: [Tucson MakeFashion Edu](/blog/tucson-makefashion-edu/) and the [behi
 
 ### Video
 
-https://www.youtube.com/watch?v=N12ziwUm8cE
+[Tucson 2019 runway](https://www.youtube.com/watch?v=N12ziwUm8cE)
 
 ### Gallery
 

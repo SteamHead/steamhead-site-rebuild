@@ -16,7 +16,7 @@ Read more: [Shenzhen 2019 Runway Full Version](/blog/shenzhen-2019-runway-full/)
 
 ### Video
 
-https://www.youtube.com/watch?v=82Fei8qsahI
+[Shenzhen 2019 runway](https://www.youtube.com/watch?v=82Fei8qsahI)
 
 ### Gallery
 

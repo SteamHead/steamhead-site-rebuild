@@ -16,7 +16,7 @@ MakeFashion Edu STEAM Runway Shows are fashion tech events showcasing young desi
       <p class="card__text">Calgary is the home of MakeFashion, the professional designer platform and namesake of MakeFashion Edu! Students in Calgary received mentorship from professional designers familiar with technology on the runway - a scarce resource across the entire world. These outfits were displayed at a city-wide festival of lights, and garnered a lot of impact due to the deep roots that MakeFashion has established in this innovation-embracing city.</p>
       <ul class="show-links" aria-label="Calgary shows">
         <li><a href="/makefashion-edu/calgary2022/">2022</a></li>
-        <li><a href="/makefashion-edu/calgary2019/">2019 Semester 1</a></li>
+        <li><a href="/makefashion-edu/calgary2019/">2019</a></li>
       </ul>
     </div>
   </article>
@@ -48,8 +48,8 @@ MakeFashion Edu STEAM Runway Shows are fashion tech events showcasing young desi
       <h2 class="card__title">Shenzhen</h2>
       <p class="card__text">We began our runway program in Shenzhen, and thanks to the Design Society, a group inside the Seaworld Culture and Arts Center, we have always had a stunning venue in this city. Shenzhen is the worldwide center for electronics production, and the community that came together to mentor the first round of students included electronics company owners and technology entrepreneurs, in addition to the schools.</p>
       <ul class="show-links" aria-label="Shenzhen shows">
-        <li><a href="/makefashion-edu/shenzhen2019/">2019 Semester 2</a></li>
-        <li><a href="/makefashion-edu/shenzhen2018/">2018 Semester 1</a></li>
+        <li><a href="/makefashion-edu/shenzhen2019/">2019</a></li>
+        <li><a href="/makefashion-edu/shenzhen2018/">2018</a></li>
       </ul>
     </div>
   </article>
@@ -64,8 +64,8 @@ MakeFashion Edu STEAM Runway Shows are fashion tech events showcasing young desi
         <li><a href="/makefashion-edu/tucson2023/">2023</a></li>
         <li><a href="/makefashion-edu/tucson2022/">2022</a></li>
         <li><a href="/makefashion-edu/tucson2021/">2021</a></li>
-        <li><a href="/makefashion-edu/tucson2020/">2020 Semester 2</a></li>
-        <li><a href="/makefashion-edu/tucson2019/">2019 Semester 1</a></li>
+        <li><a href="/makefashion-edu/tucson2020/">2020</a></li>
+        <li><a href="/makefashion-edu/tucson2019/">2019</a></li>
       </ul>
     </div>
   </article>

@@ -76,7 +76,7 @@ const mfedu = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/mfedu' }),
   schema: z.object({
     title:       z.string(),
-    section:     z.enum(['runway-shows', 'run-the-program', 'about']),
+    section:     z.enum(['runway-shows', 'run-the-program', 'resources', 'about']),
     order:       z.number(),
     description: z.string().optional(),
   }).strict(),
