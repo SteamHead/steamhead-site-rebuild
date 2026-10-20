@@ -403,19 +403,19 @@ const SITES = [
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
   {site:"tan", net:"2026-10-19T19:41:03Z", p:"time", veh:"H3-24", who:"Mitsubishi Heavy Industries",
-   mission:"Martian Moons eXploration (MMX)", orbit:"Mars Orbit", status:"Go for Launch",
+   mission:"Martian Moons eXploration (MMX)", orbit:"Mars Orbit", status:"Launch Successful",
    brief:"MMX is a Japanese scientific mission to land on Phobos, one of the two moons of Mars, to collect samples before bringing them back to Earth."},
-  {site:"ccsfs", net:"2026-10-20T10:30:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"Bandwagon 5 (Dedicated Mid-Inclination Rideshare)", orbit:"Low Earth Orbit", status:"Go for Launch",
+  {site:"ccsfs", net:"2026-10-20T11:04:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Bandwagon 5 (Dedicated Mid-Inclination Rideshare)", orbit:"Low Earth Orbit", status:"Launch in Flight",
    brief:"Dedicated rideshare flight to a mid-inclination orbit with dozens of small microsatellites and nanosatellites for commercial and government customers."},
-  {site:"vsfb", net:"2026-10-20T22:14:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+  {site:"vsfb", net:"2026-10-20T23:10:02Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Starlink Group 15-15", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
   {site:"x1", net:"2026-10-21T03:35:00Z", p:"time", veh:"Ceres-1S", who:"Galactic Energy",
    mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
    brief:"Details TBD."},
-  {site:"lc1", net:"2026-10-21T05:00:00Z", p:"time", veh:"Electron", who:"Rocket Lab",
-   mission:"We're Not Hawking Around (3x HawkEye 360)", orbit:"Sun-Synchronous Orbit", status:"To Be Confirmed",
+  {site:"lc1", net:"2026-10-21T07:00:00Z", p:"time", veh:"Electron", who:"Rocket Lab",
+   mission:"We're Not Hawking Around (3x HawkEye 360)", orbit:"Sun-Synchronous Orbit", status:"Go for Launch",
    brief:"HawkEye 360 is a a space-based civil global intelligence satellite network using radio frequency (RF) technology to help monitor transportation across air, land and sea and assist with emergencies, and to provide civil SIGINT (Signal Intelligence) mission."},
   {site:"wen", net:"2026-10-22T02:57:00Z", p:"time", veh:"Long March 8A", who:"China Aerospace Science and Technology Corporation",
    mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
@@ -428,6 +428,9 @@ const LAUNCHES = [
    brief:"Details TBD."},
   {site:"vsfb", net:"2026-10-24T05:29:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Starlink Group 15-16", orbit:"Low Earth Orbit", status:"Go for Launch",
+   brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
+  {site:"vsfb", net:"2026-10-28T04:31:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Starlink Group 15-18", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
   {site:"ccsfs", net:"2026-10-29T00:00:00Z", p:"day", veh:"Vulcan VC6L", who:"United Launch Alliance",
    mission:"Amazon Leo (LV-01)", orbit:"Low Earth Orbit", status:"To Be Determined",
@@ -447,6 +450,9 @@ const LAUNCHES = [
   {site:"lc1", net:"2026-11-10T00:00:00Z", p:"day", veh:"Electron", who:"Rocket Lab",
    mission:"The Mountain God Rises (iQPS Launch 10)", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Synthetic aperture radar Earth observation satellite for Japanese Earth imaging company iQPS."},
+  {site:"vsfb", net:"2026-11-10T00:00:00Z", p:"day", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Starlink Group 15-21", orbit:"Low Earth Orbit", status:"To Be Determined",
+   brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
   {site:"kou", net:"2026-11-23T00:00:00Z", p:"day", veh:"Ariane 64 Block 2", who:"Arianespace",
    mission:"Amazon Leo (LE-04)", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon."},
@@ -575,12 +581,6 @@ const LAUNCHES = [
    brief:"24 satellites for Rivada's internet constellation."},
   {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Rivada 2", orbit:"Polar Orbit", status:"To Be Determined",
-   brief:"24 satellites for Rivada's internet constellation."},
-  {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"Rivada 3", orbit:"Polar Orbit", status:"To Be Determined",
-   brief:"24 satellites for Rivada's internet constellation."},
-  {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"Rivada 4", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"24 satellites for Rivada's internet constellation."},
 ];
 
@@ -1018,7 +1018,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 19 Oct 2026';
+    : '<b>Snapshot</b> · 20 Oct 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
