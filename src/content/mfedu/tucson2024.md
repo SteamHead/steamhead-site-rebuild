@@ -2,11 +2,13 @@
 title: "Tucson 2024"
 section: runway-shows
 order: 4
+description: "Student teams designed, built and modeled their own light-up pieces for the 2024 Drachman runway."
 ---
 
-## TUCSON 2024
-
-## Tucson, Arizona, USA at Drachman
+<dl class="show-facts">
+  <div><dt>Where</dt><dd>Drachman, Tucson, Arizona, USA</dd></div>
+  <div><dt>When</dt><dd>2024</dd></div>
+</dl>
 
 Student teams designed, built and modeled their own light-up pieces for the 2024 Drachman runway. Tutti-Fruity is a typical example: the team shaped fruit from cheesecloth and glue, painted it, and set programmable fairy lights inside each piece. Side-lit LED strips ring the hat's brim, so the whole design glows.
 
@@ -38,3 +40,7 @@ Student teams designed, built and modeled their own light-up pieces for the 2024
 - Mother Earth
 - Colors of the Wind
 - Flaming Hot
+
+### Gallery
+
+Photos from this show haven't been added yet.

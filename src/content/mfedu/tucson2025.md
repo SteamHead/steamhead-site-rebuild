@@ -2,11 +2,13 @@
 title: "Tucson 2025"
 section: runway-shows
 order: 3
+description: "Five collections of student fashion tech on Tucson's 2025 runway at Drachman."
 ---
 
-## TUCSON 2025
-
-## Tucson, Arizona, USA at Drachman
+<dl class="show-facts">
+  <div><dt>Where</dt><dd>Drachman, Tucson, Arizona, USA</dd></div>
+  <div><dt>When</dt><dd>2025</dd></div>
+</dl>
 
 Tucson's 2025 runway at Drachman showed five collections of student fashion tech, from nature and the seasons to bold graphic prints.
 
@@ -48,3 +50,7 @@ Tucson's 2025 runway at Drachman showed five collections of student fashion tech
 - Gridlock Glow
 - Neo Tartan
 - Crimson Mosaic
+
+### Gallery
+
+Photos from this show haven't been added yet.
