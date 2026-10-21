@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img">
+<title>A student-made light-up project leaving a cardboard shipping box, beside a phone showing it listed in an online shop</title>
+<rect width="800" height="450" fill="#E4EDEA"/>
+<g transform="translate(7 6)">
+<circle cx="230" cy="158" r="42" fill="#F4CD15"/>
+<circle cx="230" cy="158" r="14" fill="#ffffff"/>
+<path d="M110 240 L170 240 L130 204 L70 204 Z" fill="#EDA83E"/>
+<path d="M290 240 L350 240 L410 204 L350 204 Z" fill="#EDA83E"/>
+<rect x="110" y="240" width="240" height="150" fill="#EDA83E"/>
+<rect x="140" y="300" width="80" height="50" rx="4" fill="#ffffff"/>
+<rect x="490" y="30" width="200" height="390" rx="26" fill="#D7D7D7"/>
+<rect x="508" y="70" width="164" height="310" rx="6" fill="#ffffff"/>
+<rect x="522" y="84" width="136" height="120" rx="4" fill="#5EB1BF"/>
+<circle cx="590" cy="144" r="28" fill="#F4CD15"/>
+<circle cx="590" cy="144" r="9" fill="#ffffff"/>
+<rect x="524" y="318" width="132" height="40" rx="20" fill="#EF7B44"/>
+</g>
+<g>
+<circle cx="230" cy="158" r="42" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="230" cy="158" r="14" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M282 158 l18 0 M178 158 l-18 0 M230 106 l0 -18 M266.4 121.6 l12.6 -12.6 M193.6 121.6 l-12.6 -12.6" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M110 240 L170 240 L130 204 L70 204 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M290 240 L350 240 L410 204 L350 204 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="110" y="240" width="240" height="150" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="140" y="300" width="80" height="50" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M152 318 l56 0 M152 334 l36 0" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M372 310 Q430 310 462 262 M446 266 L462 262 L466 279" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="490" y="30" width="200" height="390" rx="26" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="508" y="70" width="164" height="310" rx="6" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="522" y="84" width="136" height="120" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="590" cy="144" r="28" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="590" cy="144" r="9" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M628 144 l18 0 M552 144 l-18 0 M590 106 l0 -18 M616.6 117.4 l12.6 -12.6 M563.4 117.4 l-12.6 -12.6" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M524 228 l120 0 M524 252 l90 0 M524 276 l104 0" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="524" y="318" width="132" height="40" rx="20" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+</svg>

@@ -4,6 +4,9 @@ date: 2020-07-09
 description: "Experiencing Success and Failure Setting up and enforcing classroom rules and procedures is critical to a successful classroom, and a positive classroom environment."
 author: "James"
 program: general
+image: "/images/blog/illustrations/creating-rules-procedures-with-students.svg"
+imageAlt: "Drawing of a chart-paper list of class rules on an easel, with students' raised hands and a marker adding to it"
+imageCredit: "Illustration by Blake"
 categories:
   - "JamesEd"
 ---

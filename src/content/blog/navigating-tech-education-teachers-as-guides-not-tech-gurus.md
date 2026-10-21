@@ -4,6 +4,9 @@ date: 2023-05-22
 description: "In education technology is becoming an essential part of learning. Surprisingly to hackers, it's not there yet!"
 author: "James"
 program: general
+image: "/images/blog/illustrations/navigating-tech-education-teachers-as-guides-not-tech-gurus.svg"
+imageAlt: "Drawing of a signpost at the start of a winding path that leads past a laptop and a hammer to a flag"
+imageCredit: "Illustration by Blake"
 categories:
   - "Uncategorized"
 draft: true

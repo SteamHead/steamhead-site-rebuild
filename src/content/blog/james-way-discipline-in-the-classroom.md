@@ -4,6 +4,9 @@ date: 2020-07-02
 description: "I meet so many fantastic teachers focusing on student choice and project based learning, that I needed to write a little about some differences which many people might consider…"
 author: "James"
 program: general
+image: "/images/blog/illustrations/james-way-discipline-in-the-classroom.svg"
+imageAlt: "Drawing of a dial with low, medium and high zones and its needle turned towards the low end"
+imageCredit: "Illustration by Blake"
 categories:
   - "JamesEd"
 ---

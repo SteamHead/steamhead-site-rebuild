@@ -4,6 +4,9 @@ date: 2020-06-30
 description: "I work with international and private schools in China."
 author: "James"
 program: general
+image: "/images/blog/illustrations/equality-trade-and-idealism-in-chinese-international-schools.svg"
+imageAlt: "Drawing of a lottery drum of coloured balls sending one ball down a chute towards a school"
+imageCredit: "Illustration by Blake"
 categories:
   - "JamesEd"
 ---

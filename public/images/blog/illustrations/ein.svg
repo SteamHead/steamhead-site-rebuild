@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img">
+<title>Teachers seen from behind watching a presentation, with two speech bubbles for a two-language meetup</title>
+<rect width="800" height="450" fill="#E4EDEA"/>
+<g transform="translate(7 6)">
+<rect x="230" y="50" width="340" height="200" rx="8" fill="#ffffff"/>
+<rect x="460" y="90" width="80" height="60" rx="4" fill="#F4CD15"/>
+<path d="M60 70 h110 a16 16 0 0 1 16 16 v44 a16 16 0 0 1 -16 16 h-60 l-22 22 l0 -22 h-28 a16 16 0 0 1 -16 -16 v-44 a16 16 0 0 1 16 -16 Z" fill="#5EB1BF"/>
+<path d="M630 110 h110 a16 16 0 0 1 16 16 v44 a16 16 0 0 1 -16 16 h-28 l0 22 l-22 -22 h-60 a16 16 0 0 1 -16 -16 v-44 a16 16 0 0 1 16 -16 Z" fill="#EF7B44"/>
+<path d="M95 450 C95 380 205 380 205 450" fill="#409FCD"/>
+<circle cx="150" cy="340" r="36" fill="#474747"/>
+<path d="M235 450 C235 380 345 380 345 450" fill="#EDA83E"/>
+<circle cx="290" cy="340" r="36" fill="#474747"/>
+<path d="M375 450 C375 380 485 380 485 450" fill="#5EB1BF"/>
+<circle cx="430" cy="340" r="36" fill="#474747"/>
+<path d="M515 450 C515 380 625 380 625 450" fill="#EF7B44"/>
+<circle cx="570" cy="340" r="36" fill="#474747"/>
+<path d="M645 450 C645 380 755 380 755 450" fill="#F4CD15"/>
+<circle cx="700" cy="340" r="36" fill="#474747"/>
+</g>
+<g>
+<rect x="230" y="50" width="340" height="200" rx="8" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M270 210 L270 150 M320 210 L320 120 M370 210 L370 170 M420 210 L420 100" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="460" y="90" width="80" height="60" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M400 250 L400 280" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M60 70 h110 a16 16 0 0 1 16 16 v44 a16 16 0 0 1 -16 16 h-60 l-22 22 l0 -22 h-28 a16 16 0 0 1 -16 -16 v-44 a16 16 0 0 1 16 -16 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M80 100 l70 0 M80 120 l45 0" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M630 110 h110 a16 16 0 0 1 16 16 v44 a16 16 0 0 1 -16 16 h-28 l0 22 l-22 -22 h-60 a16 16 0 0 1 -16 -16 v-44 a16 16 0 0 1 16 -16 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M650 140 l70 0 M650 160 l45 0" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M95 450 C95 380 205 380 205 450" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="150" cy="340" r="36" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M235 450 C235 380 345 380 345 450" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="290" cy="340" r="36" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M375 450 C375 380 485 380 485 450" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="430" cy="340" r="36" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M515 450 C515 380 625 380 625 450" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="570" cy="340" r="36" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M645 450 C645 380 755 380 755 450" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="700" cy="340" r="36" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+</svg>

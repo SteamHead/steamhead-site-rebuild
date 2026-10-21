@@ -4,6 +4,9 @@ date: 2020-07-07
 description: "Philosophy's abound! Ready for teachers to buy-into and discuss at PubPD. I advocate approaching these philosophies with pruning shears and a basket."
 author: "James"
 program: general
+image: "/images/blog/illustrations/3-tidbits-to-use-from-educational-philosophies.svg"
+imageAlt: "Drawing of a fruit tree, a pair of pruning shears and a basket holding three picked fruits"
+imageCredit: "Illustration by Blake"
 categories:
   - "JamesEd"
 ---
