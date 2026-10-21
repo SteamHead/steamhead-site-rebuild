@@ -62,6 +62,8 @@ collections:
         required: false
         hint: "Recommended: 1200×630px"
       - { label: "Image Alt Text",  name: imageAlt,    widget: string,   required: false }
+      - { label: "Image Credit",    name: imageCredit, widget: string,   required: false,
+          hint: "Shown under the header image, e.g. \"Photo: SteamHead archive\" or \"Illustration by Blake\"" }
       - { label: Draft,             name: draft,       widget: boolean,  default: false,
           hint: "Drafts are saved but never published to the site" }
       - { label: Body,              name: body,        widget: markdown }

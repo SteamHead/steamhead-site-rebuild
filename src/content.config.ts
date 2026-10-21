@@ -30,6 +30,9 @@ const blog = defineCollection({
     tags:        z.array(z.string()).default([]),
     image:       z.string().optional(),
     imageAlt:    z.string().optional(),
+    // Who made the header image, shown as written under it, e.g.
+    // "Illustration by Blake" or "Photo: SteamHead archive".
+    imageCredit: z.string().optional(),
     // Optional pointers for the AI publishing pipeline: the event a post
     // covers and the source media (YouTube/Drive URLs) it draws on.
     event:       z.string().optional(),

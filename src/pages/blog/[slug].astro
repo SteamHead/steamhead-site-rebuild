@@ -13,6 +13,10 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await render(post);
 
+// SVG headers are line illustrations: shown whole on a light panel. A faded
+// photo-style background would lose black linework on the black hero.
+const isIllustration = post.data.image?.endsWith('.svg') ?? false;
+
 const formattedDate = post.data.date.toLocaleDateString('en-US', {
   year: 'numeric', month: 'long', day: 'numeric'
 });
@@ -23,14 +27,25 @@ const formattedDate = post.data.date.toLocaleDateString('en-US', {
   <!-- =====================================================================
        HERO
        ===================================================================== -->
-  <section class="hero hero--post" aria-label={post.data.title}>
-    {post.data.image && (
+  <section class:list={['hero', 'hero--post', { 'hero--illustrated': isIllustration }]} aria-label={post.data.title}>
+    {post.data.image && !isIllustration && (
       <img class="hero__bg" src={post.data.image} alt={post.data.imageAlt ?? post.data.title} />
     )}
     <div class="container hero__content">
-      <time class="post-date" datetime={post.data.date.toISOString()}>{formattedDate}</time>
-      <h1>{post.data.title}</h1>
-      <p class="hero__tagline">{post.data.description}</p>
+      <div class="hero__text">
+        <time class="post-date" datetime={post.data.date.toISOString()}>{formattedDate}</time>
+        <h1>{post.data.title}</h1>
+        <p class="hero__tagline">{post.data.description}</p>
+        {post.data.imageCredit && !isIllustration && (
+          <p class="hero__credit">{post.data.imageCredit}</p>
+        )}
+      </div>
+      {isIllustration && (
+        <figure class="hero__figure">
+          <img src={post.data.image} alt={post.data.imageAlt ?? post.data.title} />
+          {post.data.imageCredit && <figcaption class="hero__credit">{post.data.imageCredit}</figcaption>}
+        </figure>
+      )}
     </div>
   </section>
 
@@ -50,6 +65,33 @@ const formattedDate = post.data.date.toLocaleDateString('en-US', {
 
 <style>
   .hero--post { padding-block: var(--space-section); }
+
+  .hero__credit {
+    font-size: var(--text-sm);
+    color: var(--color-text-dim);
+    margin: var(--space-xs) 0 0;
+  }
+
+  /* Illustrated header: text, then the drawing whole on a light panel.
+     Side by side from 768px up; the photo hero's 4:3 sizing is dropped. */
+  .hero--illustrated { aspect-ratio: auto; min-height: 0; max-height: none; }
+  .hero__figure { margin: var(--space-md) 0 0; }
+  .hero__figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: var(--color-mint);
+    border-radius: var(--radius);
+  }
+  @media (min-width: 768px) {
+    .hero--illustrated .hero__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-lg);
+      align-items: center;
+    }
+    .hero--illustrated .hero__figure { margin: 0; }
+  }
   .post-date {
     display: block;
     font-size: var(--text-sm);
