@@ -1,7 +1,7 @@
 ---
 title: "Goodbye Wix, Hello WordPress"
 date: 2018-05-10
-description: "SteamHead's first website is retiring. A look back at what the Wix site held — a Shekou makerspace, kids' workshops, school services and an open maker-ed community — before the blog moves to WordPress."
+description: "SteamHead's Wix website is retiring. A look back at what the Wix site held — a Shekou makerspace, kids' workshops, school services and an open maker-ed community — before the blog moves to WordPress."
 author: "Blake"
 program: general
 categories:
@@ -10,7 +10,7 @@ tags:
   - "Wix archive"
 ---
 
-SteamHead's first website was built on Wix. Its footer said "© 2014 SteamHead", and for the next few years it was the front door to a small makerspace in Shekou, Shenzhen. The blog is now moving to WordPress. Before the old site goes, here is what it held.
+SteamHead's Wix website dates from 2014, the same year as its sister site theMake.club. Its footer said "© 2014 SteamHead", and for the next few years it was the front door to a small makerspace in Shekou, Shenzhen. The blog is now moving to WordPress. Before the old site goes, here is what it held.
 
 ## A room in Shekou
 
