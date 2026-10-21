@@ -1,6 +1,6 @@
 ---
 title: "Innovation Is a Skill. Start Practicing."
-date: 2016-01-11
+date: 2015-08-12
 description: "theMake.club trained young engineers in the skills and values of Silicon Valley's Maker Movement, and built a bridge between Chinese and American makers."
 author: "theMake.club"
 program: general
@@ -43,4 +43,4 @@ Shenzhen, Nanshan:
 - SF Bike Club (San Francisco Youth Club)
 - SAIS (Shenzhen International School)
 
-*Originally the home page of theMake.club, SteamHead's first website. Restored in 2026 from the Internet Archive's capture of January 11, 2016; the date shown is that capture's. Photos are from theMake.club's own image archive.*
+*Originally the home page of theMake.club, one of SteamHead's first websites. Restored in 2026 from the Internet Archive's capture of January 11, 2016. The opening text and the About Us section already existed on August 12, 2015, as marketing copy for [theMake.club's classes at Litchee Lab](/blog/themake-club-comes-to-litchee-lab/), so the post is dated to that day; the page as a whole, including the lists of locations and friends, is as captured in January 2016. Photos are from theMake.club's own image archive.*

@@ -39,19 +39,18 @@ Want to learn what "Makers" do? Bring your kid and a 9v battery. We'll learn abo
 **Wed, June 10 2015**
 07:51:16, cyberspace
 
-subject: Makerspace Plan Beginning
-from: james.xps@outlook.com
-to: lit@litchee.cn
+**Email: Makerspace Plan Beginning**
+From James to Li Ting at Litchee Lab
 
 > Hey - should I say Li Ting or Ting? Here is the Excel file with the matrix templates. I made a new tab for what skills a student would learn at each age.
 
 ---
 
-**Sat, December 31 2017**
+**Sat, December 31 2016**
 10pm~ish
 
 > "MakerEd should be freely distributed, it's an innovation industry, and that doesn't grow unless people are sharing and copying ideas from each other quickly and freely.
 >
 > In fact, just open sourcing isn't enough. We need to do something to help people use it!"
 
-*Originally published on SteamHead's Wix site on August 16, 2017. Restored from the site archive in 2026.*
+*Originally published on SteamHead's Wix site on August 16, 2017. Restored from the site archive in 2026. The archived page dated the last entry December 31, 2017; that day was a Sunday, so it has been corrected to Saturday, December 31, 2016. The email's addresses have been left out.*
