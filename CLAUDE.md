@@ -251,7 +251,9 @@ Everything needed to continue lives in this repo except a few things:
 4. **Full WordPress media backup** (UpdraftPlus, taken 2026-08-08 11pm,
    covers everything the migration script didn't — see the video re-hosting
    item in TODO.md) — saved to the "shmac" laptop and SteamHead's OneDrive,
-   not in this repo or Drive.
+   and since 2026-10-21 also in the SteamHead Projects Drive as
+   `04 SteamHead/Websites/website-archives/SteamHead.Space WordPress.zip`
+   (1,942 files, verified against the source copy). Never in this repo.
 
 Then: `npm install && npm run dev`. **Deploys are NOT fully automatic right
 now** — see "Deploy path" above for the `steamhead` vs
