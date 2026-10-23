@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img">
+<title>Two differently shaped school buildings with arrows passing back and forth between them</title>
+<rect width="800" height="450" fill="#E4EDEA"/>
+<g transform="translate(7 6)">
+<rect x="60" y="205" width="230" height="175" fill="#5EB1BF"/>
+<path d="M42 210 L175 122 L308 210 Z" fill="#EF7B44"/>
+<circle cx="175" cy="172" r="18" fill="#ffffff"/>
+<rect x="85" y="235" width="45" height="40" fill="#ffffff"/>
+<rect x="220" y="235" width="45" height="40" fill="#ffffff"/>
+<rect x="150" y="305" width="50" height="75" fill="#ffffff"/>
+<rect x="510" y="152" width="240" height="228" fill="#F4CD15"/>
+<rect x="496" y="134" width="268" height="20" fill="#D7D7D7"/>
+<rect x="535" y="180" width="46" height="44" fill="#ffffff"/>
+<rect x="535" y="248" width="46" height="44" fill="#ffffff"/>
+<rect x="607" y="180" width="46" height="44" fill="#ffffff"/>
+<rect x="607" y="248" width="46" height="44" fill="#ffffff"/>
+<rect x="679" y="180" width="46" height="44" fill="#ffffff"/>
+<rect x="679" y="248" width="46" height="44" fill="#ffffff"/>
+<rect x="605" y="318" width="50" height="62" fill="#ffffff"/>
+</g>
+<g>
+<path d="M20 380 H780" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="60" y="205" width="230" height="175" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M42 210 L175 122 L308 210 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="175" cy="172" r="18" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="85" y="235" width="45" height="40" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="220" y="235" width="45" height="40" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="150" y="305" width="50" height="75" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="510" y="152" width="240" height="228" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="496" y="134" width="268" height="20" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="535" y="180" width="46" height="44" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="535" y="248" width="46" height="44" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="607" y="180" width="46" height="44" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="607" y="248" width="46" height="44" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="679" y="180" width="46" height="44" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="679" y="248" width="46" height="44" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="605" y="318" width="50" height="62" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M332 232 H468 M452 216 L468 232 L452 248" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M468 300 H332 M348 284 L332 300 L348 316" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+</svg>

@@ -4,6 +4,9 @@ date: 2023-01-08
 description: "A Model U.N. club for high school, except about global monetary policy. Where to start, especially as a non-economist? If you have a teacher's schedule, this could be overwhelming."
 author: "James"
 program: general
+image: "/images/blog/illustrations/model-imf-club.svg"
+imageAlt: "Drawing of a globe on a stand between two stacks of coins, with speech bubbles for a debate"
+imageCredit: "Illustration by Blake"
 categories:
   - "Uncategorized"
 draft: true

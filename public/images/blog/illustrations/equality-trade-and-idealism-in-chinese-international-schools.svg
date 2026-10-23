@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img">
+<title>A lottery drum of coloured balls sending one ball down a chute towards a school</title>
+<rect width="800" height="450" fill="#E4EDEA"/>
+<g transform="translate(7 6)">
+<circle cx="230" cy="200" r="120" fill="#ffffff"/>
+<circle cx="180" cy="230" r="22" fill="#F4CD15"/>
+<circle cx="230" cy="260" r="22" fill="#EF7B44"/>
+<circle cx="280" cy="228" r="22" fill="#5EB1BF"/>
+<circle cx="205" cy="180" r="22" fill="#409FCD"/>
+<circle cx="262" cy="170" r="22" fill="#F4CD15"/>
+<circle cx="160" cy="270" r="22" fill="#5EB1BF"/>
+<circle cx="232" cy="120" r="22" fill="#EF7B44"/>
+<circle cx="430" cy="324" r="20" fill="#EF7B44"/>
+<rect x="560" y="232" width="200" height="178" fill="#5EB1BF"/>
+<path d="M540 237 L660 152 L780 237 Z" fill="#F4CD15"/>
+<rect x="640" y="340" width="40" height="70" fill="#ffffff"/>
+<rect x="590" y="262" width="40" height="36" fill="#ffffff"/>
+<rect x="690" y="262" width="40" height="36" fill="#ffffff"/>
+</g>
+<g>
+<path d="M170 312 L140 410 M290 312 L320 410 M110 410 H350" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="230" cy="200" r="120" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M350 200 H392 V244" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="180" cy="230" r="22" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="230" cy="260" r="22" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="280" cy="228" r="22" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="205" cy="180" r="22" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="262" cy="170" r="22" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="160" cy="270" r="22" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="232" cy="120" r="22" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M300 300 L560 395 M312 276 L560 367" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="430" cy="324" r="20" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="560" y="232" width="200" height="178" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M540 237 L660 152 L780 237 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="640" y="340" width="40" height="70" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="590" y="262" width="40" height="36" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="690" y="262" width="40" height="36" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+</svg>

@@ -4,6 +4,9 @@ date: 2017-08-16
 description: "Four moments on the road to SteamHead, from a free Business English class at a Reebok factory in 2011 to a New Year's Eve conviction about open maker education."
 author: "James"
 program: general
+image: "/images/blog/illustrations/james-maker-ed-milestones.svg"
+imageAlt: "Drawing of a winding path with four milestones: a speech bubble, a battery, an envelope and a glowing light bulb"
+imageCredit: "Illustration by Blake"
 categories:
   - "FAQ"
 tags:

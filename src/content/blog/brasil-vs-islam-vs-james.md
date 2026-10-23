@@ -4,6 +4,9 @@ date: 2020-07-17
 description: "Paulo Freire Paulo Freire, translated (Schor, 1992), is a great read."
 author: "James"
 program: general
+image: "/images/blog/illustrations/brasil-vs-islam-vs-james.svg"
+imageAlt: "Drawing of three overlapping circles, each holding a symbol of learning: a book, a light and a pencil"
+imageCredit: "Illustration by Blake"
 categories:
   - "JamesEd"
 ---

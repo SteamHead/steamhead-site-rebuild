@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img">
+<title>A plane flying a dashed route between two city skylines, with a suitcase waiting at the arrival city</title>
+<rect width="800" height="450" fill="#E4EDEA"/>
+<g transform="translate(7 6)">
+<rect x="50" y="260" width="50" height="120" fill="#D7D7D7"/>
+<rect x="105" y="200" width="60" height="180" fill="#5EB1BF"/>
+<rect x="170" y="280" width="45" height="100" fill="#D7D7D7"/>
+<rect x="560" y="230" width="50" height="150" fill="#D7D7D7"/>
+<rect x="615" y="150" width="40" height="230" fill="#409FCD"/>
+<rect x="660" y="260" width="70" height="120" fill="#D7D7D7"/>
+<rect x="735" y="210" width="40" height="170" fill="#5EB1BF"/>
+<path d="M360 92 L440 82 L460 72 L470 78 L456 92 L470 112 L460 116 L436 100 L370 104 Z" fill="#ffffff"/>
+<path d="M400 90 L380 60 L395 58 L425 88 M405 103 L392 124 L404 125 L428 101" fill="#ffffff"/>
+<rect x="460" y="300" width="70" height="80" rx="8" fill="#EF7B44"/>
+</g>
+<g>
+<line x1="20" y1="380" x2="780" y2="380" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="50" y="260" width="50" height="120" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="105" y="200" width="60" height="180" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="170" y="280" width="45" height="100" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="560" y="230" width="50" height="150" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="615" y="150" width="40" height="230" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="660" y="260" width="70" height="120" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="735" y="210" width="40" height="170" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M150 180 C250 40 500 40 610 130" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="14 12"/>
+<path d="M360 92 L440 82 L460 72 L470 78 L456 92 L470 112 L460 116 L436 100 L370 104 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M400 90 L380 60 L395 58 L425 88 M405 103 L392 124 L404 125 L428 101" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="460" y="300" width="70" height="80" rx="8" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M480 300 L480 284 L510 284 L510 300 M460 330 L530 330" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+</svg>

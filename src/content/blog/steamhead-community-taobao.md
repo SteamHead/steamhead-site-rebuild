@@ -4,6 +4,9 @@ date: 2018-09-27
 description: "SteamHead’s Taobao shop is ready to post your project!"
 author: "James"
 program: makefashion-edu
+image: "/images/blog/illustrations/steamhead-community-taobao.svg"
+imageAlt: "Drawing of a student-made light-up project leaving a cardboard shipping box, beside a phone showing it listed in an online shop"
+imageCredit: "Illustration by Blake"
 categories:
   - "MakeFashion Edu"
 ---

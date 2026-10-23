@@ -4,6 +4,9 @@ date: 2019-07-01
 description: "Carousel, Gracjana Siewert, Shenzhen 2018 MakeFashion Edu Gracjana Siewert, grade 8, took inspiration from Polish legend Lajkonik to form her piece, Carousel."
 author: "James"
 program: makefashion-edu
+image: "https://i.ytimg.com/vi/F-jzrWpYLpg/maxresdefault.jpg"
+imageAlt: "A student attaches star-patterned fabric to a padded form in a design studio"
+imageCredit: "Video still: MakeFashion Edu"
 categories:
   - "MakeFashion Edu"
 ---

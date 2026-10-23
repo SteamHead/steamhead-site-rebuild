@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img">
+<title>Three overlapping circles, each holding a symbol of learning: a book, a light and a pencil</title>
+<rect width="800" height="450" fill="#E4EDEA"/>
+<g transform="translate(7 6)">
+<circle cx="320" cy="175" r="120" fill-opacity="0.6" fill="#5EB1BF"/>
+<circle cx="480" cy="175" r="120" fill-opacity="0.6" fill="#F4CD15"/>
+<circle cx="400" cy="300" r="120" fill-opacity="0.6" fill="#EF7B44"/>
+<path d="M268 138 C253 131 233 131 223 136 V173 C233 168 253 168 268 175 Z" fill="#ffffff"/>
+<path d="M268 138 C283 131 303 131 313 136 V173 C303 168 283 168 268 175 Z" fill="#ffffff"/>
+<path d="M518 168 V146 A16 16 0 0 1 550 146 V168 Z" fill="#ffffff"/>
+<path d="M350 352 H428 L452 362 L428 372 H350 Z" fill="#EDA83E"/>
+<rect x="334" y="352" width="16" height="20" fill="#ffffff"/>
+</g>
+<g>
+<circle cx="320" cy="175" r="120" fill-opacity="0.6" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="480" cy="175" r="120" fill-opacity="0.6" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="400" cy="300" r="120" fill-opacity="0.6" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M268 138 C253 131 233 131 223 136 V173 C233 168 253 168 268 175 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M268 138 C283 131 303 131 313 136 V173 C303 168 283 168 268 175 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M518 168 V146 A16 16 0 0 1 550 146 V168 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M527 168 V196 M541 168 V188 M534 104 V92 M562 118 l9 -9 M506 118 l-9 -9" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M350 352 H428 L452 362 L428 372 H350 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="334" y="352" width="16" height="20" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="400" cy="216" r="9" fill="#000000"/>
+</g>
+</svg>
