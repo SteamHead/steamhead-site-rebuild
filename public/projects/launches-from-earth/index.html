@@ -402,28 +402,22 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"lc1", net:"2026-10-23T07:11:00Z", p:"time", veh:"Electron", who:"Rocket Lab",
-   mission:"We're Not Hawking Around (3x HawkEye 360)", orbit:"Sun-Synchronous Orbit", status:"Payload Deployed",
-   brief:"HawkEye 360 is a a space-based civil global intelligence satellite network using radio frequency (RF) technology to help monitor transportation across air, land and sea and assist with emergencies, and to provide civil SIGINT (Signal Intelligence) mission."},
-  {site:"tai", net:"2026-10-23T10:15:00Z", p:"time", veh:"Long March 6A", who:"China Aerospace Science and Technology Corporation",
-   mission:"Yaogan 50-03", orbit:"Low Earth Orbit", status:"Go for Launch",
-   brief:"The Yaogan 50-03 is a Chinese military “remote sensing” satellite of unknown purposes."},
   {site:"jiu", net:"2026-10-23T19:25:00Z", p:"time", veh:"Long March 4B", who:"China Aerospace Science and Technology Corporation",
-   mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
-   brief:"Details TBD."},
-  {site:"vsfb", net:"2026-10-23T21:30:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"Starlink Group 15-15", orbit:"Low Earth Orbit", status:"Go for Launch",
+   mission:"Yaogan 53-07 to 09/56-19 to 21", orbit:"Low Earth Orbit", status:"Launch Successful",
+   brief:"6 Chinese military “remote sensing” satellite of unknown purposes."},
+  {site:"vsfb", net:"2026-10-23T22:48:44Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Starlink Group 15-15", orbit:"Low Earth Orbit", status:"Launch Successful",
    brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
   {site:"wen", net:"2026-10-25T01:50:00Z", p:"time", veh:"Long March 8A", who:"China Aerospace Science and Technology Corporation",
    mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
    brief:"Details TBD."},
-  {site:"vsfb", net:"2026-10-26T05:00:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+  {site:"vsfb", net:"2026-10-27T04:45:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Starlink Group 15-16", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
   {site:"ccsfs", net:"2026-10-29T00:00:00Z", p:"day", veh:"Vulcan VC6L", who:"United Launch Alliance",
    mission:"Amazon Leo (LV-01)", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon."},
-  {site:"vsfb", net:"2026-10-29T04:17:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+  {site:"vsfb", net:"2026-10-30T04:02:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Starlink Group 15-18", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
   {site:"sdsc", net:"2026-10-30T17:00:00Z", p:"time", veh:"GSLV Mk. II", who:"Indian Space Research Organization",
@@ -581,6 +575,12 @@ const LAUNCHES = [
    brief:"24 satellites for Rivada's internet constellation."},
   {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Rivada 5", orbit:"Polar Orbit", status:"To Be Determined",
+   brief:"24 satellites for Rivada's internet constellation."},
+  {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Rivada 6", orbit:"Polar Orbit", status:"To Be Determined",
+   brief:"24 satellites for Rivada's internet constellation."},
+  {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Rivada 7", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"24 satellites for Rivada's internet constellation."},
 ];
 
@@ -1018,7 +1018,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 23 Oct 2026';
+    : '<b>Snapshot</b> · 24 Oct 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
