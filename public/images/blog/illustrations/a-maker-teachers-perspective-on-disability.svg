@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img">
+<title>A workbench with adapted maker tools: a big push-button switch wired to a light, and a chunky-grip screwdriver</title>
+<rect width="800" height="450" fill="#E4EDEA"/>
+<g transform="translate(7 6)">
+<rect x="40" y="300" width="720" height="30" rx="4" fill="#EDA83E"/>
+<rect x="100" y="228" width="170" height="72" rx="12" fill="#D7D7D7"/>
+<path d="M135 228 Q185 140 235 228 Z" fill="#EF7B44"/>
+<rect x="378" y="198" width="96" height="64" rx="10" fill="#5EB1BF"/>
+<circle cx="426" cy="230" r="14" fill="#F4CD15"/>
+<rect x="520" y="252" width="132" height="48" rx="24" fill="#409FCD"/>
+<rect x="652" y="269" width="80" height="14" fill="#D7D7D7"/>
+</g>
+<g>
+<rect x="40" y="300" width="720" height="30" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M90 330 V440 M710 330 V440" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="100" y="228" width="170" height="72" rx="12" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M135 228 Q185 140 235 228 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M270 268 C320 268 330 230 378 230" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="378" y="198" width="96" height="64" rx="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="426" cy="230" r="14" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M426 168 V182 M386 178 l10 10 M466 178 l-10 10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="520" y="252" width="132" height="48" rx="24" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M552 258 V294 M578 258 V294 M604 258 V294" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="652" y="269" width="80" height="14" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M732 269 L748 276 L732 283" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+</svg>

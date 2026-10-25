@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img">
+<title>A small van loaded with a box of electronics driving along a desert road under a big sun</title>
+<rect width="800" height="450" fill="#E4EDEA"/>
+<g transform="translate(7 6)">
+<circle cx="640" cy="105" r="55" fill="#F4CD15"/>
+<path d="M0 300 L100 210 L200 300 Z" fill="#EDA83E"/>
+<path d="M500 300 L590 200 L680 300 Z" fill="#EDA83E"/>
+<path d="M690 300 L690 200 Q690 185 705 185 Q720 185 720 200 L720 300 Z" fill="#5EB1BF"/>
+<path d="M250 345 L250 255 L440 255 L480 295 L480 345 Z" fill="#EF7B44"/>
+<path d="M440 262 L440 295 L472 295" fill="#ffffff"/>
+<circle cx="300" cy="350" r="22" fill="#ffffff"/>
+<circle cx="430" cy="350" r="22" fill="#ffffff"/>
+<rect x="280" y="200" width="130" height="55" fill="#EDA83E"/>
+<rect x="300" y="168" width="70" height="32" fill="#5EB1BF"/>
+<circle cx="384" cy="160" r="9" fill="#F4CD15"/>
+</g>
+<g>
+<circle cx="640" cy="105" r="55" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M0 300 L100 210 L200 300 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M500 300 L590 200 L680 300 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="0" y1="300" x2="800" y2="300" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M0 380 L800 380" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M40 340 l60 0 M130 340 l50 0 M540 340 l60 0 M700 340 l60 0" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M690 300 L690 200 Q690 185 705 185 Q720 185 720 200 L720 300 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M690 250 L668 250 Q660 250 660 240 L660 222" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M720 235 L742 235 Q750 235 750 225 L750 208" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M250 345 L250 255 L440 255 L480 295 L480 345 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M440 262 L440 295 L472 295" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="300" cy="350" r="22" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="430" cy="350" r="22" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="280" y="200" width="130" height="55" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="300" y="168" width="70" height="32" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M315 184 l15 0 l0 -8 M345 184 l12 0" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="384" cy="160" r="9" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M384 169 l0 20" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M230 275 l-60 0 M225 318 l-80 0" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+</svg>

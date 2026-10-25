@@ -8,8 +8,9 @@ categories:
   - "Workshops"
 tags:
   - "Wix archive"
-image: "/images/2017/10/vr-architects-student-design.jpg"
-imageAlt: "A smiling student designing a 3D scene on a computer"
+image: "/images/blog/illustrations/vr-architects.svg"
+imageAlt: "Drawing of a student wearing a cardboard VR viewer beside a laptop showing a 3D model of a house"
+imageCredit: "Illustration by Blake"
 ---
 
 Make your own VR model of real buildings! Each student will create a 3D building model that can be walked through with VR headsets, and shared to anyone with a smartphone.
@@ -19,8 +20,6 @@ Make your own VR model of real buildings! Each student will create a 3D building
 ## Why Build in VR?
 
 Design a $1 million bedroom for yourself! Design a school for students with superpowers! Add a fashion catwalk to your classroom! Build cool stuff, and make it feel real.
-
-![A smiling student designing a 3D scene on a computer](/images/2017/10/vr-architects-student-design.jpg)
 
 ## What's next?
 

@@ -4,6 +4,9 @@ date: 2020-07-09
 description: "Progressivism in the Classroom Western education has a number of educational philosophies impacting the development of the school and the classroom."
 author: "James"
 program: general
+image: "/images/blog/illustrations/progressivism-in-my-classroom.svg"
+imageAlt: "Drawing of a young plant growing out of a stack of books, reaching towards the sun"
+imageCredit: "Illustration by Blake"
 categories:
   - "JamesEd"
 ---

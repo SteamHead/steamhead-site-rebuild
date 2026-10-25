@@ -4,6 +4,9 @@ date: 2023-09-26
 description: "This week I read a research article written by Dr. Taylor of Western New Mexico University’s School of Education in which she discussed differentiated instruction (2015)."
 author: "James"
 program: general
+image: "https://i.ytimg.com/vi/EE-aVaSVrH0/maxresdefault.jpg"
+imageAlt: "A student sits at a table with a laptop and phone in a classroom filled with art supplies and colourful decorations"
+imageCredit: "Video still: SteamHead"
 categories:
   - "Uncategorized"
 draft: true

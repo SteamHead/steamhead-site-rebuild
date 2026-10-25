@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img">
+<title>A dial with low, medium and high zones and its needle turned towards the low end</title>
+<rect width="800" height="450" fill="#E4EDEA"/>
+<g transform="translate(7 6)">
+<rect x="110" y="70" width="580" height="320" rx="24" fill="#ffffff"/>
+<path d="M270 135 A260 260 0 0 0 140 360 L250 360 A150 150 0 0 1 325 230 Z" fill="#5EB1BF"/>
+<path d="M530 135 A260 260 0 0 0 270 135 L325 230 A150 150 0 0 1 475 230 Z" fill="#F4CD15"/>
+<path d="M660 360 A260 260 0 0 0 530 135 L475 230 A150 150 0 0 1 550 360 Z" fill="#EF7B44"/>
+<path d="M408 351 L231 219 L392 369 Z" fill="#474747"/>
+<circle cx="400" cy="360" r="22" fill="#474747"/>
+</g>
+<g>
+<rect x="110" y="70" width="580" height="320" rx="24" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M270 135 A260 260 0 0 0 140 360 L250 360 A150 150 0 0 1 325 230 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M530 135 A260 260 0 0 0 270 135 L325 230 A150 150 0 0 1 475 230 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M660 360 A260 260 0 0 0 530 135 L475 230 A150 150 0 0 1 550 360 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M408 351 L231 219 L392 369 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="400" cy="360" r="22" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+</svg>

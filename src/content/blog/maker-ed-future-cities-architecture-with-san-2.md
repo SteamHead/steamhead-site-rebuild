@@ -4,6 +4,9 @@ date: 2019-04-17
 description: "Felix Klee came to share his Self Aware Network as part of his SteamHead Residency!"
 author: "James"
 program: general
+image: "https://i.ytimg.com/vi/WMVT9WCbifk/maxresdefault.jpg"
+imageAlt: "An adult guides students working together on a project in a classroom"
+imageCredit: "Video still: SteamHead"
 categories:
   - "Great Projects"
 ---

@@ -4,6 +4,9 @@ date: 2020-06-25
 description: "In a classroom based around Project Based Learning, new teachers are thrown into a situation that they have likely never observed."
 author: "James"
 program: general
+image: "/images/blog/illustrations/classroom-management-in-i-b-and-pbl-settings.svg"
+imageAlt: "Drawing of a signpost with three arrows pointing different ways beside an open toolbox of project tools"
+imageCredit: "Illustration by Blake"
 categories:
   - "JamesEd"
 ---

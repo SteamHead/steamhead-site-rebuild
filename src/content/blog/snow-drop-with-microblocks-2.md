@@ -4,6 +4,9 @@ date: 2026-03-01
 description: "@import url(' .sd-page { --snow-bg: f8f9fb; --snow-card: ffffff; --snow-text: 1d1f23; --snow-muted: 5c6370; --snow-accent: 3a6ea5; --snow-accent-soft: e8f0fa; --snow-border:…"
 author: "James"
 program: general
+image: "/images/2026/03/snow2.jpg"
+imageAlt: "Grade 2 students' paper snow falling during the winter performance"
+imageCredit: "Photo: SteamHead"
 categories:
   - "Uncategorized"
 draft: true

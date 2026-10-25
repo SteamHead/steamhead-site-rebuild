@@ -4,6 +4,9 @@ date: 2015-08-12
 description: "In summer 2015 theMake.club began teaching at Litchee Lab in Shenzhen's High Tech Park. The marketing copy written for the launch introduced the slogan that became its tagline."
 author: "Blake"
 program: general
+image: "/images/blog/illustrations/themake-club-comes-to-litchee-lab.svg"
+imageAlt: "Drawing of a makerspace workbench with a pegboard of tools, a small cardboard robot, and a class flyer pinned to the wall"
+imageCredit: "Illustration by Blake"
 categories:
   - "Maker Education"
 tags:

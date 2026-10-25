@@ -4,6 +4,9 @@ date: 2017-08-18
 description: "Maker Ed Empower and PBL Connect: free resources for teachers, and classes, training and PBL consulting for schools."
 author: "James"
 program: general
+image: "/images/blog/illustrations/steamhead-education-services.svg"
+imageAlt: "Drawing of an open box of free maker resources, a light bulb and tools, carried along a path to a school building"
+imageCredit: "Illustration by Blake"
 categories: []
 tags:
   - "Wix archive"

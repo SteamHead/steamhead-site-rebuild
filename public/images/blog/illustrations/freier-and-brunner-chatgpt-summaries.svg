@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img">
+<title>A thick open book with an arrow leading to a short speech bubble of summary lines</title>
+<rect width="800" height="450" fill="#E4EDEA"/>
+<g transform="translate(7 6)">
+<path d="M60 160 L60 365 C100 350 170 352 210 368 C250 352 320 350 360 365 L360 160 Z" fill="#5EB1BF"/>
+<path d="M210 150 C170 130 100 130 70 145 L70 345 C100 330 170 330 210 350 Z" fill="#ffffff"/>
+<path d="M210 150 C250 130 320 130 350 145 L350 345 C320 330 250 330 210 350 Z" fill="#ffffff"/>
+<path d="M524 140 H716 Q740 140 740 164 V266 Q740 290 716 290 H600 L548 338 L562 290 H524 Q500 290 500 266 V164 Q500 140 524 140 Z" fill="#F4CD15"/>
+</g>
+<g>
+<path d="M60 160 L60 365 C100 350 170 352 210 368 C250 352 320 350 360 365 L360 160 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M210 150 C170 130 100 130 70 145 L70 345 C100 330 170 330 210 350 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M210 150 C250 130 320 130 350 145 L350 345 C320 330 250 330 210 350 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M92 180 L188 180 M232 180 L328 180" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M92 202 L188 202 M232 202 L328 202" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M92 224 L188 224 M232 224 L328 224" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M92 246 L188 246 M232 246 L328 246" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M92 268 L188 268 M232 268 L328 268" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M92 290 L188 290 M232 290 L328 290" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M92 312 L188 312 M232 312 L328 312" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M392 250 L468 250 M452 234 L468 250 L452 266" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M524 140 H716 Q740 140 740 164 V266 Q740 290 716 290 H600 L548 338 L562 290 H524 Q500 290 500 266 V164 Q500 140 524 140 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M535 180 H705 M535 215 H680 M535 250 H640" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M752 96 l14 0 M759 89 l0 14 M470 120 l12 0 M476 114 l0 12" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+</svg>
