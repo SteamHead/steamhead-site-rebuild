@@ -402,21 +402,12 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"jiu", net:"2026-10-23T19:25:00Z", p:"time", veh:"Long March 4B", who:"China Aerospace Science and Technology Corporation",
-   mission:"Yaogan 53-07 to 09/56-19 to 21", orbit:"Low Earth Orbit", status:"Launch Successful",
-   brief:"6 Chinese military “remote sensing” satellite of unknown purposes."},
-  {site:"vsfb", net:"2026-10-23T22:48:44Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"Starlink Group 15-15", orbit:"Low Earth Orbit", status:"Launch Successful",
-   brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
-  {site:"wen", net:"2026-10-25T01:50:00Z", p:"time", veh:"Long March 8A", who:"China Aerospace Science and Technology Corporation",
-   mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
-   brief:"Details TBD."},
+  {site:"wen", net:"2026-10-25T02:03:00Z", p:"time", veh:"Long March 8A", who:"China Aerospace Science and Technology Corporation",
+   mission:"SatNet LEO Group 28", orbit:"Low Earth Orbit", status:"Launch Successful",
+   brief:"A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group."},
   {site:"vsfb", net:"2026-10-27T04:45:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Starlink Group 15-16", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
-  {site:"ccsfs", net:"2026-10-29T00:00:00Z", p:"day", veh:"Vulcan VC6L", who:"United Launch Alliance",
-   mission:"Amazon Leo (LV-01)", orbit:"Low Earth Orbit", status:"To Be Determined",
-   brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon."},
   {site:"vsfb", net:"2026-10-30T04:02:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Starlink Group 15-18", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
@@ -444,6 +435,9 @@ const LAUNCHES = [
   {site:"bai", net:"2026-11-24T05:03:00Z", p:"time", veh:"Soyuz 2.1b", who:"Russian Federal Space Agency (ROSCOSMOS)",
    mission:"Progress MS-36 (97P)", orbit:"Low Earth Orbit", status:"To Be Confirmed",
    brief:"Progress resupply mission to the International Space Station."},
+  {site:"jiu", net:"2026-11-25T00:00:00Z", p:"day", veh:"Long March 2F/G", who:"China Aerospace Science and Technology Corporation",
+   mission:"Shenzhou 24", orbit:"Low Earth Orbit", status:"To Be Determined",
+   brief:"Shenzhou 24 will be the 24th flight of the Shenzhou program."},
   {site:"ccsfs", net:"2026-11-30T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Cygnus CRS-2 NG-25", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"This is the 25th flight of the Orbital ATK's uncrewed resupply spacecraft Cygnus and its 24th flight to the International Space Station under the Commercial Resupply Services contract with NASA."},
@@ -456,6 +450,9 @@ const LAUNCHES = [
   {site:"sdsc", net:"2026-11-30T00:00:00Z", p:"month", veh:"PSLV XL", who:"Indian Space Research Organization",
    mission:"TDS-01", orbit:"Geostationary Transfer Orbit", status:"To Be Determined",
    brief:"TDS-01 (Technology Demonstration Satellite-01) is an Indian geostationary orbit technology demonstration satellite carrying payloads for the Indian Space Research Organisation (ISRO)’s Institute of Plasma Research, Gandhinagar and the CSIR-CEERI, Pilani."},
+  {site:"ccsfs", net:"2026-11-30T00:00:00Z", p:"month", veh:"Vulcan VC6L", who:"United Launch Alliance",
+   mission:"Amazon Leo (LV-01)", orbit:"Low Earth Orbit", status:"To Be Determined",
+   brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon."},
   {site:"kou", net:"2026-12-31T00:00:00Z", p:"month", veh:"Ariane 62", who:"Arianespace",
    mission:"Metop-SG B1", orbit:"Sun-Synchronous Orbit", status:"To Be Determined",
    brief:"Second of EUMETSAT's second generation of Metop weather satellites."},
@@ -493,8 +490,8 @@ const LAUNCHES = [
    mission:"SDA Tranche 1 Tracking Layer C", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"Tranche 1 Tracking Layer C is one of five missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Tracking Layer constellation, which will provide global indications, warning, tracking, and targeting of advanced missile threats, including hypersonic missile systems."},
   {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"SDA Tranche 1 Tracking Layer E", orbit:"Polar Orbit", status:"To Be Determined",
-   brief:"Tranche 1 Tracking Layer E is one of five missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Tracking Layer constellation, which will provide global indications, warning, tracking, and targeting of advanced missile threats, including hypersonic missile systems."},
+   mission:"SDA Tranche 1 Tracking Layer D", orbit:"Polar Orbit", status:"To Be Determined",
+   brief:"Tranche 1 Tracking Layer D is one of five missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Tracking Layer constellation, which will provide global indications, warning, tracking, and targeting of advanced missile threats, including hypersonic missile systems."},
   {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"SDA Tranche 1 Transport Layer D", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"Tranche 1 Transport Layer D is one of six missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Transport Layer constellation, which will provide assured, resilient, low-latency military data and connectivity worldwide to the full range of warfighter platforms from Low Earth Orbit satellites."},
@@ -525,9 +522,6 @@ const LAUNCHES = [
   {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Globalstar 2-R Mission 2 (x 9)", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"The Globalstar global mobile communications network offers global, digital real time voice, data and fax services via its Low Earth Orbit satellite constellation."},
-  {site:"jiu", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Long March 2F/G", who:"China Aerospace Science and Technology Corporation",
-   mission:"Shenzhou 24", orbit:"Low Earth Orbit", status:"To Be Determined",
-   brief:"Shenzhou 24 will be the 24th flight of the Shenzhou program."},
   {site:"and", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Spectrum", who:"Isar Aerospace",
    mission:"AT-Astra and Others (Spectrum Flight 3)", orbit:"Sun-Synchronous Orbit", status:"To Be Determined",
    brief:"Third test flight of the Isar Spectrum launch vehicle."},
@@ -581,6 +575,12 @@ const LAUNCHES = [
    brief:"24 satellites for Rivada's internet constellation."},
   {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Rivada 7", orbit:"Polar Orbit", status:"To Be Determined",
+   brief:"24 satellites for Rivada's internet constellation."},
+  {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Rivada 8", orbit:"Polar Orbit", status:"To Be Determined",
+   brief:"24 satellites for Rivada's internet constellation."},
+  {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Rivada 9", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"24 satellites for Rivada's internet constellation."},
 ];
 
@@ -1018,7 +1018,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 24 Oct 2026';
+    : '<b>Snapshot</b> · 25 Oct 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
