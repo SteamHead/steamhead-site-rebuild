@@ -402,17 +402,14 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"wen", net:"2026-10-25T02:03:00Z", p:"time", veh:"Long March 8A", who:"China Aerospace Science and Technology Corporation",
-   mission:"SatNet LEO Group 28", orbit:"Low Earth Orbit", status:"Launch Successful",
-   brief:"A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group."},
   {site:"vsfb", net:"2026-10-27T04:45:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Starlink Group 15-16", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
   {site:"vsfb", net:"2026-10-30T04:02:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Starlink Group 15-18", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
-  {site:"sdsc", net:"2026-10-30T17:00:00Z", p:"time", veh:"GSLV Mk. II", who:"Indian Space Research Organization",
-   mission:"IRNSS-1L (NVS-03)", orbit:"Geostationary Transfer Orbit", status:"To Be Confirmed",
+  {site:"sdsc", net:"2026-10-30T18:21:00Z", p:"time", veh:"GSLV Mk. II", who:"Indian Space Research Organization",
+   mission:"IRNSS-1L (NVS-03)", orbit:"Geostationary Transfer Orbit", status:"Go for Launch",
    brief:"This is a replacement satellite for the Indian Regional Navigation Satellite System."},
   {site:"jiu", net:"2026-10-31T00:00:00Z", p:"month", veh:"Long March 12A", who:"China Aerospace Science and Technology Corporation",
    mission:"Flight 2", orbit:"Low Earth Orbit", status:"To Be Determined",
@@ -582,6 +579,9 @@ const LAUNCHES = [
   {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Rivada 9", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"24 satellites for Rivada's internet constellation."},
+  {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"SDA Tranche 2 Tracking Layer A", orbit:"Polar Orbit", status:"To Be Determined",
+   brief:"Classified mission launched by the Space Development Agency (SDA) for Tranche 2 Tracking Layer."},
 ];
 
 /* ---------------- helpers ---------------- */
@@ -1018,7 +1018,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 25 Oct 2026';
+    : '<b>Snapshot</b> · 26 Oct 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
