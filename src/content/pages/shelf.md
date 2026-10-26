@@ -19,6 +19,7 @@ hardware:
     url: "https://www.amazon.com/SEZO-Individually-Addressable-Programmable-Non-Waterproof/dp/B097BX7LRT"
 books:
   - title: "MakeFashion Edu San Francisco 2026: American Excellence"
+    image: /images/books/B0HG7BQKS6.jpg
     url: https://www.amazon.com/dp/B0HG7BQKS6
   - title: "MakeFashion Edu Tucson 2025"
     image: /images/books/B0FR2F2ZSL.jpg
@@ -42,6 +43,7 @@ books:
     image: /images/books/B0BRM26Y6N.jpg
     url: https://www.amazon.com/dp/B0BRM26Y6N
   - title: "MakeFashion Edu: Season 1"
+    image: /images/books/B08GLSY65D.jpg
     url: https://www.amazon.com/dp/B08GLSY65D
   - title: "Fashion as Change (HTM North County Lookbook)"
     image: /images/books/B08GLR2HVK.jpg
