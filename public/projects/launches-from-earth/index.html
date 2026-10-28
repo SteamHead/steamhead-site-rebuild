@@ -402,9 +402,6 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"vsfb", net:"2026-10-27T07:25:51Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"Starlink Group 15-16", orbit:"Low Earth Orbit", status:"Launch Successful",
-   brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
   {site:"vsfb", net:"2026-10-30T04:02:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Starlink Group 15-18", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
@@ -417,7 +414,7 @@ const LAUNCHES = [
   {site:"lc1", net:"2026-11-03T00:00:00Z", p:"day", veh:"Electron", who:"Rocket Lab",
    mission:"The Sea God Surveys (iQPS Launch 9)", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Synthetic aperture radar Earth observation satellite for Japanese Earth imaging company iQPS."},
-  {site:"vsfb", net:"2026-11-05T05:14:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+  {site:"vsfb", net:"2026-11-05T02:35:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Starlink Group 15-21", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
   {site:"wen", net:"2026-11-05T20:00:00Z", p:"time", veh:"Long March 12", who:"China Aerospace Science and Technology Corporation",
@@ -582,6 +579,9 @@ const LAUNCHES = [
   {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Rivada 9", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"24 satellites for Rivada's internet constellation."},
+  {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"SDA Tranche 2 Tracking Layer A", orbit:"Polar Orbit", status:"To Be Determined",
+   brief:"Classified mission launched by the Space Development Agency (SDA) for Tranche 2 Tracking Layer."},
 ];
 
 /* ---------------- helpers ---------------- */
@@ -1018,7 +1018,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 27 Oct 2026';
+    : '<b>Snapshot</b> · 28 Oct 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
