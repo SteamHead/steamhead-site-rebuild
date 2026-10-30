@@ -408,7 +408,7 @@ const LAUNCHES = [
   {site:"vsfb", net:"2026-10-31T03:48:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Starlink Group 15-18", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system."},
-  {site:"lc1", net:"2026-11-02T08:45:00Z", p:"time", veh:"Electron", who:"Rocket Lab",
+  {site:"lc1", net:"2026-11-02T16:00:00Z", p:"time", veh:"Electron", who:"Rocket Lab",
    mission:"The Sea God Surveys (iQPS Launch 9)", orbit:"Low Earth Orbit", status:"To Be Confirmed",
    brief:"Synthetic aperture radar Earth observation satellite for Japanese Earth imaging company iQPS."},
   {site:"jiu", net:"2026-11-03T00:10:00Z", p:"time", veh:"Kinetica 2", who:"CAS Space",
@@ -447,8 +447,11 @@ const LAUNCHES = [
   {site:"jiu", net:"2026-11-25T00:00:00Z", p:"day", veh:"Long March 2F/G", who:"China Aerospace Science and Technology Corporation",
    mission:"Shenzhou 24", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Shenzhou 24 will be the 24th flight of the Shenzhou program."},
-  {site:"ccsfs", net:"2026-11-30T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"Cygnus CRS-2 NG-25", orbit:"Low Earth Orbit", status:"To Be Determined",
+  {site:"and", net:"2026-11-26T20:00:00Z", p:"time", veh:"Spectrum", who:"Isar Aerospace",
+   mission:"AT-Astra and Others (Spectrum Flight 3)", orbit:"Sun-Synchronous Orbit", status:"To Be Confirmed",
+   brief:"Third test flight of the Isar Spectrum launch vehicle."},
+  {site:"ccsfs", net:"2026-11-29T16:00:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Cygnus CRS-2 NG-25", orbit:"Low Earth Orbit", status:"To Be Confirmed",
    brief:"This is the 25th flight of the Orbital ATK's uncrewed resupply spacecraft Cygnus and its 24th flight to the International Space Station under the Commercial Resupply Services contract with NASA."},
   {site:"vsfb", net:"2026-11-30T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"NROL-195", orbit:"Low Earth Orbit", status:"To Be Determined",
@@ -474,9 +477,6 @@ const LAUNCHES = [
   {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"SDA Tranche 2 Transport Layer E", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"Classified mission launched by the Space Development Agency (SDA) for Tranche 2 Transport Layer."},
-  {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"Telesat Lightspeed 1", orbit:"Low Earth Orbit", status:"To Be Determined",
-   brief:"First two satellites manufactured by MDA for Canadian satellite operator Telesat's Lightspeed constellation."},
   {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"month", veh:"Falcon Heavy", who:"SpaceX",
    mission:"Griffin Mission One", orbit:"Lunar Orbit", status:"To Be Determined",
    brief:"Demonstration flight of the Astrobotic Griffin lander and its engines, initially contracted for the NASA VIPER (Volatiles Investigating Polar Exploration Rover) mission."},
@@ -531,9 +531,6 @@ const LAUNCHES = [
   {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Globalstar 2-R Mission 2 (x 9)", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"The Globalstar global mobile communications network offers global, digital real time voice, data and fax services via its Low Earth Orbit satellite constellation."},
-  {site:"and", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Spectrum", who:"Isar Aerospace",
-   mission:"AT-Astra and Others (Spectrum Flight 3)", orbit:"Sun-Synchronous Orbit", status:"To Be Determined",
-   brief:"Third test flight of the Isar Spectrum launch vehicle."},
   {site:"lc1", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Electron", who:"Rocket Lab",
    mission:"BlackSky Gen-3 6", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"BlackSky Gen-3 Earth-imaging satellites"},
@@ -581,6 +578,9 @@ const LAUNCHES = [
    brief:"24 satellites for Rivada's internet constellation."},
   {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Rivada 6", orbit:"Polar Orbit", status:"To Be Determined",
+   brief:"24 satellites for Rivada's internet constellation."},
+  {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"Rivada 7", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"24 satellites for Rivada's internet constellation."},
 ];
 
@@ -1018,7 +1018,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 29 Oct 2026';
+    : '<b>Snapshot</b> · 30 Oct 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
