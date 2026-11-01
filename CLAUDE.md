@@ -199,7 +199,20 @@ repo-edited (not exposed in the CMS).
    `src/pages/license.astro` at /license/. **The authoritative policy lives in
    `SteamHead/steamhead-standards` → `licensing.md`** — change it there first,
    then mirror here. Don't restate the reasoning in this repo.
-5. **Design tokens**: all colors, shadows, and font sizes come from the
+5. **No image is published with its GPS location** (decided by James
+   2026-10-31, issue #52). `scripts/strip-gps.mjs` runs as `prebuild`, so
+   every build, including Cloudflare's, blanks GPS fields in JPEG, PNG and
+   WebP files under `public/` before Astro copies them. It keeps the capture
+   date and changes neither the pixels nor the file length. It fails the build
+   on a HEIC, AVIF or TIFF file, which it cannot clean; convert those first.
+   **The build cleans the published copy only.** A file committed with GPS
+   (for example, uploaded through the CMS) keeps it in this public repo's
+   history. When you add images by hand, run
+   `node scripts/strip-gps.mjs public` before committing, and
+   `node scripts/strip-gps.mjs --check public` to confirm. Older commits
+   still hold some photos with GPS; James reviewed them on 2026-10-31 and
+   chose to leave history alone.
+6. **Design tokens**: all colors, shadows, and font sizes come from the
    `:root` tokens in `src/styles/global.css` (sourced from the brand guide,
    `public/downloads/2021_SteamHead_Brand_Guide.pdf`). Don't introduce ad-hoc
    hex values in pages/components — add or reuse a token. Sole exception:
