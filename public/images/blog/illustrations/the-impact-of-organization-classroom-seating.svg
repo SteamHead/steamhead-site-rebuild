@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img">
+<title>Two classroom floor plans: desks in rows facing the teacher, and desks pushed into small groups</title>
+<rect width="800" height="450" fill="#E4EDEA"/>
+<g transform="translate(7 6)">
+<rect x="40" y="35" width="320" height="380" rx="14" fill="#ffffff"/>
+<rect x="440" y="35" width="320" height="380" rx="14" fill="#ffffff"/>
+<rect x="80" y="55" width="240" height="14" rx="4" fill="#5EB1BF"/>
+<rect x="480" y="55" width="240" height="14" rx="4" fill="#5EB1BF"/>
+<rect x="160" y="92" width="80" height="30" rx="4" fill="#EF7B44"/>
+<rect x="68" y="165" width="54" height="32" rx="4" fill="#F4CD15"/>
+<circle cx="95" cy="213" r="10" fill="#D7D7D7"/>
+<rect x="138" y="165" width="54" height="32" rx="4" fill="#F4CD15"/>
+<circle cx="165" cy="213" r="10" fill="#D7D7D7"/>
+<rect x="208" y="165" width="54" height="32" rx="4" fill="#F4CD15"/>
+<circle cx="235" cy="213" r="10" fill="#D7D7D7"/>
+<rect x="278" y="165" width="54" height="32" rx="4" fill="#F4CD15"/>
+<circle cx="305" cy="213" r="10" fill="#D7D7D7"/>
+<rect x="68" y="245" width="54" height="32" rx="4" fill="#F4CD15"/>
+<circle cx="95" cy="293" r="10" fill="#D7D7D7"/>
+<rect x="138" y="245" width="54" height="32" rx="4" fill="#F4CD15"/>
+<circle cx="165" cy="293" r="10" fill="#D7D7D7"/>
+<rect x="208" y="245" width="54" height="32" rx="4" fill="#F4CD15"/>
+<circle cx="235" cy="293" r="10" fill="#D7D7D7"/>
+<rect x="278" y="245" width="54" height="32" rx="4" fill="#F4CD15"/>
+<circle cx="305" cy="293" r="10" fill="#D7D7D7"/>
+<rect x="68" y="325" width="54" height="32" rx="4" fill="#F4CD15"/>
+<circle cx="95" cy="373" r="10" fill="#D7D7D7"/>
+<rect x="138" y="325" width="54" height="32" rx="4" fill="#F4CD15"/>
+<circle cx="165" cy="373" r="10" fill="#D7D7D7"/>
+<rect x="208" y="325" width="54" height="32" rx="4" fill="#F4CD15"/>
+<circle cx="235" cy="373" r="10" fill="#D7D7D7"/>
+<rect x="278" y="325" width="54" height="32" rx="4" fill="#F4CD15"/>
+<circle cx="305" cy="373" r="10" fill="#D7D7D7"/>
+<rect x="490" y="158" width="50" height="32" rx="4" fill="#F4CD15"/>
+<rect x="540" y="158" width="50" height="32" rx="4" fill="#F4CD15"/>
+<rect x="490" y="190" width="50" height="32" rx="4" fill="#F4CD15"/>
+<rect x="540" y="190" width="50" height="32" rx="4" fill="#F4CD15"/>
+<circle cx="515" cy="144" r="10" fill="#D7D7D7"/>
+<circle cx="565" cy="144" r="10" fill="#D7D7D7"/>
+<circle cx="515" cy="236" r="10" fill="#D7D7D7"/>
+<circle cx="565" cy="236" r="10" fill="#D7D7D7"/>
+<rect x="630" y="158" width="50" height="32" rx="4" fill="#409FCD"/>
+<rect x="680" y="158" width="50" height="32" rx="4" fill="#409FCD"/>
+<rect x="630" y="190" width="50" height="32" rx="4" fill="#409FCD"/>
+<rect x="680" y="190" width="50" height="32" rx="4" fill="#409FCD"/>
+<circle cx="655" cy="144" r="10" fill="#D7D7D7"/>
+<circle cx="705" cy="144" r="10" fill="#D7D7D7"/>
+<circle cx="655" cy="236" r="10" fill="#D7D7D7"/>
+<circle cx="705" cy="236" r="10" fill="#D7D7D7"/>
+<rect x="560" y="288" width="50" height="32" rx="4" fill="#EDA83E"/>
+<rect x="610" y="288" width="50" height="32" rx="4" fill="#EDA83E"/>
+<rect x="560" y="320" width="50" height="32" rx="4" fill="#EDA83E"/>
+<rect x="610" y="320" width="50" height="32" rx="4" fill="#EDA83E"/>
+<circle cx="585" cy="274" r="10" fill="#D7D7D7"/>
+<circle cx="635" cy="274" r="10" fill="#D7D7D7"/>
+<circle cx="585" cy="366" r="10" fill="#D7D7D7"/>
+<circle cx="635" cy="366" r="10" fill="#D7D7D7"/>
+<path d="M565 105 q10 -16 28 -10 q18 -6 22 10 q2 14 -16 16 l-8 10 l-2 -10 q-22 0 -24 -16 Z" fill="#ffffff"/>
+</g>
+<g>
+<rect x="40" y="35" width="320" height="380" rx="14" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="440" y="35" width="320" height="380" rx="14" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="80" y="55" width="240" height="14" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="480" y="55" width="240" height="14" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="160" y="92" width="80" height="30" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M378 225 L422 225 M408 211 L422 225 L408 239" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="68" y="165" width="54" height="32" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="95" cy="213" r="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="138" y="165" width="54" height="32" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="165" cy="213" r="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="208" y="165" width="54" height="32" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="235" cy="213" r="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="278" y="165" width="54" height="32" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="305" cy="213" r="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="68" y="245" width="54" height="32" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="95" cy="293" r="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="138" y="245" width="54" height="32" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="165" cy="293" r="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="208" y="245" width="54" height="32" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="235" cy="293" r="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="278" y="245" width="54" height="32" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="305" cy="293" r="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="68" y="325" width="54" height="32" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="95" cy="373" r="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="138" y="325" width="54" height="32" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="165" cy="373" r="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="208" y="325" width="54" height="32" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="235" cy="373" r="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="278" y="325" width="54" height="32" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="305" cy="373" r="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="490" y="158" width="50" height="32" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="540" y="158" width="50" height="32" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="490" y="190" width="50" height="32" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="540" y="190" width="50" height="32" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="515" cy="144" r="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="565" cy="144" r="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="515" cy="236" r="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="565" cy="236" r="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="630" y="158" width="50" height="32" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="680" y="158" width="50" height="32" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="630" y="190" width="50" height="32" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="680" y="190" width="50" height="32" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="655" cy="144" r="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="705" cy="144" r="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="655" cy="236" r="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="705" cy="236" r="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="560" y="288" width="50" height="32" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="610" y="288" width="50" height="32" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="560" y="320" width="50" height="32" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="610" y="320" width="50" height="32" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="585" cy="274" r="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="635" cy="274" r="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="585" cy="366" r="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="635" cy="366" r="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M565 105 q10 -16 28 -10 q18 -6 22 10 q2 14 -16 16 l-8 10 l-2 -10 q-22 0 -24 -16 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+</svg>

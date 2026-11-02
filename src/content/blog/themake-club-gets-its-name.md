@@ -4,6 +4,9 @@ date: 2014-06-11
 description: "On June 11, 2014, Ben Simpson and Carrie Leung settled on a name and a website for their maker club: theMake.club. A gear from the Geararium became its logo."
 author: "Blake"
 program: general
+image: "/images/blog/illustrations/themake-club-gets-its-name.svg"
+imageAlt: "Drawing of two meshing gears beside a new website in a browser window, with a gear at its centre"
+imageCredit: "Illustration by Blake"
 categories:
   - "SteamHead Productions"
 tags:

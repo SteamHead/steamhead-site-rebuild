@@ -4,6 +4,9 @@ date: 2019-06-02
 description: "Aisling from MG Space shows off their amazing nerdy derby tracks and all the kids that had fun making their cars, plus a bit about MG Space and what they do."
 author: "James"
 program: general
+image: "/images/blog/illustrations/nerdy-derby-school-maker-faire.svg"
+imageAlt: "Drawing of two homemade derby cars racing down a long wooden track towards a chequered flag"
+imageCredit: "Illustration by Blake"
 categories:
   - "Events"
   - "STEAM"

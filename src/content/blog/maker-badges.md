@@ -4,6 +4,9 @@ date: 2017-08-18
 description: "Download the SteamHead Maker Badges spreadsheet and slides from our GitHub."
 author: "James"
 program: general
+image: "/images/blog/illustrations/maker-badges.svg"
+imageAlt: "Drawing of three maker badges with ribbons, showing a lightning bolt, a light bulb and a hammer"
+imageCredit: "Illustration by Blake"
 categories: []
 tags:
   - "Wix archive"

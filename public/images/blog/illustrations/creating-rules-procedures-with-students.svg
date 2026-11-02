@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img">
+<title>A chart-paper list of class rules on an easel, with students' raised hands and a marker adding to it</title>
+<rect width="800" height="450" fill="#E4EDEA"/>
+<g transform="translate(7 6)">
+<rect x="270" y="60" width="260" height="320" rx="6" fill="#ffffff"/>
+<rect x="290" y="45" width="220" height="22" rx="6" fill="#D7D7D7"/>
+<rect x="300" y="110" width="30" height="30" rx="4" fill="#ffffff"/>
+<rect x="300" y="170" width="30" height="30" rx="4" fill="#ffffff"/>
+<rect x="300" y="230" width="30" height="30" rx="4" fill="#ffffff"/>
+<rect x="300" y="290" width="30" height="30" rx="4" fill="#ffffff"/>
+<path d="M455 320 L540 230 L560 250 L475 340 Z" fill="#EF7B44"/>
+<path d="M455 320 L445 350 L475 340" fill="#ffffff"/>
+<path d="M110 450 L110 230 L170 230 L170 450" fill="#F4CD15"/>
+<path d="M106 240 C100 180 102 140 110 110 C114 98 126 100 126 115 L128 80 C130 66 144 66 145 80 L146 75 C148 62 162 62 162 78 L164 95 C166 84 180 84 180 98 L178 180 C178 210 174 230 174 240 Z" fill="#ffffff"/>
+<path d="M620 450 L620 230 L680 230 L680 450" fill="#409FCD"/>
+<path d="M616 240 C610 180 612 140 620 110 C624 98 636 100 636 115 L638 80 C640 66 654 66 655 80 L656 75 C658 62 672 62 672 78 L674 95 C676 84 690 84 690 98 L688 180 C688 210 684 230 684 240 Z" fill="#ffffff"/>
+</g>
+<g>
+<path d="M296 450 L306 380 M504 450 L494 380 M400 450 L400 380" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="270" y="60" width="260" height="320" rx="6" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="290" y="45" width="220" height="22" rx="6" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="300" y="110" width="30" height="30" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="350" y1="125" x2="500" y2="125" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="300" y="170" width="30" height="30" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="350" y1="185" x2="460" y2="185" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="300" y="230" width="30" height="30" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="350" y1="245" x2="500" y2="245" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="300" y="290" width="30" height="30" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="350" y1="305" x2="460" y2="305" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M306 125 l8 9 l14 -18" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M306 185 l8 9 l14 -18" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M306 245 l8 9 l14 -18" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M455 320 L540 230 L560 250 L475 340 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M455 320 L445 350 L475 340" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M110 450 L110 230 L170 230 L170 450" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M106 240 C100 180 102 140 110 110 C114 98 126 100 126 115 L128 80 C130 66 144 66 145 80 L146 75 C148 62 162 62 162 78 L164 95 C166 84 180 84 180 98 L178 180 C178 210 174 230 174 240 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M620 450 L620 230 L680 230 L680 450" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M616 240 C610 180 612 140 620 110 C624 98 636 100 636 115 L638 80 C640 66 654 66 655 80 L656 75 C658 62 672 62 672 78 L674 95 C676 84 690 84 690 98 L688 180 C688 210 684 230 684 240 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+</svg>

@@ -4,6 +4,9 @@ date: 2020-06-12
 description: "High Tech Middle North County San Diego Photography Studio - 2020 Mike volunteered to give a professional review to the photos of middle school students from High Tech High."
 author: "James"
 program: makefashion-edu
+image: "/images/blog/illustrations/htm-photo-studio-final-review-2.svg"
+imageAlt: "Drawing of a video player showing a student's landscape photo with a review comment beside it, and a camera"
+imageCredit: "Illustration by Blake"
 categories:
   - "Great Projects"
   - "MakeFashion Edu"

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img">
+<title>Three maker badges with ribbons, showing a lightning bolt, a light bulb and a hammer</title>
+<rect width="800" height="450" fill="#E4EDEA"/>
+<g transform="translate(7 6)">
+<path d="M125 250 L105 380 L135 360 L150 395 L165 260 Z" fill="#EF7B44"/>
+<path d="M195 250 L215 380 L185 360 L170 395 L155 260 Z" fill="#EF7B44"/>
+<circle cx="160" cy="190" r="95" fill="#5EB1BF"/>
+<circle cx="160" cy="190" r="72" fill="#ffffff"/>
+<path d="M158 130 L128 200 L156 200 L140 252 L190 175 L160 175 L178 130 Z" fill="#F4CD15"/>
+<path d="M365 250 L345 380 L375 360 L390 395 L405 260 Z" fill="#EF7B44"/>
+<path d="M435 250 L455 380 L425 360 L410 395 L395 260 Z" fill="#EF7B44"/>
+<circle cx="400" cy="190" r="95" fill="#F4CD15"/>
+<circle cx="400" cy="190" r="72" fill="#ffffff"/>
+<path d="M380 205 a38 38 0 1 1 40 0 q-6 8 -6 20 l-28 0 q0 -12 -6 -20 Z" fill="#F4CD15"/>
+<rect x="386" y="227" width="28" height="16" rx="4" fill="#D7D7D7"/>
+<path d="M605 250 L585 380 L615 360 L630 395 L645 260 Z" fill="#EF7B44"/>
+<path d="M675 250 L695 380 L665 360 L650 395 L635 260 Z" fill="#EF7B44"/>
+<circle cx="640" cy="190" r="95" fill="#409FCD"/>
+<circle cx="640" cy="190" r="72" fill="#ffffff"/>
+<rect x="605" y="140" width="80" height="32" rx="5" fill="#D7D7D7"/>
+<rect x="634" y="172" width="20" height="80" rx="6" fill="#EDA83E"/>
+</g>
+<g>
+<path d="M125 250 L105 380 L135 360 L150 395 L165 260 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M195 250 L215 380 L185 360 L170 395 L155 260 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="160" cy="190" r="95" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="160" cy="190" r="72" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M158 130 L128 200 L156 200 L140 252 L190 175 L160 175 L178 130 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M365 250 L345 380 L375 360 L390 395 L405 260 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M435 250 L455 380 L425 360 L410 395 L395 260 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="400" cy="190" r="95" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="400" cy="190" r="72" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M380 205 a38 38 0 1 1 40 0 q-6 8 -6 20 l-28 0 q0 -12 -6 -20 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="386" y="227" width="28" height="16" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M605 250 L585 380 L615 360 L630 395 L645 260 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M675 250 L695 380 L665 360 L650 395 L635 260 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="640" cy="190" r="95" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="640" cy="190" r="72" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="605" y="140" width="80" height="32" rx="5" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="634" y="172" width="20" height="80" rx="6" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+</svg>

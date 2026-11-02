@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img">
+<title>An old website window packed into a cardboard moving box, with an arrow pointing to a fresh new website window</title>
+<rect width="800" height="450" fill="#E4EDEA"/>
+<g transform="translate(7 6)">
+<rect x="110" y="110" width="200" height="140" rx="8" fill="#ffffff"/>
+<rect x="110" y="110" width="200" height="30" rx="8" fill="#D7D7D7"/>
+<path d="M70 230 L350 230 L350 400 L70 400 Z" fill="#EDA83E"/>
+<rect x="530" y="120" width="230" height="250" rx="10" fill="#ffffff"/>
+<rect x="530" y="120" width="230" height="34" rx="10" fill="#5EB1BF"/>
+<circle cx="552" cy="137" r="5" fill="#ffffff"/>
+<circle cx="572" cy="137" r="5" fill="#ffffff"/>
+<rect x="555" y="175" width="180" height="80" rx="4" fill="#F4CD15"/>
+</g>
+<g>
+<rect x="110" y="110" width="200" height="140" rx="8" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M110 140 L310 140" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="110" y="110" width="200" height="30" rx="8" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M135 170 l100 0 M135 195 l140 0" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M70 230 L350 230 L350 400 L70 400 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M70 230 L30 280 M350 230 L390 280" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M180 230 l0 45 l60 0 l0 -45" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M410 260 L500 260 M478 238 L500 260 L478 282" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="530" y="120" width="230" height="250" rx="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="530" y="120" width="230" height="34" rx="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="552" cy="137" r="5" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="572" cy="137" r="5" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="555" y="175" width="180" height="80" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M555 285 l180 0 M555 310 l140 0 M555 335 l160 0" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M590 70 l0 -18 M640 60 l10 -16 M690 70 l14 -12" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+</svg>

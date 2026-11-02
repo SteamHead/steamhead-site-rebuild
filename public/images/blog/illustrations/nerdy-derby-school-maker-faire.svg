@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img">
+<title>Two homemade derby cars racing down a long wooden track towards a chequered flag</title>
+<rect width="800" height="450" fill="#E4EDEA"/>
+<g transform="translate(7 6)">
+<path d="M30 110 L700 330 L790 330 L790 360 L700 360 L30 140 Z" fill="#D7D7D7"/>
+<rect x="716" y="196" width="72" height="54" fill="#ffffff"/>
+<path transform="translate(250 182.2) rotate(18.18)" d="M-50 -14 L-50 -38 L-10 -38 L5 -52 L35 -52 L50 -38 L50 -14 Z" fill="#F4CD15"/>
+<circle transform="translate(250 182.2) rotate(18.18)" cx="-30" cy="-13" r="13" fill="#ffffff"/>
+<circle transform="translate(250 182.2) rotate(18.18)" cx="30" cy="-13" r="13" fill="#ffffff"/>
+<path transform="translate(480 257.8) rotate(18.18)" d="M-50 -14 L-50 -38 L-10 -38 L5 -52 L35 -52 L50 -38 L50 -14 Z" fill="#EF7B44"/>
+<circle transform="translate(480 257.8) rotate(18.18)" cx="-30" cy="-13" r="13" fill="#ffffff"/>
+<circle transform="translate(480 257.8) rotate(18.18)" cx="30" cy="-13" r="13" fill="#ffffff"/>
+</g>
+<g>
+<line x1="20" y1="420" x2="790" y2="420" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="140" y1="176" x2="140" y2="420" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="330" y1="239" x2="330" y2="420" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="520" y1="301" x2="520" y2="420" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M30 110 L700 330 L790 330 L790 360 L700 360 L30 140 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="716" y1="330" x2="716" y2="196" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="716" y="196" width="72" height="54" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="716" y="196" width="18" height="18" fill="#000"/>
+<rect x="752" y="196" width="18" height="18" fill="#000"/>
+<rect x="734" y="214" width="18" height="18" fill="#000"/>
+<rect x="770" y="214" width="18" height="18" fill="#000"/>
+<rect x="716" y="232" width="18" height="18" fill="#000"/>
+<rect x="752" y="232" width="18" height="18" fill="#000"/>
+<rect x="716" y="196" width="72" height="54" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path transform="translate(250 182.2) rotate(18.18)" d="M-50 -14 L-50 -38 L-10 -38 L5 -52 L35 -52 L50 -38 L50 -14 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path transform="translate(250 182.2) rotate(18.18)" d="M-30 -32 L-12 -32 L-22 -22 L-4 -22" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle transform="translate(250 182.2) rotate(18.18)" cx="-30" cy="-13" r="13" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle transform="translate(250 182.2) rotate(18.18)" cx="30" cy="-13" r="13" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path transform="translate(250 182.2) rotate(18.18)" d="M-75 -40 l-40 0 M-70 -26 l-55 0" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path transform="translate(480 257.8) rotate(18.18)" d="M-50 -14 L-50 -38 L-10 -38 L5 -52 L35 -52 L50 -38 L50 -14 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path transform="translate(480 257.8) rotate(18.18)" d="M10 -46 L30 -46 M-40 -30 L-5 -30" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle transform="translate(480 257.8) rotate(18.18)" cx="-30" cy="-13" r="13" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle transform="translate(480 257.8) rotate(18.18)" cx="30" cy="-13" r="13" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path transform="translate(480 257.8) rotate(18.18)" d="M-75 -40 l-40 0 M-70 -26 l-55 0" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+</svg>

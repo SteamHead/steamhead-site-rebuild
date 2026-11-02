@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img">
+<title>A small guest room with a made bed, a desk lamp, a window and a suitcase ready for a visiting maker</title>
+<rect width="800" height="450" fill="#E4EDEA"/>
+<g transform="translate(7 6)">
+<rect x="330" y="60" width="160" height="130" rx="6" fill="#409FCD"/>
+<rect x="60" y="270" width="280" height="70" rx="8" fill="#EF7B44"/>
+<rect x="60" y="210" width="20" height="180" fill="#EDA83E"/>
+<rect x="90" y="235" width="80" height="35" rx="12" fill="#ffffff"/>
+<rect x="520" y="250" width="200" height="22" fill="#EDA83E"/>
+<path d="M620 160 L670 125 L690 160 Z" fill="#F4CD15"/>
+<rect x="560" y="236" width="40" height="14" fill="#ffffff"/>
+<rect x="400" y="300" width="90" height="90" rx="8" fill="#5EB1BF"/>
+</g>
+<g>
+<line x1="20" y1="390" x2="780" y2="390" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="330" y="60" width="160" height="130" rx="6" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M410 60 L410 190 M330 125 L490 125" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="60" y="270" width="280" height="70" rx="8" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="60" y="210" width="20" height="180" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="90" y="235" width="80" height="35" rx="12" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M80 340 L80 390 M330 340 L330 390" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="520" y="250" width="200" height="22" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M540 272 L540 390 M700 272 L700 390" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M600 250 L600 180 L640 150" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M620 160 L670 125 L690 160 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="560" y="236" width="40" height="14" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="400" y="300" width="90" height="90" rx="8" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M425 300 L425 282 L465 282 L465 300" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M420 330 L470 330" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img">
+<title>A makerspace workbench with a pegboard of tools, a small cardboard robot, and a class flyer pinned to the wall</title>
+<rect width="800" height="450" fill="#E4EDEA"/>
+<g transform="translate(7 6)">
+<rect x="50" y="36" width="400" height="160" rx="6" fill="#D7D7D7"/>
+<rect x="96" y="80" width="70" height="26" rx="4" fill="#474747"/>
+<rect x="122" y="106" width="18" height="70" rx="4" fill="#EDA83E"/>
+<rect x="214" y="70" width="22" height="50" rx="6" fill="#EF7B44"/>
+<rect x="290" y="80" width="130" height="34" rx="2" fill="#F4CD15"/>
+<rect x="210" y="214" width="70" height="44" rx="6" fill="#5EB1BF"/>
+<rect x="196" y="262" width="98" height="64" rx="6" fill="#5EB1BF"/>
+<rect x="40" y="326" width="520" height="24" rx="4" fill="#EDA83E"/>
+<rect x="590" y="56" width="170" height="240" rx="4" fill="#ffffff"/>
+<rect x="650" y="44" width="50" height="20" rx="2" fill="#EDA83E"/>
+<circle cx="675" cy="136" r="38" fill="#F4CD15"/>
+<rect x="658" y="172" width="34" height="22" rx="3" fill="#D7D7D7"/>
+</g>
+<g>
+<rect x="50" y="36" width="400" height="160" rx="6" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="80" cy="60" r="3" fill="#474747"/>
+<circle cx="80" cy="172" r="3" fill="#474747"/>
+<circle cx="120" cy="60" r="3" fill="#474747"/>
+<circle cx="120" cy="172" r="3" fill="#474747"/>
+<circle cx="160" cy="60" r="3" fill="#474747"/>
+<circle cx="160" cy="172" r="3" fill="#474747"/>
+<circle cx="200" cy="60" r="3" fill="#474747"/>
+<circle cx="200" cy="172" r="3" fill="#474747"/>
+<circle cx="240" cy="60" r="3" fill="#474747"/>
+<circle cx="240" cy="172" r="3" fill="#474747"/>
+<circle cx="280" cy="60" r="3" fill="#474747"/>
+<circle cx="280" cy="172" r="3" fill="#474747"/>
+<circle cx="320" cy="60" r="3" fill="#474747"/>
+<circle cx="320" cy="172" r="3" fill="#474747"/>
+<circle cx="360" cy="60" r="3" fill="#474747"/>
+<circle cx="360" cy="172" r="3" fill="#474747"/>
+<circle cx="400" cy="60" r="3" fill="#474747"/>
+<circle cx="400" cy="172" r="3" fill="#474747"/>
+<rect x="96" y="80" width="70" height="26" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="122" y="106" width="18" height="70" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="214" y="70" width="22" height="50" rx="6" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M225 120 L225 176" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="290" y="80" width="130" height="34" rx="2" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M310 80 l0 12 M330 80 l0 18 M350 80 l0 12 M370 80 l0 18 M390 80 l0 12" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M245 214 L245 196 M245 196 m-8 -8 a8 8 0 1 0 0.1 0" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="210" y="214" width="70" height="44" rx="6" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="231" cy="236" r="6" fill="#000000"/>
+<circle cx="259" cy="236" r="6" fill="#000000"/>
+<rect x="196" y="262" width="98" height="64" rx="6" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M196 286 L168 304 M294 286 L322 304" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="40" y="326" width="520" height="24" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M70 350 L70 440 M530 350 L530 440" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="590" y="56" width="170" height="240" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="650" y="44" width="50" height="20" rx="2" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="675" cy="136" r="38" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="658" y="172" width="34" height="22" rx="3" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M612 226 l126 0 M612 250 l100 0 M612 274 l116 0" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+</svg>

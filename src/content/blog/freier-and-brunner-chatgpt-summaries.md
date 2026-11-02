@@ -4,6 +4,9 @@ date: 2023-05-07
 description: "Paulo Freire's poetic style is quite challenging to read, especially on a topic like school curriculum development. ChatGPT can help! Certainly!"
 author: "James"
 program: general
+image: "/images/blog/illustrations/freier-and-brunner-chatgpt-summaries.svg"
+imageAlt: "Drawing of a thick open book with an arrow leading to a short speech bubble of summary lines"
+imageCredit: "Illustration by Blake"
 categories:
   - "Uncategorized"
 draft: true

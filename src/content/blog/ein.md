@@ -4,6 +4,9 @@ date: 2017-10-17
 description: "EIN is our monthly bilingual Educators Meetup, hosted at a different Shenzhen school each month. SteamHead is its Community Partner."
 author: "James"
 program: general
+image: "/images/blog/illustrations/ein.svg"
+imageAlt: "Drawing of teachers seen from behind watching a presentation, with two speech bubbles for a two-language meetup"
+imageCredit: "Illustration by Blake"
 categories:
   - "MakerEd"
   - "Projects"

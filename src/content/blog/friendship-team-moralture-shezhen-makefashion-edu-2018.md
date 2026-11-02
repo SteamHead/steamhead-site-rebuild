@@ -4,6 +4,9 @@ date: 2019-07-01
 description: "Friendship, Team Moralture, Shezhen MakeFashion Edu 2018 Composed of Athena Hu and Molly Li, eight years old, the Friendship Dress has been inspired by the friendship the two…"
 author: "James"
 program: makefashion-edu
+image: "https://i.ytimg.com/vi/dCXeAV8nEww/maxresdefault.jpg"
+imageAlt: "Model in an illuminated peacock-inspired costume at a MakeFashion Edu runway show"
+imageCredit: "Video still: MakeFashion Edu"
 categories:
   - "MakeFashion Edu"
 ---

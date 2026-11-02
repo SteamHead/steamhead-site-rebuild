@@ -4,6 +4,9 @@ date: 2021-02-02
 description: "In his chapter, “What Does It Mean to Say a School is Doing Well?” from The Curriculum Studies Reader, Elliot Eisner proposes a move away from traditional education, by means of…"
 author: "James"
 program: general
+image: "/images/blog/illustrations/curriculum_empathy.svg"
+imageAlt: "Drawing of an open book with three speech bubbles of different colours rising from its pages"
+imageCredit: "Illustration by Blake"
 categories:
   - "JamesEd"
 ---

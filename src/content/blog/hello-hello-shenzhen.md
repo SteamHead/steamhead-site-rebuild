@@ -4,6 +4,9 @@ date: 2017-10-09
 description: "We are hosting Helen Steer in November, through the British Council's Hello Shenzhen maker residency programme."
 author: "James"
 program: general
+image: "/images/blog/illustrations/hello-hello-shenzhen.svg"
+imageAlt: "Drawing of a plane flying a dashed route between two city skylines, with a suitcase waiting at the arrival city"
+imageCredit: "Illustration by Blake"
 categories:
   - "MakerEd"
   - "Projects"

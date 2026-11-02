@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img">
+<title>A balance scale weighing a key on one side against a tangled ball of string on the other</title>
+<rect width="800" height="450" fill="#E4EDEA"/>
+<g transform="translate(7 6)">
+<path d="M330 420 L470 420 L430 390 L370 390 Z" fill="#EDA83E"/>
+<rect x="390" y="110" width="20" height="280" fill="#EDA83E"/>
+<path d="M170 134 L630 114 L630 128 L170 148 Z" fill="#474747"/>
+<circle cx="400" cy="130" r="16" fill="#F4CD15"/>
+<path d="M110 280 L270 280 C260 320 120 320 110 280 Z" fill="#D7D7D7"/>
+<path d="M530 262 L690 262 C680 302 540 302 530 262 Z" fill="#D7D7D7"/>
+<circle cx="148" cy="245" r="28" fill="#F4CD15"/>
+<circle cx="148" cy="245" r="9" fill="#ffffff"/>
+<circle cx="610" cy="222" r="40" fill="#EF7B44"/>
+</g>
+<g>
+<line x1="20" y1="420" x2="780" y2="420" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M330 420 L470 420 L430 390 L370 390 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="390" y="110" width="20" height="280" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M170 134 L630 114 L630 128 L170 148 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="400" cy="130" r="16" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M190 140 L130 280 M190 140 L250 280 M610 122 L550 262 M610 122 L670 262" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M110 280 L270 280 C260 320 120 320 110 280 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M530 262 L690 262 C680 302 540 302 530 262 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="148" cy="245" r="28" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="148" cy="245" r="9" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M176 245 L252 245 M232 245 v18 M248 245 v14" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="610" cy="222" r="40" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M575 210 C600 180 650 200 640 235 C630 260 585 250 590 220 C595 195 640 205 625 240 M572 235 C600 250 640 245 650 215" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M648 235 C670 250 690 238 712 252" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+</svg>

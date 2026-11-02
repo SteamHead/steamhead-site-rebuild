@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img">
+<title>A signpost with three arrows pointing different ways beside an open toolbox of project tools</title>
+<rect width="800" height="450" fill="#E4EDEA"/>
+<g transform="translate(7 6)">
+<rect x="240" y="80" width="22" height="340" fill="#EDA83E"/>
+<path d="M262 100 L420 100 L455 130 L420 160 L262 160 Z" fill="#5EB1BF"/>
+<path d="M240 180 L90 180 L55 210 L90 240 L240 240 Z" fill="#EF7B44"/>
+<path d="M262 260 L400 260 L435 290 L400 320 L262 320 Z" fill="#F4CD15"/>
+<path d="M520 300 L740 300 L740 410 L520 410 Z" fill="#409FCD"/>
+<path d="M520 300 L560 270 L780 270 L740 300" fill="#409FCD"/>
+<path d="M560 300 L545 175 L560 172 L575 300" fill="#D7D7D7"/>
+<rect x="525" y="150" width="56" height="28" rx="4" fill="#474747"/>
+<rect x="640" y="160" width="26" height="140" rx="3" fill="#F4CD15"/>
+<path d="M700 300 L700 200 C700 185 720 185 720 200 L720 300" fill="#EF7B44"/>
+</g>
+<g>
+<line x1="20" y1="420" x2="780" y2="420" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="240" y="80" width="22" height="340" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M262 100 L420 100 L455 130 L420 160 L262 160 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M240 180 L90 180 L55 210 L90 240 L240 240 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M262 260 L400 260 L435 290 L400 320 L262 320 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M520 300 L740 300 L740 410 L520 410 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M520 300 L560 270 L780 270 L740 300" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M600 300 C600 270 660 270 660 300" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M560 300 L545 175 L560 172 L575 300" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="525" y="150" width="56" height="28" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="640" y="160" width="26" height="140" rx="3" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M640 180 h12 M640 200 h8 M640 220 h12 M640 240 h8 M640 260 h12 M640 280 h8" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M700 300 L700 200 C700 185 720 185 720 200 L720 300" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img">
+<title>A laptop showing a video call with four people, beside a wifi signal and a life ring</title>
+<rect width="800" height="450" fill="#E4EDEA"/>
+<g transform="translate(7 6)">
+<rect x="170" y="58" width="460" height="292" rx="14" fill="#474747"/>
+<path d="M130 350 H670 L700 390 H100 Z" fill="#D7D7D7"/>
+<rect x="193" y="82" width="195" height="112" rx="6" fill="#5EB1BF"/>
+<circle cx="290" cy="126" r="20" fill="#ffffff"/>
+<path d="M253 194 Q290 144 327 194" fill="#ffffff"/>
+<rect x="412" y="82" width="195" height="112" rx="6" fill="#F4CD15"/>
+<circle cx="509" cy="126" r="20" fill="#ffffff"/>
+<path d="M472 194 Q509 144 546 194" fill="#ffffff"/>
+<rect x="193" y="218" width="195" height="112" rx="6" fill="#EF7B44"/>
+<circle cx="290" cy="262" r="20" fill="#ffffff"/>
+<path d="M253 330 Q290 280 327 330" fill="#ffffff"/>
+<rect x="412" y="218" width="195" height="112" rx="6" fill="#409FCD"/>
+<circle cx="509" cy="262" r="20" fill="#ffffff"/>
+<path d="M472 330 Q509 280 546 330" fill="#ffffff"/>
+<circle cx="90" cy="250" r="52" fill="#EF7B44"/>
+<circle cx="90" cy="250" r="24" fill="#E4EDEA"/>
+</g>
+<g>
+<rect x="170" y="58" width="460" height="292" rx="14" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M130 350 H670 L700 390 H100 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="193" y="82" width="195" height="112" rx="6" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="290" cy="126" r="20" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M253 194 Q290 144 327 194" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="412" y="82" width="195" height="112" rx="6" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="509" cy="126" r="20" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M472 194 Q509 144 546 194" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="193" y="218" width="195" height="112" rx="6" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="290" cy="262" r="20" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M253 330 Q290 280 327 330" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="412" y="218" width="195" height="112" rx="6" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="509" cy="262" r="20" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M472 330 Q509 280 546 330" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M678 104 Q720 64 762 104 M692 120 Q720 94 748 120" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="720" cy="138" r="7" fill="#000000"/>
+<circle cx="90" cy="250" r="52" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="90" cy="250" r="24" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M107 233 L127 213 M73 233 L53 213 M73 267 L53 287 M107 267 L127 287" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+</svg>

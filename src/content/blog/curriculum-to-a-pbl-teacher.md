@@ -4,6 +4,9 @@ date: 2021-02-18
 description: "In the aftermath of a virtual education event, where students toured a 3D world of their work and the fashion tech projects of students in other schools, I asked my co-instructor…"
 author: "James"
 program: general
+image: "/images/blog/illustrations/curriculum-to-a-pbl-teacher.svg"
+imageAlt: "Drawing of a video camera on a tripod recording two chairs set up for a conversation, with speech bubbles above"
+imageCredit: "Illustration by Blake"
 categories:
   - "JamesEd"
 ---

@@ -4,6 +4,9 @@ date: 2019-07-01
 description: "SAIS classmates Amy Hu, Angela Shan, Coco Wan, Lily Zhou, Lincoln Stahle, and Maria Reyes have worked in close proximity to each create their own wings."
 author: "James"
 program: makefashion-edu
+image: "https://i.ytimg.com/vi/jZSo0EjnOks/maxresdefault.jpg"
+imageAlt: "A student in a glowing, colourful costume performs on stage at a night-time event"
+imageCredit: "Video still: MakeFashion Edu"
 categories:
   - "MakeFashion Edu"
 ---

@@ -4,6 +4,9 @@ date: 2020-08-10
 description: "MakeFashion Edu Tucson 2020 Highlights These are highlights from Tucson's second MakeFashion Edu Runway, February 1st, 2020 at the Dunbar Pavilion."
 author: "James"
 program: general
+image: "/images/blog/illustrations/new-video-upload-makefashion-edu-tucson-2020-highlights.svg"
+imageAlt: "Drawing of a light-up dress on a dress form at the end of a runway under two spotlights, with a video play button"
+imageCredit: "Illustration by Blake"
 categories:
   - "Uncategorized"
 draft: true

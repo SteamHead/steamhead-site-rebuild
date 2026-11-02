@@ -4,6 +4,9 @@ date: 2017-10-09
 description: "Combining makers with space, so much space: the Blue House Hub in the Mojave Desert."
 author: "James"
 program: general
+image: "/images/blog/illustrations/blue-house-hub.svg"
+imageAlt: "Drawing of a small blue house with a big workshop door, alone in a wide desert with mountains and a setting sun"
+imageCredit: "Illustration by Blake"
 categories:
   - "About Us"
 tags:

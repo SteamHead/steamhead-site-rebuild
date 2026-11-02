@@ -4,6 +4,9 @@ date: 2018-05-11
 description: "London Reese and Cassandra Durand, age 12, designed a touch sensitive micro:bit( guitar."
 author: "James"
 program: makefashion-edu
+image: "/images/2018/09/7V4A8523.jpg"
+imageAlt: "Two students posing with a light-up cardboard guitar and headphones"
+imageCredit: "Photo: SteamHead"
 categories:
   - "MakeFashion Edu"
 ---

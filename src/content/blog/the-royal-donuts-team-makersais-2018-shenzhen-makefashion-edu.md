@@ -4,6 +4,9 @@ date: 2019-07-01
 description: "The Royal Donuts, Team makerSAIS, 2018 Shenzhen MakeFashion EduThrough the study of texture, students took inspiration from American artist Wayne Thiebaud."
 author: "James"
 program: makefashion-edu
+image: "https://i.ytimg.com/vi/ooN8miUV-0k/maxresdefault.jpg"
+imageAlt: "Students in black capes hold donut-shaped props"
+imageCredit: "Video still: MakeFashion Edu"
 categories:
   - "MakeFashion Edu"
 ---

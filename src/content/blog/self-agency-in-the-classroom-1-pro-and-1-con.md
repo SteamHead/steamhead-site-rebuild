@@ -4,6 +4,9 @@ date: 2020-07-07
 description: "Self Agency A pro in having students involved in creating the rules is increasing \"self-agency\", by informing students of the power they have to control themselves, we can achieve…"
 author: "James"
 program: general
+image: "/images/blog/illustrations/self-agency-in-the-classroom-1-pro-and-1-con.svg"
+imageAlt: "Drawing of a balance scale weighing a key on one side against a tangled ball of string on the other"
+imageCredit: "Illustration by Blake"
 categories:
   - "JamesEd"
 ---

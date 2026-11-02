@@ -4,6 +4,9 @@ date: 2020-07-02
 description: "A few of the many points of comparison between the Chinese and U.K."
 author: "James"
 program: general
+image: "/images/blog/illustrations/china-vs-u-k-education-systems.svg"
+imageAlt: "Drawing of two differently shaped school buildings with arrows passing back and forth between them"
+imageCredit: "Illustration by Blake"
 categories:
   - "JamesEd"
 ---

@@ -4,6 +4,9 @@ date: 2019-07-01
 description: "Dragon Heart, Daniel Zeng, Shenzhen MakeFashion Edu 2018 There’s an old Chinese folktale, YeGongHaoLong, about a man who loved dragons."
 author: "James"
 program: makefashion-edu
+image: "https://i.ytimg.com/vi/voRCLNd9T-Q/maxresdefault.jpg"
+imageAlt: "A red fabric heart with blue embroidery and glowing lights, labelled \"Dragon Heart\""
+imageCredit: "Video still: MakeFashion Edu"
 categories:
   - "MakeFashion Edu"
 ---

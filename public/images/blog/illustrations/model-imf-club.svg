@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img">
+<title>A globe on a stand between two stacks of coins, with speech bubbles for a debate</title>
+<rect width="800" height="450" fill="#E4EDEA"/>
+<g transform="translate(7 6)">
+<rect x="110" y="338" width="110" height="22" rx="8" fill="#F4CD15"/>
+<rect x="110" y="316" width="110" height="22" rx="8" fill="#F4CD15"/>
+<rect x="110" y="294" width="110" height="22" rx="8" fill="#F4CD15"/>
+<rect x="110" y="272" width="110" height="22" rx="8" fill="#F4CD15"/>
+<rect x="110" y="250" width="110" height="22" rx="8" fill="#F4CD15"/>
+<rect x="580" y="338" width="110" height="22" rx="8" fill="#EDA83E"/>
+<rect x="580" y="316" width="110" height="22" rx="8" fill="#EDA83E"/>
+<rect x="580" y="294" width="110" height="22" rx="8" fill="#EDA83E"/>
+<rect x="345" y="352" width="110" height="14" rx="4" fill="#474747"/>
+<circle cx="400" cy="200" r="120" fill="#5EB1BF"/>
+<path d="M110 90 h120 q14 0 14 14 v52 q0 14 -14 14 h-60 l-18 22 l2 -22 h-42 q-14 0 -14 -14 v-52 q0 -14 14 -14 Z" fill="#ffffff"/>
+<path d="M590 160 h120 q14 0 14 14 v52 q0 14 -14 14 h-60 l-18 22 l2 -22 h-42 q-14 0 -14 -14 v-52 q0 -14 14 -14 Z" fill="#ffffff"/>
+</g>
+<g>
+<rect x="110" y="338" width="110" height="22" rx="8" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="110" y="316" width="110" height="22" rx="8" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="110" y="294" width="110" height="22" rx="8" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="110" y="272" width="110" height="22" rx="8" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="110" y="250" width="110" height="22" rx="8" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="580" y="338" width="110" height="22" rx="8" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="580" y="316" width="110" height="22" rx="8" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="580" y="294" width="110" height="22" rx="8" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="60" y1="360" x2="740" y2="360" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M400 330 L400 352" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="345" y="352" width="110" height="14" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="400" cy="200" r="120" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<ellipse cx="400" cy="200" rx="55" ry="120" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M400 80 L400 320 M280 200 L520 200 M296 140 L504 140 M296 260 L504 260" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M110 90 h120 q14 0 14 14 v52 q0 14 -14 14 h-60 l-18 22 l2 -22 h-42 q-14 0 -14 -14 v-52 q0 -14 14 -14 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M590 160 h120 q14 0 14 14 v52 q0 14 -14 14 h-60 l-18 22 l2 -22 h-42 q-14 0 -14 -14 v-52 q0 -14 14 -14 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M130 120 l90 0 M130 142 l60 0 M610 190 l90 0 M610 212 l70 0" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+</svg>

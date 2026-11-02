@@ -4,6 +4,9 @@ date: 2020-07-16
 description: "The Impact of Organization: Classroom Seating Seating arrangements influence classroom social behaviors, sources of knowledge, and the allocation of responsibilities."
 author: "James"
 program: general
+image: "/images/blog/illustrations/the-impact-of-organization-classroom-seating.svg"
+imageAlt: "Drawing of two classroom floor plans: desks in rows facing the teacher, and desks pushed together into small groups"
+imageCredit: "Illustration by Blake"
 categories:
   - "JamesEd"
 ---

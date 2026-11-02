@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img">
+<title>A fruit tree, a pair of pruning shears and a basket holding three picked fruits</title>
+<rect width="800" height="450" fill="#E4EDEA"/>
+<g transform="translate(7 6)">
+<path d="M180 420 L195 250 L220 250 L238 420 Z" fill="#EDA83E"/>
+<circle cx="205" cy="170" r="120" fill="#5EB1BF"/>
+<circle cx="140" cy="130" r="16" fill="#EF7B44"/>
+<circle cx="250" cy="110" r="16" fill="#F4CD15"/>
+<circle cx="190" cy="205" r="16" fill="#EF7B44"/>
+<circle cx="275" cy="200" r="16" fill="#F4CD15"/>
+<circle cx="120" cy="210" r="16" fill="#F4CD15"/>
+<circle cx="520" cy="320" r="26" fill="#EF7B44"/>
+<circle cx="575" cy="312" r="26" fill="#F4CD15"/>
+<circle cx="630" cy="320" r="26" fill="#EF7B44"/>
+<path d="M470 330 L680 330 L655 415 L495 415 Z" fill="#EDA83E"/>
+<path d="M655 190 C630 160 615 120 618 70 C640 100 660 140 668 180 Z" fill="#D7D7D7"/>
+<path d="M655 190 C680 160 700 125 705 85 C680 110 660 150 645 182 Z" fill="#D7D7D7"/>
+<path d="M648 200 C630 230 610 255 598 285 C592 300 608 306 616 294 C632 268 650 240 662 205 Z" fill="#EF7B44"/>
+<path d="M662 200 C682 228 700 252 714 282 C720 298 704 304 696 292 C680 266 664 238 650 205 Z" fill="#EF7B44"/>
+<circle cx="655" cy="194" r="8" fill="#ffffff"/>
+</g>
+<g>
+<path d="M180 420 L195 250 L220 250 L238 420 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="205" cy="170" r="120" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M205 250 L160 200 M210 240 L255 195" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="140" cy="130" r="16" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="250" cy="110" r="16" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="190" cy="205" r="16" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="275" cy="200" r="16" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="120" cy="210" r="16" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="20" y1="420" x2="780" y2="420" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="520" cy="320" r="26" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="575" cy="312" r="26" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="630" cy="320" r="26" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M470 330 L680 330 L655 415 L495 415 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M490 360 L665 360 M500 390 L660 390 M535 330 L540 415 M575 330 L575 415 M615 330 L610 415" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M490 330 C490 230 660 230 660 330"  fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M655 190 C630 160 615 120 618 70 C640 100 660 140 668 180 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M655 190 C680 160 700 125 705 85 C680 110 660 150 645 182 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M648 200 C630 230 610 255 598 285 C592 300 608 306 616 294 C632 268 650 240 662 205 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M662 200 C682 228 700 252 714 282 C720 298 704 304 696 292 C680 266 664 238 650 205 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="655" cy="194" r="8" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+</svg>

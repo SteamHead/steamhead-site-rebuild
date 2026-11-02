@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img">
+<title>A cardboard box hung above a stage, its trapdoor swung open by a servo, letting paper snow fall</title>
+<rect width="800" height="450" fill="#E4EDEA"/>
+<g transform="translate(7 6)">
+<rect x="-10" y="390" width="820" height="70" fill="#D7D7D7"/>
+<path d="M-10 -10 L130 -10 Q95 200 150 395 L-10 395 Z" fill="#EF7B44"/>
+<path d="M810 -10 L670 -10 Q705 200 650 395 L810 395 Z" fill="#EF7B44"/>
+<rect x="270" y="70" width="260" height="90" rx="4" fill="#EDA83E"/>
+<path d="M270 160 L282 158 L380 232 L370 242 Z" fill="#EDA83E"/>
+<circle cx="274" cy="160" r="5" fill="#474747"/>
+<rect x="530" y="92" width="44" height="34" rx="4" fill="#409FCD"/>
+<circle cx="470" cy="245" r="12" fill="#ffffff"/>
+<circle cx="410" cy="285" r="9" fill="#ffffff"/>
+<circle cx="450" cy="340" r="9" fill="#ffffff"/>
+<circle cx="390" cy="360" r="12" fill="#ffffff"/>
+<circle cx="480" cy="200" r="12" fill="#ffffff"/>
+<circle cx="360" cy="320" r="9" fill="#ffffff"/>
+</g>
+<g>
+<rect x="-10" y="390" width="820" height="70" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M-10 -10 L130 -10 Q95 200 150 395 L-10 395 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M810 -10 L670 -10 Q705 200 650 395 L810 395 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M310 0 L310 70 M490 0 L490 70" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="270" y="70" width="260" height="90" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M300 100 l40 0 M460 130 l40 0" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M270 160 L282 158 L380 232 L370 242 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="274" cy="160" r="5" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="530" y="92" width="44" height="34" rx="4" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M574 109 Q620 109 640 60 Q650 30 670 20" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M419 200 l22 0 M424 190 l12 20 M436 190 l-12 20" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="470" cy="245" r="12" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="410" cy="285" r="9" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M489 300 l22 0 M494 290 l12 20 M506 290 l-12 20" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="450" cy="340" r="9" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="390" cy="360" r="12" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M509 360 l22 0 M514 350 l12 20 M526 350 l-12 20" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="480" cy="200" r="12" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="360" cy="320" r="9" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M529 250 l22 0 M534 240 l12 20 M546 240 l-12 20" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+</svg>

@@ -4,6 +4,9 @@ date: 2018-05-10
 description: "SteamHead's Wix website is retiring. A look back at what the Wix site held — a Shekou makerspace, kids' workshops, school services and an open maker-ed community — before the blog moves to WordPress."
 author: "Blake"
 program: general
+image: "/images/blog/illustrations/goodbye-wix-hello-wordpress.svg"
+imageAlt: "Drawing of an old website window packed into a cardboard moving box, with an arrow pointing to a fresh new website window"
+imageCredit: "Illustration by Blake"
 categories:
   - "SteamHead Productions"
 tags:

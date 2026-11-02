@@ -1,0 +1,22 @@
+from pen import C, s
+
+TITLE = "An open book with three speech bubbles of different colours rising from its pages"
+
+
+def shapes():
+    return [
+        # book
+        s('path d="M400 410 C340 380 250 380 170 400 L170 270 C250 250 340 250 400 280 Z"', C["white"]),
+        s('path d="M400 410 C460 380 550 380 630 400 L630 270 C550 250 460 250 400 280 Z"', C["white"]),
+        s('path d="M200 300 C260 288 330 290 375 305 M200 330 C260 318 330 320 375 335 M200 360 C260 348 330 350 375 365"'),
+        s('path d="M425 305 C470 290 540 288 600 300 M425 335 C470 320 540 318 600 330 M425 365 C470 350 540 348 600 360"'),
+        # three voices
+        s('path d="M150 60 h150 a20 20 0 0 1 20 20 v60 a20 20 0 0 1 -20 20 h-90 l-30 30 l0 -30 h-30 a20 20 0 0 1 -20 -20 v-60 a20 20 0 0 1 20 -20 Z"', C["coral"]),
+        s('path d="M330 30 h140 a20 20 0 0 1 20 20 v60 a20 20 0 0 1 -20 20 h-55 l-15 35 l-15 -35 h-55 a20 20 0 0 1 -20 -20 v-60 a20 20 0 0 1 20 -20 Z"', C["yellow"]),
+        s('path d="M500 60 h150 a20 20 0 0 1 20 20 v60 a20 20 0 0 1 -20 20 h-30 l0 30 l-30 -30 h-90 a20 20 0 0 1 -20 -20 v-60 a20 20 0 0 1 20 -20 Z"', C["teal"]),
+        s('circle cx="195" cy="110" r="6"', "#000", flat=True),
+        s('circle cx="225" cy="110" r="6"', "#000", flat=True),
+        s('circle cx="255" cy="110" r="6"', "#000", flat=True),
+        s('path d="M370 80 h60 M370 100 h80"'),
+        s('path d="M540 100 h90 M540 120 h60"'),
+    ]

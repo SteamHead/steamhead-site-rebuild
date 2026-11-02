@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img">
+<title>A student wearing a cardboard VR viewer beside a laptop showing a 3D model of a house</title>
+<rect width="800" height="450" fill="#E4EDEA"/>
+<g transform="translate(7 6)">
+<path d="M360 120 L430 70 L500 120 L500 190 L360 190 Z" fill="#F4CD15"/>
+<rect x="70" y="190" width="250" height="160" rx="10" fill="#5EB1BF"/>
+<path d="M45 350 L345 350 L370 385 L20 385 Z" fill="#D7D7D7"/>
+<path d="M150 300 L150 255 L195 222 L240 255 L240 300 Z M150 255 L240 255 M110 330 L280 330 M195 222 L195 300" fill="#ffffff"/>
+<path d="M470 450 C480 360 520 330 600 330 C680 330 720 360 730 450" fill="#409FCD"/>
+<circle cx="600" cy="230" r="78" fill="#ffffff"/>
+<path d="M524 215 C520 150 560 140 600 140 C650 140 685 160 678 215 C660 180 620 175 600 172 C575 176 545 185 524 215 Z" fill="#474747"/>
+<rect x="515" y="200" width="170" height="64" rx="10" fill="#EDA83E"/>
+<path d="M528 264 q-4 22 16 24 q18 0 14 -24" fill="#ffffff"/>
+<path d="M672 264 q4 22 -16 24 q-18 0 -14 -24" fill="#ffffff"/>
+</g>
+<g>
+<path d="M360 120 L430 70 L500 120 L500 190 L360 190 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 9"/>
+<rect x="415" y="145" width="30" height="45" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<path d="M330 60 l12 0 M336 54 l0 12 M520 80 l12 0 M526 74 l0 12" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="70" y="190" width="250" height="160" rx="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M45 350 L345 350 L370 385 L20 385 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M150 300 L150 255 L195 222 L240 255 L240 300 Z M150 255 L240 255 M110 330 L280 330 M195 222 L195 300" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M470 450 C480 360 520 330 600 330 C680 330 720 360 730 450" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="600" cy="230" r="78" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M524 215 C520 150 560 140 600 140 C650 140 685 160 678 215 C660 180 620 175 600 172 C575 176 545 185 524 215 Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="515" y="200" width="170" height="64" rx="10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M525 214 L675 214 M560 240 l0 10 M640 240 l0 10" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M528 264 q-4 22 16 24 q18 0 14 -24" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M672 264 q4 22 -16 24 q-18 0 -14 -24" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M575 285 Q600 302 625 285" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+</svg>

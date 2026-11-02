@@ -4,6 +4,9 @@ date: 2026-03-01
 description: "Using MicroBlocks + OctoStudio for a Grade 2 Winter Performance -- /\\ Minimal styling so it looks clean anywhere (Divi/WP-friendly) \\/ -- .post-wrap { max-width: 820px; margin: 0…"
 author: "James"
 program: general
+image: "/images/2026/03/snow1.jpg"
+imageAlt: "Cardboard snow dropper box suspended overhead"
+imageCredit: "Photo: SteamHead"
 categories:
   - "Uncategorized"
 draft: true

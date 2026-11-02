@@ -4,6 +4,9 @@ date: 2020-06-25
 description: "John Dewey, an education advocate from the turn of the 19th century, wrote and spoke of ideals currently found in classrooms where teachers try to move away from lecture-based…"
 author: "James"
 program: general
+image: "/images/blog/illustrations/deweys-connections-to-ib-education.svg"
+imageAlt: "Drawing of a tower of wooden building blocks being stacked, next to a magnifying glass and a sprouting seedling"
+imageCredit: "Illustration by Blake"
 categories:
   - "JamesEd"
 ---

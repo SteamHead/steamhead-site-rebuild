@@ -4,6 +4,9 @@ date: 2020-02-23
 description: "Online Learning Support: Technology Integration during the 2020 Pandemic During the unexpected Online Learning event of 2020, the Technology Integration Team at ISNS worked…"
 author: "James"
 program: general
+image: "/images/blog/illustrations/mentoring-in-a-pandemic.svg"
+imageAlt: "Drawing of a laptop showing a video call with four people, beside a wifi signal and a life ring"
+imageCredit: "Illustration by Blake"
 categories:
   - "JamesEd"
   - "Maker Education"
