@@ -231,6 +231,8 @@ collections:
               - { label: "Cover Image", name: image, widget: image,  required: false,
                   hint: "Portrait book cover; a styled placeholder shows until one is added" }
               - { label: "Buy/View URL", name: url,  widget: string, required: false }
+              - { label: "Runway galleries", name: galleries, widget: list, required: false,
+                  hint: "Runway shows this book covers, comma-separated, by page name (e.g. tucson2025 for /makefashion-edu/tucson2025/). A name with no runway page fails the build." }
 
   # ---------------------------------------------------------------------------
   # SITE SETTINGS — global info edited in one place

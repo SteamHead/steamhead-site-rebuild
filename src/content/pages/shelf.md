@@ -21,31 +21,41 @@ books:
   - title: "MakeFashion Edu San Francisco 2026: American Excellence"
     image: /images/books/B0HG7BQKS6.jpg
     url: https://www.amazon.com/dp/B0HG7BQKS6
+    galleries: [sanfrancisco2026]
   - title: "MakeFashion Edu Tucson 2025"
     image: /images/books/B0FR2F2ZSL.jpg
     url: https://www.amazon.com/dp/B0FR2F2ZSL
+    galleries: [tucson2025]
   - title: "MakeFashion Edu San Francisco 2025: American Icons"
     image: /images/books/B0FKGP353F.jpg
     url: https://www.amazon.com/dp/B0FKGP353F
+    galleries: [sanfrancisco2025]
   - title: "MakeFashion Edu Tucson 2024"
     image: /images/books/B0DB68C8SZ.jpg
     url: https://www.amazon.com/dp/B0DB68C8SZ
+    galleries: [tucson2024]
   - title: "MakeFashion Edu Tucson 2023"
     image: /images/books/B0C79JTJZS.jpg
     url: https://www.amazon.com/dp/B0C79JTJZS
+    galleries: [tucson2023]
   - title: "MakeFashion Edu Tucson 2022"
     image: /images/books/B0B2V2CT1S.jpg
     url: https://www.amazon.com/dp/B0B2V2CT1S
+    galleries: [tucson2022]
   - title: "MakeFashion Edu Tucson 2021"
     image: /images/books/B0B28B2PYP.jpg
     url: https://www.amazon.com/dp/B0B28B2PYP
+    galleries: [tucson2021]
   - title: "MakeFashion Edu: Season 2"
     image: /images/books/B0BRM26Y6N.jpg
     url: https://www.amazon.com/dp/B0BRM26Y6N
+    galleries: [sanmarcos2020s1, tucson2020]
   - title: "MakeFashion Edu: Season 1"
     image: /images/books/B08GLSY65D.jpg
     url: https://www.amazon.com/dp/B08GLSY65D
+    galleries: [shenzhen2018, tucson2019, calgary2019]
   - title: "Fashion as Change (HTM North County Lookbook)"
     image: /images/books/B08GLR2HVK.jpg
     url: https://www.amazon.com/dp/B08GLR2HVK
+    galleries: [sanmarcos2020s2]
 ---

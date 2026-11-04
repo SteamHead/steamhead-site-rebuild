@@ -3,7 +3,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getEntry } from 'astro:content';
 
 const entry = await getEntry('pages', 'shelf');
-const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
+const { hero_tagline, shteam_body, course_body, hardware } = entry.data;
+
+// Each book lists the runway shows it covers by mfedu filename. Resolve them
+// to page links here, and fail the build on a slug with no runway page, so a
+// typo in the CMS can't publish a dead link.
+type Book = { title: string; image?: string; url?: string; galleries?: string[] };
+const books = await Promise.all(
+  (entry.data.books as Book[]).map(async (book) => ({
+    ...book,
+    galleries: await Promise.all(
+      (book.galleries ?? []).map(async (slug) => {
+        const show = await getEntry('mfedu', slug);
+        if (!show || show.data.section !== 'runway-shows') {
+          throw new Error(`shelf.md: book "${book.title}" lists gallery "${slug}", which is not a runway show in src/content/mfedu/`);
+        }
+        return { href: `/makefashion-edu/${slug}/`, title: show.data.title };
+      }),
+    ),
+  })),
+);
 ---
 
 <BaseLayout
@@ -156,7 +175,7 @@ const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
       </p>
 
       <ul class="book-grid mt-md">
-        {books.map((book: { title: string; image?: string; url?: string }) => (
+        {books.map((book) => (
           <li class="book-card">
             {book.image ? (
               <img class="book-cover" src={book.image} alt={`Cover of ${book.title}`} loading="lazy" />
@@ -166,6 +185,14 @@ const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
               </div>
             )}
             <h3>{book.title}</h3>
+            {book.galleries.length > 0 && (
+              <p class="book-galleries">
+                See the runway:{' '}
+                {book.galleries.map((g, i) => (
+                  <>{i > 0 && ', '}<a href={g.href}>{g.title}</a></>
+                ))}
+              </p>
+            )}
             <a
               href={book.url ?? "https://www.amazon.com/dp/B0B1P4N1YQ"}
               class="btn btn--outline"
@@ -325,6 +352,7 @@ const { hero_tagline, shteam_body, course_body, hardware, books } = entry.data;
     line-height: 1.3;
   }
   .book-card h3 { font-family: var(--font-body); font-size: var(--text-sm); font-weight: 600; color: var(--color-white); line-height: 1.35; }
+  .book-galleries { font-size: var(--text-sm); color: var(--color-white); line-height: 1.4; }
 
   .guide-tagline {
     color: var(--color-dark);
