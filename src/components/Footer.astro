@@ -51,9 +51,7 @@
   <div class="footer-bottom">
     <div class="container">
       <p>
-        &copy; {new Date().getFullYear()} SteamHead. A nonprofit maker education organisation.
-        Writing and curriculum under <a href="/license/">CC BY-SA 4.0</a>;
-        photographs of people reserved.
+        &copy; {new Date().getFullYear()} SteamHead. A nonprofit maker education organisation. Writing and curriculum under <a href="/license/">CC BY-SA 4.0</a>; photographs of people reserved.
       </p>
     </div>
   </div>
@@ -131,6 +129,9 @@
     font-size: var(--text-sm);
     color: var(--color-text-dim);
     margin: 0;
+    /* Override the global 68ch prose limit so the notice sits on one line
+       on desktop; it still wraps naturally on narrow screens. */
+    max-width: none;
   }
   /* The global link blue fails contrast on black (3.99:1). */
   .footer-bottom a {
