@@ -402,14 +402,11 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"xic", net:"2026-11-05T15:58:00Z", p:"time", veh:"Long March 2C", who:"China Aerospace Science and Technology Corporation",
-   mission:"Yaogan 51-07 to 09", orbit:"Low Earth Orbit", status:"Launch Successful",
-   brief:"3 Chinese military “remote sensing” satellite of unknown purposes."},
-  {site:"jiu", net:"2026-11-06T23:35:00Z", p:"time", veh:"Ceres-2", who:"Galactic Energy",
-   mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
-   brief:"Details TBD."},
+  {site:"jiu", net:"2026-11-06T23:37:00Z", p:"time", veh:"Ceres-2", who:"Galactic Energy",
+   mission:"4 satellites", orbit:"Sun-Synchronous Orbit", status:"Launch Successful",
+   brief:"Share-ride of 4 commercial Earth observation and technology demonstration satellites to SSO, details TBD."},
   {site:"vsfb", net:"2026-11-07T00:48:42Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"USSF-432", orbit:"Low Earth Orbit", status:"Go for Launch",
+   mission:"USSF-432", orbit:"Low Earth Orbit", status:"Launch Successful",
    brief:"A classified mission for the United States Space Force."},
   {site:"wen", net:"2026-11-08T20:25:00Z", p:"time", veh:"Long March 12", who:"China Aerospace Science and Technology Corporation",
    mission:"SatNet LEO Group TBD?", orbit:"Low Earth Orbit", status:"Go for Launch",
@@ -417,7 +414,7 @@ const LAUNCHES = [
   {site:"vsfb", net:"2026-11-10T03:03:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"USSF-627", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A classified mission for the United States Space Force."},
-  {site:"jeju", net:"2026-11-10T06:00:00Z", p:"time", veh:"Mir", who:"Agency for Defense Development",
+  {site:"jeju", net:"2026-11-11T05:00:00Z", p:"time", veh:"Mir", who:"Agency for Defense Development",
    mission:"Demo Flight", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"Note: Launch vehicle name is provisional."},
   {site:"jiu", net:"2026-11-11T11:40:00Z", p:"time", veh:"Long March 2D", who:"China Aerospace Science and Technology Corporation",
@@ -582,6 +579,9 @@ const LAUNCHES = [
   {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"SDA Tranche 2 Tracking Layer B", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"Classified mission launched by the Space Development Agency (SDA) for Tranche 2 Tracking Layer."},
+  {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"SDA Tranche 2 Transport Layer A", orbit:"Polar Orbit", status:"To Be Determined",
+   brief:"Classified mission launched by the Space Development Agency (SDA) for Tranche 2 Transport Layer."},
 ];
 
 /* ---------------- helpers ---------------- */
@@ -1018,7 +1018,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 6 Nov 2026';
+    : '<b>Snapshot</b> · 7 Nov 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
