@@ -402,12 +402,9 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"jiu", net:"2026-11-06T23:37:00Z", p:"time", veh:"Ceres-2", who:"Galactic Energy",
-   mission:"4 satellites", orbit:"Sun-Synchronous Orbit", status:"Launch Successful",
-   brief:"Share-ride of 4 commercial Earth observation and technology demonstration satellites to SSO, details TBD."},
-  {site:"vsfb", net:"2026-11-07T00:48:42Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"USSF-432", orbit:"Low Earth Orbit", status:"Launch Successful",
-   brief:"A classified mission for the United States Space Force."},
+  {site:"ple", net:"2026-11-07T13:30:00Z", p:"time", veh:"Soyuz 2.1b Fregat-M", who:"Russian Space Forces",
+   mission:"Glonass-K1? (Kosmos 2621?)", orbit:"Medium Earth Orbit", status:"Launch Successful",
+   brief:"Note: Payload identity uncertain."},
   {site:"wen", net:"2026-11-08T20:25:00Z", p:"time", veh:"Long March 12", who:"China Aerospace Science and Technology Corporation",
    mission:"SatNet LEO Group TBD?", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group."},
@@ -420,15 +417,15 @@ const LAUNCHES = [
   {site:"jiu", net:"2026-11-11T11:40:00Z", p:"time", veh:"Long March 2D", who:"China Aerospace Science and Technology Corporation",
    mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
    brief:"Details TBD."},
-  {site:"star", net:"2026-11-13T00:00:00Z", p:"day", veh:"Starship V3", who:"SpaceX",
-   mission:"Flight 15", orbit:"Low Earth Orbit", status:"To Be Determined",
-   brief:"15th test flight of the two-stage Starship launch vehicle and 4th flight of Starship V3."},
   {site:"vsfb", net:"2026-11-13T04:23:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"USSF-317", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A classified mission for the United States Space Force."},
   {site:"ccsfs", net:"2026-11-13T17:54:00Z", p:"time", veh:"Vulcan VC6L", who:"United Launch Alliance",
    mission:"Amazon Leo (LV-01)", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon."},
+  {site:"star", net:"2026-11-13T22:45:00Z", p:"time", veh:"Starship V3", who:"SpaceX",
+   mission:"Starlink Group 31-2 (Starship Flight 15)", orbit:"Low Earth Orbit", status:"To Be Confirmed",
+   brief:"15th test flight of the two-stage Starship launch vehicle and 4th flight of Starship V3."},
   {site:"lc1", net:"2026-11-14T05:30:00Z", p:"time", veh:"Electron", who:"Rocket Lab",
    mission:"The Mountain God Rises (iQPS Launch 10)", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"Synthetic aperture radar Earth observation satellite for Japanese Earth imaging company iQPS."},
@@ -582,6 +579,9 @@ const LAUNCHES = [
   {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"SDA Tranche 2 Transport Layer A", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"Classified mission launched by the Space Development Agency (SDA) for Tranche 2 Transport Layer."},
+  {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"USSF-31", orbit:"Geostationary Orbit", status:"To Be Determined",
+   brief:"Classified US Space Force carrying two payloads directly to geostationary orbit."},
 ];
 
 /* ---------------- helpers ---------------- */
@@ -1018,7 +1018,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 7 Nov 2026';
+    : '<b>Snapshot</b> · 8 Nov 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
