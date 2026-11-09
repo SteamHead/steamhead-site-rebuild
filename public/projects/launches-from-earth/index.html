@@ -402,13 +402,10 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"ple", net:"2026-11-07T13:30:00Z", p:"time", veh:"Soyuz 2.1b Fregat-M", who:"Russian Space Forces",
-   mission:"Glonass-K1? (Kosmos 2621?)", orbit:"Medium Earth Orbit", status:"Launch Successful",
-   brief:"Note: Payload identity uncertain."},
-  {site:"wen", net:"2026-11-08T20:25:00Z", p:"time", veh:"Long March 12", who:"China Aerospace Science and Technology Corporation",
-   mission:"SatNet LEO Group TBD?", orbit:"Low Earth Orbit", status:"Go for Launch",
+  {site:"wen", net:"2026-11-08T20:24:00Z", p:"time", veh:"Long March 12", who:"China Aerospace Science and Technology Corporation",
+   mission:"SatNet LEO Group 29", orbit:"Low Earth Orbit", status:"Launch Successful",
    brief:"A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group."},
-  {site:"vsfb", net:"2026-11-10T03:03:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+  {site:"vsfb", net:"2026-11-10T03:07:15Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"USSF-627", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A classified mission for the United States Space Force."},
   {site:"jeju", net:"2026-11-11T05:00:00Z", p:"time", veh:"Mir", who:"Agency for Defense Development",
@@ -531,9 +528,6 @@ const LAUNCHES = [
   {site:"lc1", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Electron", who:"Rocket Lab",
    mission:"LOXSAT 1", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"LOXSAT 1 is a demonstration satellite of a complete cryogenic oxygen fluid management system in orbit, developed by Eta Space and sponsored by NASA's Tipping Point program."},
-  {site:"tan", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Epsilon S", who:"Japan Aerospace Exploration Agency",
-   mission:"JV-LOTUSat-1", orbit:"Sun-Synchronous Orbit", status:"To Be Determined",
-   brief:"Vietnamese Synthetic Aperture Radar Earth observation satellite build by NEC Corporation of Japan, based on Japan's ASNARO 2 satellite and the NEXTAR NX-300L satellite bus."},
   {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Rivada 1", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"24 satellites for Rivada's internet constellation."},
@@ -582,6 +576,12 @@ const LAUNCHES = [
   {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"USSF-31", orbit:"Geostationary Orbit", status:"To Be Determined",
    brief:"Classified US Space Force carrying two payloads directly to geostationary orbit."},
+  {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"VICTUS SURGO", orbit:"Low Earth Orbit", status:"To Be Determined",
+   brief:"A new Tactically Responsive Space (TacRS) mission by the United States Space Force Space Systems Command to deliver responsive space delivery."},
+  {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon Heavy", who:"SpaceX",
+   mission:"USSF-75", orbit:"Geostationary Orbit", status:"To Be Determined",
+   brief:"Classified payload for the United States Space Force"},
 ];
 
 /* ---------------- helpers ---------------- */
@@ -1018,7 +1018,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 8 Nov 2026';
+    : '<b>Snapshot</b> · 9 Nov 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
