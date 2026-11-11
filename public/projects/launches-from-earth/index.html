@@ -402,12 +402,12 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"vsfb", net:"2026-11-11T02:49:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+  {site:"jiu", net:"2026-11-11T11:41:00Z", p:"time", veh:"Long March 2D", who:"China Aerospace Science and Technology Corporation",
+   mission:"CAS Pathfinder-1", orbit:"Sun-Synchronous Orbit", status:"Launch Successful",
+   brief:"The Chinese Academy of Science (CAS)' Pathfinder-1 satellites is built for in-orbit validation of critical technologies for the upcoming main missions of CAS' \"Origins” Space Science Program, which consists of 4 upcoming astronomical observatory missions to be launched by 2030:\r\n\r\n* Discovering the Sky at the Longest wavelength (DSL\r\n* Solar Polar Orbit Observatory (SPO)\r\n* Earth 2.0 (ET)\r\n* Enhanced X-ray Timing and Polarimetry (eXTP)"},
+  {site:"vsfb", net:"2026-11-12T02:35:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"USSF-627", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A classified mission for the United States Space Force."},
-  {site:"jiu", net:"2026-11-11T11:40:00Z", p:"time", veh:"Long March 2D", who:"China Aerospace Science and Technology Corporation",
-   mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
-   brief:"Details TBD."},
   {site:"jiu", net:"2026-11-12T19:50:00Z", p:"time", veh:"Kuaizhou 11", who:"ExPace",
    mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
    brief:"Details TBD."},
@@ -420,13 +420,13 @@ const LAUNCHES = [
   {site:"star", net:"2026-11-13T22:45:00Z", p:"time", veh:"Starship V3", who:"SpaceX",
    mission:"Starlink Group 31-2 (Starship Flight 15)", orbit:"Low Earth Orbit", status:"To Be Confirmed",
    brief:"15th test flight of the two-stage Starship launch vehicle and 4th flight of Starship V3."},
-  {site:"vsfb", net:"2026-11-14T04:09:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"USSF-317", orbit:"Low Earth Orbit", status:"Go for Launch",
-   brief:"A classified mission for the United States Space Force."},
   {site:"lc1", net:"2026-11-14T05:30:00Z", p:"time", veh:"Electron", who:"Rocket Lab",
    mission:"The Mountain God Rises (iQPS Launch 10)", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"Synthetic aperture radar Earth observation satellite for Japanese Earth imaging company iQPS."},
-  {site:"vsfb", net:"2026-11-17T16:58:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+  {site:"vsfb", net:"2026-11-15T03:55:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"USSF-317", orbit:"Low Earth Orbit", status:"Go for Launch",
+   brief:"A classified mission for the United States Space Force."},
+  {site:"vsfb", net:"2026-11-18T16:49:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"USSF-266", orbit:"Polar Orbit", status:"Go for Launch",
    brief:"A classified mission for the United States Space Force."},
   {site:"wen", net:"2026-11-20T11:00:00Z", p:"time", veh:"Long March 8A", who:"China Aerospace Science and Technology Corporation",
@@ -1018,7 +1018,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 10 Nov 2026';
+    : '<b>Snapshot</b> · 11 Nov 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
