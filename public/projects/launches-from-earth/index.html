@@ -397,23 +397,18 @@ const SITES = [
   {id:'soh',   name:'Sohae Launching Station',   place:'North Korea',             lat:39.66,  lon:124.705},
   {id:'pal',   name:'Palmachim Airbase',         place:'Israel',                  lat:31.884, lon:34.681},
   {id:'x1', name:"Haiyang Oriental Spaceport", place:"China", lat:35.392, lon:119.599},
+  {id:'x2', name:"Haiyang Oriental Spaceport", place:"China", lat:36.677, lon:121.235},
 ];
 
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"jiu", net:"2026-11-11T11:41:00Z", p:"time", veh:"Long March 2D", who:"China Aerospace Science and Technology Corporation",
-   mission:"CAS Pathfinder-1", orbit:"Sun-Synchronous Orbit", status:"Launch Successful",
-   brief:"The Chinese Academy of Science (CAS)' Pathfinder-1 satellites is built for in-orbit validation of critical technologies for the upcoming main missions of CAS' \"Origins” Space Science Program, which consists of 4 upcoming astronomical observatory missions to be launched by 2030:\r\n\r\n* Discovering the Sky at the Longest wavelength (DSL\r\n* Solar Polar Orbit Observatory (SPO)\r\n* Earth 2.0 (ET)\r\n* Enhanced X-ray Timing and Polarimetry (eXTP)"},
-  {site:"vsfb", net:"2026-11-12T02:35:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"USSF-627", orbit:"Low Earth Orbit", status:"Go for Launch",
+  {site:"vsfb", net:"2026-11-12T04:36:30Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"USSF-627", orbit:"Low Earth Orbit", status:"Launch Successful",
    brief:"A classified mission for the United States Space Force."},
   {site:"jiu", net:"2026-11-12T19:50:00Z", p:"time", veh:"Kuaizhou 11", who:"ExPace",
    mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
    brief:"Details TBD."},
-  {site:"jeju", net:"2026-11-13T05:00:00Z", p:"time", veh:"Mir", who:"Agency for Defense Development",
-   mission:"Demo Flight", orbit:"Low Earth Orbit", status:"Go for Launch",
-   brief:"Note: Launch vehicle name is provisional."},
   {site:"ccsfs", net:"2026-11-13T17:54:00Z", p:"time", veh:"Vulcan VC6L", who:"United Launch Alliance",
    mission:"Amazon Leo (LV-01)", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon."},
@@ -462,6 +457,9 @@ const LAUNCHES = [
   {site:"sdsc", net:"2026-11-30T00:00:00Z", p:"month", veh:"Launch Vehicle Mark-3 (GSLV Mk III)", who:"Indian Space Research Organization",
    mission:"Gaganyaan-1", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"First uncrewed orbital test flight of the Gaganyaan capsule."},
+  {site:"jeju", net:"2026-11-30T00:00:00Z", p:"month", veh:"Mir", who:"Agency for Defense Development",
+   mission:"Demo Flight", orbit:"Low Earth Orbit", status:"To Be Determined",
+   brief:"Note: Launch vehicle name is provisional."},
   {site:"sdsc", net:"2026-11-30T00:00:00Z", p:"month", veh:"PSLV XL", who:"Indian Space Research Organization",
    mission:"TDS-01", orbit:"Geostationary Transfer Orbit", status:"To Be Determined",
    brief:"TDS-01 (Technology Demonstration Satellite-01) is an Indian geostationary orbit technology demonstration satellite carrying payloads for the Indian Space Research Organisation (ISRO)’s Institute of Plasma Research, Gandhinagar and the CSIR-CEERI, Pilani."},
@@ -507,12 +505,6 @@ const LAUNCHES = [
   {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"SDA Tranche 1 Transport Layer F", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"Tranche 1 Transport Layer F is one of six missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Transport Layer constellation, which will provide assured, resilient, low-latency military data and connectivity worldwide to the full range of warfighter platforms from Low Earth Orbit satellites."},
-  {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Firefly Alpha Block 2", who:"Firefly Aerospace",
-   mission:"ConnectedCosmos Launch 1", orbit:"Polar Orbit", status:"To Be Determined",
-   brief:"First of at least four missions carrying 6 satellites for Open Cosmos' secure LEO broadband constellation, designed to provide independent and resilient connectivity infrastructure for Europe and the world using high-priority Ka-band spectrum filings by the Principality of Liechtenstein."},
-  {site:"vsfb", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Firefly Alpha Block 2", who:"Firefly Aerospace",
-   mission:"ConnectedCosmos Launch 2", orbit:"Polar Orbit", status:"To Be Determined",
-   brief:"Second of at least four missions carrying 6 satellites for Open Cosmos' secure LEO broadband constellation, designed to provide independent and resilient connectivity infrastructure for Europe and the world using high-priority Ka-band spectrum filings by the Principality of Liechtenstein."},
   {site:"and", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Spectrum", who:"Isar Aerospace",
    mission:"1 x Pelican satellite", orbit:"Sun-Synchronous Orbit", status:"To Be Determined",
    brief:"Payload consists of a single Pelican high-resolution imaging satellite for Planet Labs Germany."},
@@ -582,6 +574,15 @@ const LAUNCHES = [
   {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon Heavy", who:"SpaceX",
    mission:"USSF-75", orbit:"Geostationary Orbit", status:"To Be Determined",
    brief:"Classified payload for the United States Space Force"},
+  {site:"sdsc", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Gaganyaan Abort Test Booster", who:"Indian Space Research Organization",
+   mission:"TV-D2", orbit:"Suborbital", status:"To Be Determined",
+   brief:"The second inflight abort test of the Gaganyaan program."},
+  {site:"x2", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Gravity-2", who:"Orienspace Technology",
+   mission:"Demo Flight", orbit:"Unknown", status:"To Be Determined",
+   brief:"First test launch of OrienSpace’s Gravity-2 rocket."},
+  {site:"tan", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"H3-22", who:"Mitsubishi Heavy Industries",
+   mission:"ETS-9", orbit:"Geostationary Transfer Orbit", status:"To Be Determined",
+   brief:"The Engineering Test Satellite 9 (ETS-9) is a JAXA project aimed to develop an advanced satellite bus, or common model, for various high-throughput satellites (HTS) for communications."},
 ];
 
 /* ---------------- helpers ---------------- */
@@ -1018,7 +1019,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 11 Nov 2026';
+    : '<b>Snapshot</b> · 12 Nov 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
