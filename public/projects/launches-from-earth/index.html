@@ -403,23 +403,20 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"ccsfs", net:"2026-11-13T17:54:00Z", p:"time", veh:"Vulcan VC6L", who:"United Launch Alliance",
-   mission:"Amazon Leo (LV-01)", orbit:"Low Earth Orbit", status:"Go for Launch",
-   brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon."},
-  {site:"star", net:"2026-11-13T22:45:00Z", p:"time", veh:"Starship V3", who:"SpaceX",
-   mission:"Starlink Group 31-2 (Starship Flight 15)", orbit:"Low Earth Orbit", status:"To Be Confirmed",
+  {site:"star", net:"2026-11-13T22:47:36Z", p:"time", veh:"Starship V3", who:"SpaceX",
+   mission:"Starlink Group 31-2 (Starship Flight 15)", orbit:"Low Earth Orbit", status:"Payload Deployed",
    brief:"15th test flight of the two-stage Starship launch vehicle and 4th flight of Starship V3."},
-  {site:"vos", net:"2026-11-14T00:50:00Z", p:"time", veh:"Soyuz 2.1b Fregat-M", who:"Russian Federal Space Agency (ROSCOSMOS)",
-   mission:"MKA Kinosputnik, KOEN and others", orbit:"Sun-Synchronous Orbit", status:"Go for Launch",
+  {site:"vos", net:"2026-11-14T01:16:00Z", p:"time", veh:"Soyuz 2.1b Fregat-M", who:"Russian Federal Space Agency (ROSCOSMOS)",
+   mission:"MKA Kinosputnik, KOEN and others", orbit:"Sun-Synchronous Orbit", status:"Launch Successful",
    brief:"Share-ride of multiple satellites, including dual-use optical Earth observation satellites and drone-guiding satellites:\r\n\r\n* MKA Kinosputnik\r\n* KOEN, KA MT-LAB\r\n* NPO Kaisant 6U cubesat with a Germes modem\r\n* NPO Kaisant 16U cubesat with Gonets modems"},
   {site:"lc1", net:"2026-11-14T05:30:00Z", p:"time", veh:"Electron", who:"Rocket Lab",
-   mission:"The Mountain God Rises (iQPS Launch 10)", orbit:"Low Earth Orbit", status:"Go for Launch",
+   mission:"The Mountain God Rises (iQPS Launch 10)", orbit:"Low Earth Orbit", status:"Launch Successful",
    brief:"Synthetic aperture radar Earth observation satellite for Japanese Earth imaging company iQPS."},
+  {site:"ccsfs", net:"2026-11-14T17:32:30Z", p:"time", veh:"Vulcan VC6L", who:"United Launch Alliance",
+   mission:"Amazon Leo (LV-01)", orbit:"Low Earth Orbit", status:"Go for Launch",
+   brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon."},
   {site:"vsfb", net:"2026-11-18T03:14:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"USSF-317", orbit:"Low Earth Orbit", status:"Go for Launch",
-   brief:"A classified mission for the United States Space Force."},
-  {site:"vsfb", net:"2026-11-18T16:49:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"USSF-266", orbit:"Polar Orbit", status:"Go for Launch",
    brief:"A classified mission for the United States Space Force."},
   {site:"tai", net:"2026-11-18T22:50:00Z", p:"time", veh:"Long March 2D", who:"China Aerospace Science and Technology Corporation",
    mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
@@ -433,6 +430,9 @@ const LAUNCHES = [
   {site:"kou", net:"2026-11-23T00:00:00Z", p:"day", veh:"Ariane 64 Block 2", who:"Arianespace",
    mission:"Amazon Leo (LE-04)", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon."},
+  {site:"vsfb", net:"2026-11-23T16:04:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"USSF-266", orbit:"Polar Orbit", status:"Go for Launch",
+   brief:"A classified mission for the United States Space Force."},
   {site:"bai", net:"2026-11-24T05:03:00Z", p:"time", veh:"Soyuz 2.1b", who:"Russian Federal Space Agency (ROSCOSMOS)",
    mission:"Progress MS-36 (97P)", orbit:"Low Earth Orbit", status:"To Be Confirmed",
    brief:"Progress resupply mission to the International Space Station."},
@@ -448,6 +448,9 @@ const LAUNCHES = [
   {site:"ccsfs", net:"2026-11-29T15:47:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Cygnus CRS-2 NG-25", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"This is the 25th flight of the Orbital ATK's uncrewed resupply spacecraft Cygnus and its 24th flight to the International Space Station under the Commercial Resupply Services contract with NASA."},
+  {site:"lc1", net:"2026-11-30T00:00:00Z", p:"month", veh:"Electron", who:"Rocket Lab",
+   mission:"StriX Launch 14", orbit:"Sun-Synchronous Orbit", status:"To Be Determined",
+   brief:"Synthetic aperture radar satellite for Japanese Earth imaging company Synspective."},
   {site:"vsfb", net:"2026-11-30T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"NROL-195", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Sixteenth batch of satellites for a reconnaissance satellite constellation built by SpaceX and Northrop Grumman for the National Reconnaissance Office to provide imaging and other reconnaissance capabilities."},
@@ -580,9 +583,6 @@ const LAUNCHES = [
   {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon Heavy", who:"SpaceX",
    mission:"USSF-75", orbit:"Geostationary Orbit", status:"To Be Determined",
    brief:"Classified payload for the United States Space Force"},
-  {site:"sdsc", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Gaganyaan Abort Test Booster", who:"Indian Space Research Organization",
-   mission:"TV-D2", orbit:"Suborbital", status:"To Be Determined",
-   brief:"The second inflight abort test of the Gaganyaan program."},
 ];
 
 /* ---------------- helpers ---------------- */
@@ -1019,7 +1019,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 13 Nov 2026';
+    : '<b>Snapshot</b> · 14 Nov 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
