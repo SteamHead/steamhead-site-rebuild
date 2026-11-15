@@ -403,16 +403,7 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"star", net:"2026-11-13T22:47:36Z", p:"time", veh:"Starship V3", who:"SpaceX",
-   mission:"Starlink Group 31-2 (Starship Flight 15)", orbit:"Low Earth Orbit", status:"Payload Deployed",
-   brief:"15th test flight of the two-stage Starship launch vehicle and 4th flight of Starship V3."},
-  {site:"vos", net:"2026-11-14T01:16:00Z", p:"time", veh:"Soyuz 2.1b Fregat-M", who:"Russian Federal Space Agency (ROSCOSMOS)",
-   mission:"MKA Kinosputnik, KOEN and others", orbit:"Sun-Synchronous Orbit", status:"Launch Successful",
-   brief:"Share-ride of multiple satellites, including dual-use optical Earth observation satellites and drone-guiding satellites:\r\n\r\n* MKA Kinosputnik\r\n* KOEN, KA MT-LAB\r\n* NPO Kaisant 6U cubesat with a Germes modem\r\n* NPO Kaisant 16U cubesat with Gonets modems"},
-  {site:"lc1", net:"2026-11-14T05:30:00Z", p:"time", veh:"Electron", who:"Rocket Lab",
-   mission:"The Mountain God Rises (iQPS Launch 10)", orbit:"Low Earth Orbit", status:"Launch Successful",
-   brief:"Synthetic aperture radar Earth observation satellite for Japanese Earth imaging company iQPS."},
-  {site:"ccsfs", net:"2026-11-14T17:32:30Z", p:"time", veh:"Vulcan VC6L", who:"United Launch Alliance",
+  {site:"ccsfs", net:"2026-11-15T17:11:30Z", p:"time", veh:"Vulcan VC6L", who:"United Launch Alliance",
    mission:"Amazon Leo (LV-01)", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon."},
   {site:"vsfb", net:"2026-11-18T03:14:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
@@ -583,6 +574,15 @@ const LAUNCHES = [
   {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Falcon Heavy", who:"SpaceX",
    mission:"USSF-75", orbit:"Geostationary Orbit", status:"To Be Determined",
    brief:"Classified payload for the United States Space Force"},
+  {site:"sdsc", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Gaganyaan Abort Test Booster", who:"Indian Space Research Organization",
+   mission:"TV-D2", orbit:"Suborbital", status:"To Be Determined",
+   brief:"The second inflight abort test of the Gaganyaan program."},
+  {site:"x2", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Gravity-2", who:"Orienspace Technology",
+   mission:"Demo Flight", orbit:"Unknown", status:"To Be Determined",
+   brief:"First test launch of OrienSpace’s Gravity-2 rocket."},
+  {site:"tan", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"H3-22", who:"Mitsubishi Heavy Industries",
+   mission:"ETS-9", orbit:"Geostationary Transfer Orbit", status:"To Be Determined",
+   brief:"The Engineering Test Satellite 9 (ETS-9) is a JAXA project aimed to develop an advanced satellite bus, or common model, for various high-throughput satellites (HTS) for communications."},
 ];
 
 /* ---------------- helpers ---------------- */
@@ -1019,7 +1019,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 14 Nov 2026';
+    : '<b>Snapshot</b> · 15 Nov 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
