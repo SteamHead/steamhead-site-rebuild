@@ -403,9 +403,6 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"ccsfs", net:"2026-11-15T17:40:30Z", p:"time", veh:"Vulcan VC6L", who:"United Launch Alliance",
-   mission:"Amazon Leo (LV-01)", orbit:"Low Earth Orbit", status:"Launch Failure",
-   brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon."},
   {site:"tai", net:"2026-11-18T22:50:00Z", p:"time", veh:"Long March 2D", who:"China Aerospace Science and Technology Corporation",
    mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
    brief:"Details TBD."},
@@ -583,6 +580,9 @@ const LAUNCHES = [
   {site:"x2", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Gravity-2", who:"Orienspace Technology",
    mission:"Demo Flight", orbit:"Unknown", status:"To Be Determined",
    brief:"First test launch of OrienSpace’s Gravity-2 rocket."},
+  {site:"tan", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"H3-22", who:"Mitsubishi Heavy Industries",
+   mission:"ETS-9", orbit:"Geostationary Transfer Orbit", status:"To Be Determined",
+   brief:"The Engineering Test Satellite 9 (ETS-9) is a JAXA project aimed to develop an advanced satellite bus, or common model, for various high-throughput satellites (HTS) for communications."},
 ];
 
 /* ---------------- helpers ---------------- */
@@ -1019,7 +1019,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 16 Nov 2026';
+    : '<b>Snapshot</b> · 17 Nov 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
