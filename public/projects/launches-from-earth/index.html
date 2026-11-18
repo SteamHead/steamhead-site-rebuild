@@ -406,17 +406,20 @@ const LAUNCHES = [
   {site:"tai", net:"2026-11-18T22:50:00Z", p:"time", veh:"Long March 2D", who:"China Aerospace Science and Technology Corporation",
    mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
    brief:"Details TBD."},
-  {site:"vsfb", net:"2026-11-19T03:00:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+  {site:"vsfb", net:"2026-11-20T02:46:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"USSF-317", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A classified mission for the United States Space Force."},
-  {site:"wen", net:"2026-11-20T11:00:00Z", p:"time", veh:"Long March 8A", who:"China Aerospace Science and Technology Corporation",
-   mission:"SatNet LEO Group TBD?", orbit:"Low Earth Orbit", status:"To Be Confirmed",
+  {site:"wen", net:"2026-11-20T11:59:00Z", p:"time", veh:"Long March 8A", who:"China Aerospace Science and Technology Corporation",
+   mission:"SatNet LEO Group TBD?", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group."},
+  {site:"tai", net:"2026-11-21T03:50:00Z", p:"time", veh:"Long March 6C", who:"China Aerospace Science and Technology Corporation",
+   mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
+   brief:"Details TBD."},
   {site:"vsfb", net:"2026-11-21T12:30:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"NROL-136", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"Fifteenth batch of satellites for a reconnaissance satellite constellation built by SpaceX and Northrop Grumman for the National Reconnaissance Office to provide imaging and other reconnaissance capabilities."},
-  {site:"kou", net:"2026-11-23T00:00:00Z", p:"day", veh:"Ariane 64 Block 2", who:"Arianespace",
-   mission:"Amazon Leo (LE-04)", orbit:"Low Earth Orbit", status:"To Be Determined",
+  {site:"kou", net:"2026-11-23T11:09:00Z", p:"time", veh:"Ariane 64 Block 2", who:"Arianespace",
+   mission:"Amazon Leo (LE-04)", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon."},
   {site:"vsfb", net:"2026-11-23T16:04:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"USSF-266", orbit:"Polar Orbit", status:"Go for Launch",
@@ -580,9 +583,6 @@ const LAUNCHES = [
   {site:"x2", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Gravity-2", who:"Orienspace Technology",
    mission:"Demo Flight", orbit:"Unknown", status:"To Be Determined",
    brief:"First test launch of OrienSpace’s Gravity-2 rocket."},
-  {site:"tan", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"H3-22", who:"Mitsubishi Heavy Industries",
-   mission:"ETS-9", orbit:"Geostationary Transfer Orbit", status:"To Be Determined",
-   brief:"The Engineering Test Satellite 9 (ETS-9) is a JAXA project aimed to develop an advanced satellite bus, or common model, for various high-throughput satellites (HTS) for communications."},
 ];
 
 /* ---------------- helpers ---------------- */
@@ -1019,7 +1019,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 17 Nov 2026';
+    : '<b>Snapshot</b> · 18 Nov 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
