@@ -398,20 +398,18 @@ const SITES = [
   {id:'pal',   name:'Palmachim Airbase',         place:'Israel',                  lat:31.884, lon:34.681},
   {id:'x1', name:"Haiyang Oriental Spaceport", place:"China", lat:35.392, lon:119.599},
   {id:'x2', name:"Haiyang Oriental Spaceport", place:"China", lat:36.677, lon:121.235},
+  {id:'x3', name:"Haiyang Oriental Spaceport", place:"China", lat:21.367, lon:112.117},
 ];
 
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"tai", net:"2026-11-18T22:51:00Z", p:"time", veh:"Long March 2D", who:"China Aerospace Science and Technology Corporation",
-   mission:"Shijian 24", orbit:"Sun-Synchronous Orbit", status:"Launch Successful",
-   brief:"Experimental Chinese satellite of unknown purposes."},
-  {site:"vsfb", net:"2026-11-20T04:32:55Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+  {site:"wen", net:"2026-11-20T11:59:00Z", p:"time", veh:"Long March 8A", who:"China Aerospace Science and Technology Corporation",
+   mission:"SatNet LEO Group TBD?", orbit:"Low Earth Orbit", status:"Launch in Flight",
+   brief:"A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group."},
+  {site:"vsfb", net:"2026-11-21T02:32:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"USSF-317", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A classified mission for the United States Space Force."},
-  {site:"wen", net:"2026-11-20T11:59:00Z", p:"time", veh:"Long March 8A", who:"China Aerospace Science and Technology Corporation",
-   mission:"SatNet LEO Group TBD?", orbit:"Low Earth Orbit", status:"Go for Launch",
-   brief:"A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group."},
   {site:"tai", net:"2026-11-21T03:50:00Z", p:"time", veh:"Long March 6C", who:"China Aerospace Science and Technology Corporation",
    mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
    brief:"Details TBD."},
@@ -427,24 +425,27 @@ const LAUNCHES = [
   {site:"bai", net:"2026-11-24T05:03:00Z", p:"time", veh:"Soyuz 2.1b", who:"Russian Federal Space Agency (ROSCOSMOS)",
    mission:"Progress MS-36 (97P)", orbit:"Low Earth Orbit", status:"To Be Confirmed",
    brief:"Progress resupply mission to the International Space Station."},
-  {site:"wen", net:"2026-11-24T07:00:00Z", p:"time", veh:"Long March 12", who:"China Aerospace Science and Technology Corporation",
-   mission:"SatNet LEO Group TBD?", orbit:"Low Earth Orbit", status:"To Be Confirmed",
-   brief:"A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group."},
-  {site:"jiu", net:"2026-11-25T00:00:00Z", p:"day", veh:"Long March 2F/G", who:"China Aerospace Science and Technology Corporation",
-   mission:"Shenzhou 24", orbit:"Low Earth Orbit", status:"To Be Determined",
+  {site:"jiu", net:"2026-11-25T00:18:00Z", p:"time", veh:"Long March 2F/G", who:"China Aerospace Science and Technology Corporation",
+   mission:"Shenzhou 24", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"Shenzhou 24 will be the 24th flight of the Shenzhou program."},
+  {site:"xic", net:"2026-11-26T09:35:00Z", p:"time", veh:"Long March 2D", who:"China Aerospace Science and Technology Corporation",
+   mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
+   brief:"Details TBD."},
   {site:"and", net:"2026-11-26T20:00:00Z", p:"time", veh:"Spectrum", who:"Isar Aerospace",
    mission:"AT-Astra and Others (Spectrum Flight 3)", orbit:"Sun-Synchronous Orbit", status:"To Be Confirmed",
    brief:"Third test flight of the Isar Spectrum launch vehicle."},
+  {site:"lc1", net:"2026-11-27T00:05:00Z", p:"time", veh:"Electron", who:"Rocket Lab",
+   mission:"Night Owls Never Sleep (StriX Launch 14)", orbit:"Low Earth Orbit", status:"Go for Launch",
+   brief:"Synthetic aperture radar satellite for Japanese Earth imaging company Synspective."},
   {site:"vsfb", net:"2026-11-28T04:53:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"USSF-380", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A classified mission for the United States Space Force."},
+  {site:"x3", net:"2026-11-29T01:00:00Z", p:"time", veh:"Kinetica 1", who:"CAS Space",
+   mission:"Unknown Payload", orbit:"Unknown", status:"To Be Confirmed",
+   brief:"Details TBD."},
   {site:"ccsfs", net:"2026-11-29T15:47:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Cygnus CRS-2 NG-25", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"This is the 25th flight of the Orbital ATK's uncrewed resupply spacecraft Cygnus and its 24th flight to the International Space Station under the Commercial Resupply Services contract with NASA."},
-  {site:"lc1", net:"2026-11-30T00:00:00Z", p:"month", veh:"Electron", who:"Rocket Lab",
-   mission:"StriX Launch 14", orbit:"Sun-Synchronous Orbit", status:"To Be Determined",
-   brief:"Synthetic aperture radar satellite for Japanese Earth imaging company Synspective."},
   {site:"vsfb", net:"2026-11-30T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"NROL-195", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Sixteenth batch of satellites for a reconnaissance satellite constellation built by SpaceX and Northrop Grumman for the National Reconnaissance Office to provide imaging and other reconnaissance capabilities."},
@@ -457,15 +458,12 @@ const LAUNCHES = [
   {site:"jiu", net:"2026-11-30T00:00:00Z", p:"month", veh:"Kuaizhou 11", who:"ExPace",
    mission:"Unknown Payload", orbit:"Unknown", status:"To Be Determined",
    brief:"Details TBD."},
-  {site:"sdsc", net:"2026-11-30T00:00:00Z", p:"month", veh:"Launch Vehicle Mark-3 (GSLV Mk III)", who:"Indian Space Research Organization",
-   mission:"Gaganyaan-1", orbit:"Low Earth Orbit", status:"To Be Determined",
-   brief:"First uncrewed orbital test flight of the Gaganyaan capsule."},
   {site:"jeju", net:"2026-11-30T00:00:00Z", p:"month", veh:"Mir", who:"Agency for Defense Development",
    mission:"Demo Flight", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Note: Launch vehicle name is provisional."},
-  {site:"sdsc", net:"2026-11-30T00:00:00Z", p:"month", veh:"PSLV XL", who:"Indian Space Research Organization",
-   mission:"TDS-01", orbit:"Geostationary Transfer Orbit", status:"To Be Determined",
-   brief:"TDS-01 (Technology Demonstration Satellite-01) is an Indian geostationary orbit technology demonstration satellite carrying payloads for the Indian Space Research Organisation (ISRO)’s Institute of Plasma Research, Gandhinagar and the CSIR-CEERI, Pilani."},
+  {site:"wen", net:"2026-12-10T07:00:00Z", p:"time", veh:"Long March 12", who:"China Aerospace Science and Technology Corporation",
+   mission:"SatNet LEO Group TBD?", orbit:"Low Earth Orbit", status:"To Be Confirmed",
+   brief:"A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group."},
   {site:"kou", net:"2026-12-17T00:00:00Z", p:"day", veh:"Ariane 62", who:"Arianespace",
    mission:"Metop-SG B1", orbit:"Sun-Synchronous Orbit", status:"To Be Determined",
    brief:"Second of EUMETSAT's second generation of Metop weather satellites."},
@@ -482,8 +480,8 @@ const LAUNCHES = [
    mission:"SDA Tranche 2 Transport Layer E", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"Classified mission launched by the Space Development Agency (SDA) for Tranche 2 Transport Layer."},
   {site:"sdsc", net:"2026-12-31T00:00:00Z", p:"month", veh:"Launch Vehicle Mark-3 (GSLV Mk III)", who:"Indian Space Research Organization",
-   mission:"GSAT-32 (GSAT-N3)", orbit:"Geostationary Transfer Orbit", status:"To Be Determined",
-   brief:"GSAT-32 is a geostationary communications satellite for the Indian Space Research Organization (ISRO)."},
+   mission:"Gaganyaan-1", orbit:"Low Earth Orbit", status:"To Be Determined",
+   brief:"First uncrewed orbital test flight of the Gaganyaan capsule."},
   {site:"kou", net:"2026-12-31T00:00:00Z", p:"month", veh:"Vega-C", who:"Avio S.p.A",
    mission:"IRIDE 1", orbit:"Sun-Synchronous Orbit", status:"To Be Determined",
    brief:"First dedicated launch for the European Space Agency's IRIDE Earth observation constellation, with six satellites onboard."},
@@ -583,6 +581,9 @@ const LAUNCHES = [
   {site:"sdsc", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Gaganyaan Abort Test Booster", who:"Indian Space Research Organization",
    mission:"TV-D2", orbit:"Suborbital", status:"To Be Determined",
    brief:"The second inflight abort test of the Gaganyaan program."},
+  {site:"x2", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Gravity-2", who:"Orienspace Technology",
+   mission:"Demo Flight", orbit:"Unknown", status:"To Be Determined",
+   brief:"First test launch of OrienSpace’s Gravity-2 rocket."},
 ];
 
 /* ---------------- helpers ---------------- */
@@ -1019,7 +1020,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 19 Nov 2026';
+    : '<b>Snapshot</b> · 20 Nov 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
