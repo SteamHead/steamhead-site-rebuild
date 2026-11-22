@@ -404,11 +404,8 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"vsfb", net:"2026-11-21T04:20:35Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"USSF-317", orbit:"Low Earth Orbit", status:"Launch Successful",
-   brief:"A classified mission for the United States Space Force."},
-  {site:"vsfb", net:"2026-11-22T12:16:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"NROL-136", orbit:"Low Earth Orbit", status:"Go for Launch",
+  {site:"vsfb", net:"2026-11-22T12:23:56Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"NROL-136", orbit:"Low Earth Orbit", status:"Launch in Flight",
    brief:"Fifteenth batch of satellites for a reconnaissance satellite constellation built by SpaceX and Northrop Grumman for the National Reconnaissance Office to provide imaging and other reconnaissance capabilities."},
   {site:"kou", net:"2026-11-23T11:09:00Z", p:"time", veh:"Ariane 64 Block 2", who:"Arianespace",
    mission:"Amazon Leo (LE-04)", orbit:"Low Earth Orbit", status:"Go for Launch",
@@ -425,9 +422,6 @@ const LAUNCHES = [
   {site:"xic", net:"2026-11-26T09:35:00Z", p:"time", veh:"Long March 2D", who:"China Aerospace Science and Technology Corporation",
    mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
    brief:"Details TBD."},
-  {site:"and", net:"2026-11-26T20:00:00Z", p:"time", veh:"Spectrum", who:"Isar Aerospace",
-   mission:"AT-Astra and Others (Spectrum Flight 3)", orbit:"Sun-Synchronous Orbit", status:"To Be Confirmed",
-   brief:"Third test flight of the Isar Spectrum launch vehicle."},
   {site:"lc1", net:"2026-11-27T00:05:00Z", p:"time", veh:"Electron", who:"Rocket Lab",
    mission:"Night Owls Never Sleep (StriX Launch 14)", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"Synthetic aperture radar satellite for Japanese Earth imaging company Synspective."},
@@ -513,6 +507,9 @@ const LAUNCHES = [
    mission:"1 x Pelican satellite", orbit:"Sun-Synchronous Orbit", status:"To Be Determined",
    brief:"Payload consists of a single Pelican high-resolution imaging satellite for Planet Labs Germany."},
   {site:"and", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Spectrum", who:"Isar Aerospace",
+   mission:"AT-Astra and Others (Spectrum Flight 3)", orbit:"Sun-Synchronous Orbit", status:"To Be Determined",
+   brief:"Third test flight of the Isar Spectrum launch vehicle."},
+  {site:"and", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Spectrum", who:"Isar Aerospace",
    mission:"ΣYNDEO-3", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"ΣYNDEO-3 is a satellite built by Redwire Corporation for the European Union/European Space Agency (ESA)’s In-Orbit Demonstration and In-Orbit Validation Programme (IOD/IOV), which will carry 10 different technological demonstration payload from institutions of Spain, France, Germany, Italy, Luxembourg and the European Commission."},
   {site:"esr", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Themis Demonstrator", who:"European Space Agency",
@@ -584,6 +581,9 @@ const LAUNCHES = [
   {site:"x2", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Gravity-2", who:"Orienspace Technology",
    mission:"Demo Flight", orbit:"Unknown", status:"To Be Determined",
    brief:"First test launch of OrienSpace’s Gravity-2 rocket."},
+  {site:"wal", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Electron", who:"Rocket Lab",
+   mission:"HASTE | Leidos-3", orbit:"Not disclosed", status:"To Be Determined",
+   brief:"No mission description has been published."},
 ];
 
 /* ---------------- helpers ---------------- */
@@ -1020,7 +1020,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 21 Nov 2026';
+    : '<b>Snapshot</b> · 22 Nov 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
