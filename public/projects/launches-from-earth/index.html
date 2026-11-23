@@ -404,15 +404,12 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"vsfb", net:"2026-11-22T12:23:56Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"NROL-136", orbit:"Low Earth Orbit", status:"Launch in Flight",
-   brief:"Fifteenth batch of satellites for a reconnaissance satellite constellation built by SpaceX and Northrop Grumman for the National Reconnaissance Office to provide imaging and other reconnaissance capabilities."},
-  {site:"kou", net:"2026-11-23T11:09:00Z", p:"time", veh:"Ariane 64 Block 2", who:"Arianespace",
-   mission:"Amazon Leo (LE-04)", orbit:"Low Earth Orbit", status:"Go for Launch",
-   brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon."},
-  {site:"bai", net:"2026-11-24T05:03:00Z", p:"time", veh:"Soyuz 2.1b", who:"Russian Federal Space Agency (ROSCOSMOS)",
+  {site:"bai", net:"2026-11-24T10:13:00Z", p:"time", veh:"Soyuz 2.1b", who:"Russian Federal Space Agency (ROSCOSMOS)",
    mission:"Progress MS-36 (97P)", orbit:"Low Earth Orbit", status:"To Be Confirmed",
    brief:"Progress resupply mission to the International Space Station."},
+  {site:"kou", net:"2026-11-24T10:45:00Z", p:"time", veh:"Ariane 64 Block 2", who:"Arianespace",
+   mission:"Amazon Leo (LE-04)", orbit:"Low Earth Orbit", status:"Go for Launch",
+   brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon."},
   {site:"vsfb", net:"2026-11-24T15:55:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"USSF-266", orbit:"Polar Orbit", status:"Go for Launch",
    brief:"A classified mission for the United States Space Force."},
@@ -427,9 +424,6 @@ const LAUNCHES = [
    brief:"Synthetic aperture radar satellite for Japanese Earth imaging company Synspective."},
   {site:"tai", net:"2026-11-27T13:00:00Z", p:"time", veh:"Long March 6A", who:"China Aerospace Science and Technology Corporation",
    mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
-   brief:"Details TBD."},
-  {site:"x3", net:"2026-11-29T01:00:00Z", p:"time", veh:"Kinetica 1", who:"CAS Space",
-   mission:"Unknown Payload", orbit:"Unknown", status:"To Be Confirmed",
    brief:"Details TBD."},
   {site:"tai", net:"2026-11-29T03:50:00Z", p:"time", veh:"Long March 6C", who:"China Aerospace Science and Technology Corporation",
    mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
@@ -446,6 +440,12 @@ const LAUNCHES = [
   {site:"jeju", net:"2026-11-30T00:00:00Z", p:"month", veh:"Mir", who:"Agency for Defense Development",
    mission:"Demo Flight", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Note: Launch vehicle name is provisional."},
+  {site:"x3", net:"2026-12-01T01:45:00Z", p:"time", veh:"Kinetica 1", who:"CAS Space",
+   mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
+   brief:"Details TBD."},
+  {site:"vsfb", net:"2026-12-02T20:30:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"NROL-132", orbit:"Low Earth Orbit", status:"To Be Confirmed",
+   brief:"Sixteenth batch of satellites for a reconnaissance satellite constellation built by SpaceX and Northrop Grumman for the National Reconnaissance Office to provide imaging and other reconnaissance capabilities."},
   {site:"wen", net:"2026-12-10T07:00:00Z", p:"time", veh:"Long March 12", who:"China Aerospace Science and Technology Corporation",
    mission:"SatNet LEO Group TBD?", orbit:"Low Earth Orbit", status:"To Be Confirmed",
    brief:"A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group."},
@@ -1020,7 +1020,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 22 Nov 2026';
+    : '<b>Snapshot</b> · 23 Nov 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
