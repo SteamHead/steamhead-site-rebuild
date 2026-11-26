@@ -406,12 +406,9 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"jiu", net:"2026-11-25T00:18:52Z", p:"time", veh:"Long March 2F/G", who:"China Aerospace Science and Technology Corporation",
-   mission:"Shenzhou 24", orbit:"Low Earth Orbit", status:"Launch Successful",
-   brief:"Shenzhou 24 will be the 24th flight of the Shenzhou program."},
-  {site:"xic", net:"2026-11-26T09:35:00Z", p:"time", veh:"Long March 2D", who:"China Aerospace Science and Technology Corporation",
-   mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
-   brief:"Details TBD."},
+  {site:"xic", net:"2026-11-26T09:38:00Z", p:"time", veh:"Long March 2D", who:"China Aerospace Science and Technology Corporation",
+   mission:"Yaogan 49 Group 01", orbit:"Low Earth Orbit", status:"Launch Successful",
+   brief:"Chinese reconnaissance satellites of unknown functions."},
   {site:"lc1", net:"2026-11-27T00:05:00Z", p:"time", veh:"Electron", who:"Rocket Lab",
    mission:"Night Owls Never Sleep (StriX Launch 14)", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"Synthetic aperture radar satellite for Japanese Earth imaging company Synspective."},
@@ -439,6 +436,9 @@ const LAUNCHES = [
   {site:"vsfb", net:"2026-12-02T20:30:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"NROL-132", orbit:"Low Earth Orbit", status:"To Be Confirmed",
    brief:"Sixteenth batch of satellites for a reconnaissance satellite constellation built by SpaceX and Northrop Grumman for the National Reconnaissance Office to provide imaging and other reconnaissance capabilities."},
+  {site:"ccsfs", net:"2026-12-04T12:55:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"CHORUS", orbit:"Low Earth Orbit", status:"Go for Launch",
+   brief:"CHORUS is MDA's next generation Earth observation constellation, consisting of 2 radar satellites (C-band SAR and X-band SAR), in a 53.5 degree 600 km altitude LEO, with the X-band trailing the C-band by 60 minutes."},
   {site:"wen", net:"2026-12-10T07:00:00Z", p:"time", veh:"Long March 12", who:"China Aerospace Science and Technology Corporation",
    mission:"SatNet LEO Group TBD?", orbit:"Low Earth Orbit", status:"To Be Confirmed",
    brief:"A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group."},
@@ -448,9 +448,6 @@ const LAUNCHES = [
   {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Amazon Leo (LF-04)", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit designed to offer broadband internet access managed by Kuiper Systems LLC, a subsidiary of Amazon."},
-  {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
-   mission:"CHORUS", orbit:"Low Earth Orbit", status:"To Be Determined",
-   brief:"CHORUS is MDA's next generation Earth observation constellation, consisting of 2 radar satellites (C-band SAR and X-band SAR), in a 53.5 degree 600 km altitude LEO, with the X-band trailing the C-band by 60 minutes."},
   {site:"ccsfs", net:"2026-12-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Globalstar 2-R Mission 2 (x 9)", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"The Globalstar global mobile communications network offers global, digital real time voice, data and fax services via its Low Earth Orbit satellite constellation."},
@@ -586,6 +583,9 @@ const LAUNCHES = [
   {site:"ccsfs", net:"2027-01-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Axiom Space Mission 5", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"This is a Crew Dragon flight for a private company Axiom Space."},
+  {site:"ccsfs", net:"2027-01-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"SDA Tranche 2 Transport Layer C", orbit:"Polar Orbit", status:"To Be Determined",
+   brief:"Classified mission launched by the Space Development Agency (SDA) for Tranche 2 Transport Layer."},
 ];
 
 /* ---------------- helpers ---------------- */
@@ -1022,7 +1022,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 25 Nov 2026';
+    : '<b>Snapshot</b> · 26 Nov 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
