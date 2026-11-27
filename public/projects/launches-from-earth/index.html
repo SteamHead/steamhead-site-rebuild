@@ -406,11 +406,8 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"xic", net:"2026-11-26T09:38:00Z", p:"time", veh:"Long March 2D", who:"China Aerospace Science and Technology Corporation",
-   mission:"Yaogan 49 Group 01", orbit:"Low Earth Orbit", status:"Launch Successful",
-   brief:"Chinese reconnaissance satellites of unknown functions."},
-  {site:"lc1", net:"2026-11-27T00:05:00Z", p:"time", veh:"Electron", who:"Rocket Lab",
-   mission:"Night Owls Never Sleep (StriX Launch 14)", orbit:"Low Earth Orbit", status:"Go for Launch",
+  {site:"lc1", net:"2026-11-27T00:15:00Z", p:"time", veh:"Electron", who:"Rocket Lab",
+   mission:"Night Owls Never Sleep (StriX Launch 14)", orbit:"Low Earth Orbit", status:"Launch Successful",
    brief:"Synthetic aperture radar satellite for Japanese Earth imaging company Synspective."},
   {site:"tai", net:"2026-11-27T13:00:00Z", p:"time", veh:"Long March 6A", who:"China Aerospace Science and Technology Corporation",
    mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
@@ -424,14 +421,11 @@ const LAUNCHES = [
   {site:"ccsfs", net:"2026-11-29T15:47:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"Cygnus CRS-2 NG-25", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"This is the 25th flight of the Orbital ATK's uncrewed resupply spacecraft Cygnus and its 24th flight to the International Space Station under the Commercial Resupply Services contract with NASA."},
-  {site:"jeju", net:"2026-11-30T00:00:00Z", p:"month", veh:"Mir", who:"Agency for Defense Development",
-   mission:"Demo Flight", orbit:"Low Earth Orbit", status:"To Be Determined",
-   brief:"Note: Launch vehicle name is provisional."},
   {site:"x3", net:"2026-12-01T01:45:00Z", p:"time", veh:"Kinetica 1", who:"CAS Space",
    mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
    brief:"Details TBD."},
-  {site:"jiu", net:"2026-12-01T08:00:00Z", p:"time", veh:"Kuaizhou 11", who:"ExPace",
-   mission:"Unknown Payload", orbit:"Unknown", status:"To Be Confirmed",
+  {site:"jiu", net:"2026-12-02T11:55:00Z", p:"time", veh:"Kuaizhou 11", who:"ExPace",
+   mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
    brief:"Details TBD."},
   {site:"vsfb", net:"2026-12-02T20:30:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"NROL-132", orbit:"Low Earth Orbit", status:"To Be Confirmed",
@@ -550,6 +544,9 @@ const LAUNCHES = [
   {site:"jiu", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Long March 12A", who:"China Aerospace Science and Technology Corporation",
    mission:"Flight 2", orbit:"Low Earth Orbit", status:"To Be Determined",
    brief:"Second test launch of CASC/SAST’s Long March 12A rocket."},
+  {site:"jeju", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Mir", who:"Agency for Defense Development",
+   mission:"Demo Flight", orbit:"Low Earth Orbit", status:"To Be Determined",
+   brief:"Note: Launch vehicle name is provisional."},
   {site:"x2", net:"2026-12-31T00:00:00Z", p:"quarter", veh:"Nebula-1", who:"Deep Blue Aerospace",
    mission:"Demo Flight", orbit:"Suborbital", status:"To Be Determined",
    brief:"First test launch of Deep Blue Aerospace’s Nebula-1 rocket."},
@@ -585,6 +582,9 @@ const LAUNCHES = [
    brief:"This is a Crew Dragon flight for a private company Axiom Space."},
   {site:"ccsfs", net:"2027-01-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"SDA Tranche 2 Transport Layer C", orbit:"Polar Orbit", status:"To Be Determined",
+   brief:"Classified mission launched by the Space Development Agency (SDA) for Tranche 2 Transport Layer."},
+  {site:"vsfb", net:"2027-01-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
+   mission:"SDA Tranche 2 Transport Layer F", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"Classified mission launched by the Space Development Agency (SDA) for Tranche 2 Transport Layer."},
 ];
 
@@ -1022,7 +1022,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 26 Nov 2026';
+    : '<b>Snapshot</b> · 27 Nov 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
