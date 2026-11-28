@@ -406,16 +406,10 @@ const SITES = [
 /* precision: 'time' exact T-0 · 'day' a known day · 'month' / 'quarter' a window
    est: true  → the date is our estimate, not a published target            */
 const LAUNCHES = [
-  {site:"lc1", net:"2026-11-27T00:15:00Z", p:"time", veh:"Electron", who:"Rocket Lab",
-   mission:"Night Owls Never Sleep (StriX Launch 14)", orbit:"Low Earth Orbit", status:"Launch Successful",
-   brief:"Synthetic aperture radar satellite for Japanese Earth imaging company Synspective."},
-  {site:"tai", net:"2026-11-27T13:00:00Z", p:"time", veh:"Long March 6A", who:"China Aerospace Science and Technology Corporation",
-   mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
-   brief:"Details TBD."},
   {site:"tai", net:"2026-11-29T03:50:00Z", p:"time", veh:"Long March 6C", who:"China Aerospace Science and Technology Corporation",
    mission:"Unknown Payload", orbit:"Unknown", status:"Go for Launch",
    brief:"Details TBD."},
-  {site:"vsfb", net:"2026-11-29T04:39:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
+  {site:"vsfb", net:"2026-11-29T04:39:03Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"USSF-380", orbit:"Low Earth Orbit", status:"Go for Launch",
    brief:"A classified mission for the United States Space Force."},
   {site:"ccsfs", net:"2026-11-29T15:47:00Z", p:"time", veh:"Falcon 9 Block 5", who:"SpaceX",
@@ -586,6 +580,12 @@ const LAUNCHES = [
   {site:"vsfb", net:"2027-01-31T00:00:00Z", p:"month", veh:"Falcon 9 Block 5", who:"SpaceX",
    mission:"SDA Tranche 2 Transport Layer F", orbit:"Polar Orbit", status:"To Be Determined",
    brief:"Classified mission launched by the Space Development Agency (SDA) for Tranche 2 Transport Layer."},
+  {site:"ccsfs", net:"2027-01-31T00:00:00Z", p:"month", veh:"New Glenn", who:"Blue Origin",
+   mission:"Blue Ring-1", orbit:"Geostationary Transfer Orbit", status:"To Be Determined",
+   brief:"The first mission of Blue Ring, Blue Origin's all-in-one, high-powered hybrid solar electric and chemical propelled spacecraft, will test the spacecraft's operations in Geostationary Transfer Orbit (GTO), as well as subsequent operations after reaching Geostationary Orbit (GEO)."},
+  {site:"wal", net:"2027-01-31T00:00:00Z", p:"quarter", veh:"Astra Rocket 4", who:"Astra Space",
+   mission:"Maiden Flight", orbit:"Low Earth Orbit", status:"To Be Determined",
+   brief:"First flight of Astra Space's second generation small satellite launch vehicle."},
 ];
 
 /* ---------------- helpers ---------------- */
@@ -1022,7 +1022,7 @@ async function tryLive(){
 function stamp(){
   $('#feed').innerHTML = dataMode==='live'
     ? '<b>Live feed</b> · Launch Library'
-    : '<b>Snapshot</b> · 27 Nov 2026';
+    : '<b>Snapshot</b> · 28 Nov 2026';
 }
 
 /* Manual refresh. The snapshot is rebuilt daily by CI, but launch times move
